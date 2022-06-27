@@ -3,7 +3,7 @@
     {
       "src": [
         {
-          "src": "../Assets/_GrandmaGreen/Scripts",
+          "src": "../Scripts",
           "files": [
             "**.cs"
           ]
