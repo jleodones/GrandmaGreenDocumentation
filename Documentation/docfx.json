@@ -23,10 +23,6 @@
             "_appFooter": "Example Unity documentation",
             "_enableSearch": true
         },
-        "sitemap":
-        {
-          "baseUrl": "https://jleodones.github.io/GrandmaGreenDocumentation/"
-        },
         "content": [
             {
                 "files": [
@@ -66,7 +62,7 @@
             }
         ],
         "sitemap": {
-            "baseUrl": "https://normanderwan.github.io/DocFxForUnity",
+            "baseUrl": "https://jleodones.github.io/GrandmaGreenDocumentation/",
             "changefreq": "weekly",
             "fileOptions": {
                 "api/*": {
