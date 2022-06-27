@@ -1,0 +1,111 @@
+### YamlMime:ManagedReference
+items:
+- uid: GrandmaGreen.Trait
+  commentId: T:GrandmaGreen.Trait
+  id: Trait
+  parent: GrandmaGreen
+  children:
+  - GrandmaGreen.Trait.allele1
+  - GrandmaGreen.Trait.allele2
+  langs:
+  - csharp
+  - vb
+  name: Trait
+  nameWithType: Trait
+  fullName: GrandmaGreen.Trait
+  type: Struct
+  source:
+    id: Trait
+    path: ''
+    startLine: 152
+  assemblies:
+  - cs.temp.dll
+  namespace: GrandmaGreen
+  syntax:
+    content: >-
+      [Serializable]
+
+      public struct Trait
+    content.vb: >-
+      <Serializable>
+
+      Public Structure Trait
+  attributes:
+  - type: System.SerializableAttribute
+    ctor: System.SerializableAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - struct
+  modifiers.vb:
+  - Public
+  - Structure
+- uid: GrandmaGreen.Trait.allele1
+  commentId: F:GrandmaGreen.Trait.allele1
+  id: allele1
+  parent: GrandmaGreen.Trait
+  langs:
+  - csharp
+  - vb
+  name: allele1
+  nameWithType: Trait.allele1
+  fullName: GrandmaGreen.Trait.allele1
+  type: Field
+  source:
+    id: allele1
+    path: ''
+    startLine: 155
+  assemblies:
+  - cs.temp.dll
+  namespace: GrandmaGreen
+  syntax:
+    content: public Allele allele1
+    return:
+      type: GrandmaGreen.Allele
+    content.vb: Public allele1 As Allele
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: GrandmaGreen.Trait.allele2
+  commentId: F:GrandmaGreen.Trait.allele2
+  id: allele2
+  parent: GrandmaGreen.Trait
+  langs:
+  - csharp
+  - vb
+  name: allele2
+  nameWithType: Trait.allele2
+  fullName: GrandmaGreen.Trait.allele2
+  type: Field
+  source:
+    id: allele2
+    path: ''
+    startLine: 156
+  assemblies:
+  - cs.temp.dll
+  namespace: GrandmaGreen
+  syntax:
+    content: public Allele allele2
+    return:
+      type: GrandmaGreen.Allele
+    content.vb: Public allele2 As Allele
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: GrandmaGreen
+  commentId: N:GrandmaGreen
+  name: GrandmaGreen
+  nameWithType: GrandmaGreen
+  fullName: GrandmaGreen
+  nameWithType.vb: ''
+  fullName.vb: ''
+  name.vb: ''
+- uid: GrandmaGreen.Allele
+  commentId: T:GrandmaGreen.Allele
+  parent: GrandmaGreen
+  name: Allele
+  nameWithType: Allele
+  fullName: GrandmaGreen.Allele

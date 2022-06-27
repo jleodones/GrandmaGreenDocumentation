@@ -1,0 +1,356 @@
+{
+  "sitemap": {
+    "baseUrl": "https://jleodones.github.io/GrandmaGreenDocumentation/"
+  },
+  "homepages": [],
+  "source_base_path": "/Users/jal/Perforce/leodones_jamies_mbp/AGP/20223-20231/GrandmaGreen/GrandmaGreen/Documentation",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      },
+      "is_incremental": false
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GrandmaGreen.Allele.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GrandmaGreen.Allele.html",
+          "hash": "5L9IhX9lkJTOGMCgfdxTJXjePbnqp4UZG/hT+0B7l64="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GrandmaGreen.BaseGenotypeData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GrandmaGreen.BaseGenotypeData.html",
+          "hash": "6J0KMlkneNOirL0hm4/qT8DBTD47R9j3KIQE9YKIcVg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GrandmaGreen.ColorPair.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GrandmaGreen.ColorPair.html",
+          "hash": "613zcPS2UNfS+S2IkBGBp4jHOMKwIu0aFI+FCAsGatE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GrandmaGreen.FakeInputTesting.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GrandmaGreen.FakeInputTesting.html",
+          "hash": "/uB1YbVCTHmIZpo31NfLCnTkNVeU2Efsw6Mf63nW9ns="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GrandmaGreen.FloatPair.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GrandmaGreen.FloatPair.html",
+          "hash": "mcV2uRaR8kKdgaPcOJJcaAo3MnSJh8v22LLQoHYAV90="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GrandmaGreen.FlowerGenotypeData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GrandmaGreen.FlowerGenotypeData.html",
+          "hash": "hUciSDJCTdL/7eFTAlxGc2dG4r+LKS2RuQOaBLVPgPE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GrandmaGreen.GardenData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GrandmaGreen.GardenData.html",
+          "hash": "A40pLGMS4pJJ9B0nv3Bx0u82PKI5DyN7BPEQYrOh8qM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GrandmaGreen.GardenManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GrandmaGreen.GardenManager.html",
+          "hash": "yoYhdQD+jTTqZ7vdHK0blgn+gRnPJFbUm0NQlvva1zA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GrandmaGreen.GardenPlant.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GrandmaGreen.GardenPlant.html",
+          "hash": "dqAcagFzmbaFZbvz1C8mqNBNIGeJMSjdWs0JdVur10o="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GrandmaGreen.ITraitPairData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GrandmaGreen.ITraitPairData.html",
+          "hash": "hNZld6jrsbj0yv6/Td5e6cyiiVrU0lzIJVkvreowNss="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GrandmaGreen.PathfindingTester.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GrandmaGreen.PathfindingTester.html",
+          "hash": "VaJ3ekL8hqc3yHxiATOYe8Zzc3vkz3iJLHbX1XjAFSo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GrandmaGreen.Phenotype.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GrandmaGreen.Phenotype.html",
+          "hash": "+DQH/9a+SyE4zUFFcrQwwOcVow4/t1NqPfa30Hs2rho="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GrandmaGreen.PlantState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GrandmaGreen.PlantState.html",
+          "hash": "T5ASvvgdqxjvr5GCnsyRu3HDNcm+T2WeWPnwIf0CykA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GrandmaGreen.SetCameraBounds.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GrandmaGreen.SetCameraBounds.html",
+          "hash": "QJJ8OSeXVVB5Xh7FqltZdEmwjMO8e+lqtarjpEcEV4M="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GrandmaGreen.Trait.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GrandmaGreen.Trait.html",
+          "hash": "PZPJoPOBGKsHqmrFryX9qK/vMeYdC66hVIkayo3tKi4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GrandmaGreen.TraitData-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GrandmaGreen.TraitData-1.html",
+          "hash": "rnagSGYlLQPT/DaixI2rHIpUUHBjU1YaXpz9m6y0RqY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GrandmaGreen.TraitPairData-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GrandmaGreen.TraitPairData-1.html",
+          "hash": "MPca7QfLzqjKE7kwDHL1HSyeCCMplylaIJxIR+B8kpE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GrandmaGreen.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GrandmaGreen.html",
+          "hash": "8FFHduTXAAfxYsGy+P+e/mX8Qt1bqldUUeG5LczKAmk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "M+raKeC1uaMEdi2sjYVAaQ+d4nwlXFG9i9rAtcHAPOM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "leP05hMxV0FTWMWhJJi5i7VGgw9VB4EkEuY/q15hMF4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/intro.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/intro.html",
+          "hash": "sjrD+eHRrJnJIqTdfIKD9F9XVJ8G+VtTgrei2s3nJ1Y="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/toc.html",
+          "hash": "BlPxk5mtl2kgfcZUgkEguqiSAR/EUyUTT4EdebwkQvs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "4J7Bwwukirr138OmWpS6cG/EjIYmf4f1EgyIxmHYQJM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "WSuRrYiGwKKMbtdG9z8W9fXmLoCyTnGg9AxbPKLXm2Y="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot build incrementally because config changed.",
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0,
+        "full_build_reason_code": "ConfigChanged"
+      },
+      "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 3,
+          "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 18,
+          "skipped_file_count": 0
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: should not trace intermediate info.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

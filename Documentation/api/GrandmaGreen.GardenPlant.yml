@@ -1,0 +1,459 @@
+### YamlMime:ManagedReference
+items:
+- uid: GrandmaGreen.GardenPlant
+  commentId: T:GrandmaGreen.GardenPlant
+  id: GardenPlant
+  parent: GrandmaGreen
+  children:
+  - GrandmaGreen.GardenPlant.daddyPhenotype
+  - GrandmaGreen.GardenPlant.DoInteraction(Vector3,PointerState)
+  - GrandmaGreen.GardenPlant.genotypeData
+  - GrandmaGreen.GardenPlant.Harvest
+  - GrandmaGreen.GardenPlant.neighbours
+  - GrandmaGreen.GardenPlant.phenotype
+  - GrandmaGreen.GardenPlant.plantSprite
+  - GrandmaGreen.GardenPlant.punnetSquare
+  langs:
+  - csharp
+  - vb
+  name: GardenPlant
+  nameWithType: GardenPlant
+  fullName: GrandmaGreen.GardenPlant
+  type: Class
+  source:
+    id: GardenPlant
+    path: ''
+    startLine: 178
+  assemblies:
+  - cs.temp.dll
+  namespace: GrandmaGreen
+  syntax:
+    content: 'public class GardenPlant : MonoBehaviour'
+    content.vb: >-
+      Public Class GardenPlant
+          Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  implements:
+  - GrandmaGreen.IGameInteractable
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: GrandmaGreen.GardenPlant.plantSprite
+  commentId: F:GrandmaGreen.GardenPlant.plantSprite
+  id: plantSprite
+  parent: GrandmaGreen.GardenPlant
+  langs:
+  - csharp
+  - vb
+  name: plantSprite
+  nameWithType: GardenPlant.plantSprite
+  fullName: GrandmaGreen.GardenPlant.plantSprite
+  type: Field
+  source:
+    id: plantSprite
+    path: ''
+    startLine: 180
+  assemblies:
+  - cs.temp.dll
+  namespace: GrandmaGreen
+  syntax:
+    content: public SpriteRenderer plantSprite
+    return:
+      type: GrandmaGreen.SpriteRenderer
+    content.vb: Public plantSprite As SpriteRenderer
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: GrandmaGreen.GardenPlant.genotypeData
+  commentId: F:GrandmaGreen.GardenPlant.genotypeData
+  id: genotypeData
+  parent: GrandmaGreen.GardenPlant
+  langs:
+  - csharp
+  - vb
+  name: genotypeData
+  nameWithType: GardenPlant.genotypeData
+  fullName: GrandmaGreen.GardenPlant.genotypeData
+  type: Field
+  source:
+    id: genotypeData
+    path: ''
+    startLine: 181
+  assemblies:
+  - cs.temp.dll
+  namespace: GrandmaGreen
+  syntax:
+    content: public BaseGenotypeData genotypeData
+    return:
+      type: GrandmaGreen.BaseGenotypeData
+    content.vb: Public genotypeData As BaseGenotypeData
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: GrandmaGreen.GardenPlant.phenotype
+  commentId: F:GrandmaGreen.GardenPlant.phenotype
+  id: phenotype
+  parent: GrandmaGreen.GardenPlant
+  langs:
+  - csharp
+  - vb
+  name: phenotype
+  nameWithType: GardenPlant.phenotype
+  fullName: GrandmaGreen.GardenPlant.phenotype
+  type: Field
+  source:
+    id: phenotype
+    path: ''
+    startLine: 182
+  assemblies:
+  - cs.temp.dll
+  namespace: GrandmaGreen
+  syntax:
+    content: public Phenotype phenotype
+    return:
+      type: GrandmaGreen.Phenotype
+    content.vb: Public phenotype As Phenotype
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: GrandmaGreen.GardenPlant.neighbours
+  commentId: F:GrandmaGreen.GardenPlant.neighbours
+  id: neighbours
+  parent: GrandmaGreen.GardenPlant
+  langs:
+  - csharp
+  - vb
+  name: neighbours
+  nameWithType: GardenPlant.neighbours
+  fullName: GrandmaGreen.GardenPlant.neighbours
+  type: Field
+  source:
+    id: neighbours
+    path: ''
+    startLine: 183
+  assemblies:
+  - cs.temp.dll
+  namespace: GrandmaGreen
+  syntax:
+    content: public List<GardenPlant> neighbours
+    return:
+      type: System.Collections.Generic.List{GrandmaGreen.GardenPlant}
+    content.vb: Public neighbours As List(Of GardenPlant)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: GrandmaGreen.GardenPlant.punnetSquare
+  commentId: F:GrandmaGreen.GardenPlant.punnetSquare
+  id: punnetSquare
+  parent: GrandmaGreen.GardenPlant
+  langs:
+  - csharp
+  - vb
+  name: punnetSquare
+  nameWithType: GardenPlant.punnetSquare
+  fullName: GrandmaGreen.GardenPlant.punnetSquare
+  type: Field
+  source:
+    id: punnetSquare
+    path: ''
+    startLine: 184
+  assemblies:
+  - cs.temp.dll
+  namespace: GrandmaGreen
+  syntax:
+    content: public List<Phenotype> punnetSquare
+    return:
+      type: System.Collections.Generic.List{GrandmaGreen.Phenotype}
+    content.vb: Public punnetSquare As List(Of Phenotype)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: GrandmaGreen.GardenPlant.daddyPhenotype
+  commentId: F:GrandmaGreen.GardenPlant.daddyPhenotype
+  id: daddyPhenotype
+  parent: GrandmaGreen.GardenPlant
+  langs:
+  - csharp
+  - vb
+  name: daddyPhenotype
+  nameWithType: GardenPlant.daddyPhenotype
+  fullName: GrandmaGreen.GardenPlant.daddyPhenotype
+  type: Field
+  source:
+    id: daddyPhenotype
+    path: ''
+    startLine: 185
+  assemblies:
+  - cs.temp.dll
+  namespace: GrandmaGreen
+  syntax:
+    content: public Phenotype daddyPhenotype
+    return:
+      type: GrandmaGreen.Phenotype
+    content.vb: Public daddyPhenotype As Phenotype
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: GrandmaGreen.GardenPlant.DoInteraction(Vector3,PointerState)
+  commentId: M:GrandmaGreen.GardenPlant.DoInteraction(Vector3,PointerState)
+  id: DoInteraction(Vector3,PointerState)
+  parent: GrandmaGreen.GardenPlant
+  langs:
+  - csharp
+  - vb
+  name: DoInteraction(Vector3, PointerState)
+  nameWithType: GardenPlant.DoInteraction(Vector3, PointerState)
+  fullName: GrandmaGreen.GardenPlant.DoInteraction(Vector3, PointerState)
+  type: Method
+  source:
+    id: DoInteraction
+    path: ''
+    startLine: 187
+  assemblies:
+  - cs.temp.dll
+  namespace: GrandmaGreen
+  syntax:
+    content: public void DoInteraction(Vector3 interactionPoint, PointerState interactionState)
+    parameters:
+    - id: interactionPoint
+      type: GrandmaGreen.Vector3
+    - id: interactionState
+      type: GrandmaGreen.PointerState
+    content.vb: Public Sub DoInteraction(interactionPoint As Vector3, interactionState As PointerState)
+  overload: GrandmaGreen.GardenPlant.DoInteraction*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: GrandmaGreen.GardenPlant.Harvest
+  commentId: M:GrandmaGreen.GardenPlant.Harvest
+  id: Harvest
+  parent: GrandmaGreen.GardenPlant
+  langs:
+  - csharp
+  - vb
+  name: Harvest()
+  nameWithType: GardenPlant.Harvest()
+  fullName: GrandmaGreen.GardenPlant.Harvest()
+  type: Method
+  source:
+    id: Harvest
+    path: ''
+    startLine: 192
+  assemblies:
+  - cs.temp.dll
+  namespace: GrandmaGreen
+  syntax:
+    content: public void Harvest()
+    content.vb: Public Sub Harvest
+  overload: GrandmaGreen.GardenPlant.Harvest*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: GrandmaGreen
+  commentId: N:GrandmaGreen
+  name: GrandmaGreen
+  nameWithType: GrandmaGreen
+  fullName: GrandmaGreen
+  nameWithType.vb: ''
+  fullName.vb: ''
+  name.vb: ''
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: GrandmaGreen.IGameInteractable
+  commentId: '!:GrandmaGreen.IGameInteractable'
+  isExternal: true
+  name: IGameInteractable
+  nameWithType: IGameInteractable
+  fullName: IGameInteractable
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: GrandmaGreen.SpriteRenderer
+  commentId: '!:GrandmaGreen.SpriteRenderer'
+  isExternal: true
+  name: SpriteRenderer
+  nameWithType: SpriteRenderer
+  fullName: SpriteRenderer
+- uid: GrandmaGreen.BaseGenotypeData
+  commentId: T:GrandmaGreen.BaseGenotypeData
+  parent: GrandmaGreen
+  name: BaseGenotypeData
+  nameWithType: BaseGenotypeData
+  fullName: GrandmaGreen.BaseGenotypeData
+- uid: GrandmaGreen.Phenotype
+  commentId: T:GrandmaGreen.Phenotype
+  parent: GrandmaGreen
+  name: Phenotype
+  nameWithType: Phenotype
+  fullName: GrandmaGreen.Phenotype
+- uid: System.Collections.Generic.List{GrandmaGreen.GardenPlant}
+  commentId: T:System.Collections.Generic.List{GrandmaGreen.GardenPlant}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<GardenPlant>
+  nameWithType: List<GardenPlant>
+  fullName: System.Collections.Generic.List<GrandmaGreen.GardenPlant>
+  nameWithType.vb: List(Of GardenPlant)
+  fullName.vb: System.Collections.Generic.List(Of GrandmaGreen.GardenPlant)
+  name.vb: List(Of GardenPlant)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: GrandmaGreen.GardenPlant
+    name: GardenPlant
+    nameWithType: GardenPlant
+    fullName: GrandmaGreen.GardenPlant
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: GrandmaGreen.GardenPlant
+    name: GardenPlant
+    nameWithType: GardenPlant
+    fullName: GrandmaGreen.GardenPlant
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: System.Collections.Generic.List{GrandmaGreen.Phenotype}
+  commentId: T:System.Collections.Generic.List{GrandmaGreen.Phenotype}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<Phenotype>
+  nameWithType: List<Phenotype>
+  fullName: System.Collections.Generic.List<GrandmaGreen.Phenotype>
+  nameWithType.vb: List(Of Phenotype)
+  fullName.vb: System.Collections.Generic.List(Of GrandmaGreen.Phenotype)
+  name.vb: List(Of Phenotype)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: GrandmaGreen.Phenotype
+    name: Phenotype
+    nameWithType: Phenotype
+    fullName: GrandmaGreen.Phenotype
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: GrandmaGreen.Phenotype
+    name: Phenotype
+    nameWithType: Phenotype
+    fullName: GrandmaGreen.Phenotype
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: GrandmaGreen.GardenPlant.DoInteraction*
+  commentId: Overload:GrandmaGreen.GardenPlant.DoInteraction
+  name: DoInteraction
+  nameWithType: GardenPlant.DoInteraction
+  fullName: GrandmaGreen.GardenPlant.DoInteraction
+- uid: GrandmaGreen.Vector3
+  isExternal: true
+  name: Vector3
+  nameWithType: Vector3
+  fullName: Vector3
+- uid: GrandmaGreen.PointerState
+  commentId: '!:GrandmaGreen.PointerState'
+  isExternal: true
+  name: PointerState
+  nameWithType: PointerState
+  fullName: PointerState
+- uid: GrandmaGreen.GardenPlant.Harvest*
+  commentId: Overload:GrandmaGreen.GardenPlant.Harvest
+  name: Harvest
+  nameWithType: GardenPlant.Harvest
+  fullName: GrandmaGreen.GardenPlant.Harvest
