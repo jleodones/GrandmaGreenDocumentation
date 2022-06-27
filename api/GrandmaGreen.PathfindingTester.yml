@@ -1,0 +1,225 @@
+### YamlMime:ManagedReference
+items:
+- uid: GrandmaGreen.PathfindingTester
+  commentId: T:GrandmaGreen.PathfindingTester
+  id: PathfindingTester
+  parent: GrandmaGreen
+  children:
+  - GrandmaGreen.PathfindingTester.DoPathFollow(Vector3)
+  - GrandmaGreen.PathfindingTester.EndPos
+  - GrandmaGreen.PathfindingTester.PathAgent
+  - GrandmaGreen.PathfindingTester.PathfindingManager
+  - GrandmaGreen.PathfindingTester.StartPos
+  langs:
+  - csharp
+  - vb
+  name: PathfindingTester
+  nameWithType: PathfindingTester
+  fullName: PathfindingTester
+  type: Class
+  source:
+    id: PathfindingTester
+    path: ''
+    startLine: 6
+  assemblies:
+  - cs.temp.dll
+  namespace: GrandmaGreen
+  syntax:
+    content: 'public class PathfindingTester : MonoBehaviour'
+    content.vb: >-
+      Public Class PathfindingTester
+          Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: GrandmaGreen.PathfindingTester.PathfindingManager
+  commentId: F:GrandmaGreen.PathfindingTester.PathfindingManager
+  id: PathfindingManager
+  parent: GrandmaGreen.PathfindingTester
+  langs:
+  - csharp
+  - vb
+  name: PathfindingManager
+  nameWithType: PathfindingTester.PathfindingManager
+  fullName: PathfindingTester.PathfindingManager
+  type: Field
+  source:
+    id: PathfindingManager
+    path: ''
+    startLine: 8
+  assemblies:
+  - cs.temp.dll
+  namespace: GrandmaGreen
+  syntax:
+    content: public PathfindingManager PathfindingManager
+    return:
+      type: GrandmaGreen.PathfindingManager
+    content.vb: Public PathfindingManager As PathfindingManager
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: GrandmaGreen.PathfindingTester.PathAgent
+  commentId: F:GrandmaGreen.PathfindingTester.PathAgent
+  id: PathAgent
+  parent: GrandmaGreen.PathfindingTester
+  langs:
+  - csharp
+  - vb
+  name: PathAgent
+  nameWithType: PathfindingTester.PathAgent
+  fullName: PathfindingTester.PathAgent
+  type: Field
+  source:
+    id: PathAgent
+    path: ''
+    startLine: 9
+  assemblies:
+  - cs.temp.dll
+  namespace: GrandmaGreen
+  syntax:
+    content: public PathFollower PathAgent
+    return:
+      type: GrandmaGreen.PathFollower
+    content.vb: Public PathAgent As PathFollower
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: GrandmaGreen.PathfindingTester.StartPos
+  commentId: F:GrandmaGreen.PathfindingTester.StartPos
+  id: StartPos
+  parent: GrandmaGreen.PathfindingTester
+  langs:
+  - csharp
+  - vb
+  name: StartPos
+  nameWithType: PathfindingTester.StartPos
+  fullName: PathfindingTester.StartPos
+  type: Field
+  source:
+    id: StartPos
+    path: ''
+    startLine: 11
+  assemblies:
+  - cs.temp.dll
+  namespace: GrandmaGreen
+  syntax:
+    content: public int2 StartPos
+    return:
+      type: GrandmaGreen.int2
+    content.vb: Public StartPos As int2
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: GrandmaGreen.PathfindingTester.EndPos
+  commentId: F:GrandmaGreen.PathfindingTester.EndPos
+  id: EndPos
+  parent: GrandmaGreen.PathfindingTester
+  langs:
+  - csharp
+  - vb
+  name: EndPos
+  nameWithType: PathfindingTester.EndPos
+  fullName: PathfindingTester.EndPos
+  type: Field
+  source:
+    id: EndPos
+    path: ''
+    startLine: 12
+  assemblies:
+  - cs.temp.dll
+  namespace: GrandmaGreen
+  syntax:
+    content: public int2 EndPos
+    return:
+      type: GrandmaGreen.int2
+    content.vb: Public EndPos As int2
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: GrandmaGreen.PathfindingTester.DoPathFollow(Vector3)
+  commentId: M:GrandmaGreen.PathfindingTester.DoPathFollow(Vector3)
+  id: DoPathFollow(Vector3)
+  parent: GrandmaGreen.PathfindingTester
+  langs:
+  - csharp
+  - vb
+  name: DoPathFollow(Vector3)
+  nameWithType: PathfindingTester.DoPathFollow(Vector3)
+  fullName: PathfindingTester.DoPathFollow(Vector3)
+  type: Method
+  source:
+    id: DoPathFollow
+    path: ''
+    startLine: 14
+  assemblies:
+  - cs.temp.dll
+  namespace: GrandmaGreen
+  syntax:
+    content: public void DoPathFollow(Vector3 worldPos)
+    parameters:
+    - id: worldPos
+      type: GrandmaGreen.Vector3
+    content.vb: Public Sub DoPathFollow(worldPos As Vector3)
+  overload: GrandmaGreen.PathfindingTester.DoPathFollow*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: GrandmaGreen
+  commentId: N:GrandmaGreen
+  name: GrandmaGreen
+  nameWithType: GrandmaGreen
+  fullName: GrandmaGreen
+  nameWithType.vb: ''
+  fullName.vb: ''
+  name.vb: ''
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: GrandmaGreen.PathfindingManager
+  commentId: '!:GrandmaGreen.PathfindingManager'
+  isExternal: true
+  name: PathfindingManager
+  nameWithType: PathfindingManager
+  fullName: PathfindingManager
+- uid: GrandmaGreen.PathFollower
+  commentId: '!:GrandmaGreen.PathFollower'
+  isExternal: true
+  name: PathFollower
+  nameWithType: PathFollower
+  fullName: PathFollower
+- uid: GrandmaGreen.int2
+  isExternal: true
+  name: int2
+  nameWithType: int2
+  fullName: int2
+- uid: GrandmaGreen.PathfindingTester.DoPathFollow*
+  commentId: Overload:GrandmaGreen.PathfindingTester.DoPathFollow
+  name: DoPathFollow
+  nameWithType: PathfindingTester.DoPathFollow
+  fullName: PathfindingTester.DoPathFollow
+- uid: GrandmaGreen.Vector3
+  isExternal: true
+  name: Vector3
+  nameWithType: Vector3
+  fullName: Vector3

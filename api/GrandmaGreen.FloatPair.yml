@@ -1,0 +1,230 @@
+### YamlMime:ManagedReference
+items:
+- uid: GrandmaGreen.FloatPair
+  commentId: T:GrandmaGreen.FloatPair
+  id: FloatPair
+  parent: GrandmaGreen
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: FloatPair
+  nameWithType: FloatPair
+  fullName: GrandmaGreen.FloatPair
+  type: Class
+  source:
+    id: FloatPair
+    path: ''
+    startLine: 294
+  assemblies:
+  - cs.temp.dll
+  namespace: GrandmaGreen
+  syntax:
+    content: 'public class FloatPair : TraitPairData<float>, ITraitPairData'
+    content.vb: >-
+      Public Class FloatPair
+          Inherits TraitPairData(Of Single)
+          Implements ITraitPairData
+  inheritance:
+  - System.Object
+  - GrandmaGreen.TraitPairData{System.Single}
+  implements:
+  - GrandmaGreen.ITraitPairData
+  inheritedMembers:
+  - GrandmaGreen.TraitPairData{System.Single}.weight
+  - GrandmaGreen.TraitPairData{System.Single}.gene_a
+  - GrandmaGreen.TraitPairData{System.Single}.gene_A
+  - GrandmaGreen.TraitPairData{System.Single}.gene_Aa
+  - GrandmaGreen.TraitPairData{System.Single}.type
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+references:
+- uid: GrandmaGreen
+  commentId: N:GrandmaGreen
+  name: GrandmaGreen
+  nameWithType: GrandmaGreen
+  fullName: GrandmaGreen
+  nameWithType.vb: ''
+  fullName.vb: ''
+  name.vb: ''
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: GrandmaGreen.TraitPairData{System.Single}
+  commentId: T:GrandmaGreen.TraitPairData{System.Single}
+  parent: GrandmaGreen
+  definition: GrandmaGreen.TraitPairData`1
+  name: TraitPairData<Single>
+  nameWithType: TraitPairData<Single>
+  fullName: GrandmaGreen.TraitPairData<System.Single>
+  nameWithType.vb: TraitPairData(Of Single)
+  fullName.vb: GrandmaGreen.TraitPairData(Of System.Single)
+  name.vb: TraitPairData(Of Single)
+  spec.csharp:
+  - uid: GrandmaGreen.TraitPairData`1
+    name: TraitPairData
+    nameWithType: TraitPairData
+    fullName: GrandmaGreen.TraitPairData
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: GrandmaGreen.TraitPairData`1
+    name: TraitPairData
+    nameWithType: TraitPairData
+    fullName: GrandmaGreen.TraitPairData
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: GrandmaGreen.ITraitPairData
+  commentId: T:GrandmaGreen.ITraitPairData
+  parent: GrandmaGreen
+  name: ITraitPairData
+  nameWithType: ITraitPairData
+  fullName: GrandmaGreen.ITraitPairData
+- uid: GrandmaGreen.TraitPairData{System.Single}.weight
+  commentId: F:GrandmaGreen.TraitPairData{System.Single}.weight
+  parent: GrandmaGreen.TraitPairData{System.Single}
+  definition: GrandmaGreen.TraitPairData`1.weight
+  name: weight
+  nameWithType: TraitPairData<Single>.weight
+  fullName: GrandmaGreen.TraitPairData<System.Single>.weight
+  nameWithType.vb: TraitPairData(Of Single).weight
+  fullName.vb: GrandmaGreen.TraitPairData(Of System.Single).weight
+- uid: GrandmaGreen.TraitPairData{System.Single}.gene_a
+  commentId: P:GrandmaGreen.TraitPairData{System.Single}.gene_a
+  parent: GrandmaGreen.TraitPairData{System.Single}
+  definition: GrandmaGreen.TraitPairData`1.gene_a
+  name: gene_a
+  nameWithType: TraitPairData<Single>.gene_a
+  fullName: GrandmaGreen.TraitPairData<System.Single>.gene_a
+  nameWithType.vb: TraitPairData(Of Single).gene_a
+  fullName.vb: GrandmaGreen.TraitPairData(Of System.Single).gene_a
+- uid: GrandmaGreen.TraitPairData{System.Single}.gene_A
+  commentId: P:GrandmaGreen.TraitPairData{System.Single}.gene_A
+  parent: GrandmaGreen.TraitPairData{System.Single}
+  definition: GrandmaGreen.TraitPairData`1.gene_A
+  name: gene_A
+  nameWithType: TraitPairData<Single>.gene_A
+  fullName: GrandmaGreen.TraitPairData<System.Single>.gene_A
+  nameWithType.vb: TraitPairData(Of Single).gene_A
+  fullName.vb: GrandmaGreen.TraitPairData(Of System.Single).gene_A
+- uid: GrandmaGreen.TraitPairData{System.Single}.gene_Aa
+  commentId: P:GrandmaGreen.TraitPairData{System.Single}.gene_Aa
+  parent: GrandmaGreen.TraitPairData{System.Single}
+  definition: GrandmaGreen.TraitPairData`1.gene_Aa
+  name: gene_Aa
+  nameWithType: TraitPairData<Single>.gene_Aa
+  fullName: GrandmaGreen.TraitPairData<System.Single>.gene_Aa
+  nameWithType.vb: TraitPairData(Of Single).gene_Aa
+  fullName.vb: GrandmaGreen.TraitPairData(Of System.Single).gene_Aa
+- uid: GrandmaGreen.TraitPairData{System.Single}.type
+  commentId: P:GrandmaGreen.TraitPairData{System.Single}.type
+  parent: GrandmaGreen.TraitPairData{System.Single}
+  definition: GrandmaGreen.TraitPairData`1.type
+  name: type
+  nameWithType: TraitPairData<Single>.type
+  fullName: GrandmaGreen.TraitPairData<System.Single>.type
+  nameWithType.vb: TraitPairData(Of Single).type
+  fullName.vb: GrandmaGreen.TraitPairData(Of System.Single).type
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: GrandmaGreen.TraitPairData`1
+  commentId: T:GrandmaGreen.TraitPairData`1
+  name: TraitPairData<T>
+  nameWithType: TraitPairData<T>
+  fullName: GrandmaGreen.TraitPairData<T>
+  nameWithType.vb: TraitPairData(Of T)
+  fullName.vb: GrandmaGreen.TraitPairData(Of T)
+  name.vb: TraitPairData(Of T)
+  spec.csharp:
+  - uid: GrandmaGreen.TraitPairData`1
+    name: TraitPairData
+    nameWithType: TraitPairData
+    fullName: GrandmaGreen.TraitPairData
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: GrandmaGreen.TraitPairData`1
+    name: TraitPairData
+    nameWithType: TraitPairData
+    fullName: GrandmaGreen.TraitPairData
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: GrandmaGreen.TraitPairData`1.weight
+  commentId: F:GrandmaGreen.TraitPairData`1.weight
+  name: weight
+  nameWithType: TraitPairData<T>.weight
+  fullName: GrandmaGreen.TraitPairData<T>.weight
+  nameWithType.vb: TraitPairData(Of T).weight
+  fullName.vb: GrandmaGreen.TraitPairData(Of T).weight
+- uid: GrandmaGreen.TraitPairData`1.gene_a
+  commentId: P:GrandmaGreen.TraitPairData`1.gene_a
+  name: gene_a
+  nameWithType: TraitPairData<T>.gene_a
+  fullName: GrandmaGreen.TraitPairData<T>.gene_a
+  nameWithType.vb: TraitPairData(Of T).gene_a
+  fullName.vb: GrandmaGreen.TraitPairData(Of T).gene_a
+- uid: GrandmaGreen.TraitPairData`1.gene_A
+  commentId: P:GrandmaGreen.TraitPairData`1.gene_A
+  name: gene_A
+  nameWithType: TraitPairData<T>.gene_A
+  fullName: GrandmaGreen.TraitPairData<T>.gene_A
+  nameWithType.vb: TraitPairData(Of T).gene_A
+  fullName.vb: GrandmaGreen.TraitPairData(Of T).gene_A
+- uid: GrandmaGreen.TraitPairData`1.gene_Aa
+  commentId: P:GrandmaGreen.TraitPairData`1.gene_Aa
+  name: gene_Aa
+  nameWithType: TraitPairData<T>.gene_Aa
+  fullName: GrandmaGreen.TraitPairData<T>.gene_Aa
+  nameWithType.vb: TraitPairData(Of T).gene_Aa
+  fullName.vb: GrandmaGreen.TraitPairData(Of T).gene_Aa
+- uid: GrandmaGreen.TraitPairData`1.type
+  commentId: P:GrandmaGreen.TraitPairData`1.type
+  name: type
+  nameWithType: TraitPairData<T>.type
+  fullName: GrandmaGreen.TraitPairData<T>.type
+  nameWithType.vb: TraitPairData(Of T).type
+  fullName.vb: GrandmaGreen.TraitPairData(Of T).type

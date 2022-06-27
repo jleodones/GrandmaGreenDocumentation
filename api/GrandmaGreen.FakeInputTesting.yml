@@ -1,0 +1,56 @@
+### YamlMime:ManagedReference
+items:
+- uid: GrandmaGreen.FakeInputTesting
+  commentId: T:GrandmaGreen.FakeInputTesting
+  id: FakeInputTesting
+  parent: GrandmaGreen
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: FakeInputTesting
+  nameWithType: FakeInputTesting
+  fullName: FakeInputTesting
+  type: Class
+  source:
+    id: FakeInputTesting
+    path: ''
+    startLine: 47
+  assemblies:
+  - cs.temp.dll
+  namespace: GrandmaGreen
+  syntax:
+    content: 'public class FakeInputTesting : MonoBehaviour'
+    content.vb: >-
+      Public Class FakeInputTesting
+          Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+references:
+- uid: GrandmaGreen
+  commentId: N:GrandmaGreen
+  name: GrandmaGreen
+  nameWithType: GrandmaGreen
+  fullName: GrandmaGreen
+  nameWithType.vb: ''
+  fullName.vb: ''
+  name.vb: ''
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System

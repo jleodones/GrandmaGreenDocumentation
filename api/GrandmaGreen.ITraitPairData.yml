@@ -1,0 +1,79 @@
+### YamlMime:ManagedReference
+items:
+- uid: GrandmaGreen.ITraitPairData
+  commentId: T:GrandmaGreen.ITraitPairData
+  id: ITraitPairData
+  parent: GrandmaGreen
+  children:
+  - GrandmaGreen.ITraitPairData.type
+  langs:
+  - csharp
+  - vb
+  name: ITraitPairData
+  nameWithType: ITraitPairData
+  fullName: GrandmaGreen.ITraitPairData
+  type: Interface
+  source:
+    id: ITraitPairData
+    path: ''
+    startLine: 265
+  assemblies:
+  - cs.temp.dll
+  namespace: GrandmaGreen
+  syntax:
+    content: public interface ITraitPairData
+    content.vb: Public Interface ITraitPairData
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: GrandmaGreen.ITraitPairData.type
+  commentId: P:GrandmaGreen.ITraitPairData.type
+  id: type
+  parent: GrandmaGreen.ITraitPairData
+  langs:
+  - csharp
+  - vb
+  name: type
+  nameWithType: ITraitPairData.type
+  fullName: GrandmaGreen.ITraitPairData.type
+  type: Property
+  source:
+    id: type
+    path: ''
+    startLine: 267
+  assemblies:
+  - cs.temp.dll
+  namespace: GrandmaGreen
+  syntax:
+    content: Type type { get; }
+    parameters: []
+    return:
+      type: GrandmaGreen.Type
+    content.vb: ReadOnly Property type As Type
+  overload: GrandmaGreen.ITraitPairData.type*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+references:
+- uid: GrandmaGreen
+  commentId: N:GrandmaGreen
+  name: GrandmaGreen
+  nameWithType: GrandmaGreen
+  fullName: GrandmaGreen
+  nameWithType.vb: ''
+  fullName.vb: ''
+  name.vb: ''
+- uid: GrandmaGreen.ITraitPairData.type*
+  commentId: Overload:GrandmaGreen.ITraitPairData.type
+  name: type
+  nameWithType: ITraitPairData.type
+  fullName: GrandmaGreen.ITraitPairData.type
+- uid: GrandmaGreen.Type
+  isExternal: true
+  name: Type
+  nameWithType: Type
+  fullName: Type

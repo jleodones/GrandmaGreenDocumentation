@@ -1,0 +1,90 @@
+### YamlMime:ManagedReference
+items:
+- uid: GrandmaGreen.GardenManager
+  commentId: T:GrandmaGreen.GardenManager
+  id: GardenManager
+  parent: GrandmaGreen
+  children:
+  - GrandmaGreen.GardenManager.gardenData
+  langs:
+  - csharp
+  - vb
+  name: GardenManager
+  nameWithType: GardenManager
+  fullName: GrandmaGreen.GardenManager
+  type: Class
+  source:
+    id: GardenManager
+    path: ''
+    startLine: 116
+  assemblies:
+  - cs.temp.dll
+  namespace: GrandmaGreen
+  syntax:
+    content: 'public class GardenManager : MonoBehaviour'
+    content.vb: >-
+      Public Class GardenManager
+          Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: GrandmaGreen.GardenManager.gardenData
+  commentId: F:GrandmaGreen.GardenManager.gardenData
+  id: gardenData
+  parent: GrandmaGreen.GardenManager
+  langs:
+  - csharp
+  - vb
+  name: gardenData
+  nameWithType: GardenManager.gardenData
+  fullName: GrandmaGreen.GardenManager.gardenData
+  type: Field
+  source:
+    id: gardenData
+    path: ''
+    startLine: 118
+  assemblies:
+  - cs.temp.dll
+  namespace: GrandmaGreen
+  syntax:
+    content: public GardenData gardenData
+    return:
+      type: GrandmaGreen.GardenData
+    content.vb: Public gardenData As GardenData
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: GrandmaGreen
+  commentId: N:GrandmaGreen
+  name: GrandmaGreen
+  nameWithType: GrandmaGreen
+  fullName: GrandmaGreen
+  nameWithType.vb: ''
+  fullName.vb: ''
+  name.vb: ''
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: GrandmaGreen.GardenData
+  commentId: T:GrandmaGreen.GardenData
+  parent: GrandmaGreen
+  name: GardenData
+  nameWithType: GardenData
+  fullName: GrandmaGreen.GardenData

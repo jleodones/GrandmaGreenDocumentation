@@ -1,0 +1,184 @@
+### YamlMime:ManagedReference
+items:
+- uid: GrandmaGreen.FlowerGenotypeData
+  commentId: T:GrandmaGreen.FlowerGenotypeData
+  id: FlowerGenotypeData
+  parent: GrandmaGreen
+  children:
+  - GrandmaGreen.FlowerGenotypeData.SetTraitData
+  langs:
+  - csharp
+  - vb
+  name: FlowerGenotypeData
+  nameWithType: FlowerGenotypeData
+  fullName: GrandmaGreen.FlowerGenotypeData
+  type: Class
+  source:
+    id: FlowerGenotypeData
+    path: ''
+    startLine: 331
+  assemblies:
+  - cs.temp.dll
+  namespace: GrandmaGreen
+  syntax:
+    content: 'public class FlowerGenotypeData : BaseGenotypeData'
+    content.vb: >-
+      Public Class FlowerGenotypeData
+          Inherits BaseGenotypeData
+  inheritance:
+  - System.Object
+  - GrandmaGreen.BaseGenotypeData
+  inheritedMembers:
+  - GrandmaGreen.BaseGenotypeData.traitList
+  - GrandmaGreen.BaseGenotypeData.traitCount
+  - GrandmaGreen.BaseGenotypeData.Trait``1(System.Int32)
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: GrandmaGreen.FlowerGenotypeData.SetTraitData
+  commentId: M:GrandmaGreen.FlowerGenotypeData.SetTraitData
+  id: SetTraitData
+  parent: GrandmaGreen.FlowerGenotypeData
+  langs:
+  - csharp
+  - vb
+  name: SetTraitData()
+  nameWithType: FlowerGenotypeData.SetTraitData()
+  fullName: GrandmaGreen.FlowerGenotypeData.SetTraitData()
+  type: Method
+  source:
+    id: SetTraitData
+    path: ''
+    startLine: 334
+  assemblies:
+  - cs.temp.dll
+  namespace: GrandmaGreen
+  syntax:
+    content: public override void SetTraitData()
+    content.vb: Public Overrides Sub SetTraitData
+  overridden: GrandmaGreen.BaseGenotypeData.SetTraitData
+  overload: GrandmaGreen.FlowerGenotypeData.SetTraitData*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+references:
+- uid: GrandmaGreen
+  commentId: N:GrandmaGreen
+  name: GrandmaGreen
+  nameWithType: GrandmaGreen
+  fullName: GrandmaGreen
+  nameWithType.vb: ''
+  fullName.vb: ''
+  name.vb: ''
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: GrandmaGreen.BaseGenotypeData
+  commentId: T:GrandmaGreen.BaseGenotypeData
+  parent: GrandmaGreen
+  name: BaseGenotypeData
+  nameWithType: BaseGenotypeData
+  fullName: GrandmaGreen.BaseGenotypeData
+- uid: GrandmaGreen.BaseGenotypeData.traitList
+  commentId: F:GrandmaGreen.BaseGenotypeData.traitList
+  parent: GrandmaGreen.BaseGenotypeData
+  name: traitList
+  nameWithType: BaseGenotypeData.traitList
+  fullName: GrandmaGreen.BaseGenotypeData.traitList
+- uid: GrandmaGreen.BaseGenotypeData.traitCount
+  commentId: F:GrandmaGreen.BaseGenotypeData.traitCount
+  parent: GrandmaGreen.BaseGenotypeData
+  name: traitCount
+  nameWithType: BaseGenotypeData.traitCount
+  fullName: GrandmaGreen.BaseGenotypeData.traitCount
+- uid: GrandmaGreen.BaseGenotypeData.Trait``1(System.Int32)
+  commentId: M:GrandmaGreen.BaseGenotypeData.Trait``1(System.Int32)
+  parent: GrandmaGreen.BaseGenotypeData
+  isExternal: true
+  name: Trait<T>(Int32)
+  nameWithType: BaseGenotypeData.Trait<T>(Int32)
+  fullName: GrandmaGreen.BaseGenotypeData.Trait<T>(System.Int32)
+  nameWithType.vb: BaseGenotypeData.Trait(Of T)(Int32)
+  fullName.vb: GrandmaGreen.BaseGenotypeData.Trait(Of T)(System.Int32)
+  name.vb: Trait(Of T)(Int32)
+  spec.csharp:
+  - uid: GrandmaGreen.BaseGenotypeData.Trait``1(System.Int32)
+    name: Trait<T>
+    nameWithType: BaseGenotypeData.Trait<T>
+    fullName: GrandmaGreen.BaseGenotypeData.Trait<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: GrandmaGreen.BaseGenotypeData.Trait``1(System.Int32)
+    name: Trait(Of T)
+    nameWithType: BaseGenotypeData.Trait(Of T)
+    fullName: GrandmaGreen.BaseGenotypeData.Trait(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: GrandmaGreen.BaseGenotypeData.SetTraitData
+  commentId: M:GrandmaGreen.BaseGenotypeData.SetTraitData
+  parent: GrandmaGreen.BaseGenotypeData
+  name: SetTraitData()
+  nameWithType: BaseGenotypeData.SetTraitData()
+  fullName: GrandmaGreen.BaseGenotypeData.SetTraitData()
+  spec.csharp:
+  - uid: GrandmaGreen.BaseGenotypeData.SetTraitData
+    name: SetTraitData
+    nameWithType: BaseGenotypeData.SetTraitData
+    fullName: GrandmaGreen.BaseGenotypeData.SetTraitData
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: GrandmaGreen.BaseGenotypeData.SetTraitData
+    name: SetTraitData
+    nameWithType: BaseGenotypeData.SetTraitData
+    fullName: GrandmaGreen.BaseGenotypeData.SetTraitData
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: GrandmaGreen.FlowerGenotypeData.SetTraitData*
+  commentId: Overload:GrandmaGreen.FlowerGenotypeData.SetTraitData
+  name: SetTraitData
+  nameWithType: FlowerGenotypeData.SetTraitData
+  fullName: GrandmaGreen.FlowerGenotypeData.SetTraitData
