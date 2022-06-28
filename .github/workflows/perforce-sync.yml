@@ -49,7 +49,7 @@ jobs:
             SubmitOptions:	leaveunchanged
             LineEnd:	local
             View:
-              "//CTIN_484/20221/18406/Jamie Gianna/our project attempt 2/Assets/Scripts/..." //github-actions-setup-p4/ScriptsTest/...
+              //AGP/20223-20231/GrandmaGreen/GrandmaGreen/Assets/_GrandmaGreen/Scripts/... //github-actions-setup-p4/ScriptsTest/...
 
 # //AGP/20223-20231/GrandmaGreen/GrandmaGreen/Assets/_GrandmaGreen/Scripts/... //github-actions-setup-p4/AGP/20223-20231/GrandmaGreen/GrandmaGreen/Assets/_GrandmaGreen/Scripts/...
 
@@ -60,5 +60,3 @@ jobs:
           P4CLIENT: github-actions-setup-p4
         with:
           command: sync
-          arguments: -f
-          working_directory: $GITHUB_WORKSPACE/ScriptsTest
