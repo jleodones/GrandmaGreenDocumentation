@@ -1,7 +1,7 @@
 name: Sync Perforce update
 
 on:
-  # Updates every day at 12AM PST/7AM UTC.
+  # Updates every day at 00.00 PST/07.00 UTC.
   #schedule:
     #- cron: '0 7 * * *'
   # Manually call the workflow.
@@ -42,20 +42,20 @@ jobs:
           command: client
           arguments: -i
           spec: |
-            Client:	github-actions-setup-p4
+            Client:	github-actions-p4
             Owner:	${{ secrets.P4USER }}
             Root:	$GITHUB_WORKSPACE
             Options:	noallwrite noclobber nocompress unlocked modtime rmdir
             SubmitOptions:	leaveunchanged
             LineEnd:	local
             View:
-              //AGP/20223-20231/GrandmaGreen/GrandmaGreen/Assets/_GrandmaGreen/Scripts/... //github-actions-setup-p4/Scripts/...
+              //AGP/20223-20231/GrandmaGreen/GrandmaGreen/Assets/_GrandmaGreen/Scripts/... //github-actions-p4/Scripts/...
 
       # Pull down assets from Helix Core.
       - name: p4 sync
         uses: perforce/setup-p4@v1
         env:
-          P4CLIENT: github-actions-setup-p4
+          P4CLIENT: github-actions-p4
         with:
           command: sync
           
