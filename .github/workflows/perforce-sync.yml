@@ -31,9 +31,7 @@ jobs:
           
       # Authenticate to Helix Core using P4PSSWD GitHub Secret
       - name: p4 login
-        uses: perforce/setup-p4@v1
-        with:
-          command: login
+        run: p4 login
 
       # Create a workspace.
       - name: p4 client
