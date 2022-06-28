@@ -16,6 +16,7 @@ jobs:
     env:
       P4PORT: ${{ secrets.P4PORT }}
       P4USER: ${{ secrets.P4USER }}
+      P4PASSWD: ${{ secrets.P4PASSWD }}
     
     steps:
       # Checkout assets stored in GitHub.
@@ -33,8 +34,6 @@ jobs:
         uses: perforce/setup-p4@v1
         with:
           command: login
-        env:
-          P4PSSWD: ${{ secrets.P4PSSWD }}
 
       # Create a workspace.
       - name: p4 client
