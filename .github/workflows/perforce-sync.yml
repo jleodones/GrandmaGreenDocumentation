@@ -22,40 +22,10 @@ jobs:
       # Checkout assets stored in GitHub.
       - name: checkout
         uses: actions/checkout@v2
-          
-      # Run trust only if your P4PORT includes "ssl:"
-      - name: p4 trust
-        uses: perforce/setup-p4@v1
-        with:
-          command: trust
-          
-      # Authenticate to Helix Core using P4PSSWD GitHub Secret
-      - name: p4 login
-        uses: perforce/setup-p4@v1
-        with:
-          command: login
-
-      # Create a workspace.
-      - name: p4 client
-        uses: perforce/setup-p4@v1
-        with:
-          command: client
-          arguments: -i
-          spec: |
-            Client:	github-actions-setup-p4
-            Owner:	${{ secrets.P4USER }}
-            Root:	/tmp
-            Options:	noallwrite noclobber nocompress unlocked modtime rmdir
-            SubmitOptions:	leaveunchanged
-            LineEnd:	local
-            View:
-              //AGP/20223-20231/GrandmaGreen/GrandmaGreen/Assets/_GrandmaGreen/Scripts/... //github-actions-setup-p4/AGP/20223-20231/GrandmaGreen/GrandmaGreen/Assets/_GrandmaGreen/Scripts/...
-
-      # Pull down assets from Helix Core.
-      - name: p4 sync
-        uses: perforce/setup-p4@v1
-        env:
-          P4CLIENT: github-actions-setup-p4
-        with:
-          command: sync
- 
+        
+      - name: verify information
+        run: git p4 info
+        
+      - name: login
+        run: git p4 login
+        
