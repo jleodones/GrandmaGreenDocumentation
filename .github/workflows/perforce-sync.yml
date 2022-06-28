@@ -21,10 +21,6 @@ jobs:
       # Checkout assets stored in GitHub.
       - name: checkout
         uses: actions/checkout@v2
-      
-      # Install P4 CLI and cache it if we are running within a self hosted runner.
-      - name: p4 setup
-        uses: perforce/setup-p4@v1
           
       # Run trust only if your P4PORT includes "ssl:"
       - name: p4 trust
