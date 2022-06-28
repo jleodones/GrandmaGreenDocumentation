@@ -60,11 +60,5 @@ jobs:
           P4CLIENT: github-actions-setup-p4
         with:
           command: sync
-          
-      - name: p4 copy
-        uses: perforce/setup-p4@v1
-        env:
-          P4CLIENT: github-actions-setup-p4
-        with:
-          command: copy
-          arguments: //github-actions-setup-p4/ScriptsTest/... $GITHUB_WORKSPACE/ScriptsTest/...
+          arguments: -f
+          working_directory: $GITHUB_WORKSPACE/ScriptsTest
