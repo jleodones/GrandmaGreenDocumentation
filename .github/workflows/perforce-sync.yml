@@ -1,7 +1,7 @@
 name: Sync Perforce update
 
 on:
-  # Updates every day at 12AM PST/7AM UTC.
+  # Updates every day at 00.00 PST/07.00 UTC.
   schedule:
     - cron: '0 7 * * *'
   # Manually call the workflow.
@@ -27,7 +27,7 @@ jobs:
       - name: set up python
         uses: actions/setup-python@v2
         
-      - run: chmod +x p4 p4d
+      - run: git clone https://github.com/git/git.git git_source_path
         
       - name: run git-p4 script
         run: |
