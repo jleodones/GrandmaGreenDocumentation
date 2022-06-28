@@ -1,4 +1,4 @@
-name: Update scripts on website
+name: Update documentation.
 
 on:
   push:
