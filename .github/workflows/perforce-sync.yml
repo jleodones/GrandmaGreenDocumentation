@@ -23,6 +23,13 @@ jobs:
       - name: checkout
         uses: actions/checkout@v2
         
+      # Set up Python.
+      - name: set up python
+        uses: actions/setup-python@v2
+        
+      - name: run git-p4 script
+        run: python git-p4.py
+        
       - name: verify information
         run: git p4 info
         
