@@ -2,8 +2,8 @@ name: Sync Perforce update
 
 on:
   # Updates every day at 12AM PST/7AM UTC.
-  schedule:
-    - cron: '0 7 * * *'
+  #schedule:
+    #- cron: '0 7 * * *'
   # Manually call the workflow.
   workflow_dispatch:
 
@@ -63,7 +63,7 @@ jobs:
         uses: EndBug/add-and-commit@v9
         with:
           add: '$GITHUB_WORKSPACE/ScriptsTest'
-          cwd: '$GITHUB_WORKSPACE'
+          cwd: '.'
           default_author: user_info
           pathspec_error_handling: exitAtEnd
           push: true
