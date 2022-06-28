@@ -30,9 +30,7 @@ jobs:
       - run: git clone https://github.com/git/git
       
       - run: chmod +x git-p4.py
-                
-      - run: ln -s git_source_path/contrib/fast-import/git-p4 $HOME/bin/git-p4
-        
+                        
       - name: verify information
         run: git p4 info
         
