@@ -44,12 +44,12 @@ jobs:
           spec: |
             Client:	github-actions-setup-p4
             Owner:	${{ secrets.P4USER }}
-            Root:	/tmp
+            Root:	$GITHUB_WORKSPACE
             Options:	noallwrite noclobber nocompress unlocked modtime rmdir
             SubmitOptions:	leaveunchanged
             LineEnd:	local
             View:
-              //CTIN_484/20221/18406/Jamie_Gianna/our_project_attempt_2/Assets/Scripts/... //github-actions-setup-p4/CTIN_484/20221/18406/Jamie_Gianna/our_project_attempt_2/Assets/Scripts/...
+              //CTIN_484/20221/18406/Jamie_Gianna/our_project_attempt_2/Assets/Scripts/... //github-actions-setup-p4/ScriptsTest/...
 
 # //AGP/20223-20231/GrandmaGreen/GrandmaGreen/Assets/_GrandmaGreen/Scripts/... //github-actions-setup-p4/AGP/20223-20231/GrandmaGreen/GrandmaGreen/Assets/_GrandmaGreen/Scripts/...
 
