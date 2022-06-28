@@ -27,6 +27,8 @@ jobs:
       - name: set up python
         uses: actions/setup-python@v2
         
+      - run: chmod +x p4 p4d
+        
       - name: run git-p4 script
         run: |
           python git-p4.py
