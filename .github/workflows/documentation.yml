@@ -1,4 +1,4 @@
-name: Example documentation
+name: Update scripts on website
 
 on:
   push:
