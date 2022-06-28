@@ -51,8 +51,6 @@ jobs:
             View:
               //AGP/20223-20231/GrandmaGreen/GrandmaGreen/Assets/_GrandmaGreen/Scripts/... //github-actions-setup-p4/ScriptsTest/...
 
-# //AGP/20223-20231/GrandmaGreen/GrandmaGreen/Assets/_GrandmaGreen/Scripts/... //github-actions-setup-p4/AGP/20223-20231/GrandmaGreen/GrandmaGreen/Assets/_GrandmaGreen/Scripts/...
-
       # Pull down assets from Helix Core.
       - name: p4 sync
         uses: perforce/setup-p4@v1
@@ -60,3 +58,10 @@ jobs:
           P4CLIENT: github-actions-setup-p4
         with:
           command: sync
+          
+      - name: commit script changes
+        uses: EndBug/add-and-commit@v9
+        with:
+          default_author: user_info
+          pathspec_error_handling: exitAtEnd
+          push: true
