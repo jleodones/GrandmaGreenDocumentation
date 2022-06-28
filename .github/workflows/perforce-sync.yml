@@ -1,7 +1,7 @@
 name: Sync Perforce update
 
 on:
-  # Updates every day at 00.00 PST/07.00 UTC.
+  # Updates every day at 12AM PST/7AM UTC.
   schedule:
     - cron: '0 7 * * *'
   # Manually call the workflow.
@@ -22,22 +22,39 @@ jobs:
       # Checkout assets stored in GitHub.
       - name: checkout
         uses: actions/checkout@v2
-        
-      # Set up Python.
-      - name: set up python
-        uses: actions/setup-python@v2
-        
-      - run: git clone https://github.com/git/git.git git_source_path
-      
-      - run: ln -s git_source_path/contrib/fast-import/git-p4 /usr/bin/git-p4
-        
-      - name: run git-p4 script
-        run: |
-          python git-p4.py
-        
-      - name: verify information
-        run: git p4 info
-        
-      - name: login
-        run: git p4 login
-        
+          
+      # Run trust only if your P4PORT includes "ssl:"
+      - name: p4 trust
+        uses: perforce/setup-p4@v1
+        with:
+          command: trust
+          
+      # Authenticate to Helix Core using P4PSSWD GitHub Secret
+      - name: p4 login
+        uses: perforce/setup-p4@v1
+        with:
+          command: login
+
+      # Create a workspace.
+      - name: p4 client
+        uses: perforce/setup-p4@v1
+        with:
+          command: client
+          arguments: -i
+          spec: |
+            Client:	github-actions-setup-p4
+            Owner:	${{ secrets.P4USER }}
+            Root:	/tmp
+            Options:	noallwrite noclobber nocompress unlocked modtime rmdir
+            SubmitOptions:	leaveunchanged
+            LineEnd:	local
+            View:
+              //AGP/20223-20231/GrandmaGreen/GrandmaGreen/Assets/_GrandmaGreen/Scripts/... //github-actions-setup-p4/AGP/20223-20231/GrandmaGreen/GrandmaGreen/Assets/_GrandmaGreen/Scripts/...
+
+      # Pull down assets from Helix Core.
+      - name: p4 sync
+        uses: perforce/setup-p4@v1
+        env:
+          P4CLIENT: github-actions-setup-p4
+        with:
+          command: sync
