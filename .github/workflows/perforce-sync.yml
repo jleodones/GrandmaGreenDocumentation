@@ -68,4 +68,4 @@ jobs:
         with:
           command: copy
           arguments: //github-actions-setup-p4/CTIN_484/20221/18406/Jamie_Gianna/our_project_attempt_2/Assets/Scripts/... $GITHUB_WORKSPACE/ScriptsTest/...
-          workspace_director: $GITHUB_WORKSPACE
+          working_directory: $GITHUB_WORKSPACE/
