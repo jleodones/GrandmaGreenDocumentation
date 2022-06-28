@@ -66,4 +66,4 @@ jobs:
         env:
           P4CLIENT: github-actions-setup-p4
         with:
-          command: copy //github-actions-setup-p4/CTIN_484/20221/18406/Jamie Gianna/our project attempt 2/Assets/Scripts/ /ScriptsTest
+          command: copy //github-actions-setup-p4/CTIN_484/20221/18406/Jamie_Gianna/our_project_attempt_2/Assets/Scripts/... /ScriptsTest/...
