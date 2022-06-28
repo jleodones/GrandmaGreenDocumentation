@@ -49,7 +49,7 @@ jobs:
             SubmitOptions:	leaveunchanged
             LineEnd:	local
             View:
-              //AGP/20223-20231/GrandmaGreen/GrandmaGreen/Assets/_GrandmaGreen/Scripts/... //github-actions-setup-p4/ScriptsTest/...
+              //AGP/20223-20231/GrandmaGreen/GrandmaGreen/Assets/_GrandmaGreen/Scripts/... //github-actions-setup-p4/Scripts/...
 
       # Pull down assets from Helix Core.
       - name: p4 sync
@@ -62,8 +62,8 @@ jobs:
       - name: commit script changes
         uses: EndBug/add-and-commit@v9
         with:
-          add: '/home/runner/work/GrandmaGreenDocumentation/GrandmaGreenDocumentation/ScriptsTest'
-          cwd: './ScriptsTest'
+          add: '/home/runner/work/GrandmaGreenDocumentation/GrandmaGreenDocumentation/Scripts'
+          cwd: './Scripts'
           default_author: user_info
           pathspec_error_handling: exitAtEnd
           push: true
