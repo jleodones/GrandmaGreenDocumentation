@@ -62,8 +62,8 @@ jobs:
       - name: commit script changes
         uses: EndBug/add-and-commit@v9
         with:
-          add: './ScriptsTest/'
-          cwd: './ScriptsTest/'
+          add: '/home/runner/work/GrandmaGreenDocumentation/GrandmaGreenDocumentation/ScriptsTest'
+          cwd: '/home/runner/work/GrandmaGreenDocumentation/GrandmaGreenDocumentation/ScriptsTest'
           default_author: user_info
           pathspec_error_handling: exitAtEnd
           push: true
