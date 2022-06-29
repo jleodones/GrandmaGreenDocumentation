@@ -58,6 +58,12 @@ references:
   commentId: F:Global.PathfindingTester.StartPos
   fullName: PathfindingTester.StartPos
   nameWithType: PathfindingTester.StartPos
+- uid: Global.SaveManager
+  name: SaveManager
+  href: api/Global.SaveManager.html
+  commentId: T:Global.SaveManager
+  fullName: SaveManager
+  nameWithType: SaveManager
 - uid: Global.SetCameraBounds
   name: SetCameraBounds
   href: api/Global.SetCameraBounds.html

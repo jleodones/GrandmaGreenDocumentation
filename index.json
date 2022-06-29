@@ -7,12 +7,17 @@
   "api/Global.html": {
     "href": "api/Global.html",
     "title": "Namespace Global | Example Unity documentation",
-    "keywords": "Namespace Global Classes FakeInputTesting PathfindingTester SetCameraBounds"
+    "keywords": "Namespace Global Classes FakeInputTesting PathfindingTester SaveManager SetCameraBounds"
   },
   "api/Global.PathfindingTester.html": {
     "href": "api/Global.PathfindingTester.html",
     "title": "Class PathfindingTester | Example Unity documentation",
     "keywords": "Class PathfindingTester Inheritance Object PathfindingTester Namespace : Global Assembly : cs.temp.dll.dll Syntax public class PathfindingTester : MonoBehaviour Fields EndPos Declaration public int2 EndPos Field Value Type Description int2 PathAgent Declaration public PathFollower PathAgent Field Value Type Description PathFollower PathfindingManager Declaration public PathfindingManager PathfindingManager Field Value Type Description PathfindingManager StartPos Declaration public int2 StartPos Field Value Type Description int2 Methods DoPathFollow(Vector3) Declaration public void DoPathFollow(Vector3 worldPos) Parameters Type Name Description Vector3 worldPos"
+  },
+  "api/Global.SaveManager.html": {
+    "href": "api/Global.SaveManager.html",
+    "title": "Class SaveManager | Example Unity documentation",
+    "keywords": "Class SaveManager Inheritance Object SaveManager Namespace : Global Assembly : cs.temp.dll.dll Syntax public class SaveManager : MonoBehaviour"
   },
   "api/Global.SetCameraBounds.html": {
     "href": "api/Global.SetCameraBounds.html",

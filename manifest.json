@@ -48,6 +48,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Global.SaveManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.SaveManager.html",
+          "hash": "PfgwUNp3znE7r1LHhpiomq9tiNm4uAPoy5DYg9kHaYM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Global.SetCameraBounds.yml",
       "output": {
         ".html": {
@@ -64,7 +76,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.html",
-          "hash": "QQvmVg+QWfyGFfW2dh02rqDfw4HLyvKXjnKW4RM09lM="
+          "hash": "tplyV15fFTE84+B7JwJhPB5sMXVjR8tS1CKhe9RIVNU="
         }
       },
       "is_incremental": false,
@@ -256,7 +268,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "ens1HFCxP145idOGsFqr5quhsiK9XS3dC0KlVGHTvwA="
+          "hash": "SPyFcblpAOSvvb/oRZKzy2S79Ax0Sy/E8HuXPqaF1SI="
         }
       },
       "is_incremental": false,
@@ -365,7 +377,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 19,
+          "total_file_count": 20,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
