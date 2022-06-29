@@ -18,6 +18,7 @@
         }
     ],
     "build": {
+        "template": ["default", "templates/material"],
         "globalMetadata": {
             "_appTitle": "Example Unity documentation",
             "_appFooter": "Example Unity documentation",
