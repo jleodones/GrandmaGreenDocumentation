@@ -18,10 +18,11 @@
         }
     ],
     "build": {
-        "template": ["default", "templates/material"],
+        "template":
+            ["default",
+             "templates/material"],
         "globalMetadata": {
-            "_appTitle": "Example Unity documentation",
-            "_appFooter": "Example Unity documentation",
+            "_appFooter": "Grandma Green Documentation",
             "_enableSearch": true
         },
         "content": [
@@ -39,12 +40,12 @@
                 "dest": "api"
             },
             {
-                "src": "manual",
+                "src": "guide",
                 "files": [
                     "toc.yml",
                     "*.md"
                 ],
-                "dest": "manual"
+                "dest": "guide"
             }
         ],
         "overwrite": [
