@@ -107,11 +107,11 @@
   "guide/commenting.html": {
     "href": "guide/commenting.html",
     "title": "Commenting Code Guide",
-    "keywords": "Commenting Code Guide Comments in code should conform to XML documentation markup standards , as this is what DocFX utilizes to transform code into readable webpages. [!NOTE] <The following guidelines are not fully comprehensive, but are meant to be taken as highlights and general tips for good practice. Please read the documentation linked above for a more comprehensive understanding of XML documentation markup.>"
+    "keywords": "Commenting Code Guide Comments in code should conform to XML documentation markup standards , as this is what DocFX utilizes to transform code into readable webpages. Note The following guidelines are not fully comprehensive, but are meant to be taken as highlights and general tips for good practice. Please read the documentation linked above for a more comprehensive understanding of XML documentation markup."
   },
   "index.html": {
     "href": "index.html",
-    "title": "Grandma Green Documentation",
-    "keywords": "Grandma Green Documentation Welcome to Grandma Green's documentation! This page was built for old and new dev team members alike to help keep track of changes to the system. This repository has been configured to sync with changes to the Perforce depot every day at midnight PST. Any updates will then be pushed and published to the website immediately afterwards. Collaborators may also manually sync the repository and/or rebuild the website. Please contact Jamie Leodones at leodones@usc.edu for any troubles regarding this repository and its documentation, or to be added as a collaborator."
+    "title": "Grandma Green Documentation 🌱",
+    "keywords": "Grandma Green Documentation 🌱 Welcome to Grandma Green's documentation! This page was built for old and new dev team members alike to help keep track of changes to the system. This repository has been configured to sync with changes to the Perforce depot every day at midnight PST. Any updates will then be pushed and published to the website immediately afterwards. Collaborators may also manually sync the repository and/or rebuild the website. Please contact Jamie Leodones at leodones@usc.edu for any troubles regarding this repository and its documentation, or to be added as a collaborator. 💚"
   }
 }
