@@ -7,17 +7,12 @@
   "api/Global.html": {
     "href": "api/Global.html",
     "title": "Namespace Global",
-    "keywords": "Namespace Global Classes FakeInputTesting PathfindingTester SaveManager SetCameraBounds"
+    "keywords": "Namespace Global Classes FakeInputTesting PathfindingTester SetCameraBounds"
   },
   "api/Global.PathfindingTester.html": {
     "href": "api/Global.PathfindingTester.html",
     "title": "Class PathfindingTester",
     "keywords": "Class PathfindingTester Inheritance Object PathfindingTester Namespace : Global Assembly : cs.temp.dll.dll Syntax public class PathfindingTester : MonoBehaviour Fields EndPos Declaration public int2 EndPos Field Value Type Description int2 PathAgent Declaration public PathFollower PathAgent Field Value Type Description PathFollower PathfindingManager Declaration public PathfindingManager PathfindingManager Field Value Type Description PathfindingManager StartPos Declaration public int2 StartPos Field Value Type Description int2 Methods DoPathFollow(Vector3) Declaration public void DoPathFollow(Vector3 worldPos) Parameters Type Name Description Vector3 worldPos"
-  },
-  "api/Global.SaveManager.html": {
-    "href": "api/Global.SaveManager.html",
-    "title": "Class SaveManager",
-    "keywords": "Class SaveManager Inheritance Object SaveManager Namespace : Global Assembly : cs.temp.dll.dll Syntax public class SaveManager : MonoBehaviour"
   },
   "api/Global.SetCameraBounds.html": {
     "href": "api/Global.SetCameraBounds.html",
@@ -83,6 +78,31 @@
     "href": "api/GrandmaGreen.PlantState.html",
     "title": "Enum PlantState",
     "keywords": "Enum PlantState Namespace : GrandmaGreen Assembly : cs.temp.dll.dll Syntax public enum PlantState Fields Name Description MATURE SAPLING SEEDLING"
+  },
+  "api/GrandmaGreen.SaveSystem.html": {
+    "href": "api/GrandmaGreen.SaveSystem.html",
+    "title": "Namespace GrandmaGreen.SaveSystem",
+    "keywords": "Namespace GrandmaGreen.SaveSystem Classes SaveController SaveManager Interfaces IComponentStore The IComponentStore is a wrapper interface for ComponentStores. The purpose of the ComponentStore is to store data at the start of a scene—-when data gets loaded--and when gameplay changes any sort of persistent data. Requests for the data stored in the IComponentStore object are handled through IObjectSavers. IObjectSaver The IObjectSaver interface is a wrapper for ObjectSaver Scriptable Objects, which holds a list of IComponentSavers. IObjectSavers are instantiated and registered by SaveControllers upon awakening in a scene. Importantly, IObjectSavers handle data requests from game interfaces. Other game interfaces request the information, and IObjectSavers retrieve the data from IObjectStores to pass it along. Similarly, IObjectSavers take in new data from game interfaces and updates the IObjectStore appropriately."
+  },
+  "api/GrandmaGreen.SaveSystem.IComponentStore.html": {
+    "href": "api/GrandmaGreen.SaveSystem.IComponentStore.html",
+    "title": "Interface IComponentStore",
+    "keywords": "Interface IComponentStore The IComponentStore is a wrapper interface for ComponentStores. The purpose of the ComponentStore is to store data at the start of a scene—-when data gets loaded--and when gameplay changes any sort of persistent data. Requests for the data stored in the IComponentStore object are handled through IObjectSavers. Namespace : GrandmaGreen.SaveSystem Assembly : cs.temp.dll.dll Syntax public interface IComponentStore"
+  },
+  "api/GrandmaGreen.SaveSystem.IObjectSaver.html": {
+    "href": "api/GrandmaGreen.SaveSystem.IObjectSaver.html",
+    "title": "Interface IObjectSaver",
+    "keywords": "Interface IObjectSaver The IObjectSaver interface is a wrapper for ObjectSaver Scriptable Objects, which holds a list of IComponentSavers. IObjectSavers are instantiated and registered by SaveControllers upon awakening in a scene. Importantly, IObjectSavers handle data requests from game interfaces. Other game interfaces request the information, and IObjectSavers retrieve the data from IObjectStores to pass it along. Similarly, IObjectSavers take in new data from game interfaces and updates the IObjectStore appropriately. Namespace : GrandmaGreen.SaveSystem Assembly : cs.temp.dll.dll Syntax public interface IObjectSaver"
+  },
+  "api/GrandmaGreen.SaveSystem.SaveController.html": {
+    "href": "api/GrandmaGreen.SaveSystem.SaveController.html",
+    "title": "Class SaveController",
+    "keywords": "Class SaveController Inheritance Object SaveController Inherited Members Object.ToString() Object.Equals(Object) Object.Equals(Object, Object) Object.ReferenceEquals(Object, Object) Object.GetHashCode() Object.GetType() Object.MemberwiseClone() Namespace : GrandmaGreen.SaveSystem Assembly : cs.temp.dll.dll Syntax public class SaveController"
+  },
+  "api/GrandmaGreen.SaveSystem.SaveManager.html": {
+    "href": "api/GrandmaGreen.SaveSystem.SaveManager.html",
+    "title": "Class SaveManager",
+    "keywords": "Class SaveManager Inheritance Object SaveManager Namespace : GrandmaGreen.SaveSystem Assembly : cs.temp.dll.dll Syntax public class SaveManager : MonoBehaviour"
   },
   "api/GrandmaGreen.Trait.html": {
     "href": "api/GrandmaGreen.Trait.html",

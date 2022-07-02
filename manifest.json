@@ -48,18 +48,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Global.SaveManager.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Global.SaveManager.html",
-          "hash": "31qH347es9Mic0ZsFkK2w/6UsnzQ1kao1ap/ee6UQ7E="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/Global.SetCameraBounds.yml",
       "output": {
         ".html": {
@@ -76,7 +64,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.html",
-          "hash": "WJVkpE3TCYQxJkBTNZDPJfmXFgrBRSEEAxLC2aVLXF4="
+          "hash": "lZ2XVYQrTOColrZJ8Gfgx6SZcpJYRCa5buFAELZUYN8="
         }
       },
       "is_incremental": false,
@@ -216,6 +204,66 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/GrandmaGreen.SaveSystem.IComponentStore.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GrandmaGreen.SaveSystem.IComponentStore.html",
+          "hash": "c1slQCjtqV6cSE14pu49lDwFPIJ/OgHwyR7iY2p80vo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GrandmaGreen.SaveSystem.IObjectSaver.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GrandmaGreen.SaveSystem.IObjectSaver.html",
+          "hash": "jwUA3MQwUnEwoFlsfPXGnCJPYPNnCgvg2n/an6aqil8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GrandmaGreen.SaveSystem.SaveController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GrandmaGreen.SaveSystem.SaveController.html",
+          "hash": "11iAlKYEXBOAfuobEVEC1xrW7S+OfWCB5cXCTgILSHs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GrandmaGreen.SaveSystem.SaveManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GrandmaGreen.SaveSystem.SaveManager.html",
+          "hash": "IVrhzonFq8cQDRC4BLOC9CRzSrB8OPvI9pzEd0JPs+s="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GrandmaGreen.SaveSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GrandmaGreen.SaveSystem.html",
+          "hash": "q8uw8bAhso8VXP9AIK+/aMf+qPZhljNpImOtYTjkMuM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/GrandmaGreen.Trait.yml",
       "output": {
         ".html": {
@@ -268,7 +316,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "SPyFcblpAOSvvb/oRZKzy2S79Ax0Sy/E8HuXPqaF1SI="
+          "hash": "p4pWUT8U7ore2dqgXHgLHAt1RptAG03kRKtijYcOqNc="
         }
       },
       "is_incremental": false,
@@ -377,7 +425,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 20,
+          "total_file_count": 24,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

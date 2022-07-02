@@ -58,12 +58,6 @@ references:
   commentId: F:Global.PathfindingTester.StartPos
   fullName: PathfindingTester.StartPos
   nameWithType: PathfindingTester.StartPos
-- uid: Global.SaveManager
-  name: SaveManager
-  href: api/Global.SaveManager.html
-  commentId: T:Global.SaveManager
-  fullName: SaveManager
-  nameWithType: SaveManager
 - uid: Global.SetCameraBounds
   name: SetCameraBounds
   href: api/Global.SetCameraBounds.html
@@ -367,6 +361,36 @@ references:
   commentId: F:GrandmaGreen.PlantState.SEEDLING
   fullName: GrandmaGreen.PlantState.SEEDLING
   nameWithType: PlantState.SEEDLING
+- uid: GrandmaGreen.SaveSystem
+  name: GrandmaGreen.SaveSystem
+  href: api/GrandmaGreen.SaveSystem.html
+  commentId: N:GrandmaGreen.SaveSystem
+  fullName: GrandmaGreen.SaveSystem
+  nameWithType: GrandmaGreen.SaveSystem
+- uid: GrandmaGreen.SaveSystem.IComponentStore
+  name: IComponentStore
+  href: api/GrandmaGreen.SaveSystem.IComponentStore.html
+  commentId: T:GrandmaGreen.SaveSystem.IComponentStore
+  fullName: GrandmaGreen.SaveSystem.IComponentStore
+  nameWithType: IComponentStore
+- uid: GrandmaGreen.SaveSystem.IObjectSaver
+  name: IObjectSaver
+  href: api/GrandmaGreen.SaveSystem.IObjectSaver.html
+  commentId: T:GrandmaGreen.SaveSystem.IObjectSaver
+  fullName: GrandmaGreen.SaveSystem.IObjectSaver
+  nameWithType: IObjectSaver
+- uid: GrandmaGreen.SaveSystem.SaveController
+  name: SaveController
+  href: api/GrandmaGreen.SaveSystem.SaveController.html
+  commentId: T:GrandmaGreen.SaveSystem.SaveController
+  fullName: GrandmaGreen.SaveSystem.SaveController
+  nameWithType: SaveController
+- uid: GrandmaGreen.SaveSystem.SaveManager
+  name: SaveManager
+  href: api/GrandmaGreen.SaveSystem.SaveManager.html
+  commentId: T:GrandmaGreen.SaveSystem.SaveManager
+  fullName: GrandmaGreen.SaveSystem.SaveManager
+  nameWithType: SaveManager
 - uid: GrandmaGreen.Trait
   name: Trait
   href: api/GrandmaGreen.Trait.html
