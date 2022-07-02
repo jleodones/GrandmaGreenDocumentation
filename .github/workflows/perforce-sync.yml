@@ -1,4 +1,4 @@
-name: Sync Perforce update
+name: Sync with Perforce.
 
 on:
   # Updates every day at 00.00 PST/07.00 UTC.
@@ -23,13 +23,13 @@ jobs:
       - name: checkout
         uses: actions/checkout@v2
           
-      # Run trust only if your P4PORT includes "ssl:"
+      # Run trust only if your P4PORT includes "ssl:".
       - name: p4 trust
         uses: perforce/setup-p4@v1
         with:
           command: trust
           
-      # Authenticate to Helix Core using P4PSSWD GitHub Secret
+      # Authenticate to Helix Core using P4PSSWD GitHub Secret.
       - name: p4 login
         uses: perforce/setup-p4@v1
         with:
@@ -45,7 +45,7 @@ jobs:
             Client:	github-actions-p4
             Owner:	${{ secrets.P4USER }}
             Root:	$GITHUB_WORKSPACE
-            Options:	noallwrite noclobber nocompress unlocked modtime rmdir
+            Options:	allwrite nocompress unlocked modtime rmdir
             SubmitOptions:	leaveunchanged
             LineEnd:	local
             View:
@@ -58,7 +58,8 @@ jobs:
           P4CLIENT: github-actions-p4
         with:
           command: sync
-          
+      
+      # Sync new changes to the /Scripts folder.
       - name: commit script changes
         uses: EndBug/add-and-commit@v9
         with:
@@ -67,7 +68,8 @@ jobs:
           default_author: user_info
           pathspec_error_handling: exitAtEnd
           push: true
-
+          
+      # Log out of Perforce.
       - name: p4 logout
         uses: perforce/setup-p4@v1
         with:
