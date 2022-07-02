@@ -42,20 +42,20 @@ jobs:
           command: client
           arguments: -i
           spec: |
-            Client:	github-actions-p4
+            Client:	github-p4
             Owner:	${{ secrets.P4USER }}
             Root:	$GITHUB_WORKSPACE
             Options:	allwrite nocompress unlocked modtime rmdir
             SubmitOptions:	leaveunchanged
             LineEnd:	local
             View:
-              //AGP/20223-20231/GrandmaGreen/GrandmaGreen/Assets/_GrandmaGreen/Scripts/... //github-actions-p4/Scripts/...
+              //AGP/20223-20231/GrandmaGreen/GrandmaGreen/Assets/_GrandmaGreen/Scripts/... //github-p4/Scripts/...
 
       # Pull down assets from Helix Core.
       - name: p4 sync
         uses: perforce/setup-p4@v1
         env:
-          P4CLIENT: github-actions-p4
+          P4CLIENT: github-p4
         with:
           command: sync
       
