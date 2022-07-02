@@ -9,6 +9,7 @@
                     ],
                     "exclude": [
                         "Assets/Plugins/**"
+                        "Scripts/**.cs.meta"
                     ]
                 }
             ],
