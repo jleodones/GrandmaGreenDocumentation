@@ -2,175 +2,175 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://jleodones.github.io/GrandmaGreenDocumentation/api/Global.FakeInputTesting.html</loc>
-    <lastmod>2022-07-03T10:40:05+00:00</lastmod>
+    <lastmod>2022-07-03T10:54:10+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jleodones.github.io/GrandmaGreenDocumentation/api/Global.PathfindingTester.html</loc>
-    <lastmod>2022-07-03T10:40:05+00:00</lastmod>
+    <lastmod>2022-07-03T10:54:10+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jleodones.github.io/GrandmaGreenDocumentation/api/Global.PlantInteractable.html</loc>
-    <lastmod>2022-07-03T10:40:05+00:00</lastmod>
+    <lastmod>2022-07-03T10:54:10+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jleodones.github.io/GrandmaGreenDocumentation/api/Global.SetCameraBounds.html</loc>
-    <lastmod>2022-07-03T10:40:05+00:00</lastmod>
+    <lastmod>2022-07-03T10:54:10+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jleodones.github.io/GrandmaGreenDocumentation/api/Global.html</loc>
-    <lastmod>2022-07-03T10:40:05+00:00</lastmod>
+    <lastmod>2022-07-03T10:54:10+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jleodones.github.io/GrandmaGreenDocumentation/api/GrandmaGreen.Allele.html</loc>
-    <lastmod>2022-07-03T10:40:05+00:00</lastmod>
+    <lastmod>2022-07-03T10:54:10+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jleodones.github.io/GrandmaGreenDocumentation/api/GrandmaGreen.BasePhenotypeData.html</loc>
-    <lastmod>2022-07-03T10:40:05+00:00</lastmod>
+    <lastmod>2022-07-03T10:54:10+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jleodones.github.io/GrandmaGreenDocumentation/api/GrandmaGreen.ColorSet.html</loc>
-    <lastmod>2022-07-03T10:40:05+00:00</lastmod>
+    <lastmod>2022-07-03T10:54:10+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jleodones.github.io/GrandmaGreenDocumentation/api/GrandmaGreen.FlowerPhenotypeData.html</loc>
-    <lastmod>2022-07-03T10:40:05+00:00</lastmod>
+    <lastmod>2022-07-03T10:54:10+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jleodones.github.io/GrandmaGreenDocumentation/api/GrandmaGreen.GardenAreaController.html</loc>
-    <lastmod>2022-07-03T10:40:05+00:00</lastmod>
+    <lastmod>2022-07-03T10:54:10+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jleodones.github.io/GrandmaGreenDocumentation/api/GrandmaGreen.GardenData.html</loc>
-    <lastmod>2022-07-03T10:40:05+00:00</lastmod>
+    <lastmod>2022-07-03T10:54:10+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jleodones.github.io/GrandmaGreenDocumentation/api/GrandmaGreen.GardenPlant.html</loc>
-    <lastmod>2022-07-03T10:40:05+00:00</lastmod>
+    <lastmod>2022-07-03T10:54:10+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jleodones.github.io/GrandmaGreenDocumentation/api/GrandmaGreen.Genotype.html</loc>
-    <lastmod>2022-07-03T10:40:05+00:00</lastmod>
+    <lastmod>2022-07-03T10:54:10+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jleodones.github.io/GrandmaGreenDocumentation/api/GrandmaGreen.ITraitData.html</loc>
-    <lastmod>2022-07-03T10:40:05+00:00</lastmod>
+    <lastmod>2022-07-03T10:54:10+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jleodones.github.io/GrandmaGreenDocumentation/api/GrandmaGreen.ITraitSetData.html</loc>
-    <lastmod>2022-07-03T10:40:05+00:00</lastmod>
+    <lastmod>2022-07-03T10:54:10+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jleodones.github.io/GrandmaGreenDocumentation/api/GrandmaGreen.PlantState.html</loc>
-    <lastmod>2022-07-03T10:40:05+00:00</lastmod>
+    <lastmod>2022-07-03T10:54:10+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jleodones.github.io/GrandmaGreenDocumentation/api/GrandmaGreen.SaveSystem.IComponentStore.html</loc>
-    <lastmod>2022-07-03T10:40:05+00:00</lastmod>
+    <lastmod>2022-07-03T10:54:10+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jleodones.github.io/GrandmaGreenDocumentation/api/GrandmaGreen.SaveSystem.IObjectSaver.html</loc>
-    <lastmod>2022-07-03T10:40:05+00:00</lastmod>
+    <lastmod>2022-07-03T10:54:10+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jleodones.github.io/GrandmaGreenDocumentation/api/GrandmaGreen.SaveSystem.SaveController.html</loc>
-    <lastmod>2022-07-03T10:40:05+00:00</lastmod>
+    <lastmod>2022-07-03T10:54:10+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jleodones.github.io/GrandmaGreenDocumentation/api/GrandmaGreen.SaveSystem.SaveManager.html</loc>
-    <lastmod>2022-07-03T10:40:05+00:00</lastmod>
+    <lastmod>2022-07-03T10:54:10+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jleodones.github.io/GrandmaGreenDocumentation/api/GrandmaGreen.SaveSystem.html</loc>
-    <lastmod>2022-07-03T10:40:05+00:00</lastmod>
+    <lastmod>2022-07-03T10:54:10+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jleodones.github.io/GrandmaGreenDocumentation/api/GrandmaGreen.SizeSet.html</loc>
-    <lastmod>2022-07-03T10:40:05+00:00</lastmod>
+    <lastmod>2022-07-03T10:54:10+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jleodones.github.io/GrandmaGreenDocumentation/api/GrandmaGreen.Trait.html</loc>
-    <lastmod>2022-07-03T10:40:05+00:00</lastmod>
+    <lastmod>2022-07-03T10:54:10+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jleodones.github.io/GrandmaGreenDocumentation/api/GrandmaGreen.TraitData-1.html</loc>
-    <lastmod>2022-07-03T10:40:05+00:00</lastmod>
+    <lastmod>2022-07-03T10:54:10+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jleodones.github.io/GrandmaGreenDocumentation/api/GrandmaGreen.TraitSetData-1.html</loc>
-    <lastmod>2022-07-03T10:40:05+00:00</lastmod>
+    <lastmod>2022-07-03T10:54:10+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jleodones.github.io/GrandmaGreenDocumentation/api/GrandmaGreen.html</loc>
-    <lastmod>2022-07-03T10:40:05+00:00</lastmod>
+    <lastmod>2022-07-03T10:54:10+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jleodones.github.io/GrandmaGreenDocumentation/guide/coding.html</loc>
-    <lastmod>2022-07-03T10:40:05+00:00</lastmod>
+    <lastmod>2022-07-03T10:54:10+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jleodones.github.io/GrandmaGreenDocumentation/guide/commenting.html</loc>
-    <lastmod>2022-07-03T10:40:05+00:00</lastmod>
+    <lastmod>2022-07-03T10:54:10+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jleodones.github.io/GrandmaGreenDocumentation/index.html</loc>
-    <lastmod>2022-07-03T10:40:05+00:00</lastmod>
+    <lastmod>2022-07-03T10:54:10+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>

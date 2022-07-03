@@ -14,7 +14,6 @@
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
     <link rel="stylesheet" href="../styles/docfx.css">
     <link rel="stylesheet" href="../styles/main.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
     <meta property="docfx:navrel" content="../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
     
@@ -79,8 +78,7 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="coding-style-guide">Coding Style Guide</h1>
 
-<h2 id="writing-code">Writing Code</h2>
-<h3 id="naming-conventions">Naming Conventions</h3>
+<h2 id="naming-conventions">Naming Conventions</h2>
 <p>Names of classes, enumerations, structs, methods, and namespaces: <code>PascalCase</code>.</p>
 <pre><code class="lang-csharp">public class MyClass
 {
@@ -108,7 +106,7 @@
 {
     ...
 }
-</code></pre><h3 id="good-practice">Good Practice</h3>
+</code></pre><h2 id="good-practice">Good Practice</h2>
 <p>For readability, please consider the following:</p>
 <ul>
 <li>One statement per line.</li>
@@ -142,9 +140,23 @@
                   </li>
                 </ul>
               </div>
+              <div class="toggle-mode">
+                <div class="icon">
+                  <i aria-hidden="true">☀</i>
+                </div>
+                <label class="switch">
+                  <input type="checkbox" id="switch-style">
+                  <span class="slider round"></span>
+                </label>
+                <div class="icon">
+                  <i aria-hidden="true">☾</i>
+                </div>
+              </div>
+          
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-                <h5>In This Article</h5>
-                <div></div>
+              <h5>In This Article</h5>
+              <div></div>
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
               </nav>
             </div>
           </div>
@@ -158,12 +170,26 @@
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            Grandma Green Documentation
-            
+            <div class="pull-left">
+              Grandma Green Documentation
+              
+            </div>
+            <div class="toggle-mode pull-right visible-sm visible-xs">
+              <div class="icon">
+                <i aria-hidden="true">☀</i>
+              </div>
+              <label class="switch">
+                <input type="checkbox" id="switch-style-m">
+                <span class="slider round"></span>
+              </label>
+              <div class="icon">
+                <i aria-hidden="true">☾</i>
+              </div>
+            </div>
           </div>
         </div>
-      </footer>
-    </div>
+        <script type="text/javascript" src="../styles/toggle-theme.js"></script>
+      </footer>    </div>
     
     <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../styles/docfx.js"></script>
