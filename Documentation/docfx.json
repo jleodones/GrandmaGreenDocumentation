@@ -20,7 +20,7 @@
     "build": {
         "template":
             ["default",
-             "templates/material"],
+             "templates/darkfx"],
         "globalMetadata": {
             "_appFooter": "Grandma Green Documentation",
             "_enableSearch": true

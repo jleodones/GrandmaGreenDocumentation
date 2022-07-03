@@ -1,8 +1,6 @@
 # Coding Style Guide
 
-## Writing Code
-
-### Naming Conventions
+## Naming Conventions
 Names of classes, enumerations, structs, methods, and namespaces: `PascalCase`.
 
 ```csharp
@@ -11,18 +9,21 @@ public class MyClass
     ...
 }
 ```
+
 ```csharp
 public void MyFunction()
 {
     ...
 }
 ```
+
 ```csharp
 namespace GrandmaGreen.ExampleNamespace
 {
     ...
 }
 ```
+
 ```csharp
 enum MyEnum
 {
@@ -38,12 +39,15 @@ Private member variables should also append an m_ prefix ahead of the variable n
 ```csharp
 public int myInt;
 ```
+
 ```csharp
 private string m_myString;
 ```
+
 ```csharp
 static float s_myFloat;
 ```
+
 ```csharp
 public void MyFunction(int myLocalVariable)
 {
@@ -51,17 +55,20 @@ public void MyFunction(int myLocalVariable)
 }
 ```
 
-### Good Practice
+## Good Practice
 For readability, please consider the following:
 * One statement per line.
 * Keep opening and closing braces on their own lines.
 
 Avoid:
+
 ```csharp
 if (condition) { DoSomething(); DoSomethingElse(); }
 ```
 
+
 Instead, do:
+
 ```csharp
 if (condition)
 {
