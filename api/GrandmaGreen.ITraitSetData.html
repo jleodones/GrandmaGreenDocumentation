@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class BaseGenotypeData
+    <title>Interface ITraitSetData
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class BaseGenotypeData
+    <meta name="title" content="Interface ITraitSetData
    ">
     <meta name="generator" content="docfx 2.59.2.0">
     
@@ -78,37 +78,132 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="GrandmaGreen.BaseGenotypeData">
+            <article class="content wrap" id="_content" data-uid="GrandmaGreen.ITraitSetData">
   
   
-  <h1 id="GrandmaGreen_BaseGenotypeData" data-uid="GrandmaGreen.BaseGenotypeData" class="text-break">Class BaseGenotypeData
+  <h1 id="GrandmaGreen_ITraitSetData" data-uid="GrandmaGreen.ITraitSetData" class="text-break">Interface ITraitSetData
   </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
-  <div class="inheritance">
-    <h5>Inheritance</h5>
-    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
-    <div class="level1"><span class="xref">BaseGenotypeData</span></div>
-      <div class="level2"><a class="xref" href="GrandmaGreen.FlowerGenotypeData.html">FlowerGenotypeData</a></div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="GrandmaGreen.html">GrandmaGreen</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
-  <h5 id="GrandmaGreen_BaseGenotypeData_syntax">Syntax</h5>
+  <h5 id="GrandmaGreen_ITraitSetData_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class BaseGenotypeData : ScriptableObject</code></pre>
+    <pre><code class="lang-csharp hljs">public interface ITraitSetData</code></pre>
   </div>
-  <h3 id="fields">Fields
+  <h3 id="properties">Properties
   </h3>
   
   
-  <h4 id="GrandmaGreen_BaseGenotypeData_traitCount" data-uid="GrandmaGreen.BaseGenotypeData.traitCount">traitCount</h4>
+  <a id="GrandmaGreen_ITraitSetData_dominant_" data-uid="GrandmaGreen.ITraitSetData.dominant*"></a>
+  <h4 id="GrandmaGreen_ITraitSetData_dominant" data-uid="GrandmaGreen.ITraitSetData.dominant">dominant</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int traitCount</code></pre>
+    <pre><code class="lang-csharp hljs">ITraitData dominant { get; }</code></pre>
   </div>
-  <h5 class="fieldValue">Field Value</h5>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="GrandmaGreen.ITraitData.html">ITraitData</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="GrandmaGreen_ITraitSetData_mixed_" data-uid="GrandmaGreen.ITraitSetData.mixed*"></a>
+  <h4 id="GrandmaGreen_ITraitSetData_mixed" data-uid="GrandmaGreen.ITraitSetData.mixed">mixed</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ITraitData mixed { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="GrandmaGreen.ITraitData.html">ITraitData</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="GrandmaGreen_ITraitSetData_recessive_" data-uid="GrandmaGreen.ITraitSetData.recessive*"></a>
+  <h4 id="GrandmaGreen_ITraitSetData_recessive" data-uid="GrandmaGreen.ITraitSetData.recessive">recessive</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ITraitData recessive { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="GrandmaGreen.ITraitData.html">ITraitData</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="GrandmaGreen_ITraitSetData_type_" data-uid="GrandmaGreen.ITraitSetData.type*"></a>
+  <h4 id="GrandmaGreen_ITraitSetData_type" data-uid="GrandmaGreen.ITraitSetData.type">type</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Type type { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Type</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="GrandmaGreen_ITraitSetData_weight_" data-uid="GrandmaGreen.ITraitSetData.weight*"></a>
+  <h4 id="GrandmaGreen_ITraitSetData_weight" data-uid="GrandmaGreen.ITraitSetData.weight">weight</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int weight { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -119,100 +214,6 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="GrandmaGreen_BaseGenotypeData_traitList" data-uid="GrandmaGreen.BaseGenotypeData.traitList">traitList</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected ITraitPairData[] traitList</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="GrandmaGreen.ITraitPairData.html">ITraitPairData</a>[]</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="methods">Methods
-  </h3>
-  
-  
-  <a id="GrandmaGreen_BaseGenotypeData_SetTraitData_" data-uid="GrandmaGreen.BaseGenotypeData.SetTraitData*"></a>
-  <h4 id="GrandmaGreen_BaseGenotypeData_SetTraitData" data-uid="GrandmaGreen.BaseGenotypeData.SetTraitData">SetTraitData()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract void SetTraitData()</code></pre>
-  </div>
-  
-  
-  <a id="GrandmaGreen_BaseGenotypeData_Trait_" data-uid="GrandmaGreen.BaseGenotypeData.Trait*"></a>
-  <h4 id="GrandmaGreen_BaseGenotypeData_Trait__1_System_Int32_" data-uid="GrandmaGreen.BaseGenotypeData.Trait``1(System.Int32)">Trait&lt;T&gt;(Int32)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual T Trait&lt;T&gt;(int index)
-    where T : class, ITraitPairData</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
-        <td><span class="parametername">index</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">T</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">T</span></td>
         <td></td>
       </tr>
     </tbody>

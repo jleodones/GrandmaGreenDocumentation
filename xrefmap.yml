@@ -58,6 +58,12 @@ references:
   commentId: F:Global.PathfindingTester.StartPos
   fullName: PathfindingTester.StartPos
   nameWithType: PathfindingTester.StartPos
+- uid: Global.PlantInteractable
+  name: PlantInteractable
+  href: api/Global.PlantInteractable.html
+  commentId: T:Global.PlantInteractable
+  fullName: PlantInteractable
+  nameWithType: PlantInteractable
 - uid: Global.SetCameraBounds
   name: SetCameraBounds
   href: api/Global.SetCameraBounds.html
@@ -113,120 +119,299 @@ references:
   commentId: F:GrandmaGreen.Allele.recessive
   fullName: GrandmaGreen.Allele.recessive
   nameWithType: Allele.recessive
-- uid: GrandmaGreen.BaseGenotypeData
-  name: BaseGenotypeData
-  href: api/GrandmaGreen.BaseGenotypeData.html
-  commentId: T:GrandmaGreen.BaseGenotypeData
-  fullName: GrandmaGreen.BaseGenotypeData
-  nameWithType: BaseGenotypeData
-- uid: GrandmaGreen.BaseGenotypeData.SetTraitData
+- uid: GrandmaGreen.BasePhenotypeData
+  name: BasePhenotypeData
+  href: api/GrandmaGreen.BasePhenotypeData.html
+  commentId: T:GrandmaGreen.BasePhenotypeData
+  fullName: GrandmaGreen.BasePhenotypeData
+  nameWithType: BasePhenotypeData
+- uid: GrandmaGreen.BasePhenotypeData.SetTraitData
   name: SetTraitData()
-  href: api/GrandmaGreen.BaseGenotypeData.html#GrandmaGreen_BaseGenotypeData_SetTraitData
-  commentId: M:GrandmaGreen.BaseGenotypeData.SetTraitData
-  fullName: GrandmaGreen.BaseGenotypeData.SetTraitData()
-  nameWithType: BaseGenotypeData.SetTraitData()
-- uid: GrandmaGreen.BaseGenotypeData.SetTraitData*
+  href: api/GrandmaGreen.BasePhenotypeData.html#GrandmaGreen_BasePhenotypeData_SetTraitData
+  commentId: M:GrandmaGreen.BasePhenotypeData.SetTraitData
+  fullName: GrandmaGreen.BasePhenotypeData.SetTraitData()
+  nameWithType: BasePhenotypeData.SetTraitData()
+- uid: GrandmaGreen.BasePhenotypeData.SetTraitData*
   name: SetTraitData
-  href: api/GrandmaGreen.BaseGenotypeData.html#GrandmaGreen_BaseGenotypeData_SetTraitData_
-  commentId: Overload:GrandmaGreen.BaseGenotypeData.SetTraitData
+  href: api/GrandmaGreen.BasePhenotypeData.html#GrandmaGreen_BasePhenotypeData_SetTraitData_
+  commentId: Overload:GrandmaGreen.BasePhenotypeData.SetTraitData
   isSpec: "True"
-  fullName: GrandmaGreen.BaseGenotypeData.SetTraitData
-  nameWithType: BaseGenotypeData.SetTraitData
-- uid: GrandmaGreen.BaseGenotypeData.Trait*
+  fullName: GrandmaGreen.BasePhenotypeData.SetTraitData
+  nameWithType: BasePhenotypeData.SetTraitData
+- uid: GrandmaGreen.BasePhenotypeData.Trait*
   name: Trait
-  href: api/GrandmaGreen.BaseGenotypeData.html#GrandmaGreen_BaseGenotypeData_Trait_
-  commentId: Overload:GrandmaGreen.BaseGenotypeData.Trait
+  href: api/GrandmaGreen.BasePhenotypeData.html#GrandmaGreen_BasePhenotypeData_Trait_
+  commentId: Overload:GrandmaGreen.BasePhenotypeData.Trait
   isSpec: "True"
-  fullName: GrandmaGreen.BaseGenotypeData.Trait
-  nameWithType: BaseGenotypeData.Trait
-- uid: GrandmaGreen.BaseGenotypeData.Trait``1(System.Int32)
+  fullName: GrandmaGreen.BasePhenotypeData.Trait
+  nameWithType: BasePhenotypeData.Trait
+- uid: GrandmaGreen.BasePhenotypeData.Trait``1(System.Int32)
   name: Trait<T>(Int32)
-  href: api/GrandmaGreen.BaseGenotypeData.html#GrandmaGreen_BaseGenotypeData_Trait__1_System_Int32_
-  commentId: M:GrandmaGreen.BaseGenotypeData.Trait``1(System.Int32)
+  href: api/GrandmaGreen.BasePhenotypeData.html#GrandmaGreen_BasePhenotypeData_Trait__1_System_Int32_
+  commentId: M:GrandmaGreen.BasePhenotypeData.Trait``1(System.Int32)
   name.vb: Trait(Of T)(Int32)
-  fullName: GrandmaGreen.BaseGenotypeData.Trait<T>(System.Int32)
-  fullName.vb: GrandmaGreen.BaseGenotypeData.Trait(Of T)(System.Int32)
-  nameWithType: BaseGenotypeData.Trait<T>(Int32)
-  nameWithType.vb: BaseGenotypeData.Trait(Of T)(Int32)
-- uid: GrandmaGreen.BaseGenotypeData.traitCount
-  name: traitCount
-  href: api/GrandmaGreen.BaseGenotypeData.html#GrandmaGreen_BaseGenotypeData_traitCount
-  commentId: F:GrandmaGreen.BaseGenotypeData.traitCount
-  fullName: GrandmaGreen.BaseGenotypeData.traitCount
-  nameWithType: BaseGenotypeData.traitCount
-- uid: GrandmaGreen.BaseGenotypeData.traitList
-  name: traitList
-  href: api/GrandmaGreen.BaseGenotypeData.html#GrandmaGreen_BaseGenotypeData_traitList
-  commentId: F:GrandmaGreen.BaseGenotypeData.traitList
-  fullName: GrandmaGreen.BaseGenotypeData.traitList
-  nameWithType: BaseGenotypeData.traitList
-- uid: GrandmaGreen.ColorPair
-  name: ColorPair
-  href: api/GrandmaGreen.ColorPair.html
-  commentId: T:GrandmaGreen.ColorPair
-  fullName: GrandmaGreen.ColorPair
-  nameWithType: ColorPair
-- uid: GrandmaGreen.FloatPair
-  name: FloatPair
-  href: api/GrandmaGreen.FloatPair.html
-  commentId: T:GrandmaGreen.FloatPair
-  fullName: GrandmaGreen.FloatPair
-  nameWithType: FloatPair
-- uid: GrandmaGreen.FlowerGenotypeData
-  name: FlowerGenotypeData
-  href: api/GrandmaGreen.FlowerGenotypeData.html
-  commentId: T:GrandmaGreen.FlowerGenotypeData
-  fullName: GrandmaGreen.FlowerGenotypeData
-  nameWithType: FlowerGenotypeData
-- uid: GrandmaGreen.FlowerGenotypeData.SetTraitData
-  name: SetTraitData()
-  href: api/GrandmaGreen.FlowerGenotypeData.html#GrandmaGreen_FlowerGenotypeData_SetTraitData
-  commentId: M:GrandmaGreen.FlowerGenotypeData.SetTraitData
-  fullName: GrandmaGreen.FlowerGenotypeData.SetTraitData()
-  nameWithType: FlowerGenotypeData.SetTraitData()
-- uid: GrandmaGreen.FlowerGenotypeData.SetTraitData*
-  name: SetTraitData
-  href: api/GrandmaGreen.FlowerGenotypeData.html#GrandmaGreen_FlowerGenotypeData_SetTraitData_
-  commentId: Overload:GrandmaGreen.FlowerGenotypeData.SetTraitData
+  fullName: GrandmaGreen.BasePhenotypeData.Trait<T>(System.Int32)
+  fullName.vb: GrandmaGreen.BasePhenotypeData.Trait(Of T)(System.Int32)
+  nameWithType: BasePhenotypeData.Trait<T>(Int32)
+  nameWithType.vb: BasePhenotypeData.Trait(Of T)(Int32)
+- uid: GrandmaGreen.BasePhenotypeData.TraitCount
+  name: TraitCount
+  href: api/GrandmaGreen.BasePhenotypeData.html#GrandmaGreen_BasePhenotypeData_TraitCount
+  commentId: P:GrandmaGreen.BasePhenotypeData.TraitCount
+  fullName: GrandmaGreen.BasePhenotypeData.TraitCount
+  nameWithType: BasePhenotypeData.TraitCount
+- uid: GrandmaGreen.BasePhenotypeData.TraitCount*
+  name: TraitCount
+  href: api/GrandmaGreen.BasePhenotypeData.html#GrandmaGreen_BasePhenotypeData_TraitCount_
+  commentId: Overload:GrandmaGreen.BasePhenotypeData.TraitCount
   isSpec: "True"
-  fullName: GrandmaGreen.FlowerGenotypeData.SetTraitData
-  nameWithType: FlowerGenotypeData.SetTraitData
+  fullName: GrandmaGreen.BasePhenotypeData.TraitCount
+  nameWithType: BasePhenotypeData.TraitCount
+- uid: GrandmaGreen.BasePhenotypeData.traitList
+  name: traitList
+  href: api/GrandmaGreen.BasePhenotypeData.html#GrandmaGreen_BasePhenotypeData_traitList
+  commentId: F:GrandmaGreen.BasePhenotypeData.traitList
+  fullName: GrandmaGreen.BasePhenotypeData.traitList
+  nameWithType: BasePhenotypeData.traitList
+- uid: GrandmaGreen.BasePhenotypeData.TraitList
+  name: TraitList
+  href: api/GrandmaGreen.BasePhenotypeData.html#GrandmaGreen_BasePhenotypeData_TraitList
+  commentId: P:GrandmaGreen.BasePhenotypeData.TraitList
+  fullName: GrandmaGreen.BasePhenotypeData.TraitList
+  nameWithType: BasePhenotypeData.TraitList
+- uid: GrandmaGreen.BasePhenotypeData.TraitList*
+  name: TraitList
+  href: api/GrandmaGreen.BasePhenotypeData.html#GrandmaGreen_BasePhenotypeData_TraitList_
+  commentId: Overload:GrandmaGreen.BasePhenotypeData.TraitList
+  isSpec: "True"
+  fullName: GrandmaGreen.BasePhenotypeData.TraitList
+  nameWithType: BasePhenotypeData.TraitList
+- uid: GrandmaGreen.ColorSet
+  name: ColorSet
+  href: api/GrandmaGreen.ColorSet.html
+  commentId: T:GrandmaGreen.ColorSet
+  fullName: GrandmaGreen.ColorSet
+  nameWithType: ColorSet
+- uid: GrandmaGreen.FlowerPhenotypeData
+  name: FlowerPhenotypeData
+  href: api/GrandmaGreen.FlowerPhenotypeData.html
+  commentId: T:GrandmaGreen.FlowerPhenotypeData
+  fullName: GrandmaGreen.FlowerPhenotypeData
+  nameWithType: FlowerPhenotypeData
+- uid: GrandmaGreen.FlowerPhenotypeData.SetTraitData
+  name: SetTraitData()
+  href: api/GrandmaGreen.FlowerPhenotypeData.html#GrandmaGreen_FlowerPhenotypeData_SetTraitData
+  commentId: M:GrandmaGreen.FlowerPhenotypeData.SetTraitData
+  fullName: GrandmaGreen.FlowerPhenotypeData.SetTraitData()
+  nameWithType: FlowerPhenotypeData.SetTraitData()
+- uid: GrandmaGreen.FlowerPhenotypeData.SetTraitData*
+  name: SetTraitData
+  href: api/GrandmaGreen.FlowerPhenotypeData.html#GrandmaGreen_FlowerPhenotypeData_SetTraitData_
+  commentId: Overload:GrandmaGreen.FlowerPhenotypeData.SetTraitData
+  isSpec: "True"
+  fullName: GrandmaGreen.FlowerPhenotypeData.SetTraitData
+  nameWithType: FlowerPhenotypeData.SetTraitData
+- uid: GrandmaGreen.FlowerPhenotypeData.TraitCount
+  name: TraitCount
+  href: api/GrandmaGreen.FlowerPhenotypeData.html#GrandmaGreen_FlowerPhenotypeData_TraitCount
+  commentId: P:GrandmaGreen.FlowerPhenotypeData.TraitCount
+  fullName: GrandmaGreen.FlowerPhenotypeData.TraitCount
+  nameWithType: FlowerPhenotypeData.TraitCount
+- uid: GrandmaGreen.FlowerPhenotypeData.TraitCount*
+  name: TraitCount
+  href: api/GrandmaGreen.FlowerPhenotypeData.html#GrandmaGreen_FlowerPhenotypeData_TraitCount_
+  commentId: Overload:GrandmaGreen.FlowerPhenotypeData.TraitCount
+  isSpec: "True"
+  fullName: GrandmaGreen.FlowerPhenotypeData.TraitCount
+  nameWithType: FlowerPhenotypeData.TraitCount
+- uid: GrandmaGreen.GardenAreaController
+  name: GardenAreaController
+  href: api/GrandmaGreen.GardenAreaController.html
+  commentId: T:GrandmaGreen.GardenAreaController
+  fullName: GrandmaGreen.GardenAreaController
+  nameWithType: GardenAreaController
+- uid: GrandmaGreen.GardenAreaController.areaBounds
+  name: areaBounds
+  href: api/GrandmaGreen.GardenAreaController.html#GrandmaGreen_GardenAreaController_areaBounds
+  commentId: F:GrandmaGreen.GardenAreaController.areaBounds
+  fullName: GrandmaGreen.GardenAreaController.areaBounds
+  nameWithType: GardenAreaController.areaBounds
+- uid: GrandmaGreen.GardenAreaController.BakeNavGrid
+  name: BakeNavGrid()
+  href: api/GrandmaGreen.GardenAreaController.html#GrandmaGreen_GardenAreaController_BakeNavGrid
+  commentId: M:GrandmaGreen.GardenAreaController.BakeNavGrid
+  fullName: GrandmaGreen.GardenAreaController.BakeNavGrid()
+  nameWithType: GardenAreaController.BakeNavGrid()
+- uid: GrandmaGreen.GardenAreaController.BakeNavGrid*
+  name: BakeNavGrid
+  href: api/GrandmaGreen.GardenAreaController.html#GrandmaGreen_GardenAreaController_BakeNavGrid_
+  commentId: Overload:GrandmaGreen.GardenAreaController.BakeNavGrid
+  isSpec: "True"
+  fullName: GrandmaGreen.GardenAreaController.BakeNavGrid
+  nameWithType: GardenAreaController.BakeNavGrid
+- uid: GrandmaGreen.GardenAreaController.currentSelection
+  name: currentSelection
+  href: api/GrandmaGreen.GardenAreaController.html#GrandmaGreen_GardenAreaController_currentSelection
+  commentId: P:GrandmaGreen.GardenAreaController.currentSelection
+  fullName: GrandmaGreen.GardenAreaController.currentSelection
+  nameWithType: GardenAreaController.currentSelection
+- uid: GrandmaGreen.GardenAreaController.currentSelection*
+  name: currentSelection
+  href: api/GrandmaGreen.GardenAreaController.html#GrandmaGreen_GardenAreaController_currentSelection_
+  commentId: Overload:GrandmaGreen.GardenAreaController.currentSelection
+  isSpec: "True"
+  fullName: GrandmaGreen.GardenAreaController.currentSelection
+  nameWithType: GardenAreaController.currentSelection
+- uid: GrandmaGreen.GardenAreaController.gardenData
+  name: gardenData
+  href: api/GrandmaGreen.GardenAreaController.html#GrandmaGreen_GardenAreaController_gardenData
+  commentId: F:GrandmaGreen.GardenAreaController.gardenData
+  fullName: GrandmaGreen.GardenAreaController.gardenData
+  nameWithType: GardenAreaController.gardenData
+- uid: GrandmaGreen.GardenAreaController.GardenSelection(Vector3)
+  name: GardenSelection(Vector3)
+  href: api/GrandmaGreen.GardenAreaController.html#GrandmaGreen_GardenAreaController_GardenSelection_Vector3_
+  commentId: M:GrandmaGreen.GardenAreaController.GardenSelection(Vector3)
+  fullName: GrandmaGreen.GardenAreaController.GardenSelection(Vector3)
+  nameWithType: GardenAreaController.GardenSelection(Vector3)
+- uid: GrandmaGreen.GardenAreaController.GardenSelection*
+  name: GardenSelection
+  href: api/GrandmaGreen.GardenAreaController.html#GrandmaGreen_GardenAreaController_GardenSelection_
+  commentId: Overload:GrandmaGreen.GardenAreaController.GardenSelection
+  isSpec: "True"
+  fullName: GrandmaGreen.GardenAreaController.GardenSelection
+  nameWithType: GardenAreaController.GardenSelection
+- uid: GrandmaGreen.GardenAreaController.Harvest(GrandmaGreen.BasePhenotypeData,GrandmaGreen.Genotype)
+  name: Harvest(BasePhenotypeData, Genotype)
+  href: api/GrandmaGreen.GardenAreaController.html#GrandmaGreen_GardenAreaController_Harvest_GrandmaGreen_BasePhenotypeData_GrandmaGreen_Genotype_
+  commentId: M:GrandmaGreen.GardenAreaController.Harvest(GrandmaGreen.BasePhenotypeData,GrandmaGreen.Genotype)
+  fullName: GrandmaGreen.GardenAreaController.Harvest(GrandmaGreen.BasePhenotypeData, GrandmaGreen.Genotype)
+  nameWithType: GardenAreaController.Harvest(BasePhenotypeData, Genotype)
+- uid: GrandmaGreen.GardenAreaController.Harvest*
+  name: Harvest
+  href: api/GrandmaGreen.GardenAreaController.html#GrandmaGreen_GardenAreaController_Harvest_
+  commentId: Overload:GrandmaGreen.GardenAreaController.Harvest
+  isSpec: "True"
+  fullName: GrandmaGreen.GardenAreaController.Harvest
+  nameWithType: GardenAreaController.Harvest
+- uid: GrandmaGreen.GardenAreaController.onGardenSelection
+  name: onGardenSelection
+  href: api/GrandmaGreen.GardenAreaController.html#GrandmaGreen_GardenAreaController_onGardenSelection
+  commentId: E:GrandmaGreen.GardenAreaController.onGardenSelection
+  fullName: GrandmaGreen.GardenAreaController.onGardenSelection
+  nameWithType: GardenAreaController.onGardenSelection
+- uid: GrandmaGreen.GardenAreaController.ParseTilemap
+  name: ParseTilemap()
+  href: api/GrandmaGreen.GardenAreaController.html#GrandmaGreen_GardenAreaController_ParseTilemap
+  commentId: M:GrandmaGreen.GardenAreaController.ParseTilemap
+  fullName: GrandmaGreen.GardenAreaController.ParseTilemap()
+  nameWithType: GardenAreaController.ParseTilemap()
+- uid: GrandmaGreen.GardenAreaController.ParseTilemap*
+  name: ParseTilemap
+  href: api/GrandmaGreen.GardenAreaController.html#GrandmaGreen_GardenAreaController_ParseTilemap_
+  commentId: Overload:GrandmaGreen.GardenAreaController.ParseTilemap
+  isSpec: "True"
+  fullName: GrandmaGreen.GardenAreaController.ParseTilemap
+  nameWithType: GardenAreaController.ParseTilemap
+- uid: GrandmaGreen.GardenAreaController.pathfinder
+  name: pathfinder
+  href: api/GrandmaGreen.GardenAreaController.html#GrandmaGreen_GardenAreaController_pathfinder
+  commentId: F:GrandmaGreen.GardenAreaController.pathfinder
+  fullName: GrandmaGreen.GardenAreaController.pathfinder
+  nameWithType: GardenAreaController.pathfinder
+- uid: GrandmaGreen.GardenAreaController.plantInteractablePrefab
+  name: plantInteractablePrefab
+  href: api/GrandmaGreen.GardenAreaController.html#GrandmaGreen_GardenAreaController_plantInteractablePrefab
+  commentId: F:GrandmaGreen.GardenAreaController.plantInteractablePrefab
+  fullName: GrandmaGreen.GardenAreaController.plantInteractablePrefab
+  nameWithType: GardenAreaController.plantInteractablePrefab
+- uid: GrandmaGreen.GardenAreaController.PlantInteraction
+  name: PlantInteraction()
+  href: api/GrandmaGreen.GardenAreaController.html#GrandmaGreen_GardenAreaController_PlantInteraction
+  commentId: M:GrandmaGreen.GardenAreaController.PlantInteraction
+  fullName: GrandmaGreen.GardenAreaController.PlantInteraction()
+  nameWithType: GardenAreaController.PlantInteraction()
+- uid: GrandmaGreen.GardenAreaController.PlantInteraction*
+  name: PlantInteraction
+  href: api/GrandmaGreen.GardenAreaController.html#GrandmaGreen_GardenAreaController_PlantInteraction_
+  commentId: Overload:GrandmaGreen.GardenAreaController.PlantInteraction
+  isSpec: "True"
+  fullName: GrandmaGreen.GardenAreaController.PlantInteraction
+  nameWithType: GardenAreaController.PlantInteraction
+- uid: GrandmaGreen.GardenAreaController.tilemap
+  name: tilemap
+  href: api/GrandmaGreen.GardenAreaController.html#GrandmaGreen_GardenAreaController_tilemap
+  commentId: F:GrandmaGreen.GardenAreaController.tilemap
+  fullName: GrandmaGreen.GardenAreaController.tilemap
+  nameWithType: GardenAreaController.tilemap
 - uid: GrandmaGreen.GardenData
   name: GardenData
   href: api/GrandmaGreen.GardenData.html
   commentId: T:GrandmaGreen.GardenData
   fullName: GrandmaGreen.GardenData
   nameWithType: GardenData
-- uid: GrandmaGreen.GardenData.GardenSize
-  name: GardenSize
-  href: api/GrandmaGreen.GardenData.html#GrandmaGreen_GardenData_GardenSize
-  commentId: F:GrandmaGreen.GardenData.GardenSize
-  fullName: GrandmaGreen.GardenData.GardenSize
-  nameWithType: GardenData.GardenSize
-- uid: GrandmaGreen.GardenManager
-  name: GardenManager
-  href: api/GrandmaGreen.GardenManager.html
-  commentId: T:GrandmaGreen.GardenManager
-  fullName: GrandmaGreen.GardenManager
-  nameWithType: GardenManager
-- uid: GrandmaGreen.GardenManager.gardenData
-  name: gardenData
-  href: api/GrandmaGreen.GardenManager.html#GrandmaGreen_GardenManager_gardenData
-  commentId: F:GrandmaGreen.GardenManager.gardenData
-  fullName: GrandmaGreen.GardenManager.gardenData
-  nameWithType: GardenManager.gardenData
+- uid: GrandmaGreen.GardenData.cellSize
+  name: cellSize
+  href: api/GrandmaGreen.GardenData.html#GrandmaGreen_GardenData_cellSize
+  commentId: F:GrandmaGreen.GardenData.cellSize
+  fullName: GrandmaGreen.GardenData.cellSize
+  nameWithType: GardenData.cellSize
+- uid: GrandmaGreen.GardenData.gridSize
+  name: gridSize
+  href: api/GrandmaGreen.GardenData.html#GrandmaGreen_GardenData_gridSize
+  commentId: F:GrandmaGreen.GardenData.gridSize
+  fullName: GrandmaGreen.GardenData.gridSize
+  nameWithType: GardenData.gridSize
+- uid: GrandmaGreen.GardenData.IndexToWorldPos(System.Int32)
+  name: IndexToWorldPos(Int32)
+  href: api/GrandmaGreen.GardenData.html#GrandmaGreen_GardenData_IndexToWorldPos_System_Int32_
+  commentId: M:GrandmaGreen.GardenData.IndexToWorldPos(System.Int32)
+  fullName: GrandmaGreen.GardenData.IndexToWorldPos(System.Int32)
+  nameWithType: GardenData.IndexToWorldPos(Int32)
+- uid: GrandmaGreen.GardenData.IndexToWorldPos*
+  name: IndexToWorldPos
+  href: api/GrandmaGreen.GardenData.html#GrandmaGreen_GardenData_IndexToWorldPos_
+  commentId: Overload:GrandmaGreen.GardenData.IndexToWorldPos
+  isSpec: "True"
+  fullName: GrandmaGreen.GardenData.IndexToWorldPos
+  nameWithType: GardenData.IndexToWorldPos
+- uid: GrandmaGreen.GardenData.plantStates
+  name: plantStates
+  href: api/GrandmaGreen.GardenData.html#GrandmaGreen_GardenData_plantStates
+  commentId: F:GrandmaGreen.GardenData.plantStates
+  fullName: GrandmaGreen.GardenData.plantStates
+  nameWithType: GardenData.plantStates
+- uid: GrandmaGreen.GardenData.worldOrigin
+  name: worldOrigin
+  href: api/GrandmaGreen.GardenData.html#GrandmaGreen_GardenData_worldOrigin
+  commentId: F:GrandmaGreen.GardenData.worldOrigin
+  fullName: GrandmaGreen.GardenData.worldOrigin
+  nameWithType: GardenData.worldOrigin
+- uid: GrandmaGreen.GardenData.WorldToGrid(Vector3)
+  name: WorldToGrid(Vector3)
+  href: api/GrandmaGreen.GardenData.html#GrandmaGreen_GardenData_WorldToGrid_Vector3_
+  commentId: M:GrandmaGreen.GardenData.WorldToGrid(Vector3)
+  fullName: GrandmaGreen.GardenData.WorldToGrid(Vector3)
+  nameWithType: GardenData.WorldToGrid(Vector3)
+- uid: GrandmaGreen.GardenData.WorldToGrid*
+  name: WorldToGrid
+  href: api/GrandmaGreen.GardenData.html#GrandmaGreen_GardenData_WorldToGrid_
+  commentId: Overload:GrandmaGreen.GardenData.WorldToGrid
+  isSpec: "True"
+  fullName: GrandmaGreen.GardenData.WorldToGrid
+  nameWithType: GardenData.WorldToGrid
 - uid: GrandmaGreen.GardenPlant
   name: GardenPlant
   href: api/GrandmaGreen.GardenPlant.html
   commentId: T:GrandmaGreen.GardenPlant
   fullName: GrandmaGreen.GardenPlant
   nameWithType: GardenPlant
-- uid: GrandmaGreen.GardenPlant.daddyPhenotype
-  name: daddyPhenotype
-  href: api/GrandmaGreen.GardenPlant.html#GrandmaGreen_GardenPlant_daddyPhenotype
-  commentId: F:GrandmaGreen.GardenPlant.daddyPhenotype
-  fullName: GrandmaGreen.GardenPlant.daddyPhenotype
-  nameWithType: GardenPlant.daddyPhenotype
+- uid: GrandmaGreen.GardenPlant.childGenotype
+  name: childGenotype
+  href: api/GrandmaGreen.GardenPlant.html#GrandmaGreen_GardenPlant_childGenotype
+  commentId: F:GrandmaGreen.GardenPlant.childGenotype
+  fullName: GrandmaGreen.GardenPlant.childGenotype
+  nameWithType: GardenPlant.childGenotype
 - uid: GrandmaGreen.GardenPlant.DoInteraction(Vector3,PointerState)
   name: DoInteraction(Vector3, PointerState)
   href: api/GrandmaGreen.GardenPlant.html#GrandmaGreen_GardenPlant_DoInteraction_Vector3_PointerState_
@@ -240,12 +425,12 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.GardenPlant.DoInteraction
   nameWithType: GardenPlant.DoInteraction
-- uid: GrandmaGreen.GardenPlant.genotypeData
-  name: genotypeData
-  href: api/GrandmaGreen.GardenPlant.html#GrandmaGreen_GardenPlant_genotypeData
-  commentId: F:GrandmaGreen.GardenPlant.genotypeData
-  fullName: GrandmaGreen.GardenPlant.genotypeData
-  nameWithType: GardenPlant.genotypeData
+- uid: GrandmaGreen.GardenPlant.genotype
+  name: genotype
+  href: api/GrandmaGreen.GardenPlant.html#GrandmaGreen_GardenPlant_genotype
+  commentId: F:GrandmaGreen.GardenPlant.genotype
+  fullName: GrandmaGreen.GardenPlant.genotype
+  nameWithType: GardenPlant.genotype
 - uid: GrandmaGreen.GardenPlant.Harvest
   name: Harvest()
   href: api/GrandmaGreen.GardenPlant.html#GrandmaGreen_GardenPlant_Harvest
@@ -265,12 +450,12 @@ references:
   commentId: F:GrandmaGreen.GardenPlant.neighbours
   fullName: GrandmaGreen.GardenPlant.neighbours
   nameWithType: GardenPlant.neighbours
-- uid: GrandmaGreen.GardenPlant.phenotype
-  name: phenotype
-  href: api/GrandmaGreen.GardenPlant.html#GrandmaGreen_GardenPlant_phenotype
-  commentId: F:GrandmaGreen.GardenPlant.phenotype
-  fullName: GrandmaGreen.GardenPlant.phenotype
-  nameWithType: GardenPlant.phenotype
+- uid: GrandmaGreen.GardenPlant.phenotypeData
+  name: phenotypeData
+  href: api/GrandmaGreen.GardenPlant.html#GrandmaGreen_GardenPlant_phenotypeData
+  commentId: F:GrandmaGreen.GardenPlant.phenotypeData
+  fullName: GrandmaGreen.GardenPlant.phenotypeData
+  nameWithType: GardenPlant.phenotypeData
 - uid: GrandmaGreen.GardenPlant.plantSprite
   name: plantSprite
   href: api/GrandmaGreen.GardenPlant.html#GrandmaGreen_GardenPlant_plantSprite
@@ -283,84 +468,167 @@ references:
   commentId: F:GrandmaGreen.GardenPlant.punnetSquare
   fullName: GrandmaGreen.GardenPlant.punnetSquare
   nameWithType: GardenPlant.punnetSquare
-- uid: GrandmaGreen.ITraitPairData
-  name: ITraitPairData
-  href: api/GrandmaGreen.ITraitPairData.html
-  commentId: T:GrandmaGreen.ITraitPairData
-  fullName: GrandmaGreen.ITraitPairData
-  nameWithType: ITraitPairData
-- uid: GrandmaGreen.ITraitPairData.type
-  name: type
-  href: api/GrandmaGreen.ITraitPairData.html#GrandmaGreen_ITraitPairData_type
-  commentId: P:GrandmaGreen.ITraitPairData.type
-  fullName: GrandmaGreen.ITraitPairData.type
-  nameWithType: ITraitPairData.type
-- uid: GrandmaGreen.ITraitPairData.type*
-  name: type
-  href: api/GrandmaGreen.ITraitPairData.html#GrandmaGreen_ITraitPairData_type_
-  commentId: Overload:GrandmaGreen.ITraitPairData.type
+- uid: GrandmaGreen.GardenPlant.traitList
+  name: traitList
+  href: api/GrandmaGreen.GardenPlant.html#GrandmaGreen_GardenPlant_traitList
+  commentId: F:GrandmaGreen.GardenPlant.traitList
+  fullName: GrandmaGreen.GardenPlant.traitList
+  nameWithType: GardenPlant.traitList
+- uid: GrandmaGreen.Genotype
+  name: Genotype
+  href: api/GrandmaGreen.Genotype.html
+  commentId: T:GrandmaGreen.Genotype
+  fullName: GrandmaGreen.Genotype
+  nameWithType: Genotype
+- uid: GrandmaGreen.Genotype.#ctor
+  name: Genotype()
+  href: api/GrandmaGreen.Genotype.html#GrandmaGreen_Genotype__ctor
+  commentId: M:GrandmaGreen.Genotype.#ctor
+  fullName: GrandmaGreen.Genotype.Genotype()
+  nameWithType: Genotype.Genotype()
+- uid: GrandmaGreen.Genotype.#ctor*
+  name: Genotype
+  href: api/GrandmaGreen.Genotype.html#GrandmaGreen_Genotype__ctor_
+  commentId: Overload:GrandmaGreen.Genotype.#ctor
   isSpec: "True"
-  fullName: GrandmaGreen.ITraitPairData.type
-  nameWithType: ITraitPairData.type
-- uid: GrandmaGreen.Phenotype
-  name: Phenotype
-  href: api/GrandmaGreen.Phenotype.html
-  commentId: T:GrandmaGreen.Phenotype
-  fullName: GrandmaGreen.Phenotype
-  nameWithType: Phenotype
-- uid: GrandmaGreen.Phenotype.#ctor
-  name: Phenotype()
-  href: api/GrandmaGreen.Phenotype.html#GrandmaGreen_Phenotype__ctor
-  commentId: M:GrandmaGreen.Phenotype.#ctor
-  fullName: GrandmaGreen.Phenotype.Phenotype()
-  nameWithType: Phenotype.Phenotype()
-- uid: GrandmaGreen.Phenotype.#ctor*
-  name: Phenotype
-  href: api/GrandmaGreen.Phenotype.html#GrandmaGreen_Phenotype__ctor_
-  commentId: Overload:GrandmaGreen.Phenotype.#ctor
-  isSpec: "True"
-  fullName: GrandmaGreen.Phenotype.Phenotype
-  nameWithType: Phenotype.Phenotype
-- uid: GrandmaGreen.Phenotype.Item(System.Int32)
+  fullName: GrandmaGreen.Genotype.Genotype
+  nameWithType: Genotype.Genotype
+- uid: GrandmaGreen.Genotype.Item(System.Int32)
   name: Item[Int32]
-  href: api/GrandmaGreen.Phenotype.html#GrandmaGreen_Phenotype_Item_System_Int32_
-  commentId: P:GrandmaGreen.Phenotype.Item(System.Int32)
+  href: api/GrandmaGreen.Genotype.html#GrandmaGreen_Genotype_Item_System_Int32_
+  commentId: P:GrandmaGreen.Genotype.Item(System.Int32)
   name.vb: Item(Int32)
-  fullName: GrandmaGreen.Phenotype.Item[System.Int32]
-  fullName.vb: GrandmaGreen.Phenotype.Item(System.Int32)
-  nameWithType: Phenotype.Item[Int32]
-  nameWithType.vb: Phenotype.Item(Int32)
-- uid: GrandmaGreen.Phenotype.Item*
+  fullName: GrandmaGreen.Genotype.Item[System.Int32]
+  fullName.vb: GrandmaGreen.Genotype.Item(System.Int32)
+  nameWithType: Genotype.Item[Int32]
+  nameWithType.vb: Genotype.Item(Int32)
+- uid: GrandmaGreen.Genotype.Item*
   name: Item
-  href: api/GrandmaGreen.Phenotype.html#GrandmaGreen_Phenotype_Item_
-  commentId: Overload:GrandmaGreen.Phenotype.Item
+  href: api/GrandmaGreen.Genotype.html#GrandmaGreen_Genotype_Item_
+  commentId: Overload:GrandmaGreen.Genotype.Item
   isSpec: "True"
-  fullName: GrandmaGreen.Phenotype.Item
-  nameWithType: Phenotype.Item
+  fullName: GrandmaGreen.Genotype.Item
+  nameWithType: Genotype.Item
+- uid: GrandmaGreen.Genotype.MAX_TRAIT_COUNT
+  name: MAX_TRAIT_COUNT
+  href: api/GrandmaGreen.Genotype.html#GrandmaGreen_Genotype_MAX_TRAIT_COUNT
+  commentId: F:GrandmaGreen.Genotype.MAX_TRAIT_COUNT
+  fullName: GrandmaGreen.Genotype.MAX_TRAIT_COUNT
+  nameWithType: Genotype.MAX_TRAIT_COUNT
+- uid: GrandmaGreen.ITraitData
+  name: ITraitData
+  href: api/GrandmaGreen.ITraitData.html
+  commentId: T:GrandmaGreen.ITraitData
+  fullName: GrandmaGreen.ITraitData
+  nameWithType: ITraitData
+- uid: GrandmaGreen.ITraitData.type
+  name: type
+  href: api/GrandmaGreen.ITraitData.html#GrandmaGreen_ITraitData_type
+  commentId: P:GrandmaGreen.ITraitData.type
+  fullName: GrandmaGreen.ITraitData.type
+  nameWithType: ITraitData.type
+- uid: GrandmaGreen.ITraitData.type*
+  name: type
+  href: api/GrandmaGreen.ITraitData.html#GrandmaGreen_ITraitData_type_
+  commentId: Overload:GrandmaGreen.ITraitData.type
+  isSpec: "True"
+  fullName: GrandmaGreen.ITraitData.type
+  nameWithType: ITraitData.type
+- uid: GrandmaGreen.ITraitSetData
+  name: ITraitSetData
+  href: api/GrandmaGreen.ITraitSetData.html
+  commentId: T:GrandmaGreen.ITraitSetData
+  fullName: GrandmaGreen.ITraitSetData
+  nameWithType: ITraitSetData
+- uid: GrandmaGreen.ITraitSetData.dominant
+  name: dominant
+  href: api/GrandmaGreen.ITraitSetData.html#GrandmaGreen_ITraitSetData_dominant
+  commentId: P:GrandmaGreen.ITraitSetData.dominant
+  fullName: GrandmaGreen.ITraitSetData.dominant
+  nameWithType: ITraitSetData.dominant
+- uid: GrandmaGreen.ITraitSetData.dominant*
+  name: dominant
+  href: api/GrandmaGreen.ITraitSetData.html#GrandmaGreen_ITraitSetData_dominant_
+  commentId: Overload:GrandmaGreen.ITraitSetData.dominant
+  isSpec: "True"
+  fullName: GrandmaGreen.ITraitSetData.dominant
+  nameWithType: ITraitSetData.dominant
+- uid: GrandmaGreen.ITraitSetData.mixed
+  name: mixed
+  href: api/GrandmaGreen.ITraitSetData.html#GrandmaGreen_ITraitSetData_mixed
+  commentId: P:GrandmaGreen.ITraitSetData.mixed
+  fullName: GrandmaGreen.ITraitSetData.mixed
+  nameWithType: ITraitSetData.mixed
+- uid: GrandmaGreen.ITraitSetData.mixed*
+  name: mixed
+  href: api/GrandmaGreen.ITraitSetData.html#GrandmaGreen_ITraitSetData_mixed_
+  commentId: Overload:GrandmaGreen.ITraitSetData.mixed
+  isSpec: "True"
+  fullName: GrandmaGreen.ITraitSetData.mixed
+  nameWithType: ITraitSetData.mixed
+- uid: GrandmaGreen.ITraitSetData.recessive
+  name: recessive
+  href: api/GrandmaGreen.ITraitSetData.html#GrandmaGreen_ITraitSetData_recessive
+  commentId: P:GrandmaGreen.ITraitSetData.recessive
+  fullName: GrandmaGreen.ITraitSetData.recessive
+  nameWithType: ITraitSetData.recessive
+- uid: GrandmaGreen.ITraitSetData.recessive*
+  name: recessive
+  href: api/GrandmaGreen.ITraitSetData.html#GrandmaGreen_ITraitSetData_recessive_
+  commentId: Overload:GrandmaGreen.ITraitSetData.recessive
+  isSpec: "True"
+  fullName: GrandmaGreen.ITraitSetData.recessive
+  nameWithType: ITraitSetData.recessive
+- uid: GrandmaGreen.ITraitSetData.type
+  name: type
+  href: api/GrandmaGreen.ITraitSetData.html#GrandmaGreen_ITraitSetData_type
+  commentId: P:GrandmaGreen.ITraitSetData.type
+  fullName: GrandmaGreen.ITraitSetData.type
+  nameWithType: ITraitSetData.type
+- uid: GrandmaGreen.ITraitSetData.type*
+  name: type
+  href: api/GrandmaGreen.ITraitSetData.html#GrandmaGreen_ITraitSetData_type_
+  commentId: Overload:GrandmaGreen.ITraitSetData.type
+  isSpec: "True"
+  fullName: GrandmaGreen.ITraitSetData.type
+  nameWithType: ITraitSetData.type
+- uid: GrandmaGreen.ITraitSetData.weight
+  name: weight
+  href: api/GrandmaGreen.ITraitSetData.html#GrandmaGreen_ITraitSetData_weight
+  commentId: P:GrandmaGreen.ITraitSetData.weight
+  fullName: GrandmaGreen.ITraitSetData.weight
+  nameWithType: ITraitSetData.weight
+- uid: GrandmaGreen.ITraitSetData.weight*
+  name: weight
+  href: api/GrandmaGreen.ITraitSetData.html#GrandmaGreen_ITraitSetData_weight_
+  commentId: Overload:GrandmaGreen.ITraitSetData.weight
+  isSpec: "True"
+  fullName: GrandmaGreen.ITraitSetData.weight
+  nameWithType: ITraitSetData.weight
 - uid: GrandmaGreen.PlantState
   name: PlantState
   href: api/GrandmaGreen.PlantState.html
   commentId: T:GrandmaGreen.PlantState
   fullName: GrandmaGreen.PlantState
   nameWithType: PlantState
-- uid: GrandmaGreen.PlantState.MATURE
-  name: MATURE
-  href: api/GrandmaGreen.PlantState.html#GrandmaGreen_PlantState_MATURE
-  commentId: F:GrandmaGreen.PlantState.MATURE
-  fullName: GrandmaGreen.PlantState.MATURE
-  nameWithType: PlantState.MATURE
-- uid: GrandmaGreen.PlantState.SAPLING
-  name: SAPLING
-  href: api/GrandmaGreen.PlantState.html#GrandmaGreen_PlantState_SAPLING
-  commentId: F:GrandmaGreen.PlantState.SAPLING
-  fullName: GrandmaGreen.PlantState.SAPLING
-  nameWithType: PlantState.SAPLING
-- uid: GrandmaGreen.PlantState.SEEDLING
-  name: SEEDLING
-  href: api/GrandmaGreen.PlantState.html#GrandmaGreen_PlantState_SEEDLING
-  commentId: F:GrandmaGreen.PlantState.SEEDLING
-  fullName: GrandmaGreen.PlantState.SEEDLING
-  nameWithType: PlantState.SEEDLING
+- uid: GrandmaGreen.PlantState.genotype
+  name: genotype
+  href: api/GrandmaGreen.PlantState.html#GrandmaGreen_PlantState_genotype
+  commentId: F:GrandmaGreen.PlantState.genotype
+  fullName: GrandmaGreen.PlantState.genotype
+  nameWithType: PlantState.genotype
+- uid: GrandmaGreen.PlantState.gridIndex
+  name: gridIndex
+  href: api/GrandmaGreen.PlantState.html#GrandmaGreen_PlantState_gridIndex
+  commentId: F:GrandmaGreen.PlantState.gridIndex
+  fullName: GrandmaGreen.PlantState.gridIndex
+  nameWithType: PlantState.gridIndex
+- uid: GrandmaGreen.PlantState.phenotypeIndex
+  name: phenotypeIndex
+  href: api/GrandmaGreen.PlantState.html#GrandmaGreen_PlantState_phenotypeIndex
+  commentId: F:GrandmaGreen.PlantState.phenotypeIndex
+  fullName: GrandmaGreen.PlantState.phenotypeIndex
+  nameWithType: PlantState.phenotypeIndex
 - uid: GrandmaGreen.SaveSystem
   name: GrandmaGreen.SaveSystem
   href: api/GrandmaGreen.SaveSystem.html
@@ -391,6 +659,12 @@ references:
   commentId: T:GrandmaGreen.SaveSystem.SaveManager
   fullName: GrandmaGreen.SaveSystem.SaveManager
   nameWithType: SaveManager
+- uid: GrandmaGreen.SizeSet
+  name: SizeSet
+  href: api/GrandmaGreen.SizeSet.html
+  commentId: T:GrandmaGreen.SizeSet
+  fullName: GrandmaGreen.SizeSet
+  nameWithType: SizeSet
 - uid: GrandmaGreen.Trait
   name: Trait
   href: api/GrandmaGreen.Trait.html
@@ -443,88 +717,164 @@ references:
   fullName.vb: GrandmaGreen.TraitData(Of T).value
   nameWithType: TraitData<T>.value
   nameWithType.vb: TraitData(Of T).value
-- uid: GrandmaGreen.TraitPairData`1
-  name: TraitPairData<T>
-  href: api/GrandmaGreen.TraitPairData-1.html
-  commentId: T:GrandmaGreen.TraitPairData`1
-  name.vb: TraitPairData(Of T)
-  fullName: GrandmaGreen.TraitPairData<T>
-  fullName.vb: GrandmaGreen.TraitPairData(Of T)
-  nameWithType: TraitPairData<T>
-  nameWithType.vb: TraitPairData(Of T)
-- uid: GrandmaGreen.TraitPairData`1.gene_a
-  name: gene_a
-  href: api/GrandmaGreen.TraitPairData-1.html#GrandmaGreen_TraitPairData_1_gene_a
-  commentId: P:GrandmaGreen.TraitPairData`1.gene_a
-  fullName: GrandmaGreen.TraitPairData<T>.gene_a
-  fullName.vb: GrandmaGreen.TraitPairData(Of T).gene_a
-  nameWithType: TraitPairData<T>.gene_a
-  nameWithType.vb: TraitPairData(Of T).gene_a
-- uid: GrandmaGreen.TraitPairData`1.gene_A
-  name: gene_A
-  href: api/GrandmaGreen.TraitPairData-1.html#GrandmaGreen_TraitPairData_1_gene_A
-  commentId: P:GrandmaGreen.TraitPairData`1.gene_A
-  fullName: GrandmaGreen.TraitPairData<T>.gene_A
-  fullName.vb: GrandmaGreen.TraitPairData(Of T).gene_A
-  nameWithType: TraitPairData<T>.gene_A
-  nameWithType.vb: TraitPairData(Of T).gene_A
-- uid: GrandmaGreen.TraitPairData`1.gene_a*
-  name: gene_a
-  href: api/GrandmaGreen.TraitPairData-1.html#GrandmaGreen_TraitPairData_1_gene_a_
-  commentId: Overload:GrandmaGreen.TraitPairData`1.gene_a
+- uid: GrandmaGreen.TraitSetData`1
+  name: TraitSetData<T>
+  href: api/GrandmaGreen.TraitSetData-1.html
+  commentId: T:GrandmaGreen.TraitSetData`1
+  name.vb: TraitSetData(Of T)
+  fullName: GrandmaGreen.TraitSetData<T>
+  fullName.vb: GrandmaGreen.TraitSetData(Of T)
+  nameWithType: TraitSetData<T>
+  nameWithType.vb: TraitSetData(Of T)
+- uid: GrandmaGreen.TraitSetData`1.dominant
+  name: dominant
+  href: api/GrandmaGreen.TraitSetData-1.html#GrandmaGreen_TraitSetData_1_dominant
+  commentId: P:GrandmaGreen.TraitSetData`1.dominant
+  fullName: GrandmaGreen.TraitSetData<T>.dominant
+  fullName.vb: GrandmaGreen.TraitSetData(Of T).dominant
+  nameWithType: TraitSetData<T>.dominant
+  nameWithType.vb: TraitSetData(Of T).dominant
+- uid: GrandmaGreen.TraitSetData`1.dominant*
+  name: dominant
+  href: api/GrandmaGreen.TraitSetData-1.html#GrandmaGreen_TraitSetData_1_dominant_
+  commentId: Overload:GrandmaGreen.TraitSetData`1.dominant
   isSpec: "True"
-  fullName: GrandmaGreen.TraitPairData<T>.gene_a
-  fullName.vb: GrandmaGreen.TraitPairData(Of T).gene_a
-  nameWithType: TraitPairData<T>.gene_a
-  nameWithType.vb: TraitPairData(Of T).gene_a
-- uid: GrandmaGreen.TraitPairData`1.gene_A*
-  name: gene_A
-  href: api/GrandmaGreen.TraitPairData-1.html#GrandmaGreen_TraitPairData_1_gene_A_
-  commentId: Overload:GrandmaGreen.TraitPairData`1.gene_A
+  fullName: GrandmaGreen.TraitSetData<T>.dominant
+  fullName.vb: GrandmaGreen.TraitSetData(Of T).dominant
+  nameWithType: TraitSetData<T>.dominant
+  nameWithType.vb: TraitSetData(Of T).dominant
+- uid: GrandmaGreen.TraitSetData`1.GrandmaGreen#ITraitSetData#dominant
+  name: ITraitSetData.dominant
+  href: api/GrandmaGreen.TraitSetData-1.html#GrandmaGreen_TraitSetData_1_GrandmaGreen_ITraitSetData_dominant
+  commentId: P:GrandmaGreen.TraitSetData`1.GrandmaGreen#ITraitSetData#dominant
+  name.vb: GrandmaGreen.ITraitSetData.dominant
+  fullName: GrandmaGreen.TraitSetData<T>.GrandmaGreen.ITraitSetData.dominant
+  fullName.vb: GrandmaGreen.TraitSetData(Of T).GrandmaGreen.ITraitSetData.dominant
+  nameWithType: TraitSetData<T>.ITraitSetData.dominant
+  nameWithType.vb: TraitSetData(Of T).GrandmaGreen.ITraitSetData.dominant
+- uid: GrandmaGreen.TraitSetData`1.GrandmaGreen#ITraitSetData#dominant*
+  name: ITraitSetData.dominant
+  href: api/GrandmaGreen.TraitSetData-1.html#GrandmaGreen_TraitSetData_1_GrandmaGreen_ITraitSetData_dominant_
+  commentId: Overload:GrandmaGreen.TraitSetData`1.GrandmaGreen#ITraitSetData#dominant
   isSpec: "True"
-  fullName: GrandmaGreen.TraitPairData<T>.gene_A
-  fullName.vb: GrandmaGreen.TraitPairData(Of T).gene_A
-  nameWithType: TraitPairData<T>.gene_A
-  nameWithType.vb: TraitPairData(Of T).gene_A
-- uid: GrandmaGreen.TraitPairData`1.gene_Aa
-  name: gene_Aa
-  href: api/GrandmaGreen.TraitPairData-1.html#GrandmaGreen_TraitPairData_1_gene_Aa
-  commentId: P:GrandmaGreen.TraitPairData`1.gene_Aa
-  fullName: GrandmaGreen.TraitPairData<T>.gene_Aa
-  fullName.vb: GrandmaGreen.TraitPairData(Of T).gene_Aa
-  nameWithType: TraitPairData<T>.gene_Aa
-  nameWithType.vb: TraitPairData(Of T).gene_Aa
-- uid: GrandmaGreen.TraitPairData`1.gene_Aa*
-  name: gene_Aa
-  href: api/GrandmaGreen.TraitPairData-1.html#GrandmaGreen_TraitPairData_1_gene_Aa_
-  commentId: Overload:GrandmaGreen.TraitPairData`1.gene_Aa
+  name.vb: GrandmaGreen.ITraitSetData.dominant
+  fullName: GrandmaGreen.TraitSetData<T>.GrandmaGreen.ITraitSetData.dominant
+  fullName.vb: GrandmaGreen.TraitSetData(Of T).GrandmaGreen.ITraitSetData.dominant
+  nameWithType: TraitSetData<T>.ITraitSetData.dominant
+  nameWithType.vb: TraitSetData(Of T).GrandmaGreen.ITraitSetData.dominant
+- uid: GrandmaGreen.TraitSetData`1.GrandmaGreen#ITraitSetData#mixed
+  name: ITraitSetData.mixed
+  href: api/GrandmaGreen.TraitSetData-1.html#GrandmaGreen_TraitSetData_1_GrandmaGreen_ITraitSetData_mixed
+  commentId: P:GrandmaGreen.TraitSetData`1.GrandmaGreen#ITraitSetData#mixed
+  name.vb: GrandmaGreen.ITraitSetData.mixed
+  fullName: GrandmaGreen.TraitSetData<T>.GrandmaGreen.ITraitSetData.mixed
+  fullName.vb: GrandmaGreen.TraitSetData(Of T).GrandmaGreen.ITraitSetData.mixed
+  nameWithType: TraitSetData<T>.ITraitSetData.mixed
+  nameWithType.vb: TraitSetData(Of T).GrandmaGreen.ITraitSetData.mixed
+- uid: GrandmaGreen.TraitSetData`1.GrandmaGreen#ITraitSetData#mixed*
+  name: ITraitSetData.mixed
+  href: api/GrandmaGreen.TraitSetData-1.html#GrandmaGreen_TraitSetData_1_GrandmaGreen_ITraitSetData_mixed_
+  commentId: Overload:GrandmaGreen.TraitSetData`1.GrandmaGreen#ITraitSetData#mixed
   isSpec: "True"
-  fullName: GrandmaGreen.TraitPairData<T>.gene_Aa
-  fullName.vb: GrandmaGreen.TraitPairData(Of T).gene_Aa
-  nameWithType: TraitPairData<T>.gene_Aa
-  nameWithType.vb: TraitPairData(Of T).gene_Aa
-- uid: GrandmaGreen.TraitPairData`1.type
+  name.vb: GrandmaGreen.ITraitSetData.mixed
+  fullName: GrandmaGreen.TraitSetData<T>.GrandmaGreen.ITraitSetData.mixed
+  fullName.vb: GrandmaGreen.TraitSetData(Of T).GrandmaGreen.ITraitSetData.mixed
+  nameWithType: TraitSetData<T>.ITraitSetData.mixed
+  nameWithType.vb: TraitSetData(Of T).GrandmaGreen.ITraitSetData.mixed
+- uid: GrandmaGreen.TraitSetData`1.GrandmaGreen#ITraitSetData#recessive
+  name: ITraitSetData.recessive
+  href: api/GrandmaGreen.TraitSetData-1.html#GrandmaGreen_TraitSetData_1_GrandmaGreen_ITraitSetData_recessive
+  commentId: P:GrandmaGreen.TraitSetData`1.GrandmaGreen#ITraitSetData#recessive
+  name.vb: GrandmaGreen.ITraitSetData.recessive
+  fullName: GrandmaGreen.TraitSetData<T>.GrandmaGreen.ITraitSetData.recessive
+  fullName.vb: GrandmaGreen.TraitSetData(Of T).GrandmaGreen.ITraitSetData.recessive
+  nameWithType: TraitSetData<T>.ITraitSetData.recessive
+  nameWithType.vb: TraitSetData(Of T).GrandmaGreen.ITraitSetData.recessive
+- uid: GrandmaGreen.TraitSetData`1.GrandmaGreen#ITraitSetData#recessive*
+  name: ITraitSetData.recessive
+  href: api/GrandmaGreen.TraitSetData-1.html#GrandmaGreen_TraitSetData_1_GrandmaGreen_ITraitSetData_recessive_
+  commentId: Overload:GrandmaGreen.TraitSetData`1.GrandmaGreen#ITraitSetData#recessive
+  isSpec: "True"
+  name.vb: GrandmaGreen.ITraitSetData.recessive
+  fullName: GrandmaGreen.TraitSetData<T>.GrandmaGreen.ITraitSetData.recessive
+  fullName.vb: GrandmaGreen.TraitSetData(Of T).GrandmaGreen.ITraitSetData.recessive
+  nameWithType: TraitSetData<T>.ITraitSetData.recessive
+  nameWithType.vb: TraitSetData(Of T).GrandmaGreen.ITraitSetData.recessive
+- uid: GrandmaGreen.TraitSetData`1.GrandmaGreen#ITraitSetData#weight
+  name: ITraitSetData.weight
+  href: api/GrandmaGreen.TraitSetData-1.html#GrandmaGreen_TraitSetData_1_GrandmaGreen_ITraitSetData_weight
+  commentId: P:GrandmaGreen.TraitSetData`1.GrandmaGreen#ITraitSetData#weight
+  name.vb: GrandmaGreen.ITraitSetData.weight
+  fullName: GrandmaGreen.TraitSetData<T>.GrandmaGreen.ITraitSetData.weight
+  fullName.vb: GrandmaGreen.TraitSetData(Of T).GrandmaGreen.ITraitSetData.weight
+  nameWithType: TraitSetData<T>.ITraitSetData.weight
+  nameWithType.vb: TraitSetData(Of T).GrandmaGreen.ITraitSetData.weight
+- uid: GrandmaGreen.TraitSetData`1.GrandmaGreen#ITraitSetData#weight*
+  name: ITraitSetData.weight
+  href: api/GrandmaGreen.TraitSetData-1.html#GrandmaGreen_TraitSetData_1_GrandmaGreen_ITraitSetData_weight_
+  commentId: Overload:GrandmaGreen.TraitSetData`1.GrandmaGreen#ITraitSetData#weight
+  isSpec: "True"
+  name.vb: GrandmaGreen.ITraitSetData.weight
+  fullName: GrandmaGreen.TraitSetData<T>.GrandmaGreen.ITraitSetData.weight
+  fullName.vb: GrandmaGreen.TraitSetData(Of T).GrandmaGreen.ITraitSetData.weight
+  nameWithType: TraitSetData<T>.ITraitSetData.weight
+  nameWithType.vb: TraitSetData(Of T).GrandmaGreen.ITraitSetData.weight
+- uid: GrandmaGreen.TraitSetData`1.mixed
+  name: mixed
+  href: api/GrandmaGreen.TraitSetData-1.html#GrandmaGreen_TraitSetData_1_mixed
+  commentId: P:GrandmaGreen.TraitSetData`1.mixed
+  fullName: GrandmaGreen.TraitSetData<T>.mixed
+  fullName.vb: GrandmaGreen.TraitSetData(Of T).mixed
+  nameWithType: TraitSetData<T>.mixed
+  nameWithType.vb: TraitSetData(Of T).mixed
+- uid: GrandmaGreen.TraitSetData`1.mixed*
+  name: mixed
+  href: api/GrandmaGreen.TraitSetData-1.html#GrandmaGreen_TraitSetData_1_mixed_
+  commentId: Overload:GrandmaGreen.TraitSetData`1.mixed
+  isSpec: "True"
+  fullName: GrandmaGreen.TraitSetData<T>.mixed
+  fullName.vb: GrandmaGreen.TraitSetData(Of T).mixed
+  nameWithType: TraitSetData<T>.mixed
+  nameWithType.vb: TraitSetData(Of T).mixed
+- uid: GrandmaGreen.TraitSetData`1.recessive
+  name: recessive
+  href: api/GrandmaGreen.TraitSetData-1.html#GrandmaGreen_TraitSetData_1_recessive
+  commentId: P:GrandmaGreen.TraitSetData`1.recessive
+  fullName: GrandmaGreen.TraitSetData<T>.recessive
+  fullName.vb: GrandmaGreen.TraitSetData(Of T).recessive
+  nameWithType: TraitSetData<T>.recessive
+  nameWithType.vb: TraitSetData(Of T).recessive
+- uid: GrandmaGreen.TraitSetData`1.recessive*
+  name: recessive
+  href: api/GrandmaGreen.TraitSetData-1.html#GrandmaGreen_TraitSetData_1_recessive_
+  commentId: Overload:GrandmaGreen.TraitSetData`1.recessive
+  isSpec: "True"
+  fullName: GrandmaGreen.TraitSetData<T>.recessive
+  fullName.vb: GrandmaGreen.TraitSetData(Of T).recessive
+  nameWithType: TraitSetData<T>.recessive
+  nameWithType.vb: TraitSetData(Of T).recessive
+- uid: GrandmaGreen.TraitSetData`1.type
   name: type
-  href: api/GrandmaGreen.TraitPairData-1.html#GrandmaGreen_TraitPairData_1_type
-  commentId: P:GrandmaGreen.TraitPairData`1.type
-  fullName: GrandmaGreen.TraitPairData<T>.type
-  fullName.vb: GrandmaGreen.TraitPairData(Of T).type
-  nameWithType: TraitPairData<T>.type
-  nameWithType.vb: TraitPairData(Of T).type
-- uid: GrandmaGreen.TraitPairData`1.type*
+  href: api/GrandmaGreen.TraitSetData-1.html#GrandmaGreen_TraitSetData_1_type
+  commentId: P:GrandmaGreen.TraitSetData`1.type
+  fullName: GrandmaGreen.TraitSetData<T>.type
+  fullName.vb: GrandmaGreen.TraitSetData(Of T).type
+  nameWithType: TraitSetData<T>.type
+  nameWithType.vb: TraitSetData(Of T).type
+- uid: GrandmaGreen.TraitSetData`1.type*
   name: type
-  href: api/GrandmaGreen.TraitPairData-1.html#GrandmaGreen_TraitPairData_1_type_
-  commentId: Overload:GrandmaGreen.TraitPairData`1.type
+  href: api/GrandmaGreen.TraitSetData-1.html#GrandmaGreen_TraitSetData_1_type_
+  commentId: Overload:GrandmaGreen.TraitSetData`1.type
   isSpec: "True"
-  fullName: GrandmaGreen.TraitPairData<T>.type
-  fullName.vb: GrandmaGreen.TraitPairData(Of T).type
-  nameWithType: TraitPairData<T>.type
-  nameWithType.vb: TraitPairData(Of T).type
-- uid: GrandmaGreen.TraitPairData`1.weight
+  fullName: GrandmaGreen.TraitSetData<T>.type
+  fullName.vb: GrandmaGreen.TraitSetData(Of T).type
+  nameWithType: TraitSetData<T>.type
+  nameWithType.vb: TraitSetData(Of T).type
+- uid: GrandmaGreen.TraitSetData`1.weight
   name: weight
-  href: api/GrandmaGreen.TraitPairData-1.html#GrandmaGreen_TraitPairData_1_weight
-  commentId: F:GrandmaGreen.TraitPairData`1.weight
-  fullName: GrandmaGreen.TraitPairData<T>.weight
-  fullName.vb: GrandmaGreen.TraitPairData(Of T).weight
-  nameWithType: TraitPairData<T>.weight
-  nameWithType.vb: TraitPairData(Of T).weight
+  href: api/GrandmaGreen.TraitSetData-1.html#GrandmaGreen_TraitSetData_1_weight
+  commentId: F:GrandmaGreen.TraitSetData`1.weight
+  fullName: GrandmaGreen.TraitSetData<T>.weight
+  fullName.vb: GrandmaGreen.TraitSetData(Of T).weight
+  nameWithType: TraitSetData<T>.weight
+  nameWithType.vb: TraitSetData(Of T).weight

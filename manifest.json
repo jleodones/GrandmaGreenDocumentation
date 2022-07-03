@@ -40,7 +40,19 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.PathfindingTester.html",
-          "hash": "tivJF3MDowOnjHm2HR1SLTQsVZESOnFS0S/Nd7ULNSk="
+          "hash": "YXdZr46Soj20R72Lj+8XUT9C+FQqLntwLAjwOw2RcS0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Global.PlantInteractable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.PlantInteractable.html",
+          "hash": "IkiHRyT9vGmvDaexNOyKa4JU0zg+NzQDxcpqX4o3Me4="
         }
       },
       "is_incremental": false,
@@ -64,7 +76,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.html",
-          "hash": "lZ2XVYQrTOColrZJ8Gfgx6SZcpJYRCa5buFAELZUYN8="
+          "hash": "4LHZRs6tZLCSncFnlxJ3qjCs3CF62hlBeCyeyaroaSI="
         }
       },
       "is_incremental": false,
@@ -84,11 +96,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/GrandmaGreen.BaseGenotypeData.yml",
+      "source_relative_path": "api/GrandmaGreen.BasePhenotypeData.yml",
       "output": {
         ".html": {
-          "relative_path": "api/GrandmaGreen.BaseGenotypeData.html",
-          "hash": "TyCtBehaB1D9qpEzTfyZPwQCt/AaFoaDTNH/9vbh70o="
+          "relative_path": "api/GrandmaGreen.BasePhenotypeData.html",
+          "hash": "BtGIgCVmxKnKkJCymQ9lzcjX4FoxgWT7PNZJPec3Hxo="
         }
       },
       "is_incremental": false,
@@ -96,11 +108,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/GrandmaGreen.ColorPair.yml",
+      "source_relative_path": "api/GrandmaGreen.ColorSet.yml",
       "output": {
         ".html": {
-          "relative_path": "api/GrandmaGreen.ColorPair.html",
-          "hash": "nIdlU0efpE4JTA9wm+rA+9bDgwtPgIIO6zZo932Vb3o="
+          "relative_path": "api/GrandmaGreen.ColorSet.html",
+          "hash": "rs5RGbX2UfZKox/7q8G1F3lVs+3Zp9b0mvbF5VUh0ZM="
         }
       },
       "is_incremental": false,
@@ -108,11 +120,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/GrandmaGreen.FloatPair.yml",
+      "source_relative_path": "api/GrandmaGreen.FlowerPhenotypeData.yml",
       "output": {
         ".html": {
-          "relative_path": "api/GrandmaGreen.FloatPair.html",
-          "hash": "BnzatgBXJFccGpIBk00vbeNwLAXndZR1UAlspyJo9NY="
+          "relative_path": "api/GrandmaGreen.FlowerPhenotypeData.html",
+          "hash": "2MXjgyRkQKEpbS/wCxXaaf2xz6PNMpc/tSEn/q3jPh4="
         }
       },
       "is_incremental": false,
@@ -120,11 +132,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/GrandmaGreen.FlowerGenotypeData.yml",
+      "source_relative_path": "api/GrandmaGreen.GardenAreaController.yml",
       "output": {
         ".html": {
-          "relative_path": "api/GrandmaGreen.FlowerGenotypeData.html",
-          "hash": "6UzY0fF4JwrtyxBQO+sENCr88EVO1o7nTRVsH7i+3ac="
+          "relative_path": "api/GrandmaGreen.GardenAreaController.html",
+          "hash": "PRM6SKSixstgDBJY+0zl5KcKmixHJfG2YwivF68rnEI="
         }
       },
       "is_incremental": false,
@@ -136,19 +148,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.GardenData.html",
-          "hash": "YBY/3L8CtljxhbiSEBC/NwmniTh5ln0TcxID9WbSDMs="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/GrandmaGreen.GardenManager.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/GrandmaGreen.GardenManager.html",
-          "hash": "TDP+fwoI4qmgJxMZuGlmQZeC3RLNJ2SZfiUXebYI0yc="
+          "hash": "PJ2pLgp8iYyZI5XbXqkK7CTozVrEKTK3yjuTmL/Wmkg="
         }
       },
       "is_incremental": false,
@@ -160,7 +160,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.GardenPlant.html",
-          "hash": "LXgoGVp6U3x5i30fmUKVL5tESA+aoeJ/izo8f7j/1xI="
+          "hash": "7N73AOA5NDGvcL9SG1HzlZhZZXl3wuYFpjxHoIQcD/Q="
         }
       },
       "is_incremental": false,
@@ -168,11 +168,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/GrandmaGreen.ITraitPairData.yml",
+      "source_relative_path": "api/GrandmaGreen.Genotype.yml",
       "output": {
         ".html": {
-          "relative_path": "api/GrandmaGreen.ITraitPairData.html",
-          "hash": "yZ0SCXdhNcuMdZObKH28bB7lmGOwRBfJotpZfjxnc7g="
+          "relative_path": "api/GrandmaGreen.Genotype.html",
+          "hash": "q6jYTzffZXD4AZA/62CcQlj2f+ysnEpfs7d/3z5pZts="
         }
       },
       "is_incremental": false,
@@ -180,11 +180,23 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/GrandmaGreen.Phenotype.yml",
+      "source_relative_path": "api/GrandmaGreen.ITraitData.yml",
       "output": {
         ".html": {
-          "relative_path": "api/GrandmaGreen.Phenotype.html",
-          "hash": "B7tW8zY//HqXfnm0Mq1i+nHDLr1v4etx1U7xc31vvWQ="
+          "relative_path": "api/GrandmaGreen.ITraitData.html",
+          "hash": "B66gjC6o0LVearKSKsIZiV8eE9pg1fymYsYlrNsR/QU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GrandmaGreen.ITraitSetData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GrandmaGreen.ITraitSetData.html",
+          "hash": "BUntyjplTylph0vyFd7xyESl8SFql+bNRIRkGUc0gJk="
         }
       },
       "is_incremental": false,
@@ -196,7 +208,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.PlantState.html",
-          "hash": "gN057F5veoMaTxIo8JO64ESmIglFanim81u5M0eAdZE="
+          "hash": "AhvlcCEvIh00ENd4RMbjrKpFPBbtvhHwN3SdAH/WTYk="
         }
       },
       "is_incremental": false,
@@ -264,6 +276,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/GrandmaGreen.SizeSet.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GrandmaGreen.SizeSet.html",
+          "hash": "GSp/EUtUJeb9JkI6X3myY7pp1m7c1pNaJDWPlzW6Nas="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/GrandmaGreen.Trait.yml",
       "output": {
         ".html": {
@@ -280,7 +304,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.TraitData-1.html",
-          "hash": "sovSQv3mPTqYp2a3r01ff6rYCE5Fso6IQzeNuNrqHkI="
+          "hash": "Ge0DlY9lzTTqmuf09oUTzeIAziZQ0xacHY/lLQ/LTUg="
         }
       },
       "is_incremental": false,
@@ -288,11 +312,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/GrandmaGreen.TraitPairData-1.yml",
+      "source_relative_path": "api/GrandmaGreen.TraitSetData-1.yml",
       "output": {
         ".html": {
-          "relative_path": "api/GrandmaGreen.TraitPairData-1.html",
-          "hash": "aHPPzr47IT8+zJqjsnK6X5RxzpDUFD2xqkIRvJ4D0b4="
+          "relative_path": "api/GrandmaGreen.TraitSetData-1.html",
+          "hash": "C8x6sYWaeEOwKchYMCvuO+XT74iOSftCDhpSBt6PbLw="
         }
       },
       "is_incremental": false,
@@ -304,7 +328,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.html",
-          "hash": "Ky0cBW/1GG+AImeJtBrsCnD9OPgSH/qhxD3uoo8rzJQ="
+          "hash": "KVp2UBGv9WsPaAfxLYa8kM1gwqHO2SZXPQ36TPpAVks="
         }
       },
       "is_incremental": false,
@@ -316,7 +340,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "p4pWUT8U7ore2dqgXHgLHAt1RptAG03kRKtijYcOqNc="
+          "hash": "zJgZ0GPF8uQe/R8I6nk7xYuEL8uj7KimmejxD9W9Sis="
         }
       },
       "is_incremental": false,
@@ -328,7 +352,7 @@
       "output": {
         ".html": {
           "relative_path": "guide/coding.html",
-          "hash": "x/d2zdhO+gihwKHAYuzJxOQSg2EIdFyoSBszj4POhqU="
+          "hash": "s8IFiCOIEjSPZu57FRoL4YrjoT+uawECGr4B1EeCn/o="
         }
       },
       "is_incremental": false,
@@ -340,7 +364,7 @@
       "output": {
         ".html": {
           "relative_path": "guide/commenting.html",
-          "hash": "wH/pQBJeM7fvyxHlvHpnBgQFIf0ufcptlyHrnuM/V2U="
+          "hash": "wnJf2NynZfivq31f3anvtVtf3Sl6exr/JXDl0F4kbz0="
         }
       },
       "is_incremental": false,
@@ -364,7 +388,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "kgBw38VOGjDZHigcJgUvTpFpKt+ZEEtowYQzKr1qxvY="
+          "hash": "XDwC8QZ0rcrxGGv4eUGS7yL3fKGthOgnRDL244Wp5Lg="
         }
       },
       "is_incremental": false,
@@ -425,7 +449,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 24,
+          "total_file_count": 26,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

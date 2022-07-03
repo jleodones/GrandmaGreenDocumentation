@@ -79,7 +79,57 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="coding-style-guide">Coding Style Guide</h1>
 
-<p>TBD.</p>
+<h2 id="writing-code">Writing Code</h2>
+<h3 id="naming-conventions">Naming Conventions</h3>
+<p>Names of classes, enumerations, structs, methods, and namespaces: <code>PascalCase</code>.</p>
+<pre><code class="lang-csharp">public class MyClass
+{
+    ...
+}
+</code></pre><pre><code class="lang-csharp">public void MyFunction()
+{
+    ...
+}
+</code></pre><pre><code class="lang-csharp">namespace GrandmaGreen.ExampleNamespace
+{
+    ...
+}
+</code></pre><pre><code class="lang-csharp">enum MyEnum
+{
+    StateOne,
+    StateTwo
+}
+</code></pre><p>Names of properties and all variables, including local and member variables: <code>camelCase</code>.</p>
+<p>Private member variables should also append an m_ prefix ahead of the variable name. Similarly, static variables should append an s_ prefix ahead of the variable name.</p>
+<pre><code class="lang-csharp">public int myInt;
+</code></pre><pre><code class="lang-csharp">private string m_myString;
+</code></pre><pre><code class="lang-csharp">static float s_myFloat;
+</code></pre><pre><code class="lang-csharp">public void MyFunction(int myLocalVariable)
+{
+    ...
+}
+</code></pre><h3 id="good-practice">Good Practice</h3>
+<p>For readability, please consider the following:</p>
+<ul>
+<li>One statement per line.</li>
+<li>Keep opening and closing braces on their own lines.</li>
+</ul>
+<p>Avoid:</p>
+<pre><code class="lang-csharp">if (condition) { DoSomething(); DoSomethingElse(); }
+</code></pre><p>Instead, do:</p>
+<pre><code class="lang-csharp">if (condition)
+{
+    DoSomething();
+    DoSomethingElse();
+}
+</code></pre><p>We also encourage using the <code>sealed</code> keyword when possible. This is done to help prevent accidental derivative classes.</p>
+<p>Similarly, use <code>structs</code> over classes when possible. Structs are sealed and self contained. We utilize structs frequently when multi-threading, but they are good for general optimization.</p>
+<p>Our team prioritizes and values <strong>modularity</strong> and <strong>reusability</strong>. Please keep systems and classes as decoupled as possible to minimize risk of the whole game crashing when one feature bugs out.</p>
+<p>That being said, please always reach out to any of the leads or other team members if you are stuck on the best way to implement something! Remember that everything is done best with another pair of eyes. <span class="emoji" shortcode="sunflower">🌻</span></p>
+<h2 id="files-and-organization">Files and Organization</h2>
+<p>Anything that needs to go on this website should go in the <code>Assets/_GrandmaGreen/Scripts</code> folder. The script picks up anything in this folder that has a <code>.cs</code> ending.</p>
+<p>File names and directory names should be in <code>PascalCase</code>, ie. <code>MyFile.cs</code>.</p>
+<p>Where possible, the name of the file should be the same as the name of the main class in the file, ie. <code>MyClass.cs</code>. Try to keep to one core class per file.</p>
 </article>
           </div>
           
