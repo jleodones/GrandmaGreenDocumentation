@@ -2,18 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using NaughtyAttributes;
+using System;
 
 namespace GrandmaGreen
 {
     [CreateAssetMenu()]
-    public class FlowerGenotypeData : BaseGenotypeData
+    public class FlowerPhenotypeData : BasePhenotypeData
     {
+
+        public override int TraitCount => 2;
+
         [NaughtyAttributes.Button]
         public override void SetTraitData()
         {
-            traitList = new ITraitPairData[traitCount];
-            traitList[0] = new ColorPair();
-            traitList[1]  = new FloatPair();
+            traitList = new ITraitSetData[TraitCount];
+            traitList[0] = new ColorSet();
+            traitList[1] = new SizeSet();
         }
     }
 }

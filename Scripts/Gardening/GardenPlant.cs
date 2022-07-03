@@ -5,53 +5,22 @@ using Core.Input;
 
 namespace GrandmaGreen
 {
-    public enum PlantState
-    {
-        SEEDLING,
-        SAPLING,
-        MATURE
-    }
-
-    public enum Allele
-    {
-        recessive = 0,
-        dominant = 1
-    }
-
-    [System.Serializable]
-    public struct Trait
-    {
-        public Allele allele1;
-        public Allele allele2;
-
-    }
-
-    [System.Serializable]
-    public class Phenotype
-    {
-        const int MAX_TRAIT_COUNT = 3;
-        [SerializeField] Trait[] traits = new Trait[MAX_TRAIT_COUNT];
-
-        public Phenotype()
-        {
-            traits = new Trait[MAX_TRAIT_COUNT];
-        }
-
-        public Trait this[int i]
-        {
-            get { return traits[i]; }
-            set { traits[i] = value; }
-        }
-    }
-
+    
     public class GardenPlant : MonoBehaviour, IGameInteractable
     {
+        [Header("References")]
         public SpriteRenderer plantSprite;
-        public BaseGenotypeData genotypeData;
-        public Phenotype phenotype;
+        public BasePhenotypeData phenotypeData;
         public List<GardenPlant> neighbours;
-        public List<Phenotype> punnetSquare;
-        public Phenotype daddyPhenotype;
+
+        [Header("Settings")]
+        public Genotype genotype;
+        [Header("Breeding")]
+        public List<Genotype> punnetSquare;
+        public Genotype childGenotype;
+
+        [SerializeReference]
+        public ITraitSetData[] traitList;
 
         public void DoInteraction(Vector3 interactionPoint, PointerState interactionState)
         {
@@ -62,65 +31,108 @@ namespace GrandmaGreen
         {
             //NOTE: This would be calculated when the plant is placed down// when a tile near it is updated
 
-            System.Type genotype = genotypeData.GetType();
-            List<Phenotype> daddies = new List<Phenotype>();
+            System.Type phenotype = phenotypeData.GetType();
+            List<Genotype> daddies = new List<Genotype>();
 
             foreach (GardenPlant plant in neighbours)
             {
-                if (plant.genotypeData.GetType() != genotype) continue;
+                if (plant.phenotypeData.GetType() != phenotype) continue;
 
-                Debug.Log("Same genotype detected");
+                Debug.Log("Same species detected");
 
-                daddies.Add(plant.phenotype);
+                daddies.Add(plant.genotype);
             }
             //--------------------------------
 
-            punnetSquare = new List<Phenotype>();
+            //Punnet square Row + Column
 
-            //Punnet square
+            Genotype daddyGenotype = daddies[Random.Range(0, daddies.Count)];    //NOTE: This should check weighting in the future
 
+            int squareSide = (int)Mathf.Pow(2, phenotypeData.TraitCount);
 
-            daddyPhenotype = daddies[Random.Range(0, daddies.Count)];
+            List<List<Allele>> topRow = new List<List<Allele>>();
+            List<List<Allele>> leftCol = new List<List<Allele>>();
 
-            int squareLength = (int)Mathf.Pow(2, genotypeData.traitCount) * 2;
-
-            List<List<Allele>> allele1Pool = new List<List<Allele>>();
-            List<List<Allele>> allele2Pool = new List<List<Allele>>();
-
-            for (int i = 0; i < genotypeData.traitCount; i++)
+            //Pseudo bit array 
+            int[] bitArray = new int[phenotypeData.TraitCount];
+            int index;
+            //Filling up the punnet square top/left headers
+            for (int i = 0; i < squareSide; i++)
             {
-                allele1Pool.Add(new List<Allele>(2 * genotypeData.traitCount));
-                allele2Pool.Add(new List<Allele>(2 * genotypeData.traitCount));
+                topRow.Add(new List<Allele>());
+                leftCol.Add(new List<Allele>());
 
-                allele1Pool[i].Add(daddyPhenotype[i].allele1);
-                allele1Pool[i].Add(daddyPhenotype[i].allele2);
-
-                allele2Pool[i].Add(phenotype[i].allele1);
-                allele2Pool[i].Add(phenotype[i].allele2);
-
-            }
-
-            Phenotype result = null;
-            Trait trait = default(Trait);
-            int[] allleIndices = new int[genotypeData.traitCount * 2];
-            for (int i = 0; i < squareLength; i++)
-            {
-                result = new Phenotype();
-                int allleIndex = 0;
-                for (int j = 0; j < genotypeData.traitCount; j++)
+                for (int j = 0; j < phenotypeData.TraitCount; j++)
                 {
-                    trait.allele1 = allele1Pool[j][allleIndex];
-                    trait.allele2 = allele2Pool[j][allleIndex];
+                    index = bitArray[j];
 
-                    result[j] = trait;
+                    if (index == 0)
+                    {
+                        topRow[i].Add(daddyGenotype[j].allele1);
+                        leftCol[i].Add(this.genotype[j].allele1);
+                    }
+                    else
+                    {
+                        topRow[i].Add(daddyGenotype[j].allele2);
+                        leftCol[i].Add(this.genotype[j].allele2);
+                    }
                 }
 
-                punnetSquare.Add(result);
+                //Incrementing our pseudo binary number (int array)
+                bitArray[0] += 1;
+                for (int k = 0; k < phenotypeData.TraitCount - 1; k++)
+                {
+                    if (bitArray[k] > 1)
+                    {
+                        bitArray[k + 1] += 1;
+                        bitArray[k] = 0;
+                    }
+                }
             }
 
+            //Storing the actual combinations
+            punnetSquare = new List<Genotype>();
+            Genotype squareValue = null;
+            for (int y = 0; y < squareSide; y++)
+            {
+                for (int x = 0; x < squareSide; x++)
+                {
+                    squareValue = new Genotype();
 
+                    for (int i = 0; i < phenotypeData.TraitCount; i++)
+                    {
+                        Trait trait;
+                        trait.allele1 = topRow[x][i];
+                        trait.allele2 = leftCol[y][i];
+
+                        squareValue[i] = trait;
+                    }
+
+                    punnetSquare.Add(squareValue);
+                }
+            }
+
+            childGenotype = punnetSquare[Random.Range(0, punnetSquare.Count)];
+
+            traitList = new ITraitSetData[phenotypeData.TraitCount];
+
+            for (int i = 0; i < phenotypeData.TraitCount; i++)
+            {
+
+                traitList[i] = phenotypeData.TraitList[i];
+                if (childGenotype[i].allele1 == Allele.dominant && childGenotype[i].allele2 == Allele.dominant)
+                {
+                    //traits[i] = phenotypeData.TraitList[i];
+                }
+                else if (childGenotype[i].allele1 == Allele.recessive && childGenotype[i].allele2 == Allele.recessive)
+                {
+                    //traits[i] = phenotypeData.TraitList[i];
+                }
+                else
+                {
+                   // traits[i] = phenotypeData.TraitList[i];
+                }
+            }
         }
-
-
     }
 }

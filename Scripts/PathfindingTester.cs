@@ -6,7 +6,7 @@ using Pathfinding;
 
 public class PathfindingTester : MonoBehaviour
 {
-    public PathfindingManager PathfindingManager;
+    public Pathfinder PathfindingManager;
     public PathFollower PathAgent;
 
     public int2 StartPos;

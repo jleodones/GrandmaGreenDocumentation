@@ -5,37 +5,60 @@ using System;
 
 namespace GrandmaGreen
 {
-    public interface ITraitPairData
+    public interface ITraitData
     {
         Type type { get; }
     }
+    
+    public interface ITraitSetData
+    {
+        int weight { get; }
+        Type type { get; }
+
+        ITraitData recessive { get; }
+        ITraitData dominant { get; }
+        ITraitData mixed { get; }
+    }
 
     [Serializable]
-    public class TraitData<T> where T : struct
+    public class TraitData<T> : ITraitData where T : struct
     {
         public T value;
         public Type type => typeof(T);
     }
 
     [Serializable]
-    public class TraitPairData<T> : ITraitPairData where T : struct
+    public class TraitSetData<T> : ITraitSetData where T : struct
     {
-
+        [SerializeField]
+        [HideInInspector]
+        string name = typeof(T).Name.ToString();
         public int weight;
 
-        [field: SerializeField] public TraitData<T> gene_a { get; private set; }
-        [field: SerializeField] public TraitData<T> gene_A { get; private set; }
-        [field: SerializeField] public TraitData<T> gene_Aa { get; private set; }
+        [field: SerializeField] public TraitData<T> recessive { get; private set; }
+        [field: SerializeField] public TraitData<T> dominant { get; private set; }
+        [field: SerializeField] public TraitData<T> mixed { get; private set; }
 
+        int ITraitSetData.weight => weight;
         public Type type => typeof(T);
+        
+        ITraitData ITraitSetData.recessive => recessive;
+        ITraitData ITraitSetData.dominant => dominant;
+        ITraitData ITraitSetData.mixed => mixed;
     }
 
 
     [Serializable]
-    public class ColorPair : TraitPairData<Color> { }
+    public class ColorSet : TraitSetData<Color>
+    {
+
+    }
 
     [Serializable]
-    public class FloatPair : TraitPairData<float> { }
+    public class SizeSet : TraitSetData<float>
+    {
+
+    }
 }
 
 
