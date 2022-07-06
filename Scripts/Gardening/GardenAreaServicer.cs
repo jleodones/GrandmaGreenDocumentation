@@ -22,12 +22,12 @@ namespace GrandmaGreen
             IPathfinderServicer.s_activeServices = null;
         }
 
-        public void AddAreaController(GardenAreaController areaController)
+        public void RegisterAreaController(GardenAreaController areaController)
         {
             RegisterService(areaController.pathfinder);
         }
 
-        public void RemoveController(GardenAreaController areaController)
+        public void DesregisterAreaController(GardenAreaController areaController)
         {
             DeregisterService(areaController.pathfinder);
         }

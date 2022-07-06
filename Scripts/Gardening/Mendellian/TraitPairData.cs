@@ -47,7 +47,6 @@ namespace GrandmaGreen
         ITraitData ITraitSetData.mixed => mixed;
     }
 
-
     [Serializable]
     public class ColorSet : TraitSetData<Color>
     {

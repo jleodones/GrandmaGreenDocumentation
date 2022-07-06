@@ -22,7 +22,7 @@ namespace GrandmaGreen
 
         void CheckMove(IGameInteractable interactable)
         {
-
+            
         }
     }
 }

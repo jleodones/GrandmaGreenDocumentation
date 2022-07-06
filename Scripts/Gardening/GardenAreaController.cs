@@ -29,13 +29,15 @@ namespace GrandmaGreen
 
         void Awake()
         {
-            areaServicer.StartServices();
-            areaServicer.AddAreaController(this);
+            areaServicer.StartServices(); //TODO: MOVE THIS INTO GAMESTATECONTROLLER
+            
+            areaServicer.RegisterAreaController(this);
         }
 
         void Start()
         {
             pathfinder.LoadGrid();
+            InitializeGarden();
         }
 
         [ContextMenu("Intialize")]
@@ -92,7 +94,7 @@ namespace GrandmaGreen
 
             if (currentSelection != null)
             {
-                Debug.Log(m_gardenPlants[index].name + "selected");
+                Debug.Log(currentSelection.name + "selected");
             }
 
             onGardenSelection?.Invoke(gridPos);
