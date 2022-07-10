@@ -6,6 +6,8 @@ namespace GrandmaGreen.SaveSystem
 {
     public class SaveController
     {
-        
+        [SerializeField]
+        private List<ObjectSaver> m_objectSavers;
+
     }
 }
