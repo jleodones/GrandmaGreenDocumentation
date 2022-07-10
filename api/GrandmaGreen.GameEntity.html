@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class GardenAreaController
+    <title>Class GameEntity
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class GardenAreaController
+    <meta name="title" content="Class GameEntity
    ">
     <meta name="generator" content="docfx 2.59.3.0">
     
@@ -77,35 +77,40 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="GrandmaGreen.GardenAreaController">
+            <article class="content wrap" id="_content" data-uid="GrandmaGreen.GameEntity">
   
   
-  <h1 id="GrandmaGreen_GardenAreaController" data-uid="GrandmaGreen.GardenAreaController" class="text-break">Class GardenAreaController
+  <h1 id="GrandmaGreen_GameEntity" data-uid="GrandmaGreen.GameEntity" class="text-break">Class GameEntity
   </h1>
-  <div class="markdown level0 summary"><p>TODO: Implement functionality for save/loading changed tiles </p>
-</div>
+  <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
-    <div class="level1"><span class="xref">GardenAreaController</span></div>
+    <div class="level1"><span class="xref">GameEntity</span></div>
+      <div class="level2"><a class="xref" href="GrandmaGreen.GrandmaEntity.html">GrandmaEntity</a></div>
+  </div>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="GrandmaGreen.IPathAgent.html">IPathAgent</a></div>
+    <div><a class="xref" href="GrandmaGreen.IServiceUser-2.html">IServiceUser</a>&lt;<span class="xref">Pathfinder</span>, <a class="xref" href="GrandmaGreen.IPathfinderServicer.html">IPathfinderServicer</a>&gt;</div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="GrandmaGreen.html">GrandmaGreen</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
-  <h5 id="GrandmaGreen_GardenAreaController_syntax">Syntax</h5>
+  <h5 id="GrandmaGreen_GameEntity_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class GardenAreaController : MonoBehaviour</code></pre>
+    <pre><code class="lang-csharp hljs">public class GameEntity : MonoBehaviour, IPathAgent, IServiceUser&lt;Pathfinder, IPathfinderServicer&gt;</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   
   
-  <h4 id="GrandmaGreen_GardenAreaController_areaBounds" data-uid="GrandmaGreen.GardenAreaController.areaBounds">areaBounds</h4>
+  <h4 id="GrandmaGreen_GameEntity_animator" data-uid="GrandmaGreen.GameEntity.animator">animator</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Collider areaBounds</code></pre>
+    <pre><code class="lang-csharp hljs">public Animator animator</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -117,19 +122,19 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Collider</span></td>
+        <td><span class="xref">Animator</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <h4 id="GrandmaGreen_GardenAreaController_areaServicer" data-uid="GrandmaGreen.GardenAreaController.areaServicer">areaServicer</h4>
+  <h4 id="GrandmaGreen_GameEntity_controller" data-uid="GrandmaGreen.GameEntity.controller">controller</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public GardenAreaServicer areaServicer</code></pre>
+    <pre><code class="lang-csharp hljs">public EntityController controller</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -141,19 +146,19 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="GrandmaGreen.GardenAreaServicer.html">GardenAreaServicer</a></td>
+        <td><a class="xref" href="GrandmaGreen.EntityController.html">EntityController</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <h4 id="GrandmaGreen_GardenAreaController_gardenData" data-uid="GrandmaGreen.GardenAreaController.gardenData">gardenData</h4>
+  <h4 id="GrandmaGreen_GameEntity_entityStateMachine" data-uid="GrandmaGreen.GameEntity.entityStateMachine">entityStateMachine</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public GardenData gardenData</code></pre>
+    <pre><code class="lang-csharp hljs">public StateMachine&lt;EntityState&gt; entityStateMachine</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -165,19 +170,19 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="GrandmaGreen.GardenData.html">GardenData</a></td>
+        <td><span class="xref">StateMachine</span>&lt;<a class="xref" href="GrandmaGreen.EntityState.html">EntityState</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <h4 id="GrandmaGreen_GardenAreaController_pathfinder" data-uid="GrandmaGreen.GardenAreaController.pathfinder">pathfinder</h4>
+  <h4 id="GrandmaGreen_GameEntity_smoothFactor" data-uid="GrandmaGreen.GameEntity.smoothFactor">smoothFactor</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Pathfinder pathfinder</code></pre>
+    <pre><code class="lang-csharp hljs">public float smoothFactor</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -189,19 +194,19 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Pathfinder</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <h4 id="GrandmaGreen_GardenAreaController_plantInteractablePrefab" data-uid="GrandmaGreen.GardenAreaController.plantInteractablePrefab">plantInteractablePrefab</h4>
+  <h4 id="GrandmaGreen_GameEntity_splineContainer" data-uid="GrandmaGreen.GameEntity.splineContainer">splineContainer</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public PlantInteractable plantInteractablePrefab</code></pre>
+    <pre><code class="lang-csharp hljs">public SplineContainer splineContainer</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -213,19 +218,19 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Global.PlantInteractable.html">PlantInteractable</a></td>
+        <td><span class="xref">SplineContainer</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <h4 id="GrandmaGreen_GardenAreaController_tilemap" data-uid="GrandmaGreen.GardenAreaController.tilemap">tilemap</h4>
+  <h4 id="GrandmaGreen_GameEntity_splineFollow" data-uid="GrandmaGreen.GameEntity.splineFollow">splineFollow</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Tilemap tilemap</code></pre>
+    <pre><code class="lang-csharp hljs">public SplineFollow splineFollow</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -237,7 +242,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Tilemap</span></td>
+        <td><span class="xref">SplineFollow</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -246,13 +251,13 @@
   </h3>
   
   
-  <a id="GrandmaGreen_GardenAreaController_currentSelection_" data-uid="GrandmaGreen.GardenAreaController.currentSelection*"></a>
-  <h4 id="GrandmaGreen_GardenAreaController_currentSelection" data-uid="GrandmaGreen.GardenAreaController.currentSelection">currentSelection</h4>
+  <a id="GrandmaGreen_GameEntity_isPathing_" data-uid="GrandmaGreen.GameEntity.isPathing*"></a>
+  <h4 id="GrandmaGreen_GameEntity_isPathing" data-uid="GrandmaGreen.GameEntity.isPathing">isPathing</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public GameObject currentSelection { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool isPathing { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -264,7 +269,32 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">GameObject</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="GrandmaGreen_GameEntity_pathfinderServicer_" data-uid="GrandmaGreen.GameEntity.pathfinderServicer*"></a>
+  <h4 id="GrandmaGreen_GameEntity_pathfinderServicer" data-uid="GrandmaGreen.GameEntity.pathfinderServicer">pathfinderServicer</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IPathfinderServicer pathfinderServicer { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="GrandmaGreen.IPathfinderServicer.html">IPathfinderServicer</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -273,23 +303,142 @@
   </h3>
   
   
-  <a id="GrandmaGreen_GardenAreaController_BakeNavGrid_" data-uid="GrandmaGreen.GardenAreaController.BakeNavGrid*"></a>
-  <h4 id="GrandmaGreen_GardenAreaController_BakeNavGrid" data-uid="GrandmaGreen.GardenAreaController.BakeNavGrid">BakeNavGrid()</h4>
+  <a id="GrandmaGreen_GameEntity_CurrentPos_" data-uid="GrandmaGreen.GameEntity.CurrentPos*"></a>
+  <h4 id="GrandmaGreen_GameEntity_CurrentPos" data-uid="GrandmaGreen.GameEntity.CurrentPos">CurrentPos()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void BakeNavGrid()</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Vector3 CurrentPos()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="GrandmaGreen_GameEntity_FixedUpdate_" data-uid="GrandmaGreen.GameEntity.FixedUpdate*"></a>
+  <h4 id="GrandmaGreen_GameEntity_FixedUpdate" data-uid="GrandmaGreen.GameEntity.FixedUpdate">FixedUpdate()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void FixedUpdate()</code></pre>
   </div>
   
   
-  <a id="GrandmaGreen_GardenAreaController_GardenSelection_" data-uid="GrandmaGreen.GardenAreaController.GardenSelection*"></a>
-  <h4 id="GrandmaGreen_GardenAreaController_GardenSelection_Vector3_" data-uid="GrandmaGreen.GardenAreaController.GardenSelection(Vector3)">GardenSelection(Vector3)</h4>
+  <a id="GrandmaGreen_GameEntity_FollowPath_" data-uid="GrandmaGreen.GameEntity.FollowPath*"></a>
+  <h4 id="GrandmaGreen_GameEntity_FollowPath_float3___" data-uid="GrandmaGreen.GameEntity.FollowPath(float3[])">FollowPath(float3[])</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void GardenSelection(Vector3 worldPos)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual void FollowPath(float3[] path)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span>[]</td>
+        <td><span class="parametername">path</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="GrandmaGreen_GameEntity_OnDisable_" data-uid="GrandmaGreen.GameEntity.OnDisable*"></a>
+  <h4 id="GrandmaGreen_GameEntity_OnDisable" data-uid="GrandmaGreen.GameEntity.OnDisable">OnDisable()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnDisable()</code></pre>
+  </div>
+  
+  
+  <a id="GrandmaGreen_GameEntity_OnEnable_" data-uid="GrandmaGreen.GameEntity.OnEnable*"></a>
+  <h4 id="GrandmaGreen_GameEntity_OnEnable" data-uid="GrandmaGreen.GameEntity.OnEnable">OnEnable()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnEnable()</code></pre>
+  </div>
+  
+  
+  <a id="GrandmaGreen_GameEntity_RequestPath_" data-uid="GrandmaGreen.GameEntity.RequestPath*"></a>
+  <h4 id="GrandmaGreen_GameEntity_RequestPath_int2_int2_" data-uid="GrandmaGreen.GameEntity.RequestPath(int2,int2)">RequestPath(int2, int2)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float3[] RequestPath(int2 startPos, int2 endPos)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">int2</span></td>
+        <td><span class="parametername">startPos</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">int2</span></td>
+        <td><span class="parametername">endPos</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="GrandmaGreen_GameEntity_RequestPath_" data-uid="GrandmaGreen.GameEntity.RequestPath*"></a>
+  <h4 id="GrandmaGreen_GameEntity_RequestPath_Vector3_" data-uid="GrandmaGreen.GameEntity.RequestPath(Vector3)">RequestPath(Vector3)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float3[] RequestPath(Vector3 worldPos)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -308,70 +457,7 @@
       </tr>
     </tbody>
   </table>
-  
-  
-  <a id="GrandmaGreen_GardenAreaController_Harvest_" data-uid="GrandmaGreen.GardenAreaController.Harvest*"></a>
-  <h4 id="GrandmaGreen_GardenAreaController_Harvest_GrandmaGreen_BasePhenotypeData_GrandmaGreen_Genotype_" data-uid="GrandmaGreen.GardenAreaController.Harvest(GrandmaGreen.BasePhenotypeData,GrandmaGreen.Genotype)">Harvest(BasePhenotypeData, Genotype)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Harvest(BasePhenotypeData phenotypeData, Genotype genotype)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="GrandmaGreen.BasePhenotypeData.html">BasePhenotypeData</a></td>
-        <td><span class="parametername">phenotypeData</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="GrandmaGreen.Genotype.html">Genotype</a></td>
-        <td><span class="parametername">genotype</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="GrandmaGreen_GardenAreaController_ParseTilemap_" data-uid="GrandmaGreen.GardenAreaController.ParseTilemap*"></a>
-  <h4 id="GrandmaGreen_GardenAreaController_ParseTilemap" data-uid="GrandmaGreen.GardenAreaController.ParseTilemap">ParseTilemap()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void ParseTilemap()</code></pre>
-  </div>
-  
-  
-  <a id="GrandmaGreen_GardenAreaController_PlantInteraction_" data-uid="GrandmaGreen.GardenAreaController.PlantInteraction*"></a>
-  <h4 id="GrandmaGreen_GardenAreaController_PlantInteraction" data-uid="GrandmaGreen.GardenAreaController.PlantInteraction">PlantInteraction()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void PlantInteraction()</code></pre>
-  </div>
-  <h3 id="events">Events
-  </h3>
-  
-  
-  <h4 id="GrandmaGreen_GardenAreaController_onGardenSelection" data-uid="GrandmaGreen.GardenAreaController.onGardenSelection">onGardenSelection</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public event Action&lt;Vector2Int&gt; onGardenSelection</code></pre>
-  </div>
-  <h5 class="eventType">Event Type</h5>
+  <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -381,11 +467,28 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<span class="xref">Vector2Int</span>&gt;</td>
+        <td><span class="xref">float3</span>[]</td>
         <td></td>
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="GrandmaGreen_GameEntity_Update_" data-uid="GrandmaGreen.GameEntity.Update*"></a>
+  <h4 id="GrandmaGreen_GameEntity_Update" data-uid="GrandmaGreen.GameEntity.Update">Update()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Update()</code></pre>
+  </div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="GrandmaGreen.IPathAgent.html">IPathAgent</a>
+  </div>
+  <div>
+      <a class="xref" href="GrandmaGreen.IServiceUser-2.html">IServiceUser&lt;U, T&gt;</a>
+  </div>
 </article>
           </div>
           

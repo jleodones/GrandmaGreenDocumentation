@@ -15,49 +15,6 @@ references:
   commentId: T:Global.FakeInputTesting
   fullName: FakeInputTesting
   nameWithType: FakeInputTesting
-- uid: Global.PathfindingTester
-  name: PathfindingTester
-  href: api/Global.PathfindingTester.html
-  commentId: T:Global.PathfindingTester
-  fullName: PathfindingTester
-  nameWithType: PathfindingTester
-- uid: Global.PathfindingTester.DoPathFollow(Vector3)
-  name: DoPathFollow(Vector3)
-  href: api/Global.PathfindingTester.html#Global_PathfindingTester_DoPathFollow_Vector3_
-  commentId: M:Global.PathfindingTester.DoPathFollow(Vector3)
-  fullName: PathfindingTester.DoPathFollow(Vector3)
-  nameWithType: PathfindingTester.DoPathFollow(Vector3)
-- uid: Global.PathfindingTester.DoPathFollow*
-  name: DoPathFollow
-  href: api/Global.PathfindingTester.html#Global_PathfindingTester_DoPathFollow_
-  commentId: Overload:Global.PathfindingTester.DoPathFollow
-  isSpec: "True"
-  fullName: PathfindingTester.DoPathFollow
-  nameWithType: PathfindingTester.DoPathFollow
-- uid: Global.PathfindingTester.EndPos
-  name: EndPos
-  href: api/Global.PathfindingTester.html#Global_PathfindingTester_EndPos
-  commentId: F:Global.PathfindingTester.EndPos
-  fullName: PathfindingTester.EndPos
-  nameWithType: PathfindingTester.EndPos
-- uid: Global.PathfindingTester.PathAgent
-  name: PathAgent
-  href: api/Global.PathfindingTester.html#Global_PathfindingTester_PathAgent
-  commentId: F:Global.PathfindingTester.PathAgent
-  fullName: PathfindingTester.PathAgent
-  nameWithType: PathfindingTester.PathAgent
-- uid: Global.PathfindingTester.PathfindingManager
-  name: PathfindingManager
-  href: api/Global.PathfindingTester.html#Global_PathfindingTester_PathfindingManager
-  commentId: F:Global.PathfindingTester.PathfindingManager
-  fullName: PathfindingTester.PathfindingManager
-  nameWithType: PathfindingTester.PathfindingManager
-- uid: Global.PathfindingTester.StartPos
-  name: StartPos
-  href: api/Global.PathfindingTester.html#Global_PathfindingTester_StartPos
-  commentId: F:Global.PathfindingTester.StartPos
-  fullName: PathfindingTester.StartPos
-  nameWithType: PathfindingTester.StartPos
 - uid: Global.PlantInteractable
   name: PlantInteractable
   href: api/Global.PlantInteractable.html
@@ -101,6 +58,12 @@ references:
   commentId: N:GrandmaGreen
   fullName: GrandmaGreen
   nameWithType: GrandmaGreen
+- uid: GrandmaGreen.AIController
+  name: AIController
+  href: api/GrandmaGreen.AIController.html
+  commentId: T:GrandmaGreen.AIController
+  fullName: GrandmaGreen.AIController
+  nameWithType: AIController
 - uid: GrandmaGreen.Allele
   name: Allele
   href: api/GrandmaGreen.Allele.html
@@ -192,6 +155,148 @@ references:
   commentId: T:GrandmaGreen.ColorSet
   fullName: GrandmaGreen.ColorSet
   nameWithType: ColorSet
+- uid: GrandmaGreen.EntityController
+  name: EntityController
+  href: api/GrandmaGreen.EntityController.html
+  commentId: T:GrandmaGreen.EntityController
+  fullName: GrandmaGreen.EntityController
+  nameWithType: EntityController
+- uid: GrandmaGreen.EntityController.active
+  name: active
+  href: api/GrandmaGreen.EntityController.html#GrandmaGreen_EntityController_active
+  commentId: F:GrandmaGreen.EntityController.active
+  fullName: GrandmaGreen.EntityController.active
+  nameWithType: EntityController.active
+- uid: GrandmaGreen.EntityController.entity
+  name: entity
+  href: api/GrandmaGreen.EntityController.html#GrandmaGreen_EntityController_entity
+  commentId: F:GrandmaGreen.EntityController.entity
+  fullName: GrandmaGreen.EntityController.entity
+  nameWithType: EntityController.entity
+- uid: GrandmaGreen.EntityController.MoveTo(int2,int2)
+  name: MoveTo(int2, int2)
+  href: api/GrandmaGreen.EntityController.html#GrandmaGreen_EntityController_MoveTo_int2_int2_
+  commentId: M:GrandmaGreen.EntityController.MoveTo(int2,int2)
+  fullName: GrandmaGreen.EntityController.MoveTo(int2, int2)
+  nameWithType: EntityController.MoveTo(int2, int2)
+- uid: GrandmaGreen.EntityController.MoveTo(Vector3)
+  name: MoveTo(Vector3)
+  href: api/GrandmaGreen.EntityController.html#GrandmaGreen_EntityController_MoveTo_Vector3_
+  commentId: M:GrandmaGreen.EntityController.MoveTo(Vector3)
+  fullName: GrandmaGreen.EntityController.MoveTo(Vector3)
+  nameWithType: EntityController.MoveTo(Vector3)
+- uid: GrandmaGreen.EntityController.MoveTo*
+  name: MoveTo
+  href: api/GrandmaGreen.EntityController.html#GrandmaGreen_EntityController_MoveTo_
+  commentId: Overload:GrandmaGreen.EntityController.MoveTo
+  isSpec: "True"
+  fullName: GrandmaGreen.EntityController.MoveTo
+  nameWithType: EntityController.MoveTo
+- uid: GrandmaGreen.EntityController.PauseController
+  name: PauseController()
+  href: api/GrandmaGreen.EntityController.html#GrandmaGreen_EntityController_PauseController
+  commentId: M:GrandmaGreen.EntityController.PauseController
+  fullName: GrandmaGreen.EntityController.PauseController()
+  nameWithType: EntityController.PauseController()
+- uid: GrandmaGreen.EntityController.PauseController*
+  name: PauseController
+  href: api/GrandmaGreen.EntityController.html#GrandmaGreen_EntityController_PauseController_
+  commentId: Overload:GrandmaGreen.EntityController.PauseController
+  isSpec: "True"
+  fullName: GrandmaGreen.EntityController.PauseController
+  nameWithType: EntityController.PauseController
+- uid: GrandmaGreen.EntityController.permissions
+  name: permissions
+  href: api/GrandmaGreen.EntityController.html#GrandmaGreen_EntityController_permissions
+  commentId: F:GrandmaGreen.EntityController.permissions
+  fullName: GrandmaGreen.EntityController.permissions
+  nameWithType: EntityController.permissions
+- uid: GrandmaGreen.EntityController.RegisterEntity(GrandmaGreen.GameEntity)
+  name: RegisterEntity(GameEntity)
+  href: api/GrandmaGreen.EntityController.html#GrandmaGreen_EntityController_RegisterEntity_GrandmaGreen_GameEntity_
+  commentId: M:GrandmaGreen.EntityController.RegisterEntity(GrandmaGreen.GameEntity)
+  fullName: GrandmaGreen.EntityController.RegisterEntity(GrandmaGreen.GameEntity)
+  nameWithType: EntityController.RegisterEntity(GameEntity)
+- uid: GrandmaGreen.EntityController.RegisterEntity*
+  name: RegisterEntity
+  href: api/GrandmaGreen.EntityController.html#GrandmaGreen_EntityController_RegisterEntity_
+  commentId: Overload:GrandmaGreen.EntityController.RegisterEntity
+  isSpec: "True"
+  fullName: GrandmaGreen.EntityController.RegisterEntity
+  nameWithType: EntityController.RegisterEntity
+- uid: GrandmaGreen.EntityController.StartController
+  name: StartController()
+  href: api/GrandmaGreen.EntityController.html#GrandmaGreen_EntityController_StartController
+  commentId: M:GrandmaGreen.EntityController.StartController
+  fullName: GrandmaGreen.EntityController.StartController()
+  nameWithType: EntityController.StartController()
+- uid: GrandmaGreen.EntityController.StartController*
+  name: StartController
+  href: api/GrandmaGreen.EntityController.html#GrandmaGreen_EntityController_StartController_
+  commentId: Overload:GrandmaGreen.EntityController.StartController
+  isSpec: "True"
+  fullName: GrandmaGreen.EntityController.StartController
+  nameWithType: EntityController.StartController
+- uid: GrandmaGreen.EntityPermissions
+  name: EntityPermissions
+  href: api/GrandmaGreen.EntityPermissions.html
+  commentId: T:GrandmaGreen.EntityPermissions
+  fullName: GrandmaGreen.EntityPermissions
+  nameWithType: EntityPermissions
+- uid: GrandmaGreen.EntityPermissions.Gardener
+  name: Gardener
+  href: api/GrandmaGreen.EntityPermissions.html#GrandmaGreen_EntityPermissions_Gardener
+  commentId: F:GrandmaGreen.EntityPermissions.Gardener
+  fullName: GrandmaGreen.EntityPermissions.Gardener
+  nameWithType: EntityPermissions.Gardener
+- uid: GrandmaGreen.EntityPermissions.Interactable
+  name: Interactable
+  href: api/GrandmaGreen.EntityPermissions.html#GrandmaGreen_EntityPermissions_Interactable
+  commentId: F:GrandmaGreen.EntityPermissions.Interactable
+  fullName: GrandmaGreen.EntityPermissions.Interactable
+  nameWithType: EntityPermissions.Interactable
+- uid: GrandmaGreen.EntityPermissions.None
+  name: None
+  href: api/GrandmaGreen.EntityPermissions.html#GrandmaGreen_EntityPermissions_None
+  commentId: F:GrandmaGreen.EntityPermissions.None
+  fullName: GrandmaGreen.EntityPermissions.None
+  nameWithType: EntityPermissions.None
+- uid: GrandmaGreen.EntityPermissions.Pathfinder
+  name: Pathfinder
+  href: api/GrandmaGreen.EntityPermissions.html#GrandmaGreen_EntityPermissions_Pathfinder
+  commentId: F:GrandmaGreen.EntityPermissions.Pathfinder
+  fullName: GrandmaGreen.EntityPermissions.Pathfinder
+  nameWithType: EntityPermissions.Pathfinder
+- uid: GrandmaGreen.EntityPermissions.Speaker
+  name: Speaker
+  href: api/GrandmaGreen.EntityPermissions.html#GrandmaGreen_EntityPermissions_Speaker
+  commentId: F:GrandmaGreen.EntityPermissions.Speaker
+  fullName: GrandmaGreen.EntityPermissions.Speaker
+  nameWithType: EntityPermissions.Speaker
+- uid: GrandmaGreen.EntityState
+  name: EntityState
+  href: api/GrandmaGreen.EntityState.html
+  commentId: T:GrandmaGreen.EntityState
+  fullName: GrandmaGreen.EntityState
+  nameWithType: EntityState
+- uid: GrandmaGreen.EntityState.Busy
+  name: Busy
+  href: api/GrandmaGreen.EntityState.html#GrandmaGreen_EntityState_Busy
+  commentId: F:GrandmaGreen.EntityState.Busy
+  fullName: GrandmaGreen.EntityState.Busy
+  nameWithType: EntityState.Busy
+- uid: GrandmaGreen.EntityState.Idle
+  name: Idle
+  href: api/GrandmaGreen.EntityState.html#GrandmaGreen_EntityState_Idle
+  commentId: F:GrandmaGreen.EntityState.Idle
+  fullName: GrandmaGreen.EntityState.Idle
+  nameWithType: EntityState.Idle
+- uid: GrandmaGreen.EntityState.Moving
+  name: Moving
+  href: api/GrandmaGreen.EntityState.html#GrandmaGreen_EntityState_Moving
+  commentId: F:GrandmaGreen.EntityState.Moving
+  fullName: GrandmaGreen.EntityState.Moving
+  nameWithType: EntityState.Moving
 - uid: GrandmaGreen.FlowerPhenotypeData
   name: FlowerPhenotypeData
   href: api/GrandmaGreen.FlowerPhenotypeData.html
@@ -224,6 +329,174 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.FlowerPhenotypeData.TraitCount
   nameWithType: FlowerPhenotypeData.TraitCount
+- uid: GrandmaGreen.GameEntity
+  name: GameEntity
+  href: api/GrandmaGreen.GameEntity.html
+  commentId: T:GrandmaGreen.GameEntity
+  fullName: GrandmaGreen.GameEntity
+  nameWithType: GameEntity
+- uid: GrandmaGreen.GameEntity.animator
+  name: animator
+  href: api/GrandmaGreen.GameEntity.html#GrandmaGreen_GameEntity_animator
+  commentId: F:GrandmaGreen.GameEntity.animator
+  fullName: GrandmaGreen.GameEntity.animator
+  nameWithType: GameEntity.animator
+- uid: GrandmaGreen.GameEntity.controller
+  name: controller
+  href: api/GrandmaGreen.GameEntity.html#GrandmaGreen_GameEntity_controller
+  commentId: F:GrandmaGreen.GameEntity.controller
+  fullName: GrandmaGreen.GameEntity.controller
+  nameWithType: GameEntity.controller
+- uid: GrandmaGreen.GameEntity.CurrentPos
+  name: CurrentPos()
+  href: api/GrandmaGreen.GameEntity.html#GrandmaGreen_GameEntity_CurrentPos
+  commentId: M:GrandmaGreen.GameEntity.CurrentPos
+  fullName: GrandmaGreen.GameEntity.CurrentPos()
+  nameWithType: GameEntity.CurrentPos()
+- uid: GrandmaGreen.GameEntity.CurrentPos*
+  name: CurrentPos
+  href: api/GrandmaGreen.GameEntity.html#GrandmaGreen_GameEntity_CurrentPos_
+  commentId: Overload:GrandmaGreen.GameEntity.CurrentPos
+  isSpec: "True"
+  fullName: GrandmaGreen.GameEntity.CurrentPos
+  nameWithType: GameEntity.CurrentPos
+- uid: GrandmaGreen.GameEntity.entityStateMachine
+  name: entityStateMachine
+  href: api/GrandmaGreen.GameEntity.html#GrandmaGreen_GameEntity_entityStateMachine
+  commentId: F:GrandmaGreen.GameEntity.entityStateMachine
+  fullName: GrandmaGreen.GameEntity.entityStateMachine
+  nameWithType: GameEntity.entityStateMachine
+- uid: GrandmaGreen.GameEntity.FixedUpdate
+  name: FixedUpdate()
+  href: api/GrandmaGreen.GameEntity.html#GrandmaGreen_GameEntity_FixedUpdate
+  commentId: M:GrandmaGreen.GameEntity.FixedUpdate
+  fullName: GrandmaGreen.GameEntity.FixedUpdate()
+  nameWithType: GameEntity.FixedUpdate()
+- uid: GrandmaGreen.GameEntity.FixedUpdate*
+  name: FixedUpdate
+  href: api/GrandmaGreen.GameEntity.html#GrandmaGreen_GameEntity_FixedUpdate_
+  commentId: Overload:GrandmaGreen.GameEntity.FixedUpdate
+  isSpec: "True"
+  fullName: GrandmaGreen.GameEntity.FixedUpdate
+  nameWithType: GameEntity.FixedUpdate
+- uid: GrandmaGreen.GameEntity.FollowPath(float3[])
+  name: FollowPath(float3[])
+  href: api/GrandmaGreen.GameEntity.html#GrandmaGreen_GameEntity_FollowPath_float3___
+  commentId: M:GrandmaGreen.GameEntity.FollowPath(float3[])
+  name.vb: FollowPath(float3())
+  fullName: GrandmaGreen.GameEntity.FollowPath(float3[])
+  fullName.vb: GrandmaGreen.GameEntity.FollowPath(float3())
+  nameWithType: GameEntity.FollowPath(float3[])
+  nameWithType.vb: GameEntity.FollowPath(float3())
+- uid: GrandmaGreen.GameEntity.FollowPath*
+  name: FollowPath
+  href: api/GrandmaGreen.GameEntity.html#GrandmaGreen_GameEntity_FollowPath_
+  commentId: Overload:GrandmaGreen.GameEntity.FollowPath
+  isSpec: "True"
+  fullName: GrandmaGreen.GameEntity.FollowPath
+  nameWithType: GameEntity.FollowPath
+- uid: GrandmaGreen.GameEntity.isPathing
+  name: isPathing
+  href: api/GrandmaGreen.GameEntity.html#GrandmaGreen_GameEntity_isPathing
+  commentId: P:GrandmaGreen.GameEntity.isPathing
+  fullName: GrandmaGreen.GameEntity.isPathing
+  nameWithType: GameEntity.isPathing
+- uid: GrandmaGreen.GameEntity.isPathing*
+  name: isPathing
+  href: api/GrandmaGreen.GameEntity.html#GrandmaGreen_GameEntity_isPathing_
+  commentId: Overload:GrandmaGreen.GameEntity.isPathing
+  isSpec: "True"
+  fullName: GrandmaGreen.GameEntity.isPathing
+  nameWithType: GameEntity.isPathing
+- uid: GrandmaGreen.GameEntity.OnDisable
+  name: OnDisable()
+  href: api/GrandmaGreen.GameEntity.html#GrandmaGreen_GameEntity_OnDisable
+  commentId: M:GrandmaGreen.GameEntity.OnDisable
+  fullName: GrandmaGreen.GameEntity.OnDisable()
+  nameWithType: GameEntity.OnDisable()
+- uid: GrandmaGreen.GameEntity.OnDisable*
+  name: OnDisable
+  href: api/GrandmaGreen.GameEntity.html#GrandmaGreen_GameEntity_OnDisable_
+  commentId: Overload:GrandmaGreen.GameEntity.OnDisable
+  isSpec: "True"
+  fullName: GrandmaGreen.GameEntity.OnDisable
+  nameWithType: GameEntity.OnDisable
+- uid: GrandmaGreen.GameEntity.OnEnable
+  name: OnEnable()
+  href: api/GrandmaGreen.GameEntity.html#GrandmaGreen_GameEntity_OnEnable
+  commentId: M:GrandmaGreen.GameEntity.OnEnable
+  fullName: GrandmaGreen.GameEntity.OnEnable()
+  nameWithType: GameEntity.OnEnable()
+- uid: GrandmaGreen.GameEntity.OnEnable*
+  name: OnEnable
+  href: api/GrandmaGreen.GameEntity.html#GrandmaGreen_GameEntity_OnEnable_
+  commentId: Overload:GrandmaGreen.GameEntity.OnEnable
+  isSpec: "True"
+  fullName: GrandmaGreen.GameEntity.OnEnable
+  nameWithType: GameEntity.OnEnable
+- uid: GrandmaGreen.GameEntity.pathfinderServicer
+  name: pathfinderServicer
+  href: api/GrandmaGreen.GameEntity.html#GrandmaGreen_GameEntity_pathfinderServicer
+  commentId: P:GrandmaGreen.GameEntity.pathfinderServicer
+  fullName: GrandmaGreen.GameEntity.pathfinderServicer
+  nameWithType: GameEntity.pathfinderServicer
+- uid: GrandmaGreen.GameEntity.pathfinderServicer*
+  name: pathfinderServicer
+  href: api/GrandmaGreen.GameEntity.html#GrandmaGreen_GameEntity_pathfinderServicer_
+  commentId: Overload:GrandmaGreen.GameEntity.pathfinderServicer
+  isSpec: "True"
+  fullName: GrandmaGreen.GameEntity.pathfinderServicer
+  nameWithType: GameEntity.pathfinderServicer
+- uid: GrandmaGreen.GameEntity.RequestPath(int2,int2)
+  name: RequestPath(int2, int2)
+  href: api/GrandmaGreen.GameEntity.html#GrandmaGreen_GameEntity_RequestPath_int2_int2_
+  commentId: M:GrandmaGreen.GameEntity.RequestPath(int2,int2)
+  fullName: GrandmaGreen.GameEntity.RequestPath(int2, int2)
+  nameWithType: GameEntity.RequestPath(int2, int2)
+- uid: GrandmaGreen.GameEntity.RequestPath(Vector3)
+  name: RequestPath(Vector3)
+  href: api/GrandmaGreen.GameEntity.html#GrandmaGreen_GameEntity_RequestPath_Vector3_
+  commentId: M:GrandmaGreen.GameEntity.RequestPath(Vector3)
+  fullName: GrandmaGreen.GameEntity.RequestPath(Vector3)
+  nameWithType: GameEntity.RequestPath(Vector3)
+- uid: GrandmaGreen.GameEntity.RequestPath*
+  name: RequestPath
+  href: api/GrandmaGreen.GameEntity.html#GrandmaGreen_GameEntity_RequestPath_
+  commentId: Overload:GrandmaGreen.GameEntity.RequestPath
+  isSpec: "True"
+  fullName: GrandmaGreen.GameEntity.RequestPath
+  nameWithType: GameEntity.RequestPath
+- uid: GrandmaGreen.GameEntity.smoothFactor
+  name: smoothFactor
+  href: api/GrandmaGreen.GameEntity.html#GrandmaGreen_GameEntity_smoothFactor
+  commentId: F:GrandmaGreen.GameEntity.smoothFactor
+  fullName: GrandmaGreen.GameEntity.smoothFactor
+  nameWithType: GameEntity.smoothFactor
+- uid: GrandmaGreen.GameEntity.splineContainer
+  name: splineContainer
+  href: api/GrandmaGreen.GameEntity.html#GrandmaGreen_GameEntity_splineContainer
+  commentId: F:GrandmaGreen.GameEntity.splineContainer
+  fullName: GrandmaGreen.GameEntity.splineContainer
+  nameWithType: GameEntity.splineContainer
+- uid: GrandmaGreen.GameEntity.splineFollow
+  name: splineFollow
+  href: api/GrandmaGreen.GameEntity.html#GrandmaGreen_GameEntity_splineFollow
+  commentId: F:GrandmaGreen.GameEntity.splineFollow
+  fullName: GrandmaGreen.GameEntity.splineFollow
+  nameWithType: GameEntity.splineFollow
+- uid: GrandmaGreen.GameEntity.Update
+  name: Update()
+  href: api/GrandmaGreen.GameEntity.html#GrandmaGreen_GameEntity_Update
+  commentId: M:GrandmaGreen.GameEntity.Update
+  fullName: GrandmaGreen.GameEntity.Update()
+  nameWithType: GameEntity.Update()
+- uid: GrandmaGreen.GameEntity.Update*
+  name: Update
+  href: api/GrandmaGreen.GameEntity.html#GrandmaGreen_GameEntity_Update_
+  commentId: Overload:GrandmaGreen.GameEntity.Update
+  isSpec: "True"
+  fullName: GrandmaGreen.GameEntity.Update
+  nameWithType: GameEntity.Update
 - uid: GrandmaGreen.GardenAreaController
   name: GardenAreaController
   href: api/GrandmaGreen.GardenAreaController.html
@@ -236,6 +509,12 @@ references:
   commentId: F:GrandmaGreen.GardenAreaController.areaBounds
   fullName: GrandmaGreen.GardenAreaController.areaBounds
   nameWithType: GardenAreaController.areaBounds
+- uid: GrandmaGreen.GardenAreaController.areaServicer
+  name: areaServicer
+  href: api/GrandmaGreen.GardenAreaController.html#GrandmaGreen_GardenAreaController_areaServicer
+  commentId: F:GrandmaGreen.GardenAreaController.areaServicer
+  fullName: GrandmaGreen.GardenAreaController.areaServicer
+  nameWithType: GardenAreaController.areaServicer
 - uid: GrandmaGreen.GardenAreaController.BakeNavGrid
   name: BakeNavGrid()
   href: api/GrandmaGreen.GardenAreaController.html#GrandmaGreen_GardenAreaController_BakeNavGrid
@@ -344,6 +623,90 @@ references:
   commentId: F:GrandmaGreen.GardenAreaController.tilemap
   fullName: GrandmaGreen.GardenAreaController.tilemap
   nameWithType: GardenAreaController.tilemap
+- uid: GrandmaGreen.GardenAreaServicer
+  name: GardenAreaServicer
+  href: api/GrandmaGreen.GardenAreaServicer.html
+  commentId: T:GrandmaGreen.GardenAreaServicer
+  fullName: GrandmaGreen.GardenAreaServicer
+  nameWithType: GardenAreaServicer
+- uid: GrandmaGreen.GardenAreaServicer.DeregisterService(Pathfinder)
+  name: DeregisterService(Pathfinder)
+  href: api/GrandmaGreen.GardenAreaServicer.html#GrandmaGreen_GardenAreaServicer_DeregisterService_Pathfinder_
+  commentId: M:GrandmaGreen.GardenAreaServicer.DeregisterService(Pathfinder)
+  fullName: GrandmaGreen.GardenAreaServicer.DeregisterService(Pathfinder)
+  nameWithType: GardenAreaServicer.DeregisterService(Pathfinder)
+- uid: GrandmaGreen.GardenAreaServicer.DeregisterService*
+  name: DeregisterService
+  href: api/GrandmaGreen.GardenAreaServicer.html#GrandmaGreen_GardenAreaServicer_DeregisterService_
+  commentId: Overload:GrandmaGreen.GardenAreaServicer.DeregisterService
+  isSpec: "True"
+  fullName: GrandmaGreen.GardenAreaServicer.DeregisterService
+  nameWithType: GardenAreaServicer.DeregisterService
+- uid: GrandmaGreen.GardenAreaServicer.DesregisterAreaController(GrandmaGreen.GardenAreaController)
+  name: DesregisterAreaController(GardenAreaController)
+  href: api/GrandmaGreen.GardenAreaServicer.html#GrandmaGreen_GardenAreaServicer_DesregisterAreaController_GrandmaGreen_GardenAreaController_
+  commentId: M:GrandmaGreen.GardenAreaServicer.DesregisterAreaController(GrandmaGreen.GardenAreaController)
+  fullName: GrandmaGreen.GardenAreaServicer.DesregisterAreaController(GrandmaGreen.GardenAreaController)
+  nameWithType: GardenAreaServicer.DesregisterAreaController(GardenAreaController)
+- uid: GrandmaGreen.GardenAreaServicer.DesregisterAreaController*
+  name: DesregisterAreaController
+  href: api/GrandmaGreen.GardenAreaServicer.html#GrandmaGreen_GardenAreaServicer_DesregisterAreaController_
+  commentId: Overload:GrandmaGreen.GardenAreaServicer.DesregisterAreaController
+  isSpec: "True"
+  fullName: GrandmaGreen.GardenAreaServicer.DesregisterAreaController
+  nameWithType: GardenAreaServicer.DesregisterAreaController
+- uid: GrandmaGreen.GardenAreaServicer.RegisterAreaController(GrandmaGreen.GardenAreaController)
+  name: RegisterAreaController(GardenAreaController)
+  href: api/GrandmaGreen.GardenAreaServicer.html#GrandmaGreen_GardenAreaServicer_RegisterAreaController_GrandmaGreen_GardenAreaController_
+  commentId: M:GrandmaGreen.GardenAreaServicer.RegisterAreaController(GrandmaGreen.GardenAreaController)
+  fullName: GrandmaGreen.GardenAreaServicer.RegisterAreaController(GrandmaGreen.GardenAreaController)
+  nameWithType: GardenAreaServicer.RegisterAreaController(GardenAreaController)
+- uid: GrandmaGreen.GardenAreaServicer.RegisterAreaController*
+  name: RegisterAreaController
+  href: api/GrandmaGreen.GardenAreaServicer.html#GrandmaGreen_GardenAreaServicer_RegisterAreaController_
+  commentId: Overload:GrandmaGreen.GardenAreaServicer.RegisterAreaController
+  isSpec: "True"
+  fullName: GrandmaGreen.GardenAreaServicer.RegisterAreaController
+  nameWithType: GardenAreaServicer.RegisterAreaController
+- uid: GrandmaGreen.GardenAreaServicer.RegisterService(Pathfinder)
+  name: RegisterService(Pathfinder)
+  href: api/GrandmaGreen.GardenAreaServicer.html#GrandmaGreen_GardenAreaServicer_RegisterService_Pathfinder_
+  commentId: M:GrandmaGreen.GardenAreaServicer.RegisterService(Pathfinder)
+  fullName: GrandmaGreen.GardenAreaServicer.RegisterService(Pathfinder)
+  nameWithType: GardenAreaServicer.RegisterService(Pathfinder)
+- uid: GrandmaGreen.GardenAreaServicer.RegisterService*
+  name: RegisterService
+  href: api/GrandmaGreen.GardenAreaServicer.html#GrandmaGreen_GardenAreaServicer_RegisterService_
+  commentId: Overload:GrandmaGreen.GardenAreaServicer.RegisterService
+  isSpec: "True"
+  fullName: GrandmaGreen.GardenAreaServicer.RegisterService
+  nameWithType: GardenAreaServicer.RegisterService
+- uid: GrandmaGreen.GardenAreaServicer.StartServices
+  name: StartServices()
+  href: api/GrandmaGreen.GardenAreaServicer.html#GrandmaGreen_GardenAreaServicer_StartServices
+  commentId: M:GrandmaGreen.GardenAreaServicer.StartServices
+  fullName: GrandmaGreen.GardenAreaServicer.StartServices()
+  nameWithType: GardenAreaServicer.StartServices()
+- uid: GrandmaGreen.GardenAreaServicer.StartServices*
+  name: StartServices
+  href: api/GrandmaGreen.GardenAreaServicer.html#GrandmaGreen_GardenAreaServicer_StartServices_
+  commentId: Overload:GrandmaGreen.GardenAreaServicer.StartServices
+  isSpec: "True"
+  fullName: GrandmaGreen.GardenAreaServicer.StartServices
+  nameWithType: GardenAreaServicer.StartServices
+- uid: GrandmaGreen.GardenAreaServicer.StopServices
+  name: StopServices()
+  href: api/GrandmaGreen.GardenAreaServicer.html#GrandmaGreen_GardenAreaServicer_StopServices
+  commentId: M:GrandmaGreen.GardenAreaServicer.StopServices
+  fullName: GrandmaGreen.GardenAreaServicer.StopServices()
+  nameWithType: GardenAreaServicer.StopServices()
+- uid: GrandmaGreen.GardenAreaServicer.StopServices*
+  name: StopServices
+  href: api/GrandmaGreen.GardenAreaServicer.html#GrandmaGreen_GardenAreaServicer_StopServices_
+  commentId: Overload:GrandmaGreen.GardenAreaServicer.StopServices
+  isSpec: "True"
+  fullName: GrandmaGreen.GardenAreaServicer.StopServices
+  nameWithType: GardenAreaServicer.StopServices
 - uid: GrandmaGreen.GardenData
   name: GardenData
   href: api/GrandmaGreen.GardenData.html
@@ -515,6 +878,221 @@ references:
   commentId: F:GrandmaGreen.Genotype.MAX_TRAIT_COUNT
   fullName: GrandmaGreen.Genotype.MAX_TRAIT_COUNT
   nameWithType: Genotype.MAX_TRAIT_COUNT
+- uid: GrandmaGreen.GrandmaEntity
+  name: GrandmaEntity
+  href: api/GrandmaGreen.GrandmaEntity.html
+  commentId: T:GrandmaGreen.GrandmaEntity
+  fullName: GrandmaGreen.GrandmaEntity
+  nameWithType: GrandmaEntity
+- uid: GrandmaGreen.IPathAgent
+  name: IPathAgent
+  href: api/GrandmaGreen.IPathAgent.html
+  commentId: T:GrandmaGreen.IPathAgent
+  fullName: GrandmaGreen.IPathAgent
+  nameWithType: IPathAgent
+- uid: GrandmaGreen.IPathAgent.CurrentPos
+  name: CurrentPos()
+  href: api/GrandmaGreen.IPathAgent.html#GrandmaGreen_IPathAgent_CurrentPos
+  commentId: M:GrandmaGreen.IPathAgent.CurrentPos
+  fullName: GrandmaGreen.IPathAgent.CurrentPos()
+  nameWithType: IPathAgent.CurrentPos()
+- uid: GrandmaGreen.IPathAgent.CurrentPos*
+  name: CurrentPos
+  href: api/GrandmaGreen.IPathAgent.html#GrandmaGreen_IPathAgent_CurrentPos_
+  commentId: Overload:GrandmaGreen.IPathAgent.CurrentPos
+  isSpec: "True"
+  fullName: GrandmaGreen.IPathAgent.CurrentPos
+  nameWithType: IPathAgent.CurrentPos
+- uid: GrandmaGreen.IPathAgent.FollowPath(float3[])
+  name: FollowPath(float3[])
+  href: api/GrandmaGreen.IPathAgent.html#GrandmaGreen_IPathAgent_FollowPath_float3___
+  commentId: M:GrandmaGreen.IPathAgent.FollowPath(float3[])
+  name.vb: FollowPath(float3())
+  fullName: GrandmaGreen.IPathAgent.FollowPath(float3[])
+  fullName.vb: GrandmaGreen.IPathAgent.FollowPath(float3())
+  nameWithType: IPathAgent.FollowPath(float3[])
+  nameWithType.vb: IPathAgent.FollowPath(float3())
+- uid: GrandmaGreen.IPathAgent.FollowPath*
+  name: FollowPath
+  href: api/GrandmaGreen.IPathAgent.html#GrandmaGreen_IPathAgent_FollowPath_
+  commentId: Overload:GrandmaGreen.IPathAgent.FollowPath
+  isSpec: "True"
+  fullName: GrandmaGreen.IPathAgent.FollowPath
+  nameWithType: IPathAgent.FollowPath
+- uid: GrandmaGreen.IPathAgent.isPathing
+  name: isPathing
+  href: api/GrandmaGreen.IPathAgent.html#GrandmaGreen_IPathAgent_isPathing
+  commentId: P:GrandmaGreen.IPathAgent.isPathing
+  fullName: GrandmaGreen.IPathAgent.isPathing
+  nameWithType: IPathAgent.isPathing
+- uid: GrandmaGreen.IPathAgent.isPathing*
+  name: isPathing
+  href: api/GrandmaGreen.IPathAgent.html#GrandmaGreen_IPathAgent_isPathing_
+  commentId: Overload:GrandmaGreen.IPathAgent.isPathing
+  isSpec: "True"
+  fullName: GrandmaGreen.IPathAgent.isPathing
+  nameWithType: IPathAgent.isPathing
+- uid: GrandmaGreen.IPathfinderServicer
+  name: IPathfinderServicer
+  href: api/GrandmaGreen.IPathfinderServicer.html
+  commentId: T:GrandmaGreen.IPathfinderServicer
+  fullName: GrandmaGreen.IPathfinderServicer
+  nameWithType: IPathfinderServicer
+- uid: GrandmaGreen.IServicer`1
+  name: IServicer<T>
+  href: api/GrandmaGreen.IServicer-1.html
+  commentId: T:GrandmaGreen.IServicer`1
+  name.vb: IServicer(Of T)
+  fullName: GrandmaGreen.IServicer<T>
+  fullName.vb: GrandmaGreen.IServicer(Of T)
+  nameWithType: IServicer<T>
+  nameWithType.vb: IServicer(Of T)
+- uid: GrandmaGreen.IServicer`1.DeregisterService(`0)
+  name: DeregisterService(T)
+  href: api/GrandmaGreen.IServicer-1.html#GrandmaGreen_IServicer_1_DeregisterService__0_
+  commentId: M:GrandmaGreen.IServicer`1.DeregisterService(`0)
+  fullName: GrandmaGreen.IServicer<T>.DeregisterService(T)
+  fullName.vb: GrandmaGreen.IServicer(Of T).DeregisterService(T)
+  nameWithType: IServicer<T>.DeregisterService(T)
+  nameWithType.vb: IServicer(Of T).DeregisterService(T)
+- uid: GrandmaGreen.IServicer`1.DeregisterService*
+  name: DeregisterService
+  href: api/GrandmaGreen.IServicer-1.html#GrandmaGreen_IServicer_1_DeregisterService_
+  commentId: Overload:GrandmaGreen.IServicer`1.DeregisterService
+  isSpec: "True"
+  fullName: GrandmaGreen.IServicer<T>.DeregisterService
+  fullName.vb: GrandmaGreen.IServicer(Of T).DeregisterService
+  nameWithType: IServicer<T>.DeregisterService
+  nameWithType.vb: IServicer(Of T).DeregisterService
+- uid: GrandmaGreen.IServicer`1.Item(System.Int32)
+  name: Item[Int32]
+  href: api/GrandmaGreen.IServicer-1.html#GrandmaGreen_IServicer_1_Item_System_Int32_
+  commentId: P:GrandmaGreen.IServicer`1.Item(System.Int32)
+  name.vb: Item(Int32)
+  fullName: GrandmaGreen.IServicer<T>.Item[System.Int32]
+  fullName.vb: GrandmaGreen.IServicer(Of T).Item(System.Int32)
+  nameWithType: IServicer<T>.Item[Int32]
+  nameWithType.vb: IServicer(Of T).Item(Int32)
+- uid: GrandmaGreen.IServicer`1.Item*
+  name: Item
+  href: api/GrandmaGreen.IServicer-1.html#GrandmaGreen_IServicer_1_Item_
+  commentId: Overload:GrandmaGreen.IServicer`1.Item
+  isSpec: "True"
+  fullName: GrandmaGreen.IServicer<T>.Item
+  fullName.vb: GrandmaGreen.IServicer(Of T).Item
+  nameWithType: IServicer<T>.Item
+  nameWithType.vb: IServicer(Of T).Item
+- uid: GrandmaGreen.IServicer`1.PrimaryService
+  name: PrimaryService
+  href: api/GrandmaGreen.IServicer-1.html#GrandmaGreen_IServicer_1_PrimaryService
+  commentId: P:GrandmaGreen.IServicer`1.PrimaryService
+  fullName: GrandmaGreen.IServicer<T>.PrimaryService
+  fullName.vb: GrandmaGreen.IServicer(Of T).PrimaryService
+  nameWithType: IServicer<T>.PrimaryService
+  nameWithType.vb: IServicer(Of T).PrimaryService
+- uid: GrandmaGreen.IServicer`1.PrimaryService*
+  name: PrimaryService
+  href: api/GrandmaGreen.IServicer-1.html#GrandmaGreen_IServicer_1_PrimaryService_
+  commentId: Overload:GrandmaGreen.IServicer`1.PrimaryService
+  isSpec: "True"
+  fullName: GrandmaGreen.IServicer<T>.PrimaryService
+  fullName.vb: GrandmaGreen.IServicer(Of T).PrimaryService
+  nameWithType: IServicer<T>.PrimaryService
+  nameWithType.vb: IServicer(Of T).PrimaryService
+- uid: GrandmaGreen.IServicer`1.RegisterService(`0)
+  name: RegisterService(T)
+  href: api/GrandmaGreen.IServicer-1.html#GrandmaGreen_IServicer_1_RegisterService__0_
+  commentId: M:GrandmaGreen.IServicer`1.RegisterService(`0)
+  fullName: GrandmaGreen.IServicer<T>.RegisterService(T)
+  fullName.vb: GrandmaGreen.IServicer(Of T).RegisterService(T)
+  nameWithType: IServicer<T>.RegisterService(T)
+  nameWithType.vb: IServicer(Of T).RegisterService(T)
+- uid: GrandmaGreen.IServicer`1.RegisterService*
+  name: RegisterService
+  href: api/GrandmaGreen.IServicer-1.html#GrandmaGreen_IServicer_1_RegisterService_
+  commentId: Overload:GrandmaGreen.IServicer`1.RegisterService
+  isSpec: "True"
+  fullName: GrandmaGreen.IServicer<T>.RegisterService
+  fullName.vb: GrandmaGreen.IServicer(Of T).RegisterService
+  nameWithType: IServicer<T>.RegisterService
+  nameWithType.vb: IServicer(Of T).RegisterService
+- uid: GrandmaGreen.IServicer`1.s_activeServices
+  name: s_activeServices
+  href: api/GrandmaGreen.IServicer-1.html#GrandmaGreen_IServicer_1_s_activeServices
+  commentId: P:GrandmaGreen.IServicer`1.s_activeServices
+  fullName: GrandmaGreen.IServicer<T>.s_activeServices
+  fullName.vb: GrandmaGreen.IServicer(Of T).s_activeServices
+  nameWithType: IServicer<T>.s_activeServices
+  nameWithType.vb: IServicer(Of T).s_activeServices
+- uid: GrandmaGreen.IServicer`1.s_activeServices*
+  name: s_activeServices
+  href: api/GrandmaGreen.IServicer-1.html#GrandmaGreen_IServicer_1_s_activeServices_
+  commentId: Overload:GrandmaGreen.IServicer`1.s_activeServices
+  isSpec: "True"
+  fullName: GrandmaGreen.IServicer<T>.s_activeServices
+  fullName.vb: GrandmaGreen.IServicer(Of T).s_activeServices
+  nameWithType: IServicer<T>.s_activeServices
+  nameWithType.vb: IServicer(Of T).s_activeServices
+- uid: GrandmaGreen.IServiceUser`2
+  name: IServiceUser<U, T>
+  href: api/GrandmaGreen.IServiceUser-2.html
+  commentId: T:GrandmaGreen.IServiceUser`2
+  name.vb: IServiceUser(Of U, T)
+  fullName: GrandmaGreen.IServiceUser<U, T>
+  fullName.vb: GrandmaGreen.IServiceUser(Of U, T)
+  nameWithType: IServiceUser<U, T>
+  nameWithType.vb: IServiceUser(Of U, T)
+- uid: GrandmaGreen.IServiceUser`2.ClearServicer
+  name: ClearServicer()
+  href: api/GrandmaGreen.IServiceUser-2.html#GrandmaGreen_IServiceUser_2_ClearServicer
+  commentId: M:GrandmaGreen.IServiceUser`2.ClearServicer
+  fullName: GrandmaGreen.IServiceUser<U, T>.ClearServicer()
+  fullName.vb: GrandmaGreen.IServiceUser(Of U, T).ClearServicer()
+  nameWithType: IServiceUser<U, T>.ClearServicer()
+  nameWithType.vb: IServiceUser(Of U, T).ClearServicer()
+- uid: GrandmaGreen.IServiceUser`2.ClearServicer*
+  name: ClearServicer
+  href: api/GrandmaGreen.IServiceUser-2.html#GrandmaGreen_IServiceUser_2_ClearServicer_
+  commentId: Overload:GrandmaGreen.IServiceUser`2.ClearServicer
+  isSpec: "True"
+  fullName: GrandmaGreen.IServiceUser<U, T>.ClearServicer
+  fullName.vb: GrandmaGreen.IServiceUser(Of U, T).ClearServicer
+  nameWithType: IServiceUser<U, T>.ClearServicer
+  nameWithType.vb: IServiceUser(Of U, T).ClearServicer
+- uid: GrandmaGreen.IServiceUser`2.Servicer
+  name: Servicer
+  href: api/GrandmaGreen.IServiceUser-2.html#GrandmaGreen_IServiceUser_2_Servicer
+  commentId: P:GrandmaGreen.IServiceUser`2.Servicer
+  fullName: GrandmaGreen.IServiceUser<U, T>.Servicer
+  fullName.vb: GrandmaGreen.IServiceUser(Of U, T).Servicer
+  nameWithType: IServiceUser<U, T>.Servicer
+  nameWithType.vb: IServiceUser(Of U, T).Servicer
+- uid: GrandmaGreen.IServiceUser`2.Servicer*
+  name: Servicer
+  href: api/GrandmaGreen.IServiceUser-2.html#GrandmaGreen_IServiceUser_2_Servicer_
+  commentId: Overload:GrandmaGreen.IServiceUser`2.Servicer
+  isSpec: "True"
+  fullName: GrandmaGreen.IServiceUser<U, T>.Servicer
+  fullName.vb: GrandmaGreen.IServiceUser(Of U, T).Servicer
+  nameWithType: IServiceUser<U, T>.Servicer
+  nameWithType.vb: IServiceUser(Of U, T).Servicer
+- uid: GrandmaGreen.IServiceUser`2.SetServicer(`1)
+  name: SetServicer(T)
+  href: api/GrandmaGreen.IServiceUser-2.html#GrandmaGreen_IServiceUser_2_SetServicer__1_
+  commentId: M:GrandmaGreen.IServiceUser`2.SetServicer(`1)
+  fullName: GrandmaGreen.IServiceUser<U, T>.SetServicer(T)
+  fullName.vb: GrandmaGreen.IServiceUser(Of U, T).SetServicer(T)
+  nameWithType: IServiceUser<U, T>.SetServicer(T)
+  nameWithType.vb: IServiceUser(Of U, T).SetServicer(T)
+- uid: GrandmaGreen.IServiceUser`2.SetServicer*
+  name: SetServicer
+  href: api/GrandmaGreen.IServiceUser-2.html#GrandmaGreen_IServiceUser_2_SetServicer_
+  commentId: Overload:GrandmaGreen.IServiceUser`2.SetServicer
+  isSpec: "True"
+  fullName: GrandmaGreen.IServiceUser<U, T>.SetServicer
+  fullName.vb: GrandmaGreen.IServiceUser(Of U, T).SetServicer
+  nameWithType: IServiceUser<U, T>.SetServicer
+  nameWithType.vb: IServiceUser(Of U, T).SetServicer
 - uid: GrandmaGreen.ITraitData
   name: ITraitData
   href: api/GrandmaGreen.ITraitData.html
@@ -629,6 +1207,38 @@ references:
   commentId: F:GrandmaGreen.PlantState.phenotypeIndex
   fullName: GrandmaGreen.PlantState.phenotypeIndex
   nameWithType: PlantState.phenotypeIndex
+- uid: GrandmaGreen.PlayerController
+  name: PlayerController
+  href: api/GrandmaGreen.PlayerController.html
+  commentId: T:GrandmaGreen.PlayerController
+  fullName: GrandmaGreen.PlayerController
+  nameWithType: PlayerController
+- uid: GrandmaGreen.PlayerController.PauseController
+  name: PauseController()
+  href: api/GrandmaGreen.PlayerController.html#GrandmaGreen_PlayerController_PauseController
+  commentId: M:GrandmaGreen.PlayerController.PauseController
+  fullName: GrandmaGreen.PlayerController.PauseController()
+  nameWithType: PlayerController.PauseController()
+- uid: GrandmaGreen.PlayerController.PauseController*
+  name: PauseController
+  href: api/GrandmaGreen.PlayerController.html#GrandmaGreen_PlayerController_PauseController_
+  commentId: Overload:GrandmaGreen.PlayerController.PauseController
+  isSpec: "True"
+  fullName: GrandmaGreen.PlayerController.PauseController
+  nameWithType: PlayerController.PauseController
+- uid: GrandmaGreen.PlayerController.StartController
+  name: StartController()
+  href: api/GrandmaGreen.PlayerController.html#GrandmaGreen_PlayerController_StartController
+  commentId: M:GrandmaGreen.PlayerController.StartController
+  fullName: GrandmaGreen.PlayerController.StartController()
+  nameWithType: PlayerController.StartController()
+- uid: GrandmaGreen.PlayerController.StartController*
+  name: StartController
+  href: api/GrandmaGreen.PlayerController.html#GrandmaGreen_PlayerController_StartController_
+  commentId: Overload:GrandmaGreen.PlayerController.StartController
+  isSpec: "True"
+  fullName: GrandmaGreen.PlayerController.StartController
+  nameWithType: PlayerController.StartController
 - uid: GrandmaGreen.SaveSystem
   name: GrandmaGreen.SaveSystem
   href: api/GrandmaGreen.SaveSystem.html

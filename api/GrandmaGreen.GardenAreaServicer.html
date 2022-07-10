@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class GardenData
+    <title>Class GardenAreaServicer
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class GardenData
+    <meta name="title" content="Class GardenAreaServicer
    ">
     <meta name="generator" content="docfx 2.59.3.0">
     
@@ -77,133 +77,40 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="GrandmaGreen.GardenData">
+            <article class="content wrap" id="_content" data-uid="GrandmaGreen.GardenAreaServicer">
   
   
-  <h1 id="GrandmaGreen_GardenData" data-uid="GrandmaGreen.GardenData" class="text-break">Class GardenData
+  <h1 id="GrandmaGreen_GardenAreaServicer" data-uid="GrandmaGreen.GardenAreaServicer" class="text-break">Class GardenAreaServicer
   </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
-    <div class="level1"><span class="xref">GardenData</span></div>
+    <div class="level1"><span class="xref">GardenAreaServicer</span></div>
+  </div>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="GrandmaGreen.IPathfinderServicer.html">IPathfinderServicer</a></div>
+    <div><a class="xref" href="GrandmaGreen.IServicer-1.html">IServicer</a>&lt;<span class="xref">Pathfinder</span>&gt;</div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="GrandmaGreen.html">GrandmaGreen</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
-  <h5 id="GrandmaGreen_GardenData_syntax">Syntax</h5>
+  <h5 id="GrandmaGreen_GardenAreaServicer_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class GardenData : ScriptableObject</code></pre>
+    <pre><code class="lang-csharp hljs">public class GardenAreaServicer : ScriptableObject, IPathfinderServicer, IServicer&lt;Pathfinder&gt;</code></pre>
   </div>
-  <h3 id="fields">Fields
-  </h3>
-  
-  
-  <h4 id="GrandmaGreen_GardenData_cellSize" data-uid="GrandmaGreen.GardenData.cellSize">cellSize</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Vector2 cellSize</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Vector2</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="GrandmaGreen_GardenData_gridSize" data-uid="GrandmaGreen.GardenData.gridSize">gridSize</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Vector2Int gridSize</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Vector2Int</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="GrandmaGreen_GardenData_plantStates" data-uid="GrandmaGreen.GardenData.plantStates">plantStates</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public List&lt;PlantState&gt; plantStates</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="GrandmaGreen.PlantState.html">PlantState</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="GrandmaGreen_GardenData_worldOrigin" data-uid="GrandmaGreen.GardenData.worldOrigin">worldOrigin</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Vector3 worldOrigin</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Vector3</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h3 id="methods">Methods
   </h3>
   
   
-  <a id="GrandmaGreen_GardenData_IndexToWorldPos_" data-uid="GrandmaGreen.GardenData.IndexToWorldPos*"></a>
-  <h4 id="GrandmaGreen_GardenData_IndexToWorldPos_System_Int32_" data-uid="GrandmaGreen.GardenData.IndexToWorldPos(System.Int32)">IndexToWorldPos(Int32)</h4>
+  <a id="GrandmaGreen_GardenAreaServicer_DeregisterService_" data-uid="GrandmaGreen.GardenAreaServicer.DeregisterService*"></a>
+  <h4 id="GrandmaGreen_GardenAreaServicer_DeregisterService_Pathfinder_" data-uid="GrandmaGreen.GardenAreaServicer.DeregisterService(Pathfinder)">DeregisterService(Pathfinder)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Vector3 IndexToWorldPos(int index)</code></pre>
+    <pre><code class="lang-csharp hljs">public void DeregisterService(Pathfinder pathfinder)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -216,36 +123,21 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
-        <td><span class="parametername">index</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Vector3</span></td>
+        <td><span class="xref">Pathfinder</span></td>
+        <td><span class="parametername">pathfinder</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="GrandmaGreen_GardenData_WorldToGrid_" data-uid="GrandmaGreen.GardenData.WorldToGrid*"></a>
-  <h4 id="GrandmaGreen_GardenData_WorldToGrid_Vector3_" data-uid="GrandmaGreen.GardenData.WorldToGrid(Vector3)">WorldToGrid(Vector3)</h4>
+  <a id="GrandmaGreen_GardenAreaServicer_DesregisterAreaController_" data-uid="GrandmaGreen.GardenAreaServicer.DesregisterAreaController*"></a>
+  <h4 id="GrandmaGreen_GardenAreaServicer_DesregisterAreaController_GrandmaGreen_GardenAreaController_" data-uid="GrandmaGreen.GardenAreaServicer.DesregisterAreaController(GrandmaGreen.GardenAreaController)">DesregisterAreaController(GardenAreaController)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Vector2Int WorldToGrid(Vector3 position)</code></pre>
+    <pre><code class="lang-csharp hljs">public void DesregisterAreaController(GardenAreaController areaController)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -258,27 +150,93 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Vector3</span></td>
-        <td><span class="parametername">position</span></td>
+        <td><a class="xref" href="GrandmaGreen.GardenAreaController.html">GardenAreaController</a></td>
+        <td><span class="parametername">areaController</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h5 class="returns">Returns</h5>
+  
+  
+  <a id="GrandmaGreen_GardenAreaServicer_RegisterAreaController_" data-uid="GrandmaGreen.GardenAreaServicer.RegisterAreaController*"></a>
+  <h4 id="GrandmaGreen_GardenAreaServicer_RegisterAreaController_GrandmaGreen_GardenAreaController_" data-uid="GrandmaGreen.GardenAreaServicer.RegisterAreaController(GrandmaGreen.GardenAreaController)">RegisterAreaController(GardenAreaController)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RegisterAreaController(GardenAreaController areaController)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
+        <th>Name</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Vector2Int</span></td>
+        <td><a class="xref" href="GrandmaGreen.GardenAreaController.html">GardenAreaController</a></td>
+        <td><span class="parametername">areaController</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="GrandmaGreen_GardenAreaServicer_RegisterService_" data-uid="GrandmaGreen.GardenAreaServicer.RegisterService*"></a>
+  <h4 id="GrandmaGreen_GardenAreaServicer_RegisterService_Pathfinder_" data-uid="GrandmaGreen.GardenAreaServicer.RegisterService(Pathfinder)">RegisterService(Pathfinder)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RegisterService(Pathfinder pathfinder)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Pathfinder</span></td>
+        <td><span class="parametername">pathfinder</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="GrandmaGreen_GardenAreaServicer_StartServices_" data-uid="GrandmaGreen.GardenAreaServicer.StartServices*"></a>
+  <h4 id="GrandmaGreen_GardenAreaServicer_StartServices" data-uid="GrandmaGreen.GardenAreaServicer.StartServices">StartServices()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void StartServices()</code></pre>
+  </div>
+  
+  
+  <a id="GrandmaGreen_GardenAreaServicer_StopServices_" data-uid="GrandmaGreen.GardenAreaServicer.StopServices*"></a>
+  <h4 id="GrandmaGreen_GardenAreaServicer_StopServices" data-uid="GrandmaGreen.GardenAreaServicer.StopServices">StopServices()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void StopServices()</code></pre>
+  </div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="GrandmaGreen.IPathfinderServicer.html">IPathfinderServicer</a>
+  </div>
+  <div>
+      <a class="xref" href="GrandmaGreen.IServicer-1.html">IServicer&lt;T&gt;</a>
+  </div>
 </article>
           </div>
           

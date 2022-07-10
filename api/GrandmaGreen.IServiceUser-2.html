@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Namespace GrandmaGreen
+    <title>Interface IServiceUser&lt;U, T&gt;
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Namespace GrandmaGreen
+    <meta name="title" content="Interface IServiceUser&lt;U, T&gt;
    ">
     <meta name="generator" content="docfx 2.59.3.0">
     
@@ -77,76 +77,105 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="GrandmaGreen">
+            <article class="content wrap" id="_content" data-uid="GrandmaGreen.IServiceUser`2">
   
-  <h1 id="GrandmaGreen" data-uid="GrandmaGreen" class="text-break">Namespace GrandmaGreen
+  
+  <h1 id="GrandmaGreen_IServiceUser_2" data-uid="GrandmaGreen.IServiceUser`2" class="text-break">Interface IServiceUser&lt;U, T&gt;
   </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
-  <div class="markdown level0 remarks"></div>
-    <h3 id="classes">Classes
+  <h6><strong>Namespace</strong>: <a class="xref" href="GrandmaGreen.html">GrandmaGreen</a></h6>
+  <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
+  <h5 id="GrandmaGreen_IServiceUser_2_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IServiceUser&lt;U, T&gt;
+    where T : IServicer&lt;U&gt;</code></pre>
+  </div>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">U</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
   </h3>
-      <h4><a class="xref" href="GrandmaGreen.AIController.html">AIController</a></h4>
-      <section></section>
-      <h4><a class="xref" href="GrandmaGreen.BasePhenotypeData.html">BasePhenotypeData</a></h4>
-      <section></section>
-      <h4><a class="xref" href="GrandmaGreen.ColorSet.html">ColorSet</a></h4>
-      <section></section>
-      <h4><a class="xref" href="GrandmaGreen.EntityController.html">EntityController</a></h4>
-      <section></section>
-      <h4><a class="xref" href="GrandmaGreen.FlowerPhenotypeData.html">FlowerPhenotypeData</a></h4>
-      <section></section>
-      <h4><a class="xref" href="GrandmaGreen.GameEntity.html">GameEntity</a></h4>
-      <section></section>
-      <h4><a class="xref" href="GrandmaGreen.GardenAreaController.html">GardenAreaController</a></h4>
-      <section><p>TODO: Implement functionality for save/loading changed tiles </p>
-</section>
-      <h4><a class="xref" href="GrandmaGreen.GardenAreaServicer.html">GardenAreaServicer</a></h4>
-      <section></section>
-      <h4><a class="xref" href="GrandmaGreen.GardenData.html">GardenData</a></h4>
-      <section></section>
-      <h4><a class="xref" href="GrandmaGreen.GardenPlant.html">GardenPlant</a></h4>
-      <section></section>
-      <h4><a class="xref" href="GrandmaGreen.Genotype.html">Genotype</a></h4>
-      <section></section>
-      <h4><a class="xref" href="GrandmaGreen.GrandmaEntity.html">GrandmaEntity</a></h4>
-      <section></section>
-      <h4><a class="xref" href="GrandmaGreen.PlayerController.html">PlayerController</a></h4>
-      <section></section>
-      <h4><a class="xref" href="GrandmaGreen.SizeSet.html">SizeSet</a></h4>
-      <section></section>
-      <h4><a class="xref" href="GrandmaGreen.TraitData-1.html">TraitData&lt;T&gt;</a></h4>
-      <section></section>
-      <h4><a class="xref" href="GrandmaGreen.TraitSetData-1.html">TraitSetData&lt;T&gt;</a></h4>
-      <section></section>
-    <h3 id="structs">Structs
+  
+  
+  <a id="GrandmaGreen_IServiceUser_2_Servicer_" data-uid="GrandmaGreen.IServiceUser`2.Servicer*"></a>
+  <h4 id="GrandmaGreen_IServiceUser_2_Servicer" data-uid="GrandmaGreen.IServiceUser`2.Servicer">Servicer</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">static T Servicer { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
   </h3>
-      <h4><a class="xref" href="GrandmaGreen.PlantState.html">PlantState</a></h4>
-      <section></section>
-      <h4><a class="xref" href="GrandmaGreen.Trait.html">Trait</a></h4>
-      <section></section>
-    <h3 id="interfaces">Interfaces
-  </h3>
-      <h4><a class="xref" href="GrandmaGreen.IPathAgent.html">IPathAgent</a></h4>
-      <section></section>
-      <h4><a class="xref" href="GrandmaGreen.IPathfinderServicer.html">IPathfinderServicer</a></h4>
-      <section></section>
-      <h4><a class="xref" href="GrandmaGreen.IServicer-1.html">IServicer&lt;T&gt;</a></h4>
-      <section></section>
-      <h4><a class="xref" href="GrandmaGreen.IServiceUser-2.html">IServiceUser&lt;U, T&gt;</a></h4>
-      <section></section>
-      <h4><a class="xref" href="GrandmaGreen.ITraitData.html">ITraitData</a></h4>
-      <section></section>
-      <h4><a class="xref" href="GrandmaGreen.ITraitSetData.html">ITraitSetData</a></h4>
-      <section></section>
-    <h3 id="enums">Enums
-  </h3>
-      <h4><a class="xref" href="GrandmaGreen.Allele.html">Allele</a></h4>
-      <section></section>
-      <h4><a class="xref" href="GrandmaGreen.EntityPermissions.html">EntityPermissions</a></h4>
-      <section></section>
-      <h4><a class="xref" href="GrandmaGreen.EntityState.html">EntityState</a></h4>
-      <section></section>
+  
+  
+  <a id="GrandmaGreen_IServiceUser_2_ClearServicer_" data-uid="GrandmaGreen.IServiceUser`2.ClearServicer*"></a>
+  <h4 id="GrandmaGreen_IServiceUser_2_ClearServicer" data-uid="GrandmaGreen.IServiceUser`2.ClearServicer">ClearServicer()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">static void ClearServicer()</code></pre>
+  </div>
+  
+  
+  <a id="GrandmaGreen_IServiceUser_2_SetServicer_" data-uid="GrandmaGreen.IServiceUser`2.SetServicer*"></a>
+  <h4 id="GrandmaGreen_IServiceUser_2_SetServicer__1_" data-uid="GrandmaGreen.IServiceUser`2.SetServicer(`1)">SetServicer(T)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">static void SetServicer(T servicer)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">servicer</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
 </article>
           </div>
           
