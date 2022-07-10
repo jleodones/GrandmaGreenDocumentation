@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Interface IObjectSaver
+    <title>Struct Component&lt;T&gt;
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Interface IObjectSaver
+    <meta name="title" content="Struct Component&lt;T&gt;
    ">
     <meta name="generator" content="docfx 2.59.3.0">
     
@@ -77,94 +77,58 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="GrandmaGreen.SaveSystem.IObjectSaver">
+            <article class="content wrap" id="_content" data-uid="GrandmaGreen.SaveSystem.Component`1">
   
   
-  <h1 id="GrandmaGreen_SaveSystem_IObjectSaver" data-uid="GrandmaGreen.SaveSystem.IObjectSaver" class="text-break">Interface IObjectSaver
+  <h1 id="GrandmaGreen_SaveSystem_Component_1" data-uid="GrandmaGreen.SaveSystem.Component`1" class="text-break">Struct Component&lt;T&gt;
   </h1>
-  <div class="markdown level0 summary"><p>The IObjectSaver interface is a wrapper for ObjectSaver Scriptable Objects, which holds a list of IComponentSavers. IObjectSavers are instantiated and registered by SaveControllers upon awakening in a scene.</p>
-<p>Importantly, IObjectSavers handle data requests from game interfaces. Other game interfaces request the information, and IObjectSavers retrieve the data from IObjectStores to pass it along. Similarly, IObjectSavers take in new data from game interfaces and updates the IObjectStore appropriately.</p>
+  <div class="markdown level0 summary"><p>The IComponentStore is a wrapper interface for ComponentStores. The purpose of the ComponentStore is to store data at the start of a scene—when data gets loaded–and when gameplay changes any sort of persistent data.</p>
+<p>Requests for the data stored in the IComponentStore object are handled through IObjectSavers.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">IComparable</span>&lt;<a class="xref" href="GrandmaGreen.SaveSystem.Component-1.html">Component</a>&lt;T&gt;&gt;</div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.valuetype.equals#system-valuetype-equals(system-object)">ValueType.Equals(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.valuetype.gethashcode#system-valuetype-gethashcode">ValueType.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.valuetype.tostring#system-valuetype-tostring">ValueType.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">Object.Equals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.referenceequals#system-object-referenceequals(system-object-system-object)">Object.ReferenceEquals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gettype#system-object-gettype">Object.GetType()</a>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="GrandmaGreen.SaveSystem.html">GrandmaGreen.SaveSystem</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
-  <h5 id="GrandmaGreen_SaveSystem_IObjectSaver_syntax">Syntax</h5>
+  <h5 id="GrandmaGreen_SaveSystem_Component_1_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface IObjectSaver</code></pre>
+    <pre><code class="lang-csharp hljs">public struct Component&lt;T&gt;
+    where T : struct</code></pre>
   </div>
-  <h3 id="properties">Properties
-  </h3>
-  
-  
-  <a id="GrandmaGreen_SaveSystem_IObjectSaver_componentStores_" data-uid="GrandmaGreen.SaveSystem.IObjectSaver.componentStores*"></a>
-  <h4 id="GrandmaGreen_SaveSystem_IObjectSaver_componentStores" data-uid="GrandmaGreen.SaveSystem.IObjectSaver.componentStores">componentStores</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">List&lt;IComponentStore&gt; componentStores { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
+  <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
-        <th>Type</th>
+        <th>Name</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="GrandmaGreen.SaveSystem.IComponentStore.html">IComponentStore</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="GrandmaGreen_SaveSystem_IObjectSaver_eventMap_" data-uid="GrandmaGreen.SaveSystem.IObjectSaver.eventMap*"></a>
-  <h4 id="GrandmaGreen_SaveSystem_IObjectSaver_eventMap" data-uid="GrandmaGreen.SaveSystem.IObjectSaver.eventMap">eventMap</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Dictionary&lt;Delegate, UnityEvent&gt; eventMap { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<span class="xref">Delegate</span>, <span class="xref">UnityEvent</span>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="GrandmaGreen_SaveSystem_IObjectSaver_toBeSaved_" data-uid="GrandmaGreen.SaveSystem.IObjectSaver.toBeSaved*"></a>
-  <h4 id="GrandmaGreen_SaveSystem_IObjectSaver_toBeSaved" data-uid="GrandmaGreen.SaveSystem.IObjectSaver.toBeSaved">toBeSaved</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Queue&lt;IComponentStore&gt; toBeSaved { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.queue-1">Queue</a>&lt;<a class="xref" href="GrandmaGreen.SaveSystem.IComponentStore.html">IComponentStore</a>&gt;</td>
+        <td><span class="parametername">T</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -173,13 +137,13 @@
   </h3>
   
   
-  <a id="GrandmaGreen_SaveSystem_IObjectSaver_TriggerEvent_" data-uid="GrandmaGreen.SaveSystem.IObjectSaver.TriggerEvent*"></a>
-  <h4 id="GrandmaGreen_SaveSystem_IObjectSaver_TriggerEvent_Delegate__" data-uid="GrandmaGreen.SaveSystem.IObjectSaver.TriggerEvent(Delegate@)">TriggerEvent(ref Delegate)</h4>
+  <a id="GrandmaGreen_SaveSystem_Component_1_CompareTo_" data-uid="GrandmaGreen.SaveSystem.Component`1.CompareTo*"></a>
+  <h4 id="GrandmaGreen_SaveSystem_Component_1_CompareTo_GrandmaGreen_SaveSystem_Component__0__" data-uid="GrandmaGreen.SaveSystem.Component`1.CompareTo(GrandmaGreen.SaveSystem.Component{`0})">CompareTo(Component&lt;T&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">virtual bool TriggerEvent(ref Delegate myDelegate)</code></pre>
+    <pre><code class="lang-csharp hljs">public int CompareTo(Component&lt;T&gt; other)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -192,8 +156,8 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Delegate</span></td>
-        <td><span class="parametername">myDelegate</span></td>
+        <td><a class="xref" href="GrandmaGreen.SaveSystem.Component-1.html">Component</a>&lt;T&gt;</td>
+        <td><span class="parametername">other</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -208,11 +172,15 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">IComparable&lt;&gt;</span>
+  </div>
 </article>
           </div>
           

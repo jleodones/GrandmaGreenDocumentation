@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Interface IComponentStore
+    <title>Class ComponentStore&lt;T&gt;
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Interface IComponentStore
+    <meta name="title" content="Class ComponentStore&lt;T&gt;
    ">
     <meta name="generator" content="docfx 2.59.3.0">
     
@@ -77,30 +77,115 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="GrandmaGreen.SaveSystem.IComponentStore">
+            <article class="content wrap" id="_content" data-uid="GrandmaGreen.SaveSystem.ComponentStore`1">
   
   
-  <h1 id="GrandmaGreen_SaveSystem_IComponentStore" data-uid="GrandmaGreen.SaveSystem.IComponentStore" class="text-break">Interface IComponentStore
+  <h1 id="GrandmaGreen_SaveSystem_ComponentStore_1" data-uid="GrandmaGreen.SaveSystem.ComponentStore`1" class="text-break">Class ComponentStore&lt;T&gt;
   </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><span class="xref">ComponentStore&lt;T&gt;</span></div>
+  </div>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="GrandmaGreen.SaveSystem.IComponentStore.html">IComponentStore</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.tostring#system-object-tostring">Object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">Object.Equals(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">Object.Equals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.referenceequals#system-object-referenceequals(system-object-system-object)">Object.ReferenceEquals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gethashcode#system-object-gethashcode">Object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gettype#system-object-gettype">Object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.memberwiseclone#system-object-memberwiseclone">Object.MemberwiseClone()</a>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="GrandmaGreen.SaveSystem.html">GrandmaGreen.SaveSystem</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
-  <h5 id="GrandmaGreen_SaveSystem_IComponentStore_syntax">Syntax</h5>
+  <h5 id="GrandmaGreen_SaveSystem_ComponentStore_1_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface IComponentStore</code></pre>
+    <pre><code class="lang-csharp hljs">public class ComponentStore&lt;T&gt; : IComponentStore where T : struct</code></pre>
+  </div>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="GrandmaGreen_SaveSystem_ComponentStore_1__ctor_" data-uid="GrandmaGreen.SaveSystem.ComponentStore`1.#ctor*"></a>
+  <h4 id="GrandmaGreen_SaveSystem_ComponentStore_1__ctor" data-uid="GrandmaGreen.SaveSystem.ComponentStore`1.#ctor">ComponentStore()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ComponentStore()</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
   
   
-  <a id="GrandmaGreen_SaveSystem_IComponentStore_name_" data-uid="GrandmaGreen.SaveSystem.IComponentStore.name*"></a>
-  <h4 id="GrandmaGreen_SaveSystem_IComponentStore_name" data-uid="GrandmaGreen.SaveSystem.IComponentStore.name">name</h4>
+  <a id="GrandmaGreen_SaveSystem_ComponentStore_1_components_" data-uid="GrandmaGreen.SaveSystem.ComponentStore`1.components*"></a>
+  <h4 id="GrandmaGreen_SaveSystem_ComponentStore_1_components" data-uid="GrandmaGreen.SaveSystem.ComponentStore`1.components">components</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">string name { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public List&lt;Component&lt;T&gt;&gt; components { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="GrandmaGreen.SaveSystem.Component-1.html">Component</a>&lt;T&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="GrandmaGreen_SaveSystem_ComponentStore_1_name_" data-uid="GrandmaGreen.SaveSystem.ComponentStore`1.name*"></a>
+  <h4 id="GrandmaGreen_SaveSystem_ComponentStore_1_name" data-uid="GrandmaGreen.SaveSystem.ComponentStore`1.name">name</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string name { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -121,13 +206,13 @@
   </h3>
   
   
-  <a id="GrandmaGreen_SaveSystem_IComponentStore_AddComponent_" data-uid="GrandmaGreen.SaveSystem.IComponentStore.AddComponent*"></a>
-  <h4 id="GrandmaGreen_SaveSystem_IComponentStore_AddComponent__1_GrandmaGreen_SaveSystem_Component___0__" data-uid="GrandmaGreen.SaveSystem.IComponentStore.AddComponent``1(GrandmaGreen.SaveSystem.Component{``0})">AddComponent&lt;T&gt;(Component&lt;T&gt;)</h4>
+  <a id="GrandmaGreen_SaveSystem_ComponentStore_1_AddComponent_" data-uid="GrandmaGreen.SaveSystem.ComponentStore`1.AddComponent*"></a>
+  <h4 id="GrandmaGreen_SaveSystem_ComponentStore_1_AddComponent__1_GrandmaGreen_SaveSystem_Component___0__" data-uid="GrandmaGreen.SaveSystem.ComponentStore`1.AddComponent``1(GrandmaGreen.SaveSystem.Component{``0})">AddComponent&lt;T&gt;(Component&lt;T&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">bool AddComponent&lt;T&gt;(Component&lt;T&gt; component)
+    <pre><code class="lang-csharp hljs">public bool AddComponent&lt;T&gt;(Component&lt;T&gt; component)
     where T : struct</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -179,13 +264,13 @@
   </table>
   
   
-  <a id="GrandmaGreen_SaveSystem_IComponentStore_RemoveComponent_" data-uid="GrandmaGreen.SaveSystem.IComponentStore.RemoveComponent*"></a>
-  <h4 id="GrandmaGreen_SaveSystem_IComponentStore_RemoveComponent__1_GrandmaGreen_SaveSystem_Component___0__" data-uid="GrandmaGreen.SaveSystem.IComponentStore.RemoveComponent``1(GrandmaGreen.SaveSystem.Component{``0})">RemoveComponent&lt;T&gt;(Component&lt;T&gt;)</h4>
+  <a id="GrandmaGreen_SaveSystem_ComponentStore_1_RemoveComponent_" data-uid="GrandmaGreen.SaveSystem.ComponentStore`1.RemoveComponent*"></a>
+  <h4 id="GrandmaGreen_SaveSystem_ComponentStore_1_RemoveComponent__1_GrandmaGreen_SaveSystem_Component___0__" data-uid="GrandmaGreen.SaveSystem.ComponentStore`1.RemoveComponent``1(GrandmaGreen.SaveSystem.Component{``0})">RemoveComponent&lt;T&gt;(Component&lt;T&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">bool RemoveComponent&lt;T&gt;(Component&lt;T&gt; component)
+    <pre><code class="lang-csharp hljs">public bool RemoveComponent&lt;T&gt;(Component&lt;T&gt; component)
     where T : struct</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -237,13 +322,13 @@
   </table>
   
   
-  <a id="GrandmaGreen_SaveSystem_IComponentStore_RequestData_" data-uid="GrandmaGreen.SaveSystem.IComponentStore.RequestData*"></a>
-  <h4 id="GrandmaGreen_SaveSystem_IComponentStore_RequestData__1_GrandmaGreen_SaveSystem_Component___0__" data-uid="GrandmaGreen.SaveSystem.IComponentStore.RequestData``1(GrandmaGreen.SaveSystem.Component{``0})">RequestData&lt;T&gt;(Component&lt;T&gt;)</h4>
+  <a id="GrandmaGreen_SaveSystem_ComponentStore_1_RequestData_" data-uid="GrandmaGreen.SaveSystem.ComponentStore`1.RequestData*"></a>
+  <h4 id="GrandmaGreen_SaveSystem_ComponentStore_1_RequestData__1_GrandmaGreen_SaveSystem_Component___0__" data-uid="GrandmaGreen.SaveSystem.ComponentStore`1.RequestData``1(GrandmaGreen.SaveSystem.Component{``0})">RequestData&lt;T&gt;(Component&lt;T&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">bool RequestData&lt;T&gt;(Component&lt;T&gt; component)
+    <pre><code class="lang-csharp hljs">public bool RequestData&lt;T&gt;(Component&lt;T&gt; component)
     where T : struct</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -295,13 +380,13 @@
   </table>
   
   
-  <a id="GrandmaGreen_SaveSystem_IComponentStore_UpdateValue_" data-uid="GrandmaGreen.SaveSystem.IComponentStore.UpdateValue*"></a>
-  <h4 id="GrandmaGreen_SaveSystem_IComponentStore_UpdateValue__1_GrandmaGreen_SaveSystem_Component___0__" data-uid="GrandmaGreen.SaveSystem.IComponentStore.UpdateValue``1(GrandmaGreen.SaveSystem.Component{``0})">UpdateValue&lt;T&gt;(Component&lt;T&gt;)</h4>
+  <a id="GrandmaGreen_SaveSystem_ComponentStore_1_UpdateValue_" data-uid="GrandmaGreen.SaveSystem.ComponentStore`1.UpdateValue*"></a>
+  <h4 id="GrandmaGreen_SaveSystem_ComponentStore_1_UpdateValue__1_GrandmaGreen_SaveSystem_Component___0__" data-uid="GrandmaGreen.SaveSystem.ComponentStore`1.UpdateValue``1(GrandmaGreen.SaveSystem.Component{``0})">UpdateValue&lt;T&gt;(Component&lt;T&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">bool UpdateValue&lt;T&gt;(Component&lt;T&gt; component)
+    <pre><code class="lang-csharp hljs">public bool UpdateValue&lt;T&gt;(Component&lt;T&gt; component)
     where T : struct</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -351,6 +436,10 @@
       </tr>
     </tbody>
   </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="GrandmaGreen.SaveSystem.IComponentStore.html">IComponentStore</a>
+  </div>
 </article>
           </div>
           

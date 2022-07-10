@@ -36,6 +36,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Global.GameSystemDummy.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.GameSystemDummy.html",
+          "hash": "xEjp6uzTGqfh48NgmXlI4sKxtkkM1h5gD7PFnNsybWg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Global.PlantInteractable.yml",
       "output": {
         ".html": {
@@ -64,7 +76,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.html",
-          "hash": "yCz1Ie9x0JFKqqV10rAn7LyKt41clK/J2TvNv6lTV9I="
+          "hash": "ny6qeB87FAu3ZKHivhJMQZjcS/SKbI4l99Boxhk2VFU="
         }
       },
       "is_incremental": false,
@@ -348,11 +360,35 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/GrandmaGreen.SaveSystem.Component-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GrandmaGreen.SaveSystem.Component-1.html",
+          "hash": "OyNv9KaVr9AWExLxWjGUCMuNR00iuy4kZ1gUsjts1B0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GrandmaGreen.SaveSystem.ComponentStore-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GrandmaGreen.SaveSystem.ComponentStore-1.html",
+          "hash": "l407vHEL3Q5UHdkWqKrd/nVK0gd/0X1dj+GI8Mz8DdI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/GrandmaGreen.SaveSystem.IComponentStore.yml",
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.SaveSystem.IComponentStore.html",
-          "hash": "R444Mo4ldHDHYjRSd7Vv7n793kV1ujij+0QBMef/mrU="
+          "hash": "J/AvNatK2/0Ub/DpWoqFEOqrWXspqyGCUEAdsFMBfh4="
         }
       },
       "is_incremental": false,
@@ -364,7 +400,19 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.SaveSystem.IObjectSaver.html",
-          "hash": "1wOOLW4ps1iqvgiDqDZce/B0ZNb9MtkOjkaMZXK98dY="
+          "hash": "re1486QHs68cgc/1OsgxfWJzdxoQ+ED/xnVdBqAktxs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GrandmaGreen.SaveSystem.ObjectSaver.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GrandmaGreen.SaveSystem.ObjectSaver.html",
+          "hash": "Wq6HQVvm3xx2aALpBpZm8aVkOq4sYWD+d/kBzrIS1Us="
         }
       },
       "is_incremental": false,
@@ -400,7 +448,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.SaveSystem.html",
-          "hash": "YwOFJvpkkdfk77yTW+UAqwQl9XV0CHTSWvKIGlQ9orY="
+          "hash": "ChD7jEf3z2JkW/F7qEXAUfTh80u4Uty4i1qjODoMK2U="
         }
       },
       "is_incremental": false,
@@ -472,7 +520,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "io30KL3+HP3cDeNrsFg2FxyaXCfSaA1Omm1eDU60l1E="
+          "hash": "sKpdWQyZl9CJARkN2dyBq2IyLTVY5DgIEIWxCmFyx5A="
         }
       },
       "is_incremental": false,
@@ -581,7 +629,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 37,
+          "total_file_count": 41,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

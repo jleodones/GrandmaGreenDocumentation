@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Interface IComponentStore
+    <title>Class ObjectSaver
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Interface IComponentStore
+    <meta name="title" content="Class ObjectSaver
    ">
     <meta name="generator" content="docfx 2.59.3.0">
     
@@ -77,30 +77,51 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="GrandmaGreen.SaveSystem.IComponentStore">
+            <article class="content wrap" id="_content" data-uid="GrandmaGreen.SaveSystem.ObjectSaver">
   
   
-  <h1 id="GrandmaGreen_SaveSystem_IComponentStore" data-uid="GrandmaGreen.SaveSystem.IComponentStore" class="text-break">Interface IComponentStore
+  <h1 id="GrandmaGreen_SaveSystem_ObjectSaver" data-uid="GrandmaGreen.SaveSystem.ObjectSaver" class="text-break">Class ObjectSaver
   </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><span class="xref">ObjectSaver</span></div>
+  </div>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="GrandmaGreen.SaveSystem.IObjectSaver.html">IObjectSaver</a></div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="GrandmaGreen.SaveSystem.html">GrandmaGreen.SaveSystem</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
-  <h5 id="GrandmaGreen_SaveSystem_IComponentStore_syntax">Syntax</h5>
+  <h5 id="GrandmaGreen_SaveSystem_ObjectSaver_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface IComponentStore</code></pre>
+    <pre><code class="lang-csharp hljs">public class ObjectSaver : SerializedScriptableObject, IObjectSaver</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="GrandmaGreen_SaveSystem_ObjectSaver__ctor_" data-uid="GrandmaGreen.SaveSystem.ObjectSaver.#ctor*"></a>
+  <h4 id="GrandmaGreen_SaveSystem_ObjectSaver__ctor" data-uid="GrandmaGreen.SaveSystem.ObjectSaver.#ctor">ObjectSaver()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ObjectSaver()</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
   
   
-  <a id="GrandmaGreen_SaveSystem_IComponentStore_name_" data-uid="GrandmaGreen.SaveSystem.IComponentStore.name*"></a>
-  <h4 id="GrandmaGreen_SaveSystem_IComponentStore_name" data-uid="GrandmaGreen.SaveSystem.IComponentStore.name">name</h4>
+  <a id="GrandmaGreen_SaveSystem_ObjectSaver_componentStores_" data-uid="GrandmaGreen.SaveSystem.ObjectSaver.componentStores*"></a>
+  <h4 id="GrandmaGreen_SaveSystem_ObjectSaver_componentStores" data-uid="GrandmaGreen.SaveSystem.ObjectSaver.componentStores">componentStores</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">string name { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public List&lt;IComponentStore&gt; componentStores { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -112,7 +133,57 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="GrandmaGreen.SaveSystem.IComponentStore.html">IComponentStore</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="GrandmaGreen_SaveSystem_ObjectSaver_eventMap_" data-uid="GrandmaGreen.SaveSystem.ObjectSaver.eventMap*"></a>
+  <h4 id="GrandmaGreen_SaveSystem_ObjectSaver_eventMap" data-uid="GrandmaGreen.SaveSystem.ObjectSaver.eventMap">eventMap</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Dictionary&lt;Delegate, UnityEvent&gt; eventMap { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<span class="xref">Delegate</span>, <span class="xref">UnityEvent</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="GrandmaGreen_SaveSystem_ObjectSaver_toBeSaved_" data-uid="GrandmaGreen.SaveSystem.ObjectSaver.toBeSaved*"></a>
+  <h4 id="GrandmaGreen_SaveSystem_ObjectSaver_toBeSaved" data-uid="GrandmaGreen.SaveSystem.ObjectSaver.toBeSaved">toBeSaved</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Queue&lt;IComponentStore&gt; toBeSaved { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.queue-1">Queue</a>&lt;<a class="xref" href="GrandmaGreen.SaveSystem.IComponentStore.html">IComponentStore</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -121,14 +192,13 @@
   </h3>
   
   
-  <a id="GrandmaGreen_SaveSystem_IComponentStore_AddComponent_" data-uid="GrandmaGreen.SaveSystem.IComponentStore.AddComponent*"></a>
-  <h4 id="GrandmaGreen_SaveSystem_IComponentStore_AddComponent__1_GrandmaGreen_SaveSystem_Component___0__" data-uid="GrandmaGreen.SaveSystem.IComponentStore.AddComponent``1(GrandmaGreen.SaveSystem.Component{``0})">AddComponent&lt;T&gt;(Component&lt;T&gt;)</h4>
+  <a id="GrandmaGreen_SaveSystem_ObjectSaver_CreateNewStore_" data-uid="GrandmaGreen.SaveSystem.ObjectSaver.CreateNewStore*"></a>
+  <h4 id="GrandmaGreen_SaveSystem_ObjectSaver_CreateNewStore_Type_" data-uid="GrandmaGreen.SaveSystem.ObjectSaver.CreateNewStore(Type)">CreateNewStore(Type)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">bool AddComponent&lt;T&gt;(Component&lt;T&gt; component)
-    where T : struct</code></pre>
+    <pre><code class="lang-csharp hljs">public void CreateNewStore(Type myType)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -141,216 +211,16 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="GrandmaGreen.SaveSystem.Component-1.html">Component</a>&lt;T&gt;</td>
-        <td><span class="parametername">component</span></td>
+        <td><span class="xref">Type</span></td>
+        <td><span class="parametername">myType</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">T</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="GrandmaGreen_SaveSystem_IComponentStore_RemoveComponent_" data-uid="GrandmaGreen.SaveSystem.IComponentStore.RemoveComponent*"></a>
-  <h4 id="GrandmaGreen_SaveSystem_IComponentStore_RemoveComponent__1_GrandmaGreen_SaveSystem_Component___0__" data-uid="GrandmaGreen.SaveSystem.IComponentStore.RemoveComponent``1(GrandmaGreen.SaveSystem.Component{``0})">RemoveComponent&lt;T&gt;(Component&lt;T&gt;)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">bool RemoveComponent&lt;T&gt;(Component&lt;T&gt; component)
-    where T : struct</code></pre>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="GrandmaGreen.SaveSystem.IObjectSaver.html">IObjectSaver</a>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="GrandmaGreen.SaveSystem.Component-1.html">Component</a>&lt;T&gt;</td>
-        <td><span class="parametername">component</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">T</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="GrandmaGreen_SaveSystem_IComponentStore_RequestData_" data-uid="GrandmaGreen.SaveSystem.IComponentStore.RequestData*"></a>
-  <h4 id="GrandmaGreen_SaveSystem_IComponentStore_RequestData__1_GrandmaGreen_SaveSystem_Component___0__" data-uid="GrandmaGreen.SaveSystem.IComponentStore.RequestData``1(GrandmaGreen.SaveSystem.Component{``0})">RequestData&lt;T&gt;(Component&lt;T&gt;)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">bool RequestData&lt;T&gt;(Component&lt;T&gt; component)
-    where T : struct</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="GrandmaGreen.SaveSystem.Component-1.html">Component</a>&lt;T&gt;</td>
-        <td><span class="parametername">component</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">T</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="GrandmaGreen_SaveSystem_IComponentStore_UpdateValue_" data-uid="GrandmaGreen.SaveSystem.IComponentStore.UpdateValue*"></a>
-  <h4 id="GrandmaGreen_SaveSystem_IComponentStore_UpdateValue__1_GrandmaGreen_SaveSystem_Component___0__" data-uid="GrandmaGreen.SaveSystem.IComponentStore.UpdateValue``1(GrandmaGreen.SaveSystem.Component{``0})">UpdateValue&lt;T&gt;(Component&lt;T&gt;)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">bool UpdateValue&lt;T&gt;(Component&lt;T&gt; component)
-    where T : struct</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="GrandmaGreen.SaveSystem.Component-1.html">Component</a>&lt;T&gt;</td>
-        <td><span class="parametername">component</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">T</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
 </article>
           </div>
           

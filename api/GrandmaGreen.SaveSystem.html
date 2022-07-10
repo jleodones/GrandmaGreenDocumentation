@@ -86,26 +86,27 @@
   <div class="markdown level0 remarks"></div>
     <h3 id="classes">Classes
   </h3>
+      <h4><a class="xref" href="GrandmaGreen.SaveSystem.ComponentStore-1.html">ComponentStore&lt;T&gt;</a></h4>
+      <section></section>
+      <h4><a class="xref" href="GrandmaGreen.SaveSystem.ObjectSaver.html">ObjectSaver</a></h4>
+      <section></section>
       <h4><a class="xref" href="GrandmaGreen.SaveSystem.SaveController.html">SaveController</a></h4>
       <section></section>
       <h4><a class="xref" href="GrandmaGreen.SaveSystem.SaveManager.html">SaveManager</a></h4>
       <section></section>
+    <h3 id="structs">Structs
+  </h3>
+      <h4><a class="xref" href="GrandmaGreen.SaveSystem.Component-1.html">Component&lt;T&gt;</a></h4>
+      <section><p>The IComponentStore is a wrapper interface for ComponentStores. The purpose of the ComponentStore is to store data at the start of a scene—when data gets loaded–and when gameplay changes any sort of persistent data.</p>
+<p>Requests for the data stored in the IComponentStore object are handled through IObjectSavers.</p>
+</section>
     <h3 id="interfaces">Interfaces
   </h3>
       <h4><a class="xref" href="GrandmaGreen.SaveSystem.IComponentStore.html">IComponentStore</a></h4>
-      <section><p>The IComponentStore is a wrapper interface for ComponentStores. The purpose of the ComponentStore
-is to store data at the start of a scene—-when data gets loaded--and when gameplay changes any sort
-of persistent data.</p>
-<p>Requests for the data stored in the IComponentStore object are handled through IObjectSavers.</p>
-</section>
+      <section></section>
       <h4><a class="xref" href="GrandmaGreen.SaveSystem.IObjectSaver.html">IObjectSaver</a></h4>
-      <section><p>The IObjectSaver interface is a wrapper for ObjectSaver Scriptable Objects, which holds
-a list of IComponentSavers. IObjectSavers are instantiated and registered by SaveControllers
-upon awakening in a scene.</p>
-<p>Importantly, IObjectSavers handle data requests from game interfaces. Other game interfaces
-request the information, and IObjectSavers retrieve the data from IObjectStores to pass it along.
-Similarly, IObjectSavers take in new data from game interfaces and updates the IObjectStore
-appropriately.</p>
+      <section><p>The IObjectSaver interface is a wrapper for ObjectSaver Scriptable Objects, which holds a list of IComponentSavers. IObjectSavers are instantiated and registered by SaveControllers upon awakening in a scene.</p>
+<p>Importantly, IObjectSavers handle data requests from game interfaces. Other game interfaces request the information, and IObjectSavers retrieve the data from IObjectStores to pass it along. Similarly, IObjectSavers take in new data from game interfaces and updates the IObjectStore appropriately.</p>
 </section>
 </article>
           </div>
