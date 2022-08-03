@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Sirenix.OdinInspector;
+using Sirenix.Serialization;
 using System;
 
 namespace GrandmaGreen.SaveSystem
@@ -12,66 +13,55 @@ namespace GrandmaGreen.SaveSystem
     /// Requests for the data stored in the IComponentStore object are handled through IObjectSavers.
     /// </summary>
 
-    public struct Component<T> : IComparable<Component<T>> where T : struct
-    {
-        private int m_index { get; set; }
-        private T m_struct { get; set; }
-
-        public int CompareTo(Component<T> other)
-        {
-            return m_index.CompareTo(other.m_index);
-        }
-    }
-
     public interface IComponentStore
     {
-        // Human readable name for differentiating component stores.
-        string name { get; set; }
-
-        // Generic overrideable function for adding new pairs to the store.
-        bool AddComponent<T>(Component<T> component) where T : struct;
-
-        // //Generic overrideable function for removing components from the store.
-        bool RemoveComponent<T>(Component<T> component) where T : struct;
-
-        // // Generic overrideable update function.
-        bool UpdateValue<T>(Component<T> component) where T : struct;
-
-        // // Generic overrideable find function.
-        bool RequestData<T>(Component<T> component) where T : struct;
+        // Returns component store type.
+        Type GetType();
     }
 
     public class ComponentStore<T> : IComponentStore where T : struct
     {
-        [ShowInInspector]
-        public string name { get; set; }
+        [OdinSerialize]
+        public List<T> components { get; set; }
 
-        [ShowInInspector]
-        public List<Component<T>> components { get; set; }
+        private Type m_type;
 
         public ComponentStore()
         {
-            components = new List<Component<T>>();
+            components = new List<T>();
         }
 
-        public bool AddComponent<T>(Component<T> component) where T : struct
+        public bool AddComponent(T component)
+        {
+            try
+            {
+                components.Add(component);
+            }
+            catch (Exception e)
+            {
+                return false;
+            }
+            return true;
+        }
+
+        public bool RemoveComponent<T>(T _component) where T : struct
         {
             return true;
         }
 
-        public bool RemoveComponent<T>(Component<T> component) where T : struct
+        public bool UpdateValue<T>(int index, T _component) where T : struct
         {
             return true;
         }
 
-        public bool UpdateValue<T>(Component<T> component) where T : struct
+        public bool RequestData<T>(int index, ref T _component) where T : struct
         {
             return true;
         }
 
-        public bool RequestData<T>(Component<T> component) where T : struct
+        public Type GetType()
         {
-            return true;
+            return typeof(T);
         }
     }
 }

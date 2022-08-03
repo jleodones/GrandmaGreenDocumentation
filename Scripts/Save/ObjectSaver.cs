@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using Sirenix.OdinInspector;
+using Sirenix.Serialization;
 using System;
 
 namespace GrandmaGreen.SaveSystem
@@ -16,51 +17,39 @@ namespace GrandmaGreen.SaveSystem
     public interface IObjectSaver
     {
         // The component store in question.
+        [OdinSerialize]
         List<IComponentStore> componentStores { get; set; }
 
         // Queue of component stores to be passed on during auto save.
-        Queue<IComponentStore> toBeSaved { get; set; }
-
-        // List of events mapped to corresponding methods.
-        Dictionary<Delegate, UnityEvent> eventMap { get; set; }
-
-        // Once a system pings the object saver, it finds it in the map and triggers the event.
-        bool TriggerEvent(ref Delegate myDelegate)
-        {
-            try
-            {
-                eventMap[myDelegate]?.Invoke();
-            }
-            catch (Exception)
-            {
-                return false;
-            }
-
-            return true;
-        }
+        List<IComponentStore> toBeSaved { get; set; }
     }
 
     [CreateAssetMenu(menuName = "Save System/Object Saver", fileName = "ObjectSaver")]
-    public class ObjectSaver : SerializedScriptableObject, IObjectSaver
+    public class ObjectSaver : ScriptableObject, IObjectSaver
     {
-        // The component store in question.
+        // Identifier number for file names.
+        [ReadOnly]
+        [ShowInInspector]
+        public string ID;
+
+        // The component stores in question.
         [ShowInInspector]
         public List<IComponentStore> componentStores { get; set; }
 
-        // Queue of component stores to be passed on during auto save.
+        // List of component stores to be passed on during auto save.
         [ShowInInspector]
-        public Queue<IComponentStore> toBeSaved { get; set; }
+        public List<IComponentStore> toBeSaved { get; set; }
 
-        // List of events mapped to corresponding methods.
+        // Save controller within the game.
         [ShowInInspector]
-        public Dictionary<Delegate, UnityEvent> eventMap { get; set; }
+        public SaveController saveController;
 
         // Constructor initializes member variables upon creation.
-        public ObjectSaver()
+        public void OnEnable()
         {
+            ID = this.ToString().GetHashCode().ToString();
             componentStores = new List<IComponentStore>();
-            toBeSaved = new Queue<IComponentStore>();
-            eventMap = new Dictionary<Delegate, UnityEvent>();
+            toBeSaved = new List<IComponentStore>();
         }
 
         // Create the appropriate stores for each type of object saver ahead of time.
@@ -72,6 +61,26 @@ namespace GrandmaGreen.SaveSystem
             Type concrete = generic.MakeGenericType(myType);
 
             componentStores.Add((IComponentStore)Activator.CreateInstance(concrete));
+        }
+
+        public void AddComponent<T>(T component) where T : struct
+        {
+            // Iterates through component stores to find component store of appropriate type.
+            foreach(IComponentStore componentStore in componentStores)
+            {
+                if(componentStore.GetType() == typeof(T))
+                {
+                    // Once found, it adds the new component.
+                    ((ComponentStore<T>) componentStore).AddComponent(component);
+
+                    // Then it adds it to its own "to be saved" list.
+                    toBeSaved.Add(componentStore);
+
+                    // Finally, it adds itself to the save controller's "to be saved" list.
+                    saveController.toBeSaved.Add(this);
+                    break;
+                }
+            }
         }
     }
 }
