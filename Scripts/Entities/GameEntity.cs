@@ -25,9 +25,7 @@ namespace GrandmaGreen
         [field: Header("Entity Variables")]
         public StateMachine<EntityState> entityStateMachine;// { get; protected set; }
 
-
         [Header("Pathing")]
-        public SplineContainer splineContainer;
         public SplineFollow splineFollow;
         [Range(0, 1)]
         public float smoothFactor = 0.2f;
@@ -35,9 +33,13 @@ namespace GrandmaGreen
         public IPathfinderServicer pathfinderServicer => IPathAgent.Servicer;
         public bool isPathing => throw new System.NotImplementedException();
 
+        Transition idleToMoving;
+        Transition movingToIdle;
+
+
         void Start()
         {
-            StateMachine.LoadStateMachine<EntityState>(out entityStateMachine);
+            InitalizeStateMachine();
             controller.RegisterEntity(this);
 
             entityStateMachine.Enter(EntityState.Idle);
@@ -45,6 +47,18 @@ namespace GrandmaGreen
         void OnDestroy()
         {
 
+        }
+
+        protected virtual void InitalizeStateMachine()
+        {
+            StateMachine.CreateStateMachine<EntityState>(out entityStateMachine);
+
+
+            idleToMoving = entityStateMachine.AddTransition(EntityState.Idle, EntityState.Moving);
+            movingToIdle = entityStateMachine.AddTransition(EntityState.Moving, EntityState.Idle);
+
+
+            splineFollow.onComplete += movingToIdle.Trigger;
         }
 
         protected virtual void OnEnable()
@@ -67,6 +81,14 @@ namespace GrandmaGreen
             entityStateMachine.PhysicsUpdate();
         }
 
+        public float3[] RequestPath(int2 startPos, int2 endPos)
+        {
+            float3[] path = pathfinderServicer.PrimaryService.PathFindAStar(startPos, endPos);
+
+            return path;
+        }
+
+        //TODO: optimize
         public float3[] RequestPath(Vector3 worldPos)
         {
             int2 startPos;
@@ -75,16 +97,10 @@ namespace GrandmaGreen
             startPos.x = (int)math.round((CurrentPos().x - pathfinderServicer.PrimaryService.gridData.worldOrigin.x) / pathfinderServicer.PrimaryService.gridData.cellSize.x);
             startPos.y = (int)math.round((CurrentPos().y - pathfinderServicer.PrimaryService.gridData.worldOrigin.y) / pathfinderServicer.PrimaryService.gridData.cellSize.y);
 
-            endPos.x = (int)math.round((worldPos.x - pathfinderServicer.PrimaryService.gridData.worldOrigin.x) /pathfinderServicer.PrimaryService.gridData.cellSize.x);
+            endPos.x = (int)math.round((worldPos.x - pathfinderServicer.PrimaryService.gridData.worldOrigin.x) / pathfinderServicer.PrimaryService.gridData.cellSize.x);
             endPos.y = (int)math.round((worldPos.y - pathfinderServicer.PrimaryService.gridData.worldOrigin.y) / pathfinderServicer.PrimaryService.gridData.cellSize.y);
-            
-            return RequestPath(startPos,endPos);
-        }
-        public float3[] RequestPath(int2 startPos, int2 endPos)
-        {
-            float3[] path = pathfinderServicer.PrimaryService.PathFindAStar(startPos, endPos);
 
-            return path;
+            return RequestPath(startPos, endPos);
         }
 
         public virtual void FollowPath(float3[] path)
@@ -93,15 +109,19 @@ namespace GrandmaGreen
 
             path[0] = transform.position;
 
-            if (pathfinderServicer.PrimaryService.settings.pathSmoothing)
-                spline = new Spline(SplinePathBuilder.BuildKnotsSmooth(path, smoothFactor), false);
-            else
-                spline = new Spline(SplinePathBuilder.BuildKnots(path), false);
+            spline = pathfinderServicer.PrimaryService.settings.pathSmoothing ?
+                    new Spline(SplinePathBuilder.BuildKnotsSmooth(path, smoothFactor), false) :
+                    new Spline(SplinePathBuilder.BuildKnots(path), false);
 
-            splineContainer.Spline = spline;
             spline.Warmup();
+            splineFollow.Play(spline);
 
-            splineFollow.Play();
+            idleToMoving.Trigger();
+        }
+
+        public virtual void CancelPath()
+        {
+            splineFollow.ForceStop();
         }
 
         public virtual Vector3 CurrentPos()

@@ -41,19 +41,19 @@ namespace GrandmaGreen
             active = false;
         }
 
-        public virtual void MoveTo(Vector3 worldPos)
+        public virtual void PathTo(Vector3 worldPos)
         {
             float3[] path = entity.RequestPath(worldPos);
 
-            if (path.Length > 0)
+            if (path != null)
                 entity.FollowPath(path);
         }
 
-        public virtual void MoveTo(int2 startPos, int2 endPos)
+        public virtual void PathTo(int2 startPos, int2 endPos)
         {
             float3[] path = entity.RequestPath(startPos, endPos);
 
-            if (path.Length > 0)
+            if (path != null)
                 entity.FollowPath(path);
         }
     }

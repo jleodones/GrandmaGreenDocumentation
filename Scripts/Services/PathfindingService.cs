@@ -13,6 +13,8 @@ namespace GrandmaGreen
 
     public interface IPathAgent : IServiceUser<Pathfinder, IPathfinderServicer>
     {
+        float3[] RequestPath(int2 startPos, int2 endPos);
+
         void FollowPath(float3[] path);
 
         bool isPathing { get; }
