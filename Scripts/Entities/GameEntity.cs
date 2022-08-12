@@ -12,8 +12,8 @@ namespace GrandmaGreen
     public enum EntityState
     {
         Idle,
-        Moving,
-        Busy
+        MovingTo,
+        PerformingAction
     }
 
     public class GameEntity : MonoBehaviour, IPathAgent
@@ -54,8 +54,8 @@ namespace GrandmaGreen
             StateMachine.CreateStateMachine<EntityState>(out entityStateMachine);
 
 
-            idleToMoving = entityStateMachine.AddTransition(EntityState.Idle, EntityState.Moving);
-            movingToIdle = entityStateMachine.AddTransition(EntityState.Moving, EntityState.Idle);
+            idleToMoving = entityStateMachine.AddTransition(EntityState.Idle, EntityState.MovingTo);
+            movingToIdle = entityStateMachine.AddTransition(EntityState.MovingTo, EntityState.Idle);
 
 
             splineFollow.onComplete += movingToIdle.Trigger;

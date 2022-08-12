@@ -2,9 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace GrandmaGreen.SaveSystem
+namespace GrandmaGreen
 {
-    public class BSONSaveLoader
+    [CreateAssetMenu()]
+    public class EntityStateData : ScriptableObject
     {
         
     }
