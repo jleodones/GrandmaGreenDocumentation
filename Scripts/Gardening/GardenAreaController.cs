@@ -12,6 +12,7 @@ namespace GrandmaGreen
     public class GardenAreaController : MonoBehaviour
     {
         [Header("Area References")]
+        public GardenAreaServicer areaServicer;
         public GardenData gardenData;
         public Tilemap tilemap;
         public Pathfinder pathfinder;
@@ -24,11 +25,19 @@ namespace GrandmaGreen
         [SerializeField] GameObject[] m_gardenPlants;
 
         public event System.Action<Vector2Int> onGardenSelection;
-        [field: SerializeField] public GameObject currentSelection { get; private set; }
+        [field: SerializeField][field: Core.Utilities.ReadOnly] public GameObject currentSelection { get; private set; }
+
+        void Awake()
+        {
+            areaServicer.StartServices(); //TODO: MOVE THIS INTO GAMESTATECONTROLLER
+            
+            areaServicer.RegisterAreaController(this);
+        }
 
         void Start()
         {
             pathfinder.LoadGrid();
+            InitializeGarden();
         }
 
         [ContextMenu("Intialize")]
@@ -85,7 +94,7 @@ namespace GrandmaGreen
 
             if (currentSelection != null)
             {
-                Debug.Log(m_gardenPlants[index].name + "selected");
+                Debug.Log(currentSelection.name + "selected");
             }
 
             onGardenSelection?.Invoke(gridPos);
