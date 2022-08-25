@@ -3,7 +3,7 @@ name: Update documentation.
 on:
   push:
     branches:
-      - main
+      - 'main'
   workflow_dispatch:
   
   
