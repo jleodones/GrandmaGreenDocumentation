@@ -15,22 +15,35 @@ namespace GrandmaGreen.SaveSystem
 
     public interface IComponentStore
     {
-        // Returns component store type.
+        /// <summary>
+        /// Returns the type of the ComponentStore.
+        /// </summary>
         Type GetType();
     }
 
+    /// <summary>
+    /// The ComponentStore is a data structure written in pure C#. See IComponentStore.
+    /// </summary>
     public class ComponentStore<T> : IComponentStore where T : struct
     {
-        [OdinSerialize]
+        /// <summary>
+        /// The components in question.
+        /// </summary>
         public List<T> components { get; set; }
 
         private Type m_type;
-
+        
+        /// <summary>
+        /// Constructor initializes member variables and does nothing else.
+        /// </summary>
         public ComponentStore()
         {
             components = new List<T>();
         }
-
+        
+        /// <summary>
+        /// Adds a component to its internal storage list. Returns true if successful, false otherwise.
+        /// </summary>
         public bool AddComponent(T component)
         {
             try
@@ -43,22 +56,35 @@ namespace GrandmaGreen.SaveSystem
             }
             return true;
         }
-
+        
+        /// <summary>
+        /// Removes a component from its internal storage list. Returns true if successful, false otherwise.
+        /// </summary>
         public bool RemoveComponent<T>(T _component) where T : struct
         {
             return true;
         }
-
+        
+        /// <summary>
+        /// Updates a given value in its internal storage list based on a provided index. Returns true if successful, false otherwise.
+        /// </summary>
         public bool UpdateValue<T>(int index, T _component) where T : struct
         {
             return true;
         }
 
+        /// <summary>
+        /// Receives data requests from its internal storage list based on a provided index and outputs it through a reference.
+        /// Returns true if successful, false otherwise.
+        /// </summary>
         public bool RequestData<T>(int index, ref T _component) where T : struct
         {
             return true;
         }
-
+        
+        /// <summary>
+        /// Returns the type of components it stores.
+        /// </summary>
         public Type GetType()
         {
             return typeof(T);
