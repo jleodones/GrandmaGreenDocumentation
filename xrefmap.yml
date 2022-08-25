@@ -15,25 +15,6 @@ references:
   commentId: T:Global.FakeInputTesting
   fullName: FakeInputTesting
   nameWithType: FakeInputTesting
-- uid: Global.GameSystemDummy
-  name: GameSystemDummy
-  href: api/Global.GameSystemDummy.html
-  commentId: T:Global.GameSystemDummy
-  fullName: GameSystemDummy
-  nameWithType: GameSystemDummy
-- uid: Global.GameSystemDummy.AddMoney(System.Int32)
-  name: AddMoney(Int32)
-  href: api/Global.GameSystemDummy.html#Global_GameSystemDummy_AddMoney_System_Int32_
-  commentId: M:Global.GameSystemDummy.AddMoney(System.Int32)
-  fullName: GameSystemDummy.AddMoney(System.Int32)
-  nameWithType: GameSystemDummy.AddMoney(Int32)
-- uid: Global.GameSystemDummy.AddMoney*
-  name: AddMoney
-  href: api/Global.GameSystemDummy.html#Global_GameSystemDummy_AddMoney_
-  commentId: Overload:Global.GameSystemDummy.AddMoney
-  isSpec: "True"
-  fullName: GameSystemDummy.AddMoney
-  nameWithType: GameSystemDummy.AddMoney
 - uid: Global.PlantInteractable
   name: PlantInteractable
   href: api/Global.PlantInteractable.html
@@ -77,12 +58,65 @@ references:
   commentId: N:GrandmaGreen
   fullName: GrandmaGreen
   nameWithType: GrandmaGreen
+- uid: GrandmaGreen.ActionPlanner
+  name: ActionPlanner
+  href: api/GrandmaGreen.ActionPlanner.html
+  commentId: T:GrandmaGreen.ActionPlanner
+  fullName: GrandmaGreen.ActionPlanner
+  nameWithType: ActionPlanner
+- uid: GrandmaGreen.ActionPlanner.#ctor(System.Collections.Generic.List{GrandmaGreen.EntityAction})
+  name: ActionPlanner(List<EntityAction>)
+  href: api/GrandmaGreen.ActionPlanner.html#GrandmaGreen_ActionPlanner__ctor_System_Collections_Generic_List_GrandmaGreen_EntityAction__
+  commentId: M:GrandmaGreen.ActionPlanner.#ctor(System.Collections.Generic.List{GrandmaGreen.EntityAction})
+  name.vb: ActionPlanner(List(Of EntityAction))
+  fullName: GrandmaGreen.ActionPlanner.ActionPlanner(System.Collections.Generic.List<GrandmaGreen.EntityAction>)
+  fullName.vb: GrandmaGreen.ActionPlanner.ActionPlanner(System.Collections.Generic.List(Of GrandmaGreen.EntityAction))
+  nameWithType: ActionPlanner.ActionPlanner(List<EntityAction>)
+  nameWithType.vb: ActionPlanner.ActionPlanner(List(Of EntityAction))
+- uid: GrandmaGreen.ActionPlanner.#ctor*
+  name: ActionPlanner
+  href: api/GrandmaGreen.ActionPlanner.html#GrandmaGreen_ActionPlanner__ctor_
+  commentId: Overload:GrandmaGreen.ActionPlanner.#ctor
+  isSpec: "True"
+  fullName: GrandmaGreen.ActionPlanner.ActionPlanner
+  nameWithType: ActionPlanner.ActionPlanner
+- uid: GrandmaGreen.ActionPlanner.ActionList
+  name: ActionList
+  href: api/GrandmaGreen.ActionPlanner.html#GrandmaGreen_ActionPlanner_ActionList
+  commentId: F:GrandmaGreen.ActionPlanner.ActionList
+  fullName: GrandmaGreen.ActionPlanner.ActionList
+  nameWithType: ActionPlanner.ActionList
+- uid: GrandmaGreen.ActionPlanner.actions
+  name: actions
+  href: api/GrandmaGreen.ActionPlanner.html#GrandmaGreen_ActionPlanner_actions
+  commentId: F:GrandmaGreen.ActionPlanner.actions
+  fullName: GrandmaGreen.ActionPlanner.actions
+  nameWithType: ActionPlanner.actions
 - uid: GrandmaGreen.AIController
   name: AIController
   href: api/GrandmaGreen.AIController.html
   commentId: T:GrandmaGreen.AIController
   fullName: GrandmaGreen.AIController
   nameWithType: AIController
+- uid: GrandmaGreen.AIController.ActionList
+  name: ActionList
+  href: api/GrandmaGreen.AIController.html#GrandmaGreen_AIController_ActionList
+  commentId: F:GrandmaGreen.AIController.ActionList
+  fullName: GrandmaGreen.AIController.ActionList
+  nameWithType: AIController.ActionList
+- uid: GrandmaGreen.AIController.StartController
+  name: StartController()
+  href: api/GrandmaGreen.AIController.html#GrandmaGreen_AIController_StartController
+  commentId: M:GrandmaGreen.AIController.StartController
+  fullName: GrandmaGreen.AIController.StartController()
+  nameWithType: AIController.StartController()
+- uid: GrandmaGreen.AIController.StartController*
+  name: StartController
+  href: api/GrandmaGreen.AIController.html#GrandmaGreen_AIController_StartController_
+  commentId: Overload:GrandmaGreen.AIController.StartController
+  isSpec: "True"
+  fullName: GrandmaGreen.AIController.StartController
+  nameWithType: AIController.StartController
 - uid: GrandmaGreen.Allele
   name: Allele
   href: api/GrandmaGreen.Allele.html
@@ -168,12 +202,86 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.BasePhenotypeData.TraitList
   nameWithType: BasePhenotypeData.TraitList
+- uid: GrandmaGreen.Collections
+  name: GrandmaGreen.Collections
+  href: api/GrandmaGreen.Collections.html
+  commentId: N:GrandmaGreen.Collections
+  fullName: GrandmaGreen.Collections
+  nameWithType: GrandmaGreen.Collections
+- uid: GrandmaGreen.Collections.CSVtoSO
+  name: CSVtoSO
+  href: api/GrandmaGreen.Collections.CSVtoSO.html
+  commentId: T:GrandmaGreen.Collections.CSVtoSO
+  fullName: GrandmaGreen.Collections.CSVtoSO
+  nameWithType: CSVtoSO
+- uid: GrandmaGreen.Collections.CSVtoSO.GenerateInventory
+  name: GenerateInventory()
+  href: api/GrandmaGreen.Collections.CSVtoSO.html#GrandmaGreen_Collections_CSVtoSO_GenerateInventory
+  commentId: M:GrandmaGreen.Collections.CSVtoSO.GenerateInventory
+  fullName: GrandmaGreen.Collections.CSVtoSO.GenerateInventory()
+  nameWithType: CSVtoSO.GenerateInventory()
+- uid: GrandmaGreen.Collections.CSVtoSO.GenerateInventory*
+  name: GenerateInventory
+  href: api/GrandmaGreen.Collections.CSVtoSO.html#GrandmaGreen_Collections_CSVtoSO_GenerateInventory_
+  commentId: Overload:GrandmaGreen.Collections.CSVtoSO.GenerateInventory
+  isSpec: "True"
+  fullName: GrandmaGreen.Collections.CSVtoSO.GenerateInventory
+  nameWithType: CSVtoSO.GenerateInventory
+- uid: GrandmaGreen.Collections.Inventory
+  name: Inventory
+  href: api/GrandmaGreen.Collections.Inventory.html
+  commentId: T:GrandmaGreen.Collections.Inventory
+  fullName: GrandmaGreen.Collections.Inventory
+  nameWithType: Inventory
+- uid: GrandmaGreen.Collections.Inventory.items
+  name: items
+  href: api/GrandmaGreen.Collections.Inventory.html#GrandmaGreen_Collections_Inventory_items
+  commentId: F:GrandmaGreen.Collections.Inventory.items
+  fullName: GrandmaGreen.Collections.Inventory.items
+  nameWithType: Inventory.items
 - uid: GrandmaGreen.ColorSet
   name: ColorSet
   href: api/GrandmaGreen.ColorSet.html
   commentId: T:GrandmaGreen.ColorSet
   fullName: GrandmaGreen.ColorSet
   nameWithType: ColorSet
+- uid: GrandmaGreen.EntityAction
+  name: EntityAction
+  href: api/GrandmaGreen.EntityAction.html
+  commentId: T:GrandmaGreen.EntityAction
+  fullName: GrandmaGreen.EntityAction
+  nameWithType: EntityAction
+- uid: GrandmaGreen.EntityAction.cost
+  name: cost
+  href: api/GrandmaGreen.EntityAction.html#GrandmaGreen_EntityAction_cost
+  commentId: F:GrandmaGreen.EntityAction.cost
+  fullName: GrandmaGreen.EntityAction.cost
+  nameWithType: EntityAction.cost
+- uid: GrandmaGreen.EntityAction.effects
+  name: effects
+  href: api/GrandmaGreen.EntityAction.html#GrandmaGreen_EntityAction_effects
+  commentId: F:GrandmaGreen.EntityAction.effects
+  fullName: GrandmaGreen.EntityAction.effects
+  nameWithType: EntityAction.effects
+- uid: GrandmaGreen.EntityAction.PerformAction(GrandmaGreen.EntityController)
+  name: PerformAction(EntityController)
+  href: api/GrandmaGreen.EntityAction.html#GrandmaGreen_EntityAction_PerformAction_GrandmaGreen_EntityController_
+  commentId: M:GrandmaGreen.EntityAction.PerformAction(GrandmaGreen.EntityController)
+  fullName: GrandmaGreen.EntityAction.PerformAction(GrandmaGreen.EntityController)
+  nameWithType: EntityAction.PerformAction(EntityController)
+- uid: GrandmaGreen.EntityAction.PerformAction*
+  name: PerformAction
+  href: api/GrandmaGreen.EntityAction.html#GrandmaGreen_EntityAction_PerformAction_
+  commentId: Overload:GrandmaGreen.EntityAction.PerformAction
+  isSpec: "True"
+  fullName: GrandmaGreen.EntityAction.PerformAction
+  nameWithType: EntityAction.PerformAction
+- uid: GrandmaGreen.EntityAction.preconditions
+  name: preconditions
+  href: api/GrandmaGreen.EntityAction.html#GrandmaGreen_EntityAction_preconditions
+  commentId: F:GrandmaGreen.EntityAction.preconditions
+  fullName: GrandmaGreen.EntityAction.preconditions
+  nameWithType: EntityAction.preconditions
 - uid: GrandmaGreen.EntityController
   name: EntityController
   href: api/GrandmaGreen.EntityController.html
@@ -192,25 +300,25 @@ references:
   commentId: F:GrandmaGreen.EntityController.entity
   fullName: GrandmaGreen.EntityController.entity
   nameWithType: EntityController.entity
-- uid: GrandmaGreen.EntityController.MoveTo(int2,int2)
-  name: MoveTo(int2, int2)
-  href: api/GrandmaGreen.EntityController.html#GrandmaGreen_EntityController_MoveTo_int2_int2_
-  commentId: M:GrandmaGreen.EntityController.MoveTo(int2,int2)
-  fullName: GrandmaGreen.EntityController.MoveTo(int2, int2)
-  nameWithType: EntityController.MoveTo(int2, int2)
-- uid: GrandmaGreen.EntityController.MoveTo(Vector3)
-  name: MoveTo(Vector3)
-  href: api/GrandmaGreen.EntityController.html#GrandmaGreen_EntityController_MoveTo_Vector3_
-  commentId: M:GrandmaGreen.EntityController.MoveTo(Vector3)
-  fullName: GrandmaGreen.EntityController.MoveTo(Vector3)
-  nameWithType: EntityController.MoveTo(Vector3)
-- uid: GrandmaGreen.EntityController.MoveTo*
-  name: MoveTo
-  href: api/GrandmaGreen.EntityController.html#GrandmaGreen_EntityController_MoveTo_
-  commentId: Overload:GrandmaGreen.EntityController.MoveTo
+- uid: GrandmaGreen.EntityController.PathTo(int2,int2)
+  name: PathTo(int2, int2)
+  href: api/GrandmaGreen.EntityController.html#GrandmaGreen_EntityController_PathTo_int2_int2_
+  commentId: M:GrandmaGreen.EntityController.PathTo(int2,int2)
+  fullName: GrandmaGreen.EntityController.PathTo(int2, int2)
+  nameWithType: EntityController.PathTo(int2, int2)
+- uid: GrandmaGreen.EntityController.PathTo(Vector3)
+  name: PathTo(Vector3)
+  href: api/GrandmaGreen.EntityController.html#GrandmaGreen_EntityController_PathTo_Vector3_
+  commentId: M:GrandmaGreen.EntityController.PathTo(Vector3)
+  fullName: GrandmaGreen.EntityController.PathTo(Vector3)
+  nameWithType: EntityController.PathTo(Vector3)
+- uid: GrandmaGreen.EntityController.PathTo*
+  name: PathTo
+  href: api/GrandmaGreen.EntityController.html#GrandmaGreen_EntityController_PathTo_
+  commentId: Overload:GrandmaGreen.EntityController.PathTo
   isSpec: "True"
-  fullName: GrandmaGreen.EntityController.MoveTo
-  nameWithType: EntityController.MoveTo
+  fullName: GrandmaGreen.EntityController.PathTo
+  nameWithType: EntityController.PathTo
 - uid: GrandmaGreen.EntityController.PauseController
   name: PauseController()
   href: api/GrandmaGreen.EntityController.html#GrandmaGreen_EntityController_PauseController
@@ -298,24 +406,30 @@ references:
   commentId: T:GrandmaGreen.EntityState
   fullName: GrandmaGreen.EntityState
   nameWithType: EntityState
-- uid: GrandmaGreen.EntityState.Busy
-  name: Busy
-  href: api/GrandmaGreen.EntityState.html#GrandmaGreen_EntityState_Busy
-  commentId: F:GrandmaGreen.EntityState.Busy
-  fullName: GrandmaGreen.EntityState.Busy
-  nameWithType: EntityState.Busy
 - uid: GrandmaGreen.EntityState.Idle
   name: Idle
   href: api/GrandmaGreen.EntityState.html#GrandmaGreen_EntityState_Idle
   commentId: F:GrandmaGreen.EntityState.Idle
   fullName: GrandmaGreen.EntityState.Idle
   nameWithType: EntityState.Idle
-- uid: GrandmaGreen.EntityState.Moving
-  name: Moving
-  href: api/GrandmaGreen.EntityState.html#GrandmaGreen_EntityState_Moving
-  commentId: F:GrandmaGreen.EntityState.Moving
-  fullName: GrandmaGreen.EntityState.Moving
-  nameWithType: EntityState.Moving
+- uid: GrandmaGreen.EntityState.MovingTo
+  name: MovingTo
+  href: api/GrandmaGreen.EntityState.html#GrandmaGreen_EntityState_MovingTo
+  commentId: F:GrandmaGreen.EntityState.MovingTo
+  fullName: GrandmaGreen.EntityState.MovingTo
+  nameWithType: EntityState.MovingTo
+- uid: GrandmaGreen.EntityState.PerformingAction
+  name: PerformingAction
+  href: api/GrandmaGreen.EntityState.html#GrandmaGreen_EntityState_PerformingAction
+  commentId: F:GrandmaGreen.EntityState.PerformingAction
+  fullName: GrandmaGreen.EntityState.PerformingAction
+  nameWithType: EntityState.PerformingAction
+- uid: GrandmaGreen.EntityStateData
+  name: EntityStateData
+  href: api/GrandmaGreen.EntityStateData.html
+  commentId: T:GrandmaGreen.EntityStateData
+  fullName: GrandmaGreen.EntityStateData
+  nameWithType: EntityStateData
 - uid: GrandmaGreen.FlowerPhenotypeData
   name: FlowerPhenotypeData
   href: api/GrandmaGreen.FlowerPhenotypeData.html
@@ -360,6 +474,19 @@ references:
   commentId: F:GrandmaGreen.GameEntity.animator
   fullName: GrandmaGreen.GameEntity.animator
   nameWithType: GameEntity.animator
+- uid: GrandmaGreen.GameEntity.CancelPath
+  name: CancelPath()
+  href: api/GrandmaGreen.GameEntity.html#GrandmaGreen_GameEntity_CancelPath
+  commentId: M:GrandmaGreen.GameEntity.CancelPath
+  fullName: GrandmaGreen.GameEntity.CancelPath()
+  nameWithType: GameEntity.CancelPath()
+- uid: GrandmaGreen.GameEntity.CancelPath*
+  name: CancelPath
+  href: api/GrandmaGreen.GameEntity.html#GrandmaGreen_GameEntity_CancelPath_
+  commentId: Overload:GrandmaGreen.GameEntity.CancelPath
+  isSpec: "True"
+  fullName: GrandmaGreen.GameEntity.CancelPath
+  nameWithType: GameEntity.CancelPath
 - uid: GrandmaGreen.GameEntity.controller
   name: controller
   href: api/GrandmaGreen.GameEntity.html#GrandmaGreen_GameEntity_controller
@@ -414,6 +541,19 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.GameEntity.FollowPath
   nameWithType: GameEntity.FollowPath
+- uid: GrandmaGreen.GameEntity.InitalizeStateMachine
+  name: InitalizeStateMachine()
+  href: api/GrandmaGreen.GameEntity.html#GrandmaGreen_GameEntity_InitalizeStateMachine
+  commentId: M:GrandmaGreen.GameEntity.InitalizeStateMachine
+  fullName: GrandmaGreen.GameEntity.InitalizeStateMachine()
+  nameWithType: GameEntity.InitalizeStateMachine()
+- uid: GrandmaGreen.GameEntity.InitalizeStateMachine*
+  name: InitalizeStateMachine
+  href: api/GrandmaGreen.GameEntity.html#GrandmaGreen_GameEntity_InitalizeStateMachine_
+  commentId: Overload:GrandmaGreen.GameEntity.InitalizeStateMachine
+  isSpec: "True"
+  fullName: GrandmaGreen.GameEntity.InitalizeStateMachine
+  nameWithType: GameEntity.InitalizeStateMachine
 - uid: GrandmaGreen.GameEntity.isPathing
   name: isPathing
   href: api/GrandmaGreen.GameEntity.html#GrandmaGreen_GameEntity_isPathing
@@ -491,12 +631,6 @@ references:
   commentId: F:GrandmaGreen.GameEntity.smoothFactor
   fullName: GrandmaGreen.GameEntity.smoothFactor
   nameWithType: GameEntity.smoothFactor
-- uid: GrandmaGreen.GameEntity.splineContainer
-  name: splineContainer
-  href: api/GrandmaGreen.GameEntity.html#GrandmaGreen_GameEntity_splineContainer
-  commentId: F:GrandmaGreen.GameEntity.splineContainer
-  fullName: GrandmaGreen.GameEntity.splineContainer
-  nameWithType: GameEntity.splineContainer
 - uid: GrandmaGreen.GameEntity.splineFollow
   name: splineFollow
   href: api/GrandmaGreen.GameEntity.html#GrandmaGreen_GameEntity_splineFollow
@@ -516,6 +650,38 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.GameEntity.Update
   nameWithType: GameEntity.Update
+- uid: GrandmaGreen.GameSystemDummy
+  name: GameSystemDummy
+  href: api/GrandmaGreen.GameSystemDummy.html
+  commentId: T:GrandmaGreen.GameSystemDummy
+  fullName: GrandmaGreen.GameSystemDummy
+  nameWithType: GameSystemDummy
+- uid: GrandmaGreen.GameSystemDummy.AddTrait
+  name: AddTrait()
+  href: api/GrandmaGreen.GameSystemDummy.html#GrandmaGreen_GameSystemDummy_AddTrait
+  commentId: M:GrandmaGreen.GameSystemDummy.AddTrait
+  fullName: GrandmaGreen.GameSystemDummy.AddTrait()
+  nameWithType: GameSystemDummy.AddTrait()
+- uid: GrandmaGreen.GameSystemDummy.AddTrait*
+  name: AddTrait
+  href: api/GrandmaGreen.GameSystemDummy.html#GrandmaGreen_GameSystemDummy_AddTrait_
+  commentId: Overload:GrandmaGreen.GameSystemDummy.AddTrait
+  isSpec: "True"
+  fullName: GrandmaGreen.GameSystemDummy.AddTrait
+  nameWithType: GameSystemDummy.AddTrait
+- uid: GrandmaGreen.GameSystemDummy.SampleTest
+  name: SampleTest()
+  href: api/GrandmaGreen.GameSystemDummy.html#GrandmaGreen_GameSystemDummy_SampleTest
+  commentId: M:GrandmaGreen.GameSystemDummy.SampleTest
+  fullName: GrandmaGreen.GameSystemDummy.SampleTest()
+  nameWithType: GameSystemDummy.SampleTest()
+- uid: GrandmaGreen.GameSystemDummy.SampleTest*
+  name: SampleTest
+  href: api/GrandmaGreen.GameSystemDummy.html#GrandmaGreen_GameSystemDummy_SampleTest_
+  commentId: Overload:GrandmaGreen.GameSystemDummy.SampleTest
+  isSpec: "True"
+  fullName: GrandmaGreen.GameSystemDummy.SampleTest
+  nameWithType: GameSystemDummy.SampleTest
 - uid: GrandmaGreen.GardenAreaController
   name: GardenAreaController
   href: api/GrandmaGreen.GardenAreaController.html
@@ -951,6 +1117,19 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.IPathAgent.isPathing
   nameWithType: IPathAgent.isPathing
+- uid: GrandmaGreen.IPathAgent.RequestPath(int2,int2)
+  name: RequestPath(int2, int2)
+  href: api/GrandmaGreen.IPathAgent.html#GrandmaGreen_IPathAgent_RequestPath_int2_int2_
+  commentId: M:GrandmaGreen.IPathAgent.RequestPath(int2,int2)
+  fullName: GrandmaGreen.IPathAgent.RequestPath(int2, int2)
+  nameWithType: IPathAgent.RequestPath(int2, int2)
+- uid: GrandmaGreen.IPathAgent.RequestPath*
+  name: RequestPath
+  href: api/GrandmaGreen.IPathAgent.html#GrandmaGreen_IPathAgent_RequestPath_
+  commentId: Overload:GrandmaGreen.IPathAgent.RequestPath
+  isSpec: "True"
+  fullName: GrandmaGreen.IPathAgent.RequestPath
+  nameWithType: IPathAgent.RequestPath
 - uid: GrandmaGreen.IPathfinderServicer
   name: IPathfinderServicer
   href: api/GrandmaGreen.IPathfinderServicer.html
@@ -1264,33 +1443,12 @@ references:
   commentId: N:GrandmaGreen.SaveSystem
   fullName: GrandmaGreen.SaveSystem
   nameWithType: GrandmaGreen.SaveSystem
-- uid: GrandmaGreen.SaveSystem.Component`1
-  name: Component<T>
-  href: api/GrandmaGreen.SaveSystem.Component-1.html
-  commentId: T:GrandmaGreen.SaveSystem.Component`1
-  name.vb: Component(Of T)
-  fullName: GrandmaGreen.SaveSystem.Component<T>
-  fullName.vb: GrandmaGreen.SaveSystem.Component(Of T)
-  nameWithType: Component<T>
-  nameWithType.vb: Component(Of T)
-- uid: GrandmaGreen.SaveSystem.Component`1.CompareTo(GrandmaGreen.SaveSystem.Component{`0})
-  name: CompareTo(Component<T>)
-  href: api/GrandmaGreen.SaveSystem.Component-1.html#GrandmaGreen_SaveSystem_Component_1_CompareTo_GrandmaGreen_SaveSystem_Component__0__
-  commentId: M:GrandmaGreen.SaveSystem.Component`1.CompareTo(GrandmaGreen.SaveSystem.Component{`0})
-  name.vb: CompareTo(Component(Of T))
-  fullName: GrandmaGreen.SaveSystem.Component<T>.CompareTo(GrandmaGreen.SaveSystem.Component<T>)
-  fullName.vb: GrandmaGreen.SaveSystem.Component(Of T).CompareTo(GrandmaGreen.SaveSystem.Component(Of T))
-  nameWithType: Component<T>.CompareTo(Component<T>)
-  nameWithType.vb: Component(Of T).CompareTo(Component(Of T))
-- uid: GrandmaGreen.SaveSystem.Component`1.CompareTo*
-  name: CompareTo
-  href: api/GrandmaGreen.SaveSystem.Component-1.html#GrandmaGreen_SaveSystem_Component_1_CompareTo_
-  commentId: Overload:GrandmaGreen.SaveSystem.Component`1.CompareTo
-  isSpec: "True"
-  fullName: GrandmaGreen.SaveSystem.Component<T>.CompareTo
-  fullName.vb: GrandmaGreen.SaveSystem.Component(Of T).CompareTo
-  nameWithType: Component<T>.CompareTo
-  nameWithType.vb: Component(Of T).CompareTo
+- uid: GrandmaGreen.SaveSystem.BSONSaveLoader
+  name: BSONSaveLoader
+  href: api/GrandmaGreen.SaveSystem.BSONSaveLoader.html
+  commentId: T:GrandmaGreen.SaveSystem.BSONSaveLoader
+  fullName: GrandmaGreen.SaveSystem.BSONSaveLoader
+  nameWithType: BSONSaveLoader
 - uid: GrandmaGreen.SaveSystem.ComponentStore`1
   name: ComponentStore<T>
   href: api/GrandmaGreen.SaveSystem.ComponentStore-1.html
@@ -1317,6 +1475,14 @@ references:
   fullName.vb: GrandmaGreen.SaveSystem.ComponentStore(Of T).ComponentStore
   nameWithType: ComponentStore<T>.ComponentStore
   nameWithType.vb: ComponentStore(Of T).ComponentStore
+- uid: GrandmaGreen.SaveSystem.ComponentStore`1.AddComponent(`0)
+  name: AddComponent(T)
+  href: api/GrandmaGreen.SaveSystem.ComponentStore-1.html#GrandmaGreen_SaveSystem_ComponentStore_1_AddComponent__0_
+  commentId: M:GrandmaGreen.SaveSystem.ComponentStore`1.AddComponent(`0)
+  fullName: GrandmaGreen.SaveSystem.ComponentStore<T>.AddComponent(T)
+  fullName.vb: GrandmaGreen.SaveSystem.ComponentStore(Of T).AddComponent(T)
+  nameWithType: ComponentStore<T>.AddComponent(T)
+  nameWithType.vb: ComponentStore(Of T).AddComponent(T)
 - uid: GrandmaGreen.SaveSystem.ComponentStore`1.AddComponent*
   name: AddComponent
   href: api/GrandmaGreen.SaveSystem.ComponentStore-1.html#GrandmaGreen_SaveSystem_ComponentStore_1_AddComponent_
@@ -1326,15 +1492,6 @@ references:
   fullName.vb: GrandmaGreen.SaveSystem.ComponentStore(Of T).AddComponent
   nameWithType: ComponentStore<T>.AddComponent
   nameWithType.vb: ComponentStore(Of T).AddComponent
-- uid: GrandmaGreen.SaveSystem.ComponentStore`1.AddComponent``1(GrandmaGreen.SaveSystem.Component{``0})
-  name: AddComponent<T>(Component<T>)
-  href: api/GrandmaGreen.SaveSystem.ComponentStore-1.html#GrandmaGreen_SaveSystem_ComponentStore_1_AddComponent__1_GrandmaGreen_SaveSystem_Component___0__
-  commentId: M:GrandmaGreen.SaveSystem.ComponentStore`1.AddComponent``1(GrandmaGreen.SaveSystem.Component{``0})
-  name.vb: AddComponent(Of T)(Component(Of T))
-  fullName: GrandmaGreen.SaveSystem.ComponentStore<T>.AddComponent<T>(GrandmaGreen.SaveSystem.Component<T>)
-  fullName.vb: GrandmaGreen.SaveSystem.ComponentStore(Of T).AddComponent(Of T)(GrandmaGreen.SaveSystem.Component(Of T))
-  nameWithType: ComponentStore<T>.AddComponent<T>(Component<T>)
-  nameWithType.vb: ComponentStore(Of T).AddComponent(Of T)(Component(Of T))
 - uid: GrandmaGreen.SaveSystem.ComponentStore`1.components
   name: components
   href: api/GrandmaGreen.SaveSystem.ComponentStore-1.html#GrandmaGreen_SaveSystem_ComponentStore_1_components
@@ -1352,23 +1509,23 @@ references:
   fullName.vb: GrandmaGreen.SaveSystem.ComponentStore(Of T).components
   nameWithType: ComponentStore<T>.components
   nameWithType.vb: ComponentStore(Of T).components
-- uid: GrandmaGreen.SaveSystem.ComponentStore`1.name
-  name: name
-  href: api/GrandmaGreen.SaveSystem.ComponentStore-1.html#GrandmaGreen_SaveSystem_ComponentStore_1_name
-  commentId: P:GrandmaGreen.SaveSystem.ComponentStore`1.name
-  fullName: GrandmaGreen.SaveSystem.ComponentStore<T>.name
-  fullName.vb: GrandmaGreen.SaveSystem.ComponentStore(Of T).name
-  nameWithType: ComponentStore<T>.name
-  nameWithType.vb: ComponentStore(Of T).name
-- uid: GrandmaGreen.SaveSystem.ComponentStore`1.name*
-  name: name
-  href: api/GrandmaGreen.SaveSystem.ComponentStore-1.html#GrandmaGreen_SaveSystem_ComponentStore_1_name_
-  commentId: Overload:GrandmaGreen.SaveSystem.ComponentStore`1.name
+- uid: GrandmaGreen.SaveSystem.ComponentStore`1.GetType
+  name: GetType()
+  href: api/GrandmaGreen.SaveSystem.ComponentStore-1.html#GrandmaGreen_SaveSystem_ComponentStore_1_GetType
+  commentId: M:GrandmaGreen.SaveSystem.ComponentStore`1.GetType
+  fullName: GrandmaGreen.SaveSystem.ComponentStore<T>.GetType()
+  fullName.vb: GrandmaGreen.SaveSystem.ComponentStore(Of T).GetType()
+  nameWithType: ComponentStore<T>.GetType()
+  nameWithType.vb: ComponentStore(Of T).GetType()
+- uid: GrandmaGreen.SaveSystem.ComponentStore`1.GetType*
+  name: GetType
+  href: api/GrandmaGreen.SaveSystem.ComponentStore-1.html#GrandmaGreen_SaveSystem_ComponentStore_1_GetType_
+  commentId: Overload:GrandmaGreen.SaveSystem.ComponentStore`1.GetType
   isSpec: "True"
-  fullName: GrandmaGreen.SaveSystem.ComponentStore<T>.name
-  fullName.vb: GrandmaGreen.SaveSystem.ComponentStore(Of T).name
-  nameWithType: ComponentStore<T>.name
-  nameWithType.vb: ComponentStore(Of T).name
+  fullName: GrandmaGreen.SaveSystem.ComponentStore<T>.GetType
+  fullName.vb: GrandmaGreen.SaveSystem.ComponentStore(Of T).GetType
+  nameWithType: ComponentStore<T>.GetType
+  nameWithType.vb: ComponentStore(Of T).GetType
 - uid: GrandmaGreen.SaveSystem.ComponentStore`1.RemoveComponent*
   name: RemoveComponent
   href: api/GrandmaGreen.SaveSystem.ComponentStore-1.html#GrandmaGreen_SaveSystem_ComponentStore_1_RemoveComponent_
@@ -1378,15 +1535,15 @@ references:
   fullName.vb: GrandmaGreen.SaveSystem.ComponentStore(Of T).RemoveComponent
   nameWithType: ComponentStore<T>.RemoveComponent
   nameWithType.vb: ComponentStore(Of T).RemoveComponent
-- uid: GrandmaGreen.SaveSystem.ComponentStore`1.RemoveComponent``1(GrandmaGreen.SaveSystem.Component{``0})
-  name: RemoveComponent<T>(Component<T>)
-  href: api/GrandmaGreen.SaveSystem.ComponentStore-1.html#GrandmaGreen_SaveSystem_ComponentStore_1_RemoveComponent__1_GrandmaGreen_SaveSystem_Component___0__
-  commentId: M:GrandmaGreen.SaveSystem.ComponentStore`1.RemoveComponent``1(GrandmaGreen.SaveSystem.Component{``0})
-  name.vb: RemoveComponent(Of T)(Component(Of T))
-  fullName: GrandmaGreen.SaveSystem.ComponentStore<T>.RemoveComponent<T>(GrandmaGreen.SaveSystem.Component<T>)
-  fullName.vb: GrandmaGreen.SaveSystem.ComponentStore(Of T).RemoveComponent(Of T)(GrandmaGreen.SaveSystem.Component(Of T))
-  nameWithType: ComponentStore<T>.RemoveComponent<T>(Component<T>)
-  nameWithType.vb: ComponentStore(Of T).RemoveComponent(Of T)(Component(Of T))
+- uid: GrandmaGreen.SaveSystem.ComponentStore`1.RemoveComponent``1(``0)
+  name: RemoveComponent<T>(T)
+  href: api/GrandmaGreen.SaveSystem.ComponentStore-1.html#GrandmaGreen_SaveSystem_ComponentStore_1_RemoveComponent__1___0_
+  commentId: M:GrandmaGreen.SaveSystem.ComponentStore`1.RemoveComponent``1(``0)
+  name.vb: RemoveComponent(Of T)(T)
+  fullName: GrandmaGreen.SaveSystem.ComponentStore<T>.RemoveComponent<T>(T)
+  fullName.vb: GrandmaGreen.SaveSystem.ComponentStore(Of T).RemoveComponent(Of T)(T)
+  nameWithType: ComponentStore<T>.RemoveComponent<T>(T)
+  nameWithType.vb: ComponentStore(Of T).RemoveComponent(Of T)(T)
 - uid: GrandmaGreen.SaveSystem.ComponentStore`1.RequestData*
   name: RequestData
   href: api/GrandmaGreen.SaveSystem.ComponentStore-1.html#GrandmaGreen_SaveSystem_ComponentStore_1_RequestData_
@@ -1396,15 +1553,15 @@ references:
   fullName.vb: GrandmaGreen.SaveSystem.ComponentStore(Of T).RequestData
   nameWithType: ComponentStore<T>.RequestData
   nameWithType.vb: ComponentStore(Of T).RequestData
-- uid: GrandmaGreen.SaveSystem.ComponentStore`1.RequestData``1(GrandmaGreen.SaveSystem.Component{``0})
-  name: RequestData<T>(Component<T>)
-  href: api/GrandmaGreen.SaveSystem.ComponentStore-1.html#GrandmaGreen_SaveSystem_ComponentStore_1_RequestData__1_GrandmaGreen_SaveSystem_Component___0__
-  commentId: M:GrandmaGreen.SaveSystem.ComponentStore`1.RequestData``1(GrandmaGreen.SaveSystem.Component{``0})
-  name.vb: RequestData(Of T)(Component(Of T))
-  fullName: GrandmaGreen.SaveSystem.ComponentStore<T>.RequestData<T>(GrandmaGreen.SaveSystem.Component<T>)
-  fullName.vb: GrandmaGreen.SaveSystem.ComponentStore(Of T).RequestData(Of T)(GrandmaGreen.SaveSystem.Component(Of T))
-  nameWithType: ComponentStore<T>.RequestData<T>(Component<T>)
-  nameWithType.vb: ComponentStore(Of T).RequestData(Of T)(Component(Of T))
+- uid: GrandmaGreen.SaveSystem.ComponentStore`1.RequestData``1(System.Int32,``0@)
+  name: RequestData<T>(Int32, ref T)
+  href: api/GrandmaGreen.SaveSystem.ComponentStore-1.html#GrandmaGreen_SaveSystem_ComponentStore_1_RequestData__1_System_Int32___0__
+  commentId: M:GrandmaGreen.SaveSystem.ComponentStore`1.RequestData``1(System.Int32,``0@)
+  name.vb: RequestData(Of T)(Int32, ByRef T)
+  fullName: GrandmaGreen.SaveSystem.ComponentStore<T>.RequestData<T>(System.Int32, ref T)
+  fullName.vb: GrandmaGreen.SaveSystem.ComponentStore(Of T).RequestData(Of T)(System.Int32, ByRef T)
+  nameWithType: ComponentStore<T>.RequestData<T>(Int32, ref T)
+  nameWithType.vb: ComponentStore(Of T).RequestData(Of T)(Int32, ByRef T)
 - uid: GrandmaGreen.SaveSystem.ComponentStore`1.UpdateValue*
   name: UpdateValue
   href: api/GrandmaGreen.SaveSystem.ComponentStore-1.html#GrandmaGreen_SaveSystem_ComponentStore_1_UpdateValue_
@@ -1414,98 +1571,34 @@ references:
   fullName.vb: GrandmaGreen.SaveSystem.ComponentStore(Of T).UpdateValue
   nameWithType: ComponentStore<T>.UpdateValue
   nameWithType.vb: ComponentStore(Of T).UpdateValue
-- uid: GrandmaGreen.SaveSystem.ComponentStore`1.UpdateValue``1(GrandmaGreen.SaveSystem.Component{``0})
-  name: UpdateValue<T>(Component<T>)
-  href: api/GrandmaGreen.SaveSystem.ComponentStore-1.html#GrandmaGreen_SaveSystem_ComponentStore_1_UpdateValue__1_GrandmaGreen_SaveSystem_Component___0__
-  commentId: M:GrandmaGreen.SaveSystem.ComponentStore`1.UpdateValue``1(GrandmaGreen.SaveSystem.Component{``0})
-  name.vb: UpdateValue(Of T)(Component(Of T))
-  fullName: GrandmaGreen.SaveSystem.ComponentStore<T>.UpdateValue<T>(GrandmaGreen.SaveSystem.Component<T>)
-  fullName.vb: GrandmaGreen.SaveSystem.ComponentStore(Of T).UpdateValue(Of T)(GrandmaGreen.SaveSystem.Component(Of T))
-  nameWithType: ComponentStore<T>.UpdateValue<T>(Component<T>)
-  nameWithType.vb: ComponentStore(Of T).UpdateValue(Of T)(Component(Of T))
+- uid: GrandmaGreen.SaveSystem.ComponentStore`1.UpdateValue``1(System.Int32,``0)
+  name: UpdateValue<T>(Int32, T)
+  href: api/GrandmaGreen.SaveSystem.ComponentStore-1.html#GrandmaGreen_SaveSystem_ComponentStore_1_UpdateValue__1_System_Int32___0_
+  commentId: M:GrandmaGreen.SaveSystem.ComponentStore`1.UpdateValue``1(System.Int32,``0)
+  name.vb: UpdateValue(Of T)(Int32, T)
+  fullName: GrandmaGreen.SaveSystem.ComponentStore<T>.UpdateValue<T>(System.Int32, T)
+  fullName.vb: GrandmaGreen.SaveSystem.ComponentStore(Of T).UpdateValue(Of T)(System.Int32, T)
+  nameWithType: ComponentStore<T>.UpdateValue<T>(Int32, T)
+  nameWithType.vb: ComponentStore(Of T).UpdateValue(Of T)(Int32, T)
 - uid: GrandmaGreen.SaveSystem.IComponentStore
   name: IComponentStore
   href: api/GrandmaGreen.SaveSystem.IComponentStore.html
   commentId: T:GrandmaGreen.SaveSystem.IComponentStore
   fullName: GrandmaGreen.SaveSystem.IComponentStore
   nameWithType: IComponentStore
-- uid: GrandmaGreen.SaveSystem.IComponentStore.AddComponent*
-  name: AddComponent
-  href: api/GrandmaGreen.SaveSystem.IComponentStore.html#GrandmaGreen_SaveSystem_IComponentStore_AddComponent_
-  commentId: Overload:GrandmaGreen.SaveSystem.IComponentStore.AddComponent
+- uid: GrandmaGreen.SaveSystem.IComponentStore.GetType
+  name: GetType()
+  href: api/GrandmaGreen.SaveSystem.IComponentStore.html#GrandmaGreen_SaveSystem_IComponentStore_GetType
+  commentId: M:GrandmaGreen.SaveSystem.IComponentStore.GetType
+  fullName: GrandmaGreen.SaveSystem.IComponentStore.GetType()
+  nameWithType: IComponentStore.GetType()
+- uid: GrandmaGreen.SaveSystem.IComponentStore.GetType*
+  name: GetType
+  href: api/GrandmaGreen.SaveSystem.IComponentStore.html#GrandmaGreen_SaveSystem_IComponentStore_GetType_
+  commentId: Overload:GrandmaGreen.SaveSystem.IComponentStore.GetType
   isSpec: "True"
-  fullName: GrandmaGreen.SaveSystem.IComponentStore.AddComponent
-  nameWithType: IComponentStore.AddComponent
-- uid: GrandmaGreen.SaveSystem.IComponentStore.AddComponent``1(GrandmaGreen.SaveSystem.Component{``0})
-  name: AddComponent<T>(Component<T>)
-  href: api/GrandmaGreen.SaveSystem.IComponentStore.html#GrandmaGreen_SaveSystem_IComponentStore_AddComponent__1_GrandmaGreen_SaveSystem_Component___0__
-  commentId: M:GrandmaGreen.SaveSystem.IComponentStore.AddComponent``1(GrandmaGreen.SaveSystem.Component{``0})
-  name.vb: AddComponent(Of T)(Component(Of T))
-  fullName: GrandmaGreen.SaveSystem.IComponentStore.AddComponent<T>(GrandmaGreen.SaveSystem.Component<T>)
-  fullName.vb: GrandmaGreen.SaveSystem.IComponentStore.AddComponent(Of T)(GrandmaGreen.SaveSystem.Component(Of T))
-  nameWithType: IComponentStore.AddComponent<T>(Component<T>)
-  nameWithType.vb: IComponentStore.AddComponent(Of T)(Component(Of T))
-- uid: GrandmaGreen.SaveSystem.IComponentStore.name
-  name: name
-  href: api/GrandmaGreen.SaveSystem.IComponentStore.html#GrandmaGreen_SaveSystem_IComponentStore_name
-  commentId: P:GrandmaGreen.SaveSystem.IComponentStore.name
-  fullName: GrandmaGreen.SaveSystem.IComponentStore.name
-  nameWithType: IComponentStore.name
-- uid: GrandmaGreen.SaveSystem.IComponentStore.name*
-  name: name
-  href: api/GrandmaGreen.SaveSystem.IComponentStore.html#GrandmaGreen_SaveSystem_IComponentStore_name_
-  commentId: Overload:GrandmaGreen.SaveSystem.IComponentStore.name
-  isSpec: "True"
-  fullName: GrandmaGreen.SaveSystem.IComponentStore.name
-  nameWithType: IComponentStore.name
-- uid: GrandmaGreen.SaveSystem.IComponentStore.RemoveComponent*
-  name: RemoveComponent
-  href: api/GrandmaGreen.SaveSystem.IComponentStore.html#GrandmaGreen_SaveSystem_IComponentStore_RemoveComponent_
-  commentId: Overload:GrandmaGreen.SaveSystem.IComponentStore.RemoveComponent
-  isSpec: "True"
-  fullName: GrandmaGreen.SaveSystem.IComponentStore.RemoveComponent
-  nameWithType: IComponentStore.RemoveComponent
-- uid: GrandmaGreen.SaveSystem.IComponentStore.RemoveComponent``1(GrandmaGreen.SaveSystem.Component{``0})
-  name: RemoveComponent<T>(Component<T>)
-  href: api/GrandmaGreen.SaveSystem.IComponentStore.html#GrandmaGreen_SaveSystem_IComponentStore_RemoveComponent__1_GrandmaGreen_SaveSystem_Component___0__
-  commentId: M:GrandmaGreen.SaveSystem.IComponentStore.RemoveComponent``1(GrandmaGreen.SaveSystem.Component{``0})
-  name.vb: RemoveComponent(Of T)(Component(Of T))
-  fullName: GrandmaGreen.SaveSystem.IComponentStore.RemoveComponent<T>(GrandmaGreen.SaveSystem.Component<T>)
-  fullName.vb: GrandmaGreen.SaveSystem.IComponentStore.RemoveComponent(Of T)(GrandmaGreen.SaveSystem.Component(Of T))
-  nameWithType: IComponentStore.RemoveComponent<T>(Component<T>)
-  nameWithType.vb: IComponentStore.RemoveComponent(Of T)(Component(Of T))
-- uid: GrandmaGreen.SaveSystem.IComponentStore.RequestData*
-  name: RequestData
-  href: api/GrandmaGreen.SaveSystem.IComponentStore.html#GrandmaGreen_SaveSystem_IComponentStore_RequestData_
-  commentId: Overload:GrandmaGreen.SaveSystem.IComponentStore.RequestData
-  isSpec: "True"
-  fullName: GrandmaGreen.SaveSystem.IComponentStore.RequestData
-  nameWithType: IComponentStore.RequestData
-- uid: GrandmaGreen.SaveSystem.IComponentStore.RequestData``1(GrandmaGreen.SaveSystem.Component{``0})
-  name: RequestData<T>(Component<T>)
-  href: api/GrandmaGreen.SaveSystem.IComponentStore.html#GrandmaGreen_SaveSystem_IComponentStore_RequestData__1_GrandmaGreen_SaveSystem_Component___0__
-  commentId: M:GrandmaGreen.SaveSystem.IComponentStore.RequestData``1(GrandmaGreen.SaveSystem.Component{``0})
-  name.vb: RequestData(Of T)(Component(Of T))
-  fullName: GrandmaGreen.SaveSystem.IComponentStore.RequestData<T>(GrandmaGreen.SaveSystem.Component<T>)
-  fullName.vb: GrandmaGreen.SaveSystem.IComponentStore.RequestData(Of T)(GrandmaGreen.SaveSystem.Component(Of T))
-  nameWithType: IComponentStore.RequestData<T>(Component<T>)
-  nameWithType.vb: IComponentStore.RequestData(Of T)(Component(Of T))
-- uid: GrandmaGreen.SaveSystem.IComponentStore.UpdateValue*
-  name: UpdateValue
-  href: api/GrandmaGreen.SaveSystem.IComponentStore.html#GrandmaGreen_SaveSystem_IComponentStore_UpdateValue_
-  commentId: Overload:GrandmaGreen.SaveSystem.IComponentStore.UpdateValue
-  isSpec: "True"
-  fullName: GrandmaGreen.SaveSystem.IComponentStore.UpdateValue
-  nameWithType: IComponentStore.UpdateValue
-- uid: GrandmaGreen.SaveSystem.IComponentStore.UpdateValue``1(GrandmaGreen.SaveSystem.Component{``0})
-  name: UpdateValue<T>(Component<T>)
-  href: api/GrandmaGreen.SaveSystem.IComponentStore.html#GrandmaGreen_SaveSystem_IComponentStore_UpdateValue__1_GrandmaGreen_SaveSystem_Component___0__
-  commentId: M:GrandmaGreen.SaveSystem.IComponentStore.UpdateValue``1(GrandmaGreen.SaveSystem.Component{``0})
-  name.vb: UpdateValue(Of T)(Component(Of T))
-  fullName: GrandmaGreen.SaveSystem.IComponentStore.UpdateValue<T>(GrandmaGreen.SaveSystem.Component<T>)
-  fullName.vb: GrandmaGreen.SaveSystem.IComponentStore.UpdateValue(Of T)(GrandmaGreen.SaveSystem.Component(Of T))
-  nameWithType: IComponentStore.UpdateValue<T>(Component<T>)
-  nameWithType.vb: IComponentStore.UpdateValue(Of T)(Component(Of T))
+  fullName: GrandmaGreen.SaveSystem.IComponentStore.GetType
+  nameWithType: IComponentStore.GetType
 - uid: GrandmaGreen.SaveSystem.IObjectSaver
   name: IObjectSaver
   href: api/GrandmaGreen.SaveSystem.IObjectSaver.html
@@ -1525,19 +1618,6 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.SaveSystem.IObjectSaver.componentStores
   nameWithType: IObjectSaver.componentStores
-- uid: GrandmaGreen.SaveSystem.IObjectSaver.eventMap
-  name: eventMap
-  href: api/GrandmaGreen.SaveSystem.IObjectSaver.html#GrandmaGreen_SaveSystem_IObjectSaver_eventMap
-  commentId: P:GrandmaGreen.SaveSystem.IObjectSaver.eventMap
-  fullName: GrandmaGreen.SaveSystem.IObjectSaver.eventMap
-  nameWithType: IObjectSaver.eventMap
-- uid: GrandmaGreen.SaveSystem.IObjectSaver.eventMap*
-  name: eventMap
-  href: api/GrandmaGreen.SaveSystem.IObjectSaver.html#GrandmaGreen_SaveSystem_IObjectSaver_eventMap_
-  commentId: Overload:GrandmaGreen.SaveSystem.IObjectSaver.eventMap
-  isSpec: "True"
-  fullName: GrandmaGreen.SaveSystem.IObjectSaver.eventMap
-  nameWithType: IObjectSaver.eventMap
 - uid: GrandmaGreen.SaveSystem.IObjectSaver.toBeSaved
   name: toBeSaved
   href: api/GrandmaGreen.SaveSystem.IObjectSaver.html#GrandmaGreen_SaveSystem_IObjectSaver_toBeSaved
@@ -1551,41 +1631,60 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.SaveSystem.IObjectSaver.toBeSaved
   nameWithType: IObjectSaver.toBeSaved
-- uid: GrandmaGreen.SaveSystem.IObjectSaver.TriggerEvent(Delegate@)
-  name: TriggerEvent(ref Delegate)
-  href: api/GrandmaGreen.SaveSystem.IObjectSaver.html#GrandmaGreen_SaveSystem_IObjectSaver_TriggerEvent_Delegate__
-  commentId: M:GrandmaGreen.SaveSystem.IObjectSaver.TriggerEvent(Delegate@)
-  name.vb: TriggerEvent(ByRef Delegate)
-  fullName: GrandmaGreen.SaveSystem.IObjectSaver.TriggerEvent(ref Delegate)
-  fullName.vb: GrandmaGreen.SaveSystem.IObjectSaver.TriggerEvent(ByRef Delegate)
-  nameWithType: IObjectSaver.TriggerEvent(ref Delegate)
-  nameWithType.vb: IObjectSaver.TriggerEvent(ByRef Delegate)
-- uid: GrandmaGreen.SaveSystem.IObjectSaver.TriggerEvent*
-  name: TriggerEvent
-  href: api/GrandmaGreen.SaveSystem.IObjectSaver.html#GrandmaGreen_SaveSystem_IObjectSaver_TriggerEvent_
-  commentId: Overload:GrandmaGreen.SaveSystem.IObjectSaver.TriggerEvent
+- uid: GrandmaGreen.SaveSystem.ISaveLoader
+  name: ISaveLoader
+  href: api/GrandmaGreen.SaveSystem.ISaveLoader.html
+  commentId: T:GrandmaGreen.SaveSystem.ISaveLoader
+  fullName: GrandmaGreen.SaveSystem.ISaveLoader
+  nameWithType: ISaveLoader
+- uid: GrandmaGreen.SaveSystem.ISaveLoader.LoadAllData
+  name: LoadAllData()
+  href: api/GrandmaGreen.SaveSystem.ISaveLoader.html#GrandmaGreen_SaveSystem_ISaveLoader_LoadAllData
+  commentId: M:GrandmaGreen.SaveSystem.ISaveLoader.LoadAllData
+  fullName: GrandmaGreen.SaveSystem.ISaveLoader.LoadAllData()
+  nameWithType: ISaveLoader.LoadAllData()
+- uid: GrandmaGreen.SaveSystem.ISaveLoader.LoadAllData*
+  name: LoadAllData
+  href: api/GrandmaGreen.SaveSystem.ISaveLoader.html#GrandmaGreen_SaveSystem_ISaveLoader_LoadAllData_
+  commentId: Overload:GrandmaGreen.SaveSystem.ISaveLoader.LoadAllData
   isSpec: "True"
-  fullName: GrandmaGreen.SaveSystem.IObjectSaver.TriggerEvent
-  nameWithType: IObjectSaver.TriggerEvent
+  fullName: GrandmaGreen.SaveSystem.ISaveLoader.LoadAllData
+  nameWithType: ISaveLoader.LoadAllData
+- uid: GrandmaGreen.SaveSystem.ISaveLoader.SaveAllData
+  name: SaveAllData()
+  href: api/GrandmaGreen.SaveSystem.ISaveLoader.html#GrandmaGreen_SaveSystem_ISaveLoader_SaveAllData
+  commentId: M:GrandmaGreen.SaveSystem.ISaveLoader.SaveAllData
+  fullName: GrandmaGreen.SaveSystem.ISaveLoader.SaveAllData()
+  nameWithType: ISaveLoader.SaveAllData()
+- uid: GrandmaGreen.SaveSystem.ISaveLoader.SaveAllData*
+  name: SaveAllData
+  href: api/GrandmaGreen.SaveSystem.ISaveLoader.html#GrandmaGreen_SaveSystem_ISaveLoader_SaveAllData_
+  commentId: Overload:GrandmaGreen.SaveSystem.ISaveLoader.SaveAllData
+  isSpec: "True"
+  fullName: GrandmaGreen.SaveSystem.ISaveLoader.SaveAllData
+  nameWithType: ISaveLoader.SaveAllData
 - uid: GrandmaGreen.SaveSystem.ObjectSaver
   name: ObjectSaver
   href: api/GrandmaGreen.SaveSystem.ObjectSaver.html
   commentId: T:GrandmaGreen.SaveSystem.ObjectSaver
   fullName: GrandmaGreen.SaveSystem.ObjectSaver
   nameWithType: ObjectSaver
-- uid: GrandmaGreen.SaveSystem.ObjectSaver.#ctor
-  name: ObjectSaver()
-  href: api/GrandmaGreen.SaveSystem.ObjectSaver.html#GrandmaGreen_SaveSystem_ObjectSaver__ctor
-  commentId: M:GrandmaGreen.SaveSystem.ObjectSaver.#ctor
-  fullName: GrandmaGreen.SaveSystem.ObjectSaver.ObjectSaver()
-  nameWithType: ObjectSaver.ObjectSaver()
-- uid: GrandmaGreen.SaveSystem.ObjectSaver.#ctor*
-  name: ObjectSaver
-  href: api/GrandmaGreen.SaveSystem.ObjectSaver.html#GrandmaGreen_SaveSystem_ObjectSaver__ctor_
-  commentId: Overload:GrandmaGreen.SaveSystem.ObjectSaver.#ctor
+- uid: GrandmaGreen.SaveSystem.ObjectSaver.AddComponent*
+  name: AddComponent
+  href: api/GrandmaGreen.SaveSystem.ObjectSaver.html#GrandmaGreen_SaveSystem_ObjectSaver_AddComponent_
+  commentId: Overload:GrandmaGreen.SaveSystem.ObjectSaver.AddComponent
   isSpec: "True"
-  fullName: GrandmaGreen.SaveSystem.ObjectSaver.ObjectSaver
-  nameWithType: ObjectSaver.ObjectSaver
+  fullName: GrandmaGreen.SaveSystem.ObjectSaver.AddComponent
+  nameWithType: ObjectSaver.AddComponent
+- uid: GrandmaGreen.SaveSystem.ObjectSaver.AddComponent``1(``0)
+  name: AddComponent<T>(T)
+  href: api/GrandmaGreen.SaveSystem.ObjectSaver.html#GrandmaGreen_SaveSystem_ObjectSaver_AddComponent__1___0_
+  commentId: M:GrandmaGreen.SaveSystem.ObjectSaver.AddComponent``1(``0)
+  name.vb: AddComponent(Of T)(T)
+  fullName: GrandmaGreen.SaveSystem.ObjectSaver.AddComponent<T>(T)
+  fullName.vb: GrandmaGreen.SaveSystem.ObjectSaver.AddComponent(Of T)(T)
+  nameWithType: ObjectSaver.AddComponent<T>(T)
+  nameWithType.vb: ObjectSaver.AddComponent(Of T)(T)
 - uid: GrandmaGreen.SaveSystem.ObjectSaver.componentStores
   name: componentStores
   href: api/GrandmaGreen.SaveSystem.ObjectSaver.html#GrandmaGreen_SaveSystem_ObjectSaver_componentStores
@@ -1612,19 +1711,31 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.SaveSystem.ObjectSaver.CreateNewStore
   nameWithType: ObjectSaver.CreateNewStore
-- uid: GrandmaGreen.SaveSystem.ObjectSaver.eventMap
-  name: eventMap
-  href: api/GrandmaGreen.SaveSystem.ObjectSaver.html#GrandmaGreen_SaveSystem_ObjectSaver_eventMap
-  commentId: P:GrandmaGreen.SaveSystem.ObjectSaver.eventMap
-  fullName: GrandmaGreen.SaveSystem.ObjectSaver.eventMap
-  nameWithType: ObjectSaver.eventMap
-- uid: GrandmaGreen.SaveSystem.ObjectSaver.eventMap*
-  name: eventMap
-  href: api/GrandmaGreen.SaveSystem.ObjectSaver.html#GrandmaGreen_SaveSystem_ObjectSaver_eventMap_
-  commentId: Overload:GrandmaGreen.SaveSystem.ObjectSaver.eventMap
+- uid: GrandmaGreen.SaveSystem.ObjectSaver.ID
+  name: ID
+  href: api/GrandmaGreen.SaveSystem.ObjectSaver.html#GrandmaGreen_SaveSystem_ObjectSaver_ID
+  commentId: F:GrandmaGreen.SaveSystem.ObjectSaver.ID
+  fullName: GrandmaGreen.SaveSystem.ObjectSaver.ID
+  nameWithType: ObjectSaver.ID
+- uid: GrandmaGreen.SaveSystem.ObjectSaver.OnEnable
+  name: OnEnable()
+  href: api/GrandmaGreen.SaveSystem.ObjectSaver.html#GrandmaGreen_SaveSystem_ObjectSaver_OnEnable
+  commentId: M:GrandmaGreen.SaveSystem.ObjectSaver.OnEnable
+  fullName: GrandmaGreen.SaveSystem.ObjectSaver.OnEnable()
+  nameWithType: ObjectSaver.OnEnable()
+- uid: GrandmaGreen.SaveSystem.ObjectSaver.OnEnable*
+  name: OnEnable
+  href: api/GrandmaGreen.SaveSystem.ObjectSaver.html#GrandmaGreen_SaveSystem_ObjectSaver_OnEnable_
+  commentId: Overload:GrandmaGreen.SaveSystem.ObjectSaver.OnEnable
   isSpec: "True"
-  fullName: GrandmaGreen.SaveSystem.ObjectSaver.eventMap
-  nameWithType: ObjectSaver.eventMap
+  fullName: GrandmaGreen.SaveSystem.ObjectSaver.OnEnable
+  nameWithType: ObjectSaver.OnEnable
+- uid: GrandmaGreen.SaveSystem.ObjectSaver.saveController
+  name: saveController
+  href: api/GrandmaGreen.SaveSystem.ObjectSaver.html#GrandmaGreen_SaveSystem_ObjectSaver_saveController
+  commentId: F:GrandmaGreen.SaveSystem.ObjectSaver.saveController
+  fullName: GrandmaGreen.SaveSystem.ObjectSaver.saveController
+  nameWithType: ObjectSaver.saveController
 - uid: GrandmaGreen.SaveSystem.ObjectSaver.toBeSaved
   name: toBeSaved
   href: api/GrandmaGreen.SaveSystem.ObjectSaver.html#GrandmaGreen_SaveSystem_ObjectSaver_toBeSaved
@@ -1638,18 +1749,176 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.SaveSystem.ObjectSaver.toBeSaved
   nameWithType: ObjectSaver.toBeSaved
+- uid: GrandmaGreen.SaveSystem.OdinSaveLoader
+  name: OdinSaveLoader
+  href: api/GrandmaGreen.SaveSystem.OdinSaveLoader.html
+  commentId: T:GrandmaGreen.SaveSystem.OdinSaveLoader
+  fullName: GrandmaGreen.SaveSystem.OdinSaveLoader
+  nameWithType: OdinSaveLoader
+- uid: GrandmaGreen.SaveSystem.OdinSaveLoader.#ctor(GrandmaGreen.SaveSystem.SaveController)
+  name: OdinSaveLoader(SaveController)
+  href: api/GrandmaGreen.SaveSystem.OdinSaveLoader.html#GrandmaGreen_SaveSystem_OdinSaveLoader__ctor_GrandmaGreen_SaveSystem_SaveController_
+  commentId: M:GrandmaGreen.SaveSystem.OdinSaveLoader.#ctor(GrandmaGreen.SaveSystem.SaveController)
+  fullName: GrandmaGreen.SaveSystem.OdinSaveLoader.OdinSaveLoader(GrandmaGreen.SaveSystem.SaveController)
+  nameWithType: OdinSaveLoader.OdinSaveLoader(SaveController)
+- uid: GrandmaGreen.SaveSystem.OdinSaveLoader.#ctor*
+  name: OdinSaveLoader
+  href: api/GrandmaGreen.SaveSystem.OdinSaveLoader.html#GrandmaGreen_SaveSystem_OdinSaveLoader__ctor_
+  commentId: Overload:GrandmaGreen.SaveSystem.OdinSaveLoader.#ctor
+  isSpec: "True"
+  fullName: GrandmaGreen.SaveSystem.OdinSaveLoader.OdinSaveLoader
+  nameWithType: OdinSaveLoader.OdinSaveLoader
+- uid: GrandmaGreen.SaveSystem.OdinSaveLoader.LoadAllData
+  name: LoadAllData()
+  href: api/GrandmaGreen.SaveSystem.OdinSaveLoader.html#GrandmaGreen_SaveSystem_OdinSaveLoader_LoadAllData
+  commentId: M:GrandmaGreen.SaveSystem.OdinSaveLoader.LoadAllData
+  fullName: GrandmaGreen.SaveSystem.OdinSaveLoader.LoadAllData()
+  nameWithType: OdinSaveLoader.LoadAllData()
+- uid: GrandmaGreen.SaveSystem.OdinSaveLoader.LoadAllData*
+  name: LoadAllData
+  href: api/GrandmaGreen.SaveSystem.OdinSaveLoader.html#GrandmaGreen_SaveSystem_OdinSaveLoader_LoadAllData_
+  commentId: Overload:GrandmaGreen.SaveSystem.OdinSaveLoader.LoadAllData
+  isSpec: "True"
+  fullName: GrandmaGreen.SaveSystem.OdinSaveLoader.LoadAllData
+  nameWithType: OdinSaveLoader.LoadAllData
+- uid: GrandmaGreen.SaveSystem.OdinSaveLoader.LoadData(GrandmaGreen.SaveSystem.ObjectSaver)
+  name: LoadData(ObjectSaver)
+  href: api/GrandmaGreen.SaveSystem.OdinSaveLoader.html#GrandmaGreen_SaveSystem_OdinSaveLoader_LoadData_GrandmaGreen_SaveSystem_ObjectSaver_
+  commentId: M:GrandmaGreen.SaveSystem.OdinSaveLoader.LoadData(GrandmaGreen.SaveSystem.ObjectSaver)
+  fullName: GrandmaGreen.SaveSystem.OdinSaveLoader.LoadData(GrandmaGreen.SaveSystem.ObjectSaver)
+  nameWithType: OdinSaveLoader.LoadData(ObjectSaver)
+- uid: GrandmaGreen.SaveSystem.OdinSaveLoader.LoadData*
+  name: LoadData
+  href: api/GrandmaGreen.SaveSystem.OdinSaveLoader.html#GrandmaGreen_SaveSystem_OdinSaveLoader_LoadData_
+  commentId: Overload:GrandmaGreen.SaveSystem.OdinSaveLoader.LoadData
+  isSpec: "True"
+  fullName: GrandmaGreen.SaveSystem.OdinSaveLoader.LoadData
+  nameWithType: OdinSaveLoader.LoadData
+- uid: GrandmaGreen.SaveSystem.OdinSaveLoader.SaveAllData
+  name: SaveAllData()
+  href: api/GrandmaGreen.SaveSystem.OdinSaveLoader.html#GrandmaGreen_SaveSystem_OdinSaveLoader_SaveAllData
+  commentId: M:GrandmaGreen.SaveSystem.OdinSaveLoader.SaveAllData
+  fullName: GrandmaGreen.SaveSystem.OdinSaveLoader.SaveAllData()
+  nameWithType: OdinSaveLoader.SaveAllData()
+- uid: GrandmaGreen.SaveSystem.OdinSaveLoader.SaveAllData*
+  name: SaveAllData
+  href: api/GrandmaGreen.SaveSystem.OdinSaveLoader.html#GrandmaGreen_SaveSystem_OdinSaveLoader_SaveAllData_
+  commentId: Overload:GrandmaGreen.SaveSystem.OdinSaveLoader.SaveAllData
+  isSpec: "True"
+  fullName: GrandmaGreen.SaveSystem.OdinSaveLoader.SaveAllData
+  nameWithType: OdinSaveLoader.SaveAllData
+- uid: GrandmaGreen.SaveSystem.OdinSaveLoader.SaveData(GrandmaGreen.SaveSystem.ObjectSaver)
+  name: SaveData(ObjectSaver)
+  href: api/GrandmaGreen.SaveSystem.OdinSaveLoader.html#GrandmaGreen_SaveSystem_OdinSaveLoader_SaveData_GrandmaGreen_SaveSystem_ObjectSaver_
+  commentId: M:GrandmaGreen.SaveSystem.OdinSaveLoader.SaveData(GrandmaGreen.SaveSystem.ObjectSaver)
+  fullName: GrandmaGreen.SaveSystem.OdinSaveLoader.SaveData(GrandmaGreen.SaveSystem.ObjectSaver)
+  nameWithType: OdinSaveLoader.SaveData(ObjectSaver)
+- uid: GrandmaGreen.SaveSystem.OdinSaveLoader.SaveData*
+  name: SaveData
+  href: api/GrandmaGreen.SaveSystem.OdinSaveLoader.html#GrandmaGreen_SaveSystem_OdinSaveLoader_SaveData_
+  commentId: Overload:GrandmaGreen.SaveSystem.OdinSaveLoader.SaveData
+  isSpec: "True"
+  fullName: GrandmaGreen.SaveSystem.OdinSaveLoader.SaveData
+  nameWithType: OdinSaveLoader.SaveData
 - uid: GrandmaGreen.SaveSystem.SaveController
   name: SaveController
   href: api/GrandmaGreen.SaveSystem.SaveController.html
   commentId: T:GrandmaGreen.SaveSystem.SaveController
   fullName: GrandmaGreen.SaveSystem.SaveController
   nameWithType: SaveController
+- uid: GrandmaGreen.SaveSystem.SaveController.#ctor(System.Collections.Generic.List{GrandmaGreen.SaveSystem.ObjectSaver})
+  name: SaveController(List<ObjectSaver>)
+  href: api/GrandmaGreen.SaveSystem.SaveController.html#GrandmaGreen_SaveSystem_SaveController__ctor_System_Collections_Generic_List_GrandmaGreen_SaveSystem_ObjectSaver__
+  commentId: M:GrandmaGreen.SaveSystem.SaveController.#ctor(System.Collections.Generic.List{GrandmaGreen.SaveSystem.ObjectSaver})
+  name.vb: SaveController(List(Of ObjectSaver))
+  fullName: GrandmaGreen.SaveSystem.SaveController.SaveController(System.Collections.Generic.List<GrandmaGreen.SaveSystem.ObjectSaver>)
+  fullName.vb: GrandmaGreen.SaveSystem.SaveController.SaveController(System.Collections.Generic.List(Of GrandmaGreen.SaveSystem.ObjectSaver))
+  nameWithType: SaveController.SaveController(List<ObjectSaver>)
+  nameWithType.vb: SaveController.SaveController(List(Of ObjectSaver))
+- uid: GrandmaGreen.SaveSystem.SaveController.#ctor*
+  name: SaveController
+  href: api/GrandmaGreen.SaveSystem.SaveController.html#GrandmaGreen_SaveSystem_SaveController__ctor_
+  commentId: Overload:GrandmaGreen.SaveSystem.SaveController.#ctor
+  isSpec: "True"
+  fullName: GrandmaGreen.SaveSystem.SaveController.SaveController
+  nameWithType: SaveController.SaveController
+- uid: GrandmaGreen.SaveSystem.SaveController.AutoSave
+  name: AutoSave()
+  href: api/GrandmaGreen.SaveSystem.SaveController.html#GrandmaGreen_SaveSystem_SaveController_AutoSave
+  commentId: M:GrandmaGreen.SaveSystem.SaveController.AutoSave
+  fullName: GrandmaGreen.SaveSystem.SaveController.AutoSave()
+  nameWithType: SaveController.AutoSave()
+- uid: GrandmaGreen.SaveSystem.SaveController.AutoSave*
+  name: AutoSave
+  href: api/GrandmaGreen.SaveSystem.SaveController.html#GrandmaGreen_SaveSystem_SaveController_AutoSave_
+  commentId: Overload:GrandmaGreen.SaveSystem.SaveController.AutoSave
+  isSpec: "True"
+  fullName: GrandmaGreen.SaveSystem.SaveController.AutoSave
+  nameWithType: SaveController.AutoSave
+- uid: GrandmaGreen.SaveSystem.SaveController.objectSavers
+  name: objectSavers
+  href: api/GrandmaGreen.SaveSystem.SaveController.html#GrandmaGreen_SaveSystem_SaveController_objectSavers
+  commentId: P:GrandmaGreen.SaveSystem.SaveController.objectSavers
+  fullName: GrandmaGreen.SaveSystem.SaveController.objectSavers
+  nameWithType: SaveController.objectSavers
+- uid: GrandmaGreen.SaveSystem.SaveController.objectSavers*
+  name: objectSavers
+  href: api/GrandmaGreen.SaveSystem.SaveController.html#GrandmaGreen_SaveSystem_SaveController_objectSavers_
+  commentId: Overload:GrandmaGreen.SaveSystem.SaveController.objectSavers
+  isSpec: "True"
+  fullName: GrandmaGreen.SaveSystem.SaveController.objectSavers
+  nameWithType: SaveController.objectSavers
+- uid: GrandmaGreen.SaveSystem.SaveController.toBeSaved
+  name: toBeSaved
+  href: api/GrandmaGreen.SaveSystem.SaveController.html#GrandmaGreen_SaveSystem_SaveController_toBeSaved
+  commentId: F:GrandmaGreen.SaveSystem.SaveController.toBeSaved
+  fullName: GrandmaGreen.SaveSystem.SaveController.toBeSaved
+  nameWithType: SaveController.toBeSaved
 - uid: GrandmaGreen.SaveSystem.SaveManager
   name: SaveManager
   href: api/GrandmaGreen.SaveSystem.SaveManager.html
   commentId: T:GrandmaGreen.SaveSystem.SaveManager
   fullName: GrandmaGreen.SaveSystem.SaveManager
   nameWithType: SaveManager
+- uid: GrandmaGreen.SaveSystem.SaveManager.Awake
+  name: Awake()
+  href: api/GrandmaGreen.SaveSystem.SaveManager.html#GrandmaGreen_SaveSystem_SaveManager_Awake
+  commentId: M:GrandmaGreen.SaveSystem.SaveManager.Awake
+  fullName: GrandmaGreen.SaveSystem.SaveManager.Awake()
+  nameWithType: SaveManager.Awake()
+- uid: GrandmaGreen.SaveSystem.SaveManager.Awake*
+  name: Awake
+  href: api/GrandmaGreen.SaveSystem.SaveManager.html#GrandmaGreen_SaveSystem_SaveManager_Awake_
+  commentId: Overload:GrandmaGreen.SaveSystem.SaveManager.Awake
+  isSpec: "True"
+  fullName: GrandmaGreen.SaveSystem.SaveManager.Awake
+  nameWithType: SaveManager.Awake
+- uid: GrandmaGreen.SaveSystem.SaveManager.TriggerSave
+  name: TriggerSave()
+  href: api/GrandmaGreen.SaveSystem.SaveManager.html#GrandmaGreen_SaveSystem_SaveManager_TriggerSave
+  commentId: M:GrandmaGreen.SaveSystem.SaveManager.TriggerSave
+  fullName: GrandmaGreen.SaveSystem.SaveManager.TriggerSave()
+  nameWithType: SaveManager.TriggerSave()
+- uid: GrandmaGreen.SaveSystem.SaveManager.TriggerSave*
+  name: TriggerSave
+  href: api/GrandmaGreen.SaveSystem.SaveManager.html#GrandmaGreen_SaveSystem_SaveManager_TriggerSave_
+  commentId: Overload:GrandmaGreen.SaveSystem.SaveManager.TriggerSave
+  isSpec: "True"
+  fullName: GrandmaGreen.SaveSystem.SaveManager.TriggerSave
+  nameWithType: SaveManager.TriggerSave
+- uid: GrandmaGreen.SaveSystem.SaveManager.Update
+  name: Update()
+  href: api/GrandmaGreen.SaveSystem.SaveManager.html#GrandmaGreen_SaveSystem_SaveManager_Update
+  commentId: M:GrandmaGreen.SaveSystem.SaveManager.Update
+  fullName: GrandmaGreen.SaveSystem.SaveManager.Update()
+  nameWithType: SaveManager.Update()
+- uid: GrandmaGreen.SaveSystem.SaveManager.Update*
+  name: Update
+  href: api/GrandmaGreen.SaveSystem.SaveManager.html#GrandmaGreen_SaveSystem_SaveManager_Update_
+  commentId: Overload:GrandmaGreen.SaveSystem.SaveManager.Update
+  isSpec: "True"
+  fullName: GrandmaGreen.SaveSystem.SaveManager.Update
+  nameWithType: SaveManager.Update
 - uid: GrandmaGreen.SizeSet
   name: SizeSet
   href: api/GrandmaGreen.SizeSet.html

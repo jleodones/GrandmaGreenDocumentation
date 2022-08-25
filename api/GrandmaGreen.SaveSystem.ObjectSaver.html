@@ -97,20 +97,58 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="GrandmaGreen_SaveSystem_ObjectSaver_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ObjectSaver : SerializedScriptableObject, IObjectSaver</code></pre>
+    <pre><code class="lang-csharp hljs">public class ObjectSaver : ScriptableObject, IObjectSaver</code></pre>
   </div>
-  <h3 id="constructors">Constructors
+  <h3 id="fields">Fields
   </h3>
   
   
-  <a id="GrandmaGreen_SaveSystem_ObjectSaver__ctor_" data-uid="GrandmaGreen.SaveSystem.ObjectSaver.#ctor*"></a>
-  <h4 id="GrandmaGreen_SaveSystem_ObjectSaver__ctor" data-uid="GrandmaGreen.SaveSystem.ObjectSaver.#ctor">ObjectSaver()</h4>
+  <h4 id="GrandmaGreen_SaveSystem_ObjectSaver_ID" data-uid="GrandmaGreen.SaveSystem.ObjectSaver.ID">ID</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ObjectSaver()</code></pre>
+    <pre><code class="lang-csharp hljs">public string ID</code></pre>
   </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="GrandmaGreen_SaveSystem_ObjectSaver_saveController" data-uid="GrandmaGreen.SaveSystem.ObjectSaver.saveController">saveController</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SaveController saveController</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="GrandmaGreen.SaveSystem.SaveController.html">SaveController</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="properties">Properties
   </h3>
   
@@ -140,38 +178,13 @@
   </table>
   
   
-  <a id="GrandmaGreen_SaveSystem_ObjectSaver_eventMap_" data-uid="GrandmaGreen.SaveSystem.ObjectSaver.eventMap*"></a>
-  <h4 id="GrandmaGreen_SaveSystem_ObjectSaver_eventMap" data-uid="GrandmaGreen.SaveSystem.ObjectSaver.eventMap">eventMap</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Dictionary&lt;Delegate, UnityEvent&gt; eventMap { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<span class="xref">Delegate</span>, <span class="xref">UnityEvent</span>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
   <a id="GrandmaGreen_SaveSystem_ObjectSaver_toBeSaved_" data-uid="GrandmaGreen.SaveSystem.ObjectSaver.toBeSaved*"></a>
   <h4 id="GrandmaGreen_SaveSystem_ObjectSaver_toBeSaved" data-uid="GrandmaGreen.SaveSystem.ObjectSaver.toBeSaved">toBeSaved</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Queue&lt;IComponentStore&gt; toBeSaved { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public List&lt;IComponentStore&gt; toBeSaved { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -183,13 +196,56 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.queue-1">Queue</a>&lt;<a class="xref" href="GrandmaGreen.SaveSystem.IComponentStore.html">IComponentStore</a>&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="GrandmaGreen.SaveSystem.IComponentStore.html">IComponentStore</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h3 id="methods">Methods
   </h3>
+  
+  
+  <a id="GrandmaGreen_SaveSystem_ObjectSaver_AddComponent_" data-uid="GrandmaGreen.SaveSystem.ObjectSaver.AddComponent*"></a>
+  <h4 id="GrandmaGreen_SaveSystem_ObjectSaver_AddComponent__1___0_" data-uid="GrandmaGreen.SaveSystem.ObjectSaver.AddComponent``1(``0)">AddComponent&lt;T&gt;(T)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddComponent&lt;T&gt;(T component)
+    where T : struct</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">component</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="GrandmaGreen_SaveSystem_ObjectSaver_CreateNewStore_" data-uid="GrandmaGreen.SaveSystem.ObjectSaver.CreateNewStore*"></a>
@@ -217,6 +273,16 @@
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="GrandmaGreen_SaveSystem_ObjectSaver_OnEnable_" data-uid="GrandmaGreen.SaveSystem.ObjectSaver.OnEnable*"></a>
+  <h4 id="GrandmaGreen_SaveSystem_ObjectSaver_OnEnable" data-uid="GrandmaGreen.SaveSystem.ObjectSaver.OnEnable">OnEnable()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void OnEnable()</code></pre>
+  </div>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="GrandmaGreen.SaveSystem.IObjectSaver.html">IObjectSaver</a>

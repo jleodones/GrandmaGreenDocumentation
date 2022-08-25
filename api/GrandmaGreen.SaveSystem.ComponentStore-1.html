@@ -111,9 +111,6 @@
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gethashcode#system-object-gethashcode">Object.GetHashCode()</a>
     </div>
     <div>
-      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gettype#system-object-gettype">Object.GetType()</a>
-    </div>
-    <div>
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.memberwiseclone#system-object-memberwiseclone">Object.MemberwiseClone()</a>
     </div>
   </div>
@@ -160,7 +157,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public List&lt;Component&lt;T&gt;&gt; components { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public List&lt;T&gt; components { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -172,32 +169,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="GrandmaGreen.SaveSystem.Component-1.html">Component</a>&lt;T&gt;&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="GrandmaGreen_SaveSystem_ComponentStore_1_name_" data-uid="GrandmaGreen.SaveSystem.ComponentStore`1.name*"></a>
-  <h4 id="GrandmaGreen_SaveSystem_ComponentStore_1_name" data-uid="GrandmaGreen.SaveSystem.ComponentStore`1.name">name</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string name { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;T&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -207,13 +179,12 @@
   
   
   <a id="GrandmaGreen_SaveSystem_ComponentStore_1_AddComponent_" data-uid="GrandmaGreen.SaveSystem.ComponentStore`1.AddComponent*"></a>
-  <h4 id="GrandmaGreen_SaveSystem_ComponentStore_1_AddComponent__1_GrandmaGreen_SaveSystem_Component___0__" data-uid="GrandmaGreen.SaveSystem.ComponentStore`1.AddComponent``1(GrandmaGreen.SaveSystem.Component{``0})">AddComponent&lt;T&gt;(Component&lt;T&gt;)</h4>
+  <h4 id="GrandmaGreen_SaveSystem_ComponentStore_1_AddComponent__0_" data-uid="GrandmaGreen.SaveSystem.ComponentStore`1.AddComponent(`0)">AddComponent(T)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool AddComponent&lt;T&gt;(Component&lt;T&gt; component)
-    where T : struct</code></pre>
+    <pre><code class="lang-csharp hljs">public bool AddComponent(T component)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -226,7 +197,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="GrandmaGreen.SaveSystem.Component-1.html">Component</a>&lt;T&gt;</td>
+        <td><span class="xref">T</span></td>
         <td><span class="parametername">component</span></td>
         <td></td>
       </tr>
@@ -247,17 +218,27 @@
       </tr>
     </tbody>
   </table>
-  <h5 class="typeParameters">Type Parameters</h5>
+  
+  
+  <a id="GrandmaGreen_SaveSystem_ComponentStore_1_GetType_" data-uid="GrandmaGreen.SaveSystem.ComponentStore`1.GetType*"></a>
+  <h4 id="GrandmaGreen_SaveSystem_ComponentStore_1_GetType" data-uid="GrandmaGreen.SaveSystem.ComponentStore`1.GetType">GetType()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Type GetType()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
-        <th>Name</th>
+        <th>Type</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="parametername">T</span></td>
+        <td><span class="xref">Type</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -265,12 +246,12 @@
   
   
   <a id="GrandmaGreen_SaveSystem_ComponentStore_1_RemoveComponent_" data-uid="GrandmaGreen.SaveSystem.ComponentStore`1.RemoveComponent*"></a>
-  <h4 id="GrandmaGreen_SaveSystem_ComponentStore_1_RemoveComponent__1_GrandmaGreen_SaveSystem_Component___0__" data-uid="GrandmaGreen.SaveSystem.ComponentStore`1.RemoveComponent``1(GrandmaGreen.SaveSystem.Component{``0})">RemoveComponent&lt;T&gt;(Component&lt;T&gt;)</h4>
+  <h4 id="GrandmaGreen_SaveSystem_ComponentStore_1_RemoveComponent__1___0_" data-uid="GrandmaGreen.SaveSystem.ComponentStore`1.RemoveComponent``1(``0)">RemoveComponent&lt;T&gt;(T)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool RemoveComponent&lt;T&gt;(Component&lt;T&gt; component)
+    <pre><code class="lang-csharp hljs">public bool RemoveComponent&lt;T&gt;(T _component)
     where T : struct</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -284,8 +265,8 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="GrandmaGreen.SaveSystem.Component-1.html">Component</a>&lt;T&gt;</td>
-        <td><span class="parametername">component</span></td>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">_component</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -323,12 +304,12 @@
   
   
   <a id="GrandmaGreen_SaveSystem_ComponentStore_1_RequestData_" data-uid="GrandmaGreen.SaveSystem.ComponentStore`1.RequestData*"></a>
-  <h4 id="GrandmaGreen_SaveSystem_ComponentStore_1_RequestData__1_GrandmaGreen_SaveSystem_Component___0__" data-uid="GrandmaGreen.SaveSystem.ComponentStore`1.RequestData``1(GrandmaGreen.SaveSystem.Component{``0})">RequestData&lt;T&gt;(Component&lt;T&gt;)</h4>
+  <h4 id="GrandmaGreen_SaveSystem_ComponentStore_1_RequestData__1_System_Int32___0__" data-uid="GrandmaGreen.SaveSystem.ComponentStore`1.RequestData``1(System.Int32,``0@)">RequestData&lt;T&gt;(Int32, ref T)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool RequestData&lt;T&gt;(Component&lt;T&gt; component)
+    <pre><code class="lang-csharp hljs">public bool RequestData&lt;T&gt;(int index, ref T _component)
     where T : struct</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -342,8 +323,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="GrandmaGreen.SaveSystem.Component-1.html">Component</a>&lt;T&gt;</td>
-        <td><span class="parametername">component</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">index</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">_component</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -381,12 +367,12 @@
   
   
   <a id="GrandmaGreen_SaveSystem_ComponentStore_1_UpdateValue_" data-uid="GrandmaGreen.SaveSystem.ComponentStore`1.UpdateValue*"></a>
-  <h4 id="GrandmaGreen_SaveSystem_ComponentStore_1_UpdateValue__1_GrandmaGreen_SaveSystem_Component___0__" data-uid="GrandmaGreen.SaveSystem.ComponentStore`1.UpdateValue``1(GrandmaGreen.SaveSystem.Component{``0})">UpdateValue&lt;T&gt;(Component&lt;T&gt;)</h4>
+  <h4 id="GrandmaGreen_SaveSystem_ComponentStore_1_UpdateValue__1_System_Int32___0_" data-uid="GrandmaGreen.SaveSystem.ComponentStore`1.UpdateValue``1(System.Int32,``0)">UpdateValue&lt;T&gt;(Int32, T)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool UpdateValue&lt;T&gt;(Component&lt;T&gt; component)
+    <pre><code class="lang-csharp hljs">public bool UpdateValue&lt;T&gt;(int index, T _component)
     where T : struct</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -400,8 +386,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="GrandmaGreen.SaveSystem.Component-1.html">Component</a>&lt;T&gt;</td>
-        <td><span class="parametername">component</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">index</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">_component</span></td>
         <td></td>
       </tr>
     </tbody>
