@@ -86,18 +86,27 @@
   <div class="markdown level0 remarks"></div>
     <h3 id="classes">Classes
   </h3>
-      <h4><a class="xref" href="GrandmaGreen.SaveSystem.BSONSaveLoader.html">BSONSaveLoader</a></h4>
-      <section></section>
       <h4><a class="xref" href="GrandmaGreen.SaveSystem.ComponentStore-1.html">ComponentStore&lt;T&gt;</a></h4>
-      <section></section>
+      <section><p>The ComponentStore is a data structure written in pure C#. See IComponentStore.</p>
+</section>
+      <h4><a class="xref" href="GrandmaGreen.SaveSystem.JSONSaveLoader.html">JSONSaveLoader</a></h4>
+      <section><p>The JSONSaveLoader was designed specifically to serialize and deserialize JSON files ONLY.
+This is used largely for internal testing and readable save files, but can be converted to BSON as needed.</p>
+</section>
       <h4><a class="xref" href="GrandmaGreen.SaveSystem.ObjectSaver.html">ObjectSaver</a></h4>
-      <section></section>
-      <h4><a class="xref" href="GrandmaGreen.SaveSystem.OdinSaveLoader.html">OdinSaveLoader</a></h4>
-      <section></section>
+      <section><p>The ObjectSaver interfaces with game systems directly when new data is added, changed, or removed as player&apos;s navigate the game.
+It is a ScriptableObject that is the core of the save system, and was designed to be editor friendly. They store pure data.</p>
+</section>
       <h4><a class="xref" href="GrandmaGreen.SaveSystem.SaveController.html">SaveController</a></h4>
-      <section></section>
+      <section><p>The SaveController is a purely scripted C# class that gets reinstantiated everytime the game is loaded.
+The SaveController interfaces directly with SaveLoaders of various types as necessary.
+When the SaveManager calls for an AutoSave, the SaveController pings each SaveLoader to tell it to save the relevant data.</p>
+</section>
       <h4><a class="xref" href="GrandmaGreen.SaveSystem.SaveManager.html">SaveManager</a></h4>
-      <section></section>
+      <section><p>The SaveManager class is in charge of high level saving. It is the only part of the save system that lives in the game.
+Upon awakening, it instantiates a new SaveController. It also tracks the auto save intervals, then pings the SaveController at
+appropriate moments. The SaveManager also stores an internal list of every ObjectSaver relevant to the whole game.</p>
+</section>
     <h3 id="interfaces">Interfaces
   </h3>
       <h4><a class="xref" href="GrandmaGreen.SaveSystem.IComponentStore.html">IComponentStore</a></h4>
@@ -109,7 +118,8 @@
 <p>Importantly, IObjectSavers handle data requests from game interfaces. Other game interfaces request the information, and IObjectSavers retrieve the data from IObjectStores to pass it along. Similarly, IObjectSavers take in new data from game interfaces and updates the IObjectStore appropriately.</p>
 </section>
       <h4><a class="xref" href="GrandmaGreen.SaveSystem.ISaveLoader.html">ISaveLoader</a></h4>
-      <section></section>
+      <section><p>The ISaveLoader interface is a wrapper interface used for all SaveLoaders.</p>
+</section>
 </article>
           </div>
           

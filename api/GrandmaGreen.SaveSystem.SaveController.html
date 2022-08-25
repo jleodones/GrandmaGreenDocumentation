@@ -82,7 +82,10 @@
   
   <h1 id="GrandmaGreen_SaveSystem_SaveController" data-uid="GrandmaGreen.SaveSystem.SaveController" class="text-break">Class SaveController
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>The SaveController is a purely scripted C# class that gets reinstantiated everytime the game is loaded.
+The SaveController interfaces directly with SaveLoaders of various types as necessary.
+When the SaveManager calls for an AutoSave, the SaveController pings each SaveLoader to tell it to save the relevant data.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -125,7 +128,9 @@
   
   <a id="GrandmaGreen_SaveSystem_SaveController__ctor_" data-uid="GrandmaGreen.SaveSystem.SaveController.#ctor*"></a>
   <h4 id="GrandmaGreen_SaveSystem_SaveController__ctor_System_Collections_Generic_List_GrandmaGreen_SaveSystem_ObjectSaver__" data-uid="GrandmaGreen.SaveSystem.SaveController.#ctor(System.Collections.Generic.List{GrandmaGreen.SaveSystem.ObjectSaver})">SaveController(List&lt;ObjectSaver&gt;)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Initializes with a list of object savers, which sets the internal list of object savers.
+This list changes itself as the scenes load.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -153,40 +158,15 @@
   
   
   <h4 id="GrandmaGreen_SaveSystem_SaveController_toBeSaved" data-uid="GrandmaGreen.SaveSystem.SaveController.toBeSaved">toBeSaved</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Every time an ObjectSaver gets &quot;dirtied,&quot; ie. a change is made to its contents, it adds itself to the
+toBeSaved list. This queues it up for saving at the next call.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public List&lt;ObjectSaver&gt; toBeSaved</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="GrandmaGreen.SaveSystem.ObjectSaver.html">ObjectSaver</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="properties">Properties
-  </h3>
-  
-  
-  <a id="GrandmaGreen_SaveSystem_SaveController_objectSavers_" data-uid="GrandmaGreen.SaveSystem.SaveController.objectSavers*"></a>
-  <h4 id="GrandmaGreen_SaveSystem_SaveController_objectSavers" data-uid="GrandmaGreen.SaveSystem.SaveController.objectSavers">objectSavers</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public List&lt;ObjectSaver&gt; objectSavers { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>

@@ -1443,12 +1443,6 @@ references:
   commentId: N:GrandmaGreen.SaveSystem
   fullName: GrandmaGreen.SaveSystem
   nameWithType: GrandmaGreen.SaveSystem
-- uid: GrandmaGreen.SaveSystem.BSONSaveLoader
-  name: BSONSaveLoader
-  href: api/GrandmaGreen.SaveSystem.BSONSaveLoader.html
-  commentId: T:GrandmaGreen.SaveSystem.BSONSaveLoader
-  fullName: GrandmaGreen.SaveSystem.BSONSaveLoader
-  nameWithType: BSONSaveLoader
 - uid: GrandmaGreen.SaveSystem.ComponentStore`1
   name: ComponentStore<T>
   href: api/GrandmaGreen.SaveSystem.ComponentStore-1.html
@@ -1618,31 +1612,21 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.SaveSystem.IObjectSaver.componentStores
   nameWithType: IObjectSaver.componentStores
-- uid: GrandmaGreen.SaveSystem.IObjectSaver.toBeSaved
-  name: toBeSaved
-  href: api/GrandmaGreen.SaveSystem.IObjectSaver.html#GrandmaGreen_SaveSystem_IObjectSaver_toBeSaved
-  commentId: P:GrandmaGreen.SaveSystem.IObjectSaver.toBeSaved
-  fullName: GrandmaGreen.SaveSystem.IObjectSaver.toBeSaved
-  nameWithType: IObjectSaver.toBeSaved
-- uid: GrandmaGreen.SaveSystem.IObjectSaver.toBeSaved*
-  name: toBeSaved
-  href: api/GrandmaGreen.SaveSystem.IObjectSaver.html#GrandmaGreen_SaveSystem_IObjectSaver_toBeSaved_
-  commentId: Overload:GrandmaGreen.SaveSystem.IObjectSaver.toBeSaved
-  isSpec: "True"
-  fullName: GrandmaGreen.SaveSystem.IObjectSaver.toBeSaved
-  nameWithType: IObjectSaver.toBeSaved
 - uid: GrandmaGreen.SaveSystem.ISaveLoader
   name: ISaveLoader
   href: api/GrandmaGreen.SaveSystem.ISaveLoader.html
   commentId: T:GrandmaGreen.SaveSystem.ISaveLoader
   fullName: GrandmaGreen.SaveSystem.ISaveLoader
   nameWithType: ISaveLoader
-- uid: GrandmaGreen.SaveSystem.ISaveLoader.LoadAllData
-  name: LoadAllData()
-  href: api/GrandmaGreen.SaveSystem.ISaveLoader.html#GrandmaGreen_SaveSystem_ISaveLoader_LoadAllData
-  commentId: M:GrandmaGreen.SaveSystem.ISaveLoader.LoadAllData
-  fullName: GrandmaGreen.SaveSystem.ISaveLoader.LoadAllData()
-  nameWithType: ISaveLoader.LoadAllData()
+- uid: GrandmaGreen.SaveSystem.ISaveLoader.LoadAllData(System.Collections.Generic.List{GrandmaGreen.SaveSystem.ObjectSaver})
+  name: LoadAllData(List<ObjectSaver>)
+  href: api/GrandmaGreen.SaveSystem.ISaveLoader.html#GrandmaGreen_SaveSystem_ISaveLoader_LoadAllData_System_Collections_Generic_List_GrandmaGreen_SaveSystem_ObjectSaver__
+  commentId: M:GrandmaGreen.SaveSystem.ISaveLoader.LoadAllData(System.Collections.Generic.List{GrandmaGreen.SaveSystem.ObjectSaver})
+  name.vb: LoadAllData(List(Of ObjectSaver))
+  fullName: GrandmaGreen.SaveSystem.ISaveLoader.LoadAllData(System.Collections.Generic.List<GrandmaGreen.SaveSystem.ObjectSaver>)
+  fullName.vb: GrandmaGreen.SaveSystem.ISaveLoader.LoadAllData(System.Collections.Generic.List(Of GrandmaGreen.SaveSystem.ObjectSaver))
+  nameWithType: ISaveLoader.LoadAllData(List<ObjectSaver>)
+  nameWithType.vb: ISaveLoader.LoadAllData(List(Of ObjectSaver))
 - uid: GrandmaGreen.SaveSystem.ISaveLoader.LoadAllData*
   name: LoadAllData
   href: api/GrandmaGreen.SaveSystem.ISaveLoader.html#GrandmaGreen_SaveSystem_ISaveLoader_LoadAllData_
@@ -1663,6 +1647,86 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.SaveSystem.ISaveLoader.SaveAllData
   nameWithType: ISaveLoader.SaveAllData
+- uid: GrandmaGreen.SaveSystem.JSONSaveLoader
+  name: JSONSaveLoader
+  href: api/GrandmaGreen.SaveSystem.JSONSaveLoader.html
+  commentId: T:GrandmaGreen.SaveSystem.JSONSaveLoader
+  fullName: GrandmaGreen.SaveSystem.JSONSaveLoader
+  nameWithType: JSONSaveLoader
+- uid: GrandmaGreen.SaveSystem.JSONSaveLoader.#ctor(GrandmaGreen.SaveSystem.SaveController)
+  name: JSONSaveLoader(SaveController)
+  href: api/GrandmaGreen.SaveSystem.JSONSaveLoader.html#GrandmaGreen_SaveSystem_JSONSaveLoader__ctor_GrandmaGreen_SaveSystem_SaveController_
+  commentId: M:GrandmaGreen.SaveSystem.JSONSaveLoader.#ctor(GrandmaGreen.SaveSystem.SaveController)
+  fullName: GrandmaGreen.SaveSystem.JSONSaveLoader.JSONSaveLoader(GrandmaGreen.SaveSystem.SaveController)
+  nameWithType: JSONSaveLoader.JSONSaveLoader(SaveController)
+- uid: GrandmaGreen.SaveSystem.JSONSaveLoader.#ctor*
+  name: JSONSaveLoader
+  href: api/GrandmaGreen.SaveSystem.JSONSaveLoader.html#GrandmaGreen_SaveSystem_JSONSaveLoader__ctor_
+  commentId: Overload:GrandmaGreen.SaveSystem.JSONSaveLoader.#ctor
+  isSpec: "True"
+  fullName: GrandmaGreen.SaveSystem.JSONSaveLoader.JSONSaveLoader
+  nameWithType: JSONSaveLoader.JSONSaveLoader
+- uid: GrandmaGreen.SaveSystem.JSONSaveLoader.jsonDataArray
+  name: jsonDataArray
+  href: api/GrandmaGreen.SaveSystem.JSONSaveLoader.html#GrandmaGreen_SaveSystem_JSONSaveLoader_jsonDataArray
+  commentId: F:GrandmaGreen.SaveSystem.JSONSaveLoader.jsonDataArray
+  fullName: GrandmaGreen.SaveSystem.JSONSaveLoader.jsonDataArray
+  nameWithType: JSONSaveLoader.jsonDataArray
+- uid: GrandmaGreen.SaveSystem.JSONSaveLoader.LoadAllData(System.Collections.Generic.List{GrandmaGreen.SaveSystem.ObjectSaver})
+  name: LoadAllData(List<ObjectSaver>)
+  href: api/GrandmaGreen.SaveSystem.JSONSaveLoader.html#GrandmaGreen_SaveSystem_JSONSaveLoader_LoadAllData_System_Collections_Generic_List_GrandmaGreen_SaveSystem_ObjectSaver__
+  commentId: M:GrandmaGreen.SaveSystem.JSONSaveLoader.LoadAllData(System.Collections.Generic.List{GrandmaGreen.SaveSystem.ObjectSaver})
+  name.vb: LoadAllData(List(Of ObjectSaver))
+  fullName: GrandmaGreen.SaveSystem.JSONSaveLoader.LoadAllData(System.Collections.Generic.List<GrandmaGreen.SaveSystem.ObjectSaver>)
+  fullName.vb: GrandmaGreen.SaveSystem.JSONSaveLoader.LoadAllData(System.Collections.Generic.List(Of GrandmaGreen.SaveSystem.ObjectSaver))
+  nameWithType: JSONSaveLoader.LoadAllData(List<ObjectSaver>)
+  nameWithType.vb: JSONSaveLoader.LoadAllData(List(Of ObjectSaver))
+- uid: GrandmaGreen.SaveSystem.JSONSaveLoader.LoadAllData*
+  name: LoadAllData
+  href: api/GrandmaGreen.SaveSystem.JSONSaveLoader.html#GrandmaGreen_SaveSystem_JSONSaveLoader_LoadAllData_
+  commentId: Overload:GrandmaGreen.SaveSystem.JSONSaveLoader.LoadAllData
+  isSpec: "True"
+  fullName: GrandmaGreen.SaveSystem.JSONSaveLoader.LoadAllData
+  nameWithType: JSONSaveLoader.LoadAllData
+- uid: GrandmaGreen.SaveSystem.JSONSaveLoader.LoadData(GrandmaGreen.SaveSystem.ObjectSaver)
+  name: LoadData(ObjectSaver)
+  href: api/GrandmaGreen.SaveSystem.JSONSaveLoader.html#GrandmaGreen_SaveSystem_JSONSaveLoader_LoadData_GrandmaGreen_SaveSystem_ObjectSaver_
+  commentId: M:GrandmaGreen.SaveSystem.JSONSaveLoader.LoadData(GrandmaGreen.SaveSystem.ObjectSaver)
+  fullName: GrandmaGreen.SaveSystem.JSONSaveLoader.LoadData(GrandmaGreen.SaveSystem.ObjectSaver)
+  nameWithType: JSONSaveLoader.LoadData(ObjectSaver)
+- uid: GrandmaGreen.SaveSystem.JSONSaveLoader.LoadData*
+  name: LoadData
+  href: api/GrandmaGreen.SaveSystem.JSONSaveLoader.html#GrandmaGreen_SaveSystem_JSONSaveLoader_LoadData_
+  commentId: Overload:GrandmaGreen.SaveSystem.JSONSaveLoader.LoadData
+  isSpec: "True"
+  fullName: GrandmaGreen.SaveSystem.JSONSaveLoader.LoadData
+  nameWithType: JSONSaveLoader.LoadData
+- uid: GrandmaGreen.SaveSystem.JSONSaveLoader.SaveAllData
+  name: SaveAllData()
+  href: api/GrandmaGreen.SaveSystem.JSONSaveLoader.html#GrandmaGreen_SaveSystem_JSONSaveLoader_SaveAllData
+  commentId: M:GrandmaGreen.SaveSystem.JSONSaveLoader.SaveAllData
+  fullName: GrandmaGreen.SaveSystem.JSONSaveLoader.SaveAllData()
+  nameWithType: JSONSaveLoader.SaveAllData()
+- uid: GrandmaGreen.SaveSystem.JSONSaveLoader.SaveAllData*
+  name: SaveAllData
+  href: api/GrandmaGreen.SaveSystem.JSONSaveLoader.html#GrandmaGreen_SaveSystem_JSONSaveLoader_SaveAllData_
+  commentId: Overload:GrandmaGreen.SaveSystem.JSONSaveLoader.SaveAllData
+  isSpec: "True"
+  fullName: GrandmaGreen.SaveSystem.JSONSaveLoader.SaveAllData
+  nameWithType: JSONSaveLoader.SaveAllData
+- uid: GrandmaGreen.SaveSystem.JSONSaveLoader.SaveData(GrandmaGreen.SaveSystem.ObjectSaver)
+  name: SaveData(ObjectSaver)
+  href: api/GrandmaGreen.SaveSystem.JSONSaveLoader.html#GrandmaGreen_SaveSystem_JSONSaveLoader_SaveData_GrandmaGreen_SaveSystem_ObjectSaver_
+  commentId: M:GrandmaGreen.SaveSystem.JSONSaveLoader.SaveData(GrandmaGreen.SaveSystem.ObjectSaver)
+  fullName: GrandmaGreen.SaveSystem.JSONSaveLoader.SaveData(GrandmaGreen.SaveSystem.ObjectSaver)
+  nameWithType: JSONSaveLoader.SaveData(ObjectSaver)
+- uid: GrandmaGreen.SaveSystem.JSONSaveLoader.SaveData*
+  name: SaveData
+  href: api/GrandmaGreen.SaveSystem.JSONSaveLoader.html#GrandmaGreen_SaveSystem_JSONSaveLoader_SaveData_
+  commentId: Overload:GrandmaGreen.SaveSystem.JSONSaveLoader.SaveData
+  isSpec: "True"
+  fullName: GrandmaGreen.SaveSystem.JSONSaveLoader.SaveData
+  nameWithType: JSONSaveLoader.SaveData
 - uid: GrandmaGreen.SaveSystem.ObjectSaver
   name: ObjectSaver
   href: api/GrandmaGreen.SaveSystem.ObjectSaver.html
@@ -1736,90 +1800,6 @@ references:
   commentId: F:GrandmaGreen.SaveSystem.ObjectSaver.saveController
   fullName: GrandmaGreen.SaveSystem.ObjectSaver.saveController
   nameWithType: ObjectSaver.saveController
-- uid: GrandmaGreen.SaveSystem.ObjectSaver.toBeSaved
-  name: toBeSaved
-  href: api/GrandmaGreen.SaveSystem.ObjectSaver.html#GrandmaGreen_SaveSystem_ObjectSaver_toBeSaved
-  commentId: P:GrandmaGreen.SaveSystem.ObjectSaver.toBeSaved
-  fullName: GrandmaGreen.SaveSystem.ObjectSaver.toBeSaved
-  nameWithType: ObjectSaver.toBeSaved
-- uid: GrandmaGreen.SaveSystem.ObjectSaver.toBeSaved*
-  name: toBeSaved
-  href: api/GrandmaGreen.SaveSystem.ObjectSaver.html#GrandmaGreen_SaveSystem_ObjectSaver_toBeSaved_
-  commentId: Overload:GrandmaGreen.SaveSystem.ObjectSaver.toBeSaved
-  isSpec: "True"
-  fullName: GrandmaGreen.SaveSystem.ObjectSaver.toBeSaved
-  nameWithType: ObjectSaver.toBeSaved
-- uid: GrandmaGreen.SaveSystem.OdinSaveLoader
-  name: OdinSaveLoader
-  href: api/GrandmaGreen.SaveSystem.OdinSaveLoader.html
-  commentId: T:GrandmaGreen.SaveSystem.OdinSaveLoader
-  fullName: GrandmaGreen.SaveSystem.OdinSaveLoader
-  nameWithType: OdinSaveLoader
-- uid: GrandmaGreen.SaveSystem.OdinSaveLoader.#ctor(GrandmaGreen.SaveSystem.SaveController)
-  name: OdinSaveLoader(SaveController)
-  href: api/GrandmaGreen.SaveSystem.OdinSaveLoader.html#GrandmaGreen_SaveSystem_OdinSaveLoader__ctor_GrandmaGreen_SaveSystem_SaveController_
-  commentId: M:GrandmaGreen.SaveSystem.OdinSaveLoader.#ctor(GrandmaGreen.SaveSystem.SaveController)
-  fullName: GrandmaGreen.SaveSystem.OdinSaveLoader.OdinSaveLoader(GrandmaGreen.SaveSystem.SaveController)
-  nameWithType: OdinSaveLoader.OdinSaveLoader(SaveController)
-- uid: GrandmaGreen.SaveSystem.OdinSaveLoader.#ctor*
-  name: OdinSaveLoader
-  href: api/GrandmaGreen.SaveSystem.OdinSaveLoader.html#GrandmaGreen_SaveSystem_OdinSaveLoader__ctor_
-  commentId: Overload:GrandmaGreen.SaveSystem.OdinSaveLoader.#ctor
-  isSpec: "True"
-  fullName: GrandmaGreen.SaveSystem.OdinSaveLoader.OdinSaveLoader
-  nameWithType: OdinSaveLoader.OdinSaveLoader
-- uid: GrandmaGreen.SaveSystem.OdinSaveLoader.LoadAllData
-  name: LoadAllData()
-  href: api/GrandmaGreen.SaveSystem.OdinSaveLoader.html#GrandmaGreen_SaveSystem_OdinSaveLoader_LoadAllData
-  commentId: M:GrandmaGreen.SaveSystem.OdinSaveLoader.LoadAllData
-  fullName: GrandmaGreen.SaveSystem.OdinSaveLoader.LoadAllData()
-  nameWithType: OdinSaveLoader.LoadAllData()
-- uid: GrandmaGreen.SaveSystem.OdinSaveLoader.LoadAllData*
-  name: LoadAllData
-  href: api/GrandmaGreen.SaveSystem.OdinSaveLoader.html#GrandmaGreen_SaveSystem_OdinSaveLoader_LoadAllData_
-  commentId: Overload:GrandmaGreen.SaveSystem.OdinSaveLoader.LoadAllData
-  isSpec: "True"
-  fullName: GrandmaGreen.SaveSystem.OdinSaveLoader.LoadAllData
-  nameWithType: OdinSaveLoader.LoadAllData
-- uid: GrandmaGreen.SaveSystem.OdinSaveLoader.LoadData(GrandmaGreen.SaveSystem.ObjectSaver)
-  name: LoadData(ObjectSaver)
-  href: api/GrandmaGreen.SaveSystem.OdinSaveLoader.html#GrandmaGreen_SaveSystem_OdinSaveLoader_LoadData_GrandmaGreen_SaveSystem_ObjectSaver_
-  commentId: M:GrandmaGreen.SaveSystem.OdinSaveLoader.LoadData(GrandmaGreen.SaveSystem.ObjectSaver)
-  fullName: GrandmaGreen.SaveSystem.OdinSaveLoader.LoadData(GrandmaGreen.SaveSystem.ObjectSaver)
-  nameWithType: OdinSaveLoader.LoadData(ObjectSaver)
-- uid: GrandmaGreen.SaveSystem.OdinSaveLoader.LoadData*
-  name: LoadData
-  href: api/GrandmaGreen.SaveSystem.OdinSaveLoader.html#GrandmaGreen_SaveSystem_OdinSaveLoader_LoadData_
-  commentId: Overload:GrandmaGreen.SaveSystem.OdinSaveLoader.LoadData
-  isSpec: "True"
-  fullName: GrandmaGreen.SaveSystem.OdinSaveLoader.LoadData
-  nameWithType: OdinSaveLoader.LoadData
-- uid: GrandmaGreen.SaveSystem.OdinSaveLoader.SaveAllData
-  name: SaveAllData()
-  href: api/GrandmaGreen.SaveSystem.OdinSaveLoader.html#GrandmaGreen_SaveSystem_OdinSaveLoader_SaveAllData
-  commentId: M:GrandmaGreen.SaveSystem.OdinSaveLoader.SaveAllData
-  fullName: GrandmaGreen.SaveSystem.OdinSaveLoader.SaveAllData()
-  nameWithType: OdinSaveLoader.SaveAllData()
-- uid: GrandmaGreen.SaveSystem.OdinSaveLoader.SaveAllData*
-  name: SaveAllData
-  href: api/GrandmaGreen.SaveSystem.OdinSaveLoader.html#GrandmaGreen_SaveSystem_OdinSaveLoader_SaveAllData_
-  commentId: Overload:GrandmaGreen.SaveSystem.OdinSaveLoader.SaveAllData
-  isSpec: "True"
-  fullName: GrandmaGreen.SaveSystem.OdinSaveLoader.SaveAllData
-  nameWithType: OdinSaveLoader.SaveAllData
-- uid: GrandmaGreen.SaveSystem.OdinSaveLoader.SaveData(GrandmaGreen.SaveSystem.ObjectSaver)
-  name: SaveData(ObjectSaver)
-  href: api/GrandmaGreen.SaveSystem.OdinSaveLoader.html#GrandmaGreen_SaveSystem_OdinSaveLoader_SaveData_GrandmaGreen_SaveSystem_ObjectSaver_
-  commentId: M:GrandmaGreen.SaveSystem.OdinSaveLoader.SaveData(GrandmaGreen.SaveSystem.ObjectSaver)
-  fullName: GrandmaGreen.SaveSystem.OdinSaveLoader.SaveData(GrandmaGreen.SaveSystem.ObjectSaver)
-  nameWithType: OdinSaveLoader.SaveData(ObjectSaver)
-- uid: GrandmaGreen.SaveSystem.OdinSaveLoader.SaveData*
-  name: SaveData
-  href: api/GrandmaGreen.SaveSystem.OdinSaveLoader.html#GrandmaGreen_SaveSystem_OdinSaveLoader_SaveData_
-  commentId: Overload:GrandmaGreen.SaveSystem.OdinSaveLoader.SaveData
-  isSpec: "True"
-  fullName: GrandmaGreen.SaveSystem.OdinSaveLoader.SaveData
-  nameWithType: OdinSaveLoader.SaveData
 - uid: GrandmaGreen.SaveSystem.SaveController
   name: SaveController
   href: api/GrandmaGreen.SaveSystem.SaveController.html
@@ -1855,19 +1835,6 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.SaveSystem.SaveController.AutoSave
   nameWithType: SaveController.AutoSave
-- uid: GrandmaGreen.SaveSystem.SaveController.objectSavers
-  name: objectSavers
-  href: api/GrandmaGreen.SaveSystem.SaveController.html#GrandmaGreen_SaveSystem_SaveController_objectSavers
-  commentId: P:GrandmaGreen.SaveSystem.SaveController.objectSavers
-  fullName: GrandmaGreen.SaveSystem.SaveController.objectSavers
-  nameWithType: SaveController.objectSavers
-- uid: GrandmaGreen.SaveSystem.SaveController.objectSavers*
-  name: objectSavers
-  href: api/GrandmaGreen.SaveSystem.SaveController.html#GrandmaGreen_SaveSystem_SaveController_objectSavers_
-  commentId: Overload:GrandmaGreen.SaveSystem.SaveController.objectSavers
-  isSpec: "True"
-  fullName: GrandmaGreen.SaveSystem.SaveController.objectSavers
-  nameWithType: SaveController.objectSavers
 - uid: GrandmaGreen.SaveSystem.SaveController.toBeSaved
   name: toBeSaved
   href: api/GrandmaGreen.SaveSystem.SaveController.html#GrandmaGreen_SaveSystem_SaveController_toBeSaved

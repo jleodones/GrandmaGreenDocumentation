@@ -82,7 +82,9 @@
   
   <h1 id="GrandmaGreen_SaveSystem_ObjectSaver" data-uid="GrandmaGreen.SaveSystem.ObjectSaver" class="text-break">Class ObjectSaver
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>The ObjectSaver interfaces with game systems directly when new data is added, changed, or removed as player&apos;s navigate the game.
+It is a ScriptableObject that is the core of the save system, and was designed to be editor friendly. They store pure data.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -104,7 +106,9 @@
   
   
   <h4 id="GrandmaGreen_SaveSystem_ObjectSaver_ID" data-uid="GrandmaGreen.SaveSystem.ObjectSaver.ID">ID</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Identifier number used to identify the ObjectSaver during saving and loading operations. As the hash depends on the asset&apos;s file name,
+no two ObjectSavers should be named alike.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -128,7 +132,8 @@
   
   
   <h4 id="GrandmaGreen_SaveSystem_ObjectSaver_saveController" data-uid="GrandmaGreen.SaveSystem.ObjectSaver.saveController">saveController</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The reference to the game&apos;s SaveController, which it communicates with to present internal updates.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -155,36 +160,12 @@
   
   <a id="GrandmaGreen_SaveSystem_ObjectSaver_componentStores_" data-uid="GrandmaGreen.SaveSystem.ObjectSaver.componentStores*"></a>
   <h4 id="GrandmaGreen_SaveSystem_ObjectSaver_componentStores" data-uid="GrandmaGreen.SaveSystem.ObjectSaver.componentStores">componentStores</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The component stores in question.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public List&lt;IComponentStore&gt; componentStores { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="GrandmaGreen.SaveSystem.IComponentStore.html">IComponentStore</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="GrandmaGreen_SaveSystem_ObjectSaver_toBeSaved_" data-uid="GrandmaGreen.SaveSystem.ObjectSaver.toBeSaved*"></a>
-  <h4 id="GrandmaGreen_SaveSystem_ObjectSaver_toBeSaved" data-uid="GrandmaGreen.SaveSystem.ObjectSaver.toBeSaved">toBeSaved</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public List&lt;IComponentStore&gt; toBeSaved { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -207,7 +188,9 @@
   
   <a id="GrandmaGreen_SaveSystem_ObjectSaver_AddComponent_" data-uid="GrandmaGreen.SaveSystem.ObjectSaver.AddComponent*"></a>
   <h4 id="GrandmaGreen_SaveSystem_ObjectSaver_AddComponent__1___0_" data-uid="GrandmaGreen.SaveSystem.ObjectSaver.AddComponent``1(``0)">AddComponent&lt;T&gt;(T)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds a component to the appropriate ComponentStore. Stored internally, marked for update, then saved by the SaveController.
+This interfaces directly with game systems.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -250,7 +233,9 @@
   
   <a id="GrandmaGreen_SaveSystem_ObjectSaver_CreateNewStore_" data-uid="GrandmaGreen.SaveSystem.ObjectSaver.CreateNewStore*"></a>
   <h4 id="GrandmaGreen_SaveSystem_ObjectSaver_CreateNewStore_Type_" data-uid="GrandmaGreen.SaveSystem.ObjectSaver.CreateNewStore(Type)">CreateNewStore(Type)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Creates a given ComponentStore for each ObjectSaver ahead of time. This is done through the Unity Editor.
+Utilizes reflection. The Type must be a C# data type (ie. strings, ints, structs) or it will get rejected.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -277,7 +262,8 @@
   
   <a id="GrandmaGreen_SaveSystem_ObjectSaver_OnEnable_" data-uid="GrandmaGreen.SaveSystem.ObjectSaver.OnEnable*"></a>
   <h4 id="GrandmaGreen_SaveSystem_ObjectSaver_OnEnable" data-uid="GrandmaGreen.SaveSystem.ObjectSaver.OnEnable">OnEnable()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Initializes member variables upon enabling.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
