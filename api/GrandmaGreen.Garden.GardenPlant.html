@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Interface IPathAgent
+    <title>Class GardenPlant
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Interface IPathAgent
+    <meta name="title" content="Class GardenPlant
    ">
     <meta name="generator" content="docfx 2.59.3.0">
     
@@ -77,44 +77,42 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="GrandmaGreen.IPathAgent">
+            <article class="content wrap" id="_content" data-uid="GrandmaGreen.Garden.GardenPlant">
   
   
-  <h1 id="GrandmaGreen_IPathAgent" data-uid="GrandmaGreen.IPathAgent" class="text-break">Interface IPathAgent
+  <h1 id="GrandmaGreen_Garden_GardenPlant" data-uid="GrandmaGreen.Garden.GardenPlant" class="text-break">Class GardenPlant
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>PLACEHOLDER GARDEN PLANT
+TO BE REPLACED BY PLANTINTERACTBALE</p>
+</div>
   <div class="markdown level0 conceptual"></div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="GrandmaGreen.IServiceUser-2.html#GrandmaGreen_IServiceUser_2_Servicer">IServiceUser&lt;Pathfinder, IPathfinderServicer&gt;.Servicer</a>
-    </div>
-    <div>
-      <a class="xref" href="GrandmaGreen.IServiceUser-2.html#GrandmaGreen_IServiceUser_2_SetServicer__1_">IServiceUser&lt;Pathfinder, IPathfinderServicer&gt;.SetServicer(IPathfinderServicer)</a>
-    </div>
-    <div>
-      <a class="xref" href="GrandmaGreen.IServiceUser-2.html#GrandmaGreen_IServiceUser_2_ClearServicer">IServiceUser&lt;Pathfinder, IPathfinderServicer&gt;.ClearServicer()</a>
-    </div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><span class="xref">GardenPlant</span></div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="GrandmaGreen.html">GrandmaGreen</a></h6>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">IGameInteractable</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="GrandmaGreen.Garden.html">GrandmaGreen.Garden</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
-  <h5 id="GrandmaGreen_IPathAgent_syntax">Syntax</h5>
+  <h5 id="GrandmaGreen_Garden_GardenPlant_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface IPathAgent : IServiceUser&lt;Pathfinder, IPathfinderServicer&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class GardenPlant : MonoBehaviour</code></pre>
   </div>
-  <h3 id="properties">Properties
+  <h3 id="fields">Fields
   </h3>
   
   
-  <a id="GrandmaGreen_IPathAgent_isPathing_" data-uid="GrandmaGreen.IPathAgent.isPathing*"></a>
-  <h4 id="GrandmaGreen_IPathAgent_isPathing" data-uid="GrandmaGreen.IPathAgent.isPathing">isPathing</h4>
+  <h4 id="GrandmaGreen_Garden_GardenPlant_childGenotype" data-uid="GrandmaGreen.Garden.GardenPlant.childGenotype">childGenotype</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">bool isPathing { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Genotype childGenotype</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
+  <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -124,7 +122,151 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><a class="xref" href="GrandmaGreen.Garden.Genotype.html">Genotype</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="GrandmaGreen_Garden_GardenPlant_genotype" data-uid="GrandmaGreen.Garden.GardenPlant.genotype">genotype</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Genotype genotype</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="GrandmaGreen.Garden.Genotype.html">Genotype</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="GrandmaGreen_Garden_GardenPlant_neighbours" data-uid="GrandmaGreen.Garden.GardenPlant.neighbours">neighbours</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;GardenPlant&gt; neighbours</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="GrandmaGreen.Garden.GardenPlant.html">GardenPlant</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="GrandmaGreen_Garden_GardenPlant_phenotypeData" data-uid="GrandmaGreen.Garden.GardenPlant.phenotypeData">phenotypeData</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BasePhenotypeData phenotypeData</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="GrandmaGreen.Garden.BasePhenotypeData.html">BasePhenotypeData</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="GrandmaGreen_Garden_GardenPlant_plantSprite" data-uid="GrandmaGreen.Garden.GardenPlant.plantSprite">plantSprite</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SpriteRenderer plantSprite</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">SpriteRenderer</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="GrandmaGreen_Garden_GardenPlant_punnetSquare" data-uid="GrandmaGreen.Garden.GardenPlant.punnetSquare">punnetSquare</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;Genotype&gt; punnetSquare</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="GrandmaGreen.Garden.Genotype.html">Genotype</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="GrandmaGreen_Garden_GardenPlant_traitList" data-uid="GrandmaGreen.Garden.GardenPlant.traitList">traitList</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ITraitSetData[] traitList</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="GrandmaGreen.Garden.ITraitSetData.html">ITraitSetData</a>[]</td>
         <td></td>
       </tr>
     </tbody>
@@ -133,13 +275,13 @@
   </h3>
   
   
-  <a id="GrandmaGreen_IPathAgent_CalculatePathable_" data-uid="GrandmaGreen.IPathAgent.CalculatePathable*"></a>
-  <h4 id="GrandmaGreen_IPathAgent_CalculatePathable_System_Int32_" data-uid="GrandmaGreen.IPathAgent.CalculatePathable(System.Int32)">CalculatePathable(Int32)</h4>
+  <a id="GrandmaGreen_Garden_GardenPlant_DoInteraction_" data-uid="GrandmaGreen.Garden.GardenPlant.DoInteraction*"></a>
+  <h4 id="GrandmaGreen_Garden_GardenPlant_DoInteraction_Vector3_PointerState_" data-uid="GrandmaGreen.Garden.GardenPlant.DoInteraction(Vector3,PointerState)">DoInteraction(Vector3, PointerState)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">float3[] CalculatePathable(int range)</code></pre>
+    <pre><code class="lang-csharp hljs">public void DoInteraction(Vector3 interactionPoint, PointerState interactionState)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -147,126 +289,36 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
-        <td><span class="parametername">range</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">float3</span>[]</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="GrandmaGreen_IPathAgent_CheckPath_" data-uid="GrandmaGreen.IPathAgent.CheckPath*"></a>
-  <h4 id="GrandmaGreen_IPathAgent_CheckPath_int2_" data-uid="GrandmaGreen.IPathAgent.CheckPath(int2)">CheckPath(int2)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">float3[] CheckPath(int2 destination)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">int2</span></td>
-        <td><span class="parametername">destination</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">float3</span>[]</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="GrandmaGreen_IPathAgent_CurrentPos_" data-uid="GrandmaGreen.IPathAgent.CurrentPos*"></a>
-  <h4 id="GrandmaGreen_IPathAgent_CurrentPos" data-uid="GrandmaGreen.IPathAgent.CurrentPos">CurrentPos()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Vector3 CurrentPos()</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">Vector3</span></td>
+        <td><span class="parametername">interactionPoint</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">PointerState</span></td>
+        <td><span class="parametername">interactionState</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="GrandmaGreen_IPathAgent_FollowPath_" data-uid="GrandmaGreen.IPathAgent.FollowPath*"></a>
-  <h4 id="GrandmaGreen_IPathAgent_FollowPath_float3___" data-uid="GrandmaGreen.IPathAgent.FollowPath(float3[])">FollowPath(float3[])</h4>
+  <a id="GrandmaGreen_Garden_GardenPlant_Harvest_" data-uid="GrandmaGreen.Garden.GardenPlant.Harvest*"></a>
+  <h4 id="GrandmaGreen_Garden_GardenPlant_Harvest" data-uid="GrandmaGreen.Garden.GardenPlant.Harvest">Harvest()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void FollowPath(float3[] path)</code></pre>
+    <pre><code class="lang-csharp hljs">public void Harvest()</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">float3</span>[]</td>
-        <td><span class="parametername">path</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">IGameInteractable</span>
+  </div>
 </article>
           </div>
           

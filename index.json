@@ -7,137 +7,222 @@
   "api/Global.html": {
     "href": "api/Global.html",
     "title": "Namespace Global",
-    "keywords": "Namespace Global Classes FakeInputTesting PlantInteractable SetCameraBounds"
-  },
-  "api/Global.PlantInteractable.html": {
-    "href": "api/Global.PlantInteractable.html",
-    "title": "Class PlantInteractable",
-    "keywords": "Class PlantInteractable Inheritance Object PlantInteractable Namespace : Global Assembly : cs.temp.dll.dll Syntax public class PlantInteractable : MonoBehaviour"
+    "keywords": "Namespace Global Classes FakeInputTesting SetCameraBounds"
   },
   "api/Global.SetCameraBounds.html": {
     "href": "api/Global.SetCameraBounds.html",
     "title": "Class SetCameraBounds",
     "keywords": "Class SetCameraBounds Inheritance Object SetCameraBounds Namespace : Global Assembly : cs.temp.dll.dll Syntax public class SetCameraBounds : MonoBehaviour Fields cameraVolume Declaration public Transform cameraVolume Field Value Type Description Transform vCam Declaration public CinemachineVirtualCamera vCam Field Value Type Description CinemachineVirtualCamera Methods CalculateBounds() Declaration public void CalculateBounds()"
   },
-  "api/GrandmaGreen.ActionPlanner.html": {
-    "href": "api/GrandmaGreen.ActionPlanner.html",
-    "title": "Class ActionPlanner",
-    "keywords": "Class ActionPlanner Inheritance Object ActionPlanner Inherited Members Object.ToString() Object.Equals(Object) Object.Equals(Object, Object) Object.ReferenceEquals(Object, Object) Object.GetHashCode() Object.GetType() Object.MemberwiseClone() Namespace : GrandmaGreen Assembly : cs.temp.dll.dll Syntax [Serializable] public class ActionPlanner Constructors ActionPlanner(List<EntityAction>) Declaration public ActionPlanner(List<EntityAction> actionList) Parameters Type Name Description List < EntityAction > actionList Fields ActionList Declaration public List<EntityAction> ActionList Field Value Type Description List < EntityAction > actions Declaration public Queue<EntityAction> actions Field Value Type Description Queue < EntityAction >"
+  "api/GrandmaGreen.Audio.AudioSystemBehavior.html": {
+    "href": "api/GrandmaGreen.Audio.AudioSystemBehavior.html",
+    "title": "Class AudioSystemBehavior",
+    "keywords": "Class AudioSystemBehavior Inheritance Object AudioSystemBehavior Namespace : GrandmaGreen.Audio Assembly : cs.temp.dll.dll Syntax public class AudioSystemBehavior : PlayableBehaviour Fields soundContainer Declaration public ASoundContainer soundContainer Field Value Type Description ASoundContainer"
   },
-  "api/GrandmaGreen.AIController.html": {
-    "href": "api/GrandmaGreen.AIController.html",
-    "title": "Class AIController",
-    "keywords": "Class AIController Inheritance Object EntityController AIController Inherited Members EntityController.permissions EntityController.entity EntityController.active EntityController.RegisterEntity(GameEntity) EntityController.PauseController() EntityController.PathTo(Vector3) EntityController.PathTo(int2, int2) Namespace : GrandmaGreen Assembly : cs.temp.dll.dll Syntax public class AIController : EntityController Fields ActionList Declaration public List<EntityAction> ActionList Field Value Type Description List < EntityAction > Methods StartController() Declaration public override void StartController() Overrides EntityController.StartController()"
+  "api/GrandmaGreen.Audio.AudioSystemClip.html": {
+    "href": "api/GrandmaGreen.Audio.AudioSystemClip.html",
+    "title": "Class AudioSystemClip",
+    "keywords": "Class AudioSystemClip Inheritance Object AudioSystemClip Implements ITimelineClipAsset Namespace : GrandmaGreen.Audio Assembly : cs.temp.dll.dll Syntax [Serializable] public class AudioSystemClip : PlayableAsset Fields SoundContainer Declaration public ASoundContainer SoundContainer Field Value Type Description ASoundContainer Properties clipCaps Declaration public ClipCaps clipCaps { get; } Property Value Type Description ClipCaps Methods CreatePlayable(PlayableGraph, GameObject) Declaration public override Playable CreatePlayable(PlayableGraph graph, GameObject owner) Parameters Type Name Description PlayableGraph graph GameObject owner Returns Type Description Playable Implements ITimelineClipAsset"
   },
-  "api/GrandmaGreen.Allele.html": {
-    "href": "api/GrandmaGreen.Allele.html",
-    "title": "Enum Allele",
-    "keywords": "Enum Allele Namespace : GrandmaGreen Assembly : cs.temp.dll.dll Syntax public enum Allele Fields Name Description dominant recessive"
+  "api/GrandmaGreen.Audio.AudioSystemMixerBehavior.html": {
+    "href": "api/GrandmaGreen.Audio.AudioSystemMixerBehavior.html",
+    "title": "Class AudioSystemMixerBehavior",
+    "keywords": "Class AudioSystemMixerBehavior Inheritance Object AudioSystemMixerBehavior Namespace : GrandmaGreen.Audio Assembly : cs.temp.dll.dll Syntax public class AudioSystemMixerBehavior : PlayableBehaviour Methods ProcessFrame(Playable, FrameData, Object) Declaration public override void ProcessFrame(Playable playable, FrameData info, object playerData) Parameters Type Name Description Playable playable FrameData info Object playerData"
   },
-  "api/GrandmaGreen.BasePhenotypeData.html": {
-    "href": "api/GrandmaGreen.BasePhenotypeData.html",
-    "title": "Class BasePhenotypeData",
-    "keywords": "Class BasePhenotypeData Inheritance Object BasePhenotypeData FlowerPhenotypeData Namespace : GrandmaGreen Assembly : cs.temp.dll.dll Syntax public abstract class BasePhenotypeData : ScriptableObject Fields traitList Declaration protected ITraitSetData[] traitList Field Value Type Description ITraitSetData [] Properties TraitCount Declaration public virtual int TraitCount { get; } Property Value Type Description Int32 TraitList Declaration public ITraitSetData[] TraitList { get; } Property Value Type Description ITraitSetData [] Methods SetTraitData() Declaration public abstract void SetTraitData() Trait<T>(Int32) Declaration public virtual T Trait<T>(int index) where T : class, ITraitSetData Parameters Type Name Description Int32 index Returns Type Description T Type Parameters Name Description T"
+  "api/GrandmaGreen.Audio.AudioSystemTrack.html": {
+    "href": "api/GrandmaGreen.Audio.AudioSystemTrack.html",
+    "title": "Class AudioSystemTrack",
+    "keywords": "Class AudioSystemTrack Inheritance Object AudioSystemTrack Namespace : GrandmaGreen.Audio Assembly : cs.temp.dll.dll Syntax public class AudioSystemTrack : TrackAsset Methods CreateTrackMixer(PlayableGraph, GameObject, Int32) Declaration public override Playable CreateTrackMixer(PlayableGraph graph, GameObject go, int inputCount) Parameters Type Name Description PlayableGraph graph GameObject go Int32 inputCount Returns Type Description Playable"
+  },
+  "api/GrandmaGreen.Audio.html": {
+    "href": "api/GrandmaGreen.Audio.html",
+    "title": "Namespace GrandmaGreen.Audio",
+    "keywords": "Namespace GrandmaGreen.Audio Classes AudioSystemBehavior AudioSystemClip AudioSystemMixerBehavior AudioSystemTrack"
+  },
+  "api/GrandmaGreen.Collections.CollectionsSO.html": {
+    "href": "api/GrandmaGreen.Collections.CollectionsSO.html",
+    "title": "Class CollectionsSO",
+    "keywords": "Class CollectionsSO Inheritance Object CollectionsSO Namespace : GrandmaGreen.Collections Assembly : cs.temp.dll.dll Syntax public class CollectionsSO : ScriptableObject Fields items Declaration public List<Item> items Field Value Type Description List < Item >"
   },
   "api/GrandmaGreen.Collections.CSVtoSO.html": {
     "href": "api/GrandmaGreen.Collections.CSVtoSO.html",
     "title": "Class CSVtoSO",
-    "keywords": "Class CSVtoSO Inheritance Object CSVtoSO Inherited Members Object.ToString() Object.Equals(Object) Object.Equals(Object, Object) Object.ReferenceEquals(Object, Object) Object.GetHashCode() Object.GetType() Object.MemberwiseClone() Namespace : GrandmaGreen.Collections Assembly : cs.temp.dll.dll Syntax public class CSVtoSO Methods GenerateInventory() Declaration public static void GenerateInventory()"
+    "keywords": "Class CSVtoSO Inheritance Object CSVtoSO Inherited Members Object.ToString() Object.Equals(Object) Object.Equals(Object, Object) Object.ReferenceEquals(Object, Object) Object.GetHashCode() Object.GetType() Object.MemberwiseClone() Namespace : GrandmaGreen.Collections Assembly : cs.temp.dll.dll Syntax public class CSVtoSO Methods GenerateCollectionsSO() Declaration public static void GenerateCollectionsSO()"
   },
   "api/GrandmaGreen.Collections.html": {
     "href": "api/GrandmaGreen.Collections.html",
     "title": "Namespace GrandmaGreen.Collections",
-    "keywords": "Namespace GrandmaGreen.Collections Classes CSVtoSO Inventory"
+    "keywords": "Namespace GrandmaGreen.Collections Classes CollectionsSO CSVtoSO Item"
   },
-  "api/GrandmaGreen.Collections.Inventory.html": {
-    "href": "api/GrandmaGreen.Collections.Inventory.html",
-    "title": "Class Inventory",
-    "keywords": "Class Inventory Inheritance Object Inventory Namespace : GrandmaGreen.Collections Assembly : cs.temp.dll.dll Syntax public class Inventory : ScriptableObject Fields items Declaration public List<string> items Field Value Type Description List < String >"
+  "api/GrandmaGreen.Collections.Item.html": {
+    "href": "api/GrandmaGreen.Collections.Item.html",
+    "title": "Class Item",
+    "keywords": "Class Item Inheritance Object Item Namespace : GrandmaGreen.Collections Assembly : cs.temp.dll.dll Syntax public class Item : MonoBehaviour Fields description Declaration public string description Field Value Type Description String id Declaration public string id Field Value Type Description String name Declaration public string name Field Value Type Description String unlocked Declaration public bool unlocked Field Value Type Description Boolean"
   },
-  "api/GrandmaGreen.ColorSet.html": {
-    "href": "api/GrandmaGreen.ColorSet.html",
-    "title": "Class ColorSet",
-    "keywords": "Class ColorSet Inheritance Object TraitSetData < Color > ColorSet Implements ITraitSetData Inherited Members TraitSetData<Color>.weight TraitSetData<Color>.recessive TraitSetData<Color>.dominant TraitSetData<Color>.mixed TraitSetData<Color>.ITraitSetData.weight TraitSetData<Color>.type TraitSetData<Color>.ITraitSetData.recessive TraitSetData<Color>.ITraitSetData.dominant TraitSetData<Color>.ITraitSetData.mixed Object.ToString() Object.Equals(Object) Object.Equals(Object, Object) Object.ReferenceEquals(Object, Object) Object.GetHashCode() Object.GetType() Object.MemberwiseClone() Namespace : GrandmaGreen Assembly : cs.temp.dll.dll Syntax public class ColorSet : TraitSetData<Color>, ITraitSetData Implements ITraitSetData"
+  "api/GrandmaGreen.Entities.EntityBehavior.html": {
+    "href": "api/GrandmaGreen.Entities.EntityBehavior.html",
+    "title": "Class EntityBehavior",
+    "keywords": "Class EntityBehavior Inheritance Object EntityBehavior EntityBehaviorSet FollowPointerBehavior WanderBehavior Namespace : GrandmaGreen.Entities Assembly : cs.temp.dll.dll Syntax public abstract class EntityBehavior : ScriptableObject Properties prerequisites Declaration public EntityPermissions prerequisites { get; protected set; } Property Value Type Description EntityPermissions Methods PerformInstance(EntityController) Declaration public abstract IEnumerator PerformInstance(EntityController controller) Parameters Type Name Description EntityController controller Returns Type Description IEnumerator"
   },
-  "api/GrandmaGreen.EntityAction.html": {
-    "href": "api/GrandmaGreen.EntityAction.html",
-    "title": "Class EntityAction",
-    "keywords": "Class EntityAction Inheritance Object EntityAction Inherited Members Object.ToString() Object.Equals(Object) Object.Equals(Object, Object) Object.ReferenceEquals(Object, Object) Object.GetHashCode() Object.GetType() Object.MemberwiseClone() Namespace : GrandmaGreen Assembly : cs.temp.dll.dll Syntax [Serializable] public abstract class EntityAction Fields cost Declaration public int cost Field Value Type Description Int32 effects Declaration public EntityStateData effects Field Value Type Description EntityStateData preconditions Declaration public EntityStateData preconditions Field Value Type Description EntityStateData Methods PerformAction(EntityController) Declaration public abstract void PerformAction(EntityController entity) Parameters Type Name Description EntityController entity"
+  "api/GrandmaGreen.Entities.EntityBehaviorSet.html": {
+    "href": "api/GrandmaGreen.Entities.EntityBehaviorSet.html",
+    "title": "Class EntityBehaviorSet",
+    "keywords": "Class EntityBehaviorSet Inheritance Object EntityBehavior EntityBehaviorSet Inherited Members EntityBehavior.prerequisites Namespace : GrandmaGreen.Entities Assembly : cs.temp.dll.dll Syntax public class EntityBehaviorSet : EntityBehavior Fields Behaviours Declaration public List<EntityBehavior> Behaviours Field Value Type Description List < EntityBehavior > Methods PerformInstance(EntityController) Declaration public override IEnumerator PerformInstance(EntityController controller) Parameters Type Name Description EntityController controller Returns Type Description IEnumerator Overrides EntityBehavior.PerformInstance(EntityController)"
   },
-  "api/GrandmaGreen.EntityController.html": {
-    "href": "api/GrandmaGreen.EntityController.html",
+  "api/GrandmaGreen.Entities.EntityBehaviorSetting.html": {
+    "href": "api/GrandmaGreen.Entities.EntityBehaviorSetting.html",
+    "title": "Struct EntityBehaviorSetting",
+    "keywords": "Struct EntityBehaviorSetting Inherited Members ValueType.Equals(Object) ValueType.GetHashCode() ValueType.ToString() Object.Equals(Object, Object) Object.ReferenceEquals(Object, Object) Object.GetType() Namespace : GrandmaGreen.Entities Assembly : cs.temp.dll.dll Syntax public struct EntityBehaviorSetting"
+  },
+  "api/GrandmaGreen.Entities.EntityController.html": {
+    "href": "api/GrandmaGreen.Entities.EntityController.html",
     "title": "Class EntityController",
-    "keywords": "Class EntityController Inheritance Object EntityController AIController PlayerController Namespace : GrandmaGreen Assembly : cs.temp.dll.dll Syntax public class EntityController : ScriptableObject Fields active Declaration public bool active Field Value Type Description Boolean entity Declaration public GameEntity entity Field Value Type Description GameEntity permissions Declaration public EntityPermissions permissions Field Value Type Description EntityPermissions Methods PathTo(int2, int2) Declaration public virtual void PathTo(int2 startPos, int2 endPos) Parameters Type Name Description int2 startPos int2 endPos PathTo(Vector3) Declaration public virtual void PathTo(Vector3 worldPos) Parameters Type Name Description Vector3 worldPos PauseController() Declaration public virtual void PauseController() RegisterEntity(GameEntity) Declaration public virtual void RegisterEntity(GameEntity entity) Parameters Type Name Description GameEntity entity StartController() Declaration public virtual void StartController()"
+    "keywords": "Class EntityController Inheritance Object EntityController PlayerController Namespace : GrandmaGreen.Entities Assembly : cs.temp.dll.dll Syntax public class EntityController : ScriptableObject Fields active Declaration public bool active Field Value Type Description Boolean behaviorRoutine Declaration public Coroutine behaviorRoutine Field Value Type Description Coroutine currentBehavior Declaration public EntityBehavior currentBehavior Field Value Type Description EntityBehavior entity Declaration public GameEntity entity Field Value Type Description GameEntity permissions Declaration public EntityPermissions permissions Field Value Type Description EntityPermissions Properties stateMachine Declaration public StateMachine<EntityState> stateMachine { get; } Property Value Type Description StateMachine < EntityState > Methods FindRandomDestination(Int32) Declaration public virtual float3 FindRandomDestination(int range) Parameters Type Name Description Int32 range Returns Type Description float3 PauseController() Declaration public virtual void PauseController() RegisterEntity(GameEntity) Declaration public virtual void RegisterEntity(GameEntity entity) Parameters Type Name Description GameEntity entity SetBehavior(EntityBehavior) Declaration public virtual void SetBehavior(EntityBehavior behavior) Parameters Type Name Description EntityBehavior behavior SetDestination(int2) Declaration public virtual void SetDestination(int2 endPos) Parameters Type Name Description int2 endPos SetDestination(Vector3) Declaration public virtual void SetDestination(Vector3 worldPos) Parameters Type Name Description Vector3 worldPos StartController() Declaration public virtual void StartController()"
   },
-  "api/GrandmaGreen.EntityPermissions.html": {
-    "href": "api/GrandmaGreen.EntityPermissions.html",
+  "api/GrandmaGreen.Entities.EntityPermissions.html": {
+    "href": "api/GrandmaGreen.Entities.EntityPermissions.html",
     "title": "Enum EntityPermissions",
-    "keywords": "Enum EntityPermissions Namespace : GrandmaGreen Assembly : cs.temp.dll.dll Syntax [Flags] public enum EntityPermissions Fields Name Description Gardener Interactable None Pathfinder Speaker"
+    "keywords": "Enum EntityPermissions Namespace : GrandmaGreen.Entities Assembly : cs.temp.dll.dll Syntax [Flags] public enum EntityPermissions Fields Name Description Gardener Interactable None Pathfinder Speaker"
   },
-  "api/GrandmaGreen.EntityState.html": {
-    "href": "api/GrandmaGreen.EntityState.html",
+  "api/GrandmaGreen.Entities.EntityState.html": {
+    "href": "api/GrandmaGreen.Entities.EntityState.html",
     "title": "Enum EntityState",
-    "keywords": "Enum EntityState Namespace : GrandmaGreen Assembly : cs.temp.dll.dll Syntax public enum EntityState Fields Name Description Idle MovingTo PerformingAction"
+    "keywords": "Enum EntityState Namespace : GrandmaGreen.Entities Assembly : cs.temp.dll.dll Syntax public enum EntityState Fields Name Description Idle MovingTo PerformingAction"
   },
-  "api/GrandmaGreen.EntityStateData.html": {
-    "href": "api/GrandmaGreen.EntityStateData.html",
-    "title": "Class EntityStateData",
-    "keywords": "Class EntityStateData Inheritance Object EntityStateData Namespace : GrandmaGreen Assembly : cs.temp.dll.dll Syntax public class EntityStateData : ScriptableObject"
+  "api/GrandmaGreen.Entities.FollowPointerBehavior.html": {
+    "href": "api/GrandmaGreen.Entities.FollowPointerBehavior.html",
+    "title": "Class FollowPointerBehavior",
+    "keywords": "Class FollowPointerBehavior Inheritance Object EntityBehavior FollowPointerBehavior Inherited Members EntityBehavior.prerequisites Namespace : GrandmaGreen.Entities Assembly : cs.temp.dll.dll Syntax public class FollowPointerBehavior : EntityBehavior Methods PerformInstance(EntityController) Declaration public override IEnumerator PerformInstance(EntityController controller) Parameters Type Name Description EntityController controller Returns Type Description IEnumerator Overrides EntityBehavior.PerformInstance(EntityController) SetPointerLocation(Vector3) Declaration public void SetPointerLocation(Vector3 position) Parameters Type Name Description Vector3 position"
   },
-  "api/GrandmaGreen.FlowerPhenotypeData.html": {
-    "href": "api/GrandmaGreen.FlowerPhenotypeData.html",
-    "title": "Class FlowerPhenotypeData",
-    "keywords": "Class FlowerPhenotypeData Inheritance Object BasePhenotypeData FlowerPhenotypeData Inherited Members BasePhenotypeData.traitList BasePhenotypeData.TraitList BasePhenotypeData.Trait<T>(Int32) Namespace : GrandmaGreen Assembly : cs.temp.dll.dll Syntax public class FlowerPhenotypeData : BasePhenotypeData Properties TraitCount Declaration public override int TraitCount { get; } Property Value Type Description Int32 Overrides BasePhenotypeData.TraitCount Methods SetTraitData() Declaration public override void SetTraitData() Overrides BasePhenotypeData.SetTraitData()"
-  },
-  "api/GrandmaGreen.GameEntity.html": {
-    "href": "api/GrandmaGreen.GameEntity.html",
+  "api/GrandmaGreen.Entities.GameEntity.html": {
+    "href": "api/GrandmaGreen.Entities.GameEntity.html",
     "title": "Class GameEntity",
-    "keywords": "Class GameEntity Inheritance Object GameEntity GrandmaEntity Implements IPathAgent IServiceUser < Pathfinder , IPathfinderServicer > Namespace : GrandmaGreen Assembly : cs.temp.dll.dll Syntax public class GameEntity : MonoBehaviour, IPathAgent, IServiceUser<Pathfinder, IPathfinderServicer> Fields animator Declaration public Animator animator Field Value Type Description Animator controller Declaration public EntityController controller Field Value Type Description EntityController entityStateMachine Declaration public StateMachine<EntityState> entityStateMachine Field Value Type Description StateMachine < EntityState > smoothFactor Declaration public float smoothFactor Field Value Type Description Single splineFollow Declaration public SplineFollow splineFollow Field Value Type Description SplineFollow Properties isPathing Declaration public bool isPathing { get; } Property Value Type Description Boolean pathfinderServicer Declaration public IPathfinderServicer pathfinderServicer { get; } Property Value Type Description IPathfinderServicer Methods CancelPath() Declaration public virtual void CancelPath() CurrentPos() Declaration public virtual Vector3 CurrentPos() Returns Type Description Vector3 FixedUpdate() Declaration public void FixedUpdate() FollowPath(float3[]) Declaration public virtual void FollowPath(float3[] path) Parameters Type Name Description float3 [] path InitalizeStateMachine() Declaration protected virtual void InitalizeStateMachine() OnDisable() Declaration protected virtual void OnDisable() OnEnable() Declaration protected virtual void OnEnable() RequestPath(int2, int2) Declaration public float3[] RequestPath(int2 startPos, int2 endPos) Parameters Type Name Description int2 startPos int2 endPos Returns Type Description float3 [] RequestPath(Vector3) Declaration public float3[] RequestPath(Vector3 worldPos) Parameters Type Name Description Vector3 worldPos Returns Type Description float3 [] Update() Declaration public void Update() Implements IPathAgent IServiceUser<U, T>"
+    "keywords": "Class GameEntity Inheritance Object GameEntity GrandmaEntity Implements IPathAgent IServiceUser < Pathfinder , IPathfinderServicer > Namespace : GrandmaGreen.Entities Assembly : cs.temp.dll.dll Syntax public class GameEntity : MonoBehaviour, IPathAgent, IServiceUser<Pathfinder, IPathfinderServicer> Fields animator Declaration public Animator animator Field Value Type Description Animator controller Declaration public EntityController controller Field Value Type Description EntityController entityStateMachine Declaration public StateMachine<EntityState> entityStateMachine Field Value Type Description StateMachine < EntityState > smoothFactor Declaration public float smoothFactor Field Value Type Description Single splineFollow Declaration public SplineFollow splineFollow Field Value Type Description SplineFollow Properties isPathing Declaration public bool isPathing { get; } Property Value Type Description Boolean pathfinderServicer Declaration public IPathfinderServicer pathfinderServicer { get; } Property Value Type Description IPathfinderServicer Methods CalculatePathable(Int32) Declaration public float3[] CalculatePathable(int range) Parameters Type Name Description Int32 range Returns Type Description float3 [] CancelPath() Declaration public virtual void CancelPath() CheckPath(int2) Declaration public float3[] CheckPath(int2 endPos) Parameters Type Name Description int2 endPos Returns Type Description float3 [] CheckPath(Vector3) Declaration public float3[] CheckPath(Vector3 worldPos) Parameters Type Name Description Vector3 worldPos Returns Type Description float3 [] CurrentPos() Declaration public virtual Vector3 CurrentPos() Returns Type Description Vector3 FixedUpdate() Declaration public void FixedUpdate() FollowPath(float3[]) Declaration public virtual void FollowPath(float3[] path) Parameters Type Name Description float3 [] path InitalizeStateMachine() Declaration protected virtual void InitalizeStateMachine() OnDisable() Declaration protected virtual void OnDisable() OnEnable() Declaration protected virtual void OnEnable() OnPathComplete() Declaration public void OnPathComplete() Update() Declaration public void Update() Implements IPathAgent IServiceUser<U, T>"
+  },
+  "api/GrandmaGreen.Entities.GrandmaEntity.html": {
+    "href": "api/GrandmaGreen.Entities.GrandmaEntity.html",
+    "title": "Class GrandmaEntity",
+    "keywords": "Class GrandmaEntity Inheritance Object GameEntity GrandmaEntity Implements IPathAgent IServiceUser < Pathfinder , IPathfinderServicer > Inherited Members GameEntity.controller GameEntity.animator GameEntity.entityStateMachine GameEntity.splineFollow GameEntity.smoothFactor GameEntity.pathfinderServicer GameEntity.isPathing GameEntity.InitalizeStateMachine() GameEntity.OnEnable() GameEntity.OnDisable() GameEntity.Update() GameEntity.FixedUpdate() GameEntity.CalculatePathable(Int32) GameEntity.CheckPath(int2) GameEntity.CheckPath(Vector3) GameEntity.FollowPath(float3[]) GameEntity.OnPathComplete() GameEntity.CancelPath() GameEntity.CurrentPos() Namespace : GrandmaGreen.Entities Assembly : cs.temp.dll.dll Syntax public class GrandmaEntity : GameEntity, IPathAgent, IServiceUser<Pathfinder, IPathfinderServicer> Implements IPathAgent IServiceUser<U, T>"
+  },
+  "api/GrandmaGreen.Entities.html": {
+    "href": "api/GrandmaGreen.Entities.html",
+    "title": "Namespace GrandmaGreen.Entities",
+    "keywords": "Namespace GrandmaGreen.Entities Classes EntityBehavior EntityBehaviorSet EntityController FollowPointerBehavior GameEntity GrandmaEntity PlayerController WanderBehavior Structs EntityBehaviorSetting Enums EntityPermissions EntityState"
+  },
+  "api/GrandmaGreen.Entities.PlayerController.html": {
+    "href": "api/GrandmaGreen.Entities.PlayerController.html",
+    "title": "Class PlayerController",
+    "keywords": "Class PlayerController Inheritance Object EntityController PlayerController Inherited Members EntityController.permissions EntityController.currentBehavior EntityController.entity EntityController.stateMachine EntityController.active EntityController.behaviorRoutine EntityController.RegisterEntity(GameEntity) EntityController.SetDestination(Vector3) EntityController.SetDestination(int2) EntityController.FindRandomDestination(Int32) EntityController.SetBehavior(EntityBehavior) Namespace : GrandmaGreen.Entities Assembly : cs.temp.dll.dll Syntax public class PlayerController : EntityController Methods PauseController() Declaration public override void PauseController() Overrides EntityController.PauseController() StartController() Declaration public override void StartController() Overrides EntityController.StartController()"
+  },
+  "api/GrandmaGreen.Entities.WanderBehavior.html": {
+    "href": "api/GrandmaGreen.Entities.WanderBehavior.html",
+    "title": "Class WanderBehavior",
+    "keywords": "Class WanderBehavior Inheritance Object EntityBehavior WanderBehavior Inherited Members EntityBehavior.prerequisites Namespace : GrandmaGreen.Entities Assembly : cs.temp.dll.dll Syntax public class WanderBehavior : EntityBehavior Fields delay Declaration public float delay Field Value Type Description Single range Declaration public int range Field Value Type Description Int32 Methods PerformInstance(EntityController) Declaration public override IEnumerator PerformInstance(EntityController controller) Parameters Type Name Description EntityController controller Returns Type Description IEnumerator Overrides EntityBehavior.PerformInstance(EntityController)"
   },
   "api/GrandmaGreen.GameSystemDummy.html": {
     "href": "api/GrandmaGreen.GameSystemDummy.html",
     "title": "Class GameSystemDummy",
     "keywords": "Class GameSystemDummy Inheritance Object GameSystemDummy Namespace : GrandmaGreen Assembly : cs.temp.dll.dll Syntax public class GameSystemDummy : MonoBehaviour Methods AddTrait() Declaration public void AddTrait() SampleTest() Declaration public int SampleTest() Returns Type Description Int32"
   },
-  "api/GrandmaGreen.GardenAreaController.html": {
-    "href": "api/GrandmaGreen.GardenAreaController.html",
+  "api/GrandmaGreen.Garden.Allele.html": {
+    "href": "api/GrandmaGreen.Garden.Allele.html",
+    "title": "Enum Allele",
+    "keywords": "Enum Allele Namespace : GrandmaGreen.Garden Assembly : cs.temp.dll.dll Syntax public enum Allele Fields Name Description dominant recessive"
+  },
+  "api/GrandmaGreen.Garden.BasePhenotypeData.html": {
+    "href": "api/GrandmaGreen.Garden.BasePhenotypeData.html",
+    "title": "Class BasePhenotypeData",
+    "keywords": "Class BasePhenotypeData Inheritance Object BasePhenotypeData FlowerPhenotypeData Namespace : GrandmaGreen.Garden Assembly : cs.temp.dll.dll Syntax public abstract class BasePhenotypeData : ScriptableObject Fields traitList Declaration protected ITraitSetData[] traitList Field Value Type Description ITraitSetData [] Properties TraitCount Declaration public virtual int TraitCount { get; } Property Value Type Description Int32 TraitList Declaration public ITraitSetData[] TraitList { get; } Property Value Type Description ITraitSetData [] Methods SetTraitData() Declaration public abstract void SetTraitData() Trait<T>(Int32) Declaration public virtual T Trait<T>(int index) where T : class, ITraitSetData Parameters Type Name Description Int32 index Returns Type Description T Type Parameters Name Description T"
+  },
+  "api/GrandmaGreen.Garden.ColorSet.html": {
+    "href": "api/GrandmaGreen.Garden.ColorSet.html",
+    "title": "Class ColorSet",
+    "keywords": "Class ColorSet Inheritance Object TraitSetData < Color > ColorSet Implements ITraitSetData Inherited Members TraitSetData<Color>.weight TraitSetData<Color>.recessive TraitSetData<Color>.dominant TraitSetData<Color>.mixed TraitSetData<Color>.ITraitSetData.weight TraitSetData<Color>.type TraitSetData<Color>.ITraitSetData.recessive TraitSetData<Color>.ITraitSetData.dominant TraitSetData<Color>.ITraitSetData.mixed Object.ToString() Object.Equals(Object) Object.Equals(Object, Object) Object.ReferenceEquals(Object, Object) Object.GetHashCode() Object.GetType() Object.MemberwiseClone() Namespace : GrandmaGreen.Garden Assembly : cs.temp.dll.dll Syntax public class ColorSet : TraitSetData<Color>, ITraitSetData Implements ITraitSetData"
+  },
+  "api/GrandmaGreen.Garden.FlowerPhenotypeData.html": {
+    "href": "api/GrandmaGreen.Garden.FlowerPhenotypeData.html",
+    "title": "Class FlowerPhenotypeData",
+    "keywords": "Class FlowerPhenotypeData Inheritance Object BasePhenotypeData FlowerPhenotypeData Inherited Members BasePhenotypeData.traitList BasePhenotypeData.TraitList BasePhenotypeData.Trait<T>(Int32) Namespace : GrandmaGreen.Garden Assembly : cs.temp.dll.dll Syntax public class FlowerPhenotypeData : BasePhenotypeData Properties TraitCount Declaration public override int TraitCount { get; } Property Value Type Description Int32 Overrides BasePhenotypeData.TraitCount Methods SetTraitData() Declaration public override void SetTraitData() Overrides BasePhenotypeData.SetTraitData()"
+  },
+  "api/GrandmaGreen.Garden.GardenAreaController.html": {
+    "href": "api/GrandmaGreen.Garden.GardenAreaController.html",
     "title": "Class GardenAreaController",
-    "keywords": "Class GardenAreaController TODO: Implement functionality for save/loading changed tiles Inheritance Object GardenAreaController Namespace : GrandmaGreen Assembly : cs.temp.dll.dll Syntax public class GardenAreaController : MonoBehaviour Fields areaBounds Declaration public Collider areaBounds Field Value Type Description Collider areaServicer Declaration public GardenAreaServicer areaServicer Field Value Type Description GardenAreaServicer gardenData Declaration public GardenData gardenData Field Value Type Description GardenData pathfinder Declaration public Pathfinder pathfinder Field Value Type Description Pathfinder plantInteractablePrefab Declaration public PlantInteractable plantInteractablePrefab Field Value Type Description PlantInteractable tilemap Declaration public Tilemap tilemap Field Value Type Description Tilemap Properties currentSelection Declaration public GameObject currentSelection { get; } Property Value Type Description GameObject Methods BakeNavGrid() Declaration public void BakeNavGrid() GardenSelection(Vector3) Declaration public void GardenSelection(Vector3 worldPos) Parameters Type Name Description Vector3 worldPos Harvest(BasePhenotypeData, Genotype) Declaration public void Harvest(BasePhenotypeData phenotypeData, Genotype genotype) Parameters Type Name Description BasePhenotypeData phenotypeData Genotype genotype ParseTilemap() Declaration public void ParseTilemap() PlantInteraction() Declaration public void PlantInteraction() Events onGardenSelection Declaration public event Action<Vector2Int> onGardenSelection Event Type Type Description Action < Vector2Int >"
+    "keywords": "Class GardenAreaController TODO: Implement functionality for save/loading changed tiles Inheritance Object GardenAreaController Namespace : GrandmaGreen.Garden Assembly : cs.temp.dll.dll Syntax public class GardenAreaController : MonoBehaviour Fields areaBounds Declaration public Collider areaBounds Field Value Type Description Collider areaServicer Declaration public GardenAreaServicer areaServicer Field Value Type Description GardenAreaServicer gardenData Declaration public GardenData gardenData Field Value Type Description GardenData pathfinder Declaration public Pathfinder pathfinder Field Value Type Description Pathfinder plantInteractablePrefab Declaration public PlantInteractable plantInteractablePrefab Field Value Type Description PlantInteractable tilemap Declaration public Tilemap tilemap Field Value Type Description Tilemap Properties currentSelection Declaration public GameObject currentSelection { get; } Property Value Type Description GameObject Methods BakeNavGrid() Declaration public void BakeNavGrid() GardenSelection(Vector3) Declaration public void GardenSelection(Vector3 worldPos) Parameters Type Name Description Vector3 worldPos Harvest(BasePhenotypeData, Genotype) Declaration public void Harvest(BasePhenotypeData phenotypeData, Genotype genotype) Parameters Type Name Description BasePhenotypeData phenotypeData Genotype genotype ParseTilemap() Declaration public void ParseTilemap() PlantInteraction() Declaration public void PlantInteraction() Events onGardenSelection Declaration public event Action<Vector2Int> onGardenSelection Event Type Type Description Action < Vector2Int >"
   },
-  "api/GrandmaGreen.GardenAreaServicer.html": {
-    "href": "api/GrandmaGreen.GardenAreaServicer.html",
+  "api/GrandmaGreen.Garden.GardenAreaServicer.html": {
+    "href": "api/GrandmaGreen.Garden.GardenAreaServicer.html",
     "title": "Class GardenAreaServicer",
-    "keywords": "Class GardenAreaServicer Inheritance Object GardenAreaServicer Implements IPathfinderServicer IServicer < Pathfinder > Namespace : GrandmaGreen Assembly : cs.temp.dll.dll Syntax public class GardenAreaServicer : ScriptableObject, IPathfinderServicer, IServicer<Pathfinder> Methods DeregisterService(Pathfinder) Declaration public void DeregisterService(Pathfinder pathfinder) Parameters Type Name Description Pathfinder pathfinder DesregisterAreaController(GardenAreaController) Declaration public void DesregisterAreaController(GardenAreaController areaController) Parameters Type Name Description GardenAreaController areaController RegisterAreaController(GardenAreaController) Declaration public void RegisterAreaController(GardenAreaController areaController) Parameters Type Name Description GardenAreaController areaController RegisterService(Pathfinder) Declaration public void RegisterService(Pathfinder pathfinder) Parameters Type Name Description Pathfinder pathfinder StartServices() Declaration public void StartServices() StopServices() Declaration public void StopServices() Implements IPathfinderServicer IServicer<T>"
+    "keywords": "Class GardenAreaServicer Inheritance Object GardenAreaServicer Implements IPathfinderServicer IServicer < Pathfinder > Namespace : GrandmaGreen.Garden Assembly : cs.temp.dll.dll Syntax public class GardenAreaServicer : ScriptableObject, IPathfinderServicer, IServicer<Pathfinder> Methods DeregisterService(Pathfinder) Declaration public void DeregisterService(Pathfinder pathfinder) Parameters Type Name Description Pathfinder pathfinder DesregisterAreaController(GardenAreaController) Declaration public void DesregisterAreaController(GardenAreaController areaController) Parameters Type Name Description GardenAreaController areaController RegisterAreaController(GardenAreaController) Declaration public void RegisterAreaController(GardenAreaController areaController) Parameters Type Name Description GardenAreaController areaController RegisterService(Pathfinder) Declaration public void RegisterService(Pathfinder pathfinder) Parameters Type Name Description Pathfinder pathfinder StartServices() Declaration public void StartServices() StopServices() Declaration public void StopServices() Implements IPathfinderServicer IServicer<T>"
   },
-  "api/GrandmaGreen.GardenData.html": {
-    "href": "api/GrandmaGreen.GardenData.html",
+  "api/GrandmaGreen.Garden.GardenData.html": {
+    "href": "api/GrandmaGreen.Garden.GardenData.html",
     "title": "Class GardenData",
-    "keywords": "Class GardenData Inheritance Object GardenData Namespace : GrandmaGreen Assembly : cs.temp.dll.dll Syntax public class GardenData : ScriptableObject Fields cellSize Declaration public Vector2 cellSize Field Value Type Description Vector2 gridSize Declaration public Vector2Int gridSize Field Value Type Description Vector2Int plantStates Declaration public List<PlantState> plantStates Field Value Type Description List < PlantState > worldOrigin Declaration public Vector3 worldOrigin Field Value Type Description Vector3 Methods IndexToWorldPos(Int32) Declaration public Vector3 IndexToWorldPos(int index) Parameters Type Name Description Int32 index Returns Type Description Vector3 WorldToGrid(Vector3) Declaration public Vector2Int WorldToGrid(Vector3 position) Parameters Type Name Description Vector3 position Returns Type Description Vector2Int"
+    "keywords": "Class GardenData Inheritance Object GardenData Namespace : GrandmaGreen.Garden Assembly : cs.temp.dll.dll Syntax public class GardenData : ScriptableObject Fields cellSize Declaration public Vector2 cellSize Field Value Type Description Vector2 gridSize Declaration public Vector2Int gridSize Field Value Type Description Vector2Int plantStates Declaration public List<PlantState> plantStates Field Value Type Description List < PlantState > worldOrigin Declaration public Vector3 worldOrigin Field Value Type Description Vector3 Methods IndexToWorldPos(Int32) Declaration public Vector3 IndexToWorldPos(int index) Parameters Type Name Description Int32 index Returns Type Description Vector3 WorldToGrid(Vector3) Declaration public Vector2Int WorldToGrid(Vector3 position) Parameters Type Name Description Vector3 position Returns Type Description Vector2Int"
   },
-  "api/GrandmaGreen.GardenPlant.html": {
-    "href": "api/GrandmaGreen.GardenPlant.html",
+  "api/GrandmaGreen.Garden.GardenPlant.html": {
+    "href": "api/GrandmaGreen.Garden.GardenPlant.html",
     "title": "Class GardenPlant",
-    "keywords": "Class GardenPlant Inheritance Object GardenPlant Implements IGameInteractable Namespace : GrandmaGreen Assembly : cs.temp.dll.dll Syntax public class GardenPlant : MonoBehaviour Fields childGenotype Declaration public Genotype childGenotype Field Value Type Description Genotype genotype Declaration public Genotype genotype Field Value Type Description Genotype neighbours Declaration public List<GardenPlant> neighbours Field Value Type Description List < GardenPlant > phenotypeData Declaration public BasePhenotypeData phenotypeData Field Value Type Description BasePhenotypeData plantSprite Declaration public SpriteRenderer plantSprite Field Value Type Description SpriteRenderer punnetSquare Declaration public List<Genotype> punnetSquare Field Value Type Description List < Genotype > traitList Declaration public ITraitSetData[] traitList Field Value Type Description ITraitSetData [] Methods DoInteraction(Vector3, PointerState) Declaration public void DoInteraction(Vector3 interactionPoint, PointerState interactionState) Parameters Type Name Description Vector3 interactionPoint PointerState interactionState Harvest() Declaration public void Harvest() Implements IGameInteractable"
+    "keywords": "Class GardenPlant PLACEHOLDER GARDEN PLANT TO BE REPLACED BY PLANTINTERACTBALE Inheritance Object GardenPlant Implements IGameInteractable Namespace : GrandmaGreen.Garden Assembly : cs.temp.dll.dll Syntax public class GardenPlant : MonoBehaviour Fields childGenotype Declaration public Genotype childGenotype Field Value Type Description Genotype genotype Declaration public Genotype genotype Field Value Type Description Genotype neighbours Declaration public List<GardenPlant> neighbours Field Value Type Description List < GardenPlant > phenotypeData Declaration public BasePhenotypeData phenotypeData Field Value Type Description BasePhenotypeData plantSprite Declaration public SpriteRenderer plantSprite Field Value Type Description SpriteRenderer punnetSquare Declaration public List<Genotype> punnetSquare Field Value Type Description List < Genotype > traitList Declaration public ITraitSetData[] traitList Field Value Type Description ITraitSetData [] Methods DoInteraction(Vector3, PointerState) Declaration public void DoInteraction(Vector3 interactionPoint, PointerState interactionState) Parameters Type Name Description Vector3 interactionPoint PointerState interactionState Harvest() Declaration public void Harvest() Implements IGameInteractable"
   },
-  "api/GrandmaGreen.Genotype.html": {
-    "href": "api/GrandmaGreen.Genotype.html",
+  "api/GrandmaGreen.Garden.Genotype.html": {
+    "href": "api/GrandmaGreen.Garden.Genotype.html",
     "title": "Class Genotype",
-    "keywords": "Class Genotype Inheritance Object Genotype Inherited Members Object.ToString() Object.Equals(Object) Object.Equals(Object, Object) Object.ReferenceEquals(Object, Object) Object.GetHashCode() Object.GetType() Object.MemberwiseClone() Namespace : GrandmaGreen Assembly : cs.temp.dll.dll Syntax [Serializable] public class Genotype Constructors Genotype() Declaration public Genotype() Fields MAX_TRAIT_COUNT Declaration public static readonly int MAX_TRAIT_COUNT Field Value Type Description Int32 Properties Item[Int32] Declaration public Trait this[int i] { get; set; } Parameters Type Name Description Int32 i Property Value Type Description Trait"
+    "keywords": "Class Genotype Inheritance Object Genotype Inherited Members Object.ToString() Object.Equals(Object) Object.Equals(Object, Object) Object.ReferenceEquals(Object, Object) Object.GetHashCode() Object.GetType() Object.MemberwiseClone() Namespace : GrandmaGreen.Garden Assembly : cs.temp.dll.dll Syntax [Serializable] public class Genotype Constructors Genotype() Declaration public Genotype() Fields MAX_TRAIT_COUNT Declaration public static readonly int MAX_TRAIT_COUNT Field Value Type Description Int32 Properties Item[Int32] Declaration public Trait this[int i] { get; set; } Parameters Type Name Description Int32 i Property Value Type Description Trait"
   },
-  "api/GrandmaGreen.GrandmaEntity.html": {
-    "href": "api/GrandmaGreen.GrandmaEntity.html",
-    "title": "Class GrandmaEntity",
-    "keywords": "Class GrandmaEntity Inheritance Object GameEntity GrandmaEntity Implements IPathAgent IServiceUser < Pathfinder , IPathfinderServicer > Inherited Members GameEntity.controller GameEntity.animator GameEntity.entityStateMachine GameEntity.splineFollow GameEntity.smoothFactor GameEntity.pathfinderServicer GameEntity.isPathing GameEntity.InitalizeStateMachine() GameEntity.OnEnable() GameEntity.OnDisable() GameEntity.Update() GameEntity.FixedUpdate() GameEntity.RequestPath(int2, int2) GameEntity.RequestPath(Vector3) GameEntity.FollowPath(float3[]) GameEntity.CancelPath() GameEntity.CurrentPos() Namespace : GrandmaGreen Assembly : cs.temp.dll.dll Syntax public class GrandmaEntity : GameEntity, IPathAgent, IServiceUser<Pathfinder, IPathfinderServicer> Implements IPathAgent IServiceUser<U, T>"
+  "api/GrandmaGreen.Garden.html": {
+    "href": "api/GrandmaGreen.Garden.html",
+    "title": "Namespace GrandmaGreen.Garden",
+    "keywords": "Namespace GrandmaGreen.Garden Classes BasePhenotypeData ColorSet FlowerPhenotypeData GardenAreaController TODO: Implement functionality for save/loading changed tiles GardenAreaServicer GardenData GardenPlant PLACEHOLDER GARDEN PLANT TO BE REPLACED BY PLANTINTERACTBALE Genotype PlantInteractable SizeSet TraitData<T> TraitSetData<T> Structs PlantState Trait Interfaces ITraitData ITraitSetData Enums Allele"
+  },
+  "api/GrandmaGreen.Garden.ITraitData.html": {
+    "href": "api/GrandmaGreen.Garden.ITraitData.html",
+    "title": "Interface ITraitData",
+    "keywords": "Interface ITraitData Namespace : GrandmaGreen.Garden Assembly : cs.temp.dll.dll Syntax public interface ITraitData Properties type Declaration Type type { get; } Property Value Type Description Type"
+  },
+  "api/GrandmaGreen.Garden.ITraitSetData.html": {
+    "href": "api/GrandmaGreen.Garden.ITraitSetData.html",
+    "title": "Interface ITraitSetData",
+    "keywords": "Interface ITraitSetData Namespace : GrandmaGreen.Garden Assembly : cs.temp.dll.dll Syntax public interface ITraitSetData Properties dominant Declaration ITraitData dominant { get; } Property Value Type Description ITraitData mixed Declaration ITraitData mixed { get; } Property Value Type Description ITraitData recessive Declaration ITraitData recessive { get; } Property Value Type Description ITraitData type Declaration Type type { get; } Property Value Type Description Type weight Declaration int weight { get; } Property Value Type Description Int32"
+  },
+  "api/GrandmaGreen.Garden.PlantInteractable.html": {
+    "href": "api/GrandmaGreen.Garden.PlantInteractable.html",
+    "title": "Class PlantInteractable",
+    "keywords": "Class PlantInteractable Inheritance Object PlantInteractable Namespace : GrandmaGreen.Garden Assembly : cs.temp.dll.dll Syntax public class PlantInteractable : MonoBehaviour"
+  },
+  "api/GrandmaGreen.Garden.PlantState.html": {
+    "href": "api/GrandmaGreen.Garden.PlantState.html",
+    "title": "Struct PlantState",
+    "keywords": "Struct PlantState Inherited Members ValueType.Equals(Object) ValueType.GetHashCode() ValueType.ToString() Object.Equals(Object, Object) Object.ReferenceEquals(Object, Object) Object.GetType() Namespace : GrandmaGreen.Garden Assembly : cs.temp.dll.dll Syntax [Serializable] public struct PlantState Fields genotype Declaration public Genotype genotype Field Value Type Description Genotype gridIndex Declaration public int gridIndex Field Value Type Description Int32 phenotypeIndex Declaration public int phenotypeIndex Field Value Type Description Int32"
+  },
+  "api/GrandmaGreen.Garden.SizeSet.html": {
+    "href": "api/GrandmaGreen.Garden.SizeSet.html",
+    "title": "Class SizeSet",
+    "keywords": "Class SizeSet Inheritance Object TraitSetData < Single > SizeSet Implements ITraitSetData Inherited Members TraitSetData<Single>.weight TraitSetData<Single>.recessive TraitSetData<Single>.dominant TraitSetData<Single>.mixed TraitSetData<Single>.ITraitSetData.weight TraitSetData<Single>.type TraitSetData<Single>.ITraitSetData.recessive TraitSetData<Single>.ITraitSetData.dominant TraitSetData<Single>.ITraitSetData.mixed Object.ToString() Object.Equals(Object) Object.Equals(Object, Object) Object.ReferenceEquals(Object, Object) Object.GetHashCode() Object.GetType() Object.MemberwiseClone() Namespace : GrandmaGreen.Garden Assembly : cs.temp.dll.dll Syntax public class SizeSet : TraitSetData<float>, ITraitSetData Implements ITraitSetData"
+  },
+  "api/GrandmaGreen.Garden.Trait.html": {
+    "href": "api/GrandmaGreen.Garden.Trait.html",
+    "title": "Struct Trait",
+    "keywords": "Struct Trait Inherited Members ValueType.Equals(Object) ValueType.GetHashCode() ValueType.ToString() Object.Equals(Object, Object) Object.ReferenceEquals(Object, Object) Object.GetType() Namespace : GrandmaGreen.Garden Assembly : cs.temp.dll.dll Syntax [Serializable] public struct Trait Fields allele1 Declaration public Allele allele1 Field Value Type Description Allele allele2 Declaration public Allele allele2 Field Value Type Description Allele"
+  },
+  "api/GrandmaGreen.Garden.TraitData-1.html": {
+    "href": "api/GrandmaGreen.Garden.TraitData-1.html",
+    "title": "Class TraitData<T>",
+    "keywords": "Class TraitData<T> Inheritance Object TraitData<T> Implements ITraitData Inherited Members Object.ToString() Object.Equals(Object) Object.Equals(Object, Object) Object.ReferenceEquals(Object, Object) Object.GetHashCode() Object.GetType() Object.MemberwiseClone() Namespace : GrandmaGreen.Garden Assembly : cs.temp.dll.dll Syntax public class TraitData<T> : ITraitData where T : struct Type Parameters Name Description T Fields value Declaration public T value Field Value Type Description T Properties type Declaration public Type type { get; } Property Value Type Description Type Implements ITraitData"
+  },
+  "api/GrandmaGreen.Garden.TraitSetData-1.html": {
+    "href": "api/GrandmaGreen.Garden.TraitSetData-1.html",
+    "title": "Class TraitSetData<T>",
+    "keywords": "Class TraitSetData<T> Inheritance Object TraitSetData<T> ColorSet SizeSet Implements ITraitSetData Inherited Members Object.ToString() Object.Equals(Object) Object.Equals(Object, Object) Object.ReferenceEquals(Object, Object) Object.GetHashCode() Object.GetType() Object.MemberwiseClone() Namespace : GrandmaGreen.Garden Assembly : cs.temp.dll.dll Syntax public class TraitSetData<T> : ITraitSetData where T : struct Type Parameters Name Description T Fields weight Declaration public int weight Field Value Type Description Int32 Properties dominant Declaration public TraitData<T> dominant { get; } Property Value Type Description TraitData <T> mixed Declaration public TraitData<T> mixed { get; } Property Value Type Description TraitData <T> recessive Declaration public TraitData<T> recessive { get; } Property Value Type Description TraitData <T> type Declaration public Type type { get; } Property Value Type Description Type Explicit Interface Implementations ITraitSetData.dominant Declaration ITraitData ITraitSetData.dominant { get; } Returns Type Description ITraitData ITraitSetData.mixed Declaration ITraitData ITraitSetData.mixed { get; } Returns Type Description ITraitData ITraitSetData.recessive Declaration ITraitData ITraitSetData.recessive { get; } Returns Type Description ITraitData ITraitSetData.weight Declaration int ITraitSetData.weight { get; } Returns Type Description Int32 Implements ITraitSetData"
   },
   "api/GrandmaGreen.html": {
     "href": "api/GrandmaGreen.html",
     "title": "Namespace GrandmaGreen",
-    "keywords": "Namespace GrandmaGreen Classes ActionPlanner AIController BasePhenotypeData ColorSet EntityAction EntityController EntityStateData FlowerPhenotypeData GameEntity GameSystemDummy GardenAreaController TODO: Implement functionality for save/loading changed tiles GardenAreaServicer GardenData GardenPlant Genotype GrandmaEntity PlayerController SizeSet TraitData<T> TraitSetData<T> Structs PlantState Trait Interfaces IPathAgent IPathfinderServicer IServicer<T> IServiceUser<U, T> ITraitData ITraitSetData Enums Allele EntityPermissions EntityState"
+    "keywords": "Namespace GrandmaGreen Classes GameSystemDummy Interfaces IPathAgent IPathfinderServicer IServicer<T> IServiceUser<U, T>"
   },
   "api/GrandmaGreen.IPathAgent.html": {
     "href": "api/GrandmaGreen.IPathAgent.html",
     "title": "Interface IPathAgent",
-    "keywords": "Interface IPathAgent Inherited Members IServiceUser<Pathfinder, IPathfinderServicer>.Servicer IServiceUser<Pathfinder, IPathfinderServicer>.SetServicer(IPathfinderServicer) IServiceUser<Pathfinder, IPathfinderServicer>.ClearServicer() Namespace : GrandmaGreen Assembly : cs.temp.dll.dll Syntax public interface IPathAgent : IServiceUser<Pathfinder, IPathfinderServicer> Properties isPathing Declaration bool isPathing { get; } Property Value Type Description Boolean Methods CurrentPos() Declaration Vector3 CurrentPos() Returns Type Description Vector3 FollowPath(float3[]) Declaration void FollowPath(float3[] path) Parameters Type Name Description float3 [] path RequestPath(int2, int2) Declaration float3[] RequestPath(int2 startPos, int2 endPos) Parameters Type Name Description int2 startPos int2 endPos Returns Type Description float3 []"
+    "keywords": "Interface IPathAgent Inherited Members IServiceUser<Pathfinder, IPathfinderServicer>.Servicer IServiceUser<Pathfinder, IPathfinderServicer>.SetServicer(IPathfinderServicer) IServiceUser<Pathfinder, IPathfinderServicer>.ClearServicer() Namespace : GrandmaGreen Assembly : cs.temp.dll.dll Syntax public interface IPathAgent : IServiceUser<Pathfinder, IPathfinderServicer> Properties isPathing Declaration bool isPathing { get; } Property Value Type Description Boolean Methods CalculatePathable(Int32) Declaration float3[] CalculatePathable(int range) Parameters Type Name Description Int32 range Returns Type Description float3 [] CheckPath(int2) Declaration float3[] CheckPath(int2 destination) Parameters Type Name Description int2 destination Returns Type Description float3 [] CurrentPos() Declaration Vector3 CurrentPos() Returns Type Description Vector3 FollowPath(float3[]) Declaration void FollowPath(float3[] path) Parameters Type Name Description float3 [] path"
   },
   "api/GrandmaGreen.IPathfinderServicer.html": {
     "href": "api/GrandmaGreen.IPathfinderServicer.html",
@@ -153,26 +238,6 @@
     "href": "api/GrandmaGreen.IServiceUser-2.html",
     "title": "Interface IServiceUser<U, T>",
     "keywords": "Interface IServiceUser<U, T> Namespace : GrandmaGreen Assembly : cs.temp.dll.dll Syntax public interface IServiceUser<U, T> where T : IServicer<U> Type Parameters Name Description U T Properties Servicer Declaration static T Servicer { get; } Property Value Type Description T Methods ClearServicer() Declaration static void ClearServicer() SetServicer(T) Declaration static void SetServicer(T servicer) Parameters Type Name Description T servicer"
-  },
-  "api/GrandmaGreen.ITraitData.html": {
-    "href": "api/GrandmaGreen.ITraitData.html",
-    "title": "Interface ITraitData",
-    "keywords": "Interface ITraitData Namespace : GrandmaGreen Assembly : cs.temp.dll.dll Syntax public interface ITraitData Properties type Declaration Type type { get; } Property Value Type Description Type"
-  },
-  "api/GrandmaGreen.ITraitSetData.html": {
-    "href": "api/GrandmaGreen.ITraitSetData.html",
-    "title": "Interface ITraitSetData",
-    "keywords": "Interface ITraitSetData Namespace : GrandmaGreen Assembly : cs.temp.dll.dll Syntax public interface ITraitSetData Properties dominant Declaration ITraitData dominant { get; } Property Value Type Description ITraitData mixed Declaration ITraitData mixed { get; } Property Value Type Description ITraitData recessive Declaration ITraitData recessive { get; } Property Value Type Description ITraitData type Declaration Type type { get; } Property Value Type Description Type weight Declaration int weight { get; } Property Value Type Description Int32"
-  },
-  "api/GrandmaGreen.PlantState.html": {
-    "href": "api/GrandmaGreen.PlantState.html",
-    "title": "Struct PlantState",
-    "keywords": "Struct PlantState Inherited Members ValueType.Equals(Object) ValueType.GetHashCode() ValueType.ToString() Object.Equals(Object, Object) Object.ReferenceEquals(Object, Object) Object.GetType() Namespace : GrandmaGreen Assembly : cs.temp.dll.dll Syntax [Serializable] public struct PlantState Fields genotype Declaration public Genotype genotype Field Value Type Description Genotype gridIndex Declaration public int gridIndex Field Value Type Description Int32 phenotypeIndex Declaration public int phenotypeIndex Field Value Type Description Int32"
-  },
-  "api/GrandmaGreen.PlayerController.html": {
-    "href": "api/GrandmaGreen.PlayerController.html",
-    "title": "Class PlayerController",
-    "keywords": "Class PlayerController Inheritance Object EntityController PlayerController Inherited Members EntityController.permissions EntityController.entity EntityController.active EntityController.RegisterEntity(GameEntity) EntityController.PathTo(Vector3) EntityController.PathTo(int2, int2) Namespace : GrandmaGreen Assembly : cs.temp.dll.dll Syntax public class PlayerController : EntityController Methods PauseController() Declaration public override void PauseController() Overrides EntityController.PauseController() StartController() Declaration public override void StartController() Overrides EntityController.StartController()"
   },
   "api/GrandmaGreen.SaveSystem.ComponentStore-1.html": {
     "href": "api/GrandmaGreen.SaveSystem.ComponentStore-1.html",
@@ -218,26 +283,6 @@
     "href": "api/GrandmaGreen.SaveSystem.SaveManager.html",
     "title": "Class SaveManager",
     "keywords": "Class SaveManager The SaveManager class is in charge of high level saving. It is the only part of the save system that lives in the game. Upon awakening, it instantiates a new SaveController. It also tracks the auto save intervals, then pings the SaveController at appropriate moments. The SaveManager also stores an internal list of every ObjectSaver relevant to the whole game. Inheritance Object SaveManager Namespace : GrandmaGreen.SaveSystem Assembly : cs.temp.dll.dll Syntax public class SaveManager : MonoBehaviour Methods Awake() Declaration public void Awake() TriggerSave() Triggers the SaveController AutoSave function. Declaration public void TriggerSave() Update() On Update, the save manager performs a check to see if the game must be saved. The game is auto saved after certain predetermined time intervals. Declaration public void Update()"
-  },
-  "api/GrandmaGreen.SizeSet.html": {
-    "href": "api/GrandmaGreen.SizeSet.html",
-    "title": "Class SizeSet",
-    "keywords": "Class SizeSet Inheritance Object TraitSetData < Single > SizeSet Implements ITraitSetData Inherited Members TraitSetData<Single>.weight TraitSetData<Single>.recessive TraitSetData<Single>.dominant TraitSetData<Single>.mixed TraitSetData<Single>.ITraitSetData.weight TraitSetData<Single>.type TraitSetData<Single>.ITraitSetData.recessive TraitSetData<Single>.ITraitSetData.dominant TraitSetData<Single>.ITraitSetData.mixed Object.ToString() Object.Equals(Object) Object.Equals(Object, Object) Object.ReferenceEquals(Object, Object) Object.GetHashCode() Object.GetType() Object.MemberwiseClone() Namespace : GrandmaGreen Assembly : cs.temp.dll.dll Syntax public class SizeSet : TraitSetData<float>, ITraitSetData Implements ITraitSetData"
-  },
-  "api/GrandmaGreen.Trait.html": {
-    "href": "api/GrandmaGreen.Trait.html",
-    "title": "Struct Trait",
-    "keywords": "Struct Trait Inherited Members ValueType.Equals(Object) ValueType.GetHashCode() ValueType.ToString() Object.Equals(Object, Object) Object.ReferenceEquals(Object, Object) Object.GetType() Namespace : GrandmaGreen Assembly : cs.temp.dll.dll Syntax [Serializable] public struct Trait Fields allele1 Declaration public Allele allele1 Field Value Type Description Allele allele2 Declaration public Allele allele2 Field Value Type Description Allele"
-  },
-  "api/GrandmaGreen.TraitData-1.html": {
-    "href": "api/GrandmaGreen.TraitData-1.html",
-    "title": "Class TraitData<T>",
-    "keywords": "Class TraitData<T> Inheritance Object TraitData<T> Implements ITraitData Inherited Members Object.ToString() Object.Equals(Object) Object.Equals(Object, Object) Object.ReferenceEquals(Object, Object) Object.GetHashCode() Object.GetType() Object.MemberwiseClone() Namespace : GrandmaGreen Assembly : cs.temp.dll.dll Syntax public class TraitData<T> : ITraitData where T : struct Type Parameters Name Description T Fields value Declaration public T value Field Value Type Description T Properties type Declaration public Type type { get; } Property Value Type Description Type Implements ITraitData"
-  },
-  "api/GrandmaGreen.TraitSetData-1.html": {
-    "href": "api/GrandmaGreen.TraitSetData-1.html",
-    "title": "Class TraitSetData<T>",
-    "keywords": "Class TraitSetData<T> Inheritance Object TraitSetData<T> ColorSet SizeSet Implements ITraitSetData Inherited Members Object.ToString() Object.Equals(Object) Object.Equals(Object, Object) Object.ReferenceEquals(Object, Object) Object.GetHashCode() Object.GetType() Object.MemberwiseClone() Namespace : GrandmaGreen Assembly : cs.temp.dll.dll Syntax public class TraitSetData<T> : ITraitSetData where T : struct Type Parameters Name Description T Fields weight Declaration public int weight Field Value Type Description Int32 Properties dominant Declaration public TraitData<T> dominant { get; } Property Value Type Description TraitData <T> mixed Declaration public TraitData<T> mixed { get; } Property Value Type Description TraitData <T> recessive Declaration public TraitData<T> recessive { get; } Property Value Type Description TraitData <T> type Declaration public Type type { get; } Property Value Type Description Type Explicit Interface Implementations ITraitSetData.dominant Declaration ITraitData ITraitSetData.dominant { get; } Returns Type Description ITraitData ITraitSetData.mixed Declaration ITraitData ITraitSetData.mixed { get; } Returns Type Description ITraitData ITraitSetData.recessive Declaration ITraitData ITraitSetData.recessive { get; } Returns Type Description ITraitData ITraitSetData.weight Declaration int ITraitSetData.weight { get; } Returns Type Description Int32 Implements ITraitSetData"
   },
   "guide/coding.html": {
     "href": "guide/coding.html",
