@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Unity.Mathematics;
 
-namespace GrandmaGreen
+namespace GrandmaGreen.Garden
 {
     [System.Serializable]
     public struct PlantState
@@ -13,7 +13,7 @@ namespace GrandmaGreen
         public Genotype genotype;
     }
 
-    [CreateAssetMenu()]
+    [CreateAssetMenu(menuName = "GrandmaGreen/Garden/Garden Data")]
     public class GardenData : ScriptableObject
     {
         public Vector2Int gridSize;

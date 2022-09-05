@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Pathfinding;
 
-namespace GrandmaGreen
+namespace GrandmaGreen.Entities
 {
     
     public class GrandmaEntity : GameEntity

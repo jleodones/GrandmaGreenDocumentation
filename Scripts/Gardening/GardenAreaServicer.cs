@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using Pathfinding;
 using UnityEngine;
 
-namespace GrandmaGreen
+namespace GrandmaGreen.Garden
 {
-    [CreateAssetMenu()]
+    [CreateAssetMenu(menuName = "GrandmaGreen/Garden/Garden Area Servicer")]
     public class GardenAreaServicer : ScriptableObject, IPathfinderServicer
     {
         

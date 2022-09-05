@@ -2,7 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlantInteractable : MonoBehaviour
+namespace GrandmaGreen.Garden
 {
-    
+    public class PlantInteractable : MonoBehaviour
+    {
+
+    }
 }

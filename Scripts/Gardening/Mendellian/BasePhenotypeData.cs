@@ -4,7 +4,7 @@ using UnityEngine;
 using Core.Utilities;
 
 
-namespace GrandmaGreen
+namespace GrandmaGreen.Garden
 {
     public abstract class BasePhenotypeData : ScriptableObject
     {

@@ -3,9 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using Core.Input;
 
-namespace GrandmaGreen
+namespace GrandmaGreen.Garden
 {
-    
+
+    /// <summary>
+    /// PLACEHOLDER GARDEN PLANT
+    /// TO BE REPLACED BY PLANTINTERACTBALE
+    /// </summary>
     public class GardenPlant : MonoBehaviour, IGameInteractable
     {
         [Header("References")]

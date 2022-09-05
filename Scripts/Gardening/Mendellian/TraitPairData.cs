@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-namespace GrandmaGreen
+namespace GrandmaGreen.Garden
 {
     public interface ITraitData
     {

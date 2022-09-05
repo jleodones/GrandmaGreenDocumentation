@@ -7,7 +7,7 @@ using UnityEngine.Splines;
 using Core.FSM;
 
 
-namespace GrandmaGreen
+namespace GrandmaGreen.Entities
 {
     public enum EntityState
     {
@@ -36,12 +36,16 @@ namespace GrandmaGreen
         Transition idleToMoving;
         Transition movingToIdle;
 
+        float3[] pathableNodes;
+
+        void Awake()
+        {
+            controller.RegisterEntity(this);
+            InitalizeStateMachine();
+        }
 
         void Start()
         {
-            InitalizeStateMachine();
-            controller.RegisterEntity(this);
-
             entityStateMachine.Enter(EntityState.Idle);
         }
         void OnDestroy()
@@ -53,12 +57,9 @@ namespace GrandmaGreen
         {
             StateMachine.CreateStateMachine<EntityState>(out entityStateMachine);
 
-
             idleToMoving = entityStateMachine.AddTransition(EntityState.Idle, EntityState.MovingTo);
             movingToIdle = entityStateMachine.AddTransition(EntityState.MovingTo, EntityState.Idle);
 
-
-            splineFollow.onComplete += movingToIdle.Trigger;
         }
 
         protected virtual void OnEnable()
@@ -81,26 +82,37 @@ namespace GrandmaGreen
             entityStateMachine.PhysicsUpdate();
         }
 
-        public float3[] RequestPath(int2 startPos, int2 endPos)
+        public float3[] CalculatePathable(int range)
         {
+            int2 startPos;
+
+            startPos.x = (int)math.round((CurrentPos().x - pathfinderServicer.PrimaryService.gridData.worldOrigin.x) / pathfinderServicer.PrimaryService.gridData.cellSize.x);
+            startPos.y = (int)math.round((CurrentPos().y - pathfinderServicer.PrimaryService.gridData.worldOrigin.y) / pathfinderServicer.PrimaryService.gridData.cellSize.y);
+
+            pathableNodes = pathfinderServicer.PrimaryService.BFS(startPos, range);
+
+            return pathableNodes;
+        }
+
+        public float3[] CheckPath(int2 endPos)
+        {
+            int2 startPos;
+
+            startPos.x = (int)math.round((CurrentPos().x - pathfinderServicer.PrimaryService.gridData.worldOrigin.x) / pathfinderServicer.PrimaryService.gridData.cellSize.x);
+            startPos.y = (int)math.round((CurrentPos().y - pathfinderServicer.PrimaryService.gridData.worldOrigin.y) / pathfinderServicer.PrimaryService.gridData.cellSize.y);
             float3[] path = pathfinderServicer.PrimaryService.PathFindAStar(startPos, endPos);
 
             return path;
         }
 
         //TODO: optimize
-        public float3[] RequestPath(Vector3 worldPos)
+        public float3[] CheckPath(Vector3 worldPos)
         {
-            int2 startPos;
             int2 endPos;
-
-            startPos.x = (int)math.round((CurrentPos().x - pathfinderServicer.PrimaryService.gridData.worldOrigin.x) / pathfinderServicer.PrimaryService.gridData.cellSize.x);
-            startPos.y = (int)math.round((CurrentPos().y - pathfinderServicer.PrimaryService.gridData.worldOrigin.y) / pathfinderServicer.PrimaryService.gridData.cellSize.y);
-
             endPos.x = (int)math.round((worldPos.x - pathfinderServicer.PrimaryService.gridData.worldOrigin.x) / pathfinderServicer.PrimaryService.gridData.cellSize.x);
             endPos.y = (int)math.round((worldPos.y - pathfinderServicer.PrimaryService.gridData.worldOrigin.y) / pathfinderServicer.PrimaryService.gridData.cellSize.y);
 
-            return RequestPath(startPos, endPos);
+            return CheckPath(endPos);
         }
 
         public virtual void FollowPath(float3[] path)
@@ -117,6 +129,14 @@ namespace GrandmaGreen
             splineFollow.Play(spline);
 
             idleToMoving.Trigger();
+
+            splineFollow.onComplete += OnPathComplete;
+        }
+
+        public void OnPathComplete()
+        {
+            splineFollow.onComplete -= OnPathComplete;
+            movingToIdle.Trigger();
         }
 
         public virtual void CancelPath()
@@ -128,5 +148,7 @@ namespace GrandmaGreen
         {
             return transform.position;
         }
+
+
     }
 }

@@ -4,12 +4,11 @@ using UnityEngine;
 using NaughtyAttributes;
 using System;
 
-namespace GrandmaGreen
+namespace GrandmaGreen.Garden
 {
-    [CreateAssetMenu()]
+    [CreateAssetMenu(menuName = "GrandmaGreen/Garden/Phenotypes/Flower")]
     public class FlowerPhenotypeData : BasePhenotypeData
     {
-
         public override int TraitCount => 2;
 
         [NaughtyAttributes.Button]

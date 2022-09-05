@@ -13,30 +13,30 @@ MonoBehaviour:
   m_Name: Tulip
   m_EditorClassIdentifier: 
   traitList:
-  - rid: 7449721669333286986
-  - rid: 7449721669333286987
+  - rid: 2773329078621831194
+  - rid: 2773329078621831193
   references:
     version: 2
     RefIds:
-    - rid: 7449721669333286986
-      type: {class: ColorSet, ns: GrandmaGreen, asm: GrandmaGreen}
+    - rid: 2773329078621831193
+      type: {class: ColorSet, ns: GrandmaGreen.Garden, asm: GrandmaGreen}
       data:
         name: Color
-        weight: 10
+        weight: 0
         <recessive>k__BackingField:
-          value: {r: 1, g: 0, b: 0, a: 1}
+          value: {r: 0, g: 0, b: 0, a: 0}
         <dominant>k__BackingField:
-          value: {r: 1, g: 0, b: 0.7705641, a: 1}
+          value: {r: 0, g: 0, b: 0, a: 0}
         <mixed>k__BackingField:
-          value: {r: 0, g: 1, b: 0.14819956, a: 1}
-    - rid: 7449721669333286987
-      type: {class: SizeSet, ns: GrandmaGreen, asm: GrandmaGreen}
+          value: {r: 0, g: 0, b: 0, a: 0}
+    - rid: 2773329078621831194
+      type: {class: SizeSet, ns: GrandmaGreen.Garden, asm: GrandmaGreen}
       data:
         name: Single
         weight: 0
         <recessive>k__BackingField:
-          value: -1
+          value: 0
         <dominant>k__BackingField:
-          value: 1
+          value: 0
         <mixed>k__BackingField:
           value: 0

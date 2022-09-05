@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Sirenix.OdinInspector;
 using GrandmaGreen;
+using GrandmaGreen.Garden;
 using GrandmaGreen.SaveSystem;
 using System;
 

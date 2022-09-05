@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a2851e9f8254f34f81cea6500aeae41, type: 3}
   m_Name: PlayerController
   m_EditorClassIdentifier: 
-  permissions: 10
+  permissions: 7
+  currentBehavior: {fileID: 0}
   entity: {fileID: 0}
-  active: 0
+  active: 1

@@ -4,7 +4,7 @@ using UnityEngine;
 using Pathfinding;
 using UnityEngine.Tilemaps;
 
-namespace GrandmaGreen
+namespace GrandmaGreen.Garden
 {
     /// <summary>
     /// TODO: Implement functionality for save/loading changed tiles 
@@ -32,6 +32,8 @@ namespace GrandmaGreen
             areaServicer.StartServices(); //TODO: MOVE THIS INTO GAMESTATECONTROLLER
             
             areaServicer.RegisterAreaController(this);
+
+            
         }
 
         void Start()

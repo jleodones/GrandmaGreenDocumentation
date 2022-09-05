@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a2ae8ce1d2ee1c41be9c8a91f256050, type: 3}
   m_Name: AIController
   m_EditorClassIdentifier: 
-  permissions: 0
+  permissions: 13
+  currentBehavior: {fileID: 11400000, guid: 05f21c6652e1f42469b79cd060bb0d2e, type: 2}
   entity: {fileID: 0}
   active: 0

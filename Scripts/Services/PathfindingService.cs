@@ -13,7 +13,9 @@ namespace GrandmaGreen
 
     public interface IPathAgent : IServiceUser<Pathfinder, IPathfinderServicer>
     {
-        float3[] RequestPath(int2 startPos, int2 endPos);
+        float3[] CalculatePathable(int range);
+
+        float3[] CheckPath(int2 destination);
 
         void FollowPath(float3[] path);
 
