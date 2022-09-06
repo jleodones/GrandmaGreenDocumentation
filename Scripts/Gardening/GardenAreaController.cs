@@ -7,6 +7,7 @@ using UnityEngine.Tilemaps;
 namespace GrandmaGreen.Garden
 {
     /// <summary>
+    /// Responsible for functionality of a single Garden screen
     /// TODO: Implement functionality for save/loading changed tiles 
     /// </summary>
     public class GardenAreaController : MonoBehaviour
@@ -30,20 +31,22 @@ namespace GrandmaGreen.Garden
         void Awake()
         {
             areaServicer.StartServices(); //TODO: MOVE THIS INTO GAMESTATECONTROLLER
-            
             areaServicer.RegisterAreaController(this);
-
-            
         }
 
         void Start()
         {
+            //TODO: Move this into game state manager
             pathfinder.LoadGrid();
             InitializeGarden();
         }
 
+
         [ContextMenu("Intialize")]
-        void InitializeGarden()
+        /// <summary>
+        /// Initalizes Garden including instantiating plants
+        /// </summary>
+        public void InitializeGarden()
         {
             m_gardenPlants = new GameObject[gardenData.gridSize.x * gardenData.gridSize.y];
             m_plantMap = new Dictionary<PlantInteractable, PlantState>(gardenData.plantStates.Count);
@@ -60,6 +63,10 @@ namespace GrandmaGreen.Garden
         }
 
         [ContextMenu("ParseTilemap")]
+        /// <summary>
+        /// Parses the world tilemap to cached grid nodes 
+        /// Converts grid nodes into higher resolution nav grid
+        /// </summary>
         public void ParseTilemap()
         {
             TilemapGridParser.ParseTilemap(
@@ -78,6 +85,9 @@ namespace GrandmaGreen.Garden
         }
 
         [ContextMenu("BakeNavGrid")]
+        /// <summary>
+        /// Checks agaisnt obstacle colliders to add unpathable nodes
+        /// </summary>
         public void BakeNavGrid()
         {
             NavGridBaker.Bake(
@@ -87,6 +97,7 @@ namespace GrandmaGreen.Garden
                 pathfinder.settings.occupiedTileWeight);
         }
 
+        //Selects a garden tile in world space
         public void GardenSelection(Vector3 worldPos)
         {
             Vector2Int gridPos = gardenData.WorldToGrid(worldPos);
@@ -102,6 +113,9 @@ namespace GrandmaGreen.Garden
             onGardenSelection?.Invoke(gridPos);
         }
 
+        /// <summary>
+        /// NOT USED FOR NOW
+        /// </summary>
         public void PlantInteraction()
         {
             if (currentSelection == null)
@@ -112,6 +126,9 @@ namespace GrandmaGreen.Garden
             currentSelection = null;
         }
 
+        /// <summary>
+        /// Punnet square logic
+        /// </summary>
         List<Genotype> punnetSquare;
         List<GardenPlant> neighbours;
         public void Harvest(BasePhenotypeData phenotypeData, Genotype genotype)
@@ -198,10 +215,13 @@ namespace GrandmaGreen.Garden
 
             Genotype childGenotype = punnetSquare[Random.Range(0, punnetSquare.Count)];
 
-            //  traitList = new ITraitSetData[phenotypeData.TraitCount];
+            ITraitSetData[] traitList = new ITraitSetData[phenotypeData.TraitCount];
 
             for (int i = 0; i < phenotypeData.TraitCount; i++)
             {
+                traitList[i] = phenotypeData.TraitList[i];
+
+                //traitList[i].dominant.
                 if (childGenotype[i].allele1 == Allele.dominant && childGenotype[i].allele2 == Allele.dominant)
                 {
                     //traits[i] = phenotypeData.TraitList[i];

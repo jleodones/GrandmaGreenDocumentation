@@ -6,6 +6,9 @@ using System;
 
 namespace GrandmaGreen.Garden
 {
+    /// <summary>
+    /// Definies the trait list for flower plant
+    /// </summary>
     [CreateAssetMenu(menuName = "GrandmaGreen/Garden/Phenotypes/Flower")]
     public class FlowerPhenotypeData : BasePhenotypeData
     {

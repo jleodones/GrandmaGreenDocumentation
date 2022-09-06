@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace GrandmaGreen.Collections {
     [Serializable]
-    public class Item : MonoBehaviour
+    public struct Item
     {
         public string id;
         public string name;

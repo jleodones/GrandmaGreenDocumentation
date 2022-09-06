@@ -6,6 +6,9 @@ using Unity.Mathematics;
 namespace GrandmaGreen.Garden
 {
     [System.Serializable]
+    /// <summary>
+    /// Struct for plant state storage
+    /// </summary>
     public struct PlantState
     {
         public int gridIndex;
@@ -14,6 +17,10 @@ namespace GrandmaGreen.Garden
     }
 
     [CreateAssetMenu(menuName = "GrandmaGreen/Garden/Garden Data")]
+    /// <summary>
+    /// SO for all data related to garden plants
+    /// TODO: Support for garden decor
+    /// </summary>
     public class GardenData : ScriptableObject
     {
         public Vector2Int gridSize;

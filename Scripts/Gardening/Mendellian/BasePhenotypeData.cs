@@ -6,6 +6,10 @@ using Core.Utilities;
 
 namespace GrandmaGreen.Garden
 {
+    /// <summary>
+    /// Base class for a Phenotype template
+    /// Used to define traits for a garden plant
+    /// </summary>
     public abstract class BasePhenotypeData : ScriptableObject
     {
         public abstract void SetTraitData();

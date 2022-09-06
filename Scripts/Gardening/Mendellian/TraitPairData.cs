@@ -5,11 +5,17 @@ using System;
 
 namespace GrandmaGreen.Garden
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public interface ITraitData
     {
         Type type { get; }
     }
-    
+
+    /// <summary>
+    /// 
+    /// </summary>
     public interface ITraitSetData
     {
         int weight { get; }
@@ -41,7 +47,7 @@ namespace GrandmaGreen.Garden
 
         int ITraitSetData.weight => weight;
         public Type type => typeof(T);
-        
+
         ITraitData ITraitSetData.recessive => recessive;
         ITraitData ITraitSetData.dominant => dominant;
         ITraitData ITraitSetData.mixed => mixed;
