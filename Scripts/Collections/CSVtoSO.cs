@@ -3,6 +3,8 @@ using UnityEditor;
 using System.IO;
 using System.Collections.Generic;
 
+#if (UNITY_EDITOR)
+
 /*
 * This class populates and creates the Collections SO by reading the CSV file
 */
@@ -39,3 +41,4 @@ namespace GrandmaGreen.Collections {
 
     }
 }
+#endif
