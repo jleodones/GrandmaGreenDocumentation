@@ -13,6 +13,13 @@ namespace GrandmaGreen.Collections {
         //unlocked/locked depends on what is in the player's inventory
         public bool unlocked;
         //sprite to grab from assets:
+        public Sprite image;
+        //function to set the image variable - pull from assets folder when calling this
+        //sprite naming convention: starts with id of item for now
+        public void SetImage(Sprite img)
+        {
+            image = img;
+        }
     }
 
 }

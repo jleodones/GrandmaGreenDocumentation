@@ -60,6 +60,14 @@ namespace GrandmaGreen.SaveSystem
             componentStores = new List<IComponentStore>();
         }
         
+        /// <summary>
+        /// Used to set the data with information loaded from the save file. It also sets the newly instantiated SaveController.
+        /// </summary>
+        public void Set(SaveController newSaveController, ObjectSaver os)
+        {
+            saveController = newSaveController;
+            componentStores = os.componentStores;
+        }
         
         /// <summary>
         /// Creates a given ComponentStore for each ObjectSaver ahead of time. This is done through the Unity Editor.
@@ -73,23 +81,82 @@ namespace GrandmaGreen.SaveSystem
 
             componentStores.Add((IComponentStore)Activator.CreateInstance(concrete));
         }
-        
+
         /// <summary>
         /// Adds a component to the appropriate ComponentStore. Stored internally, marked for update, then saved by the SaveController.
-        /// This interfaces directly with game systems.
+        /// Wrappr for the corresponding function in the ComponentStore. This interfaces directly with game systems.
         /// </summary>
-        public void AddComponent<T>(T component) where T : struct
+        /// <param name="index">
+        /// Optional index parameter to insert a component at the given index.
+        /// </param>
+        public void AddComponent<T>(int index, T component) where T : struct
         {
             // Iterates through component stores to find component store of appropriate type.
-            foreach(IComponentStore componentStore in componentStores)
+            foreach (IComponentStore componentStore in componentStores)
             {
-                if(componentStore.GetType() == typeof(T))
+                if (componentStore.GetType() == typeof(T))
                 {
                     // Once found, it adds the new component.
-                    ((ComponentStore<T>) componentStore).AddComponent(component);
-                    
+                    ((ComponentStore<T>)componentStore).AddComponent(index, component);
+
                     // Finally, it adds itself to the save controller's "to be saved" list.
-                    saveController.toBeSaved.Add(this);
+                    // NOTE: Is this still necessary?
+                    if (!saveController.toBeSaved.Contains(this))
+                    {
+                        saveController.toBeSaved.Add(this);
+                    }
+                    break;
+                }
+            }
+        }
+
+        /// <summary>
+        /// Removes a component from the appropriate ComponentStore. Stored internally, then saved by the SaveController.
+        /// Wrapper for the corresponding function in the ComponentStore. This interfaces directly with game systems.
+        /// </summary>
+        /// <param name="index">
+        /// Index for moments where the index of the object is known. -1 signifies that it should use an equality based comparison to
+        /// find the component (no index available).
+        /// </param>
+        public void RemoveComponent<T>(int index, T component) where T : struct
+        {
+            // Iterates through component stores to find component store of appropriate type.
+            foreach (IComponentStore componentStore in componentStores)
+            {
+                if (componentStore.GetType() == typeof(T))
+                {
+                    // Once found, it removes the component.
+                    // Test this, make sure it actually removes the right component.
+                    ((ComponentStore<T>)componentStore).RemoveComponent(index, component);
+                    break;
+                }
+            }
+        }
+
+        public void UpdateValue<T>(int index, T component) where T : struct
+        {
+            // Iterates through component stores to find component store of appropriate type.
+            foreach (IComponentStore componentStore in componentStores)
+            {
+                if (componentStore.GetType() == typeof(T))
+                {
+                    // Once found, it updates the component.
+                    ((ComponentStore<T>)componentStore).UpdateValue(index, component);
+                    break;
+                }
+            }
+        }
+
+        public void RequestData<T>(int index, ref T component) where T : struct
+        {
+            // Iterates through component stores to find component store of appropriate type.
+            foreach (IComponentStore componentStore in componentStores)
+            {
+                if (componentStore.GetType() == typeof(T))
+                {
+                    // Once found, it retrieves the data for the component; since it's passed by reference, the information
+                    // is stored in the component.
+                    ((ComponentStore<T>)componentStore).RequestData(index, ref component);
                     break;
                 }
             }

@@ -32,6 +32,7 @@ namespace GrandmaGreen.Collections {
                 t.id = line[0];
                 t.name = line[1];
                 t.description = line[2];
+
                 collections.items.Add(t);
             }
             //might want to change where this gets saved

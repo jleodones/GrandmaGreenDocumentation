@@ -29,10 +29,9 @@ namespace GrandmaGreen.SaveSystem
         /// <summary>
         /// The components in question.
         /// </summary>
+        [ShowInInspector]
         public List<T> components { get; set; }
 
-        private Type m_type;
-        
         /// <summary>
         /// Constructor initializes member variables and does nothing else.
         /// </summary>
@@ -44,11 +43,18 @@ namespace GrandmaGreen.SaveSystem
         /// <summary>
         /// Adds a component to its internal storage list. Returns true if successful, false otherwise.
         /// </summary>
-        public bool AddComponent(T component)
+        public bool AddComponent(int index, T component)
         {
             try
             {
-                components.Add(component);
+                if (index == -1)
+                {
+                    components.Add(component);
+                }
+                else
+                {
+                    components.Insert(index, component);
+                }
             }
             catch (Exception e)
             {
@@ -60,16 +66,39 @@ namespace GrandmaGreen.SaveSystem
         /// <summary>
         /// Removes a component from its internal storage list. Returns true if successful, false otherwise.
         /// </summary>
-        public bool RemoveComponent<T>(T _component) where T : struct
+        public bool RemoveComponent(int index, T component)
         {
+            try
+            {
+                if (index == -1)
+                {
+                    components.RemoveAt(index);
+                }
+                else
+                {
+                    components.Remove(component);
+                }
+            }
+            catch (Exception e)
+            {
+                return false;
+            }
             return true;
         }
         
         /// <summary>
         /// Updates a given value in its internal storage list based on a provided index. Returns true if successful, false otherwise.
         /// </summary>
-        public bool UpdateValue<T>(int index, T _component) where T : struct
+        public bool UpdateValue(int index, T component)
         {
+            try
+            {
+                components[index] = component;
+            }
+            catch (Exception e)
+            {
+                return false;
+            }
             return true;
         }
 
@@ -77,8 +106,16 @@ namespace GrandmaGreen.SaveSystem
         /// Receives data requests from its internal storage list based on a provided index and outputs it through a reference.
         /// Returns true if successful, false otherwise.
         /// </summary>
-        public bool RequestData<T>(int index, ref T _component) where T : struct
+        public bool RequestData(int index, ref T component)
         {
+            try
+            {
+                component = components[index];
+            }
+            catch (Exception e)
+            {
+                return false;
+            }
             return true;
         }
         

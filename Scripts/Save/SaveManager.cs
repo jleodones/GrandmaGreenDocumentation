@@ -29,6 +29,7 @@ namespace GrandmaGreen.SaveSystem
         {
             m_saveController = new SaveController(m_objectSavers);
         }
+        
         /// <summary>
         /// On Update, the save manager performs a check to see if the game must be saved.
         /// The game is auto saved after certain predetermined time intervals.

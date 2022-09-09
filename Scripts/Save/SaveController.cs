@@ -13,7 +13,7 @@ namespace GrandmaGreen.SaveSystem
         /// <summary>
         /// Call this to load all relevant scene data.
         /// </summary>
-        void LoadAllData(List<ObjectSaver> objectSavers);
+        void LoadAllData(ref List<ObjectSaver> objectSavers);
         
         /// <summary>
         /// Call this to save data during auto save or upon game pause.
@@ -29,7 +29,7 @@ namespace GrandmaGreen.SaveSystem
     public class SaveController
     {
         // List of ObjectSavers. Private, gets set upon instantiation.
-        [SerializeField] private List<ObjectSaver> m_objectSavers { get; }
+        [SerializeField] private List<ObjectSaver> m_objectSavers;
         
         // List of SaveLoaders.
         // Ideally, the SaveController should be able to support multiple different types of saving and loading at once.
@@ -68,7 +68,7 @@ namespace GrandmaGreen.SaveSystem
         {
             foreach(ISaveLoader saveLoader in m_saveLoaders)
             {
-                saveLoader.LoadAllData(m_objectSavers);
+                saveLoader.LoadAllData(ref m_objectSavers);
             }
         }
 
@@ -81,6 +81,7 @@ namespace GrandmaGreen.SaveSystem
             {
                 saveLoader.SaveAllData();
             }
+            toBeSaved.Clear();
         }
     }
 }

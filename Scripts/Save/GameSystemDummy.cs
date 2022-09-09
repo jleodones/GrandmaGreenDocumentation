@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using Sirenix.OdinInspector;
 using GrandmaGreen;
-using GrandmaGreen.Garden;
 using GrandmaGreen.SaveSystem;
 using System;
+using GrandmaGreen.Garden;
 
 namespace GrandmaGreen {
     public class GameSystemDummy : MonoBehaviour
@@ -23,7 +23,7 @@ namespace GrandmaGreen {
             t.allele1 = arr[rand.Next() % 2];
             t.allele2 = arr[rand.Next() % 2];
 
-            m_objectSavers[0].AddComponent<Trait>(t);
+            m_objectSavers[0].AddComponent<Trait>(-1, t);
         }
 
         public int SampleTest()

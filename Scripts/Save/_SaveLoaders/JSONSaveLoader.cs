@@ -17,86 +17,76 @@ namespace GrandmaGreen.SaveSystem
     /// </summary>
     public class JSONSaveLoader : ISaveLoader
     {
-        private string m_baseFilePath = Application.persistentDataPath + "/Data/save.grandma";
+        private string m_baseFilePath = Application.persistentDataPath + "/save.grandma";
 
         [SerializeField]
         [ReadOnly]
         private SaveController m_saveController;
 
-        [ReadOnly]
-        public JArray jsonDataArray;
+        [ShowInInspector] private List<ObjectSaver> m_objectSavers;
+        
+        // Archived below -- these were initially used to concurrently keep track of data for future scene loads without making
+        // further calls to JSON deserializers, but it felt like a waste of space. In this case, the optimization wasn't really
+        // worth it...But I am concerned about data corruption.
+
+        // [ShowInInspector] private List<ObjectSaver> m_loadedList;
+
+        // [ReadOnly] public JArray jsonDataArray;
 
         public JSONSaveLoader(SaveController saveController)
         {
             m_saveController = saveController;
 
-            if(!File.Exists(m_baseFilePath)) // If the file doesn't exist, create a new one.
+            if (!File.Exists(m_baseFilePath)) // If the file doesn't exist, create a new one.
             {
-                // TODO: Replace this empty file with a file prefab that can be loaded for new games.
-                using (var myFile = File.CreateText(m_baseFilePath))
+                // TODO: Replace this empty file with a file prefab for new games?
+                using (StreamWriter file = File.CreateText(m_baseFilePath))
                 {
-                    using (JsonTextWriter writer = new JsonTextWriter(myFile))
+                    JsonSerializer serializer = new JsonSerializer()
                     {
-                        new JArray().WriteTo(writer);
-                    }
+                        Formatting = Formatting.Indented,
+                        TypeNameHandling = TypeNameHandling.Auto
+                    };
+                    serializer.Serialize(file, new List<ObjectSaver>());
                 }
             }
-
-            // Load all data in file path once, making it easy to update and adjust.
-            jsonDataArray = JArray.Parse(File.ReadAllText(m_baseFilePath));
         }
 
-        public void LoadAllData(List<ObjectSaver> objectSavers)
+        public void LoadAllData(ref List<ObjectSaver> objectSavers)
         {
-            // Iterates through every ObjectSaver in the save controller list and instantiates it based on its data.
+            m_objectSavers = objectSavers;
+            List<ObjectSaver> loadedList;
+            
+            using (StreamReader file = File.OpenText(m_baseFilePath))
+            {
+                JsonSerializer serializer = new JsonSerializer()
+                {
+                    Formatting = Formatting.Indented,
+                    TypeNameHandling = TypeNameHandling.Auto
+                };
+                loadedList = (List<ObjectSaver>)serializer.Deserialize(file, typeof(List<ObjectSaver>));
+            }
+
+            // Iterates through every ObjectSaver in the save controller list and instantiates it based on its loaded data.
             foreach(ObjectSaver os in objectSavers)
             {
-                LoadData(os);
+                os.Set(m_saveController, loadedList.Find(obj => obj.ID == os.ID));
             }
-        }   
-
-        public void LoadData(ObjectSaver os)
-        {
-            // This gives the ObjectSaver the appropriate SaveController (the one that just got instantiated).
-            os.saveController = m_saveController;
-            
-            // Load the given ObjectSaver based off of the deserialized data.
-            var osWrapper = jsonDataArray.Children<JObject>()
-                .FirstOrDefault(o => o["ID"].ToString() == os.ID);
-
-            // Converts the JArray data into an ObjectSaver and sets it.
-            os = new JObject(osWrapper).ToObject<ObjectSaver>();
         }
 
         // This should only be saving to one save file.
+        [Button()]
         public void SaveAllData()
         {
-            // Retrieves the object savers that need to be saved and adjusts it in the JSON data array living in local memory.
-            foreach(ObjectSaver os in m_saveController.toBeSaved)
+            // Serializes and write to file.
+            using (StreamWriter file = new StreamWriter(m_baseFilePath))
             {
-                SaveData(os);
-            }
-
-            // Afterwards, save the modified data array to file.
-            // NOTE: This saves the whole file, as JSONs cannot be overwritten in individual parts.
-            File.WriteAllText(m_baseFilePath, jsonDataArray.ToString(Formatting.Indented));
-        }
-
-        [Button()]
-        public void SaveData(ObjectSaver os)
-        {
-            // Find the specific os in the loaded data.
-            var osWrapper = jsonDataArray.Children<JObject>()
-                    .FirstOrDefault(o => o["ID"].ToString() == os.ID);
-
-            if (osWrapper == null) // If it didn't find anything, add it to the data.
-            {
-                jsonDataArray.Add(JToken.FromObject(os));
-            }
-            else // If it found something already present in the array, it overwrites it with the updated ObjectSaver.
-            {
-                jsonDataArray.Children<JObject>()
-                    .FirstOrDefault(o => o["ID"].ToString() == os.ID).Replace(JToken.FromObject(os));
+                JsonSerializer serializer = new JsonSerializer()
+                {
+                    Formatting = Formatting.Indented,
+                    TypeNameHandling = TypeNameHandling.Auto
+                };
+                serializer.Serialize(file, m_objectSavers);
             }
         }
     }
