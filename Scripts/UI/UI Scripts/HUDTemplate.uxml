@@ -1,0 +1,43 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement style="flex-grow: 1; height: 1170px; justify-content: space-between;">
+        <ui:VisualElement style="flex-direction: row; justify-content: space-between; padding-left: 5%; padding-right: 5%; height: 264px; align-items: flex-start; padding-top: 1%;">
+            <ui:VisualElement style="justify-content: flex-end; align-items: flex-end;">
+                <ui:GroupBox style="height: 200px; width: 351px; flex-direction: column; justify-content: space-between; padding-left: 5%; margin-top: 0; padding-top: 5px; align-items: flex-start;">
+                    <ui:VisualElement style="background-color: rgb(188, 188, 188); height: 88px; width: 184px; align-items: center; justify-content: flex-start;" />
+                    <ui:VisualElement style="background-color: rgb(188, 188, 188); height: 88px; width: 184px; align-items: center; justify-content: flex-start;" />
+                </ui:GroupBox>
+            </ui:VisualElement>
+            <ui:VisualElement style="height: 196px; flex-direction: row; justify-content: space-between;">
+                <ui:GroupBox style="height: 184px; width: 585px; align-items: stretch; flex-direction: row; justify-content: space-between; padding-right: 5%; margin-top: 0; padding-top: 0;">
+                    <ui:VisualElement>
+                        <ui:Button tabindex="-1" text="collection" display-tooltip-when-elided="true" class="buttons" style="height: 130px; width: 130px;" />
+                    </ui:VisualElement>
+                    <ui:VisualElement>
+                        <ui:Button tabindex="-1" text="Camera" display-tooltip-when-elided="true" class="buttons" style="height: 130px; width: 130px;" />
+                    </ui:VisualElement>
+                    <ui:VisualElement>
+                        <ui:Button tabindex="-1" text="Settings" display-tooltip-when-elided="true" class="buttons" style="height: 130px; width: 130px;" />
+                    </ui:VisualElement>
+                </ui:GroupBox>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement style="height: 196px; justify-content: space-between; align-items: stretch; flex-direction: row; padding-bottom: 1%;">
+            <ui:GroupBox style="height: 184px; width: 585px; align-items: flex-end; flex-direction: row; justify-content: space-between; padding-right: 3px; padding-left: 5%; padding-bottom: 0; margin-bottom: 0;">
+                <ui:VisualElement>
+                    <ui:Button tabindex="-1" text="collection" display-tooltip-when-elided="true" class="buttons" style="height: 130px; width: 130px;" />
+                </ui:VisualElement>
+                <ui:VisualElement>
+                    <ui:Button tabindex="-1" text="Camera" display-tooltip-when-elided="true" class="buttons" style="height: 130px; width: 130px;" />
+                </ui:VisualElement>
+                <ui:VisualElement>
+                    <ui:Button tabindex="-1" text="Settings" display-tooltip-when-elided="true" class="buttons" style="height: 130px; width: 130px;" />
+                </ui:VisualElement>
+            </ui:GroupBox>
+            <ui:GroupBox style="height: 184px; width: 300px; align-items: flex-end; flex-direction: row; justify-content: space-between; padding-right: 5%; padding-left: 3px; margin-bottom: 0; padding-bottom: 0;">
+                <ui:VisualElement>
+                    <ui:Button tabindex="-1" text="Settings" display-tooltip-when-elided="true" class="buttons" style="height: 130px; width: 130px;" />
+                </ui:VisualElement>
+            </ui:GroupBox>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
