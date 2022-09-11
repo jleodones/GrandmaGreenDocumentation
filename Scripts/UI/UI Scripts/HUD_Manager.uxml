@@ -1,0 +1,4 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:Template name="HUD_Grey" src="project://database/Assets/_GrandmaGreen/Scripts/UI/UI%20Scripts/HUD_Grey.uxml?fileID=9197481963319205126&amp;guid=571c68197927a4b32bb3b36ece31f7f0&amp;type=3#HUD_Grey" />
+    <ui:Instance template="HUD_Grey" name="HUD_Grey" />
+</ui:UXML>
