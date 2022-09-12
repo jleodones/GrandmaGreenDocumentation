@@ -1,0 +1,6 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:Template name="SettingsPanel" src="project://database/Assets/_GrandmaGreen/Scripts/UI/UI%20Scripts/PanelCreation/SettingsPanel.uxml?fileID=9197481963319205126&amp;guid=db24dd1bd2d18494dbbcef1ff94face5&amp;type=3#SettingsPanel" />
+    <ui:Template name="MediaPanel" src="project://database/Assets/_GrandmaGreen/Scripts/UI/UI%20Scripts/PanelCreation/MediaPanel.uxml?fileID=9197481963319205126&amp;guid=9bdd731ebb03549c8ad6d11af9403bc0&amp;type=3#MediaPanel" />
+    <ui:Instance template="SettingsPanel" name="SettingsPanel" style="flex-grow: 1; display: flex; visibility: visible; overflow: visible; opacity: 1;" />
+    <ui:Instance template="MediaPanel" name="MediaPanel" style="flex-grow: 1; display: none;" />
+</ui:UXML>

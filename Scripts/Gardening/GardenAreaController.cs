@@ -98,6 +98,7 @@ namespace GrandmaGreen.Garden
         }
 
         //Selects a garden tile in world space
+        //Called through a Unity event as of now
         public void GardenSelection(Vector3 worldPos)
         {
             Vector2Int gridPos = gardenData.WorldToGrid(worldPos);

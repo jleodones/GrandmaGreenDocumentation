@@ -1,0 +1,7 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:Template name="InventoryTab" src="project://database/Assets/_GrandmaGreen/Scripts/UI/UI%20Scripts/PanelCreation/InventoryTab.uxml?fileID=9197481963319205126&amp;guid=05ce36e6353634e0ba7ee7e0ce1ea6f6&amp;type=3#InventoryTab" />
+    <ui:Instance template="InventoryTab" name="InventoryTab" style="flex-grow: 1; display: none;" />
+    <ui:Instance template="InventoryTab" name="tab2" style="display: flex; flex-grow: 1;" />
+    <ui:Instance template="InventoryTab" name="tab3" style="display: none; flex-grow: 1;" />
+    <ui:Instance template="InventoryTab" name="tab4" style="flex-grow: 1; display: none;" />
+</ui:UXML>
