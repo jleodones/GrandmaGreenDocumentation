@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Pathfinding;
 using UnityEngine;
+using NaughtyAttributes;
 
 namespace GrandmaGreen.Garden
 {
@@ -11,6 +12,9 @@ namespace GrandmaGreen.Garden
     /// </summary>
     public class GardenAreaServicer : ScriptableObject, IPathfinderServicer
     {
+        [SerializeField][ReadOnly] GardenAreaController[] areaControllerSet;
+        [SerializeField][ReadOnly] int activeAreaIndex;
+        public GardenAreaController ActiveArea => areaControllerSet[activeAreaIndex];
 
         [ContextMenu("Start")]
         /// <summary>
@@ -20,6 +24,9 @@ namespace GrandmaGreen.Garden
         {
             IPathAgent.SetServicer(this);
             IPathfinderServicer.s_activeServices = new List<Pathfinder>();
+
+            activeAreaIndex = -1;
+            areaControllerSet = new GardenAreaController[5];
         }
 
         /// <summary>
@@ -35,8 +42,13 @@ namespace GrandmaGreen.Garden
         /// Active an area controller
         /// </summary>
         /// <param name="areaController"></param>
-        public void RegisterAreaController(GardenAreaController areaController)
+        public void RegisterAreaController(GardenAreaController areaController, int areaIndex)
         {
+            if (areaIndex >= areaControllerSet.Length)
+                return;
+
+            areaControllerSet[areaIndex] = areaController;
+
             RegisterService(areaController.pathfinder);
         }
 
@@ -44,8 +56,13 @@ namespace GrandmaGreen.Garden
         /// Deactivate an area controller
         /// </summary>
         /// <param name="areaController"></param>
-        public void DesregisterAreaController(GardenAreaController areaController)
+        public void DesregisterAreaController(GardenAreaController areaController, int areaIndex)
         {
+            if (areaIndex >= areaControllerSet.Length)
+                return;
+
+            areaControllerSet[areaIndex] = null;
+
             DeregisterService(areaController.pathfinder);
         }
 
@@ -67,6 +84,36 @@ namespace GrandmaGreen.Garden
         {
             if (IPathfinderServicer.s_activeServices.Contains(pathfinder))
                 IPathfinderServicer.s_activeServices.Remove(pathfinder);
+        }
+        
+        /// <summary>
+        /// Activates an area controller and sets it to the current active area
+        /// Deactivates the previous active area
+        /// </summary>
+        /// <param name="areaIndex"></param>
+        public void ActivateAreaController(int areaIndex)
+        {
+            if (areaIndex >= areaControllerSet.Length)
+                return;
+
+            if (activeAreaIndex != -1)
+                areaControllerSet[activeAreaIndex].Deactivate();
+
+            activeAreaIndex = areaIndex;
+            areaControllerSet[activeAreaIndex].Activate();
+        }
+
+        /// <summary>
+        /// Deactivates the currently active area
+        /// </summary>
+        /// <param name="areaIndex"></param>
+        public void DeactivateAreaController(int areaIndex)
+        {
+            if (areaIndex >=areaControllerSet.Length)
+                return;
+
+            areaControllerSet[areaIndex].Deactivate();
+            activeAreaIndex = -1;
         }
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Pathfinding;
 using UnityEngine.Tilemaps;
+using NaughtyAttributes;
 
 namespace GrandmaGreen.Garden
 {
@@ -22,23 +23,43 @@ namespace GrandmaGreen.Garden
         [Header("Prefab References")]
         public PlantInteractable plantInteractablePrefab;
 
-        [SerializeField] Dictionary<PlantInteractable, PlantState> m_plantMap;
-        [SerializeField] GameObject[] m_gardenPlants;
+        [Header("Area Variables")]
+        [SerializeField] int areaIndex = 0;
+        [SerializeField][ReadOnly] bool areaActive;
+        [field: SerializeField][field: ReadOnly] public GameObject currentSelection { get; private set; }
+
+        [SerializeField][ReadOnly] Dictionary<PlantInteractable, PlantState> m_plantMap;
+        [SerializeField][ReadOnly] GameObject[] m_gardenPlants;
 
         public event System.Action<Vector2Int> onGardenSelection;
-        [field: SerializeField][field: Core.Utilities.ReadOnly] public GameObject currentSelection { get; private set; }
+        public event System.Action onActivation;
+        public event System.Action onDeactivation;
 
         void Awake()
         {
-            areaServicer.StartServices(); //TODO: MOVE THIS INTO GAMESTATECONTROLLER
-            areaServicer.RegisterAreaController(this);
+            areaServicer.RegisterAreaController(this, areaIndex);
+            areaActive = false;
         }
 
         void Start()
         {
-            //TODO: Move this into game state manager
-            pathfinder.LoadGrid();
             InitializeGarden();
+        }
+
+        public void Activate()
+        {
+            pathfinder.LoadGrid();
+            areaActive = true;
+
+            onActivation?.Invoke();
+        }
+
+        public void Deactivate()
+        {
+            pathfinder.ReleaseGrid();
+            areaActive = false;
+
+            onDeactivation?.Invoke();
         }
 
 
@@ -121,7 +142,6 @@ namespace GrandmaGreen.Garden
         {
             if (currentSelection == null)
                 return;
-
 
 
             currentSelection = null;
