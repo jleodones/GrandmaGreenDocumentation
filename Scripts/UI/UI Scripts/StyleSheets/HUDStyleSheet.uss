@@ -19,25 +19,58 @@
     border-bottom-right-radius: 0;
 }
 
-.tab-button {
-    height: 22%;
-    width: 95%;
-    border-top-left-radius: 15%;
-    border-bottom-left-radius: 15%;
-    border-left-width: 6px;
-    border-right-width: 0;
-    border-top-width: 5px;
-    border-bottom-width: 5px;
-    border-left-color: rgba(0, 0, 0, 255);
-    border-right-color: rgba(0, 0, 0, 255);
-    border-top-color: rgba(0, 0, 0, 255);
-    border-bottom-color: rgba(0, 0, 0, 255);
-}
-
 .settings-button {
     border-top-left-radius: 50%;
     border-bottom-left-radius: 50%;
     border-top-right-radius: 50%;
     border-bottom-right-radius: 50%;
     background-color: rgb(111, 111, 111);
+}
+
+.tab-button {
+    height: 22%;
+    width: 93%;
+    border-top-left-radius: 15%;
+    border-bottom-left-radius: 15%;
+    border-left-width: 6px;
+    border-right-width: 0;
+    border-top-width: 5px;
+    border-bottom-width: 5px;
+    border-left-color: rgb(0, 0, 0);
+    border-right-color: rgb(0, 0, 0);
+    border-top-color: rgb(0, 0, 0);
+    border-bottom-color: rgb(0, 0, 0);
+    align-items: center;
+    justify-content: center;
+}
+
+.tab-icon {
+    width: 80px;
+    height: 80px;
+}
+
+.tab-icon:hover {
+    width: 90px;
+    height: 90px;
+    transition-duration: 0.3s;
+}
+
+.inactive-conent {
+    display: none;
+}
+
+.active-tab {
+    background-color: rgba(154, 154, 154, 255);
+}
+
+.unselectedContent {
+    display: none;
+}
+
+.currentlySelectedTab {
+    background-color: rgba(255, 158, 158, 255);
+}
+
+.unselectedContent {
+    display: none;
 }

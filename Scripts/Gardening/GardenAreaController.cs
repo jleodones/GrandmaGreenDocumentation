@@ -1,9 +1,10 @@
-using System.Collections;
+using Core.Input;
+using NaughtyAttributes;
+using Pathfinding;
 using System.Collections.Generic;
 using UnityEngine;
-using Pathfinding;
+using UnityEngine.SceneManagement;
 using UnityEngine.Tilemaps;
-using NaughtyAttributes;
 
 namespace GrandmaGreen.Garden
 {
@@ -19,6 +20,12 @@ namespace GrandmaGreen.Garden
         public Tilemap tilemap;
         public Pathfinder pathfinder;
         public Collider areaBounds;
+        [SerializeField]
+        private PointerState pointerState;
+
+        [Header("Plant Management")]
+        [SerializeField]
+        private PlantTypeDictionary plantTypeDictionary;
 
         [Header("Prefab References")]
         public PlantInteractable plantInteractablePrefab;
@@ -43,7 +50,14 @@ namespace GrandmaGreen.Garden
 
         void Start()
         {
-            InitializeGarden();
+            if (SceneManager.GetActiveScene().name == "TestGardenTileData")
+            {
+                PlaceAllPlantTypePrefabs();
+            }
+            else
+            {
+                InitializeGarden();
+            }
         }
 
         public void Activate()
@@ -62,6 +76,24 @@ namespace GrandmaGreen.Garden
             onDeactivation?.Invoke();
         }
 
+        public void PlacePlantPrefab(PlantType type, Vector3 pos, int growthStage)
+            => Instantiate(type.growthStagePrefabs[growthStage], pos, Quaternion.identity);
+
+        public void PlaceAllPlantTypePrefabs()
+        {
+            Vector3 bottomLeft = gardenData.IndexToWorldPos(gardenData.plantStates[0].gridIndex);
+            for (int i = 0; i < plantTypeDictionary.plantTypes.Length; i++)
+            {
+                PlantType plant = plantTypeDictionary.plantTypes[i];
+                Debug.Log(string.Format("=== {0} ===", plant.name));
+                for (int j = 0; j < plant.growthStagePrefabs.Length; j++)
+                {
+                    Vector3 plantPos = bottomLeft + i * Vector3.up + j * Vector3.right;
+                    Debug.Log(string.Format("Placing a {0} at {1}", plant.name, plantPos));
+                    PlacePlantPrefab(plant, plantPos, j);
+                }
+            }
+        }
 
         [ContextMenu("Intialize")]
         /// <summary>

@@ -1,30 +1,30 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/_GrandmaGreen/Scripts/UI/UI%20Scripts/StyleSheets/HUDStyleSheet.uss?fileID=7433441132597879392&amp;guid=fb47af834b15b44e59bcc04fdcbf92c5&amp;type=3#HUDStyleSheet" />
-    <ui:VisualElement style="flex-grow: 1; flex-direction: row-reverse; justify-content: flex-start; align-items: center;">
+    <ui:VisualElement name="VisualElement" style="flex-grow: 1; flex-direction: row-reverse; justify-content: flex-start; align-items: center;">
         <ui:VisualElement name="inventory" style="flex-direction: column; width: 40%; justify-content: flex-start; height: 100%; border-left-width: 10px; border-right-width: 10px; border-top-width: 10px; border-bottom-width: 10px; border-left-color: rgb(0, 0, 0); border-right-color: rgb(0, 0, 0); border-top-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0);">
             <ui:VisualElement name="title" style="height: 12%; border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 7px; border-left-color: rgb(0, 0, 0); border-right-color: rgb(0, 0, 0); border-top-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0); flex-direction: row; background-color: rgb(214, 214, 214);">
-                <ui:Label tabindex="-1" text="Label" display-tooltip-when-elided="true" style="flex-grow: 1; font-size: 100%; -unity-text-align: upper-center; width: 80%;" />
+                <ui:Label tabindex="-1" text="Inventory" display-tooltip-when-elided="true" style="flex-grow: 1; font-size: 100%; -unity-text-align: upper-center; width: 80%;" />
                 <ui:VisualElement style="width: 20%; align-items: center; justify-content: center;">
-                    <ui:Button tabindex="-1" text="X" display-tooltip-when-elided="true" style="-unity-text-align: middle-center; width: 120px; height: 120px; border-top-left-radius: 50%; border-bottom-left-radius: 50%; border-top-right-radius: 50%; border-bottom-right-radius: 50%; font-size: 90%; color: rgb(108, 108, 108);" />
+                    <ui:Button tabindex="-1" text="X" display-tooltip-when-elided="true" style="-unity-text-align: middle-center; width: 110px; height: 110px; border-top-left-radius: 50%; border-bottom-left-radius: 50%; border-top-right-radius: 50%; border-bottom-right-radius: 50%; font-size: 90%; color: rgb(108, 108, 108);" />
                 </ui:VisualElement>
             </ui:VisualElement>
-            <ui:VisualElement style="flex-grow: 1; background-color: rgb(214, 214, 214); justify-content: space-around;">
-                <ui:GroupBox style="height: 20%; flex-direction: row; justify-content: space-around;">
+            <ui:VisualElement style="flex-grow: 1; background-color: rgb(214, 214, 214); justify-content: space-around; align-items: stretch;">
+                <ui:GroupBox style="height: 20%; flex-direction: row; justify-content: space-around; align-items: center;">
                     <ui:Button tabindex="-1" text="icon" display-tooltip-when-elided="true" class="settings-button" style="width: 200px; height: 200px;" />
                     <ui:Button tabindex="-1" text="icon" display-tooltip-when-elided="true" class="settings-button" style="width: 200px; height: 200px;" />
                     <ui:Button tabindex="-1" text="icon" display-tooltip-when-elided="true" class="settings-button" style="width: 200px; height: 200px;" />
                 </ui:GroupBox>
-                <ui:GroupBox style="height: 20%; flex-direction: row; justify-content: space-around;">
+                <ui:GroupBox style="height: 20%; flex-direction: row; justify-content: space-around; align-items: center;">
                     <ui:Button tabindex="-1" text="icon" display-tooltip-when-elided="true" class="settings-button" style="width: 200px; height: 200px;" />
                     <ui:Button tabindex="-1" text="icon" display-tooltip-when-elided="true" class="settings-button" style="width: 200px; height: 200px;" />
                     <ui:Button tabindex="-1" text="icon" display-tooltip-when-elided="true" class="settings-button" style="width: 200px; height: 200px;" />
                 </ui:GroupBox>
-                <ui:GroupBox style="height: 20%; flex-direction: row; justify-content: space-around;">
+                <ui:GroupBox style="height: 20%; flex-direction: row; justify-content: space-around; align-items: center;">
                     <ui:Button tabindex="-1" text="icon" display-tooltip-when-elided="true" class="settings-button" style="width: 200px; height: 200px;" />
                     <ui:Button tabindex="-1" text="icon" display-tooltip-when-elided="true" class="settings-button" style="width: 200px; height: 200px;" />
                     <ui:Button tabindex="-1" text="icon" display-tooltip-when-elided="true" class="settings-button" style="width: 200px; height: 200px;" />
                 </ui:GroupBox>
-                <ui:GroupBox style="height: 20%; flex-direction: row; justify-content: space-around;">
+                <ui:GroupBox style="height: 20%; flex-direction: row; justify-content: space-around; align-items: center;">
                     <ui:Button tabindex="-1" text="icon" display-tooltip-when-elided="true" class="settings-button" style="width: 200px; height: 200px;" />
                     <ui:Button tabindex="-1" text="icon" display-tooltip-when-elided="true" class="settings-button" style="width: 200px; height: 200px;" />
                     <ui:Button tabindex="-1" text="icon" display-tooltip-when-elided="true" class="settings-button" style="width: 200px; height: 200px;" />
@@ -32,10 +32,18 @@
             </ui:VisualElement>
         </ui:VisualElement>
         <ui:VisualElement name="tabs" style="height: 80%; align-items: flex-end; justify-content: flex-end; width: 5%;">
-            <ui:Button tabindex="-1" text="Button" display-tooltip-when-elided="true" class="tab-button" style="margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; background-color: rgb(152, 152, 152);" />
-            <ui:Button tabindex="-1" text="Button" display-tooltip-when-elided="true" class="tab-button" style="margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; border-left-width: 6px; border-right-width: 0; border-top-width: 5px; border-bottom-width: 5px;" />
-            <ui:Button tabindex="-1" text="Button" display-tooltip-when-elided="true" class="tab-button" style="margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0;" />
-            <ui:Button tabindex="-1" text="Button" display-tooltip-when-elided="true" class="tab-button" style="margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0;" />
+            <ui:Button tabindex="-1" text="Button" display-tooltip-when-elided="true" class="tab-button" style="margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; background-color: rgb(152, 152, 152); padding-top: 10%; align-items: center; justify-content: center;">
+                <ui:VisualElement class="icon-visual" style="background-image: url(&apos;project://database/Assets/_GrandmaGreen/Scripts/UI/SampleArt/UI_Fertilizer_Temp.png?fileID=2800000&amp;guid=a643cdf8e0a09b74b95650865ea63f19&amp;type=3#UI_Fertilizer_Temp&apos;); width: 80px; height: 80px;" />
+            </ui:Button>
+            <ui:Button tabindex="-1" text="Button" display-tooltip-when-elided="true" name="fruit-tab" class="tab-button" style="margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; border-left-width: 6px; border-right-width: 0; border-top-width: 5px; border-bottom-width: 5px;">
+                <ui:VisualElement class="icon-visual" style="background-image: url(&apos;project://database/Assets/_GrandmaGreen/Scripts/UI/SampleArt/UI_Fruit_Temp.png?fileID=2800000&amp;guid=5ef2840e9c4484b05b6b8725ed86010f&amp;type=3#UI_Fruit_Temp&apos;); width: 80px; height: 80px;" />
+            </ui:Button>
+            <ui:Button tabindex="-1" text="Button" display-tooltip-when-elided="true" class="tab-button" style="margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0;">
+                <ui:VisualElement class="icon-visual" style="background-image: url(&apos;project://database/Assets/_GrandmaGreen/Scripts/UI/SampleArt/UI_Shovel_Temp.png?fileID=2800000&amp;guid=c8542651c3f2941798ca4c43018338dd&amp;type=3#UI_Shovel_Temp&apos;); width: 80px; height: 80px;" />
+            </ui:Button>
+            <ui:Button tabindex="-1" text="Button" display-tooltip-when-elided="true" class="tab-button" style="margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0;">
+                <ui:VisualElement class="icon-visual" style="background-image: url(&apos;project://database/Assets/_GrandmaGreen/Scripts/UI/SampleArt/UI_Furniture_Temp.png?fileID=2800000&amp;guid=45f077a00e2414d1398a60fe716ee8e5&amp;type=3#UI_Furniture_Temp&apos;); width: 80px; height: 80px;" />
+            </ui:Button>
         </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>
