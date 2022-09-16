@@ -1,31 +1,47 @@
 // This script defines the tab selection logic.
+using UnityEngine;
+using System.Collections;
 using UnityEngine.UIElements;
 
-public class TabbedMenuController
+public class TabbedInventoryController
 {
     /* Define member variables*/
-    private const string tabClassName = "tab";
-    private const string currentlySelectedTabClassName = "currentlySelectedTab";
-    private const string unselectedContentClassName = "unselectedContent";
+    private const string tabClassName = "tab-button";
+    private const string currentlySelectedTabClassName = "active-tab";
+    private const string unselectedContentClassName = "inactive-content";
+    private const string exitButton = "exit-button";
+    private const string inventoryElement = "inventory-element";
     // Tab and tab content have the same prefix but different suffix
     // Define the suffix of the tab name
-    private const string tabNameSuffix = "Tab";
+    private const string tabNameSuffix = "-tab";
     // Define the suffix of the tab content name
-    private const string contentNameSuffix = "Content";
+    private const string contentNameSuffix = "-content";
 
     private readonly VisualElement root;
 
-    public TabbedMenuController(VisualElement root)
+    public TabbedInventoryController(VisualElement root)
     {
         this.root = root;
     }
 
     public void RegisterTabCallbacks()
     {
-        UQueryBuilder<Label> tabs = GetAllTabs();
-        tabs.ForEach((Label tab) => {
+        UQueryBuilder<Button> tabs = GetAllTabs();
+        tabs.ForEach((Button tab) => {
             tab.RegisterCallback<ClickEvent>(TabOnClick);
         });
+    }
+    // Register the hide function to the event: when exit button is clicked
+    public void RegisterExitCallback()
+    {
+        root.Q<Button>(exitButton).RegisterCallback<ClickEvent>(ExitOnClick);
+        // Debug.Log("Registered Exit");
+    }
+
+    // This hides the entire inventory panel when the exit button is clicked
+    private void ExitOnClick(ClickEvent evt){
+    	// Debug.Log("Clicked Exit");
+        root.Q(inventoryElement).style.display = DisplayStyle.None;
     }
 
     /* Method for the tab on-click event: 
@@ -35,7 +51,7 @@ public class TabbedMenuController
     */
     private void TabOnClick(ClickEvent evt)
     {
-        Label clickedTab = evt.currentTarget as Label;
+        Button clickedTab = evt.currentTarget as Button;
         if (!TabIsCurrentlySelected(clickedTab))
         {
             GetAllTabs().Where(
@@ -45,20 +61,20 @@ public class TabbedMenuController
         }
     }
     //Method that returns a Boolean indicating whether a tab is currently selected
-    private static bool TabIsCurrentlySelected(Label tab)
+    private static bool TabIsCurrentlySelected(Button tab)
     {
         return tab.ClassListContains(currentlySelectedTabClassName);
     }
 
-    private UQueryBuilder<Label> GetAllTabs()
+    private UQueryBuilder<Button> GetAllTabs()
     {
-        return root.Query<Label>(className: tabClassName);
+        return root.Query<Button>(className: tabClassName);
     }
 
     /* Method for the selected tab: 
        -  Takes a tab as a parameter and adds the currentlySelectedTab class
        -  Then finds the tab content and removes the unselectedContent class */
-    private void SelectTab(Label tab)
+    private void SelectTab(Button tab)
     {
         tab.AddToClassList(currentlySelectedTabClassName);
         VisualElement content = FindContent(tab);
@@ -68,7 +84,7 @@ public class TabbedMenuController
     /* Method for the unselected tab: 
        -  Takes a tab as a parameter and removes the currentlySelectedTab class
        -  Then finds the tab content and adds the unselectedContent class */
-    private void UnselectTab(Label tab)
+    private void UnselectTab(Button tab)
     {
         tab.RemoveFromClassList(currentlySelectedTabClassName);
         VisualElement content = FindContent(tab);
@@ -76,11 +92,11 @@ public class TabbedMenuController
     }
 
     // Method to generate the associated tab content name by for the given tab name
-    private static string GenerateContentName(Label tab) =>
+    private static string GenerateContentName(Button tab) =>
         tab.name.Replace(tabNameSuffix, contentNameSuffix);
 
     // Method that takes a tab as a parameter and returns the associated content element
-    private VisualElement FindContent(Label tab)
+    private VisualElement FindContent(Button tab)
     {
         return root.Q(GenerateContentName(tab));
     }

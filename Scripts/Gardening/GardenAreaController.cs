@@ -79,6 +79,7 @@ namespace GrandmaGreen.Garden
         public void PlacePlantPrefab(PlantType type, Vector3 pos, int growthStage)
             => Instantiate(type.growthStagePrefabs[growthStage], pos, Quaternion.identity);
 
+        [ContextMenu("PlaceAllPlantTypePrefabs")]
         public void PlaceAllPlantTypePrefabs()
         {
             Vector3 bottomLeft = gardenData.IndexToWorldPos(gardenData.plantStates[0].gridIndex);
@@ -88,7 +89,7 @@ namespace GrandmaGreen.Garden
                 Debug.Log(string.Format("=== {0} ===", plant.name));
                 for (int j = 0; j < plant.growthStagePrefabs.Length; j++)
                 {
-                    Vector3 plantPos = bottomLeft + i * Vector3.up + j * Vector3.right;
+                    Vector3 plantPos = bottomLeft + i * Vector3.up + j * Vector3.right + 0.01f * Vector3.back;
                     Debug.Log(string.Format("Placing a {0} at {1}", plant.name, plantPos));
                     PlacePlantPrefab(plant, plantPos, j);
                 }

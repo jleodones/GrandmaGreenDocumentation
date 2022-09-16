@@ -9,7 +9,7 @@ namespace GrandmaGreen {
         void Start()
         {
             //Subscribe
-            EventManager.instance.GOLEM_SPAWN += OnGolemSpawn;
+            EventManager.instance.EVENT_GOLEM_SPAWN += OnGolemSpawn;
         }
 
         public void OnGolemSpawn(int id) {
@@ -19,7 +19,7 @@ namespace GrandmaGreen {
 
         private void OnDestroy() {
             //Unsubscribe
-            EventManager.instance.GOLEM_SPAWN -= OnGolemSpawn;
+            EventManager.instance.EVENT_GOLEM_SPAWN -= OnGolemSpawn;
         }
 }
 }

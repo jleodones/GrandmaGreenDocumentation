@@ -3,17 +3,18 @@ using UnityEngine;
 using UnityEngine.UIElements;
 
 //Inherits from class `MonoBehaviour`. This makes it attachable to a game object as a component.
-public class TabbedMenu : MonoBehaviour
+public class TabbedInventory : MonoBehaviour
 {
-    private TabbedMenuController controller;
+    private TabbedInventoryController controller;
 
     private void OnEnable()
     {
-        UIDocument menu = GetComponent<UIDocument>();
-        VisualElement root = menu.rootVisualElement;
+        UIDocument inventory = GetComponent<UIDocument>();
+        VisualElement root = inventory.rootVisualElement;
 
         controller = new(root);
 
         controller.RegisterTabCallbacks();
+        controller.RegisterExitCallback();
     }
 }

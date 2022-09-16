@@ -1,0 +1,27 @@
+.sway-text {
+    height: 89px;
+    width: 519px;
+    font-size: 80px;
+    -unity-text-align: middle-center;
+    -unity-font-style: bold;
+}
+
+.sway-text:hover {
+    scale: 2 2;
+    rotate: 360deg;
+    transition-duration: 0.5s;
+    translate: 100px 0;
+    transition-timing-function: ease;
+}
+
+.background-appear {
+    transition-property: background-color;
+    transition-timing-function: ease-in;
+}
+
+.background-appear:hover {
+    background-color: rgba(214, 0, 0, 255);
+    transition-duration: 0.3s;
+    transition-property: background-color;
+    transition-timing-function: ease-in;
+}

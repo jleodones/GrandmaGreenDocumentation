@@ -1,6 +1,0 @@
-<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <ui:Template name="FertilizerTab" src="project://database/Assets/_GrandmaGreen/Scripts/UI/UI%20Scripts/PanelCreation/FertilizerTab.uxml?fileID=9197481963319205126&amp;guid=befd556a854484652bc62444b9d40089&amp;type=3#FertilizerTab" />
-    <ui:Template name="FruitTab" src="project://database/Assets/_GrandmaGreen/Scripts/UI/UI%20Scripts/PanelCreation/FruitTab.uxml?fileID=9197481963319205126&amp;guid=fa73eefc3f2e14a31b30e96ed29abc21&amp;type=3#FruitTab" />
-    <ui:Instance template="FertilizerTab" name="FertilizerTab" style="flex-grow: 1; display: flex;" />
-    <ui:Instance template="FruitTab" name="FruitTab" style="flex-grow: 1; display: none;" />
-</ui:UXML>

@@ -1,0 +1,6 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/_GrandmaGreen/Scripts/UI/UI%20Scripts/Demos/Animations/Animations.uss?fileID=7433441132597879392&amp;guid=f5d0affd3e58e49a2bd950f567fb32dd&amp;type=3#Animations" />
+    <ui:VisualElement class="background-appear" style="height: 827px; width: 884px; align-items: center; justify-content: center; transition-timing-function: ease-in-bounce;">
+        <ui:Label tabindex="-1" text="Circle" display-tooltip-when-elided="true" class="sway-text" style="height: 309px; width: 703px;" />
+    </ui:VisualElement>
+</ui:UXML>
