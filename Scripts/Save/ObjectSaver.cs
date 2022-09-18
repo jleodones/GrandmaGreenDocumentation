@@ -66,7 +66,11 @@ namespace GrandmaGreen.SaveSystem
         public void Set(SaveController newSaveController, ObjectSaver os)
         {
             saveController = newSaveController;
-            componentStores = os.componentStores;
+
+            if (os != null)
+            {
+                componentStores = os.componentStores;
+            }
         }
         
         /// <summary>
@@ -80,6 +84,11 @@ namespace GrandmaGreen.SaveSystem
             Type concrete = generic.MakeGenericType(myType);
 
             componentStores.Add((IComponentStore)Activator.CreateInstance(concrete));
+        }
+
+        public void CreateNewStore<T>() where T : struct
+        {
+            componentStores.Add(new ComponentStore<T>());
         }
 
         /// <summary>
@@ -98,14 +107,6 @@ namespace GrandmaGreen.SaveSystem
                 {
                     // Once found, it adds the new component.
                     ((ComponentStore<T>)componentStore).AddComponent(index, component);
-
-                    // Finally, it adds itself to the save controller's "to be saved" list.
-                    // NOTE: Is this still necessary?
-                    if (!saveController.toBeSaved.Contains(this))
-                    {
-                        saveController.toBeSaved.Add(this);
-                    }
-                    break;
                 }
             }
         }

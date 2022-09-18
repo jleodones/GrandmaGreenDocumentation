@@ -7,6 +7,7 @@ namespace GrandmaGreen.Collections {
     [Serializable]
     public struct Item
     {
+        public int serialID;
         public string id;
         public string name;
         public string description;

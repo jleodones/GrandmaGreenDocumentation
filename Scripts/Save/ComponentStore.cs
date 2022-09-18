@@ -118,7 +118,7 @@ namespace GrandmaGreen.SaveSystem
             }
             return true;
         }
-        
+
         /// <summary>
         /// Returns the type of components it stores.
         /// </summary>

@@ -11,7 +11,8 @@ namespace GrandmaGreen.Collections {
     [Serializable]
     public struct InventoryItem
     {
-        public string id;
+        public int serialID;
+        public string ID;
         public int quantity;
     }
 
