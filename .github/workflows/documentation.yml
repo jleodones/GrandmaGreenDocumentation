@@ -1,9 +1,9 @@
 name: Update documentation.
 
 on:
-  push:
-    branches:
-      - 'main'
+  # Updates every day at 00.00 PST/07.00 UTC.
+  schedule:
+    - cron: '05 7 * * *'
   workflow_dispatch:
   
 jobs:
