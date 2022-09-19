@@ -7,9 +7,10 @@ using Sirenix.OdinInspector;
 
 #if (UNITY_EDITOR)
 
-/*
-* This class populates and creates the Collections SO by reading the CSV file
-*/
+
+/// <summary>
+/// This class populates and creates the Collections SO by reading the CSV file
+/// <summary>
 namespace GrandmaGreen.Collections {
     
     [CreateAssetMenu(menuName = "Utilities/CSV Generator", fileName = "CSVGenerator")]
@@ -18,6 +19,9 @@ namespace GrandmaGreen.Collections {
         public ObjectSaver InventoryData;
         private string inventoryCSVPath = "/_GrandmaGreen/Scripts/Collections/Temp CSV File.csv";
         
+        /// <summary>
+        /// Function to populate and creates the Collections SO by reading the CSV file
+        /// </summary>
         [Button()]
         public void GenerateCollectionsSO() {
             InventoryData.CreateNewStore<InventoryItem>();
@@ -34,6 +38,17 @@ namespace GrandmaGreen.Collections {
                 t.id = line[0];
                 t.name = line[1];
                 t.description = line[2];
+                string imgName = t.name;
+                //Sprite img;
+                ItemSpritesSO spritesSO = Resources.Load("Item Sprites SO", typeof(ItemSpritesSO)) as ItemSpritesSO;
+                for(int j=0; j<spritesSO.itemSprites.Count; j++)
+                {
+                    if(imgName == spritesSO.itemSprites[j].name)
+                    {
+                        t.SetImage(spritesSO.itemSprites[j].img);
+                    }
+                }
+                //t.SetImage(img);
 
                 collections.items.Add(t);
                 

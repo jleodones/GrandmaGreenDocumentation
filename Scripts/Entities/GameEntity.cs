@@ -16,6 +16,11 @@ namespace GrandmaGreen.Entities
         PerformingAction
     }
 
+    /// <summary>
+    /// Core Game Entity Behavior
+    /// Serves as the customer for various GG services (pathfinding, gardening, dialogue)
+    /// Has no decision making logic, instead it is handled by its corresponding Entity Controller
+    /// </summary>
     public class GameEntity : MonoBehaviour, IPathAgent
     {
         [Header("Entity References")]
@@ -82,6 +87,11 @@ namespace GrandmaGreen.Entities
             entityStateMachine.PhysicsUpdate();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="range">Max  range to path to</param>
+        /// <returns>Array of pathable destinations in the range</returns>
         public float3[] CalculatePathable(int range)
         {
             int2 startPos;
@@ -94,6 +104,11 @@ namespace GrandmaGreen.Entities
             return pathableNodes;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="endPos">Target location</param>
+        /// <returns>Float array of path to follow. Empty if no path is found</returns>
         public float3[] CheckPath(int2 endPos)
         {
             int2 startPos;
@@ -115,6 +130,10 @@ namespace GrandmaGreen.Entities
             return CheckPath(endPos);
         }
 
+        /// <summary>
+        /// Follows the given float3 path
+        /// </summary>
+        /// <param name="path"></param>
         public virtual void FollowPath(float3[] path)
         {
             Spline spline = default(Spline);

@@ -9,6 +9,9 @@ using Core.FSM;
 namespace GrandmaGreen.Entities
 {
     [System.Flags]
+    /// <summary>
+    /// Bit flag for all possible services this entity could use
+    /// </summary>
     public enum EntityPermissions
     {
         None = 0,
@@ -19,6 +22,10 @@ namespace GrandmaGreen.Entities
     }
 
     [CreateAssetMenu(menuName = "GrandmaGreen/Entities/Controllers/Default")]
+    /// <summary>
+    /// Brain of a GameEntity
+    /// Entry point for all Entity logic
+    /// </summary>
     public class EntityController : ScriptableObject
     {
         [Header("Entity Settings")]
@@ -36,6 +43,7 @@ namespace GrandmaGreen.Entities
         {
             this.entity = entity;
         }
+
 
         public virtual void StartController()
         {
