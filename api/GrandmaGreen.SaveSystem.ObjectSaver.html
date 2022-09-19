@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class ObjectSaver
    ">
-    <meta name="generator" content="docfx 2.59.3.0">
+    <meta name="generator" content="docfx 2.59.4.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -187,14 +187,14 @@ no two ObjectSavers should be named alike.</p>
   
   
   <a id="GrandmaGreen_SaveSystem_ObjectSaver_AddComponent_" data-uid="GrandmaGreen.SaveSystem.ObjectSaver.AddComponent*"></a>
-  <h4 id="GrandmaGreen_SaveSystem_ObjectSaver_AddComponent__1___0_" data-uid="GrandmaGreen.SaveSystem.ObjectSaver.AddComponent``1(``0)">AddComponent&lt;T&gt;(T)</h4>
+  <h4 id="GrandmaGreen_SaveSystem_ObjectSaver_AddComponent__1_System_Int32___0_" data-uid="GrandmaGreen.SaveSystem.ObjectSaver.AddComponent``1(System.Int32,``0)">AddComponent&lt;T&gt;(Int32, T)</h4>
   <div class="markdown level1 summary"><p>Adds a component to the appropriate ComponentStore. Stored internally, marked for update, then saved by the SaveController.
-This interfaces directly with game systems.</p>
+Wrappr for the corresponding function in the ComponentStore. This interfaces directly with game systems.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void AddComponent&lt;T&gt;(T component)
+    <pre><code class="lang-csharp hljs">public void AddComponent&lt;T&gt;(int index, T component)
     where T : struct</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -207,6 +207,12 @@ This interfaces directly with game systems.</p>
       </tr>
     </thead>
     <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">index</span></td>
+        <td><p>Optional index parameter to insert a component at the given index.</p>
+</td>
+      </tr>
       <tr>
         <td><span class="xref">T</span></td>
         <td><span class="parametername">component</span></td>
@@ -260,6 +266,32 @@ Utilizes reflection. The Type must be a C# data type (ie. strings, ints, structs
   </table>
   
   
+  <a id="GrandmaGreen_SaveSystem_ObjectSaver_CreateNewStore_" data-uid="GrandmaGreen.SaveSystem.ObjectSaver.CreateNewStore*"></a>
+  <h4 id="GrandmaGreen_SaveSystem_ObjectSaver_CreateNewStore__1" data-uid="GrandmaGreen.SaveSystem.ObjectSaver.CreateNewStore``1">CreateNewStore&lt;T&gt;()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CreateNewStore&lt;T&gt;()
+    where T : struct</code></pre>
+  </div>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="GrandmaGreen_SaveSystem_ObjectSaver_OnEnable_" data-uid="GrandmaGreen.SaveSystem.ObjectSaver.OnEnable*"></a>
   <h4 id="GrandmaGreen_SaveSystem_ObjectSaver_OnEnable" data-uid="GrandmaGreen.SaveSystem.ObjectSaver.OnEnable">OnEnable()</h4>
   <div class="markdown level1 summary"><p>Initializes member variables upon enabling.</p>
@@ -269,6 +301,187 @@ Utilizes reflection. The Type must be a C# data type (ie. strings, ints, structs
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void OnEnable()</code></pre>
   </div>
+  
+  
+  <a id="GrandmaGreen_SaveSystem_ObjectSaver_RemoveComponent_" data-uid="GrandmaGreen.SaveSystem.ObjectSaver.RemoveComponent*"></a>
+  <h4 id="GrandmaGreen_SaveSystem_ObjectSaver_RemoveComponent__1_System_Int32___0_" data-uid="GrandmaGreen.SaveSystem.ObjectSaver.RemoveComponent``1(System.Int32,``0)">RemoveComponent&lt;T&gt;(Int32, T)</h4>
+  <div class="markdown level1 summary"><p>Removes a component from the appropriate ComponentStore. Stored internally, then saved by the SaveController.
+Wrapper for the corresponding function in the ComponentStore. This interfaces directly with game systems.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RemoveComponent&lt;T&gt;(int index, T component)
+    where T : struct</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">index</span></td>
+        <td><p>Index for moments where the index of the object is known. -1 signifies that it should use an equality based comparison to
+find the component (no index available).</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">component</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="GrandmaGreen_SaveSystem_ObjectSaver_RequestData_" data-uid="GrandmaGreen.SaveSystem.ObjectSaver.RequestData*"></a>
+  <h4 id="GrandmaGreen_SaveSystem_ObjectSaver_RequestData__1_System_Int32___0__" data-uid="GrandmaGreen.SaveSystem.ObjectSaver.RequestData``1(System.Int32,``0@)">RequestData&lt;T&gt;(Int32, ref T)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RequestData&lt;T&gt;(int index, ref T component)
+    where T : struct</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">index</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">component</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="GrandmaGreen_SaveSystem_ObjectSaver_Set_" data-uid="GrandmaGreen.SaveSystem.ObjectSaver.Set*"></a>
+  <h4 id="GrandmaGreen_SaveSystem_ObjectSaver_Set_GrandmaGreen_SaveSystem_SaveController_GrandmaGreen_SaveSystem_ObjectSaver_" data-uid="GrandmaGreen.SaveSystem.ObjectSaver.Set(GrandmaGreen.SaveSystem.SaveController,GrandmaGreen.SaveSystem.ObjectSaver)">Set(SaveController, ObjectSaver)</h4>
+  <div class="markdown level1 summary"><p>Used to set the data with information loaded from the save file. It also sets the newly instantiated SaveController.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Set(SaveController newSaveController, ObjectSaver os)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="GrandmaGreen.SaveSystem.SaveController.html">SaveController</a></td>
+        <td><span class="parametername">newSaveController</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="GrandmaGreen.SaveSystem.ObjectSaver.html">ObjectSaver</a></td>
+        <td><span class="parametername">os</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="GrandmaGreen_SaveSystem_ObjectSaver_UpdateValue_" data-uid="GrandmaGreen.SaveSystem.ObjectSaver.UpdateValue*"></a>
+  <h4 id="GrandmaGreen_SaveSystem_ObjectSaver_UpdateValue__1_System_Int32___0_" data-uid="GrandmaGreen.SaveSystem.ObjectSaver.UpdateValue``1(System.Int32,``0)">UpdateValue&lt;T&gt;(Int32, T)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void UpdateValue&lt;T&gt;(int index, T component)
+    where T : struct</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">index</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">component</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="GrandmaGreen.SaveSystem.IObjectSaver.html">IObjectSaver</a>

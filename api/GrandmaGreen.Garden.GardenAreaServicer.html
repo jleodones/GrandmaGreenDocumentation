@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class GardenAreaServicer
    ">
-    <meta name="generator" content="docfx 2.59.3.0">
+    <meta name="generator" content="docfx 2.59.4.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -100,13 +100,98 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public class GardenAreaServicer : ScriptableObject, IPathfinderServicer, IServicer&lt;Pathfinder&gt;</code></pre>
   </div>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="GrandmaGreen_Garden_GardenAreaServicer_ActiveArea_" data-uid="GrandmaGreen.Garden.GardenAreaServicer.ActiveArea*"></a>
+  <h4 id="GrandmaGreen_Garden_GardenAreaServicer_ActiveArea" data-uid="GrandmaGreen.Garden.GardenAreaServicer.ActiveArea">ActiveArea</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GardenAreaController ActiveArea { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="GrandmaGreen.Garden.GardenAreaController.html">GardenAreaController</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
   </h3>
   
   
+  <a id="GrandmaGreen_Garden_GardenAreaServicer_ActivateAreaController_" data-uid="GrandmaGreen.Garden.GardenAreaServicer.ActivateAreaController*"></a>
+  <h4 id="GrandmaGreen_Garden_GardenAreaServicer_ActivateAreaController_System_Int32_" data-uid="GrandmaGreen.Garden.GardenAreaServicer.ActivateAreaController(System.Int32)">ActivateAreaController(Int32)</h4>
+  <div class="markdown level1 summary"><p>Activates an area controller and sets it to the current active area
+Deactivates the previous active area</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ActivateAreaController(int areaIndex)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">areaIndex</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="GrandmaGreen_Garden_GardenAreaServicer_DeactivateAreaController_" data-uid="GrandmaGreen.Garden.GardenAreaServicer.DeactivateAreaController*"></a>
+  <h4 id="GrandmaGreen_Garden_GardenAreaServicer_DeactivateAreaController_System_Int32_" data-uid="GrandmaGreen.Garden.GardenAreaServicer.DeactivateAreaController(System.Int32)">DeactivateAreaController(Int32)</h4>
+  <div class="markdown level1 summary"><p>Deactivates the currently active area</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void DeactivateAreaController(int areaIndex)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">areaIndex</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="GrandmaGreen_Garden_GardenAreaServicer_DeregisterService_" data-uid="GrandmaGreen.Garden.GardenAreaServicer.DeregisterService*"></a>
   <h4 id="GrandmaGreen_Garden_GardenAreaServicer_DeregisterService_Pathfinder_" data-uid="GrandmaGreen.Garden.GardenAreaServicer.DeregisterService(Pathfinder)">DeregisterService(Pathfinder)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Placeholder method for registering a sample service</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -132,12 +217,13 @@
   
   
   <a id="GrandmaGreen_Garden_GardenAreaServicer_DesregisterAreaController_" data-uid="GrandmaGreen.Garden.GardenAreaServicer.DesregisterAreaController*"></a>
-  <h4 id="GrandmaGreen_Garden_GardenAreaServicer_DesregisterAreaController_GrandmaGreen_Garden_GardenAreaController_" data-uid="GrandmaGreen.Garden.GardenAreaServicer.DesregisterAreaController(GrandmaGreen.Garden.GardenAreaController)">DesregisterAreaController(GardenAreaController)</h4>
-  <div class="markdown level1 summary"></div>
+  <h4 id="GrandmaGreen_Garden_GardenAreaServicer_DesregisterAreaController_GrandmaGreen_Garden_GardenAreaController_System_Int32_" data-uid="GrandmaGreen.Garden.GardenAreaServicer.DesregisterAreaController(GrandmaGreen.Garden.GardenAreaController,System.Int32)">DesregisterAreaController(GardenAreaController, Int32)</h4>
+  <div class="markdown level1 summary"><p>Deactivate an area controller</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void DesregisterAreaController(GardenAreaController areaController)</code></pre>
+    <pre><code class="lang-csharp hljs">public void DesregisterAreaController(GardenAreaController areaController, int areaIndex)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -154,17 +240,23 @@
         <td><span class="parametername">areaController</span></td>
         <td></td>
       </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">areaIndex</span></td>
+        <td></td>
+      </tr>
     </tbody>
   </table>
   
   
   <a id="GrandmaGreen_Garden_GardenAreaServicer_RegisterAreaController_" data-uid="GrandmaGreen.Garden.GardenAreaServicer.RegisterAreaController*"></a>
-  <h4 id="GrandmaGreen_Garden_GardenAreaServicer_RegisterAreaController_GrandmaGreen_Garden_GardenAreaController_" data-uid="GrandmaGreen.Garden.GardenAreaServicer.RegisterAreaController(GrandmaGreen.Garden.GardenAreaController)">RegisterAreaController(GardenAreaController)</h4>
-  <div class="markdown level1 summary"></div>
+  <h4 id="GrandmaGreen_Garden_GardenAreaServicer_RegisterAreaController_GrandmaGreen_Garden_GardenAreaController_System_Int32_" data-uid="GrandmaGreen.Garden.GardenAreaServicer.RegisterAreaController(GrandmaGreen.Garden.GardenAreaController,System.Int32)">RegisterAreaController(GardenAreaController, Int32)</h4>
+  <div class="markdown level1 summary"><p>Active an area controller</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void RegisterAreaController(GardenAreaController areaController)</code></pre>
+    <pre><code class="lang-csharp hljs">public void RegisterAreaController(GardenAreaController areaController, int areaIndex)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -179,6 +271,11 @@
       <tr>
         <td><a class="xref" href="GrandmaGreen.Garden.GardenAreaController.html">GardenAreaController</a></td>
         <td><span class="parametername">areaController</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">areaIndex</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -187,7 +284,8 @@
   
   <a id="GrandmaGreen_Garden_GardenAreaServicer_RegisterService_" data-uid="GrandmaGreen.Garden.GardenAreaServicer.RegisterService*"></a>
   <h4 id="GrandmaGreen_Garden_GardenAreaServicer_RegisterService_Pathfinder_" data-uid="GrandmaGreen.Garden.GardenAreaServicer.RegisterService(Pathfinder)">RegisterService(Pathfinder)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Placeholder method for registering a sample service</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -224,7 +322,8 @@
   
   <a id="GrandmaGreen_Garden_GardenAreaServicer_StopServices_" data-uid="GrandmaGreen.Garden.GardenAreaServicer.StopServices*"></a>
   <h4 id="GrandmaGreen_Garden_GardenAreaServicer_StopServices" data-uid="GrandmaGreen.Garden.GardenAreaServicer.StopServices">StopServices()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Stops the various gardening systems</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

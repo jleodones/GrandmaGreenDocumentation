@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class GardenAreaController
    ">
-    <meta name="generator" content="docfx 2.59.3.0">
+    <meta name="generator" content="docfx 2.59.4.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -82,7 +82,8 @@
   
   <h1 id="GrandmaGreen_Garden_GardenAreaController" data-uid="GrandmaGreen.Garden.GardenAreaController" class="text-break">Class GardenAreaController
   </h1>
-  <div class="markdown level0 summary"><p>TODO: Implement functionality for save/loading changed tiles </p>
+  <div class="markdown level0 summary"><p>Responsible for functionality of a single Garden screen
+TODO: Implement functionality for save/loading changed tiles </p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -273,6 +274,16 @@
   </h3>
   
   
+  <a id="GrandmaGreen_Garden_GardenAreaController_Activate_" data-uid="GrandmaGreen.Garden.GardenAreaController.Activate*"></a>
+  <h4 id="GrandmaGreen_Garden_GardenAreaController_Activate" data-uid="GrandmaGreen.Garden.GardenAreaController.Activate">Activate()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Activate()</code></pre>
+  </div>
+  
+  
   <a id="GrandmaGreen_Garden_GardenAreaController_BakeNavGrid_" data-uid="GrandmaGreen.Garden.GardenAreaController.BakeNavGrid*"></a>
   <h4 id="GrandmaGreen_Garden_GardenAreaController_BakeNavGrid" data-uid="GrandmaGreen.Garden.GardenAreaController.BakeNavGrid">BakeNavGrid()</h4>
   <div class="markdown level1 summary"></div>
@@ -280,6 +291,16 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void BakeNavGrid()</code></pre>
+  </div>
+  
+  
+  <a id="GrandmaGreen_Garden_GardenAreaController_Deactivate_" data-uid="GrandmaGreen.Garden.GardenAreaController.Deactivate*"></a>
+  <h4 id="GrandmaGreen_Garden_GardenAreaController_Deactivate" data-uid="GrandmaGreen.Garden.GardenAreaController.Deactivate">Deactivate()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Deactivate()</code></pre>
   </div>
   
   
@@ -342,6 +363,16 @@
   </table>
   
   
+  <a id="GrandmaGreen_Garden_GardenAreaController_InitializeGarden_" data-uid="GrandmaGreen.Garden.GardenAreaController.InitializeGarden*"></a>
+  <h4 id="GrandmaGreen_Garden_GardenAreaController_InitializeGarden" data-uid="GrandmaGreen.Garden.GardenAreaController.InitializeGarden">InitializeGarden()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void InitializeGarden()</code></pre>
+  </div>
+  
+  
   <a id="GrandmaGreen_Garden_GardenAreaController_ParseTilemap_" data-uid="GrandmaGreen.Garden.GardenAreaController.ParseTilemap*"></a>
   <h4 id="GrandmaGreen_Garden_GardenAreaController_ParseTilemap" data-uid="GrandmaGreen.Garden.GardenAreaController.ParseTilemap">ParseTilemap()</h4>
   <div class="markdown level1 summary"></div>
@@ -352,9 +383,57 @@
   </div>
   
   
+  <a id="GrandmaGreen_Garden_GardenAreaController_PlaceAllPlantTypePrefabs_" data-uid="GrandmaGreen.Garden.GardenAreaController.PlaceAllPlantTypePrefabs*"></a>
+  <h4 id="GrandmaGreen_Garden_GardenAreaController_PlaceAllPlantTypePrefabs" data-uid="GrandmaGreen.Garden.GardenAreaController.PlaceAllPlantTypePrefabs">PlaceAllPlantTypePrefabs()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void PlaceAllPlantTypePrefabs()</code></pre>
+  </div>
+  
+  
+  <a id="GrandmaGreen_Garden_GardenAreaController_PlacePlantPrefab_" data-uid="GrandmaGreen.Garden.GardenAreaController.PlacePlantPrefab*"></a>
+  <h4 id="GrandmaGreen_Garden_GardenAreaController_PlacePlantPrefab_GrandmaGreen_PlantType_Vector3_System_Int32_" data-uid="GrandmaGreen.Garden.GardenAreaController.PlacePlantPrefab(GrandmaGreen.PlantType,Vector3,System.Int32)">PlacePlantPrefab(PlantType, Vector3, Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void PlacePlantPrefab(PlantType type, Vector3 pos, int growthStage)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="GrandmaGreen.PlantType.html">PlantType</a></td>
+        <td><span class="parametername">type</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td><span class="parametername">pos</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">growthStage</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="GrandmaGreen_Garden_GardenAreaController_PlantInteraction_" data-uid="GrandmaGreen.Garden.GardenAreaController.PlantInteraction*"></a>
   <h4 id="GrandmaGreen_Garden_GardenAreaController_PlantInteraction" data-uid="GrandmaGreen.Garden.GardenAreaController.PlantInteraction">PlantInteraction()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>NOT USED FOR NOW</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -362,6 +441,54 @@
   </div>
   <h3 id="events">Events
   </h3>
+  
+  
+  <h4 id="GrandmaGreen_Garden_GardenAreaController_onActivation" data-uid="GrandmaGreen.Garden.GardenAreaController.onActivation">onActivation</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Action onActivation</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.action">Action</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="GrandmaGreen_Garden_GardenAreaController_onDeactivation" data-uid="GrandmaGreen.Garden.GardenAreaController.onDeactivation">onDeactivation</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Action onDeactivation</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.action">Action</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <h4 id="GrandmaGreen_Garden_GardenAreaController_onGardenSelection" data-uid="GrandmaGreen.Garden.GardenAreaController.onGardenSelection">onGardenSelection</h4>
