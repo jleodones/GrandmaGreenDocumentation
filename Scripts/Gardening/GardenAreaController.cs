@@ -76,6 +76,12 @@ namespace GrandmaGreen.Garden
             onDeactivation?.Invoke();
         }
 
+        public void TrowelAtPos(Vector3 pos)
+        {
+            Debug.Log(string.Format("World pos: {0}\nTile: {1}",
+                pos, gardenData.WorldToGrid(pos)));
+        }
+
         public void PlacePlantPrefab(PlantType type, Vector3 pos, int growthStage)
             => Instantiate(type.growthStagePrefabs[growthStage], pos, Quaternion.identity);
 

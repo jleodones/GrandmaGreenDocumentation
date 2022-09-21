@@ -29,7 +29,7 @@ namespace GrandmaGreen.Entities
 
         [field: Header("Entity Variables")]
         public StateMachine<EntityState> entityStateMachine;// { get; protected set; }
-
+        public Vector3 velocity;
         [Header("Pathing")]
         public SplineFollow splineFollow;
         [Range(0, 1)]
@@ -43,6 +43,9 @@ namespace GrandmaGreen.Entities
 
         float3[] pathableNodes;
 
+        Vector3 prevPosition;
+
+
         void Awake()
         {
             controller.RegisterEntity(this);
@@ -52,6 +55,7 @@ namespace GrandmaGreen.Entities
         void Start()
         {
             entityStateMachine.Enter(EntityState.Idle);
+            prevPosition = transform.position;
         }
         void OnDestroy()
         {
@@ -65,6 +69,8 @@ namespace GrandmaGreen.Entities
             idleToMoving = entityStateMachine.AddTransition(EntityState.Idle, EntityState.MovingTo);
             movingToIdle = entityStateMachine.AddTransition(EntityState.MovingTo, EntityState.Idle);
 
+            entityStateMachine.GetState(EntityState.Idle).onLogicUpdate += IdleLogic;
+            entityStateMachine.GetState(EntityState.MovingTo).onLogicUpdate += MovingLogic;
         }
 
         protected virtual void OnEnable()
@@ -79,12 +85,40 @@ namespace GrandmaGreen.Entities
 
         public void Update()
         {
+            SetAnimatorParameters();
             entityStateMachine.LogicUpdate();
         }
 
         public void FixedUpdate()
         {
+            velocity = transform.position - prevPosition;
+
+            prevPosition = transform.position;
             entityStateMachine.PhysicsUpdate();
+        }
+
+        void MovingLogic()
+        {
+            if (velocity.magnitude == 0)
+                movingToIdle.Trigger();
+        }
+
+        void IdleLogic()
+        {
+            if (velocity.magnitude != 0)
+                idleToMoving.Trigger();
+        }
+
+        void SetAnimatorParameters()
+        {
+            if (velocity.magnitude != 0)
+            {
+                animator.SetInteger("DIRECTION", velocity.x < 0 ? -1 : 1);
+                animator.SetInteger("MOVEMENT", (int)Mathf.Ceil(velocity.magnitude));
+            }
+            else
+                animator.SetInteger("MOVEMENT", 0);
+
         }
 
         /// <summary>
@@ -146,16 +180,6 @@ namespace GrandmaGreen.Entities
 
             spline.Warmup();
             splineFollow.Play(spline);
-
-            idleToMoving.Trigger();
-
-            splineFollow.onComplete += OnPathComplete;
-        }
-
-        public void OnPathComplete()
-        {
-            splineFollow.onComplete -= OnPathComplete;
-            movingToIdle.Trigger();
         }
 
         public virtual void CancelPath()

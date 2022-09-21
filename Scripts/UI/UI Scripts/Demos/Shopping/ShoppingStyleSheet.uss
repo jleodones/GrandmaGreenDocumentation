@@ -1,0 +1,105 @@
+.title_box {
+    background-color: rgba(232, 241, 228, 255);
+    height: 150px;
+    min-width: auto;
+    width: 800px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+.item_button {
+    background-color: rgb(229, 237, 211);
+    width: 250px;
+    height: 250px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.popup_box {
+    width: 1000px;
+    height: 500px;
+    background-color: rgb(141, 149, 45);
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border-left-color: rgba(179, 187, 94, 255);
+    border-right-color: rgba(179, 187, 94, 255);
+    border-top-color: rgba(179, 187, 94, 255);
+    border-bottom-color: rgba(179, 187, 94, 255);
+    border-left-width: 20px;
+    border-right-width: 20px;
+    border-top-width: 20px;
+    border-bottom-width: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.price_box {
+    width: 150px;
+    height: 60px;
+    background-color: rgb(225, 237, 219);
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.price_text {
+    font-size: 300%;
+    color: rgb(91, 163, 167);
+    -unity-text-align: middle-right;
+    width: 60%;
+    height: 100%;
+    -unity-font-style: bold;
+}
+
+.price_icon {
+    width: 50px;
+    height: 50px;
+}
+
+.currency_box {
+    width: 200px;
+    height: 80px;
+    background-color: rgb(232, 241, 228);
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    align-items: stretch;
+    justify-content: space-between;
+}
+
+.currency_icon {
+    width: 50px;
+    height: 50px;
+}
+
+.currency_text {
+    font-size: 300%;
+    color: rgb(91, 163, 167);
+    -unity-text-align: middle-right;
+    -unity-font-style: bold;
+}
