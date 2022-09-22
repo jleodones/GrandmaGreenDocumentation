@@ -20,12 +20,11 @@ namespace GrandmaGreen.Garden
         public Tilemap tilemap;
         public Pathfinder pathfinder;
         public Collider areaBounds;
-        [SerializeField]
-        private PointerState pointerState;
 
         [Header("Plant Management")]
-        [SerializeField]
-        private PlantTypeDictionary plantTypeDictionary;
+        public PlantTypeDictionary plantTypeDictionary;
+        public PlantStateManager plantStateManager;
+        public GameObject[,] plantPrefabs;
 
         [Header("Prefab References")]
         public PlantInteractable plantInteractablePrefab;
@@ -45,24 +44,24 @@ namespace GrandmaGreen.Garden
         void Awake()
         {
             areaServicer.RegisterAreaController(this, areaIndex);
+            plantStateManager.RegisterGarden(tilemap.size, areaIndex);
             areaActive = false;
         }
 
         void Start()
         {
-            if (SceneManager.GetActiveScene().name == "TestGardenTileData")
-            {
-                PlaceAllPlantTypePrefabs();
-            }
-            else
+            if (SceneManager.GetActiveScene().name != "TestGardenTileData")
             {
                 InitializeGarden();
             }
+
+            plantTypeDictionary.LoadPlantTypes();
         }
 
         public void Activate()
         {
             pathfinder.LoadGrid();
+            plantPrefabs = new GameObject[tilemap.size.x, tilemap.size.y];
             areaActive = true;
 
             onActivation?.Invoke();
@@ -83,26 +82,82 @@ namespace GrandmaGreen.Garden
         }
 
         public void PlacePlantPrefab(PlantType type, Vector3 pos, int growthStage)
-            => Instantiate(type.growthStagePrefabs[growthStage], pos, Quaternion.identity);
+        {
+            Vector3Int cell = tilemap.WorldToCell(pos);
+            Vector3Int cellToArr = cell - tilemap.origin;
+            plantPrefabs[cellToArr.x, cellToArr.y] = Instantiate(type.growthStagePrefabs[growthStage], pos, Quaternion.identity);
+            plantStateManager.CreatePlant(type, areaIndex, cellToArr.x, cellToArr.y);
+        }
+
+        public void PlacePlantPrefabAtCell(PlantType type, Vector3Int cell, int growthStage)
+        {
+            Vector3 pos = tilemap.GetCellCenterWorld(cell);
+            Vector3Int cellToArr = cell - tilemap.origin;
+            plantPrefabs[cellToArr.x, cellToArr.y] = Instantiate(type.growthStagePrefabs[growthStage], pos, Quaternion.identity);
+            plantStateManager.CreatePlant(type, areaIndex, cellToArr.x, cellToArr.y);
+        }
+
+        public void CreatePlantOnCell(PlantType type, Vector3Int cell)
+        {
+            Vector3 centerOfCell = tilemap.GetCellCenterWorld(cell);
+            Vector3Int cellToArr = cell - tilemap.origin;
+            plantPrefabs[cellToArr.x, cellToArr.y] = Instantiate(type.growthStagePrefabs[0], centerOfCell, Quaternion.identity);
+            plantStateManager.CreatePlant(type, areaIndex, cellToArr.x, cellToArr.y);
+        }
+
+        public void DestroyPlantOnCell(Vector3Int cell)
+        {
+            Vector3Int cellToArr = cell - tilemap.origin;
+            if (plantStateManager.IsEmpty(areaIndex, cellToArr.x, cellToArr.y))
+            {
+                Debug.Log(string.Format("No plant at {0}", cell));
+            }
+            else
+            {
+                Destroy(plantPrefabs[cellToArr.x, cellToArr.y]);
+                plantStateManager.DestroyPlant(areaIndex, cellToArr.x, cellToArr.y);
+            }
+        }
+
+        [ContextMenu("PlaceRoseBottomLeft")]
+        public void PlaceRoseBottomLeft()
+        {
+            CreatePlantOnCell(plantTypeDictionary["Rose"], tilemap.origin);
+        }
+
+        [ContextMenu("DestroyRoseBottomLeft")]
+        public void DestroyRoseBottomLeft()
+        {
+            DestroyPlantOnCell(tilemap.origin);
+        }
 
         [ContextMenu("PlaceAllPlantTypePrefabs")]
         public void PlaceAllPlantTypePrefabs()
         {
-            Vector3 bottomLeft = gardenData.IndexToWorldPos(gardenData.plantStates[0].gridIndex);
             for (int i = 0; i < plantTypeDictionary.plantTypes.Length; i++)
             {
                 PlantType plant = plantTypeDictionary.plantTypes[i];
-                Debug.Log(string.Format("=== {0} ===", plant.name));
                 for (int j = 0; j < plant.growthStagePrefabs.Length; j++)
                 {
-                    Vector3 plantPos = bottomLeft + i * Vector3.up + j * Vector3.right + 0.01f * Vector3.back;
-                    Debug.Log(string.Format("Placing a {0} at {1}", plant.name, plantPos));
-                    PlacePlantPrefab(plant, plantPos, j);
+                    PlacePlantPrefabAtCell(plant, tilemap.origin + i * Vector3Int.up + j * Vector3Int.right, j);
                 }
             }
         }
 
-        [ContextMenu("Intialize")]
+        [ContextMenu("DestroyAllPlantPrefabs")]
+        public void DestroyAllPlantPrefabs()
+        {
+            for (int i = 0; i < plantTypeDictionary.plantTypes.Length; i++)
+            {
+                PlantType plant = plantTypeDictionary.plantTypes[i];
+                for (int j = 0; j < plant.growthStagePrefabs.Length; j++)
+                {
+                    DestroyPlantOnCell(tilemap.origin + i * Vector3Int.up + j * Vector3Int.right);
+                }
+            }
+        }
+
+        [ContextMenu("IntializeGarden")]
         /// <summary>
         /// Initalizes Garden including instantiating plants
         /// </summary>

@@ -12,5 +12,6 @@ namespace GrandmaGreen
         public bool isPathable;
         public bool isPlottable;
         public bool isPlantable;
+        public bool isOccupied;
     }
 }

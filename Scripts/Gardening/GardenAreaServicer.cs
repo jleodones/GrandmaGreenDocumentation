@@ -14,6 +14,7 @@ namespace GrandmaGreen.Garden
     {
         [SerializeField][ReadOnly] GardenAreaController[] areaControllerSet;
         [SerializeField][ReadOnly] int activeAreaIndex;
+        [SerializeField] PlantStateManager globalPlantState;
         public GardenAreaController ActiveArea => areaControllerSet[activeAreaIndex];
 
         [ContextMenu("Start")]
@@ -27,6 +28,7 @@ namespace GrandmaGreen.Garden
 
             activeAreaIndex = -1;
             areaControllerSet = new GardenAreaController[5];
+            globalPlantState.Initialize();
         }
 
         /// <summary>

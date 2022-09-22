@@ -10,6 +10,7 @@ public struct TileData
     public bool pathable;
     public bool plantable;
     public bool plottable;
+    public bool occupied;
 }
 
 [CreateAssetMenu(fileName = "TileStore", menuName = "GrandmaGreen/TileStore", order = 0)]
