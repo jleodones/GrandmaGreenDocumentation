@@ -58,6 +58,7 @@ namespace GrandmaGreen.SaveSystem
             }
             catch (Exception e)
             {
+                Debug.LogException(e);
                 return false;
             }
             return true;
@@ -81,6 +82,7 @@ namespace GrandmaGreen.SaveSystem
             }
             catch (Exception e)
             {
+                Debug.LogException(e);
                 return false;
             }
             return true;
@@ -97,6 +99,7 @@ namespace GrandmaGreen.SaveSystem
             }
             catch (Exception e)
             {
+                Debug.LogException(e);
                 return false;
             }
             return true;
@@ -114,6 +117,7 @@ namespace GrandmaGreen.SaveSystem
             }
             catch (Exception e)
             {
+                Debug.LogException(e);
                 return false;
             }
             return true;
@@ -122,7 +126,7 @@ namespace GrandmaGreen.SaveSystem
         /// <summary>
         /// Returns the type of components it stores.
         /// </summary>
-        public Type GetType()
+        public new Type GetType()
         {
             return typeof(T);
         }

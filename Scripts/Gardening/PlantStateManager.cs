@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace GrandmaGreen.Garden
@@ -9,6 +10,7 @@ namespace GrandmaGreen.Garden
         public PlantType type;
         public int growthStage;
         public float timePlanted;
+        public Vector3Int cell;
     }
 
     [CreateAssetMenu(menuName = "GrandmaGreen/Garden/GlobalPlantState")]
@@ -16,44 +18,60 @@ namespace GrandmaGreen.Garden
     {
         [SerializeField]
         public Vector2Int[] gardenDimensions;
-        public Plant[][,] plantData;
+        public Dictionary<Vector3Int, Plant>[] plantLookup;
+        [SerializeField]
+        public List<Plant> plantListDebug;
 
         public void Initialize()
         {
             gardenDimensions = new Vector2Int[5];
-            plantData = new Plant[5][,];
+            plantLookup = new Dictionary<Vector3Int, Plant>[5];
         }
 
         public void RegisterGarden(Vector3Int dimensions, int areaIndex)
         {
             gardenDimensions[areaIndex] = new Vector2Int(dimensions.x, dimensions.y);
-            plantData[areaIndex] = new Plant[dimensions.x, dimensions.y];
+            plantLookup[areaIndex] = new Dictionary<Vector3Int, Plant>();
         }
 
-        public void CreatePlant(PlantType type, int areaIndex, int x, int y)
+        public void CreatePlant(PlantType type, int areaIndex, Vector3Int cell)
         {
-            plantData[areaIndex][x, y].type = type;
+            plantLookup[areaIndex][cell] = new Plant
+            {
+                type = type,
+                cell = cell
+            };
         }
 
-        public void DestroyPlant(int areaIndex, int x, int y)
+        public void DestroyPlant(int areaIndex, Vector3Int cell)
         {
-            plantData[areaIndex][x, y] = new Plant();
+            plantLookup[areaIndex].Remove(cell);
+	    }
+
+        public Plant GetPlant(int areaIndex, Vector3Int cell)
+        {
+            return plantLookup[areaIndex][cell];
         }
 
-        public Plant GetPlant(int areaIndex, int x, int y)
+        public bool IsEmpty(int areaIndex, Vector3Int cell)
         {
-            return plantData[areaIndex][x, y];
-        }
-
-        public bool IsEmpty(int areaIndex, int x, int y)
-        {
-            return plantData[areaIndex][x, y].type == null;
+            return !plantLookup[areaIndex].ContainsKey(cell);
         }
 
         [ContextMenu("DeleteGardenData")]
         public void DeleteGardenData()
         {
-            plantData[0] = new Plant[gardenDimensions[0].x, gardenDimensions[0].y];
+            plantLookup[0].Clear();
         }
+
+        [ContextMenu("InspectPlants")]
+        public void InspectPlants()
+        {
+            plantListDebug.Clear();
+            foreach (Plant plant in plantLookup[0].Values)
+            {
+                plantListDebug.Add(plant); 
+	        }
+	    }
     }
 }

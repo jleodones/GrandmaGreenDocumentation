@@ -27,9 +27,9 @@ namespace GrandmaGreen
         public void HandleEVENT_INVENTORY_UPDATE(string id, int num) {EVENT_INVENTORY_UPDATE?.Invoke(id, num);}
 
         // Golem's Event and Handler
-        public event Action<int> EVENT_GOLEM_SPAWN;
+        public event Action<int, Vector3> EVENT_GOLEM_SPAWN;
 
-        public void HandleEVENT_GOLEM_SPAWN(int id) {EVENT_GOLEM_SPAWN?.Invoke(id);}
+        public void HandleEVENT_GOLEM_SPAWN(int id, Vector3 pos) {EVENT_GOLEM_SPAWN?.Invoke(id, pos);}
 
     }    
 }

@@ -6,6 +6,7 @@ using UnityEngine.UIElements;
 public class TabbedInventory : MonoBehaviour
 {
     private TabbedInventoryController controller;
+    [SerializeField] public ToolTest toolScript;
 
     private void OnEnable()
     {
@@ -13,8 +14,10 @@ public class TabbedInventory : MonoBehaviour
         VisualElement root = inventory.rootVisualElement;
 
         controller = new(root);
+        controller.SetToolTest(toolScript);
 
         controller.RegisterTabCallbacks();
         controller.RegisterExitCallback();
+
     }
 }

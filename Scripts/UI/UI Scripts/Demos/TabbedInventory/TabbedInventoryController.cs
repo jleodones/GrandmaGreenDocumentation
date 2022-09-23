@@ -17,7 +17,14 @@ public class TabbedInventoryController
     // Define the suffix of the tab content name
     private const string contentNameSuffix = "-content";
 
+    private ToolTest toolTestScript = null;
+
+
     private readonly VisualElement root;
+
+    public void SetToolTest(ToolTest toolScript){
+        toolTestScript = toolScript;
+    }
 
     public TabbedInventoryController(VisualElement root)
     {
@@ -35,12 +42,10 @@ public class TabbedInventoryController
     public void RegisterExitCallback()
     {
         root.Q<Button>(exitButton).RegisterCallback<ClickEvent>(ExitOnClick);
-        // Debug.Log("Registered Exit");
     }
 
     // This hides the entire inventory panel when the exit button is clicked
     private void ExitOnClick(ClickEvent evt){
-    	// Debug.Log("Clicked Exit");
         root.Q(inventoryElement).style.display = DisplayStyle.None;
     }
 
@@ -79,6 +84,8 @@ public class TabbedInventoryController
         tab.AddToClassList(currentlySelectedTabClassName);
         VisualElement content = FindContent(tab);
         content.RemoveFromClassList(unselectedContentClassName);
+        // Sending tab name to Ashley
+        toolTestScript.SetTools(tab.name);
     }
 
     /* Method for the unselected tab: 

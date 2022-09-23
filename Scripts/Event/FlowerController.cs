@@ -9,7 +9,8 @@ namespace GrandmaGreen {
     public class FlowerController : MonoBehaviour//, IGameInteractable
     {
         private void OnTriggerEnter(Collider other) {
-            EventManager.instance.HandleEVENT_GOLEM_SPAWN(transform.parent.gameObject.GetInstanceID());    
+            EventManager.instance.HandleEVENT_GOLEM_SPAWN(transform.parent.gameObject.GetInstanceID(),
+                                                        transform.position);    
             Destroy(gameObject);
         }
 

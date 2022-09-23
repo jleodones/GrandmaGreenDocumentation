@@ -38,7 +38,7 @@ namespace GrandmaGreen.Entities
         public bool active = false;
 
         public Coroutine behaviorRoutine;
-
+        public bool plantCheck = true;
         public virtual void RegisterEntity(GameEntity entity)
         {
             this.entity = entity;

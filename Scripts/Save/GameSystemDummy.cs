@@ -27,16 +27,17 @@ namespace GrandmaGreen {
             m_objectSavers[0].AddComponent<Trait>(-1, t);
         }
 
-        [Button()]
-        public void UpdateInventoryItem(int serialID, int quantity)
-        {
-            InventoryItem sample = new InventoryItem();
-            m_objectSavers[1].RequestData<InventoryItem>(serialID, ref sample);
-
-            sample.quantity = quantity;
-            m_objectSavers[1].UpdateValue<InventoryItem>(serialID, sample);
-        }
-
+        // [Button()]
+        // public void UpdateInventoryItem(int serialID, int quantity)
+        // {
+        //     InventoryItem sample = new InventoryItem();
+        //     m_objectSavers[1].RequestData<InventoryItem>(serialID, ref sample);
+        //
+        //     sample.quantity = quantity;
+        //     m_objectSavers[1].UpdateValue<InventoryItem>(serialID, sample);
+        // }
+        //
+        
         public int SampleTest()
         {
             return 3;

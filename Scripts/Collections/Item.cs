@@ -10,6 +10,13 @@ namespace GrandmaGreen.Collections {
     ///</summary>
     public struct Item
     {
+        public enum itemType
+        {
+            Tool,
+            Plant,
+            Seed,
+            Decor
+        }
         public int serialID;
         public string id;
         public string name;

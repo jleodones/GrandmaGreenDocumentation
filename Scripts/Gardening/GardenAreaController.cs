@@ -24,7 +24,7 @@ namespace GrandmaGreen.Garden
         [Header("Plant Management")]
         public PlantTypeDictionary plantTypeDictionary;
         public PlantStateManager plantStateManager;
-        public GameObject[,] plantPrefabs;
+        public Dictionary<Vector3Int, GameObject> plantPrefabLookup;
 
         [Header("Prefab References")]
         public PlantInteractable plantInteractablePrefab;
@@ -38,6 +38,7 @@ namespace GrandmaGreen.Garden
         [SerializeField][ReadOnly] GameObject[] m_gardenPlants;
 
         public event System.Action<Vector2Int> onGardenSelection;
+        public event System.Action<Vector3Int> onTilemapSelection;
         public event System.Action onActivation;
         public event System.Action onDeactivation;
 
@@ -61,7 +62,7 @@ namespace GrandmaGreen.Garden
         public void Activate()
         {
             pathfinder.LoadGrid();
-            plantPrefabs = new GameObject[tilemap.size.x, tilemap.size.y];
+            plantPrefabLookup = new Dictionary<Vector3Int, GameObject>();
             areaActive = true;
 
             onActivation?.Invoke();
@@ -84,38 +85,45 @@ namespace GrandmaGreen.Garden
         public void PlacePlantPrefab(PlantType type, Vector3 pos, int growthStage)
         {
             Vector3Int cell = tilemap.WorldToCell(pos);
-            Vector3Int cellToArr = cell - tilemap.origin;
-            plantPrefabs[cellToArr.x, cellToArr.y] = Instantiate(type.growthStagePrefabs[growthStage], pos, Quaternion.identity);
-            plantStateManager.CreatePlant(type, areaIndex, cellToArr.x, cellToArr.y);
+            plantPrefabLookup[cell] = Instantiate(type.growthStagePrefabs[growthStage], pos, Quaternion.identity);
+            plantStateManager.CreatePlant(type, areaIndex, cell);
         }
 
         public void PlacePlantPrefabAtCell(PlantType type, Vector3Int cell, int growthStage)
         {
             Vector3 pos = tilemap.GetCellCenterWorld(cell);
-            Vector3Int cellToArr = cell - tilemap.origin;
-            plantPrefabs[cellToArr.x, cellToArr.y] = Instantiate(type.growthStagePrefabs[growthStage], pos, Quaternion.identity);
-            plantStateManager.CreatePlant(type, areaIndex, cellToArr.x, cellToArr.y);
+            plantPrefabLookup[cell] = Instantiate(type.growthStagePrefabs[growthStage], pos, Quaternion.identity);
+            plantStateManager.CreatePlant(type, areaIndex, cell);
         }
 
         public void CreatePlantOnCell(PlantType type, Vector3Int cell)
         {
             Vector3 centerOfCell = tilemap.GetCellCenterWorld(cell);
-            Vector3Int cellToArr = cell - tilemap.origin;
-            plantPrefabs[cellToArr.x, cellToArr.y] = Instantiate(type.growthStagePrefabs[0], centerOfCell, Quaternion.identity);
-            plantStateManager.CreatePlant(type, areaIndex, cellToArr.x, cellToArr.y);
+            plantPrefabLookup[cell] = Instantiate(type.growthStagePrefabs[0], centerOfCell, Quaternion.identity);
+            plantStateManager.CreatePlant(type, areaIndex, cell);
+        }
+
+        public void HarvestPlantOnCell(Vector3Int cell)
+        {
+            if (!plantStateManager.IsEmpty(areaIndex, cell))
+            {
+                Destroy(plantPrefabLookup[cell]);
+                plantPrefabLookup.Remove(cell);
+                plantStateManager.DestroyPlant(areaIndex, cell);
+            }
         }
 
         public void DestroyPlantOnCell(Vector3Int cell)
         {
-            Vector3Int cellToArr = cell - tilemap.origin;
-            if (plantStateManager.IsEmpty(areaIndex, cellToArr.x, cellToArr.y))
+            if (plantStateManager.IsEmpty(areaIndex, cell))
             {
                 Debug.Log(string.Format("No plant at {0}", cell));
             }
             else
             {
-                Destroy(plantPrefabs[cellToArr.x, cellToArr.y]);
-                plantStateManager.DestroyPlant(areaIndex, cellToArr.x, cellToArr.y);
+                Destroy(plantPrefabLookup[cell]);
+                plantPrefabLookup.Remove(cell);
+                plantStateManager.DestroyPlant(areaIndex, cell);
             }
         }
 
@@ -221,12 +229,15 @@ namespace GrandmaGreen.Garden
             int index = gridPos.x + gridPos.y * gardenData.gridSize.x;
             currentSelection = m_gardenPlants[index];
 
+            Debug.Log(worldPos);
             if (currentSelection != null)
             {
-                Debug.Log(currentSelection.name + "selected");
+                
+                Debug.Log(currentSelection.name + "selected at position " + gridPos);
             }
 
             onGardenSelection?.Invoke(gridPos);
+            onTilemapSelection?.Invoke(tilemap.WorldToCell(worldPos));
         }
 
         /// <summary>

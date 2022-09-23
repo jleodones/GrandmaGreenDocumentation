@@ -1,0 +1,23 @@
+#list-entry {
+    height: 70px;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(170, 89, 57);
+    border-color: rgb(49, 26, 17);
+    border-width: 2px;
+    border-radius: 15px;
+    width: 70px;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+}
+
+#inventory-image {
+    -unity-font-style: bold;
+    font-size: 18px;
+    color: rgb(49, 26, 17);
+    -unity-text-align: middle-center;
+    width: 40px;
+    height: 45px;
+}

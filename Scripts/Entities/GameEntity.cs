@@ -85,7 +85,10 @@ namespace GrandmaGreen.Entities
 
         public void Update()
         {
-            SetAnimatorParameters();
+            if (animator.runtimeAnimatorController != null)
+            {
+                SetAnimatorParameters();
+            }
             entityStateMachine.LogicUpdate();
         }
 

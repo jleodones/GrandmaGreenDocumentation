@@ -1,0 +1,8 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="rootElement" style="width: 30%; height: 432px; transform-origin: right; align-items: center; justify-content: space-around; flex-direction: row; position: absolute; left: 0; top: 0;">
+        <ui:Button tabindex="-1" text="Trowel" display-tooltip-when-elided="true" name="trowel" style="align-items: center; width: 120px; height: 120px; border-top-left-radius: 50%; border-bottom-left-radius: 50%; border-top-right-radius: 50%; border-bottom-right-radius: 50%; font-size: 20px;" />
+        <ui:Button tabindex="-1" text="Fertilizer" display-tooltip-when-elided="true" name="fertilizer" style="align-items: center; width: 120px; height: 120px; border-top-left-radius: 50%; border-bottom-left-radius: 50%; border-top-right-radius: 50%; border-bottom-right-radius: 50%; font-size: 20px;" />
+        <ui:Button tabindex="-1" text="Seeds" display-tooltip-when-elided="true" name="seeds" style="align-items: center; width: 120px; height: 120px; border-top-left-radius: 50%; border-bottom-left-radius: 50%; border-top-right-radius: 50%; border-bottom-right-radius: 50%; font-size: 20px;" />
+        <ui:Button tabindex="-1" text="Watering Can" display-tooltip-when-elided="true" name="watering" style="align-items: center; width: 120px; height: 120px; border-top-left-radius: 50%; border-bottom-left-radius: 50%; border-top-right-radius: 50%; border-bottom-right-radius: 50%; font-size: 20px;" />
+    </ui:VisualElement>
+</ui:UXML>

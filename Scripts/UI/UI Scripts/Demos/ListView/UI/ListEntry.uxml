@@ -1,0 +1,6 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/ListView/UI/ListEntry.uss?fileID=7433441132597879392&amp;guid=1918ea57bd4d543cb97e182d40a0eb5a&amp;type=3#ListEntry" />
+    <ui:VisualElement name="list-entry">
+        <ui:VisualElement name="inventory-image" />
+    </ui:VisualElement>
+</ui:UXML>

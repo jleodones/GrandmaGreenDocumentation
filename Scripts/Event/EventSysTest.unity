@@ -3655,6 +3655,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7296a1bf1d1e35343a8c70b493e2355a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tulip: {fileID: 5341990748367020703, guid: ad4517d57eff1dd4295b3c4574cdde53, type: 3}
 --- !u!4 &790662084
 Transform:
   m_ObjectHideFlags: 0
@@ -14532,7 +14533,12 @@ MonoBehaviour:
   tilemap: {fileID: 1491467252}
   pathfinder: {fileID: 2066215768}
   areaBounds: {fileID: 2122572793}
+  plantTypeDictionary: {fileID: 0}
+  plantStateManager: {fileID: 0}
   plantInteractablePrefab: {fileID: 4808421351042673716, guid: a9ddd85eac1217049bfea269802e14b8, type: 3}
+  areaIndex: 0
+  areaActive: 0
+  <currentSelection>k__BackingField: {fileID: 0}
   m_gardenPlants:
   - {fileID: 0}
   - {fileID: 0}
@@ -14996,7 +15002,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  <currentSelection>k__BackingField: {fileID: 0}
 --- !u!1 &2087860563
 GameObject:
   m_ObjectHideFlags: 0
@@ -15268,6 +15273,14 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 748332804}
     m_Modifications:
+    - target: {fileID: 3582495537473388495, guid: 669d8acafc8eb6141b64885f545de1aa, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3582495537473388495, guid: 669d8acafc8eb6141b64885f545de1aa, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5341990748367020700, guid: 669d8acafc8eb6141b64885f545de1aa, type: 3}
       propertyPath: m_RootOrder
       value: 1

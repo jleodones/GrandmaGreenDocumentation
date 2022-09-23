@@ -10,13 +10,12 @@ using Sirenix.OdinInspector;
 
 /// <summary>
 /// This class populates and creates the Collections SO by reading the CSV file
-/// <summary>
+/// </summary>
 namespace GrandmaGreen.Collections {
     
     [CreateAssetMenu(menuName = "Utilities/CSV Generator", fileName = "CSVGenerator")]
     public class CSVtoSO : ScriptableObject
     {
-        public ObjectSaver InventoryData;
         private string inventoryCSVPath = "/_GrandmaGreen/Scripts/Collections/Temp CSV File.csv";
         
         /// <summary>
@@ -24,8 +23,6 @@ namespace GrandmaGreen.Collections {
         /// </summary>
         [Button()]
         public void GenerateCollectionsSO() {
-            InventoryData.CreateNewStore<InventoryItem>();
-            
             string[] allLines = File.ReadAllLines(Application.dataPath + inventoryCSVPath);
             CollectionsSO collections = ScriptableObject.CreateInstance<CollectionsSO>();
             for(int i=1; i<allLines.Length; i++)
@@ -48,17 +45,8 @@ namespace GrandmaGreen.Collections {
                         t.SetImage(spritesSO.itemSprites[j].img);
                     }
                 }
-                //t.SetImage(img);
 
                 collections.items.Add(t);
-                
-                // For every item that gets loaded, also add it to the InventoryData SO.
-                InventoryData.AddComponent<InventoryItem>(-1, new InventoryItem()
-                {
-                    ID = t.id,
-                    serialID = t.serialID,
-                    quantity = 0
-                });
             }
             //might want to change where this gets saved
             AssetDatabase.CreateAsset(collections, $"Assets/_GrandmaGreen/Scripts/Collections/CollectionsSO.asset");
