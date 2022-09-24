@@ -11,28 +11,29 @@ using GrandmaGreen.Entities;
 
 public class Tool : MonoBehaviour
 {
-    private int currIndex = 0;
-
     [Header("Garden Management")]
     public Tilemap gardenMap;
 
     [SerializeField]
     private List<TileType> tileTypesList;
-    [SerializeField] private Dictionary<TileBase, TileType> dataFromTiles;
+    private Dictionary<TileBase, TileType> dataFromTiles;
 
     [SerializeField]
     private GardenAreaController GardenManagement;
-
-    [Header("Temporary Info - Prototyping")]
-    public PlantType plantType;
 
     [Header("Tools Management")]
     [SerializeField] private EntityController gardener;
     [SerializeField] private ToolTypeDictionary toolType;
 
-    private void Start()
-    {
+    [Header("Temporary Info - Prototyping")]
+    public PlantType plantType;
+    public int currIndex = 0;   
 
+    private Vector3Int selectedTilePos;
+    private TileBase tileToInteract;
+
+    void Start()
+    {
         dataFromTiles = new Dictionary<TileBase, TileType>();
 
         foreach (var tileType in tileTypesList)
@@ -43,12 +44,9 @@ public class Tool : MonoBehaviour
 
     }
 
-    public Vector3Int selectedTilePos;
-    public TileBase tileToInteract;
-    private void TileInteract(Vector3Int gridSelection)
+    void TileInteract(Vector3Int gridSelection)
     {
         // Grandma's Position -> Tile Position
-
         selectedTilePos = gridSelection;
         tileToInteract = gardenMap.GetTile(selectedTilePos);
 
@@ -57,67 +55,67 @@ public class Tool : MonoBehaviour
 
     void DoInteraction()
     {
-        Debug.Log("Do interaction");
+        //Debug.Log("Do interaction");
         gardener.entity.splineFollow.onComplete -= DoInteraction;
         
-        if (toolType[currIndex].toolName == "Trowel")
+        if (currIndex == 1)
         {
             TrowelInteract(tileToInteract, selectedTilePos);
-
         }
-        else if (toolType[currIndex].toolName == "Seeds")
+        else if (currIndex == 2)
         {
             SeedInteract(tileToInteract, selectedTilePos);
-
-        }
-        else if (toolType[currIndex].toolName == "Scissors")
-        {
-            ScissorInteract();
-
         }
         
     }
 
-    private void TrowelInteract(TileBase currTile, Vector3Int cell)
+    public void ToolSwap(string toolName)
+    {
+        if (toolName == "Trowel")
+        {
+            currIndex = 1;
+        }
+        else if (toolName == "Seeds")
+        {
+            currIndex = 2;
+        }
+        else
+        {
+            currIndex = 0;
+        }
+    }
+
+    void TrowelInteract(TileBase currTile, Vector3Int cell)
     {
         if (dataFromTiles[currTile].isPlottable)
         {
-            Debug.Log(cell);
+            //Debug.Log(cell);
             gardenMap.SetTile(cell, tileTypesList[1].tile);
-            gardenMap.RefreshTile(cell);
-
+            //gardenMap.RefreshTile(cell);
         }
-        else if (dataFromTiles[currTile].isPlantable || dataFromTiles[currTile].isOccupied)
+        else if (dataFromTiles[currTile].isPlantable)
         {
-            // "Plot" and "Occupied Plot" Tile -> Grass Tile
-            // Sending data to Plants to destroy seeds on specific tiles
-            if (dataFromTiles[currTile].isOccupied)
-            {
-                GardenManagement.HarvestPlantOnCell(cell);
-            }
+            // "Plot" Tile -> Grass Tile
             gardenMap.SetTile(cell, tileTypesList[0].tile);
         }
-
-
+        else if (dataFromTiles[currTile].isOccupied)
+        {
+            GardenManagement.HarvestPlantOnCell(cell);
+            gardenMap.SetTile(cell, tileTypesList[1].tile);
+        }
     }
 
-    private void SeedInteract(TileBase currTile, Vector3Int cell)
+    void SeedInteract(TileBase currTile, Vector3Int cell)
     {
         //Placing the Plant Prefab on a tile and setting the Tile to "Occupied Plot Tile"
         if (dataFromTiles[currTile].isPlantable)
         {
-            Vector3 halfwayPos = cell + (Vector3.up / 4) + (Vector3.right / 2);
             GardenManagement.CreatePlantOnCell(plantType, cell);
             gardenMap.SetTile(cell, tileTypesList[2].tile);
         }
     }
 
-    private void ScissorInteract()
-    {
-        //EventManager.instance.HandleEVENT_GOLEM_SPAWN(transform.parent.gameObject.GetInstanceID());
-    }
-
-    private void SwapTools()
+    void SwapTools()
     {
         currIndex++;
         if (currIndex > toolType.toolData.Count - 1)
