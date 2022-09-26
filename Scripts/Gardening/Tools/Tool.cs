@@ -24,10 +24,12 @@ public class Tool : MonoBehaviour
     [Header("Tools Management")]
     [SerializeField] private EntityController gardener;
     [SerializeField] private ToolTypeDictionary toolType;
+    [SerializeField] public ToolStateData toolState;
+
 
     [Header("Temporary Info - Prototyping")]
     public PlantType plantType;
-    public int currIndex = 0;   
+    public int currIndex = 0;
 
     private Vector3Int selectedTilePos;
     private TileBase tileToInteract;
@@ -40,8 +42,20 @@ public class Tool : MonoBehaviour
         {
             dataFromTiles.Add(tileType.tile, tileType);
         }
-        GardenManagement.onTilemapSelection += TileInteract;
 
+    }
+
+    void OnEnable()
+    {
+        GardenManagement.onTilemapSelection += TileInteract;
+        toolState.onToolSelected += ToolSwap;
+        ToolSwap(toolState.currentTool);
+    }
+
+    void OnDisable()
+    {
+        GardenManagement.onTilemapSelection -= TileInteract;
+        toolState.onToolSelected -= ToolSwap;
     }
 
     void TileInteract(Vector3Int gridSelection)
@@ -57,7 +71,7 @@ public class Tool : MonoBehaviour
     {
         //Debug.Log("Do interaction");
         gardener.entity.splineFollow.onComplete -= DoInteraction;
-        
+
         if (currIndex == 1)
         {
             TrowelInteract(tileToInteract, selectedTilePos);
@@ -66,16 +80,16 @@ public class Tool : MonoBehaviour
         {
             SeedInteract(tileToInteract, selectedTilePos);
         }
-        
+
     }
 
     public void ToolSwap(string toolName)
     {
-        if (toolName == "Trowel")
+        if (toolName == "trowel")
         {
             currIndex = 1;
         }
-        else if (toolName == "Seeds")
+        else if (toolName == "seeds")
         {
             currIndex = 2;
         }

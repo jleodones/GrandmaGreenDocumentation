@@ -4,23 +4,27 @@ using System.Collections.Generic;
 using UnityEngine;
 
 namespace GrandmaGreen.Collections {
-    [Serializable]
-    ///<summary>
-    ///Temporary struct for an item in the Collections SO
-    ///</summary>
-    public struct Item
+
+    public enum itemTypes
     {
-        public enum itemType
-        {
             Tool,
             Plant,
             Seed,
             Decor
-        }
-        public int serialID;
-        public string id;
+    }
+    ///<summary>
+    ///Temporary struct for an item in the Collections SO
+    ///</summary>
+    
+    [Serializable]
+    public struct Item
+    {
+        public int id;
+        public itemTypes itemType;
         public string name;
         public string description;
+        //only have aesthetic tag for decor items
+        public string tag;
         //sprite to grab from assets:
         public Sprite image;
         //function to set the image variable - pull from assets folder when calling this

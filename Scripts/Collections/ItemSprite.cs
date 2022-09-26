@@ -4,13 +4,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 namespace GrandmaGreen.Collections {
-    [Serializable]
     ///<summary>
     ///An item sprite contains the item's name and the sprite associated with. Values inputted manually.
     ///</summary>
+    [Serializable]
     public struct ItemSprite
     {
-        public string name;
+        public int id;
         public Sprite img;
     }
 

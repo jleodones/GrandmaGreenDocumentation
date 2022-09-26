@@ -39,6 +39,8 @@ namespace GrandmaGreen.Entities
 
         public Coroutine behaviorRoutine;
         public bool plantCheck = true;
+
+
         public virtual void RegisterEntity(GameEntity entity)
         {
             this.entity = entity;
@@ -56,7 +58,12 @@ namespace GrandmaGreen.Entities
         public virtual void PauseController()
         {
             active = false;
-            
+
+        }
+
+        public virtual void InterruptMovement()
+        {
+            entity.CancelPath();
         }
 
         public virtual void SetDestination(Vector3 worldPos)
@@ -64,7 +71,7 @@ namespace GrandmaGreen.Entities
             float3[] path = entity.CheckPath(worldPos);
 
             if (path != null)
-                entity.FollowPath(path);
+                entity.StartCoroutine(entity.FollowPath(path));
         }
 
         public virtual void SetDestination(int2 endPos)
@@ -72,7 +79,7 @@ namespace GrandmaGreen.Entities
             float3[] path = entity.CheckPath(endPos);
 
             if (path != null)
-                entity.FollowPath(path);
+                entity.StartCoroutine(entity.FollowPath(path));
         }
 
         public virtual float3 FindRandomDestination(int range)

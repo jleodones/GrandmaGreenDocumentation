@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+
 using UnityEngine;
 
 namespace GrandmaGreen.Garden
@@ -11,16 +12,22 @@ namespace GrandmaGreen.Garden
         public int growthStage;
         public float timePlanted;
         public Vector3Int cell;
+
+        public Plant(Plant plant)
+        {
+            this.type = plant.type;
+            this.growthStage = plant.growthStage + 1 < type.growthStages ?
+                plant.growthStage + 1 : plant.growthStage;
+            this.timePlanted = plant.timePlanted;
+            this.cell = plant.cell;
+        }
     }
 
     [CreateAssetMenu(menuName = "GrandmaGreen/Garden/GlobalPlantState")]
     public class PlantStateManager : ScriptableObject
     {
-        [SerializeField]
-        public Vector2Int[] gardenDimensions;
-        public Dictionary<Vector3Int, Plant>[] plantLookup;
-        [SerializeField]
-        public List<Plant> plantListDebug;
+        private Vector2Int[] gardenDimensions;
+        private Dictionary<Vector3Int, Plant>[] plantLookup;
 
         public void Initialize()
         {
@@ -34,23 +41,9 @@ namespace GrandmaGreen.Garden
             plantLookup[areaIndex] = new Dictionary<Vector3Int, Plant>();
         }
 
-        public void CreatePlant(PlantType type, int areaIndex, Vector3Int cell)
+        public void ClearGarden(int areaIndex)
         {
-            plantLookup[areaIndex][cell] = new Plant
-            {
-                type = type,
-                cell = cell
-            };
-        }
-
-        public void DestroyPlant(int areaIndex, Vector3Int cell)
-        {
-            plantLookup[areaIndex].Remove(cell);
-	    }
-
-        public Plant GetPlant(int areaIndex, Vector3Int cell)
-        {
-            return plantLookup[areaIndex][cell];
+            plantLookup[areaIndex] = new Dictionary<Vector3Int, Plant>();
         }
 
         public bool IsEmpty(int areaIndex, Vector3Int cell)
@@ -58,20 +51,67 @@ namespace GrandmaGreen.Garden
             return !plantLookup[areaIndex].ContainsKey(cell);
         }
 
-        [ContextMenu("DeleteGardenData")]
-        public void DeleteGardenData()
+        public void CreatePlant(PlantType type, int areaIndex, Vector3Int cell)
         {
-            plantLookup[0].Clear();
+            plantLookup[areaIndex][cell] = new Plant
+            {
+                type = type,
+                growthStage = 0,
+                timePlanted = Time.time,
+                cell = cell
+            };
         }
 
-        [ContextMenu("InspectPlants")]
-        public void InspectPlants()
+        public void DestroyPlant(int areaIndex, Vector3Int cell)
         {
-            plantListDebug.Clear();
-            foreach (Plant plant in plantLookup[0].Values)
+            if (!IsEmpty(areaIndex, cell))
             {
-                plantListDebug.Add(plant); 
-	        }
+                plantLookup[areaIndex].Remove(cell);
+            }
 	    }
+
+        public Plant GetPlant(int areaIndex, Vector3Int cell)
+        {
+            if (!IsEmpty(areaIndex, cell))
+            {
+                return plantLookup[areaIndex][cell];
+            }
+            return new Plant();
+        }
+
+        public List<Plant> GetPlants(int areaIndex)
+        {
+            return new List<Plant>(plantLookup[areaIndex].Values);
+        }
+
+        public PlantType GetPlantType(int areaIndex, Vector3Int cell)
+        {
+            if (!IsEmpty(areaIndex, cell))
+            {
+                return plantLookup[areaIndex][cell].type;
+            }
+            return null;
+        }
+
+        public int GetGrowthStage(int areaIndex, Vector3Int cell)
+        {
+            if (!IsEmpty(areaIndex,cell))
+            {
+                return plantLookup[areaIndex][cell].growthStage;
+            }
+            return -1;
+        }
+
+        public void IncrementGrowthStage(int areaIndex, Vector3Int cell)
+        {
+            Plant plant = plantLookup[areaIndex][cell];
+            int current = plant.growthStage;
+            int max = plant.type.growthStages;
+
+            if (!IsEmpty(areaIndex, cell) && current < max)
+            {
+                plantLookup[areaIndex][cell] = new Plant(plant);
+            }
+        }
     }
 }

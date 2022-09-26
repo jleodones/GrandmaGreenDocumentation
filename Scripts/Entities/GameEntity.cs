@@ -36,8 +36,7 @@ namespace GrandmaGreen.Entities
         public float smoothFactor = 0.2f;
 
         public IPathfinderServicer pathfinderServicer => IPathAgent.Servicer;
-        public bool isPathing => throw new System.NotImplementedException();
-
+        public bool isPathing => splineFollow.isFollowing;
         Transition idleToMoving;
         Transition movingToIdle;
 
@@ -45,6 +44,9 @@ namespace GrandmaGreen.Entities
 
         Vector3 prevPosition;
 
+        public event System.Action<Vector3> onEntityMove;
+        public event System.Action<Vector3> onEntityActionStart;
+        public event System.Action<Vector3> onEntityActionEnd;
 
         void Awake()
         {
@@ -98,6 +100,7 @@ namespace GrandmaGreen.Entities
 
             prevPosition = transform.position;
             entityStateMachine.PhysicsUpdate();
+            onEntityMove?.Invoke(prevPosition);
         }
 
         void MovingLogic()
@@ -171,7 +174,7 @@ namespace GrandmaGreen.Entities
         /// Follows the given float3 path
         /// </summary>
         /// <param name="path"></param>
-        public virtual void FollowPath(float3[] path)
+        public virtual IEnumerator FollowPath(float3[] path)
         {
             Spline spline = default(Spline);
 
@@ -183,6 +186,23 @@ namespace GrandmaGreen.Entities
 
             spline.Warmup();
             splineFollow.Play(spline);
+
+
+            onEntityActionStart?.Invoke(path[path.Length - 1]);
+
+            splineFollow.onRetarget += onEntityActionStart;
+
+
+
+            while (splineFollow.isFollowing)
+            {
+                yield return null;
+            }
+
+            onEntityActionEnd?.Invoke(CurrentPos());
+            splineFollow.onRetarget -= onEntityActionStart;
+
+            Debug.Log("Entity action end");
         }
 
         public virtual void CancelPath()

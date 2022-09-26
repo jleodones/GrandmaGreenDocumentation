@@ -17,7 +17,7 @@ namespace GrandmaGreen
 
         float3[] CheckPath(int2 destination);
 
-        void FollowPath(float3[] path);
+        IEnumerator FollowPath(float3[] path);
 
         bool isPathing { get; }
 
