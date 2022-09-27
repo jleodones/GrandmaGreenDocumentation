@@ -16,17 +16,20 @@ namespace GrandmaGreen.Garden
     public class GardenAreaController : MonoBehaviour
     {
         [Header("Area References")]
-        [SerializeField] [ReadOnly] int areaIndex = 0;
+        [SerializeField][ReadOnly] int areaIndex = 0;
         public GardenAreaServicer areaServicer;
         public Tilemap tilemap;
         public Pathfinder pathfinder;
         public Collider areaBounds;
 
+        [Header("Player References")]
+        public PlayerToolData playerTools;
+
         [Header("Plant Management")]
         public PlantTypeDictionary plantTypeDictionary;
         public PlantStateManager plantStateManager;
         public Dictionary<Vector3Int, GameObject> plantPrefabLookup;
-        public List<Plant> plantListDebug;
+        public List<PlantState> plantListDebug;
 
         //[Header("Area Variables")]
         //[SerializeField][ReadOnly] bool areaActive;
@@ -37,6 +40,9 @@ namespace GrandmaGreen.Garden
         public event System.Action onActivation;
         public event System.Action onDeactivation;
 
+        public Vector3Int lastSelectedCell;
+        public TileBase lastSelectedTile;
+
         void Awake()
         {
             areaServicer.RegisterAreaController(this, areaIndex);
@@ -45,7 +51,7 @@ namespace GrandmaGreen.Garden
 
         void Start()
         {
-            plantTypeDictionary.LoadPlantTypes();
+            //plantTypeDictionary.LoadPlantTypes();
         }
 
         public void Activate()
@@ -116,12 +122,13 @@ namespace GrandmaGreen.Garden
         public void HarvestPlantOnCell(Vector3Int cell)
         {
             DestroyPlantOnCell(cell);
+            EventManager.instance.HandleEVENT_INVENTORY_ADD(new GrandmaGreen.Collections.Plant(0, "Tulip", 1, new Trait()), 1);
         }
 
         [ContextMenu("PlaceRoseBottomLeft")]
         public void PlaceRoseBottomLeft()
         {
-            CreatePlantOnCell(plantTypeDictionary["Rose"], tilemap.origin);
+            CreatePlantOnCell(plantTypeDictionary[1], tilemap.origin);
             InspectPlants();
         }
 
@@ -149,7 +156,7 @@ namespace GrandmaGreen.Garden
         [ContextMenu("DestroyAllPlants")]
         public void DestroyAllPlants()
         {
-            foreach(Vector3Int cell in plantPrefabLookup.Keys)
+            foreach (Vector3Int cell in plantPrefabLookup.Keys)
             {
                 Destroy(plantPrefabLookup[cell]);
             }
@@ -160,8 +167,8 @@ namespace GrandmaGreen.Garden
         [ContextMenu("InspectPlants")]
         public void InspectPlants()
         {
-            plantListDebug = plantStateManager.GetPlants(areaIndex); 
-	    }
+            plantListDebug = plantStateManager.GetPlants(areaIndex);
+        }
 
         [ContextMenu("ParseTilemap")]
         /// <summary>
@@ -198,7 +205,19 @@ namespace GrandmaGreen.Garden
         //Called through a Unity event as of now
         public void GardenSelection(Vector3 worldPos)
         {
-            onTilemapSelection?.Invoke(tilemap.WorldToCell(worldPos));
+            lastSelectedCell = tilemap.WorldToCell(worldPos);
+            lastSelectedTile = tilemap.GetTile(lastSelectedCell);
+            onTilemapSelection?.Invoke(lastSelectedCell);
+
+            playerTools.playerController.entity.onEntityActionEnd += DoToolAction;
+
+            playerTools.playerController.DoGardenAction(worldPos);
+        }
+
+        void DoToolAction(Vector3 value)
+        {
+            playerTools.UseCurrentTool(lastSelectedTile, lastSelectedCell, this);
+            playerTools.playerController.entity.onEntityActionEnd -= DoToolAction;
         }
 
         /// <summary>

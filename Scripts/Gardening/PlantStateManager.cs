@@ -6,14 +6,17 @@ namespace GrandmaGreen.Garden
 {
 
     [System.Serializable]
-    public struct Plant
+    /// <summary>
+    /// Struct for plant state storage
+    /// </summary>
+    public struct PlantState
     {
         public PlantType type;
         public int growthStage;
         public float timePlanted;
         public Vector3Int cell;
 
-        public Plant(Plant plant)
+        public PlantState(PlantState plant)
         {
             this.type = plant.type;
             this.growthStage = plant.growthStage + 1 < type.growthStages ?
@@ -27,23 +30,23 @@ namespace GrandmaGreen.Garden
     public class PlantStateManager : ScriptableObject
     {
         private Vector2Int[] gardenDimensions;
-        private Dictionary<Vector3Int, Plant>[] plantLookup;
+        private Dictionary<Vector3Int, PlantState>[] plantLookup;
 
         public void Initialize()
         {
             gardenDimensions = new Vector2Int[5];
-            plantLookup = new Dictionary<Vector3Int, Plant>[5];
+            plantLookup = new Dictionary<Vector3Int, PlantState>[5];
         }
 
         public void RegisterGarden(Vector3Int dimensions, int areaIndex)
         {
             gardenDimensions[areaIndex] = new Vector2Int(dimensions.x, dimensions.y);
-            plantLookup[areaIndex] = new Dictionary<Vector3Int, Plant>();
+            plantLookup[areaIndex] = new Dictionary<Vector3Int, PlantState>();
         }
 
         public void ClearGarden(int areaIndex)
         {
-            plantLookup[areaIndex] = new Dictionary<Vector3Int, Plant>();
+            plantLookup[areaIndex] = new Dictionary<Vector3Int, PlantState>();
         }
 
         public bool IsEmpty(int areaIndex, Vector3Int cell)
@@ -53,7 +56,7 @@ namespace GrandmaGreen.Garden
 
         public void CreatePlant(PlantType type, int areaIndex, Vector3Int cell)
         {
-            plantLookup[areaIndex][cell] = new Plant
+            plantLookup[areaIndex][cell] = new PlantState
             {
                 type = type,
                 growthStage = 0,
@@ -68,20 +71,20 @@ namespace GrandmaGreen.Garden
             {
                 plantLookup[areaIndex].Remove(cell);
             }
-	    }
+        }
 
-        public Plant GetPlant(int areaIndex, Vector3Int cell)
+        public PlantState GetPlant(int areaIndex, Vector3Int cell)
         {
             if (!IsEmpty(areaIndex, cell))
             {
                 return plantLookup[areaIndex][cell];
             }
-            return new Plant();
+            return new PlantState();
         }
 
-        public List<Plant> GetPlants(int areaIndex)
+        public List<PlantState> GetPlants(int areaIndex)
         {
-            return new List<Plant>(plantLookup[areaIndex].Values);
+            return new List<PlantState>(plantLookup[areaIndex].Values);
         }
 
         public PlantType GetPlantType(int areaIndex, Vector3Int cell)
@@ -95,7 +98,7 @@ namespace GrandmaGreen.Garden
 
         public int GetGrowthStage(int areaIndex, Vector3Int cell)
         {
-            if (!IsEmpty(areaIndex,cell))
+            if (!IsEmpty(areaIndex, cell))
             {
                 return plantLookup[areaIndex][cell].growthStage;
             }
@@ -104,13 +107,13 @@ namespace GrandmaGreen.Garden
 
         public void IncrementGrowthStage(int areaIndex, Vector3Int cell)
         {
-            Plant plant = plantLookup[areaIndex][cell];
+            PlantState plant = plantLookup[areaIndex][cell];
             int current = plant.growthStage;
             int max = plant.type.growthStages;
 
             if (!IsEmpty(areaIndex, cell) && current < max)
             {
-                plantLookup[areaIndex][cell] = new Plant(plant);
+                plantLookup[areaIndex][cell] = new PlantState(plant);
             }
         }
     }

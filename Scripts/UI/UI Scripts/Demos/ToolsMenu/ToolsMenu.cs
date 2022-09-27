@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 using GrandmaGreen.Garden;
+using GrandmaGreen;
 
 public class ToolsMenu : MonoBehaviour
 {	
 	
-    [SerializeField] public ToolTest toolScript;
-    [SerializeField] public ToolStateData toolData;
+    [SerializeField] public PlayerToolData toolData;
+    [SerializeField] public CameraZoom zoom;
     private ToolsMenuController controller;
 
     void OnEnable()
@@ -17,7 +18,8 @@ public class ToolsMenu : MonoBehaviour
         VisualElement root = inventory.rootVisualElement;
 
         controller = new(root);
-        controller.toolState = toolData;
+        controller.toolData = toolData;
+        controller.zoom = zoom; 
         
         controller.RegisterToolCallbacks();
     }

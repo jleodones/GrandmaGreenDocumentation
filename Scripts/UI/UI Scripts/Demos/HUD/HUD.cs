@@ -1,20 +1,42 @@
 // This script attaches the tabbed menu logic to the game.
+
+using GrandmaGreen.UI.Collections;
 using UnityEngine;
 using UnityEngine.UIElements;
 
 //Inherits from class `MonoBehaviour`. This makes it attachable to a game object as a component.
-public class HUD : MonoBehaviour
+namespace GrandmaGreen.UI.HUD
 {
-    private HUDController controller;
-
-    private void OnEnable()
+    public class HUD : MonoBehaviour
     {
-        UIDocument HUD = GetComponent<UIDocument>();
-        VisualElement root = HUD.rootVisualElement;
+        public TabbedInventory inventory;
+        private HUDController m_controller;
+        
+        public static HUD instance;
 
-        controller = new(root);
+        private void Awake()
+        {
+            if (instance == null)
+            {
+                instance = this;
+            }
+            else
+            {
+                Destroy(this);
+            }
 
-        // controller.RegisterTabCallbacks();
-        // controller.RegisterExitCallback();
+            UIDocument HUD = GetComponent<UIDocument>();
+            VisualElement root = HUD.rootVisualElement;
+
+            m_controller = new(root);
+
+            m_controller.RegisterButtonCallbacks();
+        }
+
+        public void OpenHUD()
+        {
+            m_controller.OpenHUD();
+        }
+        
     }
 }

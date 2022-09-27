@@ -13,7 +13,7 @@
     border-bottom-right-radius: 50%;
 }
 
-#inventory-image {
+#item-image {
     -unity-font-style: bold;
     font-size: 18px;
     color: rgb(49, 26, 17);

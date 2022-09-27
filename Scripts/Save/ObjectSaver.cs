@@ -1,11 +1,7 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 using Sirenix.OdinInspector;
-using Sirenix.Serialization;
 using System;
-using System.Runtime.CompilerServices;
 using Newtonsoft.Json;
 
 namespace GrandmaGreen.SaveSystem
@@ -93,12 +89,12 @@ namespace GrandmaGreen.SaveSystem
 
         /// <summary>
         /// Adds a component to the appropriate ComponentStore. Stored internally, marked for update, then saved by the SaveController.
-        /// Wrappr for the corresponding function in the ComponentStore. This interfaces directly with game systems.
+        /// Wrapper for the corresponding function in the ComponentStore. This interfaces directly with game systems.
         /// </summary>
         /// <param name="index">
         /// Optional index parameter to insert a component at the given index.
         /// </param>
-        public void AddComponent<T>(int index, T component) where T : struct
+        public bool AddComponent<T>(int index, T component) where T : struct
         {
             // Iterates through component stores to find component store of appropriate type.
             foreach (IComponentStore componentStore in componentStores)
@@ -106,9 +102,11 @@ namespace GrandmaGreen.SaveSystem
                 if (componentStore.GetType() == typeof(T))
                 {
                     // Once found, it adds the new component.
-                    ((ComponentStore<T>)componentStore).AddComponent(index, component);
+                    return ((ComponentStore<T>)componentStore).AddComponent(index, component);
                 }
             }
+
+            return false;
         }
 
         /// <summary>
@@ -119,7 +117,7 @@ namespace GrandmaGreen.SaveSystem
         /// Index for moments where the index of the object is known. -1 signifies that it should use an equality based comparison to
         /// find the component (no index available).
         /// </param>
-        public void RemoveComponent<T>(int index, T component) where T : struct
+        public bool RemoveComponent<T>(int index, T component) where T : struct
         {
             // Iterates through component stores to find component store of appropriate type.
             foreach (IComponentStore componentStore in componentStores)
@@ -128,13 +126,23 @@ namespace GrandmaGreen.SaveSystem
                 {
                     // Once found, it removes the component.
                     // Test this, make sure it actually removes the right component.
-                    ((ComponentStore<T>)componentStore).RemoveComponent(index, component);
-                    break;
+                    return ((ComponentStore<T>)componentStore).RemoveComponent(index, component);
                 }
             }
-        }
 
-        public void UpdateValue<T>(int index, T component) where T : struct
+            return false;
+        }
+        
+        /// <summary>
+        /// Updates the value of the given component.
+        /// </summary>
+        /// <param name="index">
+        /// Used to find the index of the component. If -1 is given, it searches for the component based on equality search (no index available).
+        /// </param>
+        /// <param name="component">
+        /// The value to update it with.
+        /// </param>
+        public bool UpdateValue<T>(int index, T component) where T : struct
         {
             // Iterates through component stores to find component store of appropriate type.
             foreach (IComponentStore componentStore in componentStores)
@@ -142,13 +150,15 @@ namespace GrandmaGreen.SaveSystem
                 if (componentStore.GetType() == typeof(T))
                 {
                     // Once found, it updates the component.
-                    ((ComponentStore<T>)componentStore).UpdateValue(index, component);
-                    break;
+                    return ((ComponentStore<T>)componentStore).UpdateValue(index, component);
                 }
             }
+
+            return false;
         }
 
-        public void RequestData<T>(int index, ref T component) where T : struct
+        
+        public bool RequestData<T>(int index, ref T component) where T : struct
         {
             // Iterates through component stores to find component store of appropriate type.
             foreach (IComponentStore componentStore in componentStores)
@@ -157,10 +167,11 @@ namespace GrandmaGreen.SaveSystem
                 {
                     // Once found, it retrieves the data for the component; since it's passed by reference, the information
                     // is stored in the component.
-                    ((ComponentStore<T>)componentStore).RequestData(index, ref component);
-                    break;
+                    return ((ComponentStore<T>)componentStore).RequestData(index, ref component);
                 }
             }
+
+            return false;
         }
     }
 }

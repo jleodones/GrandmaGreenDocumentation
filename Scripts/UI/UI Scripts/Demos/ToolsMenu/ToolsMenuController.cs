@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 using GrandmaGreen.Garden;
+using GrandmaGreen;
 
 public class ToolsMenuController
 {
     // Member Variables
-    public ToolStateData toolState;
+    public PlayerToolData toolData;
     public IPanel panel;
+    public CameraZoom zoom;
     private readonly VisualElement root;
 
     // ToolsMenuController: Assigns visual element root
@@ -27,10 +29,10 @@ public class ToolsMenuController
             tool.RegisterCallback<ClickEvent>(ToolOnClick);
         });
 
-        toolState.onToolSelectionStart += ShowToolsMenu;
-        toolState.onToolSelectionEnd += HideToolsMenu;
+        toolData.onToolSelectionStart += ShowToolsMenu;
+        toolData.onToolSelectionEnd += HideToolsMenu;
 
-          root.style.display = DisplayStyle.None;
+        root.style.display = DisplayStyle.None;
     }
 
     // GetAllTools: returns all buttons (which are all tools)
@@ -43,8 +45,9 @@ public class ToolsMenuController
     private void ToolOnClick(ClickEvent evt)
     {
         Button clickedTool = evt.currentTarget as Button;
-        toolState.SetTool(clickedTool.name);
-        HideToolsMenu();
+
+        toolData.ToolSelection(int.Parse(clickedTool.text));
+        //HideToolsMenu();
     }
 
     // ShowToolsMenu: displays the root visual element
@@ -52,17 +55,20 @@ public class ToolsMenuController
     {
         root.style.display = DisplayStyle.Flex;
 
-        SetToolMenuPosition(toolState.target.entity.CurrentPos());
+        SetToolMenuPosition(toolData.playerController.entity.CurrentPos());
 
-        toolState.target.entity.onEntityMove += SetToolMenuPosition;
+        toolData.playerController.entity.onEntityMove += SetToolMenuPosition;
+
+        zoom.ZoomCameraRequest(4.2f, 0.5f);
     }
 
     // HideToolsMenu: hides the root visual element
     public void HideToolsMenu()
     {
         root.style.display = DisplayStyle.None;
+        toolData.playerController.entity.onEntityMove -= SetToolMenuPosition;
 
-        toolState.target.entity.onEntityMove -= SetToolMenuPosition;
+        zoom.ZoomCameraRequest(5.0f, 0.5f);
     }
 
     void SetToolMenuPosition(Vector3 worldSpace)

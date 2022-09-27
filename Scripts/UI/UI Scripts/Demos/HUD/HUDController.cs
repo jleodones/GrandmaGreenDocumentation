@@ -3,22 +3,46 @@ using UnityEngine;
 using System.Collections;
 using UnityEngine.UIElements;
 
-public class HUDController
+namespace GrandmaGreen.UI.HUD
 {
-    /*
-    To-Do:
-    - exit buttons: hide the current element, 
-        show HUD element
-    - buttons -> open element with same name
-    */
-    
-    /* Define member variables*/
-
-    private readonly VisualElement root;
-
-    public HUDController(VisualElement root)
+    public class HUDController
     {
-        this.root = root;
-    }
+        /*
+        To-Do:
+        - exit buttons: hide the current element, 
+            show HUD element
+        - buttons -> open element with same name
+        */
 
+        /* Define member variables*/
+
+        private VisualElement m_root;
+
+        public HUDController(VisualElement root)
+        {
+            m_root = root;
+        }
+
+        public void OpenHUD()
+        {
+            m_root.style.display = DisplayStyle.Flex;
+        }
+
+        public void RegisterButtonCallbacks()
+        {
+            // For now, this just registers the inventory callback.
+            // TODO: Update this for every functional UI.
+            Button inventoryButton = m_root.Q<Button>("inventory-button");
+            inventoryButton.RegisterCallback<ClickEvent>(InventoryOnClick);
+        }
+
+        public void InventoryOnClick(ClickEvent evt)
+        {
+            // Disables self.
+            m_root.style.display = DisplayStyle.None;
+            
+            // Enables inventory.
+            HUD.instance.inventory.OpenInventory();
+        }
+    }
 }

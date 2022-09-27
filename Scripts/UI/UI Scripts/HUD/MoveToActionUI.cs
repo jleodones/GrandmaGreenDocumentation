@@ -10,8 +10,7 @@ namespace GrandmaGreen.Garden
     public class MoveToActionUI : MonoBehaviour
     {
 
-        public ToolStateData toolState;
-        public EntityController target;
+        public PlayerToolData toolData;
         public GameObject moveToActionUIObject;
         public UnityEngine.UI.Image actionIcon;
 
@@ -24,9 +23,10 @@ namespace GrandmaGreen.Garden
             //uiDoc = GetComponent<UIDocument>();
             //root = uiDoc.rootVisualElement;
             startPos = actionIcon.transform.localPosition;
-            target.entity.onEntityActionStart += StartMoveToAction;
-            target.entity.onEntityActionEnd += EndMoveToAction;
-
+            toolData.playerController.entity.onEntityActionStart += StartMoveToAction;
+            toolData.playerController.entity.onEntityActionEnd += EndMoveToAction;
+            tween = actionIcon.transform.DOBlendableLocalMoveBy(Vector3.up * 50.0f, 0.5f).SetLoops(-1, LoopType.Yoyo).SetEase(Ease.InOutSine);
+            tween.Pause();
         }
         Vector3 startPos;
         Tween tween;
@@ -36,15 +36,23 @@ namespace GrandmaGreen.Garden
             if (routine != null)
                 StopCoroutine(routine);
 
-
-            if (!DOTween.IsTweening(tween))
-            {
-                tween = actionIcon.transform.DOBlendableLocalMoveBy(Vector3.up * 50.0f, 0.5f).SetLoops(-1, LoopType.Yoyo).SetEase(Ease.InOutSine);
-            }
-
+            if (!tween.IsPlaying())
+                tween.Play();
 
             moveToActionUIObject.SetActive(true);
-            actionIcon.sprite = toolState.currentToolicon;
+
+
+            if (toolData.currentTool.icon == null)
+            {
+                actionIcon.gameObject.SetActive(false);
+            }
+
+            else
+            {
+                actionIcon.sprite = toolData.currentTool.icon;
+                actionIcon.gameObject.SetActive(true);
+            }
+
 
             (moveToActionUIObject.transform as RectTransform).anchoredPosition = Camera.main.WorldToScreenPoint(worldDest);
             routine = StartCoroutine(SetUIPosition(worldDest));
@@ -62,8 +70,7 @@ namespace GrandmaGreen.Garden
         void EndMoveToAction(Vector3 worldDest) => EndMoveToAction();
         void EndMoveToAction()
         {
-
-            tween.Kill();
+            tween.Pause();
             actionIcon.transform.localPosition = startPos;
             moveToActionUIObject.SetActive(false);
         }

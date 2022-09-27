@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using GrandmaGreen.Collections;
 
 namespace GrandmaGreen
 {
@@ -17,14 +18,17 @@ namespace GrandmaGreen
             }   
         }
 
-        // Invetory Event and Handler
-        public event Action<string,int> EVENT_INVENTORY_ADD;
-        public event Action<string,int> EVENT_INVENTORY_REMOVE;
-        public event Action<string,int> EVENT_INVENTORY_UPDATE;
-        
-        public void HandleEVENT_INVENTORY_ADD(string id, int num) {EVENT_INVENTORY_ADD?.Invoke(id, num);}
-        public void HandleEVENT_INVENTORY_REMOVE(string id, int num) {EVENT_INVENTORY_REMOVE?.Invoke(id, num);}
-        public void HandleEVENT_INVENTORY_UPDATE(string id, int num) {EVENT_INVENTORY_UPDATE?.Invoke(id, num);}
+        // Inventory Event and Handlers.
+        public event Action<IInventoryItem,int> EVENT_INVENTORY_ADD;
+        public event Action<IInventoryItem,int> EVENT_INVENTORY_REMOVE;
+        public event Action<IInventoryItem> EVENT_INVENTORY_UPDATE;
+
+        public void HandleEVENT_INVENTORY_ADD(IInventoryItem item, int num)
+        {
+            EVENT_INVENTORY_ADD?.Invoke(item, num);
+        }
+        public void HandleEVENT_INVENTORY_REMOVE(IInventoryItem item, int num) {EVENT_INVENTORY_REMOVE?.Invoke(item, num);}
+        public void HandleEVENT_INVENTORY_UPDATE(IInventoryItem item) {EVENT_INVENTORY_UPDATE?.Invoke(item);}
 
         // Golem's Event and Handler
         public event Action<int, Vector3> EVENT_GOLEM_SPAWN;

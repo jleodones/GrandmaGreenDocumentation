@@ -6,7 +6,7 @@ using UnityEngine.Tilemaps;
 [System.Serializable]
 public struct TileData
 {
-    public Tile tile;
+    public TileBase tile;
     public bool pathable;
     public bool plantable;
     public bool plottable;
@@ -16,12 +16,27 @@ public struct TileData
 [CreateAssetMenu(fileName = "TileStore", menuName = "GrandmaGreen/TileStore", order = 0)]
 public class TileStore : ScriptableObject
 {
-    public List<TileData> tileData;
+    public List<TileData> tileDataSet;
 
     public TileData this[int i]
     {
-        get { return tileData[i]; }
-        set { tileData[i] = value; }
+        get { return tileDataSet[i]; }
+        set { tileDataSet[i] = value; }
+    }
+
+    public TileData this[TileBase tile]
+    {
+        get
+        {
+            foreach (TileData tileData in tileDataSet)
+            {
+                if(tileData.tile == tile)
+                    return tileData;
+            }
+
+            return default;
+        }
+
     }
 
 }

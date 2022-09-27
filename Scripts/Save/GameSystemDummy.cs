@@ -1,12 +1,8 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Sirenix.OdinInspector;
-using GrandmaGreen;
 using GrandmaGreen.SaveSystem;
-using System;
 using GrandmaGreen.Garden;
-using GrandmaGreen.Collections;
 
 namespace GrandmaGreen {
     public class GameSystemDummy : MonoBehaviour
@@ -27,16 +23,45 @@ namespace GrandmaGreen {
             m_objectSavers[0].AddComponent<Trait>(-1, t);
         }
 
-        // [Button()]
-        // public void UpdateInventoryItem(int serialID, int quantity)
-        // {
-        //     InventoryItem sample = new InventoryItem();
-        //     m_objectSavers[1].RequestData<InventoryItem>(serialID, ref sample);
-        //
-        //     sample.quantity = quantity;
-        //     m_objectSavers[1].UpdateValue<InventoryItem>(serialID, sample);
-        // }
-        //
+        [Button()]
+        public void AddToInventory(int type, int id, int quantity)
+        {
+            switch (type)
+            {
+                case 0: // Tool
+                    EventManager.instance.HandleEVENT_INVENTORY_ADD(new GrandmaGreen.Collections.Tool(id, null, 0), quantity);
+                    break;
+                case 1: // Plant
+                    EventManager.instance.HandleEVENT_INVENTORY_ADD(new GrandmaGreen.Collections.Plant(id, null, 0, new Trait()), quantity);
+                    break;
+                case 2: // Seed
+                    EventManager.instance.HandleEVENT_INVENTORY_ADD(new GrandmaGreen.Collections.Seed(id, null, 0), quantity);
+                    break;
+                case 3: // Decor
+                    EventManager.instance.HandleEVENT_INVENTORY_ADD(new GrandmaGreen.Collections.Decor(id, null, 0), quantity);
+                    break;
+            }
+        }
+
+        [Button()]
+        public void RemoveFromInventory(int type, int id, int quantity)
+        {
+            switch (type)
+            {
+                case 0: // Tool
+                    EventManager.instance.HandleEVENT_INVENTORY_REMOVE(new GrandmaGreen.Collections.Tool(id, null, 0), quantity);
+                    break;
+                case 1: // Plant
+                    EventManager.instance.HandleEVENT_INVENTORY_REMOVE(new GrandmaGreen.Collections.Plant(id, null, 0, new Trait()), quantity);
+                    break;
+                case 2: // Seed
+                    EventManager.instance.HandleEVENT_INVENTORY_REMOVE(new GrandmaGreen.Collections.Seed(id, null, 0), quantity);
+                    break;
+                case 3: // Decor
+                    EventManager.instance.HandleEVENT_INVENTORY_REMOVE(new GrandmaGreen.Collections.Decor(id, null, 0), quantity);
+                    break;
+            }
+        }
         
         public int SampleTest()
         {

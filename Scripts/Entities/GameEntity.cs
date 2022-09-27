@@ -45,8 +45,8 @@ namespace GrandmaGreen.Entities
         Vector3 prevPosition;
 
         public event System.Action<Vector3> onEntityMove;
-        public event System.Action<Vector3> onEntityActionStart;
-        public event System.Action<Vector3> onEntityActionEnd;
+        public System.Action<Vector3> onEntityActionStart;
+        public System.Action<Vector3> onEntityActionEnd;
 
         void Awake()
         {
@@ -192,8 +192,6 @@ namespace GrandmaGreen.Entities
 
             splineFollow.onRetarget += onEntityActionStart;
 
-
-
             while (splineFollow.isFollowing)
             {
                 yield return null;
@@ -201,8 +199,6 @@ namespace GrandmaGreen.Entities
 
             onEntityActionEnd?.Invoke(CurrentPos());
             splineFollow.onRetarget -= onEntityActionStart;
-
-            Debug.Log("Entity action end");
         }
 
         public virtual void CancelPath()

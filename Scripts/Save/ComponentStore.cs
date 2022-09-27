@@ -4,6 +4,7 @@ using UnityEngine;
 using Sirenix.OdinInspector;
 using Sirenix.Serialization;
 using System;
+using GrandmaGreen.Collections;
 
 namespace GrandmaGreen.SaveSystem
 {
@@ -30,7 +31,7 @@ namespace GrandmaGreen.SaveSystem
         /// The components in question.
         /// </summary>
         [ShowInInspector]
-        public List<T> components { get; set; }
+        public List<T> components;
 
         /// <summary>
         /// Constructor initializes member variables and does nothing else.
@@ -93,15 +94,35 @@ namespace GrandmaGreen.SaveSystem
         /// </summary>
         public bool UpdateValue(int index, T component)
         {
-            try
+            if (index >= 0)
             {
-                components[index] = component;
+                try
+                {
+                    components[index] = component;
+                }
+                catch (Exception e)
+                {
+                    Debug.LogException(e);
+                    return false;
+                }
             }
-            catch (Exception e)
+            else
             {
-                Debug.LogException(e);
-                return false;
+                {
+                    T searchComponent = component;
+                    int indexFound = components.FindIndex(comp => searchComponent.Equals(comp));
+
+                    if (indexFound == -1)
+                    {
+                        AddComponent(-1, component);
+                    }
+                    else
+                    {
+                        components[indexFound] = component;
+                    }
+                }
             }
+
             return true;
         }
 
@@ -111,15 +132,35 @@ namespace GrandmaGreen.SaveSystem
         /// </summary>
         public bool RequestData(int index, ref T component)
         {
-            try
+            if (index >= 0)
             {
-                component = components[index];
+                try
+                {
+                    component = components[index];
+                }
+                catch (Exception e)
+                {
+                    Debug.LogException(e);
+                    return false;
+                }
             }
-            catch (Exception e)
+            else // If requesting data by component equals operator.
             {
-                Debug.LogException(e);
-                return false;
+                {
+                    T searchComponent = component;
+                    int searchIndex = components.FindIndex(comp => searchComponent.Equals(comp));
+
+                    if (searchIndex == -1)
+                    {
+                        return false;
+                    }
+                    else
+                    {
+                        component = components[searchIndex];
+                    }
+                }
             }
+
             return true;
         }
 

@@ -23,8 +23,7 @@ public class Tool : MonoBehaviour
 
     [Header("Tools Management")]
     [SerializeField] private EntityController gardener;
-    [SerializeField] private ToolTypeDictionary toolType;
-    [SerializeField] public ToolStateData toolState;
+    [SerializeField] private GardenToolSet toolType;
 
 
     [Header("Temporary Info - Prototyping")]
@@ -48,14 +47,13 @@ public class Tool : MonoBehaviour
     void OnEnable()
     {
         GardenManagement.onTilemapSelection += TileInteract;
-        toolState.onToolSelected += ToolSwap;
-        ToolSwap(toolState.currentTool);
+
     }
 
     void OnDisable()
     {
         GardenManagement.onTilemapSelection -= TileInteract;
-        toolState.onToolSelected -= ToolSwap;
+
     }
 
     void TileInteract(Vector3Int gridSelection)
@@ -80,7 +78,6 @@ public class Tool : MonoBehaviour
         {
             SeedInteract(tileToInteract, selectedTilePos);
         }
-
     }
 
     public void ToolSwap(string toolName)
@@ -126,15 +123,6 @@ public class Tool : MonoBehaviour
         {
             GardenManagement.CreatePlantOnCell(plantType, cell);
             gardenMap.SetTile(cell, tileTypesList[2].tile);
-        }
-    }
-
-    void SwapTools()
-    {
-        currIndex++;
-        if (currIndex > toolType.toolData.Count - 1)
-        {
-            currIndex = 0;
         }
     }
 }

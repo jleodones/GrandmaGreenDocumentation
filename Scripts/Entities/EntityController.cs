@@ -31,6 +31,7 @@ namespace GrandmaGreen.Entities
         [Header("Entity Settings")]
         public EntityPermissions permissions;
         public EntityBehavior currentBehavior;
+        public float actionRange = 1;
 
         [Header("Entity variables")]
         public GameEntity entity;
@@ -97,6 +98,17 @@ namespace GrandmaGreen.Entities
             currentBehavior = behavior;
 
             behaviorRoutine = entity.StartCoroutine(currentBehavior.PerformInstance(this));
+        }
+
+        public virtual  void DoGardenAction(Vector3 position)
+        {
+            if ((entity.CurrentPos() - position).magnitude<=actionRange)
+            {
+                entity.onEntityActionEnd(entity.CurrentPos());
+            }
+            else
+                SetDestination(position);
+
         }
     }
 }

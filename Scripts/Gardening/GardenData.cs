@@ -5,16 +5,6 @@ using Unity.Mathematics;
 
 namespace GrandmaGreen.Garden
 {
-    [System.Serializable]
-    /// <summary>
-    /// Struct for plant state storage
-    /// </summary>
-    public struct PlantState
-    {
-        public int gridIndex;
-        public int phenotypeIndex;
-        public Genotype genotype;
-    }
 
     [CreateAssetMenu(menuName = "GrandmaGreen/Garden/Garden Data")]
     /// <summary>

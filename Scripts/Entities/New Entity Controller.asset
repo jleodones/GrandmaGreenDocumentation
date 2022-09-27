@@ -14,5 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   permissions: 1
   currentBehavior: {fileID: 11400000, guid: 05f21c6652e1f42469b79cd060bb0d2e, type: 2}
+  actionRange: 1
   entity: {fileID: 0}
   active: 0
+  plantCheck: 1

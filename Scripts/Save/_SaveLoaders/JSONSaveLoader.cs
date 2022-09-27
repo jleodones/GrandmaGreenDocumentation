@@ -17,7 +17,10 @@ namespace GrandmaGreen.SaveSystem
     /// </summary>
     public class JSONSaveLoader : ISaveLoader
     {
-        private string m_baseFilePath = Application.persistentDataPath + "/save.grandma";
+        // Changed for first playable.
+        // private string m_baseFilePath = Application.persistentDataPath + "/save.grandma";
+
+        private string m_baseFilePath = Application.dataPath + "/_GrandmaGreen/Scripts/Save/FirstPlayableSave.grandma";
 
         [SerializeField]
         [ReadOnly]

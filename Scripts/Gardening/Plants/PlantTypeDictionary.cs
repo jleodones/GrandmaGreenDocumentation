@@ -8,27 +8,10 @@ namespace GrandmaGreen
     {
         private readonly Dictionary<string, PlantType> dictionary = new Dictionary<string, PlantType>();
         public PlantType[] plantTypes;
-
-        void Awake()
+    
+        public PlantType this[int plantIndex]
         {
-            LoadPlantTypes();
-        }
-
-        [ContextMenu("LoadPlantTypes")]
-        /// <summary>
-        /// Initialize PlantType dictionary
-        /// </summary>
-        public void LoadPlantTypes()
-        {
-            foreach (PlantType type in plantTypes)
-            {
-                dictionary[type.plantName] = type;
-            }
-        }
-
-        public PlantType this[string name]
-        {
-            get { return dictionary[name]; }
+            get { return plantTypes[plantIndex]; }
         }
 
         [ContextMenu("TestPlantTypeLookup")]
