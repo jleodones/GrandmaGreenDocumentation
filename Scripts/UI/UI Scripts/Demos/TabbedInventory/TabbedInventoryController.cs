@@ -8,7 +8,7 @@ using GrandmaGreen.SaveSystem;
 using GrandmaGreen.Collections;
 using Sirenix.OdinInspector;
 using GrandmaGreen.UI.HUD;
-
+using GrandmaGreen.Garden;
 namespace GrandmaGreen.UI.Collections
 {
     public class TabbedInventoryController
@@ -27,22 +27,24 @@ namespace GrandmaGreen.UI.Collections
 
         // Define the suffix of the tab content name
         private const string contentNameSuffix = "-content";
-        
+
         // Tools script.
-        private ToolTest toolTestScript = null;
-        
+        public PlayerToolData playerToolData;
+
         // The root of the inventory UI.
         private readonly VisualElement root;
 
         // Entry template used to spawn inventory items.
         private VisualTreeAsset listEntryTemplate;
-        
+
         // Holds all content jars.
         private List<ListView> m_contentJars;
-        
+
         // Inventory data.
         private ObjectSaver m_inventoryData;
 
+
+        public event System.Action<int> onItemEntryClicked;
         /// <summary>
         /// The TabbedInventoryController is attached to the TabbedInventory UI. It registers and controlls tab switching, as well as loading old and new items into the inventory.
         /// </summary>
@@ -50,12 +52,12 @@ namespace GrandmaGreen.UI.Collections
         /// <param name="_toolTestScript">Connects the tools tabs to the inventory UI.</param>
         /// <param name="inventoryData"></param>
         /// <param name="_listEntryTemplate"></param>
-        public TabbedInventoryController(VisualElement _root, ToolTest _toolTestScript,
+        public TabbedInventoryController(VisualElement _root, PlayerToolData _playerToolData,
             ObjectSaver inventoryData, VisualTreeAsset _listEntryTemplate)
         {
             // Set member variables.
             root = _root;
-            toolTestScript = _toolTestScript;
+            playerToolData = _playerToolData;
             listEntryTemplate = _listEntryTemplate;
             m_inventoryData = inventoryData;
 
@@ -68,13 +70,15 @@ namespace GrandmaGreen.UI.Collections
             InstantiateJar<Seed>(m_contentJars.Find(jar => jar.name == "seeds" + contentNameSuffix));
             InstantiateJar<Decor>(m_contentJars.Find(jar => jar.name == "decor" + contentNameSuffix));
             InstantiateJar<Plant>(m_contentJars.Find(jar => jar.name == "plants" + contentNameSuffix));
+
+            _playerToolData.onToolSelected += CheckOpenInventory;
         }
 
         public void OpenInventory()
         {
             root.Q(inventoryElement).style.display = DisplayStyle.Flex;
         }
-        
+
         public void RegisterTabCallbacks()
         {
             UQueryBuilder<Button> tabs = GetAllTabs();
@@ -92,7 +96,15 @@ namespace GrandmaGreen.UI.Collections
         {
             // Set the display to none.
             root.Q(inventoryElement).style.display = DisplayStyle.None;
-            
+
+            // Open the HUD.
+            HUD.HUD.instance.OpenHUD();
+        }
+        private void CloseInventoryOnItemClick()
+        {
+            // Set the display to none.
+            root.Q(inventoryElement).style.display = DisplayStyle.None;
+
             // Open the HUD.
             HUD.HUD.instance.OpenHUD();
         }
@@ -139,7 +151,9 @@ namespace GrandmaGreen.UI.Collections
             ListView content = FindContent(tab);
             content.RemoveFromClassList(unselectedContentClassName);
             // Sending tab name to Ashley
-            toolTestScript.SetTools(tab.name);
+
+            //TODO: SEND SELECTED TOOL
+            //toolTestScript.SetTools(tab.name);
         }
 
         /* Method for the unselected tab: 
@@ -161,7 +175,7 @@ namespace GrandmaGreen.UI.Collections
         {
             return (ListView)(root.Q(name: GenerateContentName(tab)));
         }
-        
+
         // Sets up the item binding for the inventory UI.
         private void InstantiateJar<T>(ListView jar) where T : struct
         {
@@ -172,7 +186,7 @@ namespace GrandmaGreen.UI.Collections
                 var newListEntry = listEntryTemplate.Instantiate();
 
                 // Instantiate a controller for the data
-                var newListEntryLogic = new TabbedInventoryItemController(newListEntry);
+                var newListEntryLogic = new TabbedInventoryItemController(newListEntry.Q<Button>(), OnItemEntryClicked);
 
                 // Assign the controller script to the visual element
                 newListEntry.userData = newListEntryLogic;
@@ -194,26 +208,26 @@ namespace GrandmaGreen.UI.Collections
             // Set a fixed item height
             jar.fixedItemHeight = 100;
         }
-        
+
         // Instantiate a new item for the inventory.
         public void RebuildJar(IInventoryItem item)
         {
             ListView jar = null;
             switch (item.itemType)
             {
-                case ItemType.Tool : 
+                case ItemType.Tool:
                     jar = m_contentJars.Find(jar => jar.name == "tools" + contentNameSuffix);
                     SetItemSource<GrandmaGreen.Collections.Tool>(ref jar);
                     break;
-                case ItemType.Seed : 
+                case ItemType.Seed:
                     jar = m_contentJars.Find(jar => jar.name == "seeds" + contentNameSuffix);
                     SetItemSource<Seed>(ref jar);
                     break;
-                case ItemType.Plant : 
+                case ItemType.Plant:
                     jar = m_contentJars.Find(jar => jar.name == "plants" + contentNameSuffix);
                     SetItemSource<Plant>(ref jar);
                     break;
-                case ItemType.Decor : 
+                case ItemType.Decor:
                     jar = m_contentJars.Find(jar => jar.name == "decor" + contentNameSuffix);
                     SetItemSource<Decor>(ref jar);
                     break;
@@ -235,6 +249,26 @@ namespace GrandmaGreen.UI.Collections
                     jar.itemsSource = ((ComponentStore<T>)componentStore).components;
                 }
             }
+        }
+
+        public void OnItemEntryClicked(int itemID)
+        {
+            playerToolData.SetEquippedPlant(itemID);
+            onItemEntryClicked?.Invoke(itemID);
+            if(itemID != null){
+                CloseInventoryOnItemClick();
+            }
+        }
+
+        void CheckOpenInventory(ToolData selectedTool)
+        {
+            if (selectedTool.toolIndex == 3)
+                OpenInventory(); 
+                Button seedsTab = root.Q<Button>("seeds-tab");
+                GetAllTabs().Where(
+                    (tab) => tab != seedsTab && TabIsCurrentlySelected(tab)
+                ).ForEach(UnselectTab);
+                SelectTab(seedsTab);
         }
     }
 }

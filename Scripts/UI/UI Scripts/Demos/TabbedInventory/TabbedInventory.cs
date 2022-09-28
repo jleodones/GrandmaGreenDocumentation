@@ -5,13 +5,15 @@ using UnityEngine;
 using UnityEngine.UIElements;
 using GrandmaGreen.SaveSystem;
 using GrandmaGreen.Collections;
+using GrandmaGreen.Garden;
 
 //Inherits from class `MonoBehaviour`. This makes it attachable to a game object as a component.
 namespace GrandmaGreen.UI.Collections
 {
     public class TabbedInventory : MonoBehaviour
     {
-        public ToolTest toolScript;
+
+        public PlayerToolData playerToolData;
 
         // Template for list items.
         public VisualTreeAsset listEntryTemplate;
@@ -27,7 +29,7 @@ namespace GrandmaGreen.UI.Collections
             VisualElement root = GetComponent<UIDocument>().rootVisualElement;
 
             // Sets up the controller for the whole inventory. The controller instantiates the inventory on its own upon creation.
-            m_controller = new(root, toolScript, inventoryData, listEntryTemplate);
+            m_controller = new(root, playerToolData, inventoryData, listEntryTemplate);
 
             // Register player events.
             m_controller.RegisterTabCallbacks();

@@ -17,10 +17,9 @@ namespace GrandmaGreen.SaveSystem
     /// </summary>
     public class JSONSaveLoader : ISaveLoader
     {
-        // Changed for first playable.
-        // private string m_baseFilePath = Application.persistentDataPath + "/save.grandma";
+        private string m_baseFilePath = Application.persistentDataPath + "/save.grandma";
 
-        private string m_baseFilePath = Application.dataPath + "/_GrandmaGreen/Scripts/Save/FirstPlayableSave.grandma";
+        // private string m_baseFilePath = Application.dataPath + "/_GrandmaGreen/Scripts/Save/FirstPlayableSave.grandma";
 
         [SerializeField]
         [ReadOnly]
@@ -42,15 +41,12 @@ namespace GrandmaGreen.SaveSystem
 
             if (!File.Exists(m_baseFilePath)) // If the file doesn't exist, create a new one.
             {
-                // TODO: Replace this empty file with a file prefab for new games?
                 using (StreamWriter file = File.CreateText(m_baseFilePath))
                 {
-                    JsonSerializer serializer = new JsonSerializer()
-                    {
-                        Formatting = Formatting.Indented,
-                        TypeNameHandling = TypeNameHandling.Auto
-                    };
-                    serializer.Serialize(file, new List<ObjectSaver>());
+                    // TODO: Replace this with an actual default save file.
+                    TextAsset f = Resources.Load("FirstPlayableSave") as TextAsset;
+                    
+                    file.Write(f.text);
                 }
             }
         }

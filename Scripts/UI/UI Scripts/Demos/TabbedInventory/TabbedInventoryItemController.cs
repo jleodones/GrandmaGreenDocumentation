@@ -3,17 +3,28 @@ using System.Collections.Generic;
 using GrandmaGreen.Collections;
 using UnityEngine;
 using UnityEngine.UIElements;
+using GrandmaGreen.Garden;
 
 namespace GrandmaGreen.UI.Collections
 {
     public class TabbedInventoryItemController
     {
-
         private VisualElement m_visualElement;
+        private Button m_button;
+        System.Action<int> m_clickCallback;
+        int itemID;
 
         public TabbedInventoryItemController(VisualElement visualElement)
         {
             m_visualElement = visualElement;
+        }
+
+        public TabbedInventoryItemController(Button button, System.Action<int> clickCallback)
+        {
+            m_button = button;
+            m_clickCallback = clickCallback;
+
+            button.clicked += OnButtonClicked;
         }
 
         //This function receives the character whose name this list 
@@ -25,6 +36,19 @@ namespace GrandmaGreen.UI.Collections
         {
             m_visualElement.Q<Label>("quantity").text = inventoryItem.GetQuantityToString();
             m_visualElement.Q<Label>("item-name").text = inventoryItem.itemName;
+            itemID = inventoryItem.itemID;
         }
+
+        void CheckOpenInventory(ToolData selectedTool)
+        {
+
+        }
+
+        void OnButtonClicked()
+        {
+            m_clickCallback?.Invoke(itemID);
+        }
+
+
     }
 }
