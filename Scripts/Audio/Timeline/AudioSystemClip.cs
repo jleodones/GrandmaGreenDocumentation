@@ -14,7 +14,7 @@ namespace GrandmaGreen.Audio
 
         public ClipCaps clipCaps => ClipCaps.None;
 
-        //public override double duration;
+        public override double duration => SoundContainer.SoundClipMax;
 
         public override Playable CreatePlayable(PlayableGraph graph, GameObject owner)
         {
