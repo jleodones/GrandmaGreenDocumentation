@@ -39,7 +39,7 @@ namespace GrandmaGreen.SaveSystem
             
             if(m_internalTime >= m_autoSaveBuffer)
             {
-                // TriggerSave();
+                TriggerSave();
                 m_internalTime = 0.0f;
             }
         }

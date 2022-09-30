@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Splines;
 using Pathfinding;
+using GrandmaGreen.Entities;
 
 namespace GrandmaGreen {
     public class GolemSpawner : MonoBehaviour
     {
         public GameObject tulip;
+        public EntityController AIController;
+
         // Start is called before the first frame update
         void Start()
         {
@@ -19,12 +22,17 @@ namespace GrandmaGreen {
             Debug.Log("Flower " + id + " is harvasted" );
             Debug.Log("A Golem is spawned somewhere");
 
-            // Instantiate at position (0, 0, 0) and zero rotation.
-            GameObject newGolem = new GameObject("NewGolemParent_"+id);
-            newGolem.transform.SetParent(tulip.transform);
-            newGolem.AddComponent<SplineContainer>();
-            tulip.GetComponent<SplineFollow>().target = newGolem.GetComponent<SplineContainer>();
-            Instantiate(tulip, pos, Quaternion.identity);
+            GameObject newGolemParent = new GameObject("newGolemParent_"+id);
+            newGolemParent.AddComponent<SplineContainer>();
+            
+            // Instantiate at position and zero rotation.
+            GameObject newGolem = Instantiate(tulip, pos, Quaternion.identity);
+            newGolem.transform.SetParent(newGolemParent.transform);
+            newGolem.GetComponent<SplineFollow>().target = newGolemParent.GetComponent<SplineContainer>();
+
+            // Create Entity Controller on fly
+            EntityController controller = Instantiate(AIController);
+            newGolem.GetComponent<GolemEntity>().controller = controller;
         }
 
         private void OnDestroy() {

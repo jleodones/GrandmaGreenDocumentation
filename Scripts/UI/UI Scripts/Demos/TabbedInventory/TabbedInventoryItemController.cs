@@ -9,16 +9,9 @@ namespace GrandmaGreen.UI.Collections
 {
     public class TabbedInventoryItemController
     {
-        private VisualElement m_visualElement;
         private Button m_button;
         System.Action<int> m_clickCallback;
         int itemID;
-
-        public TabbedInventoryItemController(VisualElement visualElement)
-        {
-            m_visualElement = visualElement;
-        }
-
         public TabbedInventoryItemController(Button button, System.Action<int> clickCallback)
         {
             m_button = button;
@@ -34,8 +27,8 @@ namespace GrandmaGreen.UI.Collections
 
         public void SetInventoryData(IInventoryItem inventoryItem)
         {
-            m_visualElement.Q<Label>("quantity").text = inventoryItem.GetQuantityToString();
-            m_visualElement.Q<Label>("item-name").text = inventoryItem.itemName;
+            m_button.Q<Label>("quantity").text = inventoryItem.GetQuantityToString();
+            m_button.Q<Label>("item-name").text = inventoryItem.itemName;
             itemID = inventoryItem.itemID;
         }
 

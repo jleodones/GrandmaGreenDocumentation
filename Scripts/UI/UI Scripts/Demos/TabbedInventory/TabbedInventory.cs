@@ -6,6 +6,7 @@ using UnityEngine.UIElements;
 using GrandmaGreen.SaveSystem;
 using GrandmaGreen.Collections;
 using GrandmaGreen.Garden;
+using SpookuleleAudio;
 
 //Inherits from class `MonoBehaviour`. This makes it attachable to a game object as a component.
 namespace GrandmaGreen.UI.Collections
@@ -23,13 +24,15 @@ namespace GrandmaGreen.UI.Collections
         
         private TabbedInventoryController m_controller;
 
+        public ASoundContainer[] soundContainers;
+
         void OnEnable()
         {
             // Gets the root of the tabbed inventory, which holds all the tabs in it.
             VisualElement root = GetComponent<UIDocument>().rootVisualElement;
 
             // Sets up the controller for the whole inventory. The controller instantiates the inventory on its own upon creation.
-            m_controller = new(root, playerToolData, inventoryData, listEntryTemplate);
+            m_controller = new(root, playerToolData, inventoryData, listEntryTemplate, soundContainers);
 
             // Register player events.
             m_controller.RegisterTabCallbacks();

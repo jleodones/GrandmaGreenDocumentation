@@ -32,7 +32,7 @@ namespace GrandmaGreen.Garden
             {
                 return;
             }
-            
+
             if (action.tool.toolIndex == 1)
             {
                 TrowelAction(action);
@@ -59,9 +59,10 @@ namespace GrandmaGreen.Garden
             }
             else if (tileStore[action.tile].occupied)
             {
-                action.area.HarvestPlantOnCell(action.gridcell);
+                if (action.area.HarvestPlantOnCell(action.gridcell))
+                    action.tool.toolSFX[2].Play();
+
                 action.area.tilemap.SetTile(action.gridcell, tileStore[1].tile);
-                action.tool.toolSFX[2].Play();
             }
         }
 

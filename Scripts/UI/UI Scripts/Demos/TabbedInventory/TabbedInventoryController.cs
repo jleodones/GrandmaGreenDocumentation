@@ -9,6 +9,8 @@ using GrandmaGreen.Collections;
 using Sirenix.OdinInspector;
 using GrandmaGreen.UI.HUD;
 using GrandmaGreen.Garden;
+using SpookuleleAudio;
+
 namespace GrandmaGreen.UI.Collections
 {
     public class TabbedInventoryController
@@ -43,6 +45,8 @@ namespace GrandmaGreen.UI.Collections
         // Inventory data.
         private ObjectSaver m_inventoryData;
 
+        private ASoundContainer[] m_soundContainers;
+
 
         public event System.Action<int> onItemEntryClicked;
         /// <summary>
@@ -53,13 +57,14 @@ namespace GrandmaGreen.UI.Collections
         /// <param name="inventoryData"></param>
         /// <param name="_listEntryTemplate"></param>
         public TabbedInventoryController(VisualElement _root, PlayerToolData _playerToolData,
-            ObjectSaver inventoryData, VisualTreeAsset _listEntryTemplate)
+            ObjectSaver inventoryData, VisualTreeAsset _listEntryTemplate, ASoundContainer[] soundContainers)
         {
             // Set member variables.
             root = _root;
             playerToolData = _playerToolData;
             listEntryTemplate = _listEntryTemplate;
             m_inventoryData = inventoryData;
+            m_soundContainers = soundContainers;
 
             // Instantiate the inventory items.
             // First, get all content jars.
@@ -77,6 +82,9 @@ namespace GrandmaGreen.UI.Collections
         public void OpenInventory()
         {
             root.Q(inventoryElement).style.display = DisplayStyle.Flex;
+            
+            // Play open inventory SFX.
+            m_soundContainers[0].Play();
         }
 
         public void RegisterTabCallbacks()
@@ -97,13 +105,8 @@ namespace GrandmaGreen.UI.Collections
             // Set the display to none.
             root.Q(inventoryElement).style.display = DisplayStyle.None;
 
-            // Open the HUD.
-            HUD.HUD.instance.OpenHUD();
-        }
-        private void CloseInventoryOnItemClick()
-        {
-            // Set the display to none.
-            root.Q(inventoryElement).style.display = DisplayStyle.None;
+            // Play the inventory close SFX.
+            m_soundContainers[1].Play();
 
             // Open the HUD.
             HUD.HUD.instance.OpenHUD();
@@ -154,6 +157,9 @@ namespace GrandmaGreen.UI.Collections
 
             //TODO: SEND SELECTED TOOL
             //toolTestScript.SetTools(tab.name);
+            
+            // Play tab change SFX.
+            m_soundContainers[2].Play();
         }
 
         /* Method for the unselected tab: 
@@ -256,7 +262,7 @@ namespace GrandmaGreen.UI.Collections
             playerToolData.SetEquippedPlant(itemID);
             onItemEntryClicked?.Invoke(itemID);
             if(itemID != null){
-                CloseInventoryOnItemClick();
+                CloseInventory(new ClickEvent());
             }
         }
 

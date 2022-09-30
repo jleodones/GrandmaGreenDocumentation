@@ -42,6 +42,7 @@ namespace GrandmaGreen.Garden
 
         public Vector3Int lastSelectedCell;
         public TileBase lastSelectedTile;
+        public GameObject golem;
 
         void Awake()
         {
@@ -70,10 +71,16 @@ namespace GrandmaGreen.Garden
         IEnumerator GrowthCoroutine(Vector3Int cell)
         {
             PlantType type = plantStateManager.GetPlantType(areaIndex, cell);
+
+
             Debug.Log(string.Format("Growing {0} at {1}.", type.name, cell));
             for (int i = 1; i < type.growthStages; i++)
             {
                 yield return new WaitForSeconds(5);
+
+                if (plantStateManager.IsEmpty(areaIndex, cell))
+                    yield break;
+
                 plantStateManager.IncrementGrowthStage(areaIndex, cell);
                 UpdatePlantPrefabOnCell(type, cell);
                 Debug.Log(string.Format("{0} grew. Current stage: {1}", type.name, plantStateManager.GetGrowthStage(areaIndex, cell)));
@@ -119,10 +126,23 @@ namespace GrandmaGreen.Garden
             plantStateManager.DestroyPlant(areaIndex, cell);
         }
 
-        public void HarvestPlantOnCell(Vector3Int cell)
+        public bool HarvestPlantOnCell(Vector3Int cell)
         {
+            if (plantStateManager.GetGrowthStage(areaIndex, cell) == 2)
+            {
+                if (!golem.activeInHierarchy)
+                {
+                    golem.transform.position = tilemap.CellToWorld(cell);
+                    golem.SetActive(true);
+                }
+
+                EventManager.instance.HandleEVENT_INVENTORY_ADD(new GrandmaGreen.Collections.Plant(2, "Tulip", 1, new Trait()), 1);
+                DestroyPlantOnCell(cell);
+                return true;
+            }
+
             DestroyPlantOnCell(cell);
-            EventManager.instance.HandleEVENT_INVENTORY_ADD(new GrandmaGreen.Collections.Plant(0, "Tulip", 1, new Trait()), 1);
+            return false;
         }
 
         [ContextMenu("PlaceRoseBottomLeft")]
