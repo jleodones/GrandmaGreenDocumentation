@@ -1,5 +1,5 @@
-.title_box {
-    background-color: rgba(232, 241, 228, 255);
+.title-box {
+    background-color: rgb(232, 241, 228);
     height: 150px;
     min-width: auto;
     width: 800px;
@@ -9,7 +9,7 @@
     border-bottom-right-radius: 50px;
 }
 
-.item_button {
+.item-button {
     background-color: rgb(229, 237, 211);
     width: 250px;
     height: 250px;
@@ -23,7 +23,7 @@
     padding-bottom: 50px;
 }
 
-.popup_box {
+.popup-box {
     width: 1000px;
     height: 500px;
     background-color: rgb(141, 149, 45);
@@ -31,10 +31,10 @@
     border-bottom-left-radius: 50px;
     border-top-right-radius: 50px;
     border-bottom-right-radius: 50px;
-    border-left-color: rgba(179, 187, 94, 255);
-    border-right-color: rgba(179, 187, 94, 255);
-    border-top-color: rgba(179, 187, 94, 255);
-    border-bottom-color: rgba(179, 187, 94, 255);
+    border-left-color: rgb(179, 187, 94);
+    border-right-color: rgb(179, 187, 94);
+    border-top-color: rgb(179, 187, 94);
+    border-bottom-color: rgb(179, 187, 94);
     border-left-width: 20px;
     border-right-width: 20px;
     border-top-width: 20px;
@@ -45,7 +45,7 @@
     padding-bottom: 20px;
 }
 
-.price_box {
+.price-box {
     width: 150px;
     height: 60px;
     background-color: rgb(225, 237, 219);
@@ -62,7 +62,7 @@
     align-items: center;
 }
 
-.price_text {
+.price-text {
     font-size: 300%;
     color: rgb(91, 163, 167);
     -unity-text-align: middle-right;
@@ -71,12 +71,12 @@
     -unity-font-style: bold;
 }
 
-.price_icon {
+.price-icon {
     width: 50px;
     height: 50px;
 }
 
-.currency_box {
+.currency-box {
     width: 200px;
     height: 80px;
     background-color: rgb(232, 241, 228);
@@ -92,14 +92,47 @@
     justify-content: space-between;
 }
 
-.currency_icon {
+.currency-icon {
     width: 50px;
     height: 50px;
 }
 
-.currency_text {
+.currency-text {
     font-size: 300%;
     color: rgb(91, 163, 167);
     -unity-text-align: middle-right;
     -unity-font-style: bold;
+}
+
+.buy-button {
+    width: 300px;
+    height: 100px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    background-color: rgb(91, 163, 167);
+    -unity-font-style: bold;
+    color: rgb(255, 255, 255);
+    -unity-text-align: middle-center;
+    font-size: 500%;
+}
+
+.popup-element {
+    display: flex;
+}
+
+.increase-button {
+}
+
+.decrease-button {
+}
+
+.name-element {
+}
+
+.amount-element {
+}
+
+.cost-element {
 }
