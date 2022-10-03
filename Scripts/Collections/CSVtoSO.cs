@@ -52,14 +52,15 @@ namespace GrandmaGreen.Collections {
                 }
                 t.name = line[2];
                 t.description = line[3];
-                ItemSpritesSO spritesSO = Resources.Load("Item Sprites SO", typeof(ItemSpritesSO)) as ItemSpritesSO;
-                for(int j=0; j<spritesSO.itemSprites.Count; j++)
-                {
-                    if(t.id == spritesSO.itemSprites[j].id)
-                    {
-                        t.SetImage(spritesSO.itemSprites[j].img);
-                    }
-                }
+                t.SetImage(Resources.Load("image" + t.id, typeof(Sprite)) as Sprite);
+                // ItemSpritesSO spritesSO = Resources.Load("Item Sprites SO", typeof(ItemSpritesSO)) as ItemSpritesSO;
+                // for(int j=0; j<spritesSO.itemSprites.Count; j++)
+                // {
+                //     if(t.id == spritesSO.itemSprites[j].id)
+                //     {
+                //         t.SetImage(spritesSO.itemSprites[j].img);
+                //     }
+                // }
 
                 collections.items.Add(t);
             }
