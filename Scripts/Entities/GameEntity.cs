@@ -5,7 +5,7 @@ using Pathfinding;
 using Unity.Mathematics;
 using UnityEngine.Splines;
 using Core.FSM;
-
+using SpookuleleAudio;
 
 namespace GrandmaGreen.Entities
 {
@@ -26,6 +26,7 @@ namespace GrandmaGreen.Entities
         [Header("Entity References")]
         public EntityController controller;
         public Animator animator;
+        public ASoundContainer sfx_Footsteps;
 
         [field: Header("Entity Variables")]
         public StateMachine<EntityState> entityStateMachine;// { get; protected set; }
@@ -37,12 +38,18 @@ namespace GrandmaGreen.Entities
 
         public IPathfinderServicer pathfinderServicer => IPathAgent.Servicer;
         public bool isPathing => splineFollow.isFollowing;
+
+        #region private vcariables
         Transition idleToMoving;
         Transition movingToIdle;
 
         float3[] pathableNodes;
 
         Vector3 prevPosition;
+
+        SoundPlayer footstepsPlayer;
+
+        #endregion
 
         public event System.Action<Vector3> onEntityMove;
         public System.Action<Vector3> onEntityActionStart;
@@ -73,6 +80,9 @@ namespace GrandmaGreen.Entities
 
             entityStateMachine.GetState(EntityState.Idle).onLogicUpdate += IdleLogic;
             entityStateMachine.GetState(EntityState.MovingTo).onLogicUpdate += MovingLogic;
+
+            entityStateMachine.GetState(EntityState.MovingTo).onEnter += MovingEnter;
+            entityStateMachine.GetState(EntityState.MovingTo).onExit += MovingExit;
         }
 
         protected virtual void OnEnable()
@@ -101,6 +111,16 @@ namespace GrandmaGreen.Entities
             prevPosition = transform.position;
             entityStateMachine.PhysicsUpdate();
             onEntityMove?.Invoke(prevPosition);
+        }
+
+        void MovingEnter()
+        {
+       //     footstepsPlayer = sfx_Footsteps.Play();
+        }
+
+        void MovingExit()
+        {
+//            footstepsPlayer.Stop();
         }
 
         void MovingLogic()
@@ -197,12 +217,15 @@ namespace GrandmaGreen.Entities
                 yield return null;
             }
 
-            onEntityActionEnd?.Invoke(CurrentPos());
+            if(!splineFollow.wasForceStopped)
+                onEntityActionEnd?.Invoke(CurrentPos());
+
             splineFollow.onRetarget -= onEntityActionStart;
         }
 
         public virtual void CancelPath()
         {
+            
             splineFollow.ForceStop();
         }
 

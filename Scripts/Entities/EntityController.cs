@@ -100,9 +100,21 @@ namespace GrandmaGreen.Entities
             behaviorRoutine = entity.StartCoroutine(currentBehavior.PerformInstance(this));
         }
 
-        public virtual  void DoGardenAction(Vector3 position)
+        public virtual void PauseBehaviour()
         {
-            if ((entity.CurrentPos() - position).magnitude<=actionRange)
+            entity.StopCoroutine(behaviorRoutine);
+        }
+
+        public virtual void ResumeBehaviour()
+        {
+            if (!permissions.HasFlag(currentBehavior.prerequisites))
+                return;
+            behaviorRoutine = entity.StartCoroutine(currentBehavior.PerformInstance(this));
+        }
+
+        public virtual void DoGardenAction(Vector3 position)
+        {
+            if ((entity.CurrentPos() - position).magnitude <= actionRange)
             {
                 entity.onEntityActionEnd(entity.CurrentPos());
             }
