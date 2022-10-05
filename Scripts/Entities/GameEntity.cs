@@ -39,7 +39,7 @@ namespace GrandmaGreen.Entities
         public IPathfinderServicer pathfinderServicer => IPathAgent.Servicer;
         public bool isPathing => splineFollow.isFollowing;
 
-        #region private vcariables
+        #region private variables
         Transition idleToMoving;
         Transition movingToIdle;
 
