@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.U2D;
 using UnityEditor;
 using System;
 using System.IO;
@@ -18,6 +19,7 @@ namespace GrandmaGreen.Collections {
     public class CSVtoSO : ScriptableObject
     {
         private string inventoryCSVPath = "/_GrandmaGreen/Scripts/Collections/Temp CSV File.csv";
+        [SerializeField] SpriteAtlas atlas;
         
         /// <summary>
         /// Function to populate and creates the Collections SO by reading the CSV file
@@ -52,7 +54,16 @@ namespace GrandmaGreen.Collections {
                 }
                 t.name = line[2];
                 t.description = line[3];
-                t.SetImage(Resources.Load("image" + t.id, typeof(Sprite)) as Sprite);
+
+                //currently trying to get this to work:
+                //Sprite sp = atlas.GetSprite("image" + line[0]);
+                //t.SetImage(sp);
+                
+                //dummy image naming convention (not the actual naming convention lol)
+                //t.SetImage(Resources.Load("image" + t.id, typeof(Sprite)) as Sprite);
+
+                t.SetImage(Resources.Load("image1", typeof(Sprite)) as Sprite);
+
                 // ItemSpritesSO spritesSO = Resources.Load("Item Sprites SO", typeof(ItemSpritesSO)) as ItemSpritesSO;
                 // for(int j=0; j<spritesSO.itemSprites.Count; j++)
                 // {
