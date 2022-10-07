@@ -1,0 +1,9 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/_GrandmaGreen/Scripts/UI/UI%20Scripts/Demos/ToolsMenu/Blossom.uss?fileID=7433441132597879392&amp;guid=80f24c43e5d9c419e8be84a5a07cf2ef&amp;type=3#Blossom" />
+    <ui:VisualElement name="root" style="height: auto; flex-grow: 1;">
+        <ui:VisualElement name="container" style="width: 400px; height: 400px; position: absolute; top: 256px; left: 344px; justify-content: center; align-items: center;">
+            <ui:VisualElement name="blossom" style="background-image: url(&apos;project://database/Assets/_GrandmaGreen/Scripts/UI/SampleArt/UI_Bloom_Filled.png?fileID=2800000&amp;guid=8246231a977b2413baaf814c28d65890&amp;type=3#UI_Bloom_Filled&apos;); width: 274px; height: 246px; border-top-left-radius: 50%; border-bottom-left-radius: 50%; border-top-right-radius: 50%; border-bottom-right-radius: 50%; flex-direction: row; position: absolute; top: auto; left: auto; visibility: visible; display: flex;" />
+            <ui:Button tabindex="-1" text="Button" display-tooltip-when-elided="true" name="button" style="width: 400px; height: 400px; position: absolute; top: auto; left: auto; visibility: visible; background-color: rgb(79, 124, 214); border-top-left-radius: 50%; border-bottom-left-radius: 50%; border-top-right-radius: 50%; border-bottom-right-radius: 50%; background-image: url(&apos;project://database/Assets/_GrandmaGreen/Scripts/UI/SampleArt/UI_Fruit_Temp.png?fileID=2800000&amp;guid=5ef2840e9c4484b05b6b8725ed86010f&amp;type=3#UI_Fruit_Temp&apos;); border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

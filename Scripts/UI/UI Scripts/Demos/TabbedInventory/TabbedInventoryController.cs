@@ -81,6 +81,10 @@ namespace GrandmaGreen.UI.Collections
 
         public void OpenInventory()
         {
+
+
+            // transition-property: scale, rotate, display;
+    // transition-duration: 0.5s, 0.5s, 2s;
             root.Q(inventoryElement).style.display = DisplayStyle.Flex;
             
             // Play open inventory SFX.
