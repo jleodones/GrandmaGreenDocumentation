@@ -10,7 +10,8 @@ namespace GrandmaGreen.Collections {
             Tool,
             Plant,
             Seed,
-            Decor
+            Decor,
+            Character
     }
     ///<summary>
     ///Temporary struct for an item in the Collections SO
