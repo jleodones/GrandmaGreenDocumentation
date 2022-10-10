@@ -11,7 +11,8 @@ namespace GrandmaGreen.Garden
     {
 
         public PlayerToolData toolData;
-        public GameObject moveToActionUIObject;
+        public GameObject iconUIObject;
+        public GameObject tileHighlightUIObject;
         public UnityEngine.UI.Image actionIcon;
 
         UIDocument uiDoc;
@@ -39,30 +40,31 @@ namespace GrandmaGreen.Garden
             if (!tween.IsPlaying())
                 tween.Play();
 
-            moveToActionUIObject.SetActive(true);
-
+            iconUIObject.SetActive(true);
+            tileHighlightUIObject.SetActive(true);
 
             if (toolData.currentTool.icon == null)
             {
-                actionIcon.gameObject.SetActive(false);
+                iconUIObject.gameObject.SetActive(false);
             }
-
             else
             {
-                actionIcon.sprite = toolData.currentTool.icon;
-                actionIcon.gameObject.SetActive(true);
+                actionIcon.sprite = toolData.currentTool.icon;  
+                iconUIObject.gameObject.SetActive(true);
             }
 
+            Vector3 goalPos = toolData.lastToolAction.area.tilemap.CellToWorld(toolData.lastToolAction.gridcell) + (Vector3)(Vector2.one * 0.5f);
 
-            (moveToActionUIObject.transform as RectTransform).anchoredPosition = Camera.main.WorldToScreenPoint(worldDest);
-            routine = StartCoroutine(SetUIPosition(worldDest));
+            (iconUIObject.transform as RectTransform).anchoredPosition = Camera.main.WorldToScreenPoint(goalPos);
+            tileHighlightUIObject.transform.position = goalPos;
+            routine = StartCoroutine(SetUIPosition(goalPos));
         }
 
-        IEnumerator SetUIPosition(Vector3 worldDest)
+        IEnumerator SetUIPosition(Vector3 goalPos)
         {
-            while (moveToActionUIObject.activeSelf)
+            while (iconUIObject.activeSelf)
             {
-                (moveToActionUIObject.transform as RectTransform).anchoredPosition = Camera.main.WorldToScreenPoint(worldDest);
+                (iconUIObject.transform as RectTransform).anchoredPosition = Camera.main.WorldToScreenPoint(goalPos);
                 yield return null;
             }
         }
@@ -72,7 +74,8 @@ namespace GrandmaGreen.Garden
         {
             tween.Pause();
             actionIcon.transform.localPosition = startPos;
-            moveToActionUIObject.SetActive(false);
+            iconUIObject.SetActive(false);
+            tileHighlightUIObject.SetActive(false);
         }
     }
 }

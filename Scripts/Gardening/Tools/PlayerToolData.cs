@@ -19,7 +19,7 @@ namespace GrandmaGreen.Garden
         public event System.Action onToolSelectionEnd;
         public event System.Action<ToolData> onToolSelected;
 
-        public event System.Action onSeedPlanted;
+        public ToolActionData lastToolAction;
 
         public bool toolSelectionActive = false;
         public int equippedPlant = -1;
@@ -76,23 +76,24 @@ namespace GrandmaGreen.Garden
         }
 
         public void SetEquippedPlant(int plantIndex) => equippedPlant = plantIndex;
-        public void UseCurrentTool(TileBase tile, Vector3Int cell, GardenAreaController area)
+
+        public void SetToolAction(TileBase tile, Vector3Int cell, GardenAreaController area)
         {
             PlantType plant = equippedPlant != -1 ? plantLookup[equippedPlant] : default;
-            toolSet.ToolAction(
-                new ToolActionData()
-                {
-                    tool = currentTool,
-                    tile = tile,
-                    gridcell = cell,
-                    area = area,
-                    plantType = plant
-                });
 
-            if (currentTool.toolIndex == 3)
+            lastToolAction = new ToolActionData()
             {
-                onSeedPlanted?.Invoke();
-            }
+                tool = currentTool,
+                tile = tile,
+                gridcell = cell,
+                area = area,
+                plantType = plant
+            };
+        }
+
+        public void DoCurrentToolAction()
+        {
+            toolSet.ToolAction(lastToolAction);
         }
     }
 }

@@ -32,7 +32,7 @@ namespace GrandmaGreen {
 
             // Create Entity Controller on fly
             EntityController controller = Instantiate(AIController);
-            newGolem.GetComponent<GolemEntity>().controller = controller;
+            newGolem.GetComponent<GameEntity>().controller = controller;
         }
 
         private void OnDestroy() {

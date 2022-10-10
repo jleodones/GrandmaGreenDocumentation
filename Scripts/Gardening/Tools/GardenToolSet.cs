@@ -68,7 +68,6 @@ namespace GrandmaGreen.Garden
 
         void SeedPacketAction(ToolActionData action)
         {
-
             //Placing the Plant Prefab on a tile and setting the Tile to "Occupied Plot Tile"
             if (tileStore[action.tile].plantable && action.plantType != default)
             {

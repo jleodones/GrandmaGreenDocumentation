@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using GrandmaGreen.Garden;
 using NaughtyAttributes;
+using GrandmaGreen.Collections;
 
 namespace GrandmaGreen
 {
@@ -13,7 +14,9 @@ namespace GrandmaGreen
     {
         protected static GrandmaGreenGameState s_Instance;
 
+        [SerializeField] CollectionsSO collectionsData;
         [SerializeField] GardenAreaServicer gardenServicer;
+        
         [ReadOnly] int activeAreaIndex;
 
         public GardenAreaController ActiveArea => gardenServicer.ActiveArea;

@@ -229,6 +229,7 @@ namespace GrandmaGreen.Garden
             lastSelectedTile = tilemap.GetTile(lastSelectedCell);
             onTilemapSelection?.Invoke(lastSelectedCell);
 
+            playerTools.SetToolAction(lastSelectedTile, lastSelectedCell, this);
             playerTools.playerController.entity.onEntityActionEnd += DoToolAction;
 
             playerTools.playerController.DoGardenAction(worldPos);
@@ -236,7 +237,7 @@ namespace GrandmaGreen.Garden
 
         void DoToolAction(Vector3 value)
         {
-            playerTools.UseCurrentTool(lastSelectedTile, lastSelectedCell, this);
+            playerTools.DoCurrentToolAction();
             playerTools.playerController.entity.onEntityActionEnd -= DoToolAction;
         }
 
