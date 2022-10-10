@@ -82,12 +82,16 @@
   
   <h1 id="GrandmaGreen_Entities_GameEntity" data-uid="GrandmaGreen.Entities.GameEntity" class="text-break">Class GameEntity
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Core Game Entity Behavior
+Serves as the customer for various GG services (pathfinding, gardening, dialogue)
+Has no decision making logic, instead it is handled by its corresponding Entity Controller</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Object</a></div>
     <div class="level1"><span class="xref">GameEntity</span></div>
+      <div class="level2"><a class="xref" href="GrandmaGreen.Entities.GolemEntity.html">GolemEntity</a></div>
       <div class="level2"><a class="xref" href="GrandmaGreen.Entities.GrandmaEntity.html">GrandmaEntity</a></div>
   </div>
   <div class="implements">
@@ -177,6 +181,78 @@
   </table>
   
   
+  <h4 id="GrandmaGreen_Entities_GameEntity_onEntityActionEnd" data-uid="GrandmaGreen.Entities.GameEntity.onEntityActionEnd">onEntityActionEnd</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Action&lt;Vector3&gt; onEntityActionEnd</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<span class="xref">Vector3</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="GrandmaGreen_Entities_GameEntity_onEntityActionStart" data-uid="GrandmaGreen.Entities.GameEntity.onEntityActionStart">onEntityActionStart</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Action&lt;Vector3&gt; onEntityActionStart</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<span class="xref">Vector3</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="GrandmaGreen_Entities_GameEntity_sfx_Footsteps" data-uid="GrandmaGreen.Entities.GameEntity.sfx_Footsteps">sfx_Footsteps</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ASoundContainer sfx_Footsteps</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">ASoundContainer</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <h4 id="GrandmaGreen_Entities_GameEntity_smoothFactor" data-uid="GrandmaGreen.Entities.GameEntity.smoothFactor">smoothFactor</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
@@ -194,7 +270,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">Single</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -223,6 +299,30 @@
       </tr>
     </tbody>
   </table>
+  
+  
+  <h4 id="GrandmaGreen_Entities_GameEntity_velocity" data-uid="GrandmaGreen.Entities.GameEntity.velocity">velocity</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector3 velocity</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="properties">Properties
   </h3>
   
@@ -245,7 +345,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -298,9 +398,10 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
         <td><span class="parametername">range</span></td>
-        <td></td>
+        <td><p>Max  range to path to</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -315,7 +416,8 @@
     <tbody>
       <tr>
         <td><span class="xref">float3</span>[]</td>
-        <td></td>
+        <td><p>Array of pathable destinations in the range</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -352,7 +454,8 @@
       <tr>
         <td><span class="xref">int2</span></td>
         <td><span class="parametername">endPos</span></td>
-        <td></td>
+        <td><p>Target location</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -367,7 +470,8 @@
     <tbody>
       <tr>
         <td><span class="xref">float3</span>[]</td>
-        <td></td>
+        <td><p>Float array of path to follow. Empty if no path is found</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -452,11 +556,12 @@
   
   <a id="GrandmaGreen_Entities_GameEntity_FollowPath_" data-uid="GrandmaGreen.Entities.GameEntity.FollowPath*"></a>
   <h4 id="GrandmaGreen_Entities_GameEntity_FollowPath_float3___" data-uid="GrandmaGreen.Entities.GameEntity.FollowPath(float3[])">FollowPath(float3[])</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Follows the given float3 path</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual void FollowPath(float3[] path)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual IEnumerator FollowPath(float3[] path)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -471,6 +576,21 @@
       <tr>
         <td><span class="xref">float3</span>[]</td>
         <td><span class="parametername">path</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ienumerator">IEnumerator</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -507,16 +627,6 @@
   </div>
   
   
-  <a id="GrandmaGreen_Entities_GameEntity_OnPathComplete_" data-uid="GrandmaGreen.Entities.GameEntity.OnPathComplete*"></a>
-  <h4 id="GrandmaGreen_Entities_GameEntity_OnPathComplete" data-uid="GrandmaGreen.Entities.GameEntity.OnPathComplete">OnPathComplete()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void OnPathComplete()</code></pre>
-  </div>
-  
-  
   <a id="GrandmaGreen_Entities_GameEntity_Update_" data-uid="GrandmaGreen.Entities.GameEntity.Update*"></a>
   <h4 id="GrandmaGreen_Entities_GameEntity_Update" data-uid="GrandmaGreen.Entities.GameEntity.Update">Update()</h4>
   <div class="markdown level1 summary"></div>
@@ -525,6 +635,32 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Update()</code></pre>
   </div>
+  <h3 id="events">Events
+  </h3>
+  
+  
+  <h4 id="GrandmaGreen_Entities_GameEntity_onEntityMove" data-uid="GrandmaGreen.Entities.GameEntity.onEntityMove">onEntityMove</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Action&lt;Vector3&gt; onEntityMove</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<span class="xref">Vector3</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="GrandmaGreen.IPathAgent.html">IPathAgent</a>

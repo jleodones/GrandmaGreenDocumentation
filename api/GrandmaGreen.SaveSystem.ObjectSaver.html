@@ -88,7 +88,7 @@ It is a ScriptableObject that is the core of the save system, and was designed t
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Object</a></div>
     <div class="level1"><span class="xref">ObjectSaver</span></div>
   </div>
   <div class="implements">
@@ -124,7 +124,7 @@ no two ObjectSavers should be named alike.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -177,7 +177,7 @@ no two ObjectSavers should be named alike.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="GrandmaGreen.SaveSystem.IComponentStore.html">IComponentStore</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="GrandmaGreen.SaveSystem.IComponentStore.html">IComponentStore</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -189,12 +189,12 @@ no two ObjectSavers should be named alike.</p>
   <a id="GrandmaGreen_SaveSystem_ObjectSaver_AddComponent_" data-uid="GrandmaGreen.SaveSystem.ObjectSaver.AddComponent*"></a>
   <h4 id="GrandmaGreen_SaveSystem_ObjectSaver_AddComponent__1_System_Int32___0_" data-uid="GrandmaGreen.SaveSystem.ObjectSaver.AddComponent``1(System.Int32,``0)">AddComponent&lt;T&gt;(Int32, T)</h4>
   <div class="markdown level1 summary"><p>Adds a component to the appropriate ComponentStore. Stored internally, marked for update, then saved by the SaveController.
-Wrappr for the corresponding function in the ComponentStore. This interfaces directly with game systems.</p>
+Wrapper for the corresponding function in the ComponentStore. This interfaces directly with game systems.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void AddComponent&lt;T&gt;(int index, T component)
+    <pre><code class="lang-csharp hljs">public bool AddComponent&lt;T&gt;(int index, T component)
     where T : struct</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -208,7 +208,7 @@ Wrappr for the corresponding function in the ComponentStore. This interfaces dir
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
         <td><span class="parametername">index</span></td>
         <td><p>Optional index parameter to insert a component at the given index.</p>
 </td>
@@ -216,6 +216,21 @@ Wrappr for the corresponding function in the ComponentStore. This interfaces dir
       <tr>
         <td><span class="xref">T</span></td>
         <td><span class="parametername">component</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -311,7 +326,7 @@ Wrapper for the corresponding function in the ComponentStore. This interfaces di
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void RemoveComponent&lt;T&gt;(int index, T component)
+    <pre><code class="lang-csharp hljs">public bool RemoveComponent&lt;T&gt;(int index, T component)
     where T : struct</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -325,7 +340,7 @@ Wrapper for the corresponding function in the ComponentStore. This interfaces di
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
         <td><span class="parametername">index</span></td>
         <td><p>Index for moments where the index of the object is known. -1 signifies that it should use an equality based comparison to
 find the component (no index available).</p>
@@ -334,6 +349,21 @@ find the component (no index available).</p>
       <tr>
         <td><span class="xref">T</span></td>
         <td><span class="parametername">component</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -361,7 +391,7 @@ find the component (no index available).</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void RequestData&lt;T&gt;(int index, ref T component)
+    <pre><code class="lang-csharp hljs">public bool RequestData&lt;T&gt;(int index, ref T component)
     where T : struct</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -375,13 +405,28 @@ find the component (no index available).</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
         <td><span class="parametername">index</span></td>
         <td></td>
       </tr>
       <tr>
         <td><span class="xref">T</span></td>
         <td><span class="parametername">component</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -438,11 +483,12 @@ find the component (no index available).</p>
   
   <a id="GrandmaGreen_SaveSystem_ObjectSaver_UpdateValue_" data-uid="GrandmaGreen.SaveSystem.ObjectSaver.UpdateValue*"></a>
   <h4 id="GrandmaGreen_SaveSystem_ObjectSaver_UpdateValue__1_System_Int32___0_" data-uid="GrandmaGreen.SaveSystem.ObjectSaver.UpdateValue``1(System.Int32,``0)">UpdateValue&lt;T&gt;(Int32, T)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Updates the value of the given component.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void UpdateValue&lt;T&gt;(int index, T component)
+    <pre><code class="lang-csharp hljs">public bool UpdateValue&lt;T&gt;(int index, T component)
     where T : struct</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -456,13 +502,30 @@ find the component (no index available).</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
         <td><span class="parametername">index</span></td>
-        <td></td>
+        <td><p>Used to find the index of the component. If -1 is given, it searches for the component based on equality search (no index available).</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">T</span></td>
         <td><span class="parametername">component</span></td>
+        <td><p>The value to update it with.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td></td>
       </tr>
     </tbody>

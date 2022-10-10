@@ -87,22 +87,22 @@
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.valuetype.equals#system-valuetype-equals(system-object)">ValueType.Equals(Object)</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetype.equals#system-valuetype-equals(system-object)">ValueType.Equals(Object)</a>
     </div>
     <div>
-      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.valuetype.gethashcode#system-valuetype-gethashcode">ValueType.GetHashCode()</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode#system-valuetype-gethashcode">ValueType.GetHashCode()</a>
     </div>
     <div>
-      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.valuetype.tostring#system-valuetype-tostring">ValueType.ToString()</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetype.tostring#system-valuetype-tostring">ValueType.ToString()</a>
     </div>
     <div>
-      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">Object.Equals(Object, Object)</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">Object.Equals(Object, Object)</a>
     </div>
     <div>
-      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.referenceequals#system-object-referenceequals(system-object-system-object)">Object.ReferenceEquals(Object, Object)</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals#system-object-referenceequals(system-object-system-object)">Object.ReferenceEquals(Object, Object)</a>
     </div>
     <div>
-      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gettype#system-object-gettype">Object.GetType()</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype#system-object-gettype">Object.GetType()</a>
     </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="GrandmaGreen.Garden.html">GrandmaGreen.Garden</a></h6>
@@ -112,16 +112,45 @@
     <pre><code class="lang-csharp hljs">[Serializable]
 public struct PlantState</code></pre>
   </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="GrandmaGreen_Garden_PlantState__ctor_" data-uid="GrandmaGreen.Garden.PlantState.#ctor*"></a>
+  <h4 id="GrandmaGreen_Garden_PlantState__ctor_GrandmaGreen_Garden_PlantState_" data-uid="GrandmaGreen.Garden.PlantState.#ctor(GrandmaGreen.Garden.PlantState)">PlantState(PlantState)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PlantState(PlantState plant)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="GrandmaGreen.Garden.PlantState.html">PlantState</a></td>
+        <td><span class="parametername">plant</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="fields">Fields
   </h3>
   
   
-  <h4 id="GrandmaGreen_Garden_PlantState_genotype" data-uid="GrandmaGreen.Garden.PlantState.genotype">genotype</h4>
+  <h4 id="GrandmaGreen_Garden_PlantState_cell" data-uid="GrandmaGreen.Garden.PlantState.cell">cell</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Genotype genotype</code></pre>
+    <pre><code class="lang-csharp hljs">public Vector3Int cell</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -133,19 +162,19 @@ public struct PlantState</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="GrandmaGreen.Garden.Genotype.html">Genotype</a></td>
+        <td><span class="xref">Vector3Int</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <h4 id="GrandmaGreen_Garden_PlantState_gridIndex" data-uid="GrandmaGreen.Garden.PlantState.gridIndex">gridIndex</h4>
+  <h4 id="GrandmaGreen_Garden_PlantState_growthStage" data-uid="GrandmaGreen.Garden.PlantState.growthStage">growthStage</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int gridIndex</code></pre>
+    <pre><code class="lang-csharp hljs">public int growthStage</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -157,19 +186,19 @@ public struct PlantState</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <h4 id="GrandmaGreen_Garden_PlantState_phenotypeIndex" data-uid="GrandmaGreen.Garden.PlantState.phenotypeIndex">phenotypeIndex</h4>
+  <h4 id="GrandmaGreen_Garden_PlantState_timePlanted" data-uid="GrandmaGreen.Garden.PlantState.timePlanted">timePlanted</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int phenotypeIndex</code></pre>
+    <pre><code class="lang-csharp hljs">public float timePlanted</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -181,7 +210,31 @@ public struct PlantState</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="GrandmaGreen_Garden_PlantState_type" data-uid="GrandmaGreen.Garden.PlantState.type">type</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PlantType type</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="GrandmaGreen.PlantType.html">PlantType</a></td>
         <td></td>
       </tr>
     </tbody>

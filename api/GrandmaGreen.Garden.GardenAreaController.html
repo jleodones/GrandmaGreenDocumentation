@@ -88,7 +88,7 @@ TODO: Implement functionality for save/loading changed tiles </p>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Object</a></div>
     <div class="level1"><span class="xref">GardenAreaController</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="GrandmaGreen.Garden.html">GrandmaGreen.Garden</a></h6>
@@ -149,12 +149,12 @@ TODO: Implement functionality for save/loading changed tiles </p>
   </table>
   
   
-  <h4 id="GrandmaGreen_Garden_GardenAreaController_gardenData" data-uid="GrandmaGreen.Garden.GardenAreaController.gardenData">gardenData</h4>
+  <h4 id="GrandmaGreen_Garden_GardenAreaController_golem" data-uid="GrandmaGreen.Garden.GardenAreaController.golem">golem</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public GardenData gardenData</code></pre>
+    <pre><code class="lang-csharp hljs">public GameObject golem</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -166,7 +166,55 @@ TODO: Implement functionality for save/loading changed tiles </p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="GrandmaGreen.Garden.GardenData.html">GardenData</a></td>
+        <td><span class="xref">GameObject</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="GrandmaGreen_Garden_GardenAreaController_lastSelectedCell" data-uid="GrandmaGreen.Garden.GardenAreaController.lastSelectedCell">lastSelectedCell</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector3Int lastSelectedCell</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3Int</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="GrandmaGreen_Garden_GardenAreaController_lastSelectedTile" data-uid="GrandmaGreen.Garden.GardenAreaController.lastSelectedTile">lastSelectedTile</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TileBase lastSelectedTile</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TileBase</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -197,12 +245,12 @@ TODO: Implement functionality for save/loading changed tiles </p>
   </table>
   
   
-  <h4 id="GrandmaGreen_Garden_GardenAreaController_plantInteractablePrefab" data-uid="GrandmaGreen.Garden.GardenAreaController.plantInteractablePrefab">plantInteractablePrefab</h4>
+  <h4 id="GrandmaGreen_Garden_GardenAreaController_plantListDebug" data-uid="GrandmaGreen.Garden.GardenAreaController.plantListDebug">plantListDebug</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public PlantInteractable plantInteractablePrefab</code></pre>
+    <pre><code class="lang-csharp hljs">public List&lt;PlantState&gt; plantListDebug</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -214,7 +262,103 @@ TODO: Implement functionality for save/loading changed tiles </p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="GrandmaGreen.Garden.PlantInteractable.html">PlantInteractable</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="GrandmaGreen.Garden.PlantState.html">PlantState</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="GrandmaGreen_Garden_GardenAreaController_plantPrefabLookup" data-uid="GrandmaGreen.Garden.GardenAreaController.plantPrefabLookup">plantPrefabLookup</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Dictionary&lt;Vector3Int, GameObject&gt; plantPrefabLookup</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<span class="xref">Vector3Int</span>, <span class="xref">GameObject</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="GrandmaGreen_Garden_GardenAreaController_plantStateManager" data-uid="GrandmaGreen.Garden.GardenAreaController.plantStateManager">plantStateManager</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PlantStateManager plantStateManager</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="GrandmaGreen.Garden.PlantStateManager.html">PlantStateManager</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="GrandmaGreen_Garden_GardenAreaController_plantTypeDictionary" data-uid="GrandmaGreen.Garden.GardenAreaController.plantTypeDictionary">plantTypeDictionary</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PlantTypeDictionary plantTypeDictionary</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="GrandmaGreen.PlantTypeDictionary.html">PlantTypeDictionary</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="GrandmaGreen_Garden_GardenAreaController_playerTools" data-uid="GrandmaGreen.Garden.GardenAreaController.playerTools">playerTools</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PlayerToolData playerTools</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="GrandmaGreen.Garden.PlayerToolData.html">PlayerToolData</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -243,33 +387,6 @@ TODO: Implement functionality for save/loading changed tiles </p>
       </tr>
     </tbody>
   </table>
-  <h3 id="properties">Properties
-  </h3>
-  
-  
-  <a id="GrandmaGreen_Garden_GardenAreaController_currentSelection_" data-uid="GrandmaGreen.Garden.GardenAreaController.currentSelection*"></a>
-  <h4 id="GrandmaGreen_Garden_GardenAreaController_currentSelection" data-uid="GrandmaGreen.Garden.GardenAreaController.currentSelection">currentSelection</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public GameObject currentSelection { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">GameObject</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h3 id="methods">Methods
   </h3>
   
@@ -294,6 +411,38 @@ TODO: Implement functionality for save/loading changed tiles </p>
   </div>
   
   
+  <a id="GrandmaGreen_Garden_GardenAreaController_CreatePlantOnCell_" data-uid="GrandmaGreen.Garden.GardenAreaController.CreatePlantOnCell*"></a>
+  <h4 id="GrandmaGreen_Garden_GardenAreaController_CreatePlantOnCell_GrandmaGreen_PlantType_Vector3Int_" data-uid="GrandmaGreen.Garden.GardenAreaController.CreatePlantOnCell(GrandmaGreen.PlantType,Vector3Int)">CreatePlantOnCell(PlantType, Vector3Int)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CreatePlantOnCell(PlantType type, Vector3Int cell)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="GrandmaGreen.PlantType.html">PlantType</a></td>
+        <td><span class="parametername">type</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Vector3Int</span></td>
+        <td><span class="parametername">cell</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="GrandmaGreen_Garden_GardenAreaController_Deactivate_" data-uid="GrandmaGreen.Garden.GardenAreaController.Deactivate*"></a>
   <h4 id="GrandmaGreen_Garden_GardenAreaController_Deactivate" data-uid="GrandmaGreen.Garden.GardenAreaController.Deactivate">Deactivate()</h4>
   <div class="markdown level1 summary"></div>
@@ -301,6 +450,80 @@ TODO: Implement functionality for save/loading changed tiles </p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Deactivate()</code></pre>
+  </div>
+  
+  
+  <a id="GrandmaGreen_Garden_GardenAreaController_DestroyAllPlants_" data-uid="GrandmaGreen.Garden.GardenAreaController.DestroyAllPlants*"></a>
+  <h4 id="GrandmaGreen_Garden_GardenAreaController_DestroyAllPlants" data-uid="GrandmaGreen.Garden.GardenAreaController.DestroyAllPlants">DestroyAllPlants()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void DestroyAllPlants()</code></pre>
+  </div>
+  
+  
+  <a id="GrandmaGreen_Garden_GardenAreaController_DestroyPlantOnCell_" data-uid="GrandmaGreen.Garden.GardenAreaController.DestroyPlantOnCell*"></a>
+  <h4 id="GrandmaGreen_Garden_GardenAreaController_DestroyPlantOnCell_Vector3Int_" data-uid="GrandmaGreen.Garden.GardenAreaController.DestroyPlantOnCell(Vector3Int)">DestroyPlantOnCell(Vector3Int)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void DestroyPlantOnCell(Vector3Int cell)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3Int</span></td>
+        <td><span class="parametername">cell</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="GrandmaGreen_Garden_GardenAreaController_DestroyPlantPrefabOnCell_" data-uid="GrandmaGreen.Garden.GardenAreaController.DestroyPlantPrefabOnCell*"></a>
+  <h4 id="GrandmaGreen_Garden_GardenAreaController_DestroyPlantPrefabOnCell_Vector3Int_" data-uid="GrandmaGreen.Garden.GardenAreaController.DestroyPlantPrefabOnCell(Vector3Int)">DestroyPlantPrefabOnCell(Vector3Int)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void DestroyPlantPrefabOnCell(Vector3Int cell)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3Int</span></td>
+        <td><span class="parametername">cell</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="GrandmaGreen_Garden_GardenAreaController_DestroyRoseBottomLeft_" data-uid="GrandmaGreen.Garden.GardenAreaController.DestroyRoseBottomLeft*"></a>
+  <h4 id="GrandmaGreen_Garden_GardenAreaController_DestroyRoseBottomLeft" data-uid="GrandmaGreen.Garden.GardenAreaController.DestroyRoseBottomLeft">DestroyRoseBottomLeft()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void DestroyRoseBottomLeft()</code></pre>
   </div>
   
   
@@ -363,13 +586,55 @@ TODO: Implement functionality for save/loading changed tiles </p>
   </table>
   
   
-  <a id="GrandmaGreen_Garden_GardenAreaController_InitializeGarden_" data-uid="GrandmaGreen.Garden.GardenAreaController.InitializeGarden*"></a>
-  <h4 id="GrandmaGreen_Garden_GardenAreaController_InitializeGarden" data-uid="GrandmaGreen.Garden.GardenAreaController.InitializeGarden">InitializeGarden()</h4>
+  <a id="GrandmaGreen_Garden_GardenAreaController_HarvestPlantOnCell_" data-uid="GrandmaGreen.Garden.GardenAreaController.HarvestPlantOnCell*"></a>
+  <h4 id="GrandmaGreen_Garden_GardenAreaController_HarvestPlantOnCell_Vector3Int_" data-uid="GrandmaGreen.Garden.GardenAreaController.HarvestPlantOnCell(Vector3Int)">HarvestPlantOnCell(Vector3Int)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void InitializeGarden()</code></pre>
+    <pre><code class="lang-csharp hljs">public bool HarvestPlantOnCell(Vector3Int cell)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3Int</span></td>
+        <td><span class="parametername">cell</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="GrandmaGreen_Garden_GardenAreaController_InspectPlants_" data-uid="GrandmaGreen.Garden.GardenAreaController.InspectPlants*"></a>
+  <h4 id="GrandmaGreen_Garden_GardenAreaController_InspectPlants" data-uid="GrandmaGreen.Garden.GardenAreaController.InspectPlants">InspectPlants()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void InspectPlants()</code></pre>
   </div>
   
   
@@ -393,13 +658,13 @@ TODO: Implement functionality for save/loading changed tiles </p>
   </div>
   
   
-  <a id="GrandmaGreen_Garden_GardenAreaController_PlacePlantPrefab_" data-uid="GrandmaGreen.Garden.GardenAreaController.PlacePlantPrefab*"></a>
-  <h4 id="GrandmaGreen_Garden_GardenAreaController_PlacePlantPrefab_GrandmaGreen_PlantType_Vector3_System_Int32_" data-uid="GrandmaGreen.Garden.GardenAreaController.PlacePlantPrefab(GrandmaGreen.PlantType,Vector3,System.Int32)">PlacePlantPrefab(PlantType, Vector3, Int32)</h4>
+  <a id="GrandmaGreen_Garden_GardenAreaController_PlacePlantPrefabOnCell_" data-uid="GrandmaGreen.Garden.GardenAreaController.PlacePlantPrefabOnCell*"></a>
+  <h4 id="GrandmaGreen_Garden_GardenAreaController_PlacePlantPrefabOnCell_GrandmaGreen_PlantType_Vector3Int_System_Int32_" data-uid="GrandmaGreen.Garden.GardenAreaController.PlacePlantPrefabOnCell(GrandmaGreen.PlantType,Vector3Int,System.Int32)">PlacePlantPrefabOnCell(PlantType, Vector3Int, Int32)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void PlacePlantPrefab(PlantType type, Vector3 pos, int growthStage)</code></pre>
+    <pre><code class="lang-csharp hljs">public void PlacePlantPrefabOnCell(PlantType type, Vector3Int cell, int growthStage)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -417,12 +682,12 @@ TODO: Implement functionality for save/loading changed tiles </p>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Vector3</span></td>
-        <td><span class="parametername">pos</span></td>
+        <td><span class="xref">Vector3Int</span></td>
+        <td><span class="parametername">cell</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
         <td><span class="parametername">growthStage</span></td>
         <td></td>
       </tr>
@@ -430,15 +695,46 @@ TODO: Implement functionality for save/loading changed tiles </p>
   </table>
   
   
-  <a id="GrandmaGreen_Garden_GardenAreaController_PlantInteraction_" data-uid="GrandmaGreen.Garden.GardenAreaController.PlantInteraction*"></a>
-  <h4 id="GrandmaGreen_Garden_GardenAreaController_PlantInteraction" data-uid="GrandmaGreen.Garden.GardenAreaController.PlantInteraction">PlantInteraction()</h4>
-  <div class="markdown level1 summary"><p>NOT USED FOR NOW</p>
-</div>
+  <a id="GrandmaGreen_Garden_GardenAreaController_PlaceRoseBottomLeft_" data-uid="GrandmaGreen.Garden.GardenAreaController.PlaceRoseBottomLeft*"></a>
+  <h4 id="GrandmaGreen_Garden_GardenAreaController_PlaceRoseBottomLeft" data-uid="GrandmaGreen.Garden.GardenAreaController.PlaceRoseBottomLeft">PlaceRoseBottomLeft()</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void PlantInteraction()</code></pre>
+    <pre><code class="lang-csharp hljs">public void PlaceRoseBottomLeft()</code></pre>
   </div>
+  
+  
+  <a id="GrandmaGreen_Garden_GardenAreaController_UpdatePlantPrefabOnCell_" data-uid="GrandmaGreen.Garden.GardenAreaController.UpdatePlantPrefabOnCell*"></a>
+  <h4 id="GrandmaGreen_Garden_GardenAreaController_UpdatePlantPrefabOnCell_GrandmaGreen_PlantType_Vector3Int_" data-uid="GrandmaGreen.Garden.GardenAreaController.UpdatePlantPrefabOnCell(GrandmaGreen.PlantType,Vector3Int)">UpdatePlantPrefabOnCell(PlantType, Vector3Int)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void UpdatePlantPrefabOnCell(PlantType type, Vector3Int cell)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="GrandmaGreen.PlantType.html">PlantType</a></td>
+        <td><span class="parametername">type</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Vector3Int</span></td>
+        <td><span class="parametername">cell</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="events">Events
   </h3>
   
@@ -460,7 +756,7 @@ TODO: Implement functionality for save/loading changed tiles </p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.action">Action</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -484,19 +780,19 @@ TODO: Implement functionality for save/loading changed tiles </p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.action">Action</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <h4 id="GrandmaGreen_Garden_GardenAreaController_onGardenSelection" data-uid="GrandmaGreen.Garden.GardenAreaController.onGardenSelection">onGardenSelection</h4>
+  <h4 id="GrandmaGreen_Garden_GardenAreaController_onTilemapSelection" data-uid="GrandmaGreen.Garden.GardenAreaController.onTilemapSelection">onTilemapSelection</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public event Action&lt;Vector2Int&gt; onGardenSelection</code></pre>
+    <pre><code class="lang-csharp hljs">public event Action&lt;Vector3Int&gt; onTilemapSelection</code></pre>
   </div>
   <h5 class="eventType">Event Type</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -508,7 +804,7 @@ TODO: Implement functionality for save/loading changed tiles </p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<span class="xref">Vector2Int</span>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<span class="xref">Vector3Int</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
