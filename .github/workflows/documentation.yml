@@ -1,8 +1,10 @@
 name: Update documentation.
 
 on:
-  push:
-    branches: [ "main" ]
+  # Updates every day at 00.05 PST/07.05 UTC, 5 minutes after the Perforce depot sync.
+  schedule:
+    - cron: '5 7 * * *'
+  # Manually call the workflow.
   workflow_dispatch:
   
 jobs:
