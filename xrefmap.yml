@@ -1793,12 +1793,230 @@ references:
   commentId: F:GrandmaGreen.Entities.GameEntity.velocity
   fullName: GrandmaGreen.Entities.GameEntity.velocity
   nameWithType: GameEntity.velocity
-- uid: GrandmaGreen.Entities.GolemEntity
-  name: GolemEntity
-  href: api/GrandmaGreen.Entities.GolemEntity.html
-  commentId: T:GrandmaGreen.Entities.GolemEntity
-  fullName: GrandmaGreen.Entities.GolemEntity
-  nameWithType: GolemEntity
+- uid: GrandmaGreen.Entities.GolemController
+  name: GolemController
+  href: api/GrandmaGreen.Entities.GolemController.html
+  commentId: T:GrandmaGreen.Entities.GolemController
+  fullName: GrandmaGreen.Entities.GolemController
+  nameWithType: GolemController
+- uid: GrandmaGreen.Entities.GolemController.animator
+  name: animator
+  href: api/GrandmaGreen.Entities.GolemController.html#GrandmaGreen_Entities_GolemController_animator
+  commentId: F:GrandmaGreen.Entities.GolemController.animator
+  fullName: GrandmaGreen.Entities.GolemController.animator
+  nameWithType: GolemController.animator
+- uid: GrandmaGreen.Entities.GolemController.CalculatePathable(System.Int32)
+  name: CalculatePathable(Int32)
+  href: api/GrandmaGreen.Entities.GolemController.html#GrandmaGreen_Entities_GolemController_CalculatePathable_System_Int32_
+  commentId: M:GrandmaGreen.Entities.GolemController.CalculatePathable(System.Int32)
+  fullName: GrandmaGreen.Entities.GolemController.CalculatePathable(System.Int32)
+  nameWithType: GolemController.CalculatePathable(Int32)
+- uid: GrandmaGreen.Entities.GolemController.CalculatePathable*
+  name: CalculatePathable
+  href: api/GrandmaGreen.Entities.GolemController.html#GrandmaGreen_Entities_GolemController_CalculatePathable_
+  commentId: Overload:GrandmaGreen.Entities.GolemController.CalculatePathable
+  isSpec: "True"
+  fullName: GrandmaGreen.Entities.GolemController.CalculatePathable
+  nameWithType: GolemController.CalculatePathable
+- uid: GrandmaGreen.Entities.GolemController.CancelPath
+  name: CancelPath()
+  href: api/GrandmaGreen.Entities.GolemController.html#GrandmaGreen_Entities_GolemController_CancelPath
+  commentId: M:GrandmaGreen.Entities.GolemController.CancelPath
+  fullName: GrandmaGreen.Entities.GolemController.CancelPath()
+  nameWithType: GolemController.CancelPath()
+- uid: GrandmaGreen.Entities.GolemController.CancelPath*
+  name: CancelPath
+  href: api/GrandmaGreen.Entities.GolemController.html#GrandmaGreen_Entities_GolemController_CancelPath_
+  commentId: Overload:GrandmaGreen.Entities.GolemController.CancelPath
+  isSpec: "True"
+  fullName: GrandmaGreen.Entities.GolemController.CancelPath
+  nameWithType: GolemController.CancelPath
+- uid: GrandmaGreen.Entities.GolemController.CheckPath(int2)
+  name: CheckPath(int2)
+  href: api/GrandmaGreen.Entities.GolemController.html#GrandmaGreen_Entities_GolemController_CheckPath_int2_
+  commentId: M:GrandmaGreen.Entities.GolemController.CheckPath(int2)
+  fullName: GrandmaGreen.Entities.GolemController.CheckPath(int2)
+  nameWithType: GolemController.CheckPath(int2)
+- uid: GrandmaGreen.Entities.GolemController.CheckPath(Vector3)
+  name: CheckPath(Vector3)
+  href: api/GrandmaGreen.Entities.GolemController.html#GrandmaGreen_Entities_GolemController_CheckPath_Vector3_
+  commentId: M:GrandmaGreen.Entities.GolemController.CheckPath(Vector3)
+  fullName: GrandmaGreen.Entities.GolemController.CheckPath(Vector3)
+  nameWithType: GolemController.CheckPath(Vector3)
+- uid: GrandmaGreen.Entities.GolemController.CheckPath*
+  name: CheckPath
+  href: api/GrandmaGreen.Entities.GolemController.html#GrandmaGreen_Entities_GolemController_CheckPath_
+  commentId: Overload:GrandmaGreen.Entities.GolemController.CheckPath
+  isSpec: "True"
+  fullName: GrandmaGreen.Entities.GolemController.CheckPath
+  nameWithType: GolemController.CheckPath
+- uid: GrandmaGreen.Entities.GolemController.CurrentPos
+  name: CurrentPos()
+  href: api/GrandmaGreen.Entities.GolemController.html#GrandmaGreen_Entities_GolemController_CurrentPos
+  commentId: M:GrandmaGreen.Entities.GolemController.CurrentPos
+  fullName: GrandmaGreen.Entities.GolemController.CurrentPos()
+  nameWithType: GolemController.CurrentPos()
+- uid: GrandmaGreen.Entities.GolemController.CurrentPos*
+  name: CurrentPos
+  href: api/GrandmaGreen.Entities.GolemController.html#GrandmaGreen_Entities_GolemController_CurrentPos_
+  commentId: Overload:GrandmaGreen.Entities.GolemController.CurrentPos
+  isSpec: "True"
+  fullName: GrandmaGreen.Entities.GolemController.CurrentPos
+  nameWithType: GolemController.CurrentPos
+- uid: GrandmaGreen.Entities.GolemController.delay
+  name: delay
+  href: api/GrandmaGreen.Entities.GolemController.html#GrandmaGreen_Entities_GolemController_delay
+  commentId: F:GrandmaGreen.Entities.GolemController.delay
+  fullName: GrandmaGreen.Entities.GolemController.delay
+  nameWithType: GolemController.delay
+- uid: GrandmaGreen.Entities.GolemController.FindRandomDestination(System.Int32)
+  name: FindRandomDestination(Int32)
+  href: api/GrandmaGreen.Entities.GolemController.html#GrandmaGreen_Entities_GolemController_FindRandomDestination_System_Int32_
+  commentId: M:GrandmaGreen.Entities.GolemController.FindRandomDestination(System.Int32)
+  fullName: GrandmaGreen.Entities.GolemController.FindRandomDestination(System.Int32)
+  nameWithType: GolemController.FindRandomDestination(Int32)
+- uid: GrandmaGreen.Entities.GolemController.FindRandomDestination*
+  name: FindRandomDestination
+  href: api/GrandmaGreen.Entities.GolemController.html#GrandmaGreen_Entities_GolemController_FindRandomDestination_
+  commentId: Overload:GrandmaGreen.Entities.GolemController.FindRandomDestination
+  isSpec: "True"
+  fullName: GrandmaGreen.Entities.GolemController.FindRandomDestination
+  nameWithType: GolemController.FindRandomDestination
+- uid: GrandmaGreen.Entities.GolemController.FixedUpdate
+  name: FixedUpdate()
+  href: api/GrandmaGreen.Entities.GolemController.html#GrandmaGreen_Entities_GolemController_FixedUpdate
+  commentId: M:GrandmaGreen.Entities.GolemController.FixedUpdate
+  fullName: GrandmaGreen.Entities.GolemController.FixedUpdate()
+  nameWithType: GolemController.FixedUpdate()
+- uid: GrandmaGreen.Entities.GolemController.FixedUpdate*
+  name: FixedUpdate
+  href: api/GrandmaGreen.Entities.GolemController.html#GrandmaGreen_Entities_GolemController_FixedUpdate_
+  commentId: Overload:GrandmaGreen.Entities.GolemController.FixedUpdate
+  isSpec: "True"
+  fullName: GrandmaGreen.Entities.GolemController.FixedUpdate
+  nameWithType: GolemController.FixedUpdate
+- uid: GrandmaGreen.Entities.GolemController.FollowPath(float3[])
+  name: FollowPath(float3[])
+  href: api/GrandmaGreen.Entities.GolemController.html#GrandmaGreen_Entities_GolemController_FollowPath_float3___
+  commentId: M:GrandmaGreen.Entities.GolemController.FollowPath(float3[])
+  name.vb: FollowPath(float3())
+  fullName: GrandmaGreen.Entities.GolemController.FollowPath(float3[])
+  fullName.vb: GrandmaGreen.Entities.GolemController.FollowPath(float3())
+  nameWithType: GolemController.FollowPath(float3[])
+  nameWithType.vb: GolemController.FollowPath(float3())
+- uid: GrandmaGreen.Entities.GolemController.FollowPath*
+  name: FollowPath
+  href: api/GrandmaGreen.Entities.GolemController.html#GrandmaGreen_Entities_GolemController_FollowPath_
+  commentId: Overload:GrandmaGreen.Entities.GolemController.FollowPath
+  isSpec: "True"
+  fullName: GrandmaGreen.Entities.GolemController.FollowPath
+  nameWithType: GolemController.FollowPath
+- uid: GrandmaGreen.Entities.GolemController.isPathing
+  name: isPathing
+  href: api/GrandmaGreen.Entities.GolemController.html#GrandmaGreen_Entities_GolemController_isPathing
+  commentId: P:GrandmaGreen.Entities.GolemController.isPathing
+  fullName: GrandmaGreen.Entities.GolemController.isPathing
+  nameWithType: GolemController.isPathing
+- uid: GrandmaGreen.Entities.GolemController.isPathing*
+  name: isPathing
+  href: api/GrandmaGreen.Entities.GolemController.html#GrandmaGreen_Entities_GolemController_isPathing_
+  commentId: Overload:GrandmaGreen.Entities.GolemController.isPathing
+  isSpec: "True"
+  fullName: GrandmaGreen.Entities.GolemController.isPathing
+  nameWithType: GolemController.isPathing
+- uid: GrandmaGreen.Entities.GolemController.onEntityActionEnd
+  name: onEntityActionEnd
+  href: api/GrandmaGreen.Entities.GolemController.html#GrandmaGreen_Entities_GolemController_onEntityActionEnd
+  commentId: F:GrandmaGreen.Entities.GolemController.onEntityActionEnd
+  fullName: GrandmaGreen.Entities.GolemController.onEntityActionEnd
+  nameWithType: GolemController.onEntityActionEnd
+- uid: GrandmaGreen.Entities.GolemController.onEntityActionStart
+  name: onEntityActionStart
+  href: api/GrandmaGreen.Entities.GolemController.html#GrandmaGreen_Entities_GolemController_onEntityActionStart
+  commentId: F:GrandmaGreen.Entities.GolemController.onEntityActionStart
+  fullName: GrandmaGreen.Entities.GolemController.onEntityActionStart
+  nameWithType: GolemController.onEntityActionStart
+- uid: GrandmaGreen.Entities.GolemController.onEntityMove
+  name: onEntityMove
+  href: api/GrandmaGreen.Entities.GolemController.html#GrandmaGreen_Entities_GolemController_onEntityMove
+  commentId: E:GrandmaGreen.Entities.GolemController.onEntityMove
+  fullName: GrandmaGreen.Entities.GolemController.onEntityMove
+  nameWithType: GolemController.onEntityMove
+- uid: GrandmaGreen.Entities.GolemController.pathfinderServicer
+  name: pathfinderServicer
+  href: api/GrandmaGreen.Entities.GolemController.html#GrandmaGreen_Entities_GolemController_pathfinderServicer
+  commentId: P:GrandmaGreen.Entities.GolemController.pathfinderServicer
+  fullName: GrandmaGreen.Entities.GolemController.pathfinderServicer
+  nameWithType: GolemController.pathfinderServicer
+- uid: GrandmaGreen.Entities.GolemController.pathfinderServicer*
+  name: pathfinderServicer
+  href: api/GrandmaGreen.Entities.GolemController.html#GrandmaGreen_Entities_GolemController_pathfinderServicer_
+  commentId: Overload:GrandmaGreen.Entities.GolemController.pathfinderServicer
+  isSpec: "True"
+  fullName: GrandmaGreen.Entities.GolemController.pathfinderServicer
+  nameWithType: GolemController.pathfinderServicer
+- uid: GrandmaGreen.Entities.GolemController.permissions
+  name: permissions
+  href: api/GrandmaGreen.Entities.GolemController.html#GrandmaGreen_Entities_GolemController_permissions
+  commentId: F:GrandmaGreen.Entities.GolemController.permissions
+  fullName: GrandmaGreen.Entities.GolemController.permissions
+  nameWithType: GolemController.permissions
+- uid: GrandmaGreen.Entities.GolemController.range
+  name: range
+  href: api/GrandmaGreen.Entities.GolemController.html#GrandmaGreen_Entities_GolemController_range
+  commentId: F:GrandmaGreen.Entities.GolemController.range
+  fullName: GrandmaGreen.Entities.GolemController.range
+  nameWithType: GolemController.range
+- uid: GrandmaGreen.Entities.GolemController.SetDestination(Vector3)
+  name: SetDestination(Vector3)
+  href: api/GrandmaGreen.Entities.GolemController.html#GrandmaGreen_Entities_GolemController_SetDestination_Vector3_
+  commentId: M:GrandmaGreen.Entities.GolemController.SetDestination(Vector3)
+  fullName: GrandmaGreen.Entities.GolemController.SetDestination(Vector3)
+  nameWithType: GolemController.SetDestination(Vector3)
+- uid: GrandmaGreen.Entities.GolemController.SetDestination*
+  name: SetDestination
+  href: api/GrandmaGreen.Entities.GolemController.html#GrandmaGreen_Entities_GolemController_SetDestination_
+  commentId: Overload:GrandmaGreen.Entities.GolemController.SetDestination
+  isSpec: "True"
+  fullName: GrandmaGreen.Entities.GolemController.SetDestination
+  nameWithType: GolemController.SetDestination
+- uid: GrandmaGreen.Entities.GolemController.sfx_Footsteps
+  name: sfx_Footsteps
+  href: api/GrandmaGreen.Entities.GolemController.html#GrandmaGreen_Entities_GolemController_sfx_Footsteps
+  commentId: F:GrandmaGreen.Entities.GolemController.sfx_Footsteps
+  fullName: GrandmaGreen.Entities.GolemController.sfx_Footsteps
+  nameWithType: GolemController.sfx_Footsteps
+- uid: GrandmaGreen.Entities.GolemController.smoothFactor
+  name: smoothFactor
+  href: api/GrandmaGreen.Entities.GolemController.html#GrandmaGreen_Entities_GolemController_smoothFactor
+  commentId: F:GrandmaGreen.Entities.GolemController.smoothFactor
+  fullName: GrandmaGreen.Entities.GolemController.smoothFactor
+  nameWithType: GolemController.smoothFactor
+- uid: GrandmaGreen.Entities.GolemController.splineFollow
+  name: splineFollow
+  href: api/GrandmaGreen.Entities.GolemController.html#GrandmaGreen_Entities_GolemController_splineFollow
+  commentId: F:GrandmaGreen.Entities.GolemController.splineFollow
+  fullName: GrandmaGreen.Entities.GolemController.splineFollow
+  nameWithType: GolemController.splineFollow
+- uid: GrandmaGreen.Entities.GolemController.Update
+  name: Update()
+  href: api/GrandmaGreen.Entities.GolemController.html#GrandmaGreen_Entities_GolemController_Update
+  commentId: M:GrandmaGreen.Entities.GolemController.Update
+  fullName: GrandmaGreen.Entities.GolemController.Update()
+  nameWithType: GolemController.Update()
+- uid: GrandmaGreen.Entities.GolemController.Update*
+  name: Update
+  href: api/GrandmaGreen.Entities.GolemController.html#GrandmaGreen_Entities_GolemController_Update_
+  commentId: Overload:GrandmaGreen.Entities.GolemController.Update
+  isSpec: "True"
+  fullName: GrandmaGreen.Entities.GolemController.Update
+  nameWithType: GolemController.Update
+- uid: GrandmaGreen.Entities.GolemController.velocity
+  name: velocity
+  href: api/GrandmaGreen.Entities.GolemController.html#GrandmaGreen_Entities_GolemController_velocity
+  commentId: F:GrandmaGreen.Entities.GolemController.velocity
+  fullName: GrandmaGreen.Entities.GolemController.velocity
+  nameWithType: GolemController.velocity
 - uid: GrandmaGreen.Entities.GrandmaEntity
   name: GrandmaEntity
   href: api/GrandmaGreen.Entities.GrandmaEntity.html
@@ -2801,6 +3019,36 @@ references:
   commentId: F:GrandmaGreen.Garden.Genotype.MAX_TRAIT_COUNT
   fullName: GrandmaGreen.Garden.Genotype.MAX_TRAIT_COUNT
   nameWithType: Genotype.MAX_TRAIT_COUNT
+- uid: GrandmaGreen.Garden.GridUI
+  name: GridUI
+  href: api/GrandmaGreen.Garden.GridUI.html
+  commentId: T:GrandmaGreen.Garden.GridUI
+  fullName: GrandmaGreen.Garden.GridUI
+  nameWithType: GridUI
+- uid: GrandmaGreen.Garden.GridUI.fadeTime
+  name: fadeTime
+  href: api/GrandmaGreen.Garden.GridUI.html#GrandmaGreen_Garden_GridUI_fadeTime
+  commentId: F:GrandmaGreen.Garden.GridUI.fadeTime
+  fullName: GrandmaGreen.Garden.GridUI.fadeTime
+  nameWithType: GridUI.fadeTime
+- uid: GrandmaGreen.Garden.GridUI.gridMaterial
+  name: gridMaterial
+  href: api/GrandmaGreen.Garden.GridUI.html#GrandmaGreen_Garden_GridUI_gridMaterial
+  commentId: F:GrandmaGreen.Garden.GridUI.gridMaterial
+  fullName: GrandmaGreen.Garden.GridUI.gridMaterial
+  nameWithType: GridUI.gridMaterial
+- uid: GrandmaGreen.Garden.GridUI.maxOpacity
+  name: maxOpacity
+  href: api/GrandmaGreen.Garden.GridUI.html#GrandmaGreen_Garden_GridUI_maxOpacity
+  commentId: F:GrandmaGreen.Garden.GridUI.maxOpacity
+  fullName: GrandmaGreen.Garden.GridUI.maxOpacity
+  nameWithType: GridUI.maxOpacity
+- uid: GrandmaGreen.Garden.GridUI.toolData
+  name: toolData
+  href: api/GrandmaGreen.Garden.GridUI.html#GrandmaGreen_Garden_GridUI_toolData
+  commentId: F:GrandmaGreen.Garden.GridUI.toolData
+  fullName: GrandmaGreen.Garden.GridUI.toolData
+  nameWithType: GridUI.toolData
 - uid: GrandmaGreen.Garden.ITraitData
   name: ITraitData
   href: api/GrandmaGreen.Garden.ITraitData.html
@@ -2903,12 +3151,18 @@ references:
   commentId: F:GrandmaGreen.Garden.MoveToActionUI.actionIcon
   fullName: GrandmaGreen.Garden.MoveToActionUI.actionIcon
   nameWithType: MoveToActionUI.actionIcon
-- uid: GrandmaGreen.Garden.MoveToActionUI.moveToActionUIObject
-  name: moveToActionUIObject
-  href: api/GrandmaGreen.Garden.MoveToActionUI.html#GrandmaGreen_Garden_MoveToActionUI_moveToActionUIObject
-  commentId: F:GrandmaGreen.Garden.MoveToActionUI.moveToActionUIObject
-  fullName: GrandmaGreen.Garden.MoveToActionUI.moveToActionUIObject
-  nameWithType: MoveToActionUI.moveToActionUIObject
+- uid: GrandmaGreen.Garden.MoveToActionUI.iconUIObject
+  name: iconUIObject
+  href: api/GrandmaGreen.Garden.MoveToActionUI.html#GrandmaGreen_Garden_MoveToActionUI_iconUIObject
+  commentId: F:GrandmaGreen.Garden.MoveToActionUI.iconUIObject
+  fullName: GrandmaGreen.Garden.MoveToActionUI.iconUIObject
+  nameWithType: MoveToActionUI.iconUIObject
+- uid: GrandmaGreen.Garden.MoveToActionUI.tileHighlightUIObject
+  name: tileHighlightUIObject
+  href: api/GrandmaGreen.Garden.MoveToActionUI.html#GrandmaGreen_Garden_MoveToActionUI_tileHighlightUIObject
+  commentId: F:GrandmaGreen.Garden.MoveToActionUI.tileHighlightUIObject
+  fullName: GrandmaGreen.Garden.MoveToActionUI.tileHighlightUIObject
+  nameWithType: MoveToActionUI.tileHighlightUIObject
 - uid: GrandmaGreen.Garden.MoveToActionUI.toolData
   name: toolData
   href: api/GrandmaGreen.Garden.MoveToActionUI.html#GrandmaGreen_Garden_MoveToActionUI_toolData
@@ -3125,6 +3379,19 @@ references:
   commentId: F:GrandmaGreen.Garden.PlayerToolData.currentTool
   fullName: GrandmaGreen.Garden.PlayerToolData.currentTool
   nameWithType: PlayerToolData.currentTool
+- uid: GrandmaGreen.Garden.PlayerToolData.DoCurrentToolAction
+  name: DoCurrentToolAction()
+  href: api/GrandmaGreen.Garden.PlayerToolData.html#GrandmaGreen_Garden_PlayerToolData_DoCurrentToolAction
+  commentId: M:GrandmaGreen.Garden.PlayerToolData.DoCurrentToolAction
+  fullName: GrandmaGreen.Garden.PlayerToolData.DoCurrentToolAction()
+  nameWithType: PlayerToolData.DoCurrentToolAction()
+- uid: GrandmaGreen.Garden.PlayerToolData.DoCurrentToolAction*
+  name: DoCurrentToolAction
+  href: api/GrandmaGreen.Garden.PlayerToolData.html#GrandmaGreen_Garden_PlayerToolData_DoCurrentToolAction_
+  commentId: Overload:GrandmaGreen.Garden.PlayerToolData.DoCurrentToolAction
+  isSpec: "True"
+  fullName: GrandmaGreen.Garden.PlayerToolData.DoCurrentToolAction
+  nameWithType: PlayerToolData.DoCurrentToolAction
 - uid: GrandmaGreen.Garden.PlayerToolData.EmptySelection
   name: EmptySelection()
   href: api/GrandmaGreen.Garden.PlayerToolData.html#GrandmaGreen_Garden_PlayerToolData_EmptySelection
@@ -3157,12 +3424,12 @@ references:
   commentId: F:GrandmaGreen.Garden.PlayerToolData.equippedPlant
   fullName: GrandmaGreen.Garden.PlayerToolData.equippedPlant
   nameWithType: PlayerToolData.equippedPlant
-- uid: GrandmaGreen.Garden.PlayerToolData.onSeedPlanted
-  name: onSeedPlanted
-  href: api/GrandmaGreen.Garden.PlayerToolData.html#GrandmaGreen_Garden_PlayerToolData_onSeedPlanted
-  commentId: E:GrandmaGreen.Garden.PlayerToolData.onSeedPlanted
-  fullName: GrandmaGreen.Garden.PlayerToolData.onSeedPlanted
-  nameWithType: PlayerToolData.onSeedPlanted
+- uid: GrandmaGreen.Garden.PlayerToolData.lastToolAction
+  name: lastToolAction
+  href: api/GrandmaGreen.Garden.PlayerToolData.html#GrandmaGreen_Garden_PlayerToolData_lastToolAction
+  commentId: F:GrandmaGreen.Garden.PlayerToolData.lastToolAction
+  fullName: GrandmaGreen.Garden.PlayerToolData.lastToolAction
+  nameWithType: PlayerToolData.lastToolAction
 - uid: GrandmaGreen.Garden.PlayerToolData.onToolSelected
   name: onToolSelected
   href: api/GrandmaGreen.Garden.PlayerToolData.html#GrandmaGreen_Garden_PlayerToolData_onToolSelected
@@ -3206,6 +3473,19 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Garden.PlayerToolData.SetEquippedPlant
   nameWithType: PlayerToolData.SetEquippedPlant
+- uid: GrandmaGreen.Garden.PlayerToolData.SetToolAction(TileBase,Vector3Int,GrandmaGreen.Garden.GardenAreaController)
+  name: SetToolAction(TileBase, Vector3Int, GardenAreaController)
+  href: api/GrandmaGreen.Garden.PlayerToolData.html#GrandmaGreen_Garden_PlayerToolData_SetToolAction_TileBase_Vector3Int_GrandmaGreen_Garden_GardenAreaController_
+  commentId: M:GrandmaGreen.Garden.PlayerToolData.SetToolAction(TileBase,Vector3Int,GrandmaGreen.Garden.GardenAreaController)
+  fullName: GrandmaGreen.Garden.PlayerToolData.SetToolAction(TileBase, Vector3Int, GrandmaGreen.Garden.GardenAreaController)
+  nameWithType: PlayerToolData.SetToolAction(TileBase, Vector3Int, GardenAreaController)
+- uid: GrandmaGreen.Garden.PlayerToolData.SetToolAction*
+  name: SetToolAction
+  href: api/GrandmaGreen.Garden.PlayerToolData.html#GrandmaGreen_Garden_PlayerToolData_SetToolAction_
+  commentId: Overload:GrandmaGreen.Garden.PlayerToolData.SetToolAction
+  isSpec: "True"
+  fullName: GrandmaGreen.Garden.PlayerToolData.SetToolAction
+  nameWithType: PlayerToolData.SetToolAction
 - uid: GrandmaGreen.Garden.PlayerToolData.StartToolSelection
   name: StartToolSelection()
   href: api/GrandmaGreen.Garden.PlayerToolData.html#GrandmaGreen_Garden_PlayerToolData_StartToolSelection
@@ -3263,19 +3543,6 @@ references:
   commentId: F:GrandmaGreen.Garden.PlayerToolData.toolSet
   fullName: GrandmaGreen.Garden.PlayerToolData.toolSet
   nameWithType: PlayerToolData.toolSet
-- uid: GrandmaGreen.Garden.PlayerToolData.UseCurrentTool(TileBase,Vector3Int,GrandmaGreen.Garden.GardenAreaController)
-  name: UseCurrentTool(TileBase, Vector3Int, GardenAreaController)
-  href: api/GrandmaGreen.Garden.PlayerToolData.html#GrandmaGreen_Garden_PlayerToolData_UseCurrentTool_TileBase_Vector3Int_GrandmaGreen_Garden_GardenAreaController_
-  commentId: M:GrandmaGreen.Garden.PlayerToolData.UseCurrentTool(TileBase,Vector3Int,GrandmaGreen.Garden.GardenAreaController)
-  fullName: GrandmaGreen.Garden.PlayerToolData.UseCurrentTool(TileBase, Vector3Int, GrandmaGreen.Garden.GardenAreaController)
-  nameWithType: PlayerToolData.UseCurrentTool(TileBase, Vector3Int, GardenAreaController)
-- uid: GrandmaGreen.Garden.PlayerToolData.UseCurrentTool*
-  name: UseCurrentTool
-  href: api/GrandmaGreen.Garden.PlayerToolData.html#GrandmaGreen_Garden_PlayerToolData_UseCurrentTool_
-  commentId: Overload:GrandmaGreen.Garden.PlayerToolData.UseCurrentTool
-  isSpec: "True"
-  fullName: GrandmaGreen.Garden.PlayerToolData.UseCurrentTool
-  nameWithType: PlayerToolData.UseCurrentTool
 - uid: GrandmaGreen.Garden.SizeSet
   name: SizeSet
   href: api/GrandmaGreen.Garden.SizeSet.html

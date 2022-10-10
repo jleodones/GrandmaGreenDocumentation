@@ -147,6 +147,30 @@
   </table>
   
   
+  <h4 id="GrandmaGreen_Garden_PlayerToolData_lastToolAction" data-uid="GrandmaGreen.Garden.PlayerToolData.lastToolAction">lastToolAction</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ToolActionData lastToolAction</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="GrandmaGreen.Garden.ToolActionData.html">ToolActionData</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <h4 id="GrandmaGreen_Garden_PlayerToolData_plantLookup" data-uid="GrandmaGreen.Garden.PlayerToolData.plantLookup">plantLookup</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
@@ -245,6 +269,16 @@
   </h3>
   
   
+  <a id="GrandmaGreen_Garden_PlayerToolData_DoCurrentToolAction_" data-uid="GrandmaGreen.Garden.PlayerToolData.DoCurrentToolAction*"></a>
+  <h4 id="GrandmaGreen_Garden_PlayerToolData_DoCurrentToolAction" data-uid="GrandmaGreen.Garden.PlayerToolData.DoCurrentToolAction">DoCurrentToolAction()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void DoCurrentToolAction()</code></pre>
+  </div>
+  
+  
   <a id="GrandmaGreen_Garden_PlayerToolData_EmptySelection_" data-uid="GrandmaGreen.Garden.PlayerToolData.EmptySelection*"></a>
   <h4 id="GrandmaGreen_Garden_PlayerToolData_EmptySelection" data-uid="GrandmaGreen.Garden.PlayerToolData.EmptySelection">EmptySelection()</h4>
   <div class="markdown level1 summary"></div>
@@ -286,6 +320,43 @@
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
         <td><span class="parametername">plantIndex</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="GrandmaGreen_Garden_PlayerToolData_SetToolAction_" data-uid="GrandmaGreen.Garden.PlayerToolData.SetToolAction*"></a>
+  <h4 id="GrandmaGreen_Garden_PlayerToolData_SetToolAction_TileBase_Vector3Int_GrandmaGreen_Garden_GardenAreaController_" data-uid="GrandmaGreen.Garden.PlayerToolData.SetToolAction(TileBase,Vector3Int,GrandmaGreen.Garden.GardenAreaController)">SetToolAction(TileBase, Vector3Int, GardenAreaController)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetToolAction(TileBase tile, Vector3Int cell, GardenAreaController area)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TileBase</span></td>
+        <td><span class="parametername">tile</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Vector3Int</span></td>
+        <td><span class="parametername">cell</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="GrandmaGreen.Garden.GardenAreaController.html">GardenAreaController</a></td>
+        <td><span class="parametername">area</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -364,69 +435,8 @@
       </tr>
     </tbody>
   </table>
-  
-  
-  <a id="GrandmaGreen_Garden_PlayerToolData_UseCurrentTool_" data-uid="GrandmaGreen.Garden.PlayerToolData.UseCurrentTool*"></a>
-  <h4 id="GrandmaGreen_Garden_PlayerToolData_UseCurrentTool_TileBase_Vector3Int_GrandmaGreen_Garden_GardenAreaController_" data-uid="GrandmaGreen.Garden.PlayerToolData.UseCurrentTool(TileBase,Vector3Int,GrandmaGreen.Garden.GardenAreaController)">UseCurrentTool(TileBase, Vector3Int, GardenAreaController)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void UseCurrentTool(TileBase tile, Vector3Int cell, GardenAreaController area)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">TileBase</span></td>
-        <td><span class="parametername">tile</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">Vector3Int</span></td>
-        <td><span class="parametername">cell</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="GrandmaGreen.Garden.GardenAreaController.html">GardenAreaController</a></td>
-        <td><span class="parametername">area</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h3 id="events">Events
   </h3>
-  
-  
-  <h4 id="GrandmaGreen_Garden_PlayerToolData_onSeedPlanted" data-uid="GrandmaGreen.Garden.PlayerToolData.onSeedPlanted">onSeedPlanted</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public event Action onSeedPlanted</code></pre>
-  </div>
-  <h5 class="eventType">Event Type</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   
   
   <h4 id="GrandmaGreen_Garden_PlayerToolData_onToolSelected" data-uid="GrandmaGreen.Garden.PlayerToolData.onToolSelected">onToolSelected</h4>
