@@ -7,7 +7,7 @@
   "api/Global.html": {
     "href": "api/Global.html",
     "title": "Namespace Global",
-    "keywords": "Namespace Global Classes InventoryData InventoryListController InventoryListEntryController MainView SetCameraBounds TileManager TileStore Tool ToolsMenu ToolsMenuController ToolTest ToolType Structs TileData Enums EInventoryClass"
+    "keywords": "Namespace Global Classes InventoryData InventoryListController InventoryListEntryController MainView SetCameraBounds TileManager TileStore Tool ToolsMenu ToolsMenuController ToolTest ToolType TransitionExample Structs TileData Enums EInventoryClass"
   },
   "api/Global.InventoryData.html": {
     "href": "api/Global.InventoryData.html",
@@ -73,6 +73,11 @@
     "href": "api/Global.ToolType.html",
     "title": "Class ToolType",
     "keywords": "Class ToolType Inheritance Object ToolType Namespace : Global Assembly : cs.temp.dll.dll Syntax public class ToolType : ScriptableObject Fields toolName Declaration public string toolName Field Value Type Description String toolRange Declaration public int toolRange Field Value Type Description Int32 upgradeLevel Declaration public int upgradeLevel Field Value Type Description Int32"
+  },
+  "api/Global.TransitionExample.html": {
+    "href": "api/Global.TransitionExample.html",
+    "title": "Class TransitionExample",
+    "keywords": "Class TransitionExample Inheritance Object TransitionExample Namespace : Global Assembly : cs.temp.dll.dll Syntax public class TransitionExample : EditorWindow Methods CreateGUI() Declaration public void CreateGUI() ShowExample() Declaration public static void ShowExample()"
   },
   "api/GrandmaGreen.Audio.AudioSystemBehavior.html": {
     "href": "api/GrandmaGreen.Audio.AudioSystemBehavior.html",
