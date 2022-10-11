@@ -46,6 +46,11 @@ namespace GrandmaGreen.UI.Collections
         private ObjectSaver m_inventoryData;
 
         private ASoundContainer[] m_soundContainers;
+        // Invenotry Visual Element
+        private VisualElement inventory;
+        // Inventory width varibles for show/hide
+        private Length inventoryWidth = (Length)(.45 * Screen.width);
+        private Length negInventoryWidth = (Length)(-.45 * Screen.width);
 
 
         public event System.Action<int> onItemEntryClicked;
@@ -77,15 +82,17 @@ namespace GrandmaGreen.UI.Collections
             InstantiateJar<Plant>(m_contentJars.Find(jar => jar.name == "plants" + contentNameSuffix));
 
             _playerToolData.onToolSelected += CheckOpenInventory;
+
+            // Instantiate inventory visual element
+            inventory = root.Q(inventoryElement);
         }
 
         public void OpenInventory()
         {
-
-
-            // transition-property: scale, rotate, display;
-    // transition-duration: 0.5s, 0.5s, 2s;
-            root.Q(inventoryElement).style.display = DisplayStyle.Flex;
+            inventory.style.transitionProperty = new List<StylePropertyName> { "translate" };
+            inventory.style.transitionTimingFunction = new List<EasingFunction> { EasingMode.Ease };
+            inventory.style.transitionDuration = new List<TimeValue>{ new TimeValue(300, TimeUnit.Millisecond) };
+            inventory.style.translate = new Translate(negInventoryWidth,0,0);
             
             // Play open inventory SFX.
             m_soundContainers[0].Play();
@@ -106,8 +113,11 @@ namespace GrandmaGreen.UI.Collections
         // This hides the entire inventory panel when the exit button is clicked
         private void CloseInventory(ClickEvent evt)
         {
-            // Set the display to none.
-            root.Q(inventoryElement).style.display = DisplayStyle.None;
+            // Add animation duration
+            inventory.style.transitionProperty = new List<StylePropertyName> { "translate" };
+            inventory.style.transitionTimingFunction = new List<EasingFunction> { EasingMode.Ease };
+            inventory.style.transitionDuration = new List<TimeValue>{ new TimeValue(300, TimeUnit.Millisecond) };
+            inventory.style.translate = new Translate(inventoryWidth,0,0);
 
             // Play the inventory close SFX.
             m_soundContainers[1].Play();
@@ -273,12 +283,17 @@ namespace GrandmaGreen.UI.Collections
         void CheckOpenInventory(ToolData selectedTool)
         {
             if (selectedTool.toolIndex == 3)
+            {
+                // Open inventory with a short delay for tool animation
+                inventory.style.transitionDelay = new List<TimeValue> {new(700, TimeUnit.Millisecond) };
                 OpenInventory(); 
+                inventory.style.transitionDelay = new List<TimeValue> {new(0, TimeUnit.Millisecond) };
                 Button seedsTab = root.Q<Button>("seeds-tab");
                 GetAllTabs().Where(
                     (tab) => tab != seedsTab && TabIsCurrentlySelected(tab)
                 ).ForEach(UnselectTab);
                 SelectTab(seedsTab);
+            }
         }
     }
 }
