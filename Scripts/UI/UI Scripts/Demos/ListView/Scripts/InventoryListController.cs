@@ -6,6 +6,7 @@ public class InventoryListController
 {
     // UXML template for list entries
     VisualTreeAsset m_ListEntryTemplate;
+    VisualTreeAsset m_EntryTemplate;
 
     // UI element references
     ListView m_InventoryList;
@@ -24,9 +25,9 @@ public class InventoryListController
         m_InventoryList = root.Q<ListView>("character-list");
 
         // Store references to the selected character info elements
-        m_InvClassLabel = root.Q<Label>("character-class");
-        m_InvImageElement = root.Q<VisualElement>("inventory-image");
-        m_InvIcon = root.Q<VisualElement>("character-portrait");
+        // m_InvClassLabel = root.Q<Label>("character-class");
+        // m_InvImageElement = root.Q<VisualElement>("inventory-image");
+        // m_InvIcon = root.Q<VisualElement>("character-portrait");
 
         FillInventoryList();
     }
@@ -68,7 +69,7 @@ public class InventoryListController
         // Set a fixed item height
         m_InventoryList.fixedItemHeight = 70;
 
-        // Set the actual item's source list/array
+        // // Set the actual item's source list/array
         m_InventoryList.itemsSource = m_AllInventoryItems;
     }
 }

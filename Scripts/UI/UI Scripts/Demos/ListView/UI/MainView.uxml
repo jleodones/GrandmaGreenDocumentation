@@ -1,17 +1,6 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
-    <Style src="project://database/Assets/ListView/UI/MainView.uss?fileID=7433441132597879392&amp;guid=4453ece8ebf4a4e19991ff84f7ca769a&amp;type=3#MainView" />
+    <Style src="project://database/Assets/_GrandmaGreen/Scripts/UI/UI%20Scripts/Demos/ListView/UI/MainView.uss?fileID=7433441132597879392&amp;guid=4453ece8ebf4a4e19991ff84f7ca769a&amp;type=3#MainView" />
     <ui:VisualElement name="background">
-        <ui:VisualElement name="main-container">
-            <ui:ListView focusable="true" name="character-list" style="display: flex;" />
-            <ui:VisualElement name="inventory-container" class="inventory-container" style="display: none;">
-                <ui:VisualElement style="width: 70px; height: 70px; background-color: rgb(255, 0, 0); border-top-left-radius: 50%; border-bottom-left-radius: 50%; border-top-right-radius: 50%; border-bottom-right-radius: 50%;" />
-                <ui:VisualElement style="width: 70px; height: 70px; background-color: rgb(255, 0, 0); border-top-left-radius: 50%; border-bottom-left-radius: 50%; border-top-right-radius: 50%; border-bottom-right-radius: 50%;" />
-                <ui:VisualElement style="width: 70px; height: 70px; background-color: rgb(255, 0, 0); border-top-left-radius: 50%; border-bottom-left-radius: 50%; border-top-right-radius: 50%; border-bottom-right-radius: 50%;" />
-                <ui:VisualElement style="width: 70px; height: 70px; background-color: rgb(255, 0, 0); border-top-left-radius: 50%; border-bottom-left-radius: 50%; border-top-right-radius: 50%; border-bottom-right-radius: 50%;" />
-                <ui:VisualElement style="width: 70px; height: 70px; background-color: rgb(255, 0, 0); border-top-left-radius: 50%; border-bottom-left-radius: 50%; border-top-right-radius: 50%; border-bottom-right-radius: 50%;" />
-                <ui:VisualElement style="width: 70px; height: 70px; background-color: rgb(255, 0, 0); border-top-left-radius: 50%; border-bottom-left-radius: 50%; border-top-right-radius: 50%; border-bottom-right-radius: 50%;" />
-                <ui:VisualElement style="width: 70px; height: 70px; background-color: rgb(255, 0, 0); border-top-left-radius: 50%; border-bottom-left-radius: 50%; border-top-right-radius: 50%; border-bottom-right-radius: 50%;" />
-            </ui:VisualElement>
-        </ui:VisualElement>
+        <ui:ListView focusable="true" name="character-list" style="height: 383px; width: 90%; margin-right: 0;" />
     </ui:VisualElement>
 </ui:UXML>

@@ -31,7 +31,7 @@ public class ToolsMenuController
         });
 
         toolData.onToolSelectionStart += ShowToolsMenu;
-        // toolData.onToolSelectionEnd += HideToolsMenu;
+        toolData.onToolSelectionEnd += HideToolsMenu;
         root.style.display = DisplayStyle.None;
     }
 
@@ -78,7 +78,6 @@ public class ToolsMenuController
     // ShowToolsMenu: displays the root visual element
     public void ShowToolsMenu()
     {
-    	// root.style.transitionDuration = new List<TimeValue>{ new TimeValue(300, TimeUnit.Millisecond) };
         root.style.display = DisplayStyle.Flex;
 
         SetToolMenuPosition(toolData.playerController.entity.CurrentPos());
@@ -91,19 +90,12 @@ public class ToolsMenuController
     // HideToolsMenu: hides the root visual element
     public void HideToolsMenu()
     {
-        // root.RegisterCallback<TransitionEndEvent>(OnHideToosdMenu);
-    	// root.style.transitionDuration = new List<TimeValue>{ new TimeValue(300, TimeUnit.Millisecond) };
         root.style.display = DisplayStyle.None;
         toolData.playerController.entity.onEntityMove -= SetToolMenuPosition;
 
         zoom.ZoomCameraRequest(5.0f, 0.5f); 
     }
 
-    // private void OnHideToosdMenu(TransitionEndEvent evt)
-    // {
-    //     zoom.ZoomCameraRequest(5.0f, 0.5f); 
-    //     root.UnregisterCallback<TransitionEndEvent>(OnHideToosdMenu);
-    // }
     void SetToolMenuPosition(Vector3 worldSpace)
     {
         root.transform.position = RuntimePanelUtils.CameraTransformWorldToPanel(root.panel, worldSpace, Camera.main);
