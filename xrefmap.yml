@@ -404,38 +404,6 @@ references:
   commentId: F:Global.ToolType.upgradeLevel
   fullName: ToolType.upgradeLevel
   nameWithType: ToolType.upgradeLevel
-- uid: Global.TransitionExample
-  name: TransitionExample
-  href: api/Global.TransitionExample.html
-  commentId: T:Global.TransitionExample
-  fullName: TransitionExample
-  nameWithType: TransitionExample
-- uid: Global.TransitionExample.CreateGUI
-  name: CreateGUI()
-  href: api/Global.TransitionExample.html#Global_TransitionExample_CreateGUI
-  commentId: M:Global.TransitionExample.CreateGUI
-  fullName: TransitionExample.CreateGUI()
-  nameWithType: TransitionExample.CreateGUI()
-- uid: Global.TransitionExample.CreateGUI*
-  name: CreateGUI
-  href: api/Global.TransitionExample.html#Global_TransitionExample_CreateGUI_
-  commentId: Overload:Global.TransitionExample.CreateGUI
-  isSpec: "True"
-  fullName: TransitionExample.CreateGUI
-  nameWithType: TransitionExample.CreateGUI
-- uid: Global.TransitionExample.ShowExample
-  name: ShowExample()
-  href: api/Global.TransitionExample.html#Global_TransitionExample_ShowExample
-  commentId: M:Global.TransitionExample.ShowExample
-  fullName: TransitionExample.ShowExample()
-  nameWithType: TransitionExample.ShowExample()
-- uid: Global.TransitionExample.ShowExample*
-  name: ShowExample
-  href: api/Global.TransitionExample.html#Global_TransitionExample_ShowExample_
-  commentId: Overload:Global.TransitionExample.ShowExample
-  isSpec: "True"
-  fullName: TransitionExample.ShowExample
-  nameWithType: TransitionExample.ShowExample
 - uid: GrandmaGreen
   name: GrandmaGreen
   href: api/GrandmaGreen.html
@@ -1968,6 +1936,12 @@ references:
   commentId: F:GrandmaGreen.Entities.GolemController.onEntityActionStart
   fullName: GrandmaGreen.Entities.GolemController.onEntityActionStart
   nameWithType: GolemController.onEntityActionStart
+- uid: GrandmaGreen.Entities.GolemController.onEntityInteract
+  name: onEntityInteract
+  href: api/GrandmaGreen.Entities.GolemController.html#GrandmaGreen_Entities_GolemController_onEntityInteract
+  commentId: E:GrandmaGreen.Entities.GolemController.onEntityInteract
+  fullName: GrandmaGreen.Entities.GolemController.onEntityInteract
+  nameWithType: GolemController.onEntityInteract
 - uid: GrandmaGreen.Entities.GolemController.onEntityMove
   name: onEntityMove
   href: api/GrandmaGreen.Entities.GolemController.html#GrandmaGreen_Entities_GolemController_onEntityMove
