@@ -78,6 +78,7 @@ public class ToolsMenuController
     // ShowToolsMenu: displays the root visual element
     public void ShowToolsMenu()
     {
+    	// root.style.transitionDuration = new List<TimeValue>{ new TimeValue(300, TimeUnit.Millisecond) };
         root.style.display = DisplayStyle.Flex;
 
         SetToolMenuPosition(toolData.playerController.entity.CurrentPos());

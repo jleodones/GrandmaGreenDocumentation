@@ -72,7 +72,7 @@ namespace GrandmaGreen.Garden
             {
                 equippedPlant = -1;
             }
-            // EndToolSelection();
+            EndToolSelection();
         }
 
         public void SetEquippedPlant(int plantIndex) => equippedPlant = plantIndex;

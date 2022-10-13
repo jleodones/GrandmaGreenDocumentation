@@ -46,9 +46,12 @@ namespace GrandmaGreen.Entities
         SoundPlayer footstepsPlayer;
         #endregion
 
+        #region events
+        public event System.Action<bool> onEntityInteract;
         public event System.Action<Vector3> onEntityMove;
         public System.Action<Vector3> onEntityActionStart;
         public System.Action<Vector3> onEntityActionEnd;
+        #endregion
 
         void Start()
         {
@@ -59,7 +62,7 @@ namespace GrandmaGreen.Entities
             blackboard = behaviorTree.Blackboard;
         
             // initialize blackboard
-            behaviorTree.Blackboard.Set(BK_PREV_POSITION, transform.position);
+            InitializeBT();
 
             // attach the debugger component if executed in editor (helps to debug in the inspector) 
             #if UNITY_EDITOR
@@ -69,7 +72,10 @@ namespace GrandmaGreen.Entities
 
                 // start the behaviour tree
                 behaviorTree.Start();
+        }
 
+        private void OnDestroy() {
+            onEntityInteract -= UpdateInteractState;
         }
 
         public void Update()
@@ -88,33 +94,56 @@ namespace GrandmaGreen.Entities
             onEntityMove?.Invoke(prevPosition);
         }
 
+        private void InitializeBT() {
+            behaviorTree.Blackboard.Set(BK_PREV_POSITION, transform.position);
+            behaviorTree.Blackboard.Set("isInteract", false);
+
+            onEntityInteract += UpdateInteractState;
+        }
+
         private Root CreateBehaviourTree()
         {
-        // we always need a root node
-        return new Root(
-            // park until playerDistance does change
-                new Sequence(
-                    new Cooldown(delay, new Action(() => {
-                            Vector3 randPos = FindRandomDestination(range);
-                            behaviorTree.Blackboard.Set(BK_WANDER_POSITION,randPos); 
+            // we always need a root node
+            return new Root(
+                new Selector(
+                    //1. onInteract
+                    new BlackboardCondition("isInteract", Operator.IS_EQUAL, true, Stops.IMMEDIATE_RESTART,
+                        new Action(() => {
+                            CancelPath();
+                        }) {Label = "Cancel Movement"}
+                    ),
+
+                    //2. wandering behaviour
+                    new Sequence(
+                        // set wander pos
+                        new Cooldown(delay, new Action(() => {
+                                Vector3 randPos = FindRandomDestination(range);
+                                behaviorTree.Blackboard.Set(BK_WANDER_POSITION,randPos); 
                         })),
-                    
-                    new Action((bool _shouldCancel) =>
-                        {
-                            if (!_shouldCancel)
+                        
+                        // move to new pos until arrival
+                        new Action((bool _shouldCancel) =>
                             {
-                                Vector3 pos = blackboard.Get<Vector3>(BK_WANDER_POSITION);
-                                SetDestination(pos);
-                                if ((pos-transform.position).magnitude < 0.1f) {
-                                    return Action.Result.SUCCESS;
+                                if (!_shouldCancel)
+                                {
+                                    Vector3 pos = blackboard.Get<Vector3>(BK_WANDER_POSITION);
+                                    SetDestination(pos);
+                                    if ((pos-transform.position).magnitude < 0.1f) {
+                                        return Action.Result.SUCCESS;
+                                    }
+                                    return Action.Result.PROGRESS;
+                                } else {
+                                    return Action.Result.FAILED;
                                 }
-                                return Action.Result.PROGRESS;
-                            } else {
-                                return Action.Result.FAILED;
-                            }
-                        }) { Label = "Wander" }
+                            }) { Label = "Wander" }
+                    )
                 )
-        );
+            );
+        } 
+
+        void UpdateInteractState(bool isInteract) 
+        {
+            behaviorTree.Blackboard.Set("isInteract", isInteract);
         }
 
         void SetAnimatorParameters()
