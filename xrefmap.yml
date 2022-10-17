@@ -2004,6 +2004,19 @@ references:
   commentId: F:GrandmaGreen.Entities.GolemController.splineFollow
   fullName: GrandmaGreen.Entities.GolemController.splineFollow
   nameWithType: GolemController.splineFollow
+- uid: GrandmaGreen.Entities.GolemController.StopBehaviorTree
+  name: StopBehaviorTree()
+  href: api/GrandmaGreen.Entities.GolemController.html#GrandmaGreen_Entities_GolemController_StopBehaviorTree
+  commentId: M:GrandmaGreen.Entities.GolemController.StopBehaviorTree
+  fullName: GrandmaGreen.Entities.GolemController.StopBehaviorTree()
+  nameWithType: GolemController.StopBehaviorTree()
+- uid: GrandmaGreen.Entities.GolemController.StopBehaviorTree*
+  name: StopBehaviorTree
+  href: api/GrandmaGreen.Entities.GolemController.html#GrandmaGreen_Entities_GolemController_StopBehaviorTree_
+  commentId: Overload:GrandmaGreen.Entities.GolemController.StopBehaviorTree
+  isSpec: "True"
+  fullName: GrandmaGreen.Entities.GolemController.StopBehaviorTree
+  nameWithType: GolemController.StopBehaviorTree
 - uid: GrandmaGreen.Entities.GolemController.Update
   name: Update()
   href: api/GrandmaGreen.Entities.GolemController.html#GrandmaGreen_Entities_GolemController_Update
