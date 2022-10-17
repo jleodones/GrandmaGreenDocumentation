@@ -76,6 +76,7 @@ namespace GrandmaGreen.Entities
 
         private void OnDestroy() {
             onEntityInteract -= UpdateInteractState;
+            StopBehaviorTree();
         }
 
         public void Update()
@@ -105,24 +106,28 @@ namespace GrandmaGreen.Entities
         {
             // we always need a root node
             return new Root(
-                new Selector(
-                    //1. onInteract
-                    new BlackboardCondition("isInteract", Operator.IS_EQUAL, true, Stops.IMMEDIATE_RESTART,
-                        new Action(() => {
-                            CancelPath();
-                        }) {Label = "Cancel Movement"}
-                    ),
+                    new Selector(
+                        //1. onInteract
+                        new BlackboardCondition("isInteract", Operator.IS_EQUAL, true, Stops.IMMEDIATE_RESTART,
+                            new Sequence(
+                                new Action(() => {
+                                    CancelPath();
+                                }) {Label = "Cancel Movement"},
 
-                    //2. wandering behaviour
-                    new Sequence(
-                        // set wander pos
-                        new Cooldown(delay, new Action(() => {
-                                Vector3 randPos = FindRandomDestination(range);
-                                behaviorTree.Blackboard.Set(BK_WANDER_POSITION,randPos); 
-                        })),
-                        
-                        // move to new pos until arrival
-                        new Action((bool _shouldCancel) =>
+                                new WaitUntilStopped()
+                            )
+                        ),
+
+                        //2. wandering behaviour
+                        new Sequence(
+                            // set wander pos
+                            new Cooldown(delay, new Action(() => {
+                                    Vector3 randPos = FindRandomDestination(range);
+                                    behaviorTree.Blackboard.Set(BK_WANDER_POSITION,randPos); 
+                            })),
+                            
+                            // move to new pos until arrival
+                            new Action((bool _shouldCancel) =>
                             {
                                 if (!_shouldCancel)
                                 {
@@ -136,14 +141,18 @@ namespace GrandmaGreen.Entities
                                     return Action.Result.FAILED;
                                 }
                             }) { Label = "Wander" }
+                        )
                     )
-                )
-            );
+                );
         } 
 
-        void UpdateInteractState(bool isInteract) 
+
+        public void StopBehaviorTree()
         {
-            behaviorTree.Blackboard.Set("isInteract", isInteract);
+            if ( behaviorTree != null && behaviorTree.CurrentState == Node.State.ACTIVE )
+            {
+                behaviorTree.Stop();
+            }
         }
 
         void SetAnimatorParameters()
@@ -158,6 +167,28 @@ namespace GrandmaGreen.Entities
 
         }
 
+        // collision
+        void UpdateInteractState(bool isInteract) 
+        {
+            behaviorTree.Blackboard.Set("isInteract", isInteract);
+        }
+
+        private void OnTriggerEnter(Collider other) {
+            if (other.gameObject.tag == "Player") {
+                Debug.Log("Collidering");
+                onEntityInteract?.Invoke(true);
+            }
+        }
+
+        private void OnTriggerExit(Collider other) {
+
+            if (other.gameObject.tag == "Player") {
+                Debug.Log("Not");
+                onEntityInteract?.Invoke(false);
+            }
+        }
+
+        //traverse
         public virtual void SetDestination(Vector3 worldPos)
         {
             float3[] path = CheckPath(worldPos);
