@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using GrandmaGreen.UI.Golems;
 using UnityEngine;
 using Pathfinding;
 using Unity.Mathematics;
@@ -10,9 +11,7 @@ using SpookuleleAudio;
 namespace GrandmaGreen.Entities
 {
     /// <summary>
-    /// Core Game Entity Behavior
-    /// Serves as the customer for various GG services (pathfinding, gardening, dialogue)
-    /// Has no decision making logic, instead it is handled by its corresponding Entity Controller
+    /// Golem AI Controller driven by behaviour tree
     /// </summary>
     public class GolemController : MonoBehaviour, IPathAgent
     {
@@ -112,7 +111,13 @@ namespace GrandmaGreen.Entities
                             new Sequence(
                                 new Action(() => {
                                     CancelPath();
+                                    
                                 }) {Label = "Cancel Movement"},
+                                
+                                new Action(() =>
+                                {
+                                    GetComponentInChildren<GolemMenu>().TriggerMenu();
+                                }),
 
                                 new WaitUntilStopped()
                             )
@@ -170,24 +175,24 @@ namespace GrandmaGreen.Entities
         // collision
         void UpdateInteractState(bool isInteract) 
         {
+            Debug.Log("Interacting.");
             behaviorTree.Blackboard.Set("isInteract", isInteract);
         }
 
         private void OnTriggerEnter(Collider other) {
             if (other.gameObject.tag == "Player") {
-                Debug.Log("Collidering");
+                Debug.Log("Colliding.");
                 onEntityInteract?.Invoke(true);
             }
         }
 
         private void OnTriggerExit(Collider other) {
-
             if (other.gameObject.tag == "Player") {
                 Debug.Log("Not");
                 onEntityInteract?.Invoke(false);
             }
         }
-
+        
         //traverse
         public virtual void SetDestination(Vector3 worldPos)
         {

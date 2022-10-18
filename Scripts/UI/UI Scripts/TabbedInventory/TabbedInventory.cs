@@ -26,6 +26,8 @@ namespace GrandmaGreen.UI.Collections
 
         public ASoundContainer[] soundContainers;
 
+        private Length inventoryWidth = (Length)(.45 * Screen.width);
+
         void OnEnable()
         {
             // Gets the root of the tabbed inventory, which holds all the tabs in it.
@@ -34,6 +36,9 @@ namespace GrandmaGreen.UI.Collections
             // Sets up the controller for the whole inventory. The controller instantiates the inventory on its own upon creation.
             m_controller = new(root, playerToolData, inventoryData, listEntryTemplate, soundContainers);
 
+            // Hides the inventory without animation
+            SetInventoryPosition();
+
             // Register player events.
             m_controller.RegisterTabCallbacks();
             m_controller.RegisterExitCallback();
@@ -41,6 +46,11 @@ namespace GrandmaGreen.UI.Collections
             // Subscribe to inventory related events.
             EventManager.instance.EVENT_INVENTORY_ADD += InventoryAdd;
             EventManager.instance.EVENT_INVENTORY_REMOVE += InventoryRemove;
+        }
+
+        public void SetInventoryPosition()
+        {
+            m_controller.SetInventoryPosition();
         }
 
         public void OpenInventory()

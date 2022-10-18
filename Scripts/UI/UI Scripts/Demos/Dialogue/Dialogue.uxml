@@ -1,8 +1,0 @@
-<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <ui:VisualElement name="dialogueparent" style="height: 190px; width: 335px; display: none;">
-        <ui:VisualElement name="wordbubblehead" style="background-image: url(&apos;project://database/Assets/_GrandmaGreen/BeautifulCorner_Spring2022/Visual%20Assets/Sprites/Wordbubble.png?fileID=-1610519162539866502&amp;guid=ebc3081e7426f5a48ae6fbdb6209db0e&amp;type=3#Wordbubble_0&apos;); width: 334px; height: 137px; -unity-text-align: middle-center; white-space: normal; -unity-font: url(&apos;project://database/Assets/TextMesh%20Pro/Fonts/LiberationSans.ttf?fileID=12800000&amp;guid=e3265ab4bf004d28a9537516768c1c75&amp;type=3#LiberationSans&apos;); color: rgb(243, 81, 81);">
-            <ui:VisualElement name="wordbubbletail" style="background-image: url(&apos;project://database/Assets/_GrandmaGreen/BeautifulCorner_Spring2022/Visual%20Assets/Sprites/Wordtail.png?fileID=-8606025051147761920&amp;guid=a3983ab08fe4a2b4889d4f4f3ac20653&amp;type=3#Wordtail_0&apos;); width: 55px; height: 45px; flex-direction: column; left: 50%; top: 90%; -unity-background-scale-mode: stretch-to-fill;" />
-            <ui:Label tabindex="-1" display-tooltip-when-elided="true" text="hi :)" name="dialogueline" style="-unity-text-align: middle-center; left: 0; top: 20%; height: 15px; flex-wrap: wrap; flex-direction: column; white-space: normal; font-size: 20%; -unity-font-style: normal;" />
-        </ui:VisualElement>
-    </ui:VisualElement>
-</ui:UXML>

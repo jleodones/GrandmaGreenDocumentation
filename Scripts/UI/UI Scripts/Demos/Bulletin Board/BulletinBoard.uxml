@@ -1,0 +1,45 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/_GrandmaGreen/Scripts/UI/UI%20Scripts/StyleSheets/BulletinBoard.uss?fileID=7433441132597879392&amp;guid=2e0048644d08d48e1b49337d8feb2ba4&amp;type=3#BulletinBoard" />
+    <ui:VisualElement name="root" style="flex-grow: 1; justify-content: center; align-items: center;">
+        <ui:Button tabindex="-1" text="X" display-tooltip-when-elided="true" name="exit-button" style="width: 120px; height: 120px; position: absolute; left: auto; right: 2%; top: 3%; background-color: rgb(255, 255, 255); border-top-left-radius: 50%; border-bottom-left-radius: 50%; border-top-right-radius: 50%; border-bottom-right-radius: 50%; font-size: 80%; color: rgb(0, 0, 0); border-left-width: 3px; border-right-width: 3px; border-top-width: 3px; border-bottom-width: 3px;" />
+        <ui:VisualElement name="bulletin" style="position: relative; left: auto; top: auto; width: 75%; height: 706px; background-color: rgb(128, 60, 0); justify-content: center; flex-direction: row; align-items: flex-end;">
+            <ui:VisualElement name="bulletin-leg-left" style="bottom: -25%; top: auto; width: 10%; height: 25%; background-color: rgb(128, 60, 0); position: absolute; right: 90%;" />
+            <ui:VisualElement name="bulletin-leg-right" style="bottom: -25%; top: auto; width: 10%; height: 25%; background-color: rgb(128, 60, 0); position: absolute; left: 90%;" />
+            <ui:VisualElement name="bulletin-content" style="width: 90%; height: 95%; flex-direction: row; align-items: center; justify-content: center; right: auto;">
+                <ui:VisualElement name="announcement" style="width: 17%; height: 40%; background-color: rgb(253, 235, 206); border-left-width: 4px; border-right-width: 4px; border-top-width: 4px; border-bottom-width: 4px; border-left-color: rgb(0, 0, 0); border-right-color: rgb(0, 0, 0); border-top-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0); justify-content: center; right: 5%;">
+                    <ui:VisualElement name="icon" style="height: 50%; background-image: url(&apos;project://database/Assets/_GrandmaGreen/Scripts/UI/SampleArt/UI_Fruit_Temp.png?fileID=2800000&amp;guid=5ef2840e9c4484b05b6b8725ed86010f&amp;type=3#UI_Fruit_Temp&apos;);" />
+                    <ui:VisualElement name="price" style="width: auto; height: 30%;">
+                        <ui:Label tabindex="-1" text="$2" display-tooltip-when-elided="true" style="width: 100%; height: 100%; font-size: 60px; color: rgb(0, 0, 0); -unity-text-align: middle-center;" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:VisualElement name="daily-one" style="width: 17%; height: 40%; background-color: rgb(253, 235, 206); border-left-width: 4px; border-right-width: 4px; border-top-width: 4px; border-bottom-width: 4px; border-left-color: rgb(0, 0, 0); border-right-color: rgb(0, 0, 0); border-top-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0); justify-content: center; top: 20%; right: 2.5%; rotate: -5deg;">
+                    <ui:VisualElement name="icon" style="height: 50%; background-image: url(&apos;project://database/Assets/_GrandmaGreen/Scripts/UI/SampleArt/UI_Fruit_Temp.png?fileID=2800000&amp;guid=5ef2840e9c4484b05b6b8725ed86010f&amp;type=3#UI_Fruit_Temp&apos;);" />
+                    <ui:VisualElement name="price" style="width: auto; height: 30%;">
+                        <ui:Label tabindex="-1" text="$2" display-tooltip-when-elided="true" style="width: 100%; height: 100%; font-size: 60px; color: rgb(0, 0, 0); -unity-text-align: middle-center;" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:VisualElement name="daily-two" style="width: 17%; height: 40%; background-color: rgb(253, 235, 206); border-left-width: 4px; border-right-width: 4px; border-top-width: 4px; border-bottom-width: 4px; border-left-color: rgb(0, 0, 0); border-right-color: rgb(0, 0, 0); border-top-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0); justify-content: center; rotate: 5deg;">
+                    <ui:VisualElement name="icon" style="height: 50%; background-image: url(&apos;project://database/Assets/_GrandmaGreen/Scripts/UI/SampleArt/UI_Fruit_Temp.png?fileID=2800000&amp;guid=5ef2840e9c4484b05b6b8725ed86010f&amp;type=3#UI_Fruit_Temp&apos;);" />
+                    <ui:VisualElement name="price" style="width: auto; height: 30%;">
+                        <ui:Label tabindex="-1" text="$2" display-tooltip-when-elided="true" style="width: 100%; height: 100%; font-size: 60px; color: rgb(0, 0, 0); -unity-text-align: middle-center;" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:VisualElement name="competition" style="width: 30%; height: 70%; background-color: rgb(253, 235, 206); border-left-width: 4px; border-right-width: 4px; border-top-width: 4px; border-bottom-width: 4px; border-left-color: rgb(0, 0, 0); border-right-color: rgb(0, 0, 0); border-top-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0); justify-content: center; left: 5%; align-items: center;">
+                    <ui:VisualElement name="price" style="width: auto; height: 35%;">
+                        <ui:Label tabindex="-1" text="Biggest Tulip" display-tooltip-when-elided="true" name="competition-name" style="width: auto; height: auto; font-size: 50%; color: rgb(0, 0, 0); -unity-text-align: middle-center;" />
+                        <ui:Label tabindex="-1" text="$1000" display-tooltip-when-elided="true" name="competition-prize" style="width: auto; height: auto; font-size: 55%; color: rgb(0, 0, 0); -unity-text-align: upper-center;" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="icon" style="height: 40%; background-image: url(&apos;project://database/Assets/_GrandmaGreen/Scripts/UI/SampleArt/UI_Fruit_Temp.png?fileID=2800000&amp;guid=5ef2840e9c4484b05b6b8725ed86010f&amp;type=3#UI_Fruit_Temp&apos;); width: 80%;" />
+                    <ui:VisualElement name="price" style="width: 100%; height: auto; align-items: center;">
+                        <ui:Label tabindex="-1" text="2D 3H" display-tooltip-when-elided="true" name="competition-time" style="width: 70%; height: auto; font-size: 50%; color: rgb(0, 0, 0); -unity-text-align: middle-center; border-left-color: rgba(0, 0, 0, 255); border-right-color: rgba(0, 0, 0, 255); border-top-color: rgba(0, 0, 0, 255); border-bottom-color: rgba(0, 0, 0, 255); border-left-width: 5px; border-right-width: 5px; border-top-width: 5px; border-bottom-width: 5px; border-top-left-radius: 25px; border-bottom-left-radius: 25px; border-top-right-radius: 25px; border-bottom-right-radius: 25px; white-space: normal; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0;" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="pennant" style="position: absolute; left: 0; top: 5%; width: 100%; height: 15%; flex-direction: row; justify-content: center; align-items: center;">
+                <ui:VisualElement style="flex-direction: column-reverse; width: 33.3%; height: 90%; background-image: url(&apos;project://database/Assets/_GrandmaGreen/Scripts/UI/SampleArt/UI_Pennant_Temp.png?fileID=2800000&amp;guid=9040abf11777e46618d933f224464405&amp;type=3#UI_Pennant_Temp&apos;); top: -4%; rotate: -5deg;" />
+                <ui:VisualElement style="flex-direction: column-reverse; width: 33.3%; height: 110%; background-image: url(&apos;project://database/Assets/_GrandmaGreen/Scripts/UI/SampleArt/UI_Pennant_Temp.png?fileID=2800000&amp;guid=9040abf11777e46618d933f224464405&amp;type=3#UI_Pennant_Temp&apos;); top: -5%;" />
+                <ui:VisualElement style="flex-direction: column-reverse; width: 33.3%; height: 100%; background-image: url(&apos;project://database/Assets/_GrandmaGreen/Scripts/UI/SampleArt/UI_Pennant_Temp.png?fileID=2800000&amp;guid=9040abf11777e46618d933f224464405&amp;type=3#UI_Pennant_Temp&apos;); rotate: 15deg;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

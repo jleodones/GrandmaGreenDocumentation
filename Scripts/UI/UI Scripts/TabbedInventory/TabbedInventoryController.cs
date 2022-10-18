@@ -50,7 +50,6 @@ namespace GrandmaGreen.UI.Collections
         private VisualElement inventory;
         // Inventory width varibles for show/hide
         private Length inventoryWidth = (Length)(.45 * Screen.width);
-        private Length negInventoryWidth = (Length)(-.45 * Screen.width);
 
 
         public event System.Action<int> onItemEntryClicked;
@@ -87,12 +86,19 @@ namespace GrandmaGreen.UI.Collections
             inventory = root.Q(inventoryElement);
         }
 
+        // This hides the entire inventory panel on initialize without animations
+        public void SetInventoryPosition()
+        {
+            // Add animation duration
+            inventory.style.translate = new Translate(inventoryWidth,0,0);
+        }
+
         public void OpenInventory()
         {
             inventory.style.transitionProperty = new List<StylePropertyName> { "translate" };
             inventory.style.transitionTimingFunction = new List<EasingFunction> { EasingMode.Ease };
             inventory.style.transitionDuration = new List<TimeValue>{ new TimeValue(300, TimeUnit.Millisecond) };
-            inventory.style.translate = new Translate(negInventoryWidth,0,0);
+            inventory.style.translate = new Translate(0,0,0);
             
             // Play open inventory SFX.
             m_soundContainers[0].Play();
