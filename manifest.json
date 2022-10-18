@@ -556,7 +556,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.Entities.GolemController.html",
-          "hash": "WAR+zKjEqqkp4DMLo3idRIfszrsXcQmbY2Vj5q5jRAg="
+          "hash": "X/ItXATUOSGCS5EnZ7+Y8TE64BIiMDZphXEF58dTemQ="
         }
       },
       "is_incremental": false,
@@ -604,7 +604,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.Entities.html",
-          "hash": "CXnNVRP2sqmwCcmfPb+KjiEBoVHGlehK0M8hmYsFtGc="
+          "hash": "TzeutrLuzoKcsSSXvrG/Fl7XnJAwJCzWcMzTNamuo0k="
         }
       },
       "is_incremental": false,
@@ -1188,6 +1188,54 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/GrandmaGreen.TimeLayer.ITimeLayer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GrandmaGreen.TimeLayer.ITimeLayer.html",
+          "hash": "ycU9b8tGM123SHqYRRW1NdAyjjj0npIfYFKpu3m4W3k="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GrandmaGreen.TimeLayer.TimeLayer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GrandmaGreen.TimeLayer.TimeLayer.html",
+          "hash": "jmX23lwThpFtS6okxhx9boO29fMiQfTKUN8uCG7/6PA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GrandmaGreen.TimeLayer.TimeLayerClock.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GrandmaGreen.TimeLayer.TimeLayerClock.html",
+          "hash": "oScQjhk8Tosn3H+wSMH4OlJYtXt+mhE+Lk3QmtMvIpA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GrandmaGreen.TimeLayer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GrandmaGreen.TimeLayer.html",
+          "hash": "IpgM9VfAMZ0yA3w9saVo2W+hMH6AwSB5tH0TNKqhhy8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/GrandmaGreen.ToolTest2.yml",
       "output": {
         ".html": {
@@ -1228,7 +1276,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.UI.Collections.TabbedInventory.html",
-          "hash": "/RptBm/u7rBtjZiA4M7KrCcWf0+iFVaLSYtck2s1o+Q="
+          "hash": "sR05CV1YdtUfjEWeXkfrL4pHSi7n4MMmelXNbP20fEY="
         }
       },
       "is_incremental": false,
@@ -1240,7 +1288,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.UI.Collections.TabbedInventoryController.html",
-          "hash": "QXnf3sxwhD1w4KqefVvbolC3IQA3XbAGYSXKB9MsSgc="
+          "hash": "Y8VWcgcCfMZXJsRB42HI2L+jnfbYLyF5bt+tsH1aenw="
         }
       },
       "is_incremental": false,
@@ -1265,6 +1313,30 @@
         ".html": {
           "relative_path": "api/GrandmaGreen.UI.Collections.html",
           "hash": "MM9dhvLc0wF1PPfkgu3eYxdOBGEXgqbf+kkYo/4JEdY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GrandmaGreen.UI.Golems.GolemMenu.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GrandmaGreen.UI.Golems.GolemMenu.html",
+          "hash": "jkVNq4FQyJthMFKBEWhAkZDLq7bDhY5bXNVYr6GwMyg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GrandmaGreen.UI.Golems.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GrandmaGreen.UI.Golems.html",
+          "hash": "gQFAy/FR17rwhrydsiauacKR9TP8h4+lmywQqwgoxos="
         }
       },
       "is_incremental": false,
@@ -1348,7 +1420,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "STKMjYeKg5y+AxyLABJ6Pk9tRGPL4FlI9ZFEF6qj6+s="
+          "hash": "2/+P0bzCKtWMODPfkwYxI6+4qJaNZYY8WTekLeiiE2g="
         }
       },
       "is_incremental": false,
@@ -1457,7 +1529,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 110,
+          "total_file_count": 116,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

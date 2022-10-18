@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class TabbedInventory
+    <title>Class TimeLayer
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class TabbedInventory
+    <meta name="title" content="Class TimeLayer
    ">
     <meta name="generator" content="docfx 2.59.4.0">
     
@@ -77,36 +77,42 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="GrandmaGreen.UI.Collections.TabbedInventory">
+            <article class="content wrap" id="_content" data-uid="GrandmaGreen.TimeLayer.TimeLayer">
   
   
-  <h1 id="GrandmaGreen_UI_Collections_TabbedInventory" data-uid="GrandmaGreen.UI.Collections.TabbedInventory" class="text-break">Class TabbedInventory
+  <h1 id="GrandmaGreen_TimeLayer_TimeLayer" data-uid="GrandmaGreen.TimeLayer.TimeLayer" class="text-break">Class TimeLayer
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>TODO: way to animate scale</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Object</a></div>
-    <div class="level1"><span class="xref">TabbedInventory</span></div>
+    <div class="level1"><span class="xref">TimeLayer</span></div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="GrandmaGreen.UI.Collections.html">GrandmaGreen.UI.Collections</a></h6>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="GrandmaGreen.TimeLayer.ITimeLayer.html">ITimeLayer</a></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="GrandmaGreen.TimeLayer.html">GrandmaGreen.TimeLayer</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
-  <h5 id="GrandmaGreen_UI_Collections_TabbedInventory_syntax">Syntax</h5>
+  <h5 id="GrandmaGreen_TimeLayer_TimeLayer_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class TabbedInventory : MonoBehaviour</code></pre>
+    <pre><code class="lang-csharp hljs">public class TimeLayer : ScriptableObject, ITimeLayer</code></pre>
   </div>
-  <h3 id="fields">Fields
+  <h3 id="properties">Properties
   </h3>
   
   
-  <h4 id="GrandmaGreen_UI_Collections_TabbedInventory_inventoryData" data-uid="GrandmaGreen.UI.Collections.TabbedInventory.inventoryData">inventoryData</h4>
+  <a id="GrandmaGreen_TimeLayer_TimeLayer_paused_" data-uid="GrandmaGreen.TimeLayer.TimeLayer.paused*"></a>
+  <h4 id="GrandmaGreen_TimeLayer_TimeLayer_paused" data-uid="GrandmaGreen.TimeLayer.TimeLayer.paused">paused</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ObjectSaver inventoryData</code></pre>
+    <pre><code class="lang-csharp hljs">public bool paused { get; }</code></pre>
   </div>
-  <h5 class="fieldValue">Field Value</h5>
+  <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -116,21 +122,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ObjectSaver</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <h4 id="GrandmaGreen_UI_Collections_TabbedInventory_listEntryTemplate" data-uid="GrandmaGreen.UI.Collections.TabbedInventory.listEntryTemplate">listEntryTemplate</h4>
+  <a id="GrandmaGreen_TimeLayer_TimeLayer_scale_" data-uid="GrandmaGreen.TimeLayer.TimeLayer.scale*"></a>
+  <h4 id="GrandmaGreen_TimeLayer_TimeLayer_scale" data-uid="GrandmaGreen.TimeLayer.TimeLayer.scale">scale</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public VisualTreeAsset listEntryTemplate</code></pre>
+    <pre><code class="lang-csharp hljs">public float scale { get; }</code></pre>
   </div>
-  <h5 class="fieldValue">Field Value</h5>
+  <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -140,55 +147,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">VisualTreeAsset</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="GrandmaGreen_UI_Collections_TabbedInventory_playerToolData" data-uid="GrandmaGreen.UI.Collections.TabbedInventory.playerToolData">playerToolData</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public PlayerToolData playerToolData</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">PlayerToolData</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="GrandmaGreen_UI_Collections_TabbedInventory_soundContainers" data-uid="GrandmaGreen.UI.Collections.TabbedInventory.soundContainers">soundContainers</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ASoundContainer[] soundContainers</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">ASoundContainer</span>[]</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">Single</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -197,13 +156,23 @@
   </h3>
   
   
-  <a id="GrandmaGreen_UI_Collections_TabbedInventory_InventoryAdd_" data-uid="GrandmaGreen.UI.Collections.TabbedInventory.InventoryAdd*"></a>
-  <h4 id="GrandmaGreen_UI_Collections_TabbedInventory_InventoryAdd_IInventoryItem_System_Int32_" data-uid="GrandmaGreen.UI.Collections.TabbedInventory.InventoryAdd(IInventoryItem,System.Int32)">InventoryAdd(IInventoryItem, Int32)</h4>
+  <a id="GrandmaGreen_TimeLayer_TimeLayer_Pause_" data-uid="GrandmaGreen.TimeLayer.TimeLayer.Pause*"></a>
+  <h4 id="GrandmaGreen_TimeLayer_TimeLayer_Pause" data-uid="GrandmaGreen.TimeLayer.TimeLayer.Pause">Pause()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void InventoryAdd(IInventoryItem item, int num)</code></pre>
+    <pre><code class="lang-csharp hljs">public void Pause()</code></pre>
+  </div>
+  
+  
+  <a id="GrandmaGreen_TimeLayer_TimeLayer_Resume_" data-uid="GrandmaGreen.TimeLayer.TimeLayer.Resume*"></a>
+  <h4 id="GrandmaGreen_TimeLayer_TimeLayer_Resume_System_Boolean_" data-uid="GrandmaGreen.TimeLayer.TimeLayer.Resume(System.Boolean)">Resume(Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Resume(bool tickAccumulated = false)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -216,26 +185,21 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IInventoryItem</span></td>
-        <td><span class="parametername">item</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
-        <td><span class="parametername">num</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">tickAccumulated</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="GrandmaGreen_UI_Collections_TabbedInventory_InventoryRemove_" data-uid="GrandmaGreen.UI.Collections.TabbedInventory.InventoryRemove*"></a>
-  <h4 id="GrandmaGreen_UI_Collections_TabbedInventory_InventoryRemove_IInventoryItem_System_Int32_" data-uid="GrandmaGreen.UI.Collections.TabbedInventory.InventoryRemove(IInventoryItem,System.Int32)">InventoryRemove(IInventoryItem, Int32)</h4>
+  <a id="GrandmaGreen_TimeLayer_TimeLayer_Tick_" data-uid="GrandmaGreen.TimeLayer.TimeLayer.Tick*"></a>
+  <h4 id="GrandmaGreen_TimeLayer_TimeLayer_Tick_System_Double_" data-uid="GrandmaGreen.TimeLayer.TimeLayer.Tick(System.Double)">Tick(Double)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void InventoryRemove(IInventoryItem item, int num)</code></pre>
+    <pre><code class="lang-csharp hljs">public void Tick(double deltaTime)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -248,36 +212,41 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IInventoryItem</span></td>
-        <td><span class="parametername">item</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
-        <td><span class="parametername">num</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">Double</a></td>
+        <td><span class="parametername">deltaTime</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
+  <h3 id="events">Events
+  </h3>
   
   
-  <a id="GrandmaGreen_UI_Collections_TabbedInventory_OpenInventory_" data-uid="GrandmaGreen.UI.Collections.TabbedInventory.OpenInventory*"></a>
-  <h4 id="GrandmaGreen_UI_Collections_TabbedInventory_OpenInventory" data-uid="GrandmaGreen.UI.Collections.TabbedInventory.OpenInventory">OpenInventory()</h4>
+  <h4 id="GrandmaGreen_TimeLayer_TimeLayer_onTick" data-uid="GrandmaGreen.TimeLayer.TimeLayer.onTick">onTick</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void OpenInventory()</code></pre>
+    <pre><code class="lang-csharp hljs">public event Action&lt;int&gt; onTick</code></pre>
   </div>
-  
-  
-  <a id="GrandmaGreen_UI_Collections_TabbedInventory_SetInventoryPosition_" data-uid="GrandmaGreen.UI.Collections.TabbedInventory.SetInventoryPosition*"></a>
-  <h4 id="GrandmaGreen_UI_Collections_TabbedInventory_SetInventoryPosition" data-uid="GrandmaGreen.UI.Collections.TabbedInventory.SetInventoryPosition">SetInventoryPosition()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void SetInventoryPosition()</code></pre>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Action</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="GrandmaGreen.TimeLayer.ITimeLayer.html">ITimeLayer</a>
   </div>
 </article>
           </div>
