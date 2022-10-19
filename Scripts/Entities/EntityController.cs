@@ -35,18 +35,18 @@ namespace GrandmaGreen.Entities
 
         [Header("Entity variables")]
         public GameEntity entity;
+        public AreaController currentArea;
         public StateMachine<EntityState> stateMachine => entity.entityStateMachine;
         public bool active = false;
 
         public Coroutine behaviorRoutine;
-        public bool plantCheck = true;
 
+        System.Action<EntityController> actionQ;
 
         public virtual void RegisterEntity(GameEntity entity)
         {
             this.entity = entity;
         }
-
 
         public virtual void StartController()
         {
@@ -54,33 +54,34 @@ namespace GrandmaGreen.Entities
 
             if (currentBehavior != null)
                 SetBehavior(currentBehavior);
+
         }
 
         public virtual void PauseController()
         {
             active = false;
-
         }
 
-        public virtual void InterruptMovement()
+        public virtual void CancelDestination()
         {
-            entity.CancelPath();
+            entity.splineFollow.ForceStop();
         }
 
         public virtual void SetDestination(Vector3 worldPos)
         {
+            if ((entity.CurrentPos() - worldPos).sqrMagnitude <= actionRange * actionRange)
+            {
+                ExcecuteEntityActions();
+                return;
+            }
+
             float3[] path = entity.CheckPath(worldPos);
 
             if (path != null)
+            {
+                entity.onEntityPathEnd += ExcecuteEntityActions;
                 entity.StartCoroutine(entity.FollowPath(path));
-        }
-
-        public virtual void SetDestination(int2 endPos)
-        {
-            float3[] path = entity.CheckPath(endPos);
-
-            if (path != null)
-                entity.StartCoroutine(entity.FollowPath(path));
+            }
         }
 
         public virtual float3 FindRandomDestination(int range)
@@ -112,15 +113,17 @@ namespace GrandmaGreen.Entities
             behaviorRoutine = entity.StartCoroutine(currentBehavior.PerformInstance(this));
         }
 
-        public virtual void DoGardenAction(Vector3 position)
+        public virtual void QueueEntityAction(System.Action<EntityController> action)
         {
-            if ((entity.CurrentPos() - position).magnitude <= actionRange)
-            {
-                entity.onEntityActionEnd(entity.CurrentPos());
-            }
-            else
-                SetDestination(position);
+            actionQ += action;
+        }
 
+        public virtual void ExcecuteEntityActions()
+        {
+            entity.onEntityPathEnd -= ExcecuteEntityActions;
+
+            actionQ?.Invoke(this);
+            actionQ = null;
         }
     }
 }

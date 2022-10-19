@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Tilemaps;
+using GrandmaGreen.Entities;
 
 namespace GrandmaGreen.Garden
 {
@@ -13,14 +14,8 @@ namespace GrandmaGreen.Garden
     /// Responsible for functionality of a single Garden screen
     /// TODO: Implement functionality for save/loading changed tiles 
     /// </summary>
-    public class GardenAreaController : MonoBehaviour
+    public class GardenAreaController : AreaController
     {
-        [Header("Area References")]
-        [SerializeField][ReadOnly] int areaIndex = 0;
-        public GardenAreaServicer areaServicer;
-        public Tilemap tilemap;
-        public Pathfinder pathfinder;
-        public Collider areaBounds;
 
         [Header("Player References")]
         public PlayerToolData playerTools;
@@ -30,42 +25,29 @@ namespace GrandmaGreen.Garden
         public PlantStateManager plantStateManager;
         public Dictionary<Vector3Int, GameObject> plantPrefabLookup;
         public List<PlantState> plantListDebug;
-
-        //[Header("Area Variables")]
-        //[SerializeField][ReadOnly] bool areaActive;
-        //[field: SerializeField][field: ReadOnly] public GameObject currentSelection { get; private set; }
-
-        //public event System.Action<Vector2Int> onGardenSelection;
-        public event System.Action<Vector3Int> onTilemapSelection;
-        public event System.Action onActivation;
-        public event System.Action onDeactivation;
-
-        public Vector3Int lastSelectedCell;
-        public TileBase lastSelectedTile;
         public GameObject golem;
 
-        void Awake()
+        public override void Awake()
         {
-            areaServicer.RegisterAreaController(this, areaIndex);
+            base.Awake();
+            plantStateManager.Initialize();
             plantStateManager.RegisterGarden(tilemap.size, areaIndex);
         }
 
-        void Start()
-        {
-            //plantTypeDictionary.LoadPlantTypes();
-        }
-
-        public void Activate()
+        public override void Activate()
         {
             plantPrefabLookup = new Dictionary<Vector3Int, GameObject>();
-            pathfinder.LoadGrid();
-            onActivation?.Invoke();
+            base.Activate();
         }
 
-        public void Deactivate()
+        void OnEnable()
         {
-            pathfinder.ReleaseGrid();
-            onDeactivation?.Invoke();
+            onTilemapSelection += GardenTileSelected;
+        }
+
+        void OnDisable()
+        {
+            onTilemapSelection -= GardenTileSelected;
         }
 
         IEnumerator GrowthCoroutine(Vector3Int cell)
@@ -190,55 +172,17 @@ namespace GrandmaGreen.Garden
             plantListDebug = plantStateManager.GetPlants(areaIndex);
         }
 
-        [ContextMenu("ParseTilemap")]
-        /// <summary>
-        /// Parses the world tilemap to cached grid nodes 
-        /// Converts grid nodes into higher resolution nav grid
-        /// </summary>
-        public void ParseTilemap()
-        {
-            TilemapGridParser.ParseTilemap(
-                tilemap,
-                areaBounds.bounds
-            );
-
-            TilemapGridParser.ConvertToNavGrid(
-                tilemap,
-                pathfinder.gridData,
-                pathfinder.settings);
-        }
-
-        [ContextMenu("BakeNavGrid")]
-        /// <summary>
-        /// Checks agaisnt obstacle colliders to add unpathable nodes
-        /// </summary>
-        public void BakeNavGrid()
-        {
-            NavGridBaker.Bake(
-                pathfinder.gridData,
-                pathfinder.settings.obstacleMask,
-                pathfinder.settings.agentRadius,
-                pathfinder.settings.occupiedTileWeight);
-        }
-
         //Selects a garden tile in world space
         //Called through a Unity event as of now
-        public void GardenSelection(Vector3 worldPos)
+        public void GardenTileSelected(Vector3Int gridPos)
         {
-            lastSelectedCell = tilemap.WorldToCell(worldPos);
-            lastSelectedTile = tilemap.GetTile(lastSelectedCell);
-            onTilemapSelection?.Invoke(lastSelectedCell);
-
+            playerController.QueueEntityAction(DoToolAction);
             playerTools.SetToolAction(lastSelectedTile, lastSelectedCell, this);
-            playerTools.playerController.entity.onEntityActionEnd += DoToolAction;
-
-            playerTools.playerController.DoGardenAction(worldPos);
         }
 
-        void DoToolAction(Vector3 value)
+        void DoToolAction(EntityController entityController)
         {
             playerTools.DoCurrentToolAction();
-            playerTools.playerController.entity.onEntityActionEnd -= DoToolAction;
         }
 
         /// <summary>

@@ -5,9 +5,11 @@ using GrandmaGreen.Garden;
 using NaughtyAttributes;
 using GrandmaGreen.Collections;
 using GrandmaGreen.TimeLayer;
+using Core.SceneManagement;
 
 namespace GrandmaGreen
 {
+
     /// <summary>
     /// 
     /// </summary>
@@ -16,12 +18,15 @@ namespace GrandmaGreen
         protected static GrandmaGreenGameState s_Instance;
 
         [SerializeField] CollectionsSO collectionsData;
-        [SerializeField] GardenAreaServicer gardenServicer;
+        [SerializeField] AreaServices areaServicer;
         [SerializeField] TimeLayerClock timeClock;
         [SerializeField] SaveSystem.SaveManager saveManager;
+        [SerializeField] SCENES currentScene;
         [ReadOnly] int activeAreaIndex;
+        [ReadOnly] bool isPaused;
 
-        public GardenAreaController ActiveArea => gardenServicer.ActiveArea;
+        public static AreaController ActiveArea => s_Instance.areaServicer.ActiveArea;
+        public static SCENES CurrentLocation => s_Instance.currentScene;
 
         void Awake()
         {
@@ -37,9 +42,19 @@ namespace GrandmaGreen
             InitalizeState();
         }
 
+        void OnEnable()
+        {
+            SceneHandler.onSceneLoaded += SetCurrentScene;
+        }
+
+        void OnDisable()
+        {
+            SceneHandler.onSceneLoaded -= SetCurrentScene;
+        }
+
         void OnDestroy()
         {
-            gardenServicer.StopServices();
+            areaServicer.StopServices();
 
             if (s_Instance != this)
                 return;
@@ -52,25 +67,35 @@ namespace GrandmaGreen
 
         void InitalizeState()
         {
-            gardenServicer.StartServices();
+            areaServicer.StartServices();
         }
 
         void Start()
         {
-            LoadGardenScreen(0);
+            
             timeClock.SetClock();
         }
 
-        void Update() 
+        void Update()
         {
             timeClock.TickClock(Time.deltaTime);
         }
-        
+
         public void LoadGardenScreen(int gardenIndex)
         {
-            gardenServicer.ActivateAreaController(gardenIndex);
+            areaServicer.ActivateAreaController(gardenIndex);
         }
 
 
+        void SetCurrentScene(SCENES scene) 
+        {
+            LoadGardenScreen(-1);
+            currentScene = scene;
+        }
+
+        public void GameSceneTransition()
+        {
+
+        }
     }
 }

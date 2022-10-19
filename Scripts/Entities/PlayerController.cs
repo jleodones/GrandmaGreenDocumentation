@@ -11,20 +11,6 @@ namespace GrandmaGreen.Entities
     /// </summary>
     public class PlayerController : EntityController
     {
-        public override void StartController()
-        {
-            TouchInteraction.OnInteraction += CheckMove;
-            active = true;
-
-            base.StartController();
-        }
-
-        public override void PauseController()
-        {
-            TouchInteraction.OnInteraction -= CheckMove;
-            base.StartController();
-        }
-
         void CheckMove(IGameInteractable interactable)
         {
 

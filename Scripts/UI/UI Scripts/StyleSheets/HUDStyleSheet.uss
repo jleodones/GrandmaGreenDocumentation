@@ -10,8 +10,6 @@
 }
 
 .icon-buttons {
-    width: 110px;
-    height: 110px;
     background-color: rgba(128, 128, 128, 0);
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
@@ -98,4 +96,9 @@
 .content-jar {
     width: 100%;
     height: 100%;
+}
+
+.general-icon {
+    width: 100px;
+    height: 100px;
 }

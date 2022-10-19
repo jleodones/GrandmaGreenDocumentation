@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Core.Input;
 using GrandmaGreen.UI.Golems;
 using UnityEngine;
 using Pathfinding;
@@ -43,10 +44,13 @@ namespace GrandmaGreen.Entities
 
         Vector3 prevPosition;
         SoundPlayer footstepsPlayer;
+
+        private bool m_isInteracting = false;
+        
         #endregion
 
         #region events
-        public event System.Action<bool> onEntityInteract;
+        // public event System.Action<bool> onEntityInteract;
         public event System.Action<Vector3> onEntityMove;
         public System.Action<Vector3> onEntityActionStart;
         public System.Action<Vector3> onEntityActionEnd;
@@ -74,7 +78,7 @@ namespace GrandmaGreen.Entities
         }
 
         private void OnDestroy() {
-            onEntityInteract -= UpdateInteractState;
+            // onEntityInteract -= UpdateInteractState;
             StopBehaviorTree();
         }
 
@@ -96,9 +100,7 @@ namespace GrandmaGreen.Entities
 
         private void InitializeBT() {
             behaviorTree.Blackboard.Set(BK_PREV_POSITION, transform.position);
-            behaviorTree.Blackboard.Set("isInteract", false);
-
-            onEntityInteract += UpdateInteractState;
+            behaviorTree.Blackboard.Set("isInteract", m_isInteracting);
         }
 
         private Root CreateBehaviourTree()
@@ -111,13 +113,12 @@ namespace GrandmaGreen.Entities
                             new Sequence(
                                 new Action(() => {
                                     CancelPath();
-                                    
-                                }) {Label = "Cancel Movement"},
+                                }) {Label = "Change movement."},
                                 
-                                new Action(() =>
-                                {
-                                    GetComponentInChildren<GolemMenu>().TriggerMenu();
-                                }),
+                                // new Action(() =>
+                                // {
+                                //     GetComponentInChildren<GolemMenu>().TriggerMenu();
+                                // }) {Label = "Trigger menu."},
 
                                 new WaitUntilStopped()
                             )
@@ -171,28 +172,14 @@ namespace GrandmaGreen.Entities
                 animator.SetInteger("MOVEMENT", 0);
 
         }
-
-        // collision
-        void UpdateInteractState(bool isInteract) 
+        
+        public void UpdateInteractState() 
         {
             Debug.Log("Interacting.");
-            behaviorTree.Blackboard.Set("isInteract", isInteract);
+            m_isInteracting = !m_isInteracting;
+            behaviorTree.Blackboard.Set("isInteract", m_isInteracting);
         }
 
-        private void OnTriggerEnter(Collider other) {
-            if (other.gameObject.tag == "Player") {
-                Debug.Log("Colliding.");
-                onEntityInteract?.Invoke(true);
-            }
-        }
-
-        private void OnTriggerExit(Collider other) {
-            if (other.gameObject.tag == "Player") {
-                Debug.Log("Not");
-                onEntityInteract?.Invoke(false);
-            }
-        }
-        
         //traverse
         public virtual void SetDestination(Vector3 worldPos)
         {

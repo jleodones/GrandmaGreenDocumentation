@@ -35,7 +35,7 @@ namespace GrandmaGreen.Garden
         public void StartToolSelection()
         {
             if (playerController.entity.isPathing)
-                playerController.InterruptMovement();
+                playerController.CancelDestination();
 
             toolSelectionActive = true;
             onToolSelectionStart?.Invoke();
@@ -47,7 +47,7 @@ namespace GrandmaGreen.Garden
                 return;
 
             if (playerController.entity.isPathing)
-                playerController.InterruptMovement();
+                playerController.CancelDestination();
 
             toolSelectionActive = false;
             onToolSelectionEnd?.Invoke();
