@@ -89,64 +89,65 @@ TODO: Implement functionality for save/loading changed tiles </p>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Object</a></div>
-    <div class="level1"><span class="xref">GardenAreaController</span></div>
+    <div class="level1"><a class="xref" href="GrandmaGreen.AreaController.html">AreaController</a></div>
+    <div class="level2"><span class="xref">GardenAreaController</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="GrandmaGreen.AreaController.html#GrandmaGreen_AreaController_areaServicer">AreaController.areaServicer</a>
+    </div>
+    <div>
+      <a class="xref" href="GrandmaGreen.AreaController.html#GrandmaGreen_AreaController_tilemap">AreaController.tilemap</a>
+    </div>
+    <div>
+      <a class="xref" href="GrandmaGreen.AreaController.html#GrandmaGreen_AreaController_pathfinder">AreaController.pathfinder</a>
+    </div>
+    <div>
+      <a class="xref" href="GrandmaGreen.AreaController.html#GrandmaGreen_AreaController_areaBounds">AreaController.areaBounds</a>
+    </div>
+    <div>
+      <a class="xref" href="GrandmaGreen.AreaController.html#GrandmaGreen_AreaController_playerController">AreaController.playerController</a>
+    </div>
+    <div>
+      <a class="xref" href="GrandmaGreen.AreaController.html#GrandmaGreen_AreaController_areaIndex">AreaController.areaIndex</a>
+    </div>
+    <div>
+      <a class="xref" href="GrandmaGreen.AreaController.html#GrandmaGreen_AreaController_lastSelectedCell">AreaController.lastSelectedCell</a>
+    </div>
+    <div>
+      <a class="xref" href="GrandmaGreen.AreaController.html#GrandmaGreen_AreaController_lastSelectedTile">AreaController.lastSelectedTile</a>
+    </div>
+    <div>
+      <a class="xref" href="GrandmaGreen.AreaController.html#GrandmaGreen_AreaController_onTilemapSelection">AreaController.onTilemapSelection</a>
+    </div>
+    <div>
+      <a class="xref" href="GrandmaGreen.AreaController.html#GrandmaGreen_AreaController_onActivation">AreaController.onActivation</a>
+    </div>
+    <div>
+      <a class="xref" href="GrandmaGreen.AreaController.html#GrandmaGreen_AreaController_onDeactivation">AreaController.onDeactivation</a>
+    </div>
+    <div>
+      <a class="xref" href="GrandmaGreen.AreaController.html#GrandmaGreen_AreaController_Deactivate">AreaController.Deactivate()</a>
+    </div>
+    <div>
+      <a class="xref" href="GrandmaGreen.AreaController.html#GrandmaGreen_AreaController_AreaSelection_Vector3_">AreaController.AreaSelection(Vector3)</a>
+    </div>
+    <div>
+      <a class="xref" href="GrandmaGreen.AreaController.html#GrandmaGreen_AreaController_ParseTilemap">AreaController.ParseTilemap()</a>
+    </div>
+    <div>
+      <a class="xref" href="GrandmaGreen.AreaController.html#GrandmaGreen_AreaController_BakeNavGrid">AreaController.BakeNavGrid()</a>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="GrandmaGreen.Garden.html">GrandmaGreen.Garden</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="GrandmaGreen_Garden_GardenAreaController_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class GardenAreaController : MonoBehaviour</code></pre>
+    <pre><code class="lang-csharp hljs">public class GardenAreaController : AreaController</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
-  
-  
-  <h4 id="GrandmaGreen_Garden_GardenAreaController_areaBounds" data-uid="GrandmaGreen.Garden.GardenAreaController.areaBounds">areaBounds</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Collider areaBounds</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Collider</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="GrandmaGreen_Garden_GardenAreaController_areaServicer" data-uid="GrandmaGreen.Garden.GardenAreaController.areaServicer">areaServicer</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public GardenAreaServicer areaServicer</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="GrandmaGreen.Garden.GardenAreaServicer.html">GardenAreaServicer</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   
   
   <h4 id="GrandmaGreen_Garden_GardenAreaController_golem" data-uid="GrandmaGreen.Garden.GardenAreaController.golem">golem</h4>
@@ -167,78 +168,6 @@ TODO: Implement functionality for save/loading changed tiles </p>
     <tbody>
       <tr>
         <td><span class="xref">GameObject</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="GrandmaGreen_Garden_GardenAreaController_lastSelectedCell" data-uid="GrandmaGreen.Garden.GardenAreaController.lastSelectedCell">lastSelectedCell</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Vector3Int lastSelectedCell</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Vector3Int</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="GrandmaGreen_Garden_GardenAreaController_lastSelectedTile" data-uid="GrandmaGreen.Garden.GardenAreaController.lastSelectedTile">lastSelectedTile</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public TileBase lastSelectedTile</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">TileBase</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="GrandmaGreen_Garden_GardenAreaController_pathfinder" data-uid="GrandmaGreen.Garden.GardenAreaController.pathfinder">pathfinder</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Pathfinder pathfinder</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Pathfinder</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -363,30 +292,6 @@ TODO: Implement functionality for save/loading changed tiles </p>
       </tr>
     </tbody>
   </table>
-  
-  
-  <h4 id="GrandmaGreen_Garden_GardenAreaController_tilemap" data-uid="GrandmaGreen.Garden.GardenAreaController.tilemap">tilemap</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Tilemap tilemap</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Tilemap</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h3 id="methods">Methods
   </h3>
   
@@ -397,18 +302,22 @@ TODO: Implement functionality for save/loading changed tiles </p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Activate()</code></pre>
+    <pre><code class="lang-csharp hljs">public override void Activate()</code></pre>
   </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="GrandmaGreen.AreaController.html#GrandmaGreen_AreaController_Activate">AreaController.Activate()</a></div>
   
   
-  <a id="GrandmaGreen_Garden_GardenAreaController_BakeNavGrid_" data-uid="GrandmaGreen.Garden.GardenAreaController.BakeNavGrid*"></a>
-  <h4 id="GrandmaGreen_Garden_GardenAreaController_BakeNavGrid" data-uid="GrandmaGreen.Garden.GardenAreaController.BakeNavGrid">BakeNavGrid()</h4>
+  <a id="GrandmaGreen_Garden_GardenAreaController_Awake_" data-uid="GrandmaGreen.Garden.GardenAreaController.Awake*"></a>
+  <h4 id="GrandmaGreen_Garden_GardenAreaController_Awake" data-uid="GrandmaGreen.Garden.GardenAreaController.Awake">Awake()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void BakeNavGrid()</code></pre>
+    <pre><code class="lang-csharp hljs">public override void Awake()</code></pre>
   </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="GrandmaGreen.AreaController.html#GrandmaGreen_AreaController_Awake">AreaController.Awake()</a></div>
   
   
   <a id="GrandmaGreen_Garden_GardenAreaController_CreatePlantOnCell_" data-uid="GrandmaGreen.Garden.GardenAreaController.CreatePlantOnCell*"></a>
@@ -441,16 +350,6 @@ TODO: Implement functionality for save/loading changed tiles </p>
       </tr>
     </tbody>
   </table>
-  
-  
-  <a id="GrandmaGreen_Garden_GardenAreaController_Deactivate_" data-uid="GrandmaGreen.Garden.GardenAreaController.Deactivate*"></a>
-  <h4 id="GrandmaGreen_Garden_GardenAreaController_Deactivate" data-uid="GrandmaGreen.Garden.GardenAreaController.Deactivate">Deactivate()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Deactivate()</code></pre>
-  </div>
   
   
   <a id="GrandmaGreen_Garden_GardenAreaController_DestroyAllPlants_" data-uid="GrandmaGreen.Garden.GardenAreaController.DestroyAllPlants*"></a>
@@ -527,13 +426,13 @@ TODO: Implement functionality for save/loading changed tiles </p>
   </div>
   
   
-  <a id="GrandmaGreen_Garden_GardenAreaController_GardenSelection_" data-uid="GrandmaGreen.Garden.GardenAreaController.GardenSelection*"></a>
-  <h4 id="GrandmaGreen_Garden_GardenAreaController_GardenSelection_Vector3_" data-uid="GrandmaGreen.Garden.GardenAreaController.GardenSelection(Vector3)">GardenSelection(Vector3)</h4>
+  <a id="GrandmaGreen_Garden_GardenAreaController_GardenTileSelected_" data-uid="GrandmaGreen.Garden.GardenAreaController.GardenTileSelected*"></a>
+  <h4 id="GrandmaGreen_Garden_GardenAreaController_GardenTileSelected_Vector3Int_" data-uid="GrandmaGreen.Garden.GardenAreaController.GardenTileSelected(Vector3Int)">GardenTileSelected(Vector3Int)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void GardenSelection(Vector3 worldPos)</code></pre>
+    <pre><code class="lang-csharp hljs">public void GardenTileSelected(Vector3Int gridPos)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -546,8 +445,8 @@ TODO: Implement functionality for save/loading changed tiles </p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Vector3</span></td>
-        <td><span class="parametername">worldPos</span></td>
+        <td><span class="xref">Vector3Int</span></td>
+        <td><span class="parametername">gridPos</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -638,16 +537,6 @@ TODO: Implement functionality for save/loading changed tiles </p>
   </div>
   
   
-  <a id="GrandmaGreen_Garden_GardenAreaController_ParseTilemap_" data-uid="GrandmaGreen.Garden.GardenAreaController.ParseTilemap*"></a>
-  <h4 id="GrandmaGreen_Garden_GardenAreaController_ParseTilemap" data-uid="GrandmaGreen.Garden.GardenAreaController.ParseTilemap">ParseTilemap()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void ParseTilemap()</code></pre>
-  </div>
-  
-  
   <a id="GrandmaGreen_Garden_GardenAreaController_PlaceAllPlantTypePrefabs_" data-uid="GrandmaGreen.Garden.GardenAreaController.PlaceAllPlantTypePrefabs*"></a>
   <h4 id="GrandmaGreen_Garden_GardenAreaController_PlaceAllPlantTypePrefabs" data-uid="GrandmaGreen.Garden.GardenAreaController.PlaceAllPlantTypePrefabs">PlaceAllPlantTypePrefabs()</h4>
   <div class="markdown level1 summary"></div>
@@ -731,80 +620,6 @@ TODO: Implement functionality for save/loading changed tiles </p>
       <tr>
         <td><span class="xref">Vector3Int</span></td>
         <td><span class="parametername">cell</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="events">Events
-  </h3>
-  
-  
-  <h4 id="GrandmaGreen_Garden_GardenAreaController_onActivation" data-uid="GrandmaGreen.Garden.GardenAreaController.onActivation">onActivation</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public event Action onActivation</code></pre>
-  </div>
-  <h5 class="eventType">Event Type</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="GrandmaGreen_Garden_GardenAreaController_onDeactivation" data-uid="GrandmaGreen.Garden.GardenAreaController.onDeactivation">onDeactivation</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public event Action onDeactivation</code></pre>
-  </div>
-  <h5 class="eventType">Event Type</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="GrandmaGreen_Garden_GardenAreaController_onTilemapSelection" data-uid="GrandmaGreen.Garden.GardenAreaController.onTilemapSelection">onTilemapSelection</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public event Action&lt;Vector3Int&gt; onTilemapSelection</code></pre>
-  </div>
-  <h5 class="eventType">Event Type</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<span class="xref">Vector3Int</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
