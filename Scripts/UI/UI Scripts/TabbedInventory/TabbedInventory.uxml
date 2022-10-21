@@ -1,7 +1,7 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/_GrandmaGreen/Scripts/UI/UI%20Scripts/StyleSheets/HUDStyleSheet.uss?fileID=7433441132597879392&amp;guid=fb47af834b15b44e59bcc04fdcbf92c5&amp;type=3#HUDStyleSheet" />
     <ui:VisualElement name="inventory-element" picking-mode="Ignore" style="flex-grow: 1; flex-direction: row-reverse; justify-content: flex-start; align-items: stretch; display: flex; left: 0; top: 0; right: 0; bottom: 0; position: absolute; width: 100%; height: 100%;">
-        <ui:VisualElement name="content" style="flex-direction: column; width: 40%; justify-content: flex-start; height: 100%; border-left-width: 10px; border-right-width: 10px; border-top-width: 10px; border-bottom-width: 10px; border-left-color: rgb(0, 0, 0); border-right-color: rgb(0, 0, 0); border-top-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0); margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0;">
+        <ui:VisualElement name="content" style="flex-direction: column; width: 40%; justify-content: flex-start; height: 100%; border-left-width: 10px; border-right-width: 10px; border-top-width: 10px; border-bottom-width: 10px; border-left-color: rgb(0, 0, 0); border-right-color: rgb(0, 0, 0); border-top-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0); margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; min-width: 40%; min-height: 100%;">
             <ui:VisualElement name="title" style="height: 12%; border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 7px; border-left-color: rgb(0, 0, 0); border-right-color: rgb(0, 0, 0); border-top-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0); flex-direction: row; background-color: rgb(214, 214, 214);">
                 <ui:Label tabindex="-1" text="Inventory" display-tooltip-when-elided="true" style="flex-grow: 1; font-size: 80%; -unity-text-align: middle-center; width: 70%;" />
                 <ui:VisualElement style="align-items: center; justify-content: center; width: 15%;">
@@ -20,7 +20,7 @@
             <ui:ListView focusable="true" name="decor-content" class="content-jar inactive-content" style="background-color: rgb(49, 255, 0);" />
             <ui:VisualElement name="decor-content" class="inactive-content" style="flex-grow: 1; background-color: rgb(49, 255, 0); justify-content: space-around; align-items: stretch;" />
         </ui:VisualElement>
-        <ui:VisualElement name="tabs" picking-mode="Ignore" style="height: 80%; align-items: flex-end; justify-content: flex-end; width: 5%; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0;">
+        <ui:VisualElement name="tabs" picking-mode="Ignore" style="height: 80%; align-items: flex-end; justify-content: flex-end; width: 5%; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; min-width: 5%; min-height: 80%;">
             <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="seeds-tab" class="tab-button active-tab">
                 <ui:VisualElement class="icon-visual tab-icon" style="background-image: url(&apos;project://database/Assets/_GrandmaGreen/Scripts/UI/SampleArt/UI_Fertilizer_Temp.png?fileID=2800000&amp;guid=a643cdf8e0a09b74b95650865ea63f19&amp;type=3#UI_Fertilizer_Temp&apos;);" />
             </ui:Button>

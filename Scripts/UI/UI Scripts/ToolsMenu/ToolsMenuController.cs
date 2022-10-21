@@ -54,9 +54,8 @@ public class ToolsMenuController
         bloomStart.RegisterCallback<TransitionEndEvent>(OnBloom);
         bloomStart.style.transitionProperty = new List<StylePropertyName> { "scale", "rotate"};
         bloomStart.style.transitionTimingFunction = new List<EasingFunction> { EasingMode.EaseInOut, EasingMode.EaseInOutSine };
-        bloomStart.style.transitionDuration = new List<TimeValue>{ new TimeValue(150, TimeUnit.Millisecond), new TimeValue(150, TimeUnit.Millisecond) };
-        bloomStart.style.transitionDelay = new List<TimeValue>{ new TimeValue(0, TimeUnit.Millisecond)};
-        bloomStart.style.scale = new Scale(new Vector2(2,2));
+        bloomStart.style.transitionDuration = new List<TimeValue>{ new TimeValue(200, TimeUnit.Millisecond), new TimeValue(400, TimeUnit.Millisecond) };
+        bloomStart.style.scale = new Scale(new Vector2(3,3));
         bloomStart.style.rotate = new Rotate(-25);
     }
 

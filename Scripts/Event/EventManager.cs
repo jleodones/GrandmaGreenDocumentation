@@ -35,6 +35,13 @@ namespace GrandmaGreen
 
         public void HandleEVENT_GOLEM_SPAWN(int id, Vector3 pos) {EVENT_GOLEM_SPAWN?.Invoke(id, pos);}
 
+        // Plant growth Event
+        public event Action<int, Vector3Int> EVENT_PLANT_UPDATE;
+
+        public void HandleEVENT_PLANT_UPDATE(int areaIndex, Vector3Int cell)
+        {
+            EVENT_PLANT_UPDATE?.Invoke(areaIndex, cell);
+        }
     }    
 }
 

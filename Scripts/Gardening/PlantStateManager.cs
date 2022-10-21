@@ -26,21 +26,55 @@ namespace GrandmaGreen.Garden
         }
     }
 
+    [System.Serializable]
+    public struct GrowthEvent
+    {
+        public int growthTime;
+        public int areaIndex;
+        public Vector3Int cell;
+    }
+
     [CreateAssetMenu(menuName = "GrandmaGreen/Garden/GlobalPlantState")]
     public class PlantStateManager : ScriptableObject
     {
-        private Vector2Int[] gardenDimensions;
         private Dictionary<Vector3Int, PlantState>[] plantLookup;
+
+        [SerializeField]
+        public List<GrowthEvent> growthEventQueue;
+        private TimeLayer.TimeLayer timer;
+
+        private void InsertGrowthEvent(GrowthEvent item)
+        {
+            if (growthEventQueue.Count == 0)
+            {
+                growthEventQueue.Add(item);
+            }
+            else if (item.growthTime > growthEventQueue[^1].growthTime)
+            {
+                growthEventQueue.Add(item);
+            }
+            else if (item.growthTime < growthEventQueue[0].growthTime)
+            {
+                growthEventQueue.Insert(0, item);
+            }
+            else
+            {
+                int index = growthEventQueue.BinarySearch(
+                    item, Comparer<GrowthEvent>.Create((x,y)
+                    => x.growthTime.CompareTo(y.growthTime)));
+                index = index < 0 ? ~index : index;
+                growthEventQueue.Insert(index, item);
+            }
+        }
 
         public void Initialize()
         {
-            gardenDimensions = new Vector2Int[5];
             plantLookup = new Dictionary<Vector3Int, PlantState>[5];
+            growthEventQueue = new List<GrowthEvent>();
         }
 
-        public void RegisterGarden(Vector3Int dimensions, int areaIndex)
+        public void RegisterGarden(int areaIndex)
         {
-            gardenDimensions[areaIndex] = new Vector2Int(dimensions.x, dimensions.y);
             plantLookup[areaIndex] = new Dictionary<Vector3Int, PlantState>();
         }
 
@@ -107,14 +141,27 @@ namespace GrandmaGreen.Garden
 
         public void IncrementGrowthStage(int areaIndex, Vector3Int cell)
         {
-            PlantState plant = plantLookup[areaIndex][cell];
-            int current = plant.growthStage;
-            int max = plant.type.growthStages;
+           PlantState plant = plantLookup[areaIndex][cell];
+           int current = plant.growthStage;
+           int max = plant.type.growthStages;
 
-            if (!IsEmpty(areaIndex, cell) && current < max)
-            {
-                plantLookup[areaIndex][cell] = new PlantState(plant);
-            }
+           if (!IsEmpty(areaIndex, cell) && current < max)
+           {
+               plantLookup[areaIndex][cell] = new PlantState(plant);
+           }
+        }
+
+        [ContextMenu("FireGrowthEvent")]
+        public void FireGrowthEvent()
+        {
+            EventManager.instance.HandleEVENT_PLANT_UPDATE(0, Vector3Int.zero);    
+        }
+
+        [ContextMenu("InsertGrowthEvent")]
+        public void InsertGrowthEvent()
+        {
+            InsertGrowthEvent(new GrowthEvent { growthTime = (int)(10*Random.value)});
         }
     }
 }
+

@@ -1,0 +1,9 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/_GrandmaGreen/Scripts/UI/UI%20Scripts/ToolsMenu/ToolsMenu.uss?fileID=7433441132597879392&amp;guid=8e54a2dd58b5d49d1b413590ef2c9d3e&amp;type=3#ToolsMenu" />
+    <ui:VisualElement name="rootElement" picking-mode="Ignore" style="width: 298px; height: 173px; align-items: center; justify-content: space-around; transform-origin: center; translate: 18% -137%; display: flex;">
+        <ui:VisualElement style="background-image: url(&apos;project://database/Assets/_GrandmaGreen/Art/UI/Golems/text_bubble.png?fileID=21300000&amp;guid=d7e4ad268d8a342b29438442dcbfba1f&amp;type=3#text_bubble&apos;); width: 393px; height: 203px; justify-content: center; align-items: center; translate: -64% -197px;">
+            <ui:Label tabindex="-1" text="Tulip" display-tooltip-when-elided="true" style="translate: 0 0; font-size: 27%; color: rgb(255, 255, 255); position: absolute; left: 35%; top: 0;" />
+            <ui:Label tabindex="-1" text="Hello!" display-tooltip-when-elided="true" style="font-size: 30%; translate: 0 0;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
