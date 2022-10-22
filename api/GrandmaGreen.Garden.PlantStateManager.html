@@ -95,6 +95,32 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public class PlantStateManager : ScriptableObject</code></pre>
   </div>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="GrandmaGreen_Garden_PlantStateManager_growthEventQueue" data-uid="GrandmaGreen.Garden.PlantStateManager.growthEventQueue">growthEventQueue</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;GrowthEvent&gt; growthEventQueue</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="GrandmaGreen.Garden.GrowthEvent.html">GrowthEvent</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
   </h3>
   
@@ -193,6 +219,16 @@
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="GrandmaGreen_Garden_PlantStateManager_FireGrowthEvent_" data-uid="GrandmaGreen.Garden.PlantStateManager.FireGrowthEvent*"></a>
+  <h4 id="GrandmaGreen_Garden_PlantStateManager_FireGrowthEvent" data-uid="GrandmaGreen.Garden.PlantStateManager.FireGrowthEvent">FireGrowthEvent()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void FireGrowthEvent()</code></pre>
+  </div>
   
   
   <a id="GrandmaGreen_Garden_PlantStateManager_GetGrowthStage_" data-uid="GrandmaGreen.Garden.PlantStateManager.GetGrowthStage*"></a>
@@ -420,6 +456,16 @@
   </div>
   
   
+  <a id="GrandmaGreen_Garden_PlantStateManager_InsertGrowthEvent_" data-uid="GrandmaGreen.Garden.PlantStateManager.InsertGrowthEvent*"></a>
+  <h4 id="GrandmaGreen_Garden_PlantStateManager_InsertGrowthEvent" data-uid="GrandmaGreen.Garden.PlantStateManager.InsertGrowthEvent">InsertGrowthEvent()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void InsertGrowthEvent()</code></pre>
+  </div>
+  
+  
   <a id="GrandmaGreen_Garden_PlantStateManager_IsEmpty_" data-uid="GrandmaGreen.Garden.PlantStateManager.IsEmpty*"></a>
   <h4 id="GrandmaGreen_Garden_PlantStateManager_IsEmpty_System_Int32_Vector3Int_" data-uid="GrandmaGreen.Garden.PlantStateManager.IsEmpty(System.Int32,Vector3Int)">IsEmpty(Int32, Vector3Int)</h4>
   <div class="markdown level1 summary"></div>
@@ -468,12 +514,12 @@
   
   
   <a id="GrandmaGreen_Garden_PlantStateManager_RegisterGarden_" data-uid="GrandmaGreen.Garden.PlantStateManager.RegisterGarden*"></a>
-  <h4 id="GrandmaGreen_Garden_PlantStateManager_RegisterGarden_Vector3Int_System_Int32_" data-uid="GrandmaGreen.Garden.PlantStateManager.RegisterGarden(Vector3Int,System.Int32)">RegisterGarden(Vector3Int, Int32)</h4>
+  <h4 id="GrandmaGreen_Garden_PlantStateManager_RegisterGarden_System_Int32_" data-uid="GrandmaGreen.Garden.PlantStateManager.RegisterGarden(System.Int32)">RegisterGarden(Int32)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void RegisterGarden(Vector3Int dimensions, int areaIndex)</code></pre>
+    <pre><code class="lang-csharp hljs">public void RegisterGarden(int areaIndex)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -485,11 +531,6 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td><span class="xref">Vector3Int</span></td>
-        <td><span class="parametername">dimensions</span></td>
-        <td></td>
-      </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
         <td><span class="parametername">areaIndex</span></td>

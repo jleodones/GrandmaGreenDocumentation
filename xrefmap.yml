@@ -1275,6 +1275,54 @@ references:
   commentId: F:GrandmaGreen.Collections.Plant.trait
   fullName: GrandmaGreen.Collections.Plant.trait
   nameWithType: Plant.trait
+- uid: GrandmaGreen.Collections.PlantId
+  name: PlantId
+  href: api/GrandmaGreen.Collections.PlantId.html
+  commentId: T:GrandmaGreen.Collections.PlantId
+  fullName: GrandmaGreen.Collections.PlantId
+  nameWithType: PlantId
+- uid: GrandmaGreen.Collections.PlantId.Rose
+  name: Rose
+  href: api/GrandmaGreen.Collections.PlantId.html#GrandmaGreen_Collections_PlantId_Rose
+  commentId: F:GrandmaGreen.Collections.PlantId.Rose
+  fullName: GrandmaGreen.Collections.PlantId.Rose
+  nameWithType: PlantId.Rose
+- uid: GrandmaGreen.Collections.PlantId.Tulip
+  name: Tulip
+  href: api/GrandmaGreen.Collections.PlantId.html#GrandmaGreen_Collections_PlantId_Tulip
+  commentId: F:GrandmaGreen.Collections.PlantId.Tulip
+  fullName: GrandmaGreen.Collections.PlantId.Tulip
+  nameWithType: PlantId.Tulip
+- uid: GrandmaGreen.Collections.PlantProperties
+  name: PlantProperties
+  href: api/GrandmaGreen.Collections.PlantProperties.html
+  commentId: T:GrandmaGreen.Collections.PlantProperties
+  fullName: GrandmaGreen.Collections.PlantProperties
+  nameWithType: PlantProperties
+- uid: GrandmaGreen.Collections.PlantProperties.growthStages
+  name: growthStages
+  href: api/GrandmaGreen.Collections.PlantProperties.html#GrandmaGreen_Collections_PlantProperties_growthStages
+  commentId: F:GrandmaGreen.Collections.PlantProperties.growthStages
+  fullName: GrandmaGreen.Collections.PlantProperties.growthStages
+  nameWithType: PlantProperties.growthStages
+- uid: GrandmaGreen.Collections.PlantProperties.growthTimeSecs
+  name: growthTimeSecs
+  href: api/GrandmaGreen.Collections.PlantProperties.html#GrandmaGreen_Collections_PlantProperties_growthTimeSecs
+  commentId: F:GrandmaGreen.Collections.PlantProperties.growthTimeSecs
+  fullName: GrandmaGreen.Collections.PlantProperties.growthTimeSecs
+  nameWithType: PlantProperties.growthTimeSecs
+- uid: GrandmaGreen.Collections.PlantProperties.name
+  name: name
+  href: api/GrandmaGreen.Collections.PlantProperties.html#GrandmaGreen_Collections_PlantProperties_name
+  commentId: F:GrandmaGreen.Collections.PlantProperties.name
+  fullName: GrandmaGreen.Collections.PlantProperties.name
+  nameWithType: PlantProperties.name
+- uid: GrandmaGreen.Collections.PlantProperties.spritePaths
+  name: spritePaths
+  href: api/GrandmaGreen.Collections.PlantProperties.html#GrandmaGreen_Collections_PlantProperties_spritePaths
+  commentId: F:GrandmaGreen.Collections.PlantProperties.spritePaths
+  fullName: GrandmaGreen.Collections.PlantProperties.spritePaths
+  nameWithType: PlantProperties.spritePaths
 - uid: GrandmaGreen.Collections.Seed
   name: Seed
   href: api/GrandmaGreen.Collections.Seed.html
@@ -1365,6 +1413,56 @@ references:
   commentId: F:GrandmaGreen.Collections.Seed.quantity
   fullName: GrandmaGreen.Collections.Seed.quantity
   nameWithType: Seed.quantity
+- uid: GrandmaGreen.Collections.SeedId
+  name: SeedId
+  href: api/GrandmaGreen.Collections.SeedId.html
+  commentId: T:GrandmaGreen.Collections.SeedId
+  fullName: GrandmaGreen.Collections.SeedId
+  nameWithType: SeedId
+- uid: GrandmaGreen.Collections.SeedId.Rose
+  name: Rose
+  href: api/GrandmaGreen.Collections.SeedId.html#GrandmaGreen_Collections_SeedId_Rose
+  commentId: F:GrandmaGreen.Collections.SeedId.Rose
+  fullName: GrandmaGreen.Collections.SeedId.Rose
+  nameWithType: SeedId.Rose
+- uid: GrandmaGreen.Collections.SeedId.Tulip
+  name: Tulip
+  href: api/GrandmaGreen.Collections.SeedId.html#GrandmaGreen_Collections_SeedId_Tulip
+  commentId: F:GrandmaGreen.Collections.SeedId.Tulip
+  fullName: GrandmaGreen.Collections.SeedId.Tulip
+  nameWithType: SeedId.Tulip
+- uid: GrandmaGreen.Collections.TEMP_PlantTypeCollection
+  name: TEMP_PlantTypeCollection
+  href: api/GrandmaGreen.Collections.TEMP_PlantTypeCollection.html
+  commentId: T:GrandmaGreen.Collections.TEMP_PlantTypeCollection
+  fullName: GrandmaGreen.Collections.TEMP_PlantTypeCollection
+  nameWithType: TEMP_PlantTypeCollection
+- uid: GrandmaGreen.Collections.TEMP_PlantTypeCollection.GetPlant(GrandmaGreen.Collections.PlantId)
+  name: GetPlant(PlantId)
+  href: api/GrandmaGreen.Collections.TEMP_PlantTypeCollection.html#GrandmaGreen_Collections_TEMP_PlantTypeCollection_GetPlant_GrandmaGreen_Collections_PlantId_
+  commentId: M:GrandmaGreen.Collections.TEMP_PlantTypeCollection.GetPlant(GrandmaGreen.Collections.PlantId)
+  fullName: GrandmaGreen.Collections.TEMP_PlantTypeCollection.GetPlant(GrandmaGreen.Collections.PlantId)
+  nameWithType: TEMP_PlantTypeCollection.GetPlant(PlantId)
+- uid: GrandmaGreen.Collections.TEMP_PlantTypeCollection.GetPlant*
+  name: GetPlant
+  href: api/GrandmaGreen.Collections.TEMP_PlantTypeCollection.html#GrandmaGreen_Collections_TEMP_PlantTypeCollection_GetPlant_
+  commentId: Overload:GrandmaGreen.Collections.TEMP_PlantTypeCollection.GetPlant
+  isSpec: "True"
+  fullName: GrandmaGreen.Collections.TEMP_PlantTypeCollection.GetPlant
+  nameWithType: TEMP_PlantTypeCollection.GetPlant
+- uid: GrandmaGreen.Collections.TEMP_PlantTypeCollection.SeedToPlant(GrandmaGreen.Collections.SeedId)
+  name: SeedToPlant(SeedId)
+  href: api/GrandmaGreen.Collections.TEMP_PlantTypeCollection.html#GrandmaGreen_Collections_TEMP_PlantTypeCollection_SeedToPlant_GrandmaGreen_Collections_SeedId_
+  commentId: M:GrandmaGreen.Collections.TEMP_PlantTypeCollection.SeedToPlant(GrandmaGreen.Collections.SeedId)
+  fullName: GrandmaGreen.Collections.TEMP_PlantTypeCollection.SeedToPlant(GrandmaGreen.Collections.SeedId)
+  nameWithType: TEMP_PlantTypeCollection.SeedToPlant(SeedId)
+- uid: GrandmaGreen.Collections.TEMP_PlantTypeCollection.SeedToPlant*
+  name: SeedToPlant
+  href: api/GrandmaGreen.Collections.TEMP_PlantTypeCollection.html#GrandmaGreen_Collections_TEMP_PlantTypeCollection_SeedToPlant_
+  commentId: Overload:GrandmaGreen.Collections.TEMP_PlantTypeCollection.SeedToPlant
+  isSpec: "True"
+  fullName: GrandmaGreen.Collections.TEMP_PlantTypeCollection.SeedToPlant
+  nameWithType: TEMP_PlantTypeCollection.SeedToPlant
 - uid: GrandmaGreen.Collections.Tool
   name: Tool
   href: api/GrandmaGreen.Collections.Tool.html
@@ -2329,6 +2427,105 @@ references:
   commentId: F:GrandmaGreen.Entities.GolemController.velocity
   fullName: GrandmaGreen.Entities.GolemController.velocity
   nameWithType: GolemController.velocity
+- uid: GrandmaGreen.Entities.GolemData
+  name: GolemData
+  href: api/GrandmaGreen.Entities.GolemData.html
+  commentId: T:GrandmaGreen.Entities.GolemData
+  fullName: GrandmaGreen.Entities.GolemData
+  nameWithType: GolemData
+- uid: GrandmaGreen.Entities.GolemData.golemID
+  name: golemID
+  href: api/GrandmaGreen.Entities.GolemData.html#GrandmaGreen_Entities_GolemData_golemID
+  commentId: F:GrandmaGreen.Entities.GolemData.golemID
+  fullName: GrandmaGreen.Entities.GolemData.golemID
+  nameWithType: GolemData.golemID
+- uid: GrandmaGreen.Entities.GolemData.golemName
+  name: golemName
+  href: api/GrandmaGreen.Entities.GolemData.html#GrandmaGreen_Entities_GolemData_golemName
+  commentId: F:GrandmaGreen.Entities.GolemData.golemName
+  fullName: GrandmaGreen.Entities.GolemData.golemName
+  nameWithType: GolemData.golemName
+- uid: GrandmaGreen.Entities.GolemData.golemPrefabs
+  name: golemPrefabs
+  href: api/GrandmaGreen.Entities.GolemData.html#GrandmaGreen_Entities_GolemData_golemPrefabs
+  commentId: F:GrandmaGreen.Entities.GolemData.golemPrefabs
+  fullName: GrandmaGreen.Entities.GolemData.golemPrefabs
+  nameWithType: GolemData.golemPrefabs
+- uid: GrandmaGreen.Entities.GolemData.happiness
+  name: happiness
+  href: api/GrandmaGreen.Entities.GolemData.html#GrandmaGreen_Entities_GolemData_happiness
+  commentId: F:GrandmaGreen.Entities.GolemData.happiness
+  fullName: GrandmaGreen.Entities.GolemData.happiness
+  nameWithType: GolemData.happiness
+- uid: GrandmaGreen.Entities.GolemData.spawnChance
+  name: spawnChance
+  href: api/GrandmaGreen.Entities.GolemData.html#GrandmaGreen_Entities_GolemData_spawnChance
+  commentId: F:GrandmaGreen.Entities.GolemData.spawnChance
+  fullName: GrandmaGreen.Entities.GolemData.spawnChance
+  nameWithType: GolemData.spawnChance
+- uid: GrandmaGreen.Entities.GolemData.stages
+  name: stages
+  href: api/GrandmaGreen.Entities.GolemData.html#GrandmaGreen_Entities_GolemData_stages
+  commentId: F:GrandmaGreen.Entities.GolemData.stages
+  fullName: GrandmaGreen.Entities.GolemData.stages
+  nameWithType: GolemData.stages
+- uid: GrandmaGreen.Entities.GolemManager
+  name: GolemManager
+  href: api/GrandmaGreen.Entities.GolemManager.html
+  commentId: T:GrandmaGreen.Entities.GolemManager
+  fullName: GrandmaGreen.Entities.GolemManager
+  nameWithType: GolemManager
+- uid: GrandmaGreen.Entities.GolemManager.golemList
+  name: golemList
+  href: api/GrandmaGreen.Entities.GolemManager.html#GrandmaGreen_Entities_GolemManager_golemList
+  commentId: F:GrandmaGreen.Entities.GolemManager.golemList
+  fullName: GrandmaGreen.Entities.GolemManager.golemList
+  nameWithType: GolemManager.golemList
+- uid: GrandmaGreen.Entities.GolemManager.Initialize
+  name: Initialize()
+  href: api/GrandmaGreen.Entities.GolemManager.html#GrandmaGreen_Entities_GolemManager_Initialize
+  commentId: M:GrandmaGreen.Entities.GolemManager.Initialize
+  fullName: GrandmaGreen.Entities.GolemManager.Initialize()
+  nameWithType: GolemManager.Initialize()
+- uid: GrandmaGreen.Entities.GolemManager.Initialize*
+  name: Initialize
+  href: api/GrandmaGreen.Entities.GolemManager.html#GrandmaGreen_Entities_GolemManager_Initialize_
+  commentId: Overload:GrandmaGreen.Entities.GolemManager.Initialize
+  isSpec: "True"
+  fullName: GrandmaGreen.Entities.GolemManager.Initialize
+  nameWithType: GolemManager.Initialize
+- uid: GrandmaGreen.Entities.GolemManager.OnDestroy
+  name: OnDestroy()
+  href: api/GrandmaGreen.Entities.GolemManager.html#GrandmaGreen_Entities_GolemManager_OnDestroy
+  commentId: M:GrandmaGreen.Entities.GolemManager.OnDestroy
+  fullName: GrandmaGreen.Entities.GolemManager.OnDestroy()
+  nameWithType: GolemManager.OnDestroy()
+- uid: GrandmaGreen.Entities.GolemManager.OnDestroy*
+  name: OnDestroy
+  href: api/GrandmaGreen.Entities.GolemManager.html#GrandmaGreen_Entities_GolemManager_OnDestroy_
+  commentId: Overload:GrandmaGreen.Entities.GolemManager.OnDestroy
+  isSpec: "True"
+  fullName: GrandmaGreen.Entities.GolemManager.OnDestroy
+  nameWithType: GolemManager.OnDestroy
+- uid: GrandmaGreen.Entities.GolemManager.OnGolemSpawn(System.Int32,Vector3)
+  name: OnGolemSpawn(Int32, Vector3)
+  href: api/GrandmaGreen.Entities.GolemManager.html#GrandmaGreen_Entities_GolemManager_OnGolemSpawn_System_Int32_Vector3_
+  commentId: M:GrandmaGreen.Entities.GolemManager.OnGolemSpawn(System.Int32,Vector3)
+  fullName: GrandmaGreen.Entities.GolemManager.OnGolemSpawn(System.Int32, Vector3)
+  nameWithType: GolemManager.OnGolemSpawn(Int32, Vector3)
+- uid: GrandmaGreen.Entities.GolemManager.OnGolemSpawn*
+  name: OnGolemSpawn
+  href: api/GrandmaGreen.Entities.GolemManager.html#GrandmaGreen_Entities_GolemManager_OnGolemSpawn_
+  commentId: Overload:GrandmaGreen.Entities.GolemManager.OnGolemSpawn
+  isSpec: "True"
+  fullName: GrandmaGreen.Entities.GolemManager.OnGolemSpawn
+  nameWithType: GolemManager.OnGolemSpawn
+- uid: GrandmaGreen.Entities.GolemManager.tulip
+  name: tulip
+  href: api/GrandmaGreen.Entities.GolemManager.html#GrandmaGreen_Entities_GolemManager_tulip
+  commentId: F:GrandmaGreen.Entities.GolemManager.tulip
+  fullName: GrandmaGreen.Entities.GolemManager.tulip
+  nameWithType: GolemManager.tulip
 - uid: GrandmaGreen.Entities.PlayerController
   name: PlayerController
   href: api/GrandmaGreen.Entities.PlayerController.html
@@ -2396,6 +2593,12 @@ references:
   commentId: E:GrandmaGreen.EventManager.EVENT_INVENTORY_UPDATE
   fullName: GrandmaGreen.EventManager.EVENT_INVENTORY_UPDATE
   nameWithType: EventManager.EVENT_INVENTORY_UPDATE
+- uid: GrandmaGreen.EventManager.EVENT_PLANT_UPDATE
+  name: EVENT_PLANT_UPDATE
+  href: api/GrandmaGreen.EventManager.html#GrandmaGreen_EventManager_EVENT_PLANT_UPDATE
+  commentId: E:GrandmaGreen.EventManager.EVENT_PLANT_UPDATE
+  fullName: GrandmaGreen.EventManager.EVENT_PLANT_UPDATE
+  nameWithType: EventManager.EVENT_PLANT_UPDATE
 - uid: GrandmaGreen.EventManager.HandleEVENT_GOLEM_SPAWN(System.Int32,Vector3)
   name: HandleEVENT_GOLEM_SPAWN(Int32, Vector3)
   href: api/GrandmaGreen.EventManager.html#GrandmaGreen_EventManager_HandleEVENT_GOLEM_SPAWN_System_Int32_Vector3_
@@ -2448,6 +2651,19 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.EventManager.HandleEVENT_INVENTORY_UPDATE
   nameWithType: EventManager.HandleEVENT_INVENTORY_UPDATE
+- uid: GrandmaGreen.EventManager.HandleEVENT_PLANT_UPDATE(System.Int32,Vector3Int)
+  name: HandleEVENT_PLANT_UPDATE(Int32, Vector3Int)
+  href: api/GrandmaGreen.EventManager.html#GrandmaGreen_EventManager_HandleEVENT_PLANT_UPDATE_System_Int32_Vector3Int_
+  commentId: M:GrandmaGreen.EventManager.HandleEVENT_PLANT_UPDATE(System.Int32,Vector3Int)
+  fullName: GrandmaGreen.EventManager.HandleEVENT_PLANT_UPDATE(System.Int32, Vector3Int)
+  nameWithType: EventManager.HandleEVENT_PLANT_UPDATE(Int32, Vector3Int)
+- uid: GrandmaGreen.EventManager.HandleEVENT_PLANT_UPDATE*
+  name: HandleEVENT_PLANT_UPDATE
+  href: api/GrandmaGreen.EventManager.html#GrandmaGreen_EventManager_HandleEVENT_PLANT_UPDATE_
+  commentId: Overload:GrandmaGreen.EventManager.HandleEVENT_PLANT_UPDATE
+  isSpec: "True"
+  fullName: GrandmaGreen.EventManager.HandleEVENT_PLANT_UPDATE
+  nameWithType: EventManager.HandleEVENT_PLANT_UPDATE
 - uid: GrandmaGreen.EventManager.instance
   name: instance
   href: api/GrandmaGreen.EventManager.html#GrandmaGreen_EventManager_instance
@@ -2769,12 +2985,12 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Garden.GardenAreaController.GardenTileSelected
   nameWithType: GardenAreaController.GardenTileSelected
-- uid: GrandmaGreen.Garden.GardenAreaController.golem
-  name: golem
-  href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_golem
-  commentId: F:GrandmaGreen.Garden.GardenAreaController.golem
-  fullName: GrandmaGreen.Garden.GardenAreaController.golem
-  nameWithType: GardenAreaController.golem
+- uid: GrandmaGreen.Garden.GardenAreaController.golemManager
+  name: golemManager
+  href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_golemManager
+  commentId: F:GrandmaGreen.Garden.GardenAreaController.golemManager
+  fullName: GrandmaGreen.Garden.GardenAreaController.golemManager
+  nameWithType: GardenAreaController.golemManager
 - uid: GrandmaGreen.Garden.GardenAreaController.Harvest(GrandmaGreen.Garden.BasePhenotypeData,GrandmaGreen.Garden.Genotype)
   name: Harvest(BasePhenotypeData, Genotype)
   href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_Harvest_GrandmaGreen_Garden_BasePhenotypeData_GrandmaGreen_Garden_Genotype_
@@ -2827,12 +3043,12 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Garden.GardenAreaController.PlaceAllPlantTypePrefabs
   nameWithType: GardenAreaController.PlaceAllPlantTypePrefabs
-- uid: GrandmaGreen.Garden.GardenAreaController.PlacePlantPrefabOnCell(GrandmaGreen.PlantType,Vector3Int,System.Int32)
-  name: PlacePlantPrefabOnCell(PlantType, Vector3Int, Int32)
-  href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_PlacePlantPrefabOnCell_GrandmaGreen_PlantType_Vector3Int_System_Int32_
-  commentId: M:GrandmaGreen.Garden.GardenAreaController.PlacePlantPrefabOnCell(GrandmaGreen.PlantType,Vector3Int,System.Int32)
-  fullName: GrandmaGreen.Garden.GardenAreaController.PlacePlantPrefabOnCell(GrandmaGreen.PlantType, Vector3Int, System.Int32)
-  nameWithType: GardenAreaController.PlacePlantPrefabOnCell(PlantType, Vector3Int, Int32)
+- uid: GrandmaGreen.Garden.GardenAreaController.PlacePlantPrefabOnCell(Vector3Int,GrandmaGreen.PlantType,System.Int32)
+  name: PlacePlantPrefabOnCell(Vector3Int, PlantType, Int32)
+  href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_PlacePlantPrefabOnCell_Vector3Int_GrandmaGreen_PlantType_System_Int32_
+  commentId: M:GrandmaGreen.Garden.GardenAreaController.PlacePlantPrefabOnCell(Vector3Int,GrandmaGreen.PlantType,System.Int32)
+  fullName: GrandmaGreen.Garden.GardenAreaController.PlacePlantPrefabOnCell(Vector3Int, GrandmaGreen.PlantType, System.Int32)
+  nameWithType: GardenAreaController.PlacePlantPrefabOnCell(Vector3Int, PlantType, Int32)
 - uid: GrandmaGreen.Garden.GardenAreaController.PlacePlantPrefabOnCell*
   name: PlacePlantPrefabOnCell
   href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_PlacePlantPrefabOnCell_
@@ -3138,6 +3354,30 @@ references:
   commentId: F:GrandmaGreen.Garden.GridUI.toolData
   fullName: GrandmaGreen.Garden.GridUI.toolData
   nameWithType: GridUI.toolData
+- uid: GrandmaGreen.Garden.GrowthEvent
+  name: GrowthEvent
+  href: api/GrandmaGreen.Garden.GrowthEvent.html
+  commentId: T:GrandmaGreen.Garden.GrowthEvent
+  fullName: GrandmaGreen.Garden.GrowthEvent
+  nameWithType: GrowthEvent
+- uid: GrandmaGreen.Garden.GrowthEvent.areaIndex
+  name: areaIndex
+  href: api/GrandmaGreen.Garden.GrowthEvent.html#GrandmaGreen_Garden_GrowthEvent_areaIndex
+  commentId: F:GrandmaGreen.Garden.GrowthEvent.areaIndex
+  fullName: GrandmaGreen.Garden.GrowthEvent.areaIndex
+  nameWithType: GrowthEvent.areaIndex
+- uid: GrandmaGreen.Garden.GrowthEvent.cell
+  name: cell
+  href: api/GrandmaGreen.Garden.GrowthEvent.html#GrandmaGreen_Garden_GrowthEvent_cell
+  commentId: F:GrandmaGreen.Garden.GrowthEvent.cell
+  fullName: GrandmaGreen.Garden.GrowthEvent.cell
+  nameWithType: GrowthEvent.cell
+- uid: GrandmaGreen.Garden.GrowthEvent.growthTime
+  name: growthTime
+  href: api/GrandmaGreen.Garden.GrowthEvent.html#GrandmaGreen_Garden_GrowthEvent_growthTime
+  commentId: F:GrandmaGreen.Garden.GrowthEvent.growthTime
+  fullName: GrandmaGreen.Garden.GrowthEvent.growthTime
+  nameWithType: GrowthEvent.growthTime
 - uid: GrandmaGreen.Garden.ITraitData
   name: ITraitData
   href: api/GrandmaGreen.Garden.ITraitData.html
@@ -3364,6 +3604,19 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Garden.PlantStateManager.DestroyPlant
   nameWithType: PlantStateManager.DestroyPlant
+- uid: GrandmaGreen.Garden.PlantStateManager.FireGrowthEvent
+  name: FireGrowthEvent()
+  href: api/GrandmaGreen.Garden.PlantStateManager.html#GrandmaGreen_Garden_PlantStateManager_FireGrowthEvent
+  commentId: M:GrandmaGreen.Garden.PlantStateManager.FireGrowthEvent
+  fullName: GrandmaGreen.Garden.PlantStateManager.FireGrowthEvent()
+  nameWithType: PlantStateManager.FireGrowthEvent()
+- uid: GrandmaGreen.Garden.PlantStateManager.FireGrowthEvent*
+  name: FireGrowthEvent
+  href: api/GrandmaGreen.Garden.PlantStateManager.html#GrandmaGreen_Garden_PlantStateManager_FireGrowthEvent_
+  commentId: Overload:GrandmaGreen.Garden.PlantStateManager.FireGrowthEvent
+  isSpec: "True"
+  fullName: GrandmaGreen.Garden.PlantStateManager.FireGrowthEvent
+  nameWithType: PlantStateManager.FireGrowthEvent
 - uid: GrandmaGreen.Garden.PlantStateManager.GetGrowthStage(System.Int32,Vector3Int)
   name: GetGrowthStage(Int32, Vector3Int)
   href: api/GrandmaGreen.Garden.PlantStateManager.html#GrandmaGreen_Garden_PlantStateManager_GetGrowthStage_System_Int32_Vector3Int_
@@ -3416,6 +3669,12 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Garden.PlantStateManager.GetPlantType
   nameWithType: PlantStateManager.GetPlantType
+- uid: GrandmaGreen.Garden.PlantStateManager.growthEventQueue
+  name: growthEventQueue
+  href: api/GrandmaGreen.Garden.PlantStateManager.html#GrandmaGreen_Garden_PlantStateManager_growthEventQueue
+  commentId: F:GrandmaGreen.Garden.PlantStateManager.growthEventQueue
+  fullName: GrandmaGreen.Garden.PlantStateManager.growthEventQueue
+  nameWithType: PlantStateManager.growthEventQueue
 - uid: GrandmaGreen.Garden.PlantStateManager.IncrementGrowthStage(System.Int32,Vector3Int)
   name: IncrementGrowthStage(Int32, Vector3Int)
   href: api/GrandmaGreen.Garden.PlantStateManager.html#GrandmaGreen_Garden_PlantStateManager_IncrementGrowthStage_System_Int32_Vector3Int_
@@ -3442,6 +3701,19 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Garden.PlantStateManager.Initialize
   nameWithType: PlantStateManager.Initialize
+- uid: GrandmaGreen.Garden.PlantStateManager.InsertGrowthEvent
+  name: InsertGrowthEvent()
+  href: api/GrandmaGreen.Garden.PlantStateManager.html#GrandmaGreen_Garden_PlantStateManager_InsertGrowthEvent
+  commentId: M:GrandmaGreen.Garden.PlantStateManager.InsertGrowthEvent
+  fullName: GrandmaGreen.Garden.PlantStateManager.InsertGrowthEvent()
+  nameWithType: PlantStateManager.InsertGrowthEvent()
+- uid: GrandmaGreen.Garden.PlantStateManager.InsertGrowthEvent*
+  name: InsertGrowthEvent
+  href: api/GrandmaGreen.Garden.PlantStateManager.html#GrandmaGreen_Garden_PlantStateManager_InsertGrowthEvent_
+  commentId: Overload:GrandmaGreen.Garden.PlantStateManager.InsertGrowthEvent
+  isSpec: "True"
+  fullName: GrandmaGreen.Garden.PlantStateManager.InsertGrowthEvent
+  nameWithType: PlantStateManager.InsertGrowthEvent
 - uid: GrandmaGreen.Garden.PlantStateManager.IsEmpty(System.Int32,Vector3Int)
   name: IsEmpty(Int32, Vector3Int)
   href: api/GrandmaGreen.Garden.PlantStateManager.html#GrandmaGreen_Garden_PlantStateManager_IsEmpty_System_Int32_Vector3Int_
@@ -3455,12 +3727,12 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Garden.PlantStateManager.IsEmpty
   nameWithType: PlantStateManager.IsEmpty
-- uid: GrandmaGreen.Garden.PlantStateManager.RegisterGarden(Vector3Int,System.Int32)
-  name: RegisterGarden(Vector3Int, Int32)
-  href: api/GrandmaGreen.Garden.PlantStateManager.html#GrandmaGreen_Garden_PlantStateManager_RegisterGarden_Vector3Int_System_Int32_
-  commentId: M:GrandmaGreen.Garden.PlantStateManager.RegisterGarden(Vector3Int,System.Int32)
-  fullName: GrandmaGreen.Garden.PlantStateManager.RegisterGarden(Vector3Int, System.Int32)
-  nameWithType: PlantStateManager.RegisterGarden(Vector3Int, Int32)
+- uid: GrandmaGreen.Garden.PlantStateManager.RegisterGarden(System.Int32)
+  name: RegisterGarden(Int32)
+  href: api/GrandmaGreen.Garden.PlantStateManager.html#GrandmaGreen_Garden_PlantStateManager_RegisterGarden_System_Int32_
+  commentId: M:GrandmaGreen.Garden.PlantStateManager.RegisterGarden(System.Int32)
+  fullName: GrandmaGreen.Garden.PlantStateManager.RegisterGarden(System.Int32)
+  nameWithType: PlantStateManager.RegisterGarden(Int32)
 - uid: GrandmaGreen.Garden.PlantStateManager.RegisterGarden*
   name: RegisterGarden
   href: api/GrandmaGreen.Garden.PlantStateManager.html#GrandmaGreen_Garden_PlantStateManager_RegisterGarden_
@@ -3929,37 +4201,6 @@ references:
   fullName.vb: GrandmaGreen.Garden.TraitSetData(Of T).weight
   nameWithType: TraitSetData<T>.weight
   nameWithType.vb: TraitSetData(Of T).weight
-- uid: GrandmaGreen.GolemSpawner
-  name: GolemSpawner
-  href: api/GrandmaGreen.GolemSpawner.html
-  commentId: T:GrandmaGreen.GolemSpawner
-  fullName: GrandmaGreen.GolemSpawner
-  nameWithType: GolemSpawner
-- uid: GrandmaGreen.GolemSpawner.AIController
-  name: AIController
-  href: api/GrandmaGreen.GolemSpawner.html#GrandmaGreen_GolemSpawner_AIController
-  commentId: F:GrandmaGreen.GolemSpawner.AIController
-  fullName: GrandmaGreen.GolemSpawner.AIController
-  nameWithType: GolemSpawner.AIController
-- uid: GrandmaGreen.GolemSpawner.OnGolemSpawn(System.Int32,Vector3)
-  name: OnGolemSpawn(Int32, Vector3)
-  href: api/GrandmaGreen.GolemSpawner.html#GrandmaGreen_GolemSpawner_OnGolemSpawn_System_Int32_Vector3_
-  commentId: M:GrandmaGreen.GolemSpawner.OnGolemSpawn(System.Int32,Vector3)
-  fullName: GrandmaGreen.GolemSpawner.OnGolemSpawn(System.Int32, Vector3)
-  nameWithType: GolemSpawner.OnGolemSpawn(Int32, Vector3)
-- uid: GrandmaGreen.GolemSpawner.OnGolemSpawn*
-  name: OnGolemSpawn
-  href: api/GrandmaGreen.GolemSpawner.html#GrandmaGreen_GolemSpawner_OnGolemSpawn_
-  commentId: Overload:GrandmaGreen.GolemSpawner.OnGolemSpawn
-  isSpec: "True"
-  fullName: GrandmaGreen.GolemSpawner.OnGolemSpawn
-  nameWithType: GolemSpawner.OnGolemSpawn
-- uid: GrandmaGreen.GolemSpawner.tulip
-  name: tulip
-  href: api/GrandmaGreen.GolemSpawner.html#GrandmaGreen_GolemSpawner_tulip
-  commentId: F:GrandmaGreen.GolemSpawner.tulip
-  fullName: GrandmaGreen.GolemSpawner.tulip
-  nameWithType: GolemSpawner.tulip
 - uid: GrandmaGreen.GrandmaGreenGameState
   name: GrandmaGreenGameState
   href: api/GrandmaGreen.GrandmaGreenGameState.html
@@ -5542,12 +5783,44 @@ references:
   commentId: F:GrandmaGreen.UI.Golems.GolemMenu.cameraZoom
   fullName: GrandmaGreen.UI.Golems.GolemMenu.cameraZoom
   nameWithType: GolemMenu.cameraZoom
+- uid: GrandmaGreen.UI.Golems.GolemMenu.dialogue
+  name: dialogue
+  href: api/GrandmaGreen.UI.Golems.GolemMenu.html#GrandmaGreen_UI_Golems_GolemMenu_dialogue
+  commentId: F:GrandmaGreen.UI.Golems.GolemMenu.dialogue
+  fullName: GrandmaGreen.UI.Golems.GolemMenu.dialogue
+  nameWithType: GolemMenu.dialogue
 - uid: GrandmaGreen.UI.Golems.GolemMenu.golemMenu
   name: golemMenu
   href: api/GrandmaGreen.UI.Golems.GolemMenu.html#GrandmaGreen_UI_Golems_GolemMenu_golemMenu
   commentId: F:GrandmaGreen.UI.Golems.GolemMenu.golemMenu
   fullName: GrandmaGreen.UI.Golems.GolemMenu.golemMenu
   nameWithType: GolemMenu.golemMenu
+- uid: GrandmaGreen.UI.Golems.GolemMenu.OnDialogueTap(ClickEvent)
+  name: OnDialogueTap(ClickEvent)
+  href: api/GrandmaGreen.UI.Golems.GolemMenu.html#GrandmaGreen_UI_Golems_GolemMenu_OnDialogueTap_ClickEvent_
+  commentId: M:GrandmaGreen.UI.Golems.GolemMenu.OnDialogueTap(ClickEvent)
+  fullName: GrandmaGreen.UI.Golems.GolemMenu.OnDialogueTap(ClickEvent)
+  nameWithType: GolemMenu.OnDialogueTap(ClickEvent)
+- uid: GrandmaGreen.UI.Golems.GolemMenu.OnDialogueTap*
+  name: OnDialogueTap
+  href: api/GrandmaGreen.UI.Golems.GolemMenu.html#GrandmaGreen_UI_Golems_GolemMenu_OnDialogueTap_
+  commentId: Overload:GrandmaGreen.UI.Golems.GolemMenu.OnDialogueTap
+  isSpec: "True"
+  fullName: GrandmaGreen.UI.Golems.GolemMenu.OnDialogueTap
+  nameWithType: GolemMenu.OnDialogueTap
+- uid: GrandmaGreen.UI.Golems.GolemMenu.SetDialogueLocation(Vector3)
+  name: SetDialogueLocation(Vector3)
+  href: api/GrandmaGreen.UI.Golems.GolemMenu.html#GrandmaGreen_UI_Golems_GolemMenu_SetDialogueLocation_Vector3_
+  commentId: M:GrandmaGreen.UI.Golems.GolemMenu.SetDialogueLocation(Vector3)
+  fullName: GrandmaGreen.UI.Golems.GolemMenu.SetDialogueLocation(Vector3)
+  nameWithType: GolemMenu.SetDialogueLocation(Vector3)
+- uid: GrandmaGreen.UI.Golems.GolemMenu.SetDialogueLocation*
+  name: SetDialogueLocation
+  href: api/GrandmaGreen.UI.Golems.GolemMenu.html#GrandmaGreen_UI_Golems_GolemMenu_SetDialogueLocation_
+  commentId: Overload:GrandmaGreen.UI.Golems.GolemMenu.SetDialogueLocation
+  isSpec: "True"
+  fullName: GrandmaGreen.UI.Golems.GolemMenu.SetDialogueLocation
+  nameWithType: GolemMenu.SetDialogueLocation
 - uid: GrandmaGreen.UI.Golems.GolemMenu.SetLocation(Vector3)
   name: SetLocation(Vector3)
   href: api/GrandmaGreen.UI.Golems.GolemMenu.html#GrandmaGreen_UI_Golems_GolemMenu_SetLocation_Vector3_
