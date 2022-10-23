@@ -17,6 +17,7 @@ namespace GrandmaGreen.Collections {
         public string itemName { get; set; }
 
         public string GetQuantityToString();
+
     }
     public enum ItemType
     {

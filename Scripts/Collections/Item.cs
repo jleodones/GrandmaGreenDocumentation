@@ -27,17 +27,21 @@ namespace GrandmaGreen.Collections {
         //only have aesthetic tag for decor items
         public string tag;
         //sprite to grab from assets:
-        public Sprite image;
+        // public Sprite image;
         //function to set the image variable - pull from assets folder when calling this
         //sprite naming convention: starts with id of item for now
         ///<summary>
         ///Set the image variable by pulling the asset sprite.
         ///Sprite naming convention: starts with name of item (spaces replaced with underscores) + _img
         ///</summary>
-        public void SetImage(Sprite img)
-        {
-            image = img;
-        }
+        // public void SetImage(Sprite img)
+        // {
+        //     image = img;
+        // }
+        // public Sprite GetImage()
+        // {
+        //     return image;
+        // }
     }
 
 }

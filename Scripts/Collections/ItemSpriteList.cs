@@ -5,13 +5,13 @@ using UnityEngine;
 
 namespace GrandmaGreen.Collections {
     ///<summary>
-    ///An item sprite contains the item's name and the sprite associated with. Values inputted manually.
+    ///An item sprite contains the item's id and the sprite(s) associated with.
     ///</summary>
     [Serializable]
-    public struct ItemSprite
+    public struct ItemSpriteList
     {
         public int id;
-        public Sprite img;
+        public List<Sprite> sprites;
     }
 
 }
