@@ -99,12 +99,12 @@
   </h3>
   
   
-  <h4 id="GrandmaGreen_Collections_CollectionsSO_items" data-uid="GrandmaGreen.Collections.CollectionsSO.items">items</h4>
+  <h4 id="GrandmaGreen_Collections_CollectionsSO_CharacterLookup" data-uid="GrandmaGreen.Collections.CollectionsSO.CharacterLookup">CharacterLookup</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public List&lt;Item&gt; items</code></pre>
+    <pre><code class="lang-csharp hljs">public Dictionary&lt;CharacterId, CharacterProperties&gt; CharacterLookup</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -116,7 +116,207 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="GrandmaGreen.Collections.Item.html">Item</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="GrandmaGreen.Collections.CharacterId.html">CharacterId</a>, <a class="xref" href="GrandmaGreen.Collections.CharacterProperties.html">CharacterProperties</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="GrandmaGreen_Collections_CollectionsSO_ItemLookup" data-uid="GrandmaGreen.Collections.CollectionsSO.ItemLookup">ItemLookup</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Dictionary&lt;Enum, ItemProperties&gt; ItemLookup</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.enum">Enum</a>, <a class="xref" href="GrandmaGreen.Collections.ItemProperties.html">ItemProperties</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="GrandmaGreen_Collections_CollectionsSO_PlantLookup" data-uid="GrandmaGreen.Collections.CollectionsSO.PlantLookup">PlantLookup</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Dictionary&lt;PlantId, PlantProperties&gt; PlantLookup</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="GrandmaGreen.Collections.PlantId.html">PlantId</a>, <a class="xref" href="GrandmaGreen.Collections.PlantProperties.html">PlantProperties</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="GrandmaGreen_Collections_CollectionsSO_SpriteCache" data-uid="GrandmaGreen.Collections.CollectionsSO.SpriteCache">SpriteCache</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Dictionary&lt;string, Sprite&gt; SpriteCache</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>, <span class="xref">Sprite</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="GrandmaGreen_Collections_CollectionsSO_GetItem_" data-uid="GrandmaGreen.Collections.CollectionsSO.GetItem*"></a>
+  <h4 id="GrandmaGreen_Collections_CollectionsSO_GetItem_System_Enum_" data-uid="GrandmaGreen.Collections.CollectionsSO.GetItem(System.Enum)">GetItem(Enum)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ItemProperties GetItem(Enum id)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.enum">Enum</a></td>
+        <td><span class="parametername">id</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="GrandmaGreen.Collections.ItemProperties.html">ItemProperties</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="GrandmaGreen_Collections_CollectionsSO_GetPlant_" data-uid="GrandmaGreen.Collections.CollectionsSO.GetPlant*"></a>
+  <h4 id="GrandmaGreen_Collections_CollectionsSO_GetPlant_GrandmaGreen_Collections_PlantId_" data-uid="GrandmaGreen.Collections.CollectionsSO.GetPlant(GrandmaGreen.Collections.PlantId)">GetPlant(PlantId)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PlantProperties GetPlant(PlantId id)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="GrandmaGreen.Collections.PlantId.html">PlantId</a></td>
+        <td><span class="parametername">id</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="GrandmaGreen.Collections.PlantProperties.html">PlantProperties</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="GrandmaGreen_Collections_CollectionsSO_SeedToPlant_" data-uid="GrandmaGreen.Collections.CollectionsSO.SeedToPlant*"></a>
+  <h4 id="GrandmaGreen_Collections_CollectionsSO_SeedToPlant_GrandmaGreen_Collections_SeedId_" data-uid="GrandmaGreen.Collections.CollectionsSO.SeedToPlant(GrandmaGreen.Collections.SeedId)">SeedToPlant(SeedId)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PlantId SeedToPlant(SeedId id)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="GrandmaGreen.Collections.SeedId.html">SeedId</a></td>
+        <td><span class="parametername">id</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="GrandmaGreen.Collections.PlantId.html">PlantId</a></td>
         <td></td>
       </tr>
     </tbody>

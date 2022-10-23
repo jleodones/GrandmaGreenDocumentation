@@ -312,11 +312,35 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/GrandmaGreen.Collections.CharacterId.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GrandmaGreen.Collections.CharacterId.html",
+          "hash": "8DdPU6Y7U8AeMy8z5JwKfg/xpmzUIqhVESFG7E+aFBI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GrandmaGreen.Collections.CharacterProperties.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GrandmaGreen.Collections.CharacterProperties.html",
+          "hash": "JVEjeELKae5TiW9mnp/CWfG30uIbgbybFvaBHVK054c="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/GrandmaGreen.Collections.CollectionsSO.yml",
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.Collections.CollectionsSO.html",
-          "hash": "FddH3iuZrkvrpiNb8CQCk749vMqng2sAXlAz4Do7V9Q="
+          "hash": "8YBYKE/1TNVvPp664LR9lUkUoDXYisZ5yKeUN7X/Ii4="
         }
       },
       "is_incremental": false,
@@ -329,6 +353,18 @@
         ".html": {
           "relative_path": "api/GrandmaGreen.Collections.Decor.html",
           "hash": "/7j3avw0Yl/ylVSO6HwoaMxthiKk2M7unMquJ8EyJbw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GrandmaGreen.Collections.DecorationId.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GrandmaGreen.Collections.DecorationId.html",
+          "hash": "rH4kbu+ZOXcMALb3LJVNsb01hX6Gb381YIHnco4DNq0="
         }
       },
       "is_incremental": false,
@@ -352,7 +388,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.Collections.Item.html",
-          "hash": "8xXubqLRiT6cc5FfjuBnvVobhXXNhSMgC7ezJiQ9m7g="
+          "hash": "f8U6ErLJ0vwWVCzbZ7ZnPpJm55m3Q473xtr5U/z9YU4="
         }
       },
       "is_incremental": false,
@@ -360,11 +396,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/GrandmaGreen.Collections.ItemSprite.yml",
+      "source_relative_path": "api/GrandmaGreen.Collections.ItemProperties.yml",
       "output": {
         ".html": {
-          "relative_path": "api/GrandmaGreen.Collections.ItemSprite.html",
-          "hash": "EF/NI/Qg2JOWY7kRrgDsHm53Mreaf16hyJqWvR9VauM="
+          "relative_path": "api/GrandmaGreen.Collections.ItemProperties.html",
+          "hash": "5jSaels0gyN65jM5a3grlugDS9DMWQmg9OOMRpE1kL0="
         }
       },
       "is_incremental": false,
@@ -372,11 +408,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/GrandmaGreen.Collections.ItemSpritesSO.yml",
+      "source_relative_path": "api/GrandmaGreen.Collections.ItemSpriteList.yml",
       "output": {
         ".html": {
-          "relative_path": "api/GrandmaGreen.Collections.ItemSpritesSO.html",
-          "hash": "PFoHn2RECEN9Rv5R9p8pLaLUWiW33dhZHxcHfVPKrHg="
+          "relative_path": "api/GrandmaGreen.Collections.ItemSpriteList.html",
+          "hash": "uK+e78yy5AilIxarxMz5CzVn/iOaHEpwlOAHD5NXJ2Y="
         }
       },
       "is_incremental": false,
@@ -412,7 +448,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.Collections.PlantId.html",
-          "hash": "weasrZG5SoJL9YC9NJpF8XFhlgdSo7cKYMvpi4ccXao="
+          "hash": "ToTjBRcPwXGOoHT2AQ8I1FAxq+7f1DIcyB9dgdJ8NcU="
         }
       },
       "is_incremental": false,
@@ -424,7 +460,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.Collections.PlantProperties.html",
-          "hash": "hW7v2OR4JDo2CQoDhahn9IllqdL/c9mWYR95p0YwZlk="
+          "hash": "uozPlQTx2sXA72NCjkBV/pgYW3rx9STZqLJro0W3Yww="
         }
       },
       "is_incremental": false,
@@ -448,19 +484,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.Collections.SeedId.html",
-          "hash": "fs4+GAwAVM8OSBM0ySVs7SLLcK5ol3hsoXFaW/FxpC4="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/GrandmaGreen.Collections.TEMP_PlantTypeCollection.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/GrandmaGreen.Collections.TEMP_PlantTypeCollection.html",
-          "hash": "0yq1zkcpPpnv4jzK2yaMt9D3BI/MbANddyyAj8rR1kM="
+          "hash": "vZf5rs4K5YRCJcJGxp24bLMdgOK75KAEeot40+q1Dew="
         }
       },
       "is_incremental": false,
@@ -473,6 +497,18 @@
         ".html": {
           "relative_path": "api/GrandmaGreen.Collections.Tool.html",
           "hash": "JNOk9lbLdWRHQjhY6H+L7LGrDDtRFzLENu7mtQ4wPts="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GrandmaGreen.Collections.ToolId.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GrandmaGreen.Collections.ToolId.html",
+          "hash": "HZ9cN3n84lvnaByoAIiYE+mKboVv/tHc9A7rebXVF5U="
         }
       },
       "is_incremental": false,
@@ -496,7 +532,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.Collections.html",
-          "hash": "qOXB6wXVRARHPygENHTbdyOkQ0X2ArveiQ8mi3lfDtg="
+          "hash": "JbOZckVUFIcPhsWml/mVuKEgVZuDedUGt3r9lvb2qZo="
         }
       },
       "is_incremental": false,
@@ -1504,7 +1540,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "XAy2S4mKlPeI1GtOrEzEueG5uRYYBUAAZzUmNrMSRWM="
+          "hash": "NPXRGySk4RlOOh91a+ugoQeh1OQd1i3H82iM7XawKc4="
         }
       },
       "is_incremental": false,
@@ -1613,7 +1649,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 123,
+          "total_file_count": 126,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

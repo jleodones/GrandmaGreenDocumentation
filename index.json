@@ -119,20 +119,35 @@
     "title": "Class CatchUIInput",
     "keywords": "Class CatchUIInput Inheritance Object CatchUIInput Namespace : GrandmaGreen Assembly : cs.temp.dll.dll Syntax public class CatchUIInput : MonoBehaviour Fields document Declaration public UIDocument document Field Value Type Description UIDocument onWorldPointerDown Declaration public UnityEvent onWorldPointerDown Field Value Type Description UnityEvent"
   },
+  "api/GrandmaGreen.Collections.CharacterId.html": {
+    "href": "api/GrandmaGreen.Collections.CharacterId.html",
+    "title": "Enum CharacterId",
+    "keywords": "Enum CharacterId Namespace : GrandmaGreen.Collections Assembly : cs.temp.dll.dll Syntax public enum CharacterId : ushort Fields Name Description AppleGolem CottonGolem CrocusGolem DecorShopkeeper GardeningShopkeeper Grandma PumpkinGolem RadishGolem TulipGolem"
+  },
+  "api/GrandmaGreen.Collections.CharacterProperties.html": {
+    "href": "api/GrandmaGreen.Collections.CharacterProperties.html",
+    "title": "Struct CharacterProperties",
+    "keywords": "Struct CharacterProperties Inherited Members ValueType.Equals(Object) ValueType.GetHashCode() ValueType.ToString() Object.Equals(Object, Object) Object.ReferenceEquals(Object, Object) Object.GetType() Namespace : GrandmaGreen.Collections Assembly : cs.temp.dll.dll Syntax public struct CharacterProperties Fields description Declaration public string description Field Value Type Description String name Declaration public string name Field Value Type Description String spritePaths Declaration public List<string> spritePaths Field Value Type Description List < String >"
+  },
   "api/GrandmaGreen.Collections.CollectionsSO.html": {
     "href": "api/GrandmaGreen.Collections.CollectionsSO.html",
     "title": "Class CollectionsSO",
-    "keywords": "Class CollectionsSO Inheritance Object CollectionsSO Namespace : GrandmaGreen.Collections Assembly : cs.temp.dll.dll Syntax public class CollectionsSO : ScriptableObject Fields items Declaration public List<Item> items Field Value Type Description List < Item >"
+    "keywords": "Class CollectionsSO Inheritance Object CollectionsSO Namespace : GrandmaGreen.Collections Assembly : cs.temp.dll.dll Syntax public class CollectionsSO : ScriptableObject Fields CharacterLookup Declaration public Dictionary<CharacterId, CharacterProperties> CharacterLookup Field Value Type Description Dictionary < CharacterId , CharacterProperties > ItemLookup Declaration public Dictionary<Enum, ItemProperties> ItemLookup Field Value Type Description Dictionary < Enum , ItemProperties > PlantLookup Declaration public Dictionary<PlantId, PlantProperties> PlantLookup Field Value Type Description Dictionary < PlantId , PlantProperties > SpriteCache Declaration public Dictionary<string, Sprite> SpriteCache Field Value Type Description Dictionary < String , Sprite > Methods GetItem(Enum) Declaration public ItemProperties GetItem(Enum id) Parameters Type Name Description Enum id Returns Type Description ItemProperties GetPlant(PlantId) Declaration public PlantProperties GetPlant(PlantId id) Parameters Type Name Description PlantId id Returns Type Description PlantProperties SeedToPlant(SeedId) Declaration public PlantId SeedToPlant(SeedId id) Parameters Type Name Description SeedId id Returns Type Description PlantId"
   },
   "api/GrandmaGreen.Collections.Decor.html": {
     "href": "api/GrandmaGreen.Collections.Decor.html",
     "title": "Struct Decor",
     "keywords": "Struct Decor Implements IInventoryItem Inherited Members ValueType.GetHashCode() ValueType.ToString() Object.Equals(Object, Object) Object.ReferenceEquals(Object, Object) Object.GetType() Namespace : GrandmaGreen.Collections Assembly : cs.temp.dll.dll Syntax public struct Decor : IInventoryItem Constructors Decor(Int32, String, Int32) Declaration public Decor(int id, string name, int num) Parameters Type Name Description Int32 id String name Int32 num Fields quantity Declaration public int quantity Field Value Type Description Int32 Properties itemID Declaration public int itemID { readonly get; set; } Property Value Type Description Int32 itemName Declaration public string itemName { readonly get; set; } Property Value Type Description String itemType Declaration public ItemType itemType { readonly get; set; } Property Value Type Description ItemType Methods Equals(Object) Declaration public override bool Equals(object obj) Parameters Type Name Description Object obj Returns Type Description Boolean Overrides ValueType.Equals(Object) GetQuantityToString() Declaration public string GetQuantityToString() Returns Type Description String Implements IInventoryItem"
   },
+  "api/GrandmaGreen.Collections.DecorationId.html": {
+    "href": "api/GrandmaGreen.Collections.DecorationId.html",
+    "title": "Enum DecorationId",
+    "keywords": "Enum DecorationId Namespace : GrandmaGreen.Collections Assembly : cs.temp.dll.dll Syntax public enum DecorationId : ushort Fields Name Description AcornExterior AppleGolemMemento ArtNouveauSculture01 ArtNouveauSculture02 ArtNouveauSculture03 Bicycle BirdBath BoxwoodBush CampingLantern ClaudeMonetPainting Clover CobblestonePath CommonPoppy CottonGolemMemento CrocusGolemMemento Dandelion DirtPath EuropeanCastleExterior FairyMagicExterior FancyFountain FancyIronFence FancyPond FarmFence FieldstoneFence Flamingo FlowerTable FlowerWagon ForgetMeNot FrenchCountryUrn FrenchProvincialExterior FrogSculpture GardenGnomeBasic GardenGnomeGold GardenGnomeSexy GardeniaBush GrecianRuin HarvestBasket Hemlock HistoricalEnglishExterior HydrangeaBush IronBench IronChair IronLampPost IronTable IvyCoveredBrickFence JackOLantern JapaneseGardenLantern JohnSingerSargentPainting KoiPond Leafpile MagicFountain MailboxBasic MailboxCabin MailboxCottagecore MailboxFairy MailboxGoth MailboxOriental MailboxPastel MapleTree ModernExterior MushroomLamp MushroomStool NaturalPond OakTree OleanderBush PalmTree PastelExterior PicnicSpread PineTree PNWCabinExterior PoplarTree PottedPlant01 PottedPlant02 PottedPlant03 PumpkinGolemMemento RadishGolemMemento RockingChair Scarecrow SimpleFountain SimpleHangingLampPost SimpleWoodenBench SimpleWoodenChair SimpleWoodenFence SimpleWoodenTable StoneBench StumpTree Sundial Swingset TilePath Torch TraditionalJapaneseExterior TulipGolemMemento Umbrella Waterpump Well WhitePicketFence WildDaisies WillowTree WitchyGothExterior WoodPath"
+  },
   "api/GrandmaGreen.Collections.html": {
     "href": "api/GrandmaGreen.Collections.html",
     "title": "Namespace GrandmaGreen.Collections",
-    "keywords": "Namespace GrandmaGreen.Collections Classes CollectionsSO ItemSpritesSO TEMP_PlantTypeCollection Structs Decor Item Temporary struct for an item in the Collections SO ItemSprite An item sprite contains the item's name and the sprite associated with. Values inputted manually. Plant PlantProperties Seed Tool Interfaces IInventoryItem Enums ItemType itemTypes PlantId SeedId"
+    "keywords": "Namespace GrandmaGreen.Collections Classes CollectionsSO Structs CharacterProperties Decor Item Temporary struct for an item in the Collections SO ItemProperties ItemSpriteList An item sprite contains the item's id and the sprite(s) associated with. Plant PlantProperties Seed Tool Interfaces IInventoryItem Enums CharacterId DecorationId ItemType itemTypes PlantId SeedId ToolId"
   },
   "api/GrandmaGreen.Collections.IInventoryItem.html": {
     "href": "api/GrandmaGreen.Collections.IInventoryItem.html",
@@ -142,17 +157,17 @@
   "api/GrandmaGreen.Collections.Item.html": {
     "href": "api/GrandmaGreen.Collections.Item.html",
     "title": "Struct Item",
-    "keywords": "Struct Item Temporary struct for an item in the Collections SO Inherited Members ValueType.Equals(Object) ValueType.GetHashCode() ValueType.ToString() Object.Equals(Object, Object) Object.ReferenceEquals(Object, Object) Object.GetType() Namespace : GrandmaGreen.Collections Assembly : cs.temp.dll.dll Syntax public struct Item Fields description Declaration public string description Field Value Type Description String id Declaration public int id Field Value Type Description Int32 image Declaration public Sprite image Field Value Type Description Sprite itemType Declaration public itemTypes itemType Field Value Type Description itemTypes name Declaration public string name Field Value Type Description String tag Declaration public string tag Field Value Type Description String Methods SetImage(Sprite) Set the image variable by pulling the asset sprite. Sprite naming convention: starts with name of item (spaces replaced with underscores) + _img Declaration public void SetImage(Sprite img) Parameters Type Name Description Sprite img"
+    "keywords": "Struct Item Temporary struct for an item in the Collections SO Inherited Members ValueType.Equals(Object) ValueType.GetHashCode() ValueType.ToString() Object.Equals(Object, Object) Object.ReferenceEquals(Object, Object) Object.GetType() Namespace : GrandmaGreen.Collections Assembly : cs.temp.dll.dll Syntax public struct Item Fields description Declaration public string description Field Value Type Description String id Declaration public int id Field Value Type Description Int32 itemType Declaration public itemTypes itemType Field Value Type Description itemTypes name Declaration public string name Field Value Type Description String tag Declaration public string tag Field Value Type Description String"
   },
-  "api/GrandmaGreen.Collections.ItemSprite.html": {
-    "href": "api/GrandmaGreen.Collections.ItemSprite.html",
-    "title": "Struct ItemSprite",
-    "keywords": "Struct ItemSprite An item sprite contains the item's name and the sprite associated with. Values inputted manually. Inherited Members ValueType.Equals(Object) ValueType.GetHashCode() ValueType.ToString() Object.Equals(Object, Object) Object.ReferenceEquals(Object, Object) Object.GetType() Namespace : GrandmaGreen.Collections Assembly : cs.temp.dll.dll Syntax public struct ItemSprite Fields id Declaration public int id Field Value Type Description Int32 img Declaration public Sprite img Field Value Type Description Sprite"
+  "api/GrandmaGreen.Collections.ItemProperties.html": {
+    "href": "api/GrandmaGreen.Collections.ItemProperties.html",
+    "title": "Struct ItemProperties",
+    "keywords": "Struct ItemProperties Inherited Members ValueType.Equals(Object) ValueType.GetHashCode() ValueType.ToString() Object.Equals(Object, Object) Object.ReferenceEquals(Object, Object) Object.GetType() Namespace : GrandmaGreen.Collections Assembly : cs.temp.dll.dll Syntax public struct ItemProperties Fields description Declaration public string description Field Value Type Description String name Declaration public string name Field Value Type Description String spritePath Declaration public string spritePath Field Value Type Description String tag Declaration public string tag Field Value Type Description String"
   },
-  "api/GrandmaGreen.Collections.ItemSpritesSO.html": {
-    "href": "api/GrandmaGreen.Collections.ItemSpritesSO.html",
-    "title": "Class ItemSpritesSO",
-    "keywords": "Class ItemSpritesSO Inheritance Object ItemSpritesSO Namespace : GrandmaGreen.Collections Assembly : cs.temp.dll.dll Syntax public class ItemSpritesSO : ScriptableObject Fields itemSprites Declaration public List<ItemSprite> itemSprites Field Value Type Description List < ItemSprite >"
+  "api/GrandmaGreen.Collections.ItemSpriteList.html": {
+    "href": "api/GrandmaGreen.Collections.ItemSpriteList.html",
+    "title": "Struct ItemSpriteList",
+    "keywords": "Struct ItemSpriteList An item sprite contains the item's id and the sprite(s) associated with. Inherited Members ValueType.Equals(Object) ValueType.GetHashCode() ValueType.ToString() Object.Equals(Object, Object) Object.ReferenceEquals(Object, Object) Object.GetType() Namespace : GrandmaGreen.Collections Assembly : cs.temp.dll.dll Syntax public struct ItemSpriteList Fields id Declaration public int id Field Value Type Description Int32 sprites Declaration public List<Sprite> sprites Field Value Type Description List < Sprite >"
   },
   "api/GrandmaGreen.Collections.ItemType.html": {
     "href": "api/GrandmaGreen.Collections.ItemType.html",
@@ -172,12 +187,12 @@
   "api/GrandmaGreen.Collections.PlantId.html": {
     "href": "api/GrandmaGreen.Collections.PlantId.html",
     "title": "Enum PlantId",
-    "keywords": "Enum PlantId Namespace : GrandmaGreen.Collections Assembly : cs.temp.dll.dll Syntax public enum PlantId : ushort Fields Name Description Rose Tulip"
+    "keywords": "Enum PlantId Namespace : GrandmaGreen.Collections Assembly : cs.temp.dll.dll Syntax public enum PlantId : ushort Fields Name Description Apple Blueberry CallaLily Cherry Corn Crocus Cucumber Dahlia Hyacinth Pansy Peach Pear Pepper Plum Pumpkin Radish Rose SweetPotato Tomato Tulip Watermelon"
   },
   "api/GrandmaGreen.Collections.PlantProperties.html": {
     "href": "api/GrandmaGreen.Collections.PlantProperties.html",
     "title": "Struct PlantProperties",
-    "keywords": "Struct PlantProperties Inherited Members ValueType.Equals(Object) ValueType.GetHashCode() ValueType.ToString() Object.Equals(Object, Object) Object.ReferenceEquals(Object, Object) Object.GetType() Namespace : GrandmaGreen.Collections Assembly : cs.temp.dll.dll Syntax public struct PlantProperties Fields growthStages Declaration public int growthStages Field Value Type Description Int32 growthTimeSecs Declaration public double growthTimeSecs Field Value Type Description Double name Declaration public string name Field Value Type Description String spritePaths Declaration public List<string> spritePaths Field Value Type Description List < String >"
+    "keywords": "Struct PlantProperties Inherited Members ValueType.Equals(Object) ValueType.GetHashCode() ValueType.ToString() Object.Equals(Object, Object) Object.ReferenceEquals(Object, Object) Object.GetType() Namespace : GrandmaGreen.Collections Assembly : cs.temp.dll.dll Syntax public struct PlantProperties Fields description Declaration public string description Field Value Type Description String growthStages Declaration public int growthStages Field Value Type Description Int32 name Declaration public string name Field Value Type Description String spritePaths Declaration public List<string> spritePaths Field Value Type Description List < String >"
   },
   "api/GrandmaGreen.Collections.Seed.html": {
     "href": "api/GrandmaGreen.Collections.Seed.html",
@@ -187,17 +202,17 @@
   "api/GrandmaGreen.Collections.SeedId.html": {
     "href": "api/GrandmaGreen.Collections.SeedId.html",
     "title": "Enum SeedId",
-    "keywords": "Enum SeedId Namespace : GrandmaGreen.Collections Assembly : cs.temp.dll.dll Syntax public enum SeedId : ushort Fields Name Description Rose Tulip"
-  },
-  "api/GrandmaGreen.Collections.TEMP_PlantTypeCollection.html": {
-    "href": "api/GrandmaGreen.Collections.TEMP_PlantTypeCollection.html",
-    "title": "Class TEMP_PlantTypeCollection",
-    "keywords": "Class TEMP_PlantTypeCollection Inheritance Object TEMP_PlantTypeCollection Namespace : GrandmaGreen.Collections Assembly : cs.temp.dll.dll Syntax public class TEMP_PlantTypeCollection : ScriptableObject Methods GetPlant(PlantId) Declaration public PlantProperties GetPlant(PlantId id) Parameters Type Name Description PlantId id Returns Type Description PlantProperties SeedToPlant(SeedId) Declaration public PlantId SeedToPlant(SeedId id) Parameters Type Name Description SeedId id Returns Type Description PlantId"
+    "keywords": "Enum SeedId Namespace : GrandmaGreen.Collections Assembly : cs.temp.dll.dll Syntax public enum SeedId : ushort Fields Name Description Apple Blueberry CallaLily Cherry Corn Crocus Cucumber Dahlia Hyacinth Pansy Peach Pear Pepper Plum Pumpkin Radish Rose SweetPotato Tomato Tulip Watermelon"
   },
   "api/GrandmaGreen.Collections.Tool.html": {
     "href": "api/GrandmaGreen.Collections.Tool.html",
     "title": "Struct Tool",
     "keywords": "Struct Tool Implements IInventoryItem Inherited Members ValueType.GetHashCode() ValueType.ToString() Object.Equals(Object, Object) Object.ReferenceEquals(Object, Object) Object.GetType() Namespace : GrandmaGreen.Collections Assembly : cs.temp.dll.dll Syntax public struct Tool : IInventoryItem Constructors Tool(Int32, String, Int32) Declaration public Tool(int id, string name, int num) Parameters Type Name Description Int32 id String name Int32 num Fields quantity Declaration public int quantity Field Value Type Description Int32 Properties itemID Declaration public int itemID { readonly get; set; } Property Value Type Description Int32 itemName Declaration public string itemName { readonly get; set; } Property Value Type Description String itemType Declaration public ItemType itemType { readonly get; set; } Property Value Type Description ItemType Methods Equals(Object) Declaration public override bool Equals(object obj) Parameters Type Name Description Object obj Returns Type Description Boolean Overrides ValueType.Equals(Object) GetQuantityToString() Declaration public string GetQuantityToString() Returns Type Description String Implements IInventoryItem"
+  },
+  "api/GrandmaGreen.Collections.ToolId.html": {
+    "href": "api/GrandmaGreen.Collections.ToolId.html",
+    "title": "Enum ToolId",
+    "keywords": "Enum ToolId Namespace : GrandmaGreen.Collections Assembly : cs.temp.dll.dll Syntax public enum ToolId : ushort Fields Name Description Fertilizer SeedPacket Trowel UpgradedTrowel UpgradedWateringCan WateringCan"
   },
   "api/GrandmaGreen.CommonSFX.html": {
     "href": "api/GrandmaGreen.CommonSFX.html",
