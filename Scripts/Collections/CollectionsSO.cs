@@ -204,11 +204,13 @@ namespace GrandmaGreen.Collections
         public string name;
         public string description;
         public int growthStages;
+        public int growthTime;
         public List<string> spritePaths;
     }
 }
 
-namespace GrandmaGreen.Collections {
+namespace GrandmaGreen.Collections
+{
     using Id = System.Enum;
     [CreateAssetMenu(fileName = "New Collections SO")]
     ///<summary>
@@ -251,10 +253,20 @@ namespace GrandmaGreen.Collections {
         //         return sprite;
         //     }
         // }
-        
+
+        // temporary substitute for sprite resolution -
+	    // jank hard-coded plant prefabs :D
+        [SerializeField] List<GameObject> plantPrefabs;
+
+        public GameObject GetPrefab(string prefab)
+        {
+            return plantPrefabs[int.Parse(prefab)];
+	    }
+
         public PlantId SeedToPlant(SeedId id)
         {
-            switch (id) {
+            switch (id)
+            {
                 case SeedId.Rose:
                     return PlantId.Rose;
                 case SeedId.Tulip:
@@ -264,5 +276,32 @@ namespace GrandmaGreen.Collections {
             }
         }
 
+        // temporary hard-coded plant properties
+        // to be swapped with properties in CSV
+        [ContextMenu("DEBUGLoadPlantProperties")]
+        public void DEBUGLoadPlantProperties()
+        {
+            PlantLookup = new Dictionary<PlantId, PlantProperties>()
+            {
+                {
+                    PlantId.Rose, new PlantProperties
+                    {
+                        name = "Rose",
+                        growthStages = 3,
+                        growthTime = 10,
+                        spritePaths = new List<string>{"0", "1", "2"}
+                    }
+                },
+                {
+                    PlantId.Tulip, new PlantProperties
+                    {
+                        name = "Tulip",
+                        growthStages = 3,
+                        growthTime = 10,
+                        spritePaths = new List<string>{"3", "4", "5"}
+                    }
+                }
+            };
+        }
     }
 }

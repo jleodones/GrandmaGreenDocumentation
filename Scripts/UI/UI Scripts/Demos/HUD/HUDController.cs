@@ -27,6 +27,14 @@ namespace GrandmaGreen.UI.HUD
         {
             m_root.style.display = DisplayStyle.Flex;
         }
+        public void OpenHUDAnimated()
+        {
+            m_root.style.display = DisplayStyle.Flex;
+        }
+         public void CloseHUD()
+        {
+            m_root.style.display = DisplayStyle.None;
+        }
 
         public void RegisterButtonCallbacks()
         {

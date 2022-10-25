@@ -12,3 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7366940f57e724cbea64b85b9c958ad2, type: 3}
   m_Name: CollectionsSystemData
   m_EditorClassIdentifier: 
+  plantPrefabs:
+  - {fileID: 8263784618669775337, guid: c36d0230082f844a8b877f17eecefcfd, type: 3}
+  - {fileID: 8076749090643673299, guid: 3193277a3abe748e5a92f9e57da363f8, type: 3}
+  - {fileID: 3798599770942618954, guid: 9150142e7ee424e769bd30c43bfaf2b1, type: 3}
+  - {fileID: 6280755582971341268, guid: 1cbe8b106a9c34022a21bef766f98cdf, type: 3}
+  - {fileID: 8828596984065409051, guid: c478a2484ce1c44459dccd04bb6b994f, type: 3}
+  - {fileID: 2644291640336121025, guid: f7f3a361494fe46a68810b2dd3d55e57, type: 3}

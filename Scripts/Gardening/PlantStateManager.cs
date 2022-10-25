@@ -1,29 +1,18 @@
 using System.Collections.Generic;
-
+using GrandmaGreen.Collections;
 using UnityEngine;
 
 namespace GrandmaGreen.Garden
 {
+    using Timer = TimeLayer.TimeLayer;
 
     [System.Serializable]
-    /// <summary>
-    /// Struct for plant state storage
-    /// </summary>
     public struct PlantState
     {
-        public PlantType type;
+        public PlantId type;
         public int growthStage;
         public float timePlanted;
         public Vector3Int cell;
-
-        public PlantState(PlantState plant)
-        {
-            this.type = plant.type;
-            this.growthStage = plant.growthStage + 1 < type.growthStages ?
-                plant.growthStage + 1 : plant.growthStage;
-            this.timePlanted = plant.timePlanted;
-            this.cell = plant.cell;
-        }
     }
 
     [System.Serializable]
@@ -37,11 +26,16 @@ namespace GrandmaGreen.Garden
     [CreateAssetMenu(menuName = "GrandmaGreen/Garden/GlobalPlantState")]
     public class PlantStateManager : ScriptableObject
     {
+        [SerializeField]
+        CollectionsSO collection;
+
         private Dictionary<Vector3Int, PlantState>[] plantLookup;
 
         [SerializeField]
-        public List<GrowthEvent> growthEventQueue;
-        private TimeLayer.TimeLayer timer;
+        List<GrowthEvent> growthEventQueue;
+
+        [SerializeField]
+        Timer timer;
 
         private void InsertGrowthEvent(GrowthEvent item)
         {
@@ -60,7 +54,7 @@ namespace GrandmaGreen.Garden
             else
             {
                 int index = growthEventQueue.BinarySearch(
-                    item, Comparer<GrowthEvent>.Create((x,y)
+                    item, Comparer<GrowthEvent>.Create((x, y)
                     => x.growthTime.CompareTo(y.growthTime)));
                 index = index < 0 ? ~index : index;
                 growthEventQueue.Insert(index, item);
@@ -88,7 +82,7 @@ namespace GrandmaGreen.Garden
             return !plantLookup[areaIndex].ContainsKey(cell);
         }
 
-        public void CreatePlant(PlantType type, int areaIndex, Vector3Int cell)
+        public void CreatePlant(PlantId type, int areaIndex, Vector3Int cell)
         {
             plantLookup[areaIndex][cell] = new PlantState
             {
@@ -121,13 +115,13 @@ namespace GrandmaGreen.Garden
             return new List<PlantState>(plantLookup[areaIndex].Values);
         }
 
-        public PlantType GetPlantType(int areaIndex, Vector3Int cell)
+        public PlantId GetPlantType(int areaIndex, Vector3Int cell)
         {
             if (!IsEmpty(areaIndex, cell))
             {
                 return plantLookup[areaIndex][cell].type;
             }
-            return null;
+            return 0;
         }
 
         public int GetGrowthStage(int areaIndex, Vector3Int cell)
@@ -141,27 +135,31 @@ namespace GrandmaGreen.Garden
 
         public void IncrementGrowthStage(int areaIndex, Vector3Int cell)
         {
-           PlantState plant = plantLookup[areaIndex][cell];
-           int current = plant.growthStage;
-           int max = plant.type.growthStages;
+            PlantState plant = GetPlant(areaIndex, cell);
+            int max = collection.GetPlant(plant.type).growthStages;
 
-           if (!IsEmpty(areaIndex, cell) && current < max)
-           {
-               plantLookup[areaIndex][cell] = new PlantState(plant);
-           }
+            if (!IsEmpty(areaIndex, cell) && plant.growthStage < max)
+            {
+                plantLookup[areaIndex][cell] = new PlantState
+                {
+                    type = plant.type,
+                    growthStage = plant.growthStage + 1,
+                    timePlanted = plant.timePlanted,
+                    cell = plant.cell
+                };
+            }
         }
 
         [ContextMenu("FireGrowthEvent")]
         public void FireGrowthEvent()
         {
-            EventManager.instance.HandleEVENT_PLANT_UPDATE(0, Vector3Int.zero);    
+            EventManager.instance.HandleEVENT_PLANT_UPDATE(0, Vector3Int.zero);
         }
 
         [ContextMenu("InsertGrowthEvent")]
         public void InsertGrowthEvent()
         {
-            InsertGrowthEvent(new GrowthEvent { growthTime = (int)(10*Random.value)});
+            InsertGrowthEvent(new GrowthEvent { growthTime = (int)(10 * Random.value) });
         }
     }
 }
-

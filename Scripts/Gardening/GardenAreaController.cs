@@ -1,12 +1,8 @@
-using Core.Input;
-using NaughtyAttributes;
-using Pathfinding;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
-using UnityEngine.Tilemaps;
 using GrandmaGreen.Entities;
+using GrandmaGreen.Collections;
 
 namespace GrandmaGreen.Garden
 {
@@ -16,6 +12,9 @@ namespace GrandmaGreen.Garden
     /// </summary>
     public class GardenAreaController : AreaController
     {
+        [Header("Collections")]
+        [SerializeField]
+        CollectionsSO collection;
 
         [Header("Player References")]
         public PlayerToolData playerTools;
@@ -35,6 +34,7 @@ namespace GrandmaGreen.Garden
             golemManager.Initialize();
             plantStateManager.Initialize();
             plantStateManager.RegisterGarden(areaIndex);
+            collection.DEBUGLoadPlantProperties();
         }
 
         public override void Activate()
@@ -57,23 +57,23 @@ namespace GrandmaGreen.Garden
 
         IEnumerator GrowthCoroutine(Vector3Int cell)
         {
-           PlantType type = plantStateManager.GetPlantType(areaIndex, cell);
+            PlantId type = plantStateManager.GetPlantType(areaIndex, cell);
+            PlantProperties properties = collection.GetPlant(type);
 
+            Debug.Log(string.Format("Growing {0} at {1}.", properties.name, cell));
+            for (int i = 1; i < properties.growthStages; i++)
+            {
+                yield return new WaitForSeconds(5);
 
-           Debug.Log(string.Format("Growing {0} at {1}.", type.name, cell));
-           for (int i = 1; i < type.growthStages; i++)
-           {
-               yield return new WaitForSeconds(5);
+                if (plantStateManager.IsEmpty(areaIndex, cell))
+                    yield break;
 
-               if (plantStateManager.IsEmpty(areaIndex, cell))
-                   yield break;
-
-               plantStateManager.IncrementGrowthStage(areaIndex, cell);
-               UpdatePlantPrefabOnCell(type, cell);
-               Debug.Log(string.Format("{0} grew. Current stage: {1}", type.name, plantStateManager.GetGrowthStage(areaIndex, cell)));
-               InspectPlants();
-           }
-           Debug.Log("Done growing.");
+                plantStateManager.IncrementGrowthStage(areaIndex, cell);
+                UpdatePlantPrefabOnCell(type, cell);
+                Debug.Log(string.Format("{0} grew. Current stage: {1}", properties.name, plantStateManager.GetGrowthStage(areaIndex, cell)));
+                InspectPlants();
+            }
+            Debug.Log("Done growing.");
         }
 
         void PlantUpdate(int areaIndex, Vector3Int cell)
@@ -91,11 +91,12 @@ namespace GrandmaGreen.Garden
             }
         }
 
-        public void PlacePlantPrefabOnCell(Vector3Int cell, PlantType type, int growthStage)
+        public void PlacePlantPrefabOnCell(Vector3Int cell, PlantId type, int growthStage)
         {
             Vector3 centerOfCell = tilemap.GetCellCenterWorld(cell);
-            plantPrefabLookup[cell] = Instantiate(type.growthStagePrefabs[growthStage],
-                centerOfCell, Quaternion.identity);
+            PlantProperties properties = collection.GetPlant(type);
+            GameObject prefab = collection.GetPrefab(properties.spritePaths[growthStage]);
+            plantPrefabLookup[cell] = Instantiate(prefab, centerOfCell, Quaternion.identity);
         }
 
         public void DestroyPlantPrefabOnCell(Vector3Int cell)
@@ -107,13 +108,33 @@ namespace GrandmaGreen.Garden
             }
         }
 
-        public void UpdatePlantPrefabOnCell(PlantType type, Vector3Int cell)
+        public void UpdatePlantPrefabOnCell(PlantId type, Vector3Int cell)
         {
             DestroyPlantPrefabOnCell(cell);
             PlacePlantPrefabOnCell(cell, type, plantStateManager.GetGrowthStage(areaIndex, cell));
         }
 
         public void CreatePlantOnCell(PlantType type, Vector3Int cell)
+        {
+            PlantId id = PlantId.Rose;
+            if (type.name.Equals("Rose")) {
+                id = PlantId.Rose;
+	        } else if (type.name.Equals("Tulip"))
+            {
+                id = PlantId.Tulip; 
+	        } else
+            {
+                return;
+	        }
+            if (!plantPrefabLookup.ContainsKey(cell) || plantStateManager.IsEmpty(areaIndex, cell))
+            {
+                PlacePlantPrefabOnCell(cell, id, 0);
+                plantStateManager.CreatePlant(id, areaIndex, cell);
+                StartCoroutine(GrowthCoroutine(cell));
+            }
+        }
+
+        public void CreatePlant(PlantId type, Vector3Int cell)
         {
             if (!plantPrefabLookup.ContainsKey(cell) || plantStateManager.IsEmpty(areaIndex, cell))
             {
@@ -143,34 +164,6 @@ namespace GrandmaGreen.Garden
 
             DestroyPlantOnCell(cell);
             return false;
-        }
-
-        [ContextMenu("PlaceRoseBottomLeft")]
-        public void PlaceRoseBottomLeft()
-        {
-            CreatePlantOnCell(plantTypeDictionary[1], tilemap.origin);
-            InspectPlants();
-        }
-
-        [ContextMenu("DestroyRoseBottomLeft")]
-        public void DestroyRoseBottomLeft()
-        {
-            DestroyPlantOnCell(tilemap.origin);
-            InspectPlants();
-        }
-
-        [ContextMenu("PlaceAllPlantTypePrefabs")]
-        public void PlaceAllPlantTypePrefabs()
-        {
-            for (int i = 0; i < plantTypeDictionary.plantTypes.Length; i++)
-            {
-                PlantType plant = plantTypeDictionary.plantTypes[i];
-                for (int j = 0; j < plant.growthStagePrefabs.Length; j++)
-                {
-                    PlacePlantPrefabOnCell(tilemap.origin + i * Vector3Int.up + j * Vector3Int.right, plant, j);
-                }
-            }
-            InspectPlants();
         }
 
         [ContextMenu("DestroyAllPlants")]
