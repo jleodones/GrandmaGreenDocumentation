@@ -964,6 +964,19 @@ references:
   commentId: F:GrandmaGreen.Collections.CollectionsSO.CharacterLookup
   fullName: GrandmaGreen.Collections.CollectionsSO.CharacterLookup
   nameWithType: CollectionsSO.CharacterLookup
+- uid: GrandmaGreen.Collections.CollectionsSO.DEBUGLoadPlantProperties
+  name: DEBUGLoadPlantProperties()
+  href: api/GrandmaGreen.Collections.CollectionsSO.html#GrandmaGreen_Collections_CollectionsSO_DEBUGLoadPlantProperties
+  commentId: M:GrandmaGreen.Collections.CollectionsSO.DEBUGLoadPlantProperties
+  fullName: GrandmaGreen.Collections.CollectionsSO.DEBUGLoadPlantProperties()
+  nameWithType: CollectionsSO.DEBUGLoadPlantProperties()
+- uid: GrandmaGreen.Collections.CollectionsSO.DEBUGLoadPlantProperties*
+  name: DEBUGLoadPlantProperties
+  href: api/GrandmaGreen.Collections.CollectionsSO.html#GrandmaGreen_Collections_CollectionsSO_DEBUGLoadPlantProperties_
+  commentId: Overload:GrandmaGreen.Collections.CollectionsSO.DEBUGLoadPlantProperties
+  isSpec: "True"
+  fullName: GrandmaGreen.Collections.CollectionsSO.DEBUGLoadPlantProperties
+  nameWithType: CollectionsSO.DEBUGLoadPlantProperties
 - uid: GrandmaGreen.Collections.CollectionsSO.GetItem(System.Enum)
   name: GetItem(Enum)
   href: api/GrandmaGreen.Collections.CollectionsSO.html#GrandmaGreen_Collections_CollectionsSO_GetItem_System_Enum_
@@ -990,6 +1003,19 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Collections.CollectionsSO.GetPlant
   nameWithType: CollectionsSO.GetPlant
+- uid: GrandmaGreen.Collections.CollectionsSO.GetPrefab(System.String)
+  name: GetPrefab(String)
+  href: api/GrandmaGreen.Collections.CollectionsSO.html#GrandmaGreen_Collections_CollectionsSO_GetPrefab_System_String_
+  commentId: M:GrandmaGreen.Collections.CollectionsSO.GetPrefab(System.String)
+  fullName: GrandmaGreen.Collections.CollectionsSO.GetPrefab(System.String)
+  nameWithType: CollectionsSO.GetPrefab(String)
+- uid: GrandmaGreen.Collections.CollectionsSO.GetPrefab*
+  name: GetPrefab
+  href: api/GrandmaGreen.Collections.CollectionsSO.html#GrandmaGreen_Collections_CollectionsSO_GetPrefab_
+  commentId: Overload:GrandmaGreen.Collections.CollectionsSO.GetPrefab
+  isSpec: "True"
+  fullName: GrandmaGreen.Collections.CollectionsSO.GetPrefab
+  nameWithType: CollectionsSO.GetPrefab
 - uid: GrandmaGreen.Collections.CollectionsSO.ItemLookup
   name: ItemLookup
   href: api/GrandmaGreen.Collections.CollectionsSO.html#GrandmaGreen_Collections_CollectionsSO_ItemLookup
@@ -2171,6 +2197,12 @@ references:
   commentId: F:GrandmaGreen.Collections.PlantProperties.growthStages
   fullName: GrandmaGreen.Collections.PlantProperties.growthStages
   nameWithType: PlantProperties.growthStages
+- uid: GrandmaGreen.Collections.PlantProperties.growthTime
+  name: growthTime
+  href: api/GrandmaGreen.Collections.PlantProperties.html#GrandmaGreen_Collections_PlantProperties_growthTime
+  commentId: F:GrandmaGreen.Collections.PlantProperties.growthTime
+  fullName: GrandmaGreen.Collections.PlantProperties.growthTime
+  nameWithType: PlantProperties.growthTime
 - uid: GrandmaGreen.Collections.PlantProperties.name
   name: name
   href: api/GrandmaGreen.Collections.PlantProperties.html#GrandmaGreen_Collections_PlantProperties_name
@@ -3891,6 +3923,19 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Garden.GardenAreaController.Awake
   nameWithType: GardenAreaController.Awake
+- uid: GrandmaGreen.Garden.GardenAreaController.CreatePlant(PlantId,Vector3Int)
+  name: CreatePlant(PlantId, Vector3Int)
+  href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_CreatePlant_PlantId_Vector3Int_
+  commentId: M:GrandmaGreen.Garden.GardenAreaController.CreatePlant(PlantId,Vector3Int)
+  fullName: GrandmaGreen.Garden.GardenAreaController.CreatePlant(PlantId, Vector3Int)
+  nameWithType: GardenAreaController.CreatePlant(PlantId, Vector3Int)
+- uid: GrandmaGreen.Garden.GardenAreaController.CreatePlant*
+  name: CreatePlant
+  href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_CreatePlant_
+  commentId: Overload:GrandmaGreen.Garden.GardenAreaController.CreatePlant
+  isSpec: "True"
+  fullName: GrandmaGreen.Garden.GardenAreaController.CreatePlant
+  nameWithType: GardenAreaController.CreatePlant
 - uid: GrandmaGreen.Garden.GardenAreaController.CreatePlantOnCell(GrandmaGreen.PlantType,Vector3Int)
   name: CreatePlantOnCell(PlantType, Vector3Int)
   href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_CreatePlantOnCell_GrandmaGreen_PlantType_Vector3Int_
@@ -3943,19 +3988,6 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Garden.GardenAreaController.DestroyPlantPrefabOnCell
   nameWithType: GardenAreaController.DestroyPlantPrefabOnCell
-- uid: GrandmaGreen.Garden.GardenAreaController.DestroyRoseBottomLeft
-  name: DestroyRoseBottomLeft()
-  href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_DestroyRoseBottomLeft
-  commentId: M:GrandmaGreen.Garden.GardenAreaController.DestroyRoseBottomLeft
-  fullName: GrandmaGreen.Garden.GardenAreaController.DestroyRoseBottomLeft()
-  nameWithType: GardenAreaController.DestroyRoseBottomLeft()
-- uid: GrandmaGreen.Garden.GardenAreaController.DestroyRoseBottomLeft*
-  name: DestroyRoseBottomLeft
-  href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_DestroyRoseBottomLeft_
-  commentId: Overload:GrandmaGreen.Garden.GardenAreaController.DestroyRoseBottomLeft
-  isSpec: "True"
-  fullName: GrandmaGreen.Garden.GardenAreaController.DestroyRoseBottomLeft
-  nameWithType: GardenAreaController.DestroyRoseBottomLeft
 - uid: GrandmaGreen.Garden.GardenAreaController.GardenTileSelected(Vector3Int)
   name: GardenTileSelected(Vector3Int)
   href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_GardenTileSelected_Vector3Int_
@@ -4014,25 +4046,12 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Garden.GardenAreaController.InspectPlants
   nameWithType: GardenAreaController.InspectPlants
-- uid: GrandmaGreen.Garden.GardenAreaController.PlaceAllPlantTypePrefabs
-  name: PlaceAllPlantTypePrefabs()
-  href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_PlaceAllPlantTypePrefabs
-  commentId: M:GrandmaGreen.Garden.GardenAreaController.PlaceAllPlantTypePrefabs
-  fullName: GrandmaGreen.Garden.GardenAreaController.PlaceAllPlantTypePrefabs()
-  nameWithType: GardenAreaController.PlaceAllPlantTypePrefabs()
-- uid: GrandmaGreen.Garden.GardenAreaController.PlaceAllPlantTypePrefabs*
-  name: PlaceAllPlantTypePrefabs
-  href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_PlaceAllPlantTypePrefabs_
-  commentId: Overload:GrandmaGreen.Garden.GardenAreaController.PlaceAllPlantTypePrefabs
-  isSpec: "True"
-  fullName: GrandmaGreen.Garden.GardenAreaController.PlaceAllPlantTypePrefabs
-  nameWithType: GardenAreaController.PlaceAllPlantTypePrefabs
-- uid: GrandmaGreen.Garden.GardenAreaController.PlacePlantPrefabOnCell(Vector3Int,GrandmaGreen.PlantType,System.Int32)
-  name: PlacePlantPrefabOnCell(Vector3Int, PlantType, Int32)
-  href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_PlacePlantPrefabOnCell_Vector3Int_GrandmaGreen_PlantType_System_Int32_
-  commentId: M:GrandmaGreen.Garden.GardenAreaController.PlacePlantPrefabOnCell(Vector3Int,GrandmaGreen.PlantType,System.Int32)
-  fullName: GrandmaGreen.Garden.GardenAreaController.PlacePlantPrefabOnCell(Vector3Int, GrandmaGreen.PlantType, System.Int32)
-  nameWithType: GardenAreaController.PlacePlantPrefabOnCell(Vector3Int, PlantType, Int32)
+- uid: GrandmaGreen.Garden.GardenAreaController.PlacePlantPrefabOnCell(Vector3Int,PlantId,System.Int32)
+  name: PlacePlantPrefabOnCell(Vector3Int, PlantId, Int32)
+  href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_PlacePlantPrefabOnCell_Vector3Int_PlantId_System_Int32_
+  commentId: M:GrandmaGreen.Garden.GardenAreaController.PlacePlantPrefabOnCell(Vector3Int,PlantId,System.Int32)
+  fullName: GrandmaGreen.Garden.GardenAreaController.PlacePlantPrefabOnCell(Vector3Int, PlantId, System.Int32)
+  nameWithType: GardenAreaController.PlacePlantPrefabOnCell(Vector3Int, PlantId, Int32)
 - uid: GrandmaGreen.Garden.GardenAreaController.PlacePlantPrefabOnCell*
   name: PlacePlantPrefabOnCell
   href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_PlacePlantPrefabOnCell_
@@ -4040,19 +4059,6 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Garden.GardenAreaController.PlacePlantPrefabOnCell
   nameWithType: GardenAreaController.PlacePlantPrefabOnCell
-- uid: GrandmaGreen.Garden.GardenAreaController.PlaceRoseBottomLeft
-  name: PlaceRoseBottomLeft()
-  href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_PlaceRoseBottomLeft
-  commentId: M:GrandmaGreen.Garden.GardenAreaController.PlaceRoseBottomLeft
-  fullName: GrandmaGreen.Garden.GardenAreaController.PlaceRoseBottomLeft()
-  nameWithType: GardenAreaController.PlaceRoseBottomLeft()
-- uid: GrandmaGreen.Garden.GardenAreaController.PlaceRoseBottomLeft*
-  name: PlaceRoseBottomLeft
-  href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_PlaceRoseBottomLeft_
-  commentId: Overload:GrandmaGreen.Garden.GardenAreaController.PlaceRoseBottomLeft
-  isSpec: "True"
-  fullName: GrandmaGreen.Garden.GardenAreaController.PlaceRoseBottomLeft
-  nameWithType: GardenAreaController.PlaceRoseBottomLeft
 - uid: GrandmaGreen.Garden.GardenAreaController.plantListDebug
   name: plantListDebug
   href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_plantListDebug
@@ -4083,12 +4089,12 @@ references:
   commentId: F:GrandmaGreen.Garden.GardenAreaController.playerTools
   fullName: GrandmaGreen.Garden.GardenAreaController.playerTools
   nameWithType: GardenAreaController.playerTools
-- uid: GrandmaGreen.Garden.GardenAreaController.UpdatePlantPrefabOnCell(GrandmaGreen.PlantType,Vector3Int)
-  name: UpdatePlantPrefabOnCell(PlantType, Vector3Int)
-  href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_UpdatePlantPrefabOnCell_GrandmaGreen_PlantType_Vector3Int_
-  commentId: M:GrandmaGreen.Garden.GardenAreaController.UpdatePlantPrefabOnCell(GrandmaGreen.PlantType,Vector3Int)
-  fullName: GrandmaGreen.Garden.GardenAreaController.UpdatePlantPrefabOnCell(GrandmaGreen.PlantType, Vector3Int)
-  nameWithType: GardenAreaController.UpdatePlantPrefabOnCell(PlantType, Vector3Int)
+- uid: GrandmaGreen.Garden.GardenAreaController.UpdatePlantPrefabOnCell(PlantId,Vector3Int)
+  name: UpdatePlantPrefabOnCell(PlantId, Vector3Int)
+  href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_UpdatePlantPrefabOnCell_PlantId_Vector3Int_
+  commentId: M:GrandmaGreen.Garden.GardenAreaController.UpdatePlantPrefabOnCell(PlantId,Vector3Int)
+  fullName: GrandmaGreen.Garden.GardenAreaController.UpdatePlantPrefabOnCell(PlantId, Vector3Int)
+  nameWithType: GardenAreaController.UpdatePlantPrefabOnCell(PlantId, Vector3Int)
 - uid: GrandmaGreen.Garden.GardenAreaController.UpdatePlantPrefabOnCell*
   name: UpdatePlantPrefabOnCell
   href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_UpdatePlantPrefabOnCell_
@@ -4506,19 +4512,6 @@ references:
   commentId: T:GrandmaGreen.Garden.PlantState
   fullName: GrandmaGreen.Garden.PlantState
   nameWithType: PlantState
-- uid: GrandmaGreen.Garden.PlantState.#ctor(GrandmaGreen.Garden.PlantState)
-  name: PlantState(PlantState)
-  href: api/GrandmaGreen.Garden.PlantState.html#GrandmaGreen_Garden_PlantState__ctor_GrandmaGreen_Garden_PlantState_
-  commentId: M:GrandmaGreen.Garden.PlantState.#ctor(GrandmaGreen.Garden.PlantState)
-  fullName: GrandmaGreen.Garden.PlantState.PlantState(GrandmaGreen.Garden.PlantState)
-  nameWithType: PlantState.PlantState(PlantState)
-- uid: GrandmaGreen.Garden.PlantState.#ctor*
-  name: PlantState
-  href: api/GrandmaGreen.Garden.PlantState.html#GrandmaGreen_Garden_PlantState__ctor_
-  commentId: Overload:GrandmaGreen.Garden.PlantState.#ctor
-  isSpec: "True"
-  fullName: GrandmaGreen.Garden.PlantState.PlantState
-  nameWithType: PlantState.PlantState
 - uid: GrandmaGreen.Garden.PlantState.cell
   name: cell
   href: api/GrandmaGreen.Garden.PlantState.html#GrandmaGreen_Garden_PlantState_cell
@@ -4562,12 +4555,12 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Garden.PlantStateManager.ClearGarden
   nameWithType: PlantStateManager.ClearGarden
-- uid: GrandmaGreen.Garden.PlantStateManager.CreatePlant(GrandmaGreen.PlantType,System.Int32,Vector3Int)
-  name: CreatePlant(PlantType, Int32, Vector3Int)
-  href: api/GrandmaGreen.Garden.PlantStateManager.html#GrandmaGreen_Garden_PlantStateManager_CreatePlant_GrandmaGreen_PlantType_System_Int32_Vector3Int_
-  commentId: M:GrandmaGreen.Garden.PlantStateManager.CreatePlant(GrandmaGreen.PlantType,System.Int32,Vector3Int)
-  fullName: GrandmaGreen.Garden.PlantStateManager.CreatePlant(GrandmaGreen.PlantType, System.Int32, Vector3Int)
-  nameWithType: PlantStateManager.CreatePlant(PlantType, Int32, Vector3Int)
+- uid: GrandmaGreen.Garden.PlantStateManager.CreatePlant(PlantId,System.Int32,Vector3Int)
+  name: CreatePlant(PlantId, Int32, Vector3Int)
+  href: api/GrandmaGreen.Garden.PlantStateManager.html#GrandmaGreen_Garden_PlantStateManager_CreatePlant_PlantId_System_Int32_Vector3Int_
+  commentId: M:GrandmaGreen.Garden.PlantStateManager.CreatePlant(PlantId,System.Int32,Vector3Int)
+  fullName: GrandmaGreen.Garden.PlantStateManager.CreatePlant(PlantId, System.Int32, Vector3Int)
+  nameWithType: PlantStateManager.CreatePlant(PlantId, Int32, Vector3Int)
 - uid: GrandmaGreen.Garden.PlantStateManager.CreatePlant*
   name: CreatePlant
   href: api/GrandmaGreen.Garden.PlantStateManager.html#GrandmaGreen_Garden_PlantStateManager_CreatePlant_
@@ -4653,12 +4646,6 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Garden.PlantStateManager.GetPlantType
   nameWithType: PlantStateManager.GetPlantType
-- uid: GrandmaGreen.Garden.PlantStateManager.growthEventQueue
-  name: growthEventQueue
-  href: api/GrandmaGreen.Garden.PlantStateManager.html#GrandmaGreen_Garden_PlantStateManager_growthEventQueue
-  commentId: F:GrandmaGreen.Garden.PlantStateManager.growthEventQueue
-  fullName: GrandmaGreen.Garden.PlantStateManager.growthEventQueue
-  nameWithType: PlantStateManager.growthEventQueue
 - uid: GrandmaGreen.Garden.PlantStateManager.IncrementGrowthStage(System.Int32,Vector3Int)
   name: IncrementGrowthStage(Int32, Vector3Int)
   href: api/GrandmaGreen.Garden.PlantStateManager.html#GrandmaGreen_Garden_PlantStateManager_IncrementGrowthStage_System_Int32_Vector3Int_
@@ -6887,6 +6874,19 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.UI.HUD.HUDController.HUDController
   nameWithType: HUDController.HUDController
+- uid: GrandmaGreen.UI.HUD.HUDController.CloseHUD
+  name: CloseHUD()
+  href: api/GrandmaGreen.UI.HUD.HUDController.html#GrandmaGreen_UI_HUD_HUDController_CloseHUD
+  commentId: M:GrandmaGreen.UI.HUD.HUDController.CloseHUD
+  fullName: GrandmaGreen.UI.HUD.HUDController.CloseHUD()
+  nameWithType: HUDController.CloseHUD()
+- uid: GrandmaGreen.UI.HUD.HUDController.CloseHUD*
+  name: CloseHUD
+  href: api/GrandmaGreen.UI.HUD.HUDController.html#GrandmaGreen_UI_HUD_HUDController_CloseHUD_
+  commentId: Overload:GrandmaGreen.UI.HUD.HUDController.CloseHUD
+  isSpec: "True"
+  fullName: GrandmaGreen.UI.HUD.HUDController.CloseHUD
+  nameWithType: HUDController.CloseHUD
 - uid: GrandmaGreen.UI.HUD.HUDController.InventoryOnClick(ClickEvent)
   name: InventoryOnClick(ClickEvent)
   href: api/GrandmaGreen.UI.HUD.HUDController.html#GrandmaGreen_UI_HUD_HUDController_InventoryOnClick_ClickEvent_
@@ -6913,6 +6913,19 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.UI.HUD.HUDController.OpenHUD
   nameWithType: HUDController.OpenHUD
+- uid: GrandmaGreen.UI.HUD.HUDController.OpenHUDAnimated
+  name: OpenHUDAnimated()
+  href: api/GrandmaGreen.UI.HUD.HUDController.html#GrandmaGreen_UI_HUD_HUDController_OpenHUDAnimated
+  commentId: M:GrandmaGreen.UI.HUD.HUDController.OpenHUDAnimated
+  fullName: GrandmaGreen.UI.HUD.HUDController.OpenHUDAnimated()
+  nameWithType: HUDController.OpenHUDAnimated()
+- uid: GrandmaGreen.UI.HUD.HUDController.OpenHUDAnimated*
+  name: OpenHUDAnimated
+  href: api/GrandmaGreen.UI.HUD.HUDController.html#GrandmaGreen_UI_HUD_HUDController_OpenHUDAnimated_
+  commentId: Overload:GrandmaGreen.UI.HUD.HUDController.OpenHUDAnimated
+  isSpec: "True"
+  fullName: GrandmaGreen.UI.HUD.HUDController.OpenHUDAnimated
+  nameWithType: HUDController.OpenHUDAnimated
 - uid: GrandmaGreen.UI.HUD.HUDController.RegisterButtonCallbacks
   name: RegisterButtonCallbacks()
   href: api/GrandmaGreen.UI.HUD.HUDController.html#GrandmaGreen_UI_HUD_HUDController_RegisterButtonCallbacks
