@@ -20,8 +20,22 @@
 }
 
 .background-appear:hover {
-    background-color: rgba(214, 0, 0, 255);
+    background-color: rgb(214, 0, 0);
     transition-duration: 0.3s;
     transition-property: background-color;
     transition-timing-function: ease-in;
+}
+
+#button:hover {
+    scale: 1.2 1.2;
+    transition-timing-function: ease-out-bounce;
+    transition-property: scale;
+    transition-duration: 1s;
+}
+
+#small:hover {
+    scale: 0.8 0.8;
+    transition-timing-function: ease-in-out-elastic;
+    transition-property: scale;
+    transition-duration: 1s;
 }

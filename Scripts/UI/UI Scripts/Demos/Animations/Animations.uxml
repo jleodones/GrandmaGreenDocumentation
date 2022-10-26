@@ -1,6 +1,10 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/_GrandmaGreen/Scripts/UI/UI%20Scripts/Demos/Animations/Animations.uss?fileID=7433441132597879392&amp;guid=f5d0affd3e58e49a2bd950f567fb32dd&amp;type=3#Animations" />
-    <ui:VisualElement class="background-appear" style="height: 827px; width: 884px; align-items: center; justify-content: center; transition-timing-function: ease-in-bounce;">
+    <ui:VisualElement name="basic-animatin" class="background-appear" style="height: 827px; width: 884px; align-items: center; justify-content: center; transition-timing-function: ease-in-bounce; display: none;">
         <ui:Label tabindex="-1" text="Circle" display-tooltip-when-elided="true" class="sway-text" style="height: 309px; width: 703px;" />
+    </ui:VisualElement>
+    <ui:VisualElement name="button-bounce" style="flex-grow: 1; justify-content: center; align-items: center;">
+        <ui:Button tabindex="-1" text="Button" display-tooltip-when-elided="true" name="button" style="width: 500px; height: 500px; border-top-left-radius: 50%; border-bottom-left-radius: 50%; border-top-right-radius: 50%; border-bottom-right-radius: 50%;" />
+        <ui:Button tabindex="-1" text="Button" display-tooltip-when-elided="true" name="small" style="width: 500px; height: 500px; border-top-left-radius: 50%; border-bottom-left-radius: 50%; border-top-right-radius: 50%; border-bottom-right-radius: 50%;" />
     </ui:VisualElement>
 </ui:UXML>

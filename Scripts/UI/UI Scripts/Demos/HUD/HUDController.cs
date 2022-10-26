@@ -1,6 +1,7 @@
 // This script defines the tab selection logic.
-using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.UIElements;
 
 namespace GrandmaGreen.UI.HUD
@@ -42,7 +43,10 @@ namespace GrandmaGreen.UI.HUD
             // TODO: Update this for every functional UI.
             Button inventoryButton = m_root.Q<Button>("inventory-button");
             inventoryButton.RegisterCallback<ClickEvent>(InventoryOnClick);
+            UQueryBuilder<Button> buttons = m_root.Query<Button>();
+            buttons.ForEach((Button hud_button) => { hud_button.RegisterCallback<ClickEvent>(ButtonOnClick); });
         }
+        
 
         public void InventoryOnClick(ClickEvent evt)
         {
@@ -51,6 +55,34 @@ namespace GrandmaGreen.UI.HUD
             
             // Enables inventory.
             HUD.instance.inventory.OpenInventory();
+        }
+
+        public void ButtonOnClick(ClickEvent evt)
+        {
+            Button clickedButton = evt.currentTarget as Button;
+            clickedButton.RegisterCallback<TransitionEndEvent>(OnScaleUp);
+            clickedButton.style.transitionProperty = new List<StylePropertyName> { "scale"};
+            clickedButton.style.transitionTimingFunction = new List<EasingFunction> { EasingMode.EaseIn };
+            clickedButton.style.transitionDuration = new List<TimeValue>{ new TimeValue(300, TimeUnit.Millisecond)};
+            clickedButton.style.transitionDelay = new List<TimeValue>{ new TimeValue(0, TimeUnit.Millisecond)};
+            clickedButton.style.scale = new Scale(new Vector2(1.2f,1.2f));
+        }
+
+        public void OnScaleUp(TransitionEndEvent evt)
+        {
+            Button clickedButton = evt.currentTarget as Button;
+            clickedButton.RegisterCallback<TransitionEndEvent>(OnScaleDown);
+            clickedButton.UnregisterCallback<TransitionEndEvent>(OnScaleUp);
+            clickedButton.style.scale = new Scale(new Vector2(0.9f, 0.9f));
+
+        }
+        public void OnScaleDown(TransitionEndEvent evt)
+        {
+            Button clickedButton = evt.currentTarget as Button;
+            clickedButton.UnregisterCallback<TransitionEndEvent>(OnScaleDown);
+            clickedButton.style.transitionDuration = new List<TimeValue>{ new TimeValue(400, TimeUnit.Millisecond)};
+            clickedButton.style.scale = new Scale(new Vector2(1, 1));
+
         }
     }
 }

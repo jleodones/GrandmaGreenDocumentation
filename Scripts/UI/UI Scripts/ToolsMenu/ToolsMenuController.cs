@@ -38,7 +38,7 @@ public class ToolsMenuController
     // GetAllTools: returns all buttons (which are all tools)
     private UQueryBuilder<Button> GetAllTools()
     {
-    	Debug.Log(root.Q<Button>()); 
+    	// Debug.Log(root.Q<Button>()); 
         return root.Query<Button>();
     }
 

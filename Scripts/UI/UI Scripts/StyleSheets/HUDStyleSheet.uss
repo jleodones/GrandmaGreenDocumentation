@@ -1,20 +1,9 @@
-.icon-buttons:hover {
-    width: 130px;
-    height: 130px;
-    color: rgb(255, 0, 0);
-    background-color: rgba(6, 0, 0, 0);
-    border-left-width: 5px;
-    border-right-width: 5px;
-    border-top-width: 5px;
-    border-bottom-width: 5px;
-}
-
 .icon-buttons {
     background-color: rgba(128, 128, 128, 0);
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
+    -unity-background-scale-mode: scale-and-crop;
+    width: 22.5%;
+    height: 0;
+    padding-top: 22.5%;
 }
 
 .inventory-item {
@@ -98,7 +87,45 @@
     height: 100%;
 }
 
-.general-icon {
-    width: 100px;
-    height: 100px;
+.info-content {
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.button-content {
+    height: 100%;
+    width: 30%;
+    align-items: stretch;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.info-text {
+    width: 40%;
+    justify-content: center;
+    align-items: center;
+    -unity-text-align: middle-center;
+    color: rgb(0, 0, 0);
+    -unity-font-style: bold;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 400%;
+    white-space: normal;
+    -unity-font: url('project://database/Assets/TextMesh%20Pro/Fonts/LiberationSans.ttf?fileID=12800000&guid=e3265ab4bf004d28a9537516768c1c75&type=3#LiberationSans');
 }
