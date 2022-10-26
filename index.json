@@ -219,6 +219,11 @@
     "title": "Class CommonSFX",
     "keywords": "Class CommonSFX Inheritance Object CommonSFX Namespace : GrandmaGreen Assembly : cs.temp.dll.dll Syntax public class CommonSFX : ScriptableObject Methods PlaySFX(ASoundContainer) Declaration public void PlaySFX(ASoundContainer sound) Parameters Type Name Description ASoundContainer sound"
   },
+  "api/GrandmaGreen.DemoUIScript.html": {
+    "href": "api/GrandmaGreen.DemoUIScript.html",
+    "title": "Class DemoUIScript",
+    "keywords": "Class DemoUIScript Inheritance Object DemoUIScript Namespace : GrandmaGreen Assembly : cs.temp.dll.dll Syntax public class DemoUIScript : MonoBehaviour Methods OpenUI() Declaration public void OpenUI()"
+  },
   "api/GrandmaGreen.DialoguePrototype.html": {
     "href": "api/GrandmaGreen.DialoguePrototype.html",
     "title": "Class DialoguePrototype",
@@ -447,7 +452,7 @@
   "api/GrandmaGreen.html": {
     "href": "api/GrandmaGreen.html",
     "title": "Namespace GrandmaGreen",
-    "keywords": "Namespace GrandmaGreen Classes AreaController AreaServices CameraZoom CatchUIInput CommonSFX DialoguePrototype Attach to dialogue-capable entities. This spawns their own dialogue bubble at the right time. EventManager FlowerController GameScenePortal GameSystemDummy GrandmaGreenGameState PlantType PlantTypeDictionary PlayAudioOnEnable ShoppingItem TileType ToolTest2 Interfaces IPathAgent IPathfinderServicer IServicer<T> IServiceUser<U, T>"
+    "keywords": "Namespace GrandmaGreen Classes AreaController AreaServices CameraZoom CatchUIInput CommonSFX DemoUIScript DialoguePrototype Attach to dialogue-capable entities. This spawns their own dialogue bubble at the right time. EventManager FlowerController GameScenePortal GameSystemDummy GrandmaGreenGameState PlantType PlantTypeDictionary PlayAudioOnEnable ShoppingItem TileType ToolTest2 Interfaces IPathAgent IPathfinderServicer IServicer<T> IServiceUser<U, T>"
   },
   "api/GrandmaGreen.IPathAgent.html": {
     "href": "api/GrandmaGreen.IPathAgent.html",
@@ -617,7 +622,7 @@
   "api/GrandmaGreen.UI.HUD.HUDController.html": {
     "href": "api/GrandmaGreen.UI.HUD.HUDController.html",
     "title": "Class HUDController",
-    "keywords": "Class HUDController Inheritance Object HUDController Inherited Members Object.ToString() Object.Equals(Object) Object.Equals(Object, Object) Object.ReferenceEquals(Object, Object) Object.GetHashCode() Object.GetType() Object.MemberwiseClone() Namespace : GrandmaGreen.UI.HUD Assembly : cs.temp.dll.dll Syntax public class HUDController Constructors HUDController(VisualElement) Declaration public HUDController(VisualElement root) Parameters Type Name Description VisualElement root Methods CloseHUD() Declaration public void CloseHUD() InventoryOnClick(ClickEvent) Declaration public void InventoryOnClick(ClickEvent evt) Parameters Type Name Description ClickEvent evt OpenHUD() Declaration public void OpenHUD() OpenHUDAnimated() Declaration public void OpenHUDAnimated() RegisterButtonCallbacks() Declaration public void RegisterButtonCallbacks()"
+    "keywords": "Class HUDController Inheritance Object HUDController Inherited Members Object.ToString() Object.Equals(Object) Object.Equals(Object, Object) Object.ReferenceEquals(Object, Object) Object.GetHashCode() Object.GetType() Object.MemberwiseClone() Namespace : GrandmaGreen.UI.HUD Assembly : cs.temp.dll.dll Syntax public class HUDController Constructors HUDController(VisualElement) Declaration public HUDController(VisualElement root) Parameters Type Name Description VisualElement root Methods ButtonOnClick(ClickEvent) Declaration public void ButtonOnClick(ClickEvent evt) Parameters Type Name Description ClickEvent evt CloseHUD() Declaration public void CloseHUD() InventoryOnClick(ClickEvent) Declaration public void InventoryOnClick(ClickEvent evt) Parameters Type Name Description ClickEvent evt OnScaleDown(TransitionEndEvent) Declaration public void OnScaleDown(TransitionEndEvent evt) Parameters Type Name Description TransitionEndEvent evt OnScaleUp(TransitionEndEvent) Declaration public void OnScaleUp(TransitionEndEvent evt) Parameters Type Name Description TransitionEndEvent evt OpenHUD() Declaration public void OpenHUD() OpenHUDAnimated() Declaration public void OpenHUDAnimated() RegisterButtonCallbacks() Declaration public void RegisterButtonCallbacks()"
   },
   "api/GrandmaGreen.YarnOverrides.CustomLineView.html": {
     "href": "api/GrandmaGreen.YarnOverrides.CustomLineView.html",

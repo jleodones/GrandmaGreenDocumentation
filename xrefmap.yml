@@ -2588,6 +2588,25 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.CommonSFX.PlaySFX
   nameWithType: CommonSFX.PlaySFX
+- uid: GrandmaGreen.DemoUIScript
+  name: DemoUIScript
+  href: api/GrandmaGreen.DemoUIScript.html
+  commentId: T:GrandmaGreen.DemoUIScript
+  fullName: GrandmaGreen.DemoUIScript
+  nameWithType: DemoUIScript
+- uid: GrandmaGreen.DemoUIScript.OpenUI
+  name: OpenUI()
+  href: api/GrandmaGreen.DemoUIScript.html#GrandmaGreen_DemoUIScript_OpenUI
+  commentId: M:GrandmaGreen.DemoUIScript.OpenUI
+  fullName: GrandmaGreen.DemoUIScript.OpenUI()
+  nameWithType: DemoUIScript.OpenUI()
+- uid: GrandmaGreen.DemoUIScript.OpenUI*
+  name: OpenUI
+  href: api/GrandmaGreen.DemoUIScript.html#GrandmaGreen_DemoUIScript_OpenUI_
+  commentId: Overload:GrandmaGreen.DemoUIScript.OpenUI
+  isSpec: "True"
+  fullName: GrandmaGreen.DemoUIScript.OpenUI
+  nameWithType: DemoUIScript.OpenUI
 - uid: GrandmaGreen.DialoguePrototype
   name: DialoguePrototype
   href: api/GrandmaGreen.DialoguePrototype.html
@@ -6874,6 +6893,19 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.UI.HUD.HUDController.HUDController
   nameWithType: HUDController.HUDController
+- uid: GrandmaGreen.UI.HUD.HUDController.ButtonOnClick(ClickEvent)
+  name: ButtonOnClick(ClickEvent)
+  href: api/GrandmaGreen.UI.HUD.HUDController.html#GrandmaGreen_UI_HUD_HUDController_ButtonOnClick_ClickEvent_
+  commentId: M:GrandmaGreen.UI.HUD.HUDController.ButtonOnClick(ClickEvent)
+  fullName: GrandmaGreen.UI.HUD.HUDController.ButtonOnClick(ClickEvent)
+  nameWithType: HUDController.ButtonOnClick(ClickEvent)
+- uid: GrandmaGreen.UI.HUD.HUDController.ButtonOnClick*
+  name: ButtonOnClick
+  href: api/GrandmaGreen.UI.HUD.HUDController.html#GrandmaGreen_UI_HUD_HUDController_ButtonOnClick_
+  commentId: Overload:GrandmaGreen.UI.HUD.HUDController.ButtonOnClick
+  isSpec: "True"
+  fullName: GrandmaGreen.UI.HUD.HUDController.ButtonOnClick
+  nameWithType: HUDController.ButtonOnClick
 - uid: GrandmaGreen.UI.HUD.HUDController.CloseHUD
   name: CloseHUD()
   href: api/GrandmaGreen.UI.HUD.HUDController.html#GrandmaGreen_UI_HUD_HUDController_CloseHUD
@@ -6900,6 +6932,32 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.UI.HUD.HUDController.InventoryOnClick
   nameWithType: HUDController.InventoryOnClick
+- uid: GrandmaGreen.UI.HUD.HUDController.OnScaleDown(TransitionEndEvent)
+  name: OnScaleDown(TransitionEndEvent)
+  href: api/GrandmaGreen.UI.HUD.HUDController.html#GrandmaGreen_UI_HUD_HUDController_OnScaleDown_TransitionEndEvent_
+  commentId: M:GrandmaGreen.UI.HUD.HUDController.OnScaleDown(TransitionEndEvent)
+  fullName: GrandmaGreen.UI.HUD.HUDController.OnScaleDown(TransitionEndEvent)
+  nameWithType: HUDController.OnScaleDown(TransitionEndEvent)
+- uid: GrandmaGreen.UI.HUD.HUDController.OnScaleDown*
+  name: OnScaleDown
+  href: api/GrandmaGreen.UI.HUD.HUDController.html#GrandmaGreen_UI_HUD_HUDController_OnScaleDown_
+  commentId: Overload:GrandmaGreen.UI.HUD.HUDController.OnScaleDown
+  isSpec: "True"
+  fullName: GrandmaGreen.UI.HUD.HUDController.OnScaleDown
+  nameWithType: HUDController.OnScaleDown
+- uid: GrandmaGreen.UI.HUD.HUDController.OnScaleUp(TransitionEndEvent)
+  name: OnScaleUp(TransitionEndEvent)
+  href: api/GrandmaGreen.UI.HUD.HUDController.html#GrandmaGreen_UI_HUD_HUDController_OnScaleUp_TransitionEndEvent_
+  commentId: M:GrandmaGreen.UI.HUD.HUDController.OnScaleUp(TransitionEndEvent)
+  fullName: GrandmaGreen.UI.HUD.HUDController.OnScaleUp(TransitionEndEvent)
+  nameWithType: HUDController.OnScaleUp(TransitionEndEvent)
+- uid: GrandmaGreen.UI.HUD.HUDController.OnScaleUp*
+  name: OnScaleUp
+  href: api/GrandmaGreen.UI.HUD.HUDController.html#GrandmaGreen_UI_HUD_HUDController_OnScaleUp_
+  commentId: Overload:GrandmaGreen.UI.HUD.HUDController.OnScaleUp
+  isSpec: "True"
+  fullName: GrandmaGreen.UI.HUD.HUDController.OnScaleUp
+  nameWithType: HUDController.OnScaleUp
 - uid: GrandmaGreen.UI.HUD.HUDController.OpenHUD
   name: OpenHUD()
   href: api/GrandmaGreen.UI.HUD.HUDController.html#GrandmaGreen_UI_HUD_HUDController_OpenHUD

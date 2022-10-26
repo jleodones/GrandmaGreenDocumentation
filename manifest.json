@@ -552,6 +552,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/GrandmaGreen.DemoUIScript.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GrandmaGreen.DemoUIScript.html",
+          "hash": "uwqPzFi8rLqCeyMPfKNWM9UJIiDnhjc1WZW51gKlE5U="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/GrandmaGreen.DialoguePrototype.yml",
       "output": {
         ".html": {
@@ -1480,7 +1492,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.UI.HUD.HUDController.html",
-          "hash": "WzgZyLHNWXZp4jFBTGzb/hmryhJPrvfjWmowF5PMbY4="
+          "hash": "ykoyygzG5EpuRO5tZhMVxPXRFZ9CuyfI3ocGQhnfHx8="
         }
       },
       "is_incremental": false,
@@ -1528,7 +1540,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.html",
-          "hash": "Z15O4KkNWjsNHWXfM3nhSIzL6ci5aG/TXdryF0COM44="
+          "hash": "sj3JaPCw62mxmNcwkA+sjMrX7Zc1RyUkP76aCDX4RB4="
         }
       },
       "is_incremental": false,
@@ -1540,7 +1552,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "NPXRGySk4RlOOh91a+ugoQeh1OQd1i3H82iM7XawKc4="
+          "hash": "m2N+i8QVr0G3ZWfQ9/rGcMVqDj+clbhdPnCx/qeKogw="
         }
       },
       "is_incremental": false,
@@ -1649,7 +1661,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 126,
+          "total_file_count": 127,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
