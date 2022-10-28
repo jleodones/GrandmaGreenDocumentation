@@ -3942,12 +3942,12 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Garden.GardenAreaController.Awake
   nameWithType: GardenAreaController.Awake
-- uid: GrandmaGreen.Garden.GardenAreaController.CreatePlant(PlantId,Vector3Int)
-  name: CreatePlant(PlantId, Vector3Int)
-  href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_CreatePlant_PlantId_Vector3Int_
-  commentId: M:GrandmaGreen.Garden.GardenAreaController.CreatePlant(PlantId,Vector3Int)
-  fullName: GrandmaGreen.Garden.GardenAreaController.CreatePlant(PlantId, Vector3Int)
-  nameWithType: GardenAreaController.CreatePlant(PlantId, Vector3Int)
+- uid: GrandmaGreen.Garden.GardenAreaController.CreatePlant(SeedId,Vector3Int)
+  name: CreatePlant(SeedId, Vector3Int)
+  href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_CreatePlant_SeedId_Vector3Int_
+  commentId: M:GrandmaGreen.Garden.GardenAreaController.CreatePlant(SeedId,Vector3Int)
+  fullName: GrandmaGreen.Garden.GardenAreaController.CreatePlant(SeedId, Vector3Int)
+  nameWithType: GardenAreaController.CreatePlant(SeedId, Vector3Int)
 - uid: GrandmaGreen.Garden.GardenAreaController.CreatePlant*
   name: CreatePlant
   href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_CreatePlant_
@@ -3955,19 +3955,6 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Garden.GardenAreaController.CreatePlant
   nameWithType: GardenAreaController.CreatePlant
-- uid: GrandmaGreen.Garden.GardenAreaController.CreatePlantOnCell(GrandmaGreen.PlantType,Vector3Int)
-  name: CreatePlantOnCell(PlantType, Vector3Int)
-  href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_CreatePlantOnCell_GrandmaGreen_PlantType_Vector3Int_
-  commentId: M:GrandmaGreen.Garden.GardenAreaController.CreatePlantOnCell(GrandmaGreen.PlantType,Vector3Int)
-  fullName: GrandmaGreen.Garden.GardenAreaController.CreatePlantOnCell(GrandmaGreen.PlantType, Vector3Int)
-  nameWithType: GardenAreaController.CreatePlantOnCell(PlantType, Vector3Int)
-- uid: GrandmaGreen.Garden.GardenAreaController.CreatePlantOnCell*
-  name: CreatePlantOnCell
-  href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_CreatePlantOnCell_
-  commentId: Overload:GrandmaGreen.Garden.GardenAreaController.CreatePlantOnCell
-  isSpec: "True"
-  fullName: GrandmaGreen.Garden.GardenAreaController.CreatePlantOnCell
-  nameWithType: GardenAreaController.CreatePlantOnCell
 - uid: GrandmaGreen.Garden.GardenAreaController.DestroyAllPlants
   name: DestroyAllPlants()
   href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_DestroyAllPlants
@@ -4555,6 +4542,18 @@ references:
   commentId: F:GrandmaGreen.Garden.PlantState.type
   fullName: GrandmaGreen.Garden.PlantState.type
   nameWithType: PlantState.type
+- uid: GrandmaGreen.Garden.PlantState.waterStage
+  name: waterStage
+  href: api/GrandmaGreen.Garden.PlantState.html#GrandmaGreen_Garden_PlantState_waterStage
+  commentId: F:GrandmaGreen.Garden.PlantState.waterStage
+  fullName: GrandmaGreen.Garden.PlantState.waterStage
+  nameWithType: PlantState.waterStage
+- uid: GrandmaGreen.Garden.PlantState.waterTimer
+  name: waterTimer
+  href: api/GrandmaGreen.Garden.PlantState.html#GrandmaGreen_Garden_PlantState_waterTimer
+  commentId: F:GrandmaGreen.Garden.PlantState.waterTimer
+  fullName: GrandmaGreen.Garden.PlantState.waterTimer
+  nameWithType: PlantState.waterTimer
 - uid: GrandmaGreen.Garden.PlantStateManager
   name: PlantStateManager
   href: api/GrandmaGreen.Garden.PlantStateManager.html
@@ -4736,6 +4735,12 @@ references:
   commentId: T:GrandmaGreen.Garden.PlayerToolData
   fullName: GrandmaGreen.Garden.PlayerToolData
   nameWithType: PlayerToolData
+- uid: GrandmaGreen.Garden.PlayerToolData.collection
+  name: collection
+  href: api/GrandmaGreen.Garden.PlayerToolData.html#GrandmaGreen_Garden_PlayerToolData_collection
+  commentId: F:GrandmaGreen.Garden.PlayerToolData.collection
+  fullName: GrandmaGreen.Garden.PlayerToolData.collection
+  nameWithType: PlayerToolData.collection
 - uid: GrandmaGreen.Garden.PlayerToolData.currentTool
   name: currentTool
   href: api/GrandmaGreen.Garden.PlayerToolData.html#GrandmaGreen_Garden_PlayerToolData_currentTool
@@ -4781,12 +4786,12 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Garden.PlayerToolData.EndToolSelection
   nameWithType: PlayerToolData.EndToolSelection
-- uid: GrandmaGreen.Garden.PlayerToolData.equippedPlant
-  name: equippedPlant
-  href: api/GrandmaGreen.Garden.PlayerToolData.html#GrandmaGreen_Garden_PlayerToolData_equippedPlant
-  commentId: F:GrandmaGreen.Garden.PlayerToolData.equippedPlant
-  fullName: GrandmaGreen.Garden.PlayerToolData.equippedPlant
-  nameWithType: PlayerToolData.equippedPlant
+- uid: GrandmaGreen.Garden.PlayerToolData.equippedSeed
+  name: equippedSeed
+  href: api/GrandmaGreen.Garden.PlayerToolData.html#GrandmaGreen_Garden_PlayerToolData_equippedSeed
+  commentId: F:GrandmaGreen.Garden.PlayerToolData.equippedSeed
+  fullName: GrandmaGreen.Garden.PlayerToolData.equippedSeed
+  nameWithType: PlayerToolData.equippedSeed
 - uid: GrandmaGreen.Garden.PlayerToolData.lastToolAction
   name: lastToolAction
   href: api/GrandmaGreen.Garden.PlayerToolData.html#GrandmaGreen_Garden_PlayerToolData_lastToolAction
@@ -4811,31 +4816,25 @@ references:
   commentId: E:GrandmaGreen.Garden.PlayerToolData.onToolSelectionStart
   fullName: GrandmaGreen.Garden.PlayerToolData.onToolSelectionStart
   nameWithType: PlayerToolData.onToolSelectionStart
-- uid: GrandmaGreen.Garden.PlayerToolData.plantLookup
-  name: plantLookup
-  href: api/GrandmaGreen.Garden.PlayerToolData.html#GrandmaGreen_Garden_PlayerToolData_plantLookup
-  commentId: F:GrandmaGreen.Garden.PlayerToolData.plantLookup
-  fullName: GrandmaGreen.Garden.PlayerToolData.plantLookup
-  nameWithType: PlayerToolData.plantLookup
 - uid: GrandmaGreen.Garden.PlayerToolData.playerController
   name: playerController
   href: api/GrandmaGreen.Garden.PlayerToolData.html#GrandmaGreen_Garden_PlayerToolData_playerController
   commentId: F:GrandmaGreen.Garden.PlayerToolData.playerController
   fullName: GrandmaGreen.Garden.PlayerToolData.playerController
   nameWithType: PlayerToolData.playerController
-- uid: GrandmaGreen.Garden.PlayerToolData.SetEquippedPlant(System.Int32)
-  name: SetEquippedPlant(Int32)
-  href: api/GrandmaGreen.Garden.PlayerToolData.html#GrandmaGreen_Garden_PlayerToolData_SetEquippedPlant_System_Int32_
-  commentId: M:GrandmaGreen.Garden.PlayerToolData.SetEquippedPlant(System.Int32)
-  fullName: GrandmaGreen.Garden.PlayerToolData.SetEquippedPlant(System.Int32)
-  nameWithType: PlayerToolData.SetEquippedPlant(Int32)
-- uid: GrandmaGreen.Garden.PlayerToolData.SetEquippedPlant*
-  name: SetEquippedPlant
-  href: api/GrandmaGreen.Garden.PlayerToolData.html#GrandmaGreen_Garden_PlayerToolData_SetEquippedPlant_
-  commentId: Overload:GrandmaGreen.Garden.PlayerToolData.SetEquippedPlant
+- uid: GrandmaGreen.Garden.PlayerToolData.SetEquippedSeed(System.Int32)
+  name: SetEquippedSeed(Int32)
+  href: api/GrandmaGreen.Garden.PlayerToolData.html#GrandmaGreen_Garden_PlayerToolData_SetEquippedSeed_System_Int32_
+  commentId: M:GrandmaGreen.Garden.PlayerToolData.SetEquippedSeed(System.Int32)
+  fullName: GrandmaGreen.Garden.PlayerToolData.SetEquippedSeed(System.Int32)
+  nameWithType: PlayerToolData.SetEquippedSeed(Int32)
+- uid: GrandmaGreen.Garden.PlayerToolData.SetEquippedSeed*
+  name: SetEquippedSeed
+  href: api/GrandmaGreen.Garden.PlayerToolData.html#GrandmaGreen_Garden_PlayerToolData_SetEquippedSeed_
+  commentId: Overload:GrandmaGreen.Garden.PlayerToolData.SetEquippedSeed
   isSpec: "True"
-  fullName: GrandmaGreen.Garden.PlayerToolData.SetEquippedPlant
-  nameWithType: PlayerToolData.SetEquippedPlant
+  fullName: GrandmaGreen.Garden.PlayerToolData.SetEquippedSeed
+  nameWithType: PlayerToolData.SetEquippedSeed
 - uid: GrandmaGreen.Garden.PlayerToolData.SetToolAction(TileBase,Vector3Int,GrandmaGreen.Garden.GardenAreaController)
   name: SetToolAction(TileBase, Vector3Int, GardenAreaController)
   href: api/GrandmaGreen.Garden.PlayerToolData.html#GrandmaGreen_Garden_PlayerToolData_SetToolAction_TileBase_Vector3Int_GrandmaGreen_Garden_GardenAreaController_
@@ -4930,12 +4929,12 @@ references:
   commentId: F:GrandmaGreen.Garden.ToolActionData.gridcell
   fullName: GrandmaGreen.Garden.ToolActionData.gridcell
   nameWithType: ToolActionData.gridcell
-- uid: GrandmaGreen.Garden.ToolActionData.plantType
-  name: plantType
-  href: api/GrandmaGreen.Garden.ToolActionData.html#GrandmaGreen_Garden_ToolActionData_plantType
-  commentId: F:GrandmaGreen.Garden.ToolActionData.plantType
-  fullName: GrandmaGreen.Garden.ToolActionData.plantType
-  nameWithType: ToolActionData.plantType
+- uid: GrandmaGreen.Garden.ToolActionData.seedType
+  name: seedType
+  href: api/GrandmaGreen.Garden.ToolActionData.html#GrandmaGreen_Garden_ToolActionData_seedType
+  commentId: F:GrandmaGreen.Garden.ToolActionData.seedType
+  fullName: GrandmaGreen.Garden.ToolActionData.seedType
+  nameWithType: ToolActionData.seedType
 - uid: GrandmaGreen.Garden.ToolActionData.tile
   name: tile
   href: api/GrandmaGreen.Garden.ToolActionData.html#GrandmaGreen_Garden_ToolActionData_tile
