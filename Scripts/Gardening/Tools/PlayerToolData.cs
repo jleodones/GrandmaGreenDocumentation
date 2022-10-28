@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using GrandmaGreen.Entities;
+using GrandmaGreen.Collections;
 using NaughtyAttributes;
 using UnityEngine.Tilemaps;
 
@@ -13,7 +14,7 @@ namespace GrandmaGreen.Garden
         public EntityController playerController;
         public GardenToolSet toolSet;
         public ToolData currentTool;
-        public PlantTypeDictionary plantLookup;
+        public CollectionsSO collection;
 
         public event System.Action onToolSelectionStart;
         public event System.Action onToolSelectionEnd;
@@ -22,7 +23,8 @@ namespace GrandmaGreen.Garden
         public ToolActionData lastToolAction;
 
         public bool toolSelectionActive = false;
-        public int equippedPlant = -1;
+        
+        public SeedId equippedSeed; 
 
         public void ToggleToolSelection()
         {
@@ -70,16 +72,15 @@ namespace GrandmaGreen.Garden
             onToolSelected?.Invoke(currentTool);
             if (currentTool.toolIndex != 3)
             {
-                equippedPlant = -1;
+                equippedSeed = 0;
             }
             // EndToolSelection();
         }
 
-        public void SetEquippedPlant(int plantIndex) => equippedPlant = plantIndex;
+        public void SetEquippedSeed(int plantIndex) => equippedSeed = SeedId.Tulip;
 
         public void SetToolAction(TileBase tile, Vector3Int cell, GardenAreaController area)
         {
-            PlantType plant = equippedPlant != -1 ? plantLookup[equippedPlant] : default;
 
             lastToolAction = new ToolActionData()
             {
@@ -87,7 +88,7 @@ namespace GrandmaGreen.Garden
                 tile = tile,
                 gridcell = cell,
                 area = area,
-                plantType = plant
+                seedType = equippedSeed
             };
         }
 

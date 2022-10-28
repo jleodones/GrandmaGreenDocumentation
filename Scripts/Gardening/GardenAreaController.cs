@@ -114,28 +114,10 @@ namespace GrandmaGreen.Garden
             PlacePlantPrefabOnCell(cell, type, plantStateManager.GetGrowthStage(areaIndex, cell));
         }
 
-        public void CreatePlantOnCell(PlantType type, Vector3Int cell)
+        public void CreatePlant(SeedId seed, Vector3Int cell)
         {
-            PlantId id = PlantId.Rose;
-            if (type.name.Equals("Rose")) {
-                id = PlantId.Rose;
-	        } else if (type.name.Equals("Tulip"))
-            {
-                id = PlantId.Tulip; 
-	        } else
-            {
-                return;
-	        }
-            if (!plantPrefabLookup.ContainsKey(cell) || plantStateManager.IsEmpty(areaIndex, cell))
-            {
-                PlacePlantPrefabOnCell(cell, id, 0);
-                plantStateManager.CreatePlant(id, areaIndex, cell);
-                StartCoroutine(GrowthCoroutine(cell));
-            }
-        }
-
-        public void CreatePlant(PlantId type, Vector3Int cell)
-        {
+            PlantId type = collection.SeedToPlant(seed);
+            
             if (!plantPrefabLookup.ContainsKey(cell) || plantStateManager.IsEmpty(areaIndex, cell))
             {
                 PlacePlantPrefabOnCell(cell, type, 0);

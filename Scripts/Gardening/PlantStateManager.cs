@@ -13,6 +13,10 @@ namespace GrandmaGreen.Garden
         public int growthStage;
         public float timePlanted;
         public Vector3Int cell;
+
+        // Things for growth timers
+        public int waterStage;
+        public int waterTimer;
     }
 
     [System.Serializable]
@@ -89,7 +93,12 @@ namespace GrandmaGreen.Garden
                 type = type,
                 growthStage = 0,
                 timePlanted = Time.time,
-                cell = cell
+                cell = cell,
+
+                // Adding for watering. I think when we create plants it makes the most sense
+                // to set the watering stage and timer here.
+                waterStage = 3,
+                waterTimer = 0
             };
         }
 

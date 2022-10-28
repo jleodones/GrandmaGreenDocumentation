@@ -279,7 +279,7 @@ namespace GrandmaGreen.UI.Collections
 
         public void OnItemEntryClicked(int itemID)
         {
-            playerToolData.SetEquippedPlant(itemID);
+            playerToolData.SetEquippedSeed(itemID);
             onItemEntryClicked?.Invoke(itemID);
             if(itemID != null){
                 CloseInventory(new ClickEvent());

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using GrandmaGreen.Collections;
 
 namespace GrandmaGreen.Garden
 {
@@ -11,7 +12,7 @@ namespace GrandmaGreen.Garden
         public TileBase tile;
         public Vector3Int gridcell;
         public GardenAreaController area;
-        public PlantType plantType;
+        public SeedId seedType;
     }
 
 
@@ -69,9 +70,9 @@ namespace GrandmaGreen.Garden
         void SeedPacketAction(ToolActionData action)
         {
             //Placing the Plant Prefab on a tile and setting the Tile to "Occupied Plot Tile"
-            if (tileStore[action.tile].plantable && action.plantType != default)
+            if (tileStore[action.tile].plantable && action.seedType != 0)
             {
-                action.area.CreatePlantOnCell(action.plantType, action.gridcell);
+                action.area.CreatePlant(action.seedType, action.gridcell); 
                 action.area.tilemap.SetTile(action.gridcell, tileStore[2].tile);
                 action.tool.toolSFX[0].Play();
             }
