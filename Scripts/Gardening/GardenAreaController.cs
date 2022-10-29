@@ -55,7 +55,7 @@ namespace GrandmaGreen.Garden
             EventManager.instance.EVENT_PLANT_UPDATE -= PlantUpdate;
         }
 
-        IEnumerator GrowthCoroutine(Vector3Int cell)
+        /*IEnumerator GrowthCoroutine(Vector3Int cell)
         {
             PlantId type = plantStateManager.GetPlantType(areaIndex, cell);
             PlantProperties properties = collection.GetPlant(type);
@@ -74,7 +74,7 @@ namespace GrandmaGreen.Garden
                 InspectPlants();
             }
             Debug.Log("Done growing.");
-        }
+        }*/
 
         void PlantUpdate(int areaIndex, Vector3Int cell)
         {
@@ -117,25 +117,38 @@ namespace GrandmaGreen.Garden
         public void CreatePlant(SeedId seed, Vector3Int cell)
         {
             PlantId type = collection.SeedToPlant(seed);
-            
+
             if (!plantPrefabLookup.ContainsKey(cell) || plantStateManager.IsEmpty(areaIndex, cell))
             {
                 PlacePlantPrefabOnCell(cell, type, 0);
                 plantStateManager.CreatePlant(type, areaIndex, cell);
-                StartCoroutine(GrowthCoroutine(cell));
+                //StartCoroutine(GrowthCoroutine(cell));
             }
         }
 
-        public void DestroyPlantOnCell(Vector3Int cell)
+        public void WaterPlant(Vector3Int cell)
         {
-            DestroyPlantPrefabOnCell(cell);
-            plantStateManager.DestroyPlant(areaIndex, cell);
+            if(plantStateManager.UpdateWaterStage(areaIndex, cell))
+            {
+                PlantId type = plantStateManager.GetPlantType(areaIndex, cell);
+                PlantProperties properties = collection.GetPlant(type);
+
+                if(plantStateManager.UpdateGrowthStage(areaIndex, cell))
+                {
+                    UpdatePlantPrefabOnCell(type, cell);
+                }
+            }
         }
+
+        public void FertilizePlant(Vector3Int cell) => plantStateManager.SetFertilization(areaIndex, cell);
 
         public bool HarvestPlantOnCell(Vector3Int cell)
         {
             if (plantStateManager.GetGrowthStage(areaIndex, cell) == 2)
             {
+                int numSeedsDropped = plantStateManager.NumSeedDrops(areaIndex, cell);
+                Debug.Log("Dropped " + numSeedsDropped + " Seeds.");
+
                 EventManager.instance.HandleEVENT_GOLEM_SPAWN(0, cell);
 
                 EventManager.instance.HandleEVENT_INVENTORY_ADD(
@@ -146,6 +159,12 @@ namespace GrandmaGreen.Garden
 
             DestroyPlantOnCell(cell);
             return false;
+        }
+
+        public void DestroyPlantOnCell(Vector3Int cell)
+        {
+            DestroyPlantPrefabOnCell(cell);
+            plantStateManager.DestroyPlant(areaIndex, cell);
         }
 
         [ContextMenu("DestroyAllPlants")]

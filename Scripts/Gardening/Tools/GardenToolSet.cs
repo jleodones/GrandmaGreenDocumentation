@@ -27,6 +27,7 @@ namespace GrandmaGreen.Garden
             get { return toolSet[i]; }
             set { toolSet[i] = value; }
         }
+
         public void ToolAction(ToolActionData action)
         {
             if (!toolSet.Contains(action.tool))
@@ -34,13 +35,22 @@ namespace GrandmaGreen.Garden
                 return;
             }
 
-            if (action.tool.toolIndex == 1)
+            switch(action.tool.toolIndex)
             {
-                TrowelAction(action);
-            }
-            else if (action.tool.toolIndex == 3)
-            {
-                SeedPacketAction(action);
+                case 0:
+                    break;
+                case 1:
+                    TrowelAction(action);
+                    break;
+                case 2:
+                    FertilizerAction(action);
+                    break;
+                case 3:
+                    SeedPacketAction(action);
+                    break;
+                case 4:
+                    WateringAction(action);
+                    break;
             }
         }
 
@@ -67,14 +77,31 @@ namespace GrandmaGreen.Garden
             }
         }
 
+        void FertilizerAction(ToolActionData action)
+        {
+            if(tileStore[action.tile].occupied)
+            {
+                action.area.FertilizePlant(action.gridcell);
+            }
+        }
+
         void SeedPacketAction(ToolActionData action)
         {
-            //Placing the Plant Prefab on a tile and setting the Tile to "Occupied Plot Tile"
+            // Placing the Plant Prefab on a tile and setting the Tile to "Occupied Plot Tile"
             if (tileStore[action.tile].plantable && action.seedType != 0)
             {
                 action.area.CreatePlant(action.seedType, action.gridcell); 
                 action.area.tilemap.SetTile(action.gridcell, tileStore[2].tile);
                 action.tool.toolSFX[0].Play();
+            }
+        }
+
+        void WateringAction(ToolActionData action)
+        {
+            // Checking Tile for watering
+            if (tileStore[action.tile].occupied)
+            {
+                action.area.WaterPlant(action.gridcell);
             }
         }
 

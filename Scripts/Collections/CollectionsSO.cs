@@ -205,6 +205,7 @@ namespace GrandmaGreen.Collections
         public string description;
         public int growthStages;
         public int growthTime;
+        public int waterPerStage;
         public List<string> spritePaths;
     }
 }
@@ -276,6 +277,19 @@ namespace GrandmaGreen.Collections
             }
         }
 
+        public SeedId PlantToSeed(PlantId id)
+        {
+            switch (id)
+            {
+                case PlantId.Rose:
+                    return SeedId.Rose;
+                case PlantId.Tulip:
+                    return SeedId.Tulip;
+                default:
+                    return 0;
+            }
+        }
+
         // temporary hard-coded plant properties
         // to be swapped with properties in CSV
         [ContextMenu("DEBUGLoadPlantProperties")]
@@ -287,8 +301,9 @@ namespace GrandmaGreen.Collections
                     PlantId.Rose, new PlantProperties
                     {
                         name = "Rose",
-                        growthStages = 3,
-                        growthTime = 10,
+                        growthStages = 3, // # of prefabs
+                        growthTime = 10, // Probably can delete
+                        waterPerStage = 1, // # of times it needs to be watered per stage
                         spritePaths = new List<string>{"0", "1", "2"}
                     }
                 },
@@ -298,6 +313,7 @@ namespace GrandmaGreen.Collections
                         name = "Tulip",
                         growthStages = 3,
                         growthTime = 10,
+                        waterPerStage = 2,
                         spritePaths = new List<string>{"3", "4", "5"}
                     }
                 }

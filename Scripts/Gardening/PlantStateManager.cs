@@ -14,9 +14,13 @@ namespace GrandmaGreen.Garden
         public float timePlanted;
         public Vector3Int cell;
 
-        // Things for growth timers
+        // Counters and State Manager for Watering Tool Use
         public int waterStage;
         public int waterTimer;
+        public bool isWatered;
+
+        // State Manager for Fertilization Use
+        public bool isFertilized;
     }
 
     [System.Serializable]
@@ -97,8 +101,10 @@ namespace GrandmaGreen.Garden
 
                 // Adding for watering. I think when we create plants it makes the most sense
                 // to set the watering stage and timer here.
-                waterStage = 3,
-                waterTimer = 0
+                waterStage = 0, // # of times it has been watered
+                waterTimer = 0, // Could be deleted, but might be able to do it through Time
+                isWatered = false,
+                isFertilized = false
             };
         }
 
@@ -142,21 +148,104 @@ namespace GrandmaGreen.Garden
             return -1;
         }
 
-        public void IncrementGrowthStage(int areaIndex, Vector3Int cell)
+        public bool UpdateGrowthStage(int areaIndex, Vector3Int cell)
         {
             PlantState plant = GetPlant(areaIndex, cell);
             int max = collection.GetPlant(plant.type).growthStages;
 
-            if (!IsEmpty(areaIndex, cell) && plant.growthStage < max)
+            bool canGrow = false;
+
+            if (!IsEmpty(areaIndex, cell) && plant.growthStage < max-1)
             {
                 plantLookup[areaIndex][cell] = new PlantState
                 {
                     type = plant.type,
                     growthStage = plant.growthStage + 1,
                     timePlanted = plant.timePlanted,
-                    cell = plant.cell
+                    cell = plant.cell,
+
+                    waterStage = 0,
+                    waterTimer = 0,
+                    isWatered = false,
+                    isFertilized = plant.isFertilized
                 };
+
+                canGrow = true;
             }
+
+            return canGrow;
+        }
+
+        public bool UpdateWaterStage(int areaIndex, Vector3Int cell)
+        {
+            bool plantGrowth = false;
+
+            if (!IsEmpty(areaIndex, cell))
+            {
+                PlantState plant = GetPlant(areaIndex, cell);
+                int waterRequirements= collection.GetPlant(plant.type).waterPerStage;
+
+                if(plant.waterStage < waterRequirements) //&& plant.isWatered == false)
+                {
+                    plantLookup[areaIndex][cell] = new PlantState
+                    {
+                        type = plant.type,
+                        growthStage = plant.growthStage,
+                        timePlanted = plant.timePlanted,
+                        cell = plant.cell,
+
+                        waterStage = plant.waterStage + 1,
+                        waterTimer = 0,
+                        isWatered = true,
+                        isFertilized = plant.isFertilized
+                    };   
+                }
+
+                if(plant.waterStage == waterRequirements - 1)
+                {
+                    plantGrowth = true;
+                }
+            }
+            
+            return plantGrowth;
+        }
+
+        public void SetFertilization(int areaIndex, Vector3Int cell)
+        {
+            if(!IsEmpty(areaIndex, cell))
+            {
+                PlantState plant = GetPlant(areaIndex, cell);
+
+                if(!(plant.isFertilized))
+                {
+                    plantLookup[areaIndex][cell] = new PlantState
+                    {
+                        type = plant.type,
+                        growthStage = plant.growthStage,
+                        timePlanted = plant.timePlanted,
+                        cell = plant.cell,
+
+                        waterStage = plant.waterStage,
+                        waterTimer = plant.waterTimer,
+                        isWatered = plant.isWatered,
+                        isFertilized = true
+                    };
+                }
+            }
+        }
+
+        public int NumSeedDrops(int areaIndex, Vector3Int cell)
+        {
+            PlantState plant = GetPlant(areaIndex, cell);
+
+            int seedDrop = 1;
+
+            if(plant.isFertilized)
+            {
+                seedDrop = 2;
+            }
+            
+            return seedDrop;
         }
 
         [ContextMenu("FireGrowthEvent")]
