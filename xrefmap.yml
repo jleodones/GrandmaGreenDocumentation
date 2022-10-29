@@ -1028,6 +1028,19 @@ references:
   commentId: F:GrandmaGreen.Collections.CollectionsSO.PlantLookup
   fullName: GrandmaGreen.Collections.CollectionsSO.PlantLookup
   nameWithType: CollectionsSO.PlantLookup
+- uid: GrandmaGreen.Collections.CollectionsSO.PlantToSeed(GrandmaGreen.Collections.PlantId)
+  name: PlantToSeed(PlantId)
+  href: api/GrandmaGreen.Collections.CollectionsSO.html#GrandmaGreen_Collections_CollectionsSO_PlantToSeed_GrandmaGreen_Collections_PlantId_
+  commentId: M:GrandmaGreen.Collections.CollectionsSO.PlantToSeed(GrandmaGreen.Collections.PlantId)
+  fullName: GrandmaGreen.Collections.CollectionsSO.PlantToSeed(GrandmaGreen.Collections.PlantId)
+  nameWithType: CollectionsSO.PlantToSeed(PlantId)
+- uid: GrandmaGreen.Collections.CollectionsSO.PlantToSeed*
+  name: PlantToSeed
+  href: api/GrandmaGreen.Collections.CollectionsSO.html#GrandmaGreen_Collections_CollectionsSO_PlantToSeed_
+  commentId: Overload:GrandmaGreen.Collections.CollectionsSO.PlantToSeed
+  isSpec: "True"
+  fullName: GrandmaGreen.Collections.CollectionsSO.PlantToSeed
+  nameWithType: CollectionsSO.PlantToSeed
 - uid: GrandmaGreen.Collections.CollectionsSO.SeedToPlant(GrandmaGreen.Collections.SeedId)
   name: SeedToPlant(SeedId)
   href: api/GrandmaGreen.Collections.CollectionsSO.html#GrandmaGreen_Collections_CollectionsSO_SeedToPlant_GrandmaGreen_Collections_SeedId_
@@ -2215,6 +2228,12 @@ references:
   commentId: F:GrandmaGreen.Collections.PlantProperties.spritePaths
   fullName: GrandmaGreen.Collections.PlantProperties.spritePaths
   nameWithType: PlantProperties.spritePaths
+- uid: GrandmaGreen.Collections.PlantProperties.waterPerStage
+  name: waterPerStage
+  href: api/GrandmaGreen.Collections.PlantProperties.html#GrandmaGreen_Collections_PlantProperties_waterPerStage
+  commentId: F:GrandmaGreen.Collections.PlantProperties.waterPerStage
+  fullName: GrandmaGreen.Collections.PlantProperties.waterPerStage
+  nameWithType: PlantProperties.waterPerStage
 - uid: GrandmaGreen.Collections.Seed
   name: Seed
   href: api/GrandmaGreen.Collections.Seed.html
@@ -3994,6 +4013,19 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Garden.GardenAreaController.DestroyPlantPrefabOnCell
   nameWithType: GardenAreaController.DestroyPlantPrefabOnCell
+- uid: GrandmaGreen.Garden.GardenAreaController.FertilizePlant(Vector3Int)
+  name: FertilizePlant(Vector3Int)
+  href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_FertilizePlant_Vector3Int_
+  commentId: M:GrandmaGreen.Garden.GardenAreaController.FertilizePlant(Vector3Int)
+  fullName: GrandmaGreen.Garden.GardenAreaController.FertilizePlant(Vector3Int)
+  nameWithType: GardenAreaController.FertilizePlant(Vector3Int)
+- uid: GrandmaGreen.Garden.GardenAreaController.FertilizePlant*
+  name: FertilizePlant
+  href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_FertilizePlant_
+  commentId: Overload:GrandmaGreen.Garden.GardenAreaController.FertilizePlant
+  isSpec: "True"
+  fullName: GrandmaGreen.Garden.GardenAreaController.FertilizePlant
+  nameWithType: GardenAreaController.FertilizePlant
 - uid: GrandmaGreen.Garden.GardenAreaController.GardenTileSelected(Vector3Int)
   name: GardenTileSelected(Vector3Int)
   href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_GardenTileSelected_Vector3Int_
@@ -4108,6 +4140,19 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Garden.GardenAreaController.UpdatePlantPrefabOnCell
   nameWithType: GardenAreaController.UpdatePlantPrefabOnCell
+- uid: GrandmaGreen.Garden.GardenAreaController.WaterPlant(Vector3Int)
+  name: WaterPlant(Vector3Int)
+  href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_WaterPlant_Vector3Int_
+  commentId: M:GrandmaGreen.Garden.GardenAreaController.WaterPlant(Vector3Int)
+  fullName: GrandmaGreen.Garden.GardenAreaController.WaterPlant(Vector3Int)
+  nameWithType: GardenAreaController.WaterPlant(Vector3Int)
+- uid: GrandmaGreen.Garden.GardenAreaController.WaterPlant*
+  name: WaterPlant
+  href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_WaterPlant_
+  commentId: Overload:GrandmaGreen.Garden.GardenAreaController.WaterPlant
+  isSpec: "True"
+  fullName: GrandmaGreen.Garden.GardenAreaController.WaterPlant
+  nameWithType: GardenAreaController.WaterPlant
 - uid: GrandmaGreen.Garden.GardenData
   name: GardenData
   href: api/GrandmaGreen.Garden.GardenData.html
@@ -4530,6 +4575,18 @@ references:
   commentId: F:GrandmaGreen.Garden.PlantState.growthStage
   fullName: GrandmaGreen.Garden.PlantState.growthStage
   nameWithType: PlantState.growthStage
+- uid: GrandmaGreen.Garden.PlantState.isFertilized
+  name: isFertilized
+  href: api/GrandmaGreen.Garden.PlantState.html#GrandmaGreen_Garden_PlantState_isFertilized
+  commentId: F:GrandmaGreen.Garden.PlantState.isFertilized
+  fullName: GrandmaGreen.Garden.PlantState.isFertilized
+  nameWithType: PlantState.isFertilized
+- uid: GrandmaGreen.Garden.PlantState.isWatered
+  name: isWatered
+  href: api/GrandmaGreen.Garden.PlantState.html#GrandmaGreen_Garden_PlantState_isWatered
+  commentId: F:GrandmaGreen.Garden.PlantState.isWatered
+  fullName: GrandmaGreen.Garden.PlantState.isWatered
+  nameWithType: PlantState.isWatered
 - uid: GrandmaGreen.Garden.PlantState.timePlanted
   name: timePlanted
   href: api/GrandmaGreen.Garden.PlantState.html#GrandmaGreen_Garden_PlantState_timePlanted
@@ -4664,19 +4721,6 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Garden.PlantStateManager.GetPlantType
   nameWithType: PlantStateManager.GetPlantType
-- uid: GrandmaGreen.Garden.PlantStateManager.IncrementGrowthStage(System.Int32,Vector3Int)
-  name: IncrementGrowthStage(Int32, Vector3Int)
-  href: api/GrandmaGreen.Garden.PlantStateManager.html#GrandmaGreen_Garden_PlantStateManager_IncrementGrowthStage_System_Int32_Vector3Int_
-  commentId: M:GrandmaGreen.Garden.PlantStateManager.IncrementGrowthStage(System.Int32,Vector3Int)
-  fullName: GrandmaGreen.Garden.PlantStateManager.IncrementGrowthStage(System.Int32, Vector3Int)
-  nameWithType: PlantStateManager.IncrementGrowthStage(Int32, Vector3Int)
-- uid: GrandmaGreen.Garden.PlantStateManager.IncrementGrowthStage*
-  name: IncrementGrowthStage
-  href: api/GrandmaGreen.Garden.PlantStateManager.html#GrandmaGreen_Garden_PlantStateManager_IncrementGrowthStage_
-  commentId: Overload:GrandmaGreen.Garden.PlantStateManager.IncrementGrowthStage
-  isSpec: "True"
-  fullName: GrandmaGreen.Garden.PlantStateManager.IncrementGrowthStage
-  nameWithType: PlantStateManager.IncrementGrowthStage
 - uid: GrandmaGreen.Garden.PlantStateManager.Initialize
   name: Initialize()
   href: api/GrandmaGreen.Garden.PlantStateManager.html#GrandmaGreen_Garden_PlantStateManager_Initialize
@@ -4716,6 +4760,19 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Garden.PlantStateManager.IsEmpty
   nameWithType: PlantStateManager.IsEmpty
+- uid: GrandmaGreen.Garden.PlantStateManager.NumSeedDrops(System.Int32,Vector3Int)
+  name: NumSeedDrops(Int32, Vector3Int)
+  href: api/GrandmaGreen.Garden.PlantStateManager.html#GrandmaGreen_Garden_PlantStateManager_NumSeedDrops_System_Int32_Vector3Int_
+  commentId: M:GrandmaGreen.Garden.PlantStateManager.NumSeedDrops(System.Int32,Vector3Int)
+  fullName: GrandmaGreen.Garden.PlantStateManager.NumSeedDrops(System.Int32, Vector3Int)
+  nameWithType: PlantStateManager.NumSeedDrops(Int32, Vector3Int)
+- uid: GrandmaGreen.Garden.PlantStateManager.NumSeedDrops*
+  name: NumSeedDrops
+  href: api/GrandmaGreen.Garden.PlantStateManager.html#GrandmaGreen_Garden_PlantStateManager_NumSeedDrops_
+  commentId: Overload:GrandmaGreen.Garden.PlantStateManager.NumSeedDrops
+  isSpec: "True"
+  fullName: GrandmaGreen.Garden.PlantStateManager.NumSeedDrops
+  nameWithType: PlantStateManager.NumSeedDrops
 - uid: GrandmaGreen.Garden.PlantStateManager.RegisterGarden(System.Int32)
   name: RegisterGarden(Int32)
   href: api/GrandmaGreen.Garden.PlantStateManager.html#GrandmaGreen_Garden_PlantStateManager_RegisterGarden_System_Int32_
@@ -4729,6 +4786,45 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Garden.PlantStateManager.RegisterGarden
   nameWithType: PlantStateManager.RegisterGarden
+- uid: GrandmaGreen.Garden.PlantStateManager.SetFertilization(System.Int32,Vector3Int)
+  name: SetFertilization(Int32, Vector3Int)
+  href: api/GrandmaGreen.Garden.PlantStateManager.html#GrandmaGreen_Garden_PlantStateManager_SetFertilization_System_Int32_Vector3Int_
+  commentId: M:GrandmaGreen.Garden.PlantStateManager.SetFertilization(System.Int32,Vector3Int)
+  fullName: GrandmaGreen.Garden.PlantStateManager.SetFertilization(System.Int32, Vector3Int)
+  nameWithType: PlantStateManager.SetFertilization(Int32, Vector3Int)
+- uid: GrandmaGreen.Garden.PlantStateManager.SetFertilization*
+  name: SetFertilization
+  href: api/GrandmaGreen.Garden.PlantStateManager.html#GrandmaGreen_Garden_PlantStateManager_SetFertilization_
+  commentId: Overload:GrandmaGreen.Garden.PlantStateManager.SetFertilization
+  isSpec: "True"
+  fullName: GrandmaGreen.Garden.PlantStateManager.SetFertilization
+  nameWithType: PlantStateManager.SetFertilization
+- uid: GrandmaGreen.Garden.PlantStateManager.UpdateGrowthStage(System.Int32,Vector3Int)
+  name: UpdateGrowthStage(Int32, Vector3Int)
+  href: api/GrandmaGreen.Garden.PlantStateManager.html#GrandmaGreen_Garden_PlantStateManager_UpdateGrowthStage_System_Int32_Vector3Int_
+  commentId: M:GrandmaGreen.Garden.PlantStateManager.UpdateGrowthStage(System.Int32,Vector3Int)
+  fullName: GrandmaGreen.Garden.PlantStateManager.UpdateGrowthStage(System.Int32, Vector3Int)
+  nameWithType: PlantStateManager.UpdateGrowthStage(Int32, Vector3Int)
+- uid: GrandmaGreen.Garden.PlantStateManager.UpdateGrowthStage*
+  name: UpdateGrowthStage
+  href: api/GrandmaGreen.Garden.PlantStateManager.html#GrandmaGreen_Garden_PlantStateManager_UpdateGrowthStage_
+  commentId: Overload:GrandmaGreen.Garden.PlantStateManager.UpdateGrowthStage
+  isSpec: "True"
+  fullName: GrandmaGreen.Garden.PlantStateManager.UpdateGrowthStage
+  nameWithType: PlantStateManager.UpdateGrowthStage
+- uid: GrandmaGreen.Garden.PlantStateManager.UpdateWaterStage(System.Int32,Vector3Int)
+  name: UpdateWaterStage(Int32, Vector3Int)
+  href: api/GrandmaGreen.Garden.PlantStateManager.html#GrandmaGreen_Garden_PlantStateManager_UpdateWaterStage_System_Int32_Vector3Int_
+  commentId: M:GrandmaGreen.Garden.PlantStateManager.UpdateWaterStage(System.Int32,Vector3Int)
+  fullName: GrandmaGreen.Garden.PlantStateManager.UpdateWaterStage(System.Int32, Vector3Int)
+  nameWithType: PlantStateManager.UpdateWaterStage(Int32, Vector3Int)
+- uid: GrandmaGreen.Garden.PlantStateManager.UpdateWaterStage*
+  name: UpdateWaterStage
+  href: api/GrandmaGreen.Garden.PlantStateManager.html#GrandmaGreen_Garden_PlantStateManager_UpdateWaterStage_
+  commentId: Overload:GrandmaGreen.Garden.PlantStateManager.UpdateWaterStage
+  isSpec: "True"
+  fullName: GrandmaGreen.Garden.PlantStateManager.UpdateWaterStage
+  nameWithType: PlantStateManager.UpdateWaterStage
 - uid: GrandmaGreen.Garden.PlayerToolData
   name: PlayerToolData
   href: api/GrandmaGreen.Garden.PlayerToolData.html
