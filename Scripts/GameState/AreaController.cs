@@ -41,7 +41,6 @@ namespace GrandmaGreen
 
         public virtual void Deactivate()
         {
-            //pathfinder.ReleaseGrid();
             onDeactivation?.Invoke();
         }
 
@@ -58,6 +57,11 @@ namespace GrandmaGreen
             onTilemapSelection?.Invoke(lastSelectedCell);
 
             playerController.SetDestination(worldPoint);
+
+            if (((lastSelectedTile as IGameTile)) != null)
+            {
+                playerController.QueueEntityAction(((IGameTile)lastSelectedTile).DoTileAction);
+            }
         }
 
         [ContextMenu("ParseTilemap")]

@@ -50,11 +50,8 @@ namespace GrandmaGreen.UI.HUD
 
         public void InventoryOnClick(ClickEvent evt)
         {
-            // Disables self.
-            m_root.style.display = DisplayStyle.None;
-            
             // Enables inventory.
-            HUD.instance.inventory.OpenInventory();
+            EventManager.instance.HandleEVENT_INVENTORY_OPEN();
         }
 
         public void ButtonOnClick(ClickEvent evt)

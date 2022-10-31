@@ -11,31 +11,29 @@ namespace GrandmaGreen.UI.HUD
     {
         public TabbedInventory inventory;
         private HUDController m_controller;
-        
-        public static HUD instance;
 
         private void Awake()
         {
-            if (instance == null)
-            {
-                instance = this;
-            }
-            else
-            {
-                Destroy(this);
-            }
-
             UIDocument HUD = GetComponent<UIDocument>();
             VisualElement root = HUD.rootVisualElement;
 
             m_controller = new(root);
 
             m_controller.RegisterButtonCallbacks();
+            
+            // Register global events.
+            EventManager.instance.EVENT_OPEN_HUD += OpenHUD;
+            EventManager.instance.EVENT_CLOSE_HUD += CloseHUD;
         }
 
         public void OpenHUD()
         {
             m_controller.OpenHUD();
+        }
+
+        public void CloseHUD()
+        {
+            m_controller.CloseHUD();
         }
         
     }

@@ -44,6 +44,7 @@ namespace GrandmaGreen.UI.Collections
             m_controller.RegisterExitCallback();
             
             // Subscribe to inventory related events.
+            EventManager.instance.EVENT_INVENTORY_OPEN += OpenInventory;
             EventManager.instance.EVENT_INVENTORY_ADD += InventoryAdd;
             EventManager.instance.EVENT_INVENTORY_REMOVE += InventoryRemove;
         }
@@ -57,7 +58,7 @@ namespace GrandmaGreen.UI.Collections
         {
             m_controller.OpenInventory();
         }
-        
+
         public void InventoryAdd(IInventoryItem item, int num)
         {
             switch (item.itemType)

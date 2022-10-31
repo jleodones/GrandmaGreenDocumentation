@@ -20,13 +20,17 @@ namespace GrandmaGreen.Garden
         public PlayerToolData playerTools;
 
         [Header("Plant Management")]
-        public PlantTypeDictionary plantTypeDictionary;
+        //public PlantTypeDictionary plantTypeDictionary;
         public PlantStateManager plantStateManager;
         public Dictionary<Vector3Int, GameObject> plantPrefabLookup;
         public List<PlantState> plantListDebug;
 
         [Header("Golem Management")]
         public GolemManager golemManager;
+
+        [Header("Temporary Effects")]
+        public ParticleSystem FertilizerParticleBurst;
+        public ParticleSystem WateringParticleBurst;
 
         public override void Awake()
         {
@@ -131,16 +135,31 @@ namespace GrandmaGreen.Garden
             if(plantStateManager.UpdateWaterStage(areaIndex, cell))
             {
                 PlantId type = plantStateManager.GetPlantType(areaIndex, cell);
-                PlantProperties properties = collection.GetPlant(type);
 
                 if(plantStateManager.UpdateGrowthStage(areaIndex, cell))
                 {
                     UpdatePlantPrefabOnCell(type, cell);
                 }
             }
+
+            // Temporary code to spawn a particle system so we know that a plant has been fertilized
+            // This should be replaced by some sort of animation/constant effect
+            Vector3 centerOfCell = tilemap.GetCellCenterWorld(cell);
+            Quaternion particleQuat = Quaternion.Euler(-110, 0, 0);
+            ParticleSystem PlayParticle = Instantiate(WateringParticleBurst, centerOfCell + new Vector3(0, 0, -2), particleQuat);
         }
 
-        public void FertilizePlant(Vector3Int cell) => plantStateManager.SetFertilization(areaIndex, cell);
+        public void FertilizePlant(Vector3Int cell)
+        {
+            if(plantStateManager.SetFertilization(areaIndex, cell))
+            {
+                // Temporary code to spawn a particle system so we know that a plant has been fertilized
+                // This should be replaced by some sort of animation/constant effect
+                Vector3 centerOfCell = tilemap.GetCellCenterWorld(cell);
+                Quaternion particleQuat = Quaternion.Euler(-110, 0, 0);
+                ParticleSystem PlayParticle = Instantiate(FertilizerParticleBurst, centerOfCell + new Vector3(0, 0, -2), particleQuat);
+            }
+        }
 
         public bool HarvestPlantOnCell(Vector3Int cell)
         {

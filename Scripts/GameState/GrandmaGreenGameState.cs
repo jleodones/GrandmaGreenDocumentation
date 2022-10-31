@@ -20,6 +20,7 @@ namespace GrandmaGreen
         [SerializeField] CollectionsSO collectionsData;
         [SerializeField] AreaServices areaServicer;
         [SerializeField] TimeLayerClock timeClock;
+        [SerializeField] StorylineDataStore storylineData;
         [SerializeField] SaveSystem.SaveManager saveManager;
         [SerializeField] SCENES currentScene;
         [ReadOnly] int activeAreaIndex;
@@ -59,20 +60,26 @@ namespace GrandmaGreen
             if (s_Instance != this)
                 return;
 
-            timeClock.SaveCurrentDateTime();
-            s_Instance = null;
+            ReleaseState();
 
-            saveManager.TriggerSave();
+            s_Instance = null;
         }
 
         void InitalizeState()
         {
             areaServicer.StartServices();
+            storylineData.Initalize();
+        }
+
+        void ReleaseState()
+        {
+            timeClock.SaveCurrentDateTime();
+            storylineData.Release();
+            saveManager.TriggerSave();
         }
 
         void Start()
         {
-            
             timeClock.SetClock();
         }
 

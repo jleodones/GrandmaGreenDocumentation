@@ -229,11 +229,17 @@ namespace GrandmaGreen.Collections
         //     GenerateCollectionsSO();
         // }
 
+        ///<summary>
+        ///Get any item by its id
+        ///</summary>
         public ItemProperties GetItem(Id id)
         {
             return ItemLookup[id];
         }
 
+        ///<summary>
+        ///Get any plant by its id
+        ///</summary>
         public PlantProperties GetPlant(PlantId id)
         {
             return PlantLookup[id];
@@ -254,6 +260,14 @@ namespace GrandmaGreen.Collections
         //         return sprite;
         //     }
         // }
+
+        ///<summary>
+        ///Retrieve a sprite by its sprite path (which is just its filename)
+        ///</summary>
+        public Sprite GetSprite(string spritePath)
+        {
+            return Resources.Load(spritePath, typeof(Sprite)) as Sprite;
+        }
 
         // temporary substitute for sprite resolution -
 	    // jank hard-coded plant prefabs :D
@@ -285,6 +299,17 @@ namespace GrandmaGreen.Collections
                     return SeedId.Rose;
                 case PlantId.Tulip:
                     return SeedId.Tulip;
+                default:
+                    return 0;
+            }
+        }
+
+        public CharacterId Plant2Golem(PlantId id)
+        {
+            switch (id)
+            {
+                case PlantId.Tulip:
+                    return CharacterId.TulipGolem;
                 default:
                     return 0;
             }

@@ -154,22 +154,15 @@ namespace GrandmaGreen.Garden
             int max = collection.GetPlant(plant.type).growthStages;
 
             bool canGrow = false;
-
             if (!IsEmpty(areaIndex, cell) && plant.growthStage < max-1)
             {
-                plantLookup[areaIndex][cell] = new PlantState
-                {
-                    type = plant.type,
-                    growthStage = plant.growthStage + 1,
-                    timePlanted = plant.timePlanted,
-                    cell = plant.cell,
+                PlantState updatedPlant = plant;
+                updatedPlant.growthStage = plant.growthStage + 1;
+                updatedPlant.waterStage = 0;
+                updatedPlant.waterTimer = 0;
+                updatedPlant.isWatered = false;
 
-                    waterStage = 0,
-                    waterTimer = 0,
-                    isWatered = false,
-                    isFertilized = plant.isFertilized
-                };
-
+                plantLookup[areaIndex][cell] = updatedPlant;
                 canGrow = true;
             }
 
@@ -187,64 +180,53 @@ namespace GrandmaGreen.Garden
 
                 if(plant.waterStage < waterRequirements) //&& plant.isWatered == false)
                 {
-                    plantLookup[areaIndex][cell] = new PlantState
+                    PlantState updatedPlant = plant;
+                    updatedPlant.waterStage = plant.waterStage + 1;
+                    updatedPlant.waterTimer = 0;
+                    updatedPlant.isWatered = true;
+
+                    if(updatedPlant.waterStage == waterRequirements)
                     {
-                        type = plant.type,
-                        growthStage = plant.growthStage,
-                        timePlanted = plant.timePlanted,
-                        cell = plant.cell,
+                        plantGrowth = true;
+                    }
 
-                        waterStage = plant.waterStage + 1,
-                        waterTimer = 0,
-                        isWatered = true,
-                        isFertilized = plant.isFertilized
-                    };   
-                }
-
-                if(plant.waterStage == waterRequirements - 1)
-                {
-                    plantGrowth = true;
+                    plantLookup[areaIndex][cell] = updatedPlant;
                 }
             }
             
             return plantGrowth;
         }
 
-        public void SetFertilization(int areaIndex, Vector3Int cell)
+        public bool SetFertilization(int areaIndex, Vector3Int cell)
         {
+            bool fertilizeSuccessful = false;
+
             if(!IsEmpty(areaIndex, cell))
             {
                 PlantState plant = GetPlant(areaIndex, cell);
 
                 if(!(plant.isFertilized))
                 {
-                    plantLookup[areaIndex][cell] = new PlantState
-                    {
-                        type = plant.type,
-                        growthStage = plant.growthStage,
-                        timePlanted = plant.timePlanted,
-                        cell = plant.cell,
-
-                        waterStage = plant.waterStage,
-                        waterTimer = plant.waterTimer,
-                        isWatered = plant.isWatered,
-                        isFertilized = true
-                    };
+                    PlantState updatedPlant = plant;
+                    updatedPlant.isFertilized = true;
+                    plantLookup[areaIndex][cell] = updatedPlant;
+                    fertilizeSuccessful = true;
                 }
             }
+
+            return fertilizeSuccessful;
         }
 
         public int NumSeedDrops(int areaIndex, Vector3Int cell)
         {
             PlantState plant = GetPlant(areaIndex, cell);
-
             int seedDrop = 1;
 
             if(plant.isFertilized)
             {
                 seedDrop = 2;
             }
-            
+
             return seedDrop;
         }
 

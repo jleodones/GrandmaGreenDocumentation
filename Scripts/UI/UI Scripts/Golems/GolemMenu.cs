@@ -1,85 +1,77 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Diagnostics.Tracing;
-using GrandmaGreen.Entities;
 using UnityEngine;
 using UnityEngine.UIElements;
+using GrandmaGreen.Dialogue;
+using GrandmaGreen.Entities;
 
 namespace GrandmaGreen.UI.Golems
 {
     public class GolemMenu : MonoBehaviour
     {
+        /// <summary>
+        /// Golem menu UI.
+        /// </summary>
         public UIDocument golemMenu;
 
-        public UIDocument dialogue;
-
-        private bool dialogueShowing = false;
+        /// <summary>
+        /// Camera zoom for golems on touch.
+        /// </summary>
         public CameraZoom cameraZoom;
 
-        private bool m_isMenuShowing = false;
-
+        private bool m_isGolemActive = false;
+        
+        private bool m_isMenuOpen = false;
         void OnEnable()
         {
             // Register dialogue button callback.
-            golemMenu.rootVisualElement.Q<Button>("dialogue").RegisterCallback<ClickEvent>(OnDialogueTap);
+            golemMenu.rootVisualElement.Q<Button>("dialogue").RegisterCallback<ClickEvent>(OnDialogueTrigger);
         }
 
-        public void OnDialogueTap(ClickEvent evt)
+        public void HandleGolemInteract()
         {
-            dialogueShowing = !dialogueShowing;
-            TriggerMenu();
-        }
+            m_isMenuOpen = !m_isMenuOpen;
 
-        public void TriggerMenu()
-        {
-            m_isMenuShowing = !m_isMenuShowing;
-            
-            if (m_isMenuShowing)
+            if (m_isMenuOpen)
             {
-                if (dialogueShowing)
-                {
-                    dialogueShowing = false;
-                    dialogue.rootVisualElement.Q("rootElement").style.display = DisplayStyle.None;
-                    GetComponentInParent<GolemController>().onEntityMove -= SetDialogueLocation;
-                    m_isMenuShowing = false;
-                    cameraZoom.ZoomCameraRequest(5.0f, 0.5f);
-                }
-                else
-                {
-                    // Set menu location.
-                    // Vector3 golemPosition = GetComponentInParent<Transform>().position;
-                    SetLocation(GetComponentInParent<GolemController>().transform.position);
-                    GetComponentInParent<GolemController>().onEntityMove += SetLocation;
-                
-                    // Makes menu visible and zooms in.
-                    golemMenu.rootVisualElement.Q("rootElement").style.display = DisplayStyle.Flex;
-                    cameraZoom.ZoomCameraRequest(4.2f, 0.5f);
-                }
+                GolemMenuOpen();
             }
             else
             {
-                // Makes menu invisible and zooms back out.
-                GetComponentInParent<GolemController>().onEntityMove -= SetLocation;
-                golemMenu.rootVisualElement.Q("rootElement").style.display = DisplayStyle.None;
-                
-                if (dialogueShowing)
-                {
-                    SetDialogueLocation(GetComponentInParent<GolemController>().transform.position);
-                    GetComponentInParent<GolemController>().onEntityMove += SetDialogueLocation;
-                    dialogue.rootVisualElement.Q("rootElement").style.display = DisplayStyle.Flex;
-                }
-                else
-                {
-                    cameraZoom.ZoomCameraRequest(5.0f, 0.5f);
-                }
+                GolemMenuClose();
             }
         }
-
-        public void SetDialogueLocation(Vector3 worldPosition)
+        
+        public void GolemMenuOpen()
         {
-            dialogue.rootVisualElement.transform.position = RuntimePanelUtils.CameraTransformWorldToPanel(dialogue.rootVisualElement.panel, worldPosition, Camera.main);
+            // Close the HUD.
+            EventManager.instance.HandleEVENT_CLOSE_HUD();
+            
+            // Set menu location.
+            SetLocation(GetComponentInParent<GolemController>().transform.position);
+            GetComponentInParent<GolemController>().onEntityMove += SetLocation;
+            
+            // Display.
+            golemMenu.rootVisualElement.style.display = DisplayStyle.Flex;
         }
 
+        public void GolemMenuClose()
+        {
+            EventManager.instance.HandleEVENT_OPEN_HUD();
+            golemMenu.rootVisualElement.style.display = DisplayStyle.None;
+        }
+
+        private void OnDialogueTrigger(ClickEvent clickEvent)
+        {
+            // Disable menu.
+            golemMenu.rootVisualElement.style.display = DisplayStyle.None;
+
+            // Find the golem's dialogue script.
+            Dialogueable dialogueScript = GetComponentInChildren<Dialogueable>();
+            
+            // TODO: Check if grandma is within a certain distance. If so, play dialogue. If not, ignore.
+            // Call the dialogue trigger.
+            dialogueScript.TriggerDialogue();
+        }
+        
         public void SetLocation(Vector3 worldPosition)
         {
             golemMenu.rootVisualElement.transform.position =

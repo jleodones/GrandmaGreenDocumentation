@@ -19,8 +19,8 @@ public class ToolsMenu : MonoBehaviour
 
         controller = new(root);
         controller.toolData = toolData;
-        controller.zoom = zoom; 
-        
+        controller.zoom = zoom;
+
         controller.RegisterToolCallbacks();
     }
 }

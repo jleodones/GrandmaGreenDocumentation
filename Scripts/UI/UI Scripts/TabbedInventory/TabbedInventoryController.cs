@@ -93,17 +93,6 @@ namespace GrandmaGreen.UI.Collections
             inventory.style.translate = new Translate(inventoryWidth,0,0);
         }
 
-        public void OpenInventory()
-        {
-            inventory.style.transitionProperty = new List<StylePropertyName> { "translate" };
-            inventory.style.transitionTimingFunction = new List<EasingFunction> { EasingMode.Ease };
-            inventory.style.transitionDuration = new List<TimeValue>{ new TimeValue(300, TimeUnit.Millisecond) };
-            inventory.style.translate = new Translate(0,0,0);
-            
-            // Play open inventory SFX.
-            m_soundContainers[0].Play();
-        }
-
         public void RegisterTabCallbacks()
         {
             UQueryBuilder<Button> tabs = GetAllTabs();
@@ -115,7 +104,21 @@ namespace GrandmaGreen.UI.Collections
         {
             root.Q<Button>(exitButton).RegisterCallback<ClickEvent>(CloseInventory);
         }
+        
+        public void OpenInventory()
+        {
+            // Disable HUD.
+            EventManager.instance.HandleEVENT_OPEN_HUD();
 
+            inventory.style.transitionProperty = new List<StylePropertyName> { "translate" };
+            inventory.style.transitionTimingFunction = new List<EasingFunction> { EasingMode.Ease };
+            inventory.style.transitionDuration = new List<TimeValue>{ new TimeValue(300, TimeUnit.Millisecond) };
+            inventory.style.translate = new Translate(0,0,0);
+            
+            // Play open inventory SFX.
+            m_soundContainers[0].Play();
+        }
+        
         // This hides the entire inventory panel when the exit button is clicked
         private void CloseInventory(ClickEvent evt)
         {
@@ -129,7 +132,7 @@ namespace GrandmaGreen.UI.Collections
             m_soundContainers[1].Play();
 
             // Open the HUD.
-            HUD.HUD.instance.OpenHUD();
+            EventManager.instance.HandleEVENT_OPEN_HUD();
         }
 
         /* Method for the tab on-click event: 

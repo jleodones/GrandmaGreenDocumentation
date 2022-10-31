@@ -65,12 +65,10 @@ namespace GrandmaGreen.Collections {
                 string name = line[2];
                 string description = line[3];
                 string tag = line[4];
-                //csv only gives one file path per item, add this to the data(list, dict, whatever) containing filepaths for each item
-                string spritePath = line[5];
+                string spritePath = "";
                 ItemProperties itemProps = new ItemProperties();;
                 itemProps.name = name;
                 itemProps.description = description;
-                itemProps.spritePath = spritePath;
                 //plant
                 if(csvID/1000 == 1)
                 {
@@ -79,6 +77,7 @@ namespace GrandmaGreen.Collections {
                     plantProps.name = name;
                     plantProps.description = description;
                     //csv does not provide growth stages
+                    spritePath = "PLA_" + name;
                     plantProps.spritePaths = new List<string>();
                     plantProps.spritePaths.Add(spritePath);
                     collections.PlantLookup.Add(plantId, plantProps);
@@ -88,12 +87,14 @@ namespace GrandmaGreen.Collections {
                 else if(csvID/1000 == 2)
                 {
                     SeedId seedId = (SeedId)csvID;
+                    itemProps.spritePath = "GAR_" + name;
                     collections.ItemLookup.Add(seedId, itemProps);
                 }
                 //tool
                 else if(csvID/1000 == 3)
                 {
                     ToolId toolId = (ToolId)csvID;
+                    itemProps.spritePath = "GAR_" + name;
                     collections.ItemLookup.Add(toolId, itemProps);
 
                 }
@@ -101,6 +102,7 @@ namespace GrandmaGreen.Collections {
                 else if(csvID/1000 == 4)
                 {
                     DecorationId decorId = (DecorationId)csvID;
+                    itemProps.spritePath = "DEC_" + name;
                     collections.ItemLookup.Add(decorId, itemProps);
                 }
                 //character
@@ -111,6 +113,7 @@ namespace GrandmaGreen.Collections {
                     characterProps.name = name;
                     characterProps.description = description;
                     characterProps.spritePaths = new List<string>();
+                    spritePath = "CHA_" + name;
                     characterProps.spritePaths.Add(spritePath);
                     collections.CharacterLookup.Add(characterId, characterProps);
                     collections.ItemLookup.Add(characterId, itemProps);

@@ -2,28 +2,32 @@
     <Style src="project://database/Assets/_GrandmaGreen/Scripts/UI/UI%20Scripts/StyleSheets/HUDStyleSheet.uss?fileID=7433441132597879392&amp;guid=fb47af834b15b44e59bcc04fdcbf92c5&amp;type=3#HUDStyleSheet" />
     <ui:VisualElement name="HUD-element" picking-mode="Ignore" style="flex-grow: 1; height: 1170px; justify-content: space-between;">
         <ui:VisualElement picking-mode="Ignore" name="screen-top" style="flex-direction: row; justify-content: space-between; padding-left: 5%; padding-right: 5%; height: 26%; align-items: flex-start; padding-top: 2.5%;">
-            <ui:GroupBox name="left-content" style="height: auto; width: 30%; flex-direction: column; justify-content: flex-start; align-items: flex-start; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0;">
-                <ui:GroupBox name="currency-group" class="info-content-jar info-content" style="margin-bottom: 0; margin-left: 0; margin-right: 0; margin-top: 0;">
-                    <ui:VisualElement class="icon-test general-icon icon-buttons" style="background-image: url(&apos;project://database/Assets/_GrandmaGreen/Art/UI/Icons/HUD/UI_HUD_Gold.png?fileID=2800000&amp;guid=e52e9a4b3f9c741089c91962b860c851&amp;type=3#UI_HUD_Gold&apos;); -unity-background-scale-mode: scale-and-crop;" />
-                    <ui:Label tabindex="-1" text="100" display-tooltip-when-elided="true" name="currency-text" class="info-text" />
+            <ui:GroupBox name="left-content" style="height: 100%; width: 20%; flex-direction: column; justify-content: flex-start; align-items: flex-start; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0;">
+                <ui:GroupBox name="currency-group" class="info-content-jar info-content">
+                    <ui:VisualElement class="info-border">
+                        <ui:VisualElement class="icon-test general-icon info-icon" style="background-image: url(&apos;project://database/Assets/_GrandmaGreen/Art/UI/Icons/HUD/UI_HUD_Gold%201.png?fileID=2800000&amp;guid=a905f87446937e343bfa7472f3e2bb77&amp;type=3#UI_HUD_Gold 1&apos;);" />
+                        <ui:Label tabindex="-1" text="100" display-tooltip-when-elided="true" name="currency-text" class="info-text" />
+                    </ui:VisualElement>
                 </ui:GroupBox>
-                <ui:GroupBox name="fertilizer-group" class="info-content-jar info-content" style="margin-bottom: 0;">
-                    <ui:VisualElement class="general-icon info-icon icon-buttons" style="background-color: rgba(56, 56, 56, 0); align-items: center; justify-content: flex-start; background-image: url(&apos;project://database/Assets/_GrandmaGreen/Art/UI/Icons/HUD/UI_HUD_Fertilizer.png?fileID=2800000&amp;guid=3838149d71dcc44a3b885cefcc1b733d&amp;type=3#UI_HUD_Fertilizer&apos;);" />
-                    <ui:Label tabindex="-1" text="100" display-tooltip-when-elided="true" name="fertilizer-text" class="info-text" />
+                <ui:GroupBox name="fertilizer-group" class="info-content-jar info-content">
+                    <ui:VisualElement class="info-border">
+                        <ui:VisualElement class="general-icon info-icon" style="background-color: rgba(56, 56, 56, 0); align-items: center; justify-content: flex-start; background-image: url(&apos;project://database/Assets/_GrandmaGreen/Art/UI/Icons/HUD/UI_HUD_Fertilizer%201.png?fileID=2800000&amp;guid=678c215b08dc99c4ea71e479a214f960&amp;type=3#UI_HUD_Fertilizer 1&apos;);" />
+                        <ui:Label tabindex="-1" text="100" display-tooltip-when-elided="true" name="fertilizer-text" class="info-text" />
+                    </ui:VisualElement>
                 </ui:GroupBox>
             </ui:GroupBox>
-            <ui:GroupBox name="right-content" class="button-content" style="justify-content: flex-start; flex-direction: row-reverse; height: auto;">
-                <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="settings-button" class="icon-buttons" style="background-image: url(&apos;project://database/Assets/_GrandmaGreen/Art/UI/Icons/HUD/UI_HUD_Settings.png?fileID=2800000&amp;guid=cd0184484a7a24c0a8e39f3fb6eba8e4&amp;type=3#UI_HUD_Settings&apos;); border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; justify-content: flex-start; align-items: center;" />
-                <ui:Button tabindex="-1" text="&#10;" display-tooltip-when-elided="true" name="collections-button" class="icon-buttons" style="border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; background-image: url(&apos;project://database/Assets/_GrandmaGreen/Art/UI/Icons/HUD/UI_HUD_Collection.png?fileID=2800000&amp;guid=a7b3a98b5f808491daebbb33b5c5c80f&amp;type=3#UI_HUD_Collection&apos;);" />
-                <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="customization-button" class="icon-buttons" style="background-image: url(&apos;project://database/Assets/_GrandmaGreen/Art/UI/Icons/HUD/UI_HUD_Customization.png?fileID=2800000&amp;guid=e49b7896f11624372a3cdfdf042d5a35&amp;type=3#UI_HUD_Customization&apos;); border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; -unity-background-scale-mode: stretch-to-fill;" />
+            <ui:GroupBox name="right-content" class="button-content" style="flex-direction: row-reverse; width: 30%; justify-content: space-around;">
+                <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="settings-button" class="icon-buttons" style="background-image: url(&apos;project://database/Assets/_GrandmaGreen/Art/UI/Icons/HUD/UI_HUD_Settings%201.png?fileID=2800000&amp;guid=f1a00506bf51d00488a089d6c0c971eb&amp;type=3#UI_HUD_Settings 1&apos;);" />
+                <ui:Button tabindex="-1" text="&#10;" display-tooltip-when-elided="true" name="collections-button" class="icon-buttons" style="background-image: url(&apos;project://database/Assets/_GrandmaGreen/Art/UI/Icons/HUD/UI_HUD_Collection%201.png?fileID=2800000&amp;guid=278efe2f2e7b83543b3d3500a624c941&amp;type=3#UI_HUD_Collection 1&apos;);" />
+                <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="customization-button" class="icon-buttons" style="background-image: url(&apos;project://database/Assets/_GrandmaGreen/Art/UI/Icons/HUD/UI_HUD_Customization%201.png?fileID=2800000&amp;guid=1d38a2d3152088c40a01d548a706553f&amp;type=3#UI_HUD_Customization 1&apos;);" />
             </ui:GroupBox>
         </ui:VisualElement>
         <ui:VisualElement picking-mode="Ignore" name="screen-bottom" style="height: auto; justify-content: space-between; align-items: stretch; flex-direction: row; padding-bottom: 2.5%; padding-left: 5%; padding-right: 5%; padding-top: 0;">
             <ui:GroupBox picking-mode="Ignore" name="left-content" class="button-content" style="justify-content: flex-start;">
-                <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="vision-button" class="buttons icon-buttons" style="background-image: url(&apos;project://database/Assets/_GrandmaGreen/Art/UI/Icons/HUD/UI_HUD_Cultivision.png?fileID=2800000&amp;guid=62aa0fd6d118f4ca7962bfa8ea446fd4&amp;type=3#UI_HUD_Cultivision&apos;); border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0;" />
+                <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="vision-button" class="buttons icon-buttons" style="background-image: url(&apos;project://database/Assets/_GrandmaGreen/Art/UI/Icons/HUD/UI_HUD_Cultivision%201.png?fileID=2800000&amp;guid=facedc78c92d8e14b99105b190359540&amp;type=3#UI_HUD_Cultivision 1&apos;);" />
             </ui:GroupBox>
             <ui:GroupBox picking-mode="Ignore" name="right-content" class="button-content" style="flex-direction: row-reverse; align-items: stretch; justify-content: flex-start;">
-                <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="inventory-button" class="buttons icon-buttons" style="background-image: url(&apos;project://database/Assets/_GrandmaGreen/Art/UI/Icons/HUD/UI_HUD_Inventory.png?fileID=2800000&amp;guid=d4be0b9ca157a4dd180db1b77e9d673e&amp;type=3#UI_HUD_Inventory&apos;); border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0;" />
+                <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="inventory-button" class="buttons icon-buttons" style="background-image: url(&apos;project://database/Assets/_GrandmaGreen/Art/UI/Icons/HUD/UI_HUD_Inventory%201.png?fileID=2800000&amp;guid=77f3be438a6ffa740a1ba736ffed633a&amp;type=3#UI_HUD_Inventory 1&apos;);" />
             </ui:GroupBox>
         </ui:VisualElement>
     </ui:VisualElement>

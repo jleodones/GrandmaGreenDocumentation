@@ -74,7 +74,7 @@ namespace GrandmaGreen.Garden
             {
                 equippedSeed = 0;
             }
-            // EndToolSelection();
+            EndToolSelection();
         }
 
         public void SetEquippedSeed(int plantIndex) => equippedSeed = SeedId.Tulip;
