@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class GolemData
+    <title>Class Storyline
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class GolemData
+    <meta name="title" content="Class Storyline
    ">
     <meta name="generator" content="docfx 2.59.4.0">
     
@@ -77,34 +77,34 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="GrandmaGreen.Entities.GolemData">
+            <article class="content wrap" id="_content" data-uid="GrandmaGreen.Storyline">
   
   
-  <h1 id="GrandmaGreen_Entities_GolemData" data-uid="GrandmaGreen.Entities.GolemData" class="text-break">Class GolemData
+  <h1 id="GrandmaGreen_Storyline" data-uid="GrandmaGreen.Storyline" class="text-break">Class Storyline
   </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Object</a></div>
-    <div class="level1"><span class="xref">GolemData</span></div>
+    <div class="level1"><span class="xref">Storyline</span></div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="GrandmaGreen.Entities.html">GrandmaGreen.Entities</a></h6>
+  <h6><strong>Namespace</strong>: <a class="xref" href="GrandmaGreen.html">GrandmaGreen</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
-  <h5 id="GrandmaGreen_Entities_GolemData_syntax">Syntax</h5>
+  <h5 id="GrandmaGreen_Storyline_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class GolemData : ScriptableObject</code></pre>
+    <pre><code class="lang-csharp hljs">public class Storyline : ScriptableObject</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   
   
-  <h4 id="GrandmaGreen_Entities_GolemData_golemID" data-uid="GrandmaGreen.Entities.GolemData.golemID">golemID</h4>
+  <h4 id="GrandmaGreen_Storyline_requirements" data-uid="GrandmaGreen.Storyline.requirements">requirements</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int golemID</code></pre>
+    <pre><code class="lang-csharp hljs">public StoryRequirement[] requirements</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -116,21 +116,49 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><a class="xref" href="GrandmaGreen.StoryRequirement.html">StoryRequirement</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="GrandmaGreen_Storyline_currentState_" data-uid="GrandmaGreen.Storyline.currentState*"></a>
+  <h4 id="GrandmaGreen_Storyline_currentState" data-uid="GrandmaGreen.Storyline.currentState">currentState</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StoryState currentState { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="GrandmaGreen.StoryState.html">StoryState</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <h4 id="GrandmaGreen_Entities_GolemData_golemName" data-uid="GrandmaGreen.Entities.GolemData.golemName">golemName</h4>
+  <a id="GrandmaGreen_Storyline_progress_" data-uid="GrandmaGreen.Storyline.progress*"></a>
+  <h4 id="GrandmaGreen_Storyline_progress" data-uid="GrandmaGreen.Storyline.progress">progress</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string golemName</code></pre>
+    <pre><code class="lang-csharp hljs">public uint progress { get; }</code></pre>
   </div>
-  <h5 class="fieldValue">Field Value</h5>
+  <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -140,141 +168,97 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">UInt32</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
+  <h3 id="methods">Methods
+  </h3>
   
   
-  <h4 id="GrandmaGreen_Entities_GolemData_golemPrefabs" data-uid="GrandmaGreen.Entities.GolemData.golemPrefabs">golemPrefabs</h4>
+  <a id="GrandmaGreen_Storyline_CompleteStory_" data-uid="GrandmaGreen.Storyline.CompleteStory*"></a>
+  <h4 id="GrandmaGreen_Storyline_CompleteStory" data-uid="GrandmaGreen.Storyline.CompleteStory">CompleteStory()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public GameObject[] golemPrefabs</code></pre>
+    <pre><code class="lang-csharp hljs">public void CompleteStory()</code></pre>
   </div>
-  <h5 class="fieldValue">Field Value</h5>
+  
+  
+  <a id="GrandmaGreen_Storyline_ProgressStory_" data-uid="GrandmaGreen.Storyline.ProgressStory*"></a>
+  <h4 id="GrandmaGreen_Storyline_ProgressStory" data-uid="GrandmaGreen.Storyline.ProgressStory">ProgressStory()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ProgressStory()</code></pre>
+  </div>
+  
+  
+  <a id="GrandmaGreen_Storyline_RegressStory_" data-uid="GrandmaGreen.Storyline.RegressStory*"></a>
+  <h4 id="GrandmaGreen_Storyline_RegressStory" data-uid="GrandmaGreen.Storyline.RegressStory">RegressStory()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RegressStory()</code></pre>
+  </div>
+  
+  
+  <a id="GrandmaGreen_Storyline_SetProgress_" data-uid="GrandmaGreen.Storyline.SetProgress*"></a>
+  <h4 id="GrandmaGreen_Storyline_SetProgress_System_UInt32_System_Boolean_" data-uid="GrandmaGreen.Storyline.SetProgress(System.UInt32,System.Boolean)">SetProgress(UInt32, Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetProgress(uint newProgress, bool retroactive = false)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
+        <th>Name</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">GameObject</span>[]</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">UInt32</a></td>
+        <td><span class="parametername">newProgress</span></td>
         <td></td>
       </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="GrandmaGreen_Entities_GolemData_happiness" data-uid="GrandmaGreen.Entities.GolemData.happiness">happiness</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int happiness</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="GrandmaGreen_Entities_GolemData_info" data-uid="GrandmaGreen.Entities.GolemData.info">info</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string info</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="GrandmaGreen_Entities_GolemData_isSpawned" data-uid="GrandmaGreen.Entities.GolemData.isSpawned">isSpawned</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int isSpawned</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="GrandmaGreen_Entities_GolemData_isTravelling" data-uid="GrandmaGreen.Entities.GolemData.isTravelling">isTravelling</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool isTravelling</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">retroactive</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <h4 id="GrandmaGreen_Entities_GolemData_spawnChance" data-uid="GrandmaGreen.Entities.GolemData.spawnChance">spawnChance</h4>
+  <a id="GrandmaGreen_Storyline_StartStory_" data-uid="GrandmaGreen.Storyline.StartStory*"></a>
+  <h4 id="GrandmaGreen_Storyline_StartStory" data-uid="GrandmaGreen.Storyline.StartStory">StartStory()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int spawnChance</code></pre>
+    <pre><code class="lang-csharp hljs">public void StartStory()</code></pre>
   </div>
-  <h5 class="fieldValue">Field Value</h5>
+  <h3 id="events">Events
+  </h3>
+  
+  
+  <h4 id="GrandmaGreen_Storyline_onCompletion" data-uid="GrandmaGreen.Storyline.onCompletion">onCompletion</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Action&lt;Storyline&gt; onCompletion</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -284,21 +268,21 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="GrandmaGreen.Storyline.html">Storyline</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <h4 id="GrandmaGreen_Entities_GolemData_stages" data-uid="GrandmaGreen.Entities.GolemData.stages">stages</h4>
+  <h4 id="GrandmaGreen_Storyline_onProgress" data-uid="GrandmaGreen.Storyline.onProgress">onProgress</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public GolemStage stages</code></pre>
+    <pre><code class="lang-csharp hljs">public event Action&lt;Storyline&gt; onProgress</code></pre>
   </div>
-  <h5 class="fieldValue">Field Value</h5>
+  <h5 class="eventType">Event Type</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -308,7 +292,55 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="GrandmaGreen.Entities.GolemStage.html">GolemStage</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="GrandmaGreen.Storyline.html">Storyline</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="GrandmaGreen_Storyline_onRegress" data-uid="GrandmaGreen.Storyline.onRegress">onRegress</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Action&lt;Storyline&gt; onRegress</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="GrandmaGreen.Storyline.html">Storyline</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="GrandmaGreen_Storyline_onStart" data-uid="GrandmaGreen.Storyline.onStart">onStart</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Action&lt;Storyline&gt; onStart</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="GrandmaGreen.Storyline.html">Storyline</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>

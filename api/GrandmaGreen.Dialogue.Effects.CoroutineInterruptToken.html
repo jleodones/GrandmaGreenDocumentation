@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class GolemMenu
+    <title>Class Effects.CoroutineInterruptToken
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class GolemMenu
+    <meta name="title" content="Class Effects.CoroutineInterruptToken
    ">
     <meta name="generator" content="docfx 2.59.4.0">
     
@@ -77,37 +77,90 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="GrandmaGreen.UI.Golems.GolemMenu">
+            <article class="content wrap" id="_content" data-uid="GrandmaGreen.Dialogue.Effects.CoroutineInterruptToken">
   
   
-  <h1 id="GrandmaGreen_UI_Golems_GolemMenu" data-uid="GrandmaGreen.UI.Golems.GolemMenu" class="text-break">Class GolemMenu
+  <h1 id="GrandmaGreen_Dialogue_Effects_CoroutineInterruptToken" data-uid="GrandmaGreen.Dialogue.Effects.CoroutineInterruptToken" class="text-break">Class Effects.CoroutineInterruptToken
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>An object that can be used to signal to a coroutine that it should
+terminate early.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Object</a></div>
-    <div class="level1"><span class="xref">GolemMenu</span></div>
+    <div class="level1"><span class="xref">Effects.CoroutineInterruptToken</span></div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="GrandmaGreen.UI.Golems.html">GrandmaGreen.UI.Golems</a></h6>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring#system-object-tostring">Object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">Object.Equals(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">Object.Equals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals#system-object-referenceequals(system-object-system-object)">Object.ReferenceEquals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode#system-object-gethashcode">Object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype#system-object-gettype">Object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone#system-object-memberwiseclone">Object.MemberwiseClone()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="GrandmaGreen.Dialogue.html">GrandmaGreen.Dialogue</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
-  <h5 id="GrandmaGreen_UI_Golems_GolemMenu_syntax">Syntax</h5>
+  <h5 id="GrandmaGreen_Dialogue_Effects_CoroutineInterruptToken_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class GolemMenu : MonoBehaviour</code></pre>
+    <pre><code class="lang-csharp hljs">public class CoroutineInterruptToken</code></pre>
   </div>
-  <h3 id="fields">Fields
+  <h5 id="GrandmaGreen_Dialogue_Effects_CoroutineInterruptToken_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>
+While coroutines can be stopped by calling <see cref="!:MonoBehaviour.StopCoroutine"></see> or <see cref="!:MonoBehaviour.StopAllCoroutines"></see>, this has the side effect
+of also stopping any coroutine that was waiting for the now-stopped
+coroutine to finish.
+</p>
+<p>
+Instances of this class may be passed as a parameter to a coroutine
+that they can periodically poll to see if they should terminate
+earlier than planned.
+</p>
+<p>
+To use this class, create an instance of it, and pass it as a
+parameter to your coroutine. In the coroutine, call <a class="xref" href="GrandmaGreen.Dialogue.Effects.CoroutineInterruptToken.html#GrandmaGreen_Dialogue_Effects_CoroutineInterruptToken_Start">Start()</a> to mark that the coroutine is running. During the
+coroutine&apos;s execution, periodically check the <a class="xref" href="GrandmaGreen.Dialogue.Effects.CoroutineInterruptToken.html#GrandmaGreen_Dialogue_Effects_CoroutineInterruptToken_WasInterrupted">WasInterrupted</a> property to determine if the coroutine
+should exit. If it is <span class="xref">true</span>, the coroutine should
+exit (via the <code>yield break</code> statement.) At the normal exit of
+your coroutine, call the <a class="xref" href="GrandmaGreen.Dialogue.Effects.CoroutineInterruptToken.html#GrandmaGreen_Dialogue_Effects_CoroutineInterruptToken_Complete">Complete()</a> method to mark that the
+coroutine is no longer running. To make a coroutine stop, call the
+<a class="xref" href="GrandmaGreen.Dialogue.Effects.CoroutineInterruptToken.html#GrandmaGreen_Dialogue_Effects_CoroutineInterruptToken_Interrupt">Interrupt()</a> method.
+</p>
+<p>
+You can also use the <a class="xref" href="GrandmaGreen.Dialogue.Effects.CoroutineInterruptToken.html#GrandmaGreen_Dialogue_Effects_CoroutineInterruptToken_CanInterrupt">CanInterrupt</a> property to
+determine if the token is in a state in which it can stop (that is,
+a coroutine that&apos;s using it is currently running.)
+</p>
+</div>
+  <h3 id="properties">Properties
   </h3>
   
   
-  <h4 id="GrandmaGreen_UI_Golems_GolemMenu_cameraZoom" data-uid="GrandmaGreen.UI.Golems.GolemMenu.cameraZoom">cameraZoom</h4>
-  <div class="markdown level1 summary"><p>Camera zoom for golems on touch.</p>
-</div>
+  <a id="GrandmaGreen_Dialogue_Effects_CoroutineInterruptToken_CanInterrupt_" data-uid="GrandmaGreen.Dialogue.Effects.CoroutineInterruptToken.CanInterrupt*"></a>
+  <h4 id="GrandmaGreen_Dialogue_Effects_CoroutineInterruptToken_CanInterrupt" data-uid="GrandmaGreen.Dialogue.Effects.CoroutineInterruptToken.CanInterrupt">CanInterrupt</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public CameraZoom cameraZoom</code></pre>
+    <pre><code class="lang-csharp hljs">public bool CanInterrupt { get; }</code></pre>
   </div>
-  <h5 class="fieldValue">Field Value</h5>
+  <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -117,22 +170,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="GrandmaGreen.CameraZoom.html">CameraZoom</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <h4 id="GrandmaGreen_UI_Golems_GolemMenu_golemMenu" data-uid="GrandmaGreen.UI.Golems.GolemMenu.golemMenu">golemMenu</h4>
-  <div class="markdown level1 summary"><p>Golem menu UI.</p>
-</div>
+  <a id="GrandmaGreen_Dialogue_Effects_CoroutineInterruptToken_WasInterrupted_" data-uid="GrandmaGreen.Dialogue.Effects.CoroutineInterruptToken.WasInterrupted*"></a>
+  <h4 id="GrandmaGreen_Dialogue_Effects_CoroutineInterruptToken_WasInterrupted" data-uid="GrandmaGreen.Dialogue.Effects.CoroutineInterruptToken.WasInterrupted">WasInterrupted</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public UIDocument golemMenu</code></pre>
+    <pre><code class="lang-csharp hljs">public bool WasInterrupted { get; }</code></pre>
   </div>
-  <h5 class="fieldValue">Field Value</h5>
+  <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -142,7 +195,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">UIDocument</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -151,61 +204,34 @@
   </h3>
   
   
-  <a id="GrandmaGreen_UI_Golems_GolemMenu_GolemMenuClose_" data-uid="GrandmaGreen.UI.Golems.GolemMenu.GolemMenuClose*"></a>
-  <h4 id="GrandmaGreen_UI_Golems_GolemMenu_GolemMenuClose" data-uid="GrandmaGreen.UI.Golems.GolemMenu.GolemMenuClose">GolemMenuClose()</h4>
+  <a id="GrandmaGreen_Dialogue_Effects_CoroutineInterruptToken_Complete_" data-uid="GrandmaGreen.Dialogue.Effects.CoroutineInterruptToken.Complete*"></a>
+  <h4 id="GrandmaGreen_Dialogue_Effects_CoroutineInterruptToken_Complete" data-uid="GrandmaGreen.Dialogue.Effects.CoroutineInterruptToken.Complete">Complete()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void GolemMenuClose()</code></pre>
+    <pre><code class="lang-csharp hljs">public void Complete()</code></pre>
   </div>
   
   
-  <a id="GrandmaGreen_UI_Golems_GolemMenu_GolemMenuOpen_" data-uid="GrandmaGreen.UI.Golems.GolemMenu.GolemMenuOpen*"></a>
-  <h4 id="GrandmaGreen_UI_Golems_GolemMenu_GolemMenuOpen" data-uid="GrandmaGreen.UI.Golems.GolemMenu.GolemMenuOpen">GolemMenuOpen()</h4>
+  <a id="GrandmaGreen_Dialogue_Effects_CoroutineInterruptToken_Interrupt_" data-uid="GrandmaGreen.Dialogue.Effects.CoroutineInterruptToken.Interrupt*"></a>
+  <h4 id="GrandmaGreen_Dialogue_Effects_CoroutineInterruptToken_Interrupt" data-uid="GrandmaGreen.Dialogue.Effects.CoroutineInterruptToken.Interrupt">Interrupt()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void GolemMenuOpen()</code></pre>
+    <pre><code class="lang-csharp hljs">public void Interrupt()</code></pre>
   </div>
   
   
-  <a id="GrandmaGreen_UI_Golems_GolemMenu_HandleGolemInteract_" data-uid="GrandmaGreen.UI.Golems.GolemMenu.HandleGolemInteract*"></a>
-  <h4 id="GrandmaGreen_UI_Golems_GolemMenu_HandleGolemInteract" data-uid="GrandmaGreen.UI.Golems.GolemMenu.HandleGolemInteract">HandleGolemInteract()</h4>
+  <a id="GrandmaGreen_Dialogue_Effects_CoroutineInterruptToken_Start_" data-uid="GrandmaGreen.Dialogue.Effects.CoroutineInterruptToken.Start*"></a>
+  <h4 id="GrandmaGreen_Dialogue_Effects_CoroutineInterruptToken_Start" data-uid="GrandmaGreen.Dialogue.Effects.CoroutineInterruptToken.Start">Start()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void HandleGolemInteract()</code></pre>
+    <pre><code class="lang-csharp hljs">public void Start()</code></pre>
   </div>
-  
-  
-  <a id="GrandmaGreen_UI_Golems_GolemMenu_SetLocation_" data-uid="GrandmaGreen.UI.Golems.GolemMenu.SetLocation*"></a>
-  <h4 id="GrandmaGreen_UI_Golems_GolemMenu_SetLocation_Vector3_" data-uid="GrandmaGreen.UI.Golems.GolemMenu.SetLocation(Vector3)">SetLocation(Vector3)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void SetLocation(Vector3 worldPosition)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Vector3</span></td>
-        <td><span class="parametername">worldPosition</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
 </article>
           </div>
           

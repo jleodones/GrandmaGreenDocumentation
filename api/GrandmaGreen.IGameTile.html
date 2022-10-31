@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class DialoguePrototype
+    <title>Interface IGameTile
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class DialoguePrototype
+    <meta name="title" content="Interface IGameTile
    ">
     <meta name="generator" content="docfx 2.59.4.0">
     
@@ -77,62 +77,40 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="GrandmaGreen.DialoguePrototype">
+            <article class="content wrap" id="_content" data-uid="GrandmaGreen.IGameTile">
   
   
-  <h1 id="GrandmaGreen_DialoguePrototype" data-uid="GrandmaGreen.DialoguePrototype" class="text-break">Class DialoguePrototype
+  <h1 id="GrandmaGreen_IGameTile" data-uid="GrandmaGreen.IGameTile" class="text-break">Interface IGameTile
   </h1>
-  <div class="markdown level0 summary"><p>Attach to dialogue-capable entities. This spawns their own dialogue bubble at the right time.</p>
-</div>
+  <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
-  <div class="inheritance">
-    <h5>Inheritance</h5>
-    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Object</a></div>
-    <div class="level1"><span class="xref">DialoguePrototype</span></div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="GrandmaGreen.html">GrandmaGreen</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
-  <h5 id="GrandmaGreen_DialoguePrototype_syntax">Syntax</h5>
+  <h5 id="GrandmaGreen_IGameTile_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class DialoguePrototype : MonoBehaviour</code></pre>
+    <pre><code class="lang-csharp hljs">public interface IGameTile</code></pre>
   </div>
-  <h3 id="fields">Fields
-  </h3>
-  
-  
-  <h4 id="GrandmaGreen_DialoguePrototype_m_isSpeaking" data-uid="GrandmaGreen.DialoguePrototype.m_isSpeaking">m_isSpeaking</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool m_isSpeaking</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h3 id="methods">Methods
   </h3>
   
   
-  <a id="GrandmaGreen_DialoguePrototype_OnInteractDialogue_" data-uid="GrandmaGreen.DialoguePrototype.OnInteractDialogue*"></a>
-  <h4 id="GrandmaGreen_DialoguePrototype_OnInteractDialogue_Vector3_" data-uid="GrandmaGreen.DialoguePrototype.OnInteractDialogue(Vector3)">OnInteractDialogue(Vector3)</h4>
+  <a id="GrandmaGreen_IGameTile_DoTileAction_" data-uid="GrandmaGreen.IGameTile.DoTileAction*"></a>
+  <h4 id="GrandmaGreen_IGameTile_DoTileAction" data-uid="GrandmaGreen.IGameTile.DoTileAction">DoTileAction()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void OnInteractDialogue(Vector3 interactionPoint)</code></pre>
+    <pre><code class="lang-csharp hljs">void DoTileAction()</code></pre>
+  </div>
+  
+  
+  <a id="GrandmaGreen_IGameTile_DoTileAction_" data-uid="GrandmaGreen.IGameTile.DoTileAction*"></a>
+  <h4 id="GrandmaGreen_IGameTile_DoTileAction_EntityController_" data-uid="GrandmaGreen.IGameTile.DoTileAction(EntityController)">DoTileAction(EntityController)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void DoTileAction(EntityController entity)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -145,8 +123,8 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Vector3</span></td>
-        <td><span class="parametername">interactionPoint</span></td>
+        <td><span class="xref">EntityController</span></td>
+        <td><span class="parametername">entity</span></td>
         <td></td>
       </tr>
     </tbody>

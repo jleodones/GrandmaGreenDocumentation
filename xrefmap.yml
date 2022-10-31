@@ -1016,12 +1016,38 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Collections.CollectionsSO.GetPrefab
   nameWithType: CollectionsSO.GetPrefab
+- uid: GrandmaGreen.Collections.CollectionsSO.GetSprite(System.String)
+  name: GetSprite(String)
+  href: api/GrandmaGreen.Collections.CollectionsSO.html#GrandmaGreen_Collections_CollectionsSO_GetSprite_System_String_
+  commentId: M:GrandmaGreen.Collections.CollectionsSO.GetSprite(System.String)
+  fullName: GrandmaGreen.Collections.CollectionsSO.GetSprite(System.String)
+  nameWithType: CollectionsSO.GetSprite(String)
+- uid: GrandmaGreen.Collections.CollectionsSO.GetSprite*
+  name: GetSprite
+  href: api/GrandmaGreen.Collections.CollectionsSO.html#GrandmaGreen_Collections_CollectionsSO_GetSprite_
+  commentId: Overload:GrandmaGreen.Collections.CollectionsSO.GetSprite
+  isSpec: "True"
+  fullName: GrandmaGreen.Collections.CollectionsSO.GetSprite
+  nameWithType: CollectionsSO.GetSprite
 - uid: GrandmaGreen.Collections.CollectionsSO.ItemLookup
   name: ItemLookup
   href: api/GrandmaGreen.Collections.CollectionsSO.html#GrandmaGreen_Collections_CollectionsSO_ItemLookup
   commentId: F:GrandmaGreen.Collections.CollectionsSO.ItemLookup
   fullName: GrandmaGreen.Collections.CollectionsSO.ItemLookup
   nameWithType: CollectionsSO.ItemLookup
+- uid: GrandmaGreen.Collections.CollectionsSO.Plant2Golem(GrandmaGreen.Collections.PlantId)
+  name: Plant2Golem(PlantId)
+  href: api/GrandmaGreen.Collections.CollectionsSO.html#GrandmaGreen_Collections_CollectionsSO_Plant2Golem_GrandmaGreen_Collections_PlantId_
+  commentId: M:GrandmaGreen.Collections.CollectionsSO.Plant2Golem(GrandmaGreen.Collections.PlantId)
+  fullName: GrandmaGreen.Collections.CollectionsSO.Plant2Golem(GrandmaGreen.Collections.PlantId)
+  nameWithType: CollectionsSO.Plant2Golem(PlantId)
+- uid: GrandmaGreen.Collections.CollectionsSO.Plant2Golem*
+  name: Plant2Golem
+  href: api/GrandmaGreen.Collections.CollectionsSO.html#GrandmaGreen_Collections_CollectionsSO_Plant2Golem_
+  commentId: Overload:GrandmaGreen.Collections.CollectionsSO.Plant2Golem
+  isSpec: "True"
+  fullName: GrandmaGreen.Collections.CollectionsSO.Plant2Golem
+  nameWithType: CollectionsSO.Plant2Golem
 - uid: GrandmaGreen.Collections.CollectionsSO.PlantLookup
   name: PlantLookup
   href: api/GrandmaGreen.Collections.CollectionsSO.html#GrandmaGreen_Collections_CollectionsSO_PlantLookup
@@ -2626,31 +2652,287 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.DemoUIScript.OpenUI
   nameWithType: DemoUIScript.OpenUI
-- uid: GrandmaGreen.DialoguePrototype
-  name: DialoguePrototype
-  href: api/GrandmaGreen.DialoguePrototype.html
-  commentId: T:GrandmaGreen.DialoguePrototype
-  fullName: GrandmaGreen.DialoguePrototype
-  nameWithType: DialoguePrototype
-- uid: GrandmaGreen.DialoguePrototype.m_isSpeaking
-  name: m_isSpeaking
-  href: api/GrandmaGreen.DialoguePrototype.html#GrandmaGreen_DialoguePrototype_m_isSpeaking
-  commentId: F:GrandmaGreen.DialoguePrototype.m_isSpeaking
-  fullName: GrandmaGreen.DialoguePrototype.m_isSpeaking
-  nameWithType: DialoguePrototype.m_isSpeaking
-- uid: GrandmaGreen.DialoguePrototype.OnInteractDialogue(Vector3)
-  name: OnInteractDialogue(Vector3)
-  href: api/GrandmaGreen.DialoguePrototype.html#GrandmaGreen_DialoguePrototype_OnInteractDialogue_Vector3_
-  commentId: M:GrandmaGreen.DialoguePrototype.OnInteractDialogue(Vector3)
-  fullName: GrandmaGreen.DialoguePrototype.OnInteractDialogue(Vector3)
-  nameWithType: DialoguePrototype.OnInteractDialogue(Vector3)
-- uid: GrandmaGreen.DialoguePrototype.OnInteractDialogue*
-  name: OnInteractDialogue
-  href: api/GrandmaGreen.DialoguePrototype.html#GrandmaGreen_DialoguePrototype_OnInteractDialogue_
-  commentId: Overload:GrandmaGreen.DialoguePrototype.OnInteractDialogue
+- uid: GrandmaGreen.Dialogue
+  name: GrandmaGreen.Dialogue
+  href: api/GrandmaGreen.Dialogue.html
+  commentId: N:GrandmaGreen.Dialogue
+  fullName: GrandmaGreen.Dialogue
+  nameWithType: GrandmaGreen.Dialogue
+- uid: GrandmaGreen.Dialogue.CustomLineView
+  name: CustomLineView
+  href: api/GrandmaGreen.Dialogue.CustomLineView.html
+  commentId: T:GrandmaGreen.Dialogue.CustomLineView
+  fullName: GrandmaGreen.Dialogue.CustomLineView
+  nameWithType: CustomLineView
+- uid: GrandmaGreen.Dialogue.CustomLineView.autoAdvance
+  name: autoAdvance
+  href: api/GrandmaGreen.Dialogue.CustomLineView.html#GrandmaGreen_Dialogue_CustomLineView_autoAdvance
+  commentId: F:GrandmaGreen.Dialogue.CustomLineView.autoAdvance
+  fullName: GrandmaGreen.Dialogue.CustomLineView.autoAdvance
+  nameWithType: CustomLineView.autoAdvance
+- uid: GrandmaGreen.Dialogue.CustomLineView.dialogueSFX
+  name: dialogueSFX
+  href: api/GrandmaGreen.Dialogue.CustomLineView.html#GrandmaGreen_Dialogue_CustomLineView_dialogueSFX
+  commentId: F:GrandmaGreen.Dialogue.CustomLineView.dialogueSFX
+  fullName: GrandmaGreen.Dialogue.CustomLineView.dialogueSFX
+  nameWithType: CustomLineView.dialogueSFX
+- uid: GrandmaGreen.Dialogue.CustomLineView.dialogueUI
+  name: dialogueUI
+  href: api/GrandmaGreen.Dialogue.CustomLineView.html#GrandmaGreen_Dialogue_CustomLineView_dialogueUI
+  commentId: F:GrandmaGreen.Dialogue.CustomLineView.dialogueUI
+  fullName: GrandmaGreen.Dialogue.CustomLineView.dialogueUI
+  nameWithType: CustomLineView.dialogueUI
+- uid: GrandmaGreen.Dialogue.CustomLineView.DismissLine(Action)
+  name: DismissLine(Action)
+  href: api/GrandmaGreen.Dialogue.CustomLineView.html#GrandmaGreen_Dialogue_CustomLineView_DismissLine_Action_
+  commentId: M:GrandmaGreen.Dialogue.CustomLineView.DismissLine(Action)
+  fullName: GrandmaGreen.Dialogue.CustomLineView.DismissLine(Action)
+  nameWithType: CustomLineView.DismissLine(Action)
+- uid: GrandmaGreen.Dialogue.CustomLineView.DismissLine*
+  name: DismissLine
+  href: api/GrandmaGreen.Dialogue.CustomLineView.html#GrandmaGreen_Dialogue_CustomLineView_DismissLine_
+  commentId: Overload:GrandmaGreen.Dialogue.CustomLineView.DismissLine
   isSpec: "True"
-  fullName: GrandmaGreen.DialoguePrototype.OnInteractDialogue
-  nameWithType: DialoguePrototype.OnInteractDialogue
+  fullName: GrandmaGreen.Dialogue.CustomLineView.DismissLine
+  nameWithType: CustomLineView.DismissLine
+- uid: GrandmaGreen.Dialogue.CustomLineView.EndDialogueNode
+  name: EndDialogueNode()
+  href: api/GrandmaGreen.Dialogue.CustomLineView.html#GrandmaGreen_Dialogue_CustomLineView_EndDialogueNode
+  commentId: M:GrandmaGreen.Dialogue.CustomLineView.EndDialogueNode
+  fullName: GrandmaGreen.Dialogue.CustomLineView.EndDialogueNode()
+  nameWithType: CustomLineView.EndDialogueNode()
+- uid: GrandmaGreen.Dialogue.CustomLineView.EndDialogueNode*
+  name: EndDialogueNode
+  href: api/GrandmaGreen.Dialogue.CustomLineView.html#GrandmaGreen_Dialogue_CustomLineView_EndDialogueNode_
+  commentId: Overload:GrandmaGreen.Dialogue.CustomLineView.EndDialogueNode
+  isSpec: "True"
+  fullName: GrandmaGreen.Dialogue.CustomLineView.EndDialogueNode
+  nameWithType: CustomLineView.EndDialogueNode
+- uid: GrandmaGreen.Dialogue.CustomLineView.InterruptLine(LocalizedLine,Action)
+  name: InterruptLine(LocalizedLine, Action)
+  href: api/GrandmaGreen.Dialogue.CustomLineView.html#GrandmaGreen_Dialogue_CustomLineView_InterruptLine_LocalizedLine_Action_
+  commentId: M:GrandmaGreen.Dialogue.CustomLineView.InterruptLine(LocalizedLine,Action)
+  fullName: GrandmaGreen.Dialogue.CustomLineView.InterruptLine(LocalizedLine, Action)
+  nameWithType: CustomLineView.InterruptLine(LocalizedLine, Action)
+- uid: GrandmaGreen.Dialogue.CustomLineView.InterruptLine*
+  name: InterruptLine
+  href: api/GrandmaGreen.Dialogue.CustomLineView.html#GrandmaGreen_Dialogue_CustomLineView_InterruptLine_
+  commentId: Overload:GrandmaGreen.Dialogue.CustomLineView.InterruptLine
+  isSpec: "True"
+  fullName: GrandmaGreen.Dialogue.CustomLineView.InterruptLine
+  nameWithType: CustomLineView.InterruptLine
+- uid: GrandmaGreen.Dialogue.CustomLineView.onCharacterTyped
+  name: onCharacterTyped
+  href: api/GrandmaGreen.Dialogue.CustomLineView.html#GrandmaGreen_Dialogue_CustomLineView_onCharacterTyped
+  commentId: F:GrandmaGreen.Dialogue.CustomLineView.onCharacterTyped
+  fullName: GrandmaGreen.Dialogue.CustomLineView.onCharacterTyped
+  nameWithType: CustomLineView.onCharacterTyped
+- uid: GrandmaGreen.Dialogue.CustomLineView.OnContinueTriggered(ClickEvent)
+  name: OnContinueTriggered(ClickEvent)
+  href: api/GrandmaGreen.Dialogue.CustomLineView.html#GrandmaGreen_Dialogue_CustomLineView_OnContinueTriggered_ClickEvent_
+  commentId: M:GrandmaGreen.Dialogue.CustomLineView.OnContinueTriggered(ClickEvent)
+  fullName: GrandmaGreen.Dialogue.CustomLineView.OnContinueTriggered(ClickEvent)
+  nameWithType: CustomLineView.OnContinueTriggered(ClickEvent)
+- uid: GrandmaGreen.Dialogue.CustomLineView.OnContinueTriggered*
+  name: OnContinueTriggered
+  href: api/GrandmaGreen.Dialogue.CustomLineView.html#GrandmaGreen_Dialogue_CustomLineView_OnContinueTriggered_
+  commentId: Overload:GrandmaGreen.Dialogue.CustomLineView.OnContinueTriggered
+  isSpec: "True"
+  fullName: GrandmaGreen.Dialogue.CustomLineView.OnContinueTriggered
+  nameWithType: CustomLineView.OnContinueTriggered
+- uid: GrandmaGreen.Dialogue.CustomLineView.RunLine(LocalizedLine,Action)
+  name: RunLine(LocalizedLine, Action)
+  href: api/GrandmaGreen.Dialogue.CustomLineView.html#GrandmaGreen_Dialogue_CustomLineView_RunLine_LocalizedLine_Action_
+  commentId: M:GrandmaGreen.Dialogue.CustomLineView.RunLine(LocalizedLine,Action)
+  fullName: GrandmaGreen.Dialogue.CustomLineView.RunLine(LocalizedLine, Action)
+  nameWithType: CustomLineView.RunLine(LocalizedLine, Action)
+- uid: GrandmaGreen.Dialogue.CustomLineView.RunLine*
+  name: RunLine
+  href: api/GrandmaGreen.Dialogue.CustomLineView.html#GrandmaGreen_Dialogue_CustomLineView_RunLine_
+  commentId: Overload:GrandmaGreen.Dialogue.CustomLineView.RunLine
+  isSpec: "True"
+  fullName: GrandmaGreen.Dialogue.CustomLineView.RunLine
+  nameWithType: CustomLineView.RunLine
+- uid: GrandmaGreen.Dialogue.CustomLineView.StartDialogueNode
+  name: StartDialogueNode()
+  href: api/GrandmaGreen.Dialogue.CustomLineView.html#GrandmaGreen_Dialogue_CustomLineView_StartDialogueNode
+  commentId: M:GrandmaGreen.Dialogue.CustomLineView.StartDialogueNode
+  fullName: GrandmaGreen.Dialogue.CustomLineView.StartDialogueNode()
+  nameWithType: CustomLineView.StartDialogueNode()
+- uid: GrandmaGreen.Dialogue.CustomLineView.StartDialogueNode*
+  name: StartDialogueNode
+  href: api/GrandmaGreen.Dialogue.CustomLineView.html#GrandmaGreen_Dialogue_CustomLineView_StartDialogueNode_
+  commentId: Overload:GrandmaGreen.Dialogue.CustomLineView.StartDialogueNode
+  isSpec: "True"
+  fullName: GrandmaGreen.Dialogue.CustomLineView.StartDialogueNode
+  nameWithType: CustomLineView.StartDialogueNode
+- uid: GrandmaGreen.Dialogue.CustomLineView.typewriterEffectSpeed
+  name: typewriterEffectSpeed
+  href: api/GrandmaGreen.Dialogue.CustomLineView.html#GrandmaGreen_Dialogue_CustomLineView_typewriterEffectSpeed
+  commentId: F:GrandmaGreen.Dialogue.CustomLineView.typewriterEffectSpeed
+  fullName: GrandmaGreen.Dialogue.CustomLineView.typewriterEffectSpeed
+  nameWithType: CustomLineView.typewriterEffectSpeed
+- uid: GrandmaGreen.Dialogue.CustomLineView.UserRequestedViewAdvancement
+  name: UserRequestedViewAdvancement()
+  href: api/GrandmaGreen.Dialogue.CustomLineView.html#GrandmaGreen_Dialogue_CustomLineView_UserRequestedViewAdvancement
+  commentId: M:GrandmaGreen.Dialogue.CustomLineView.UserRequestedViewAdvancement
+  fullName: GrandmaGreen.Dialogue.CustomLineView.UserRequestedViewAdvancement()
+  nameWithType: CustomLineView.UserRequestedViewAdvancement()
+- uid: GrandmaGreen.Dialogue.CustomLineView.UserRequestedViewAdvancement*
+  name: UserRequestedViewAdvancement
+  href: api/GrandmaGreen.Dialogue.CustomLineView.html#GrandmaGreen_Dialogue_CustomLineView_UserRequestedViewAdvancement_
+  commentId: Overload:GrandmaGreen.Dialogue.CustomLineView.UserRequestedViewAdvancement
+  isSpec: "True"
+  fullName: GrandmaGreen.Dialogue.CustomLineView.UserRequestedViewAdvancement
+  nameWithType: CustomLineView.UserRequestedViewAdvancement
+- uid: GrandmaGreen.Dialogue.CustomLineView.useTypewriterEffect
+  name: useTypewriterEffect
+  href: api/GrandmaGreen.Dialogue.CustomLineView.html#GrandmaGreen_Dialogue_CustomLineView_useTypewriterEffect
+  commentId: F:GrandmaGreen.Dialogue.CustomLineView.useTypewriterEffect
+  fullName: GrandmaGreen.Dialogue.CustomLineView.useTypewriterEffect
+  nameWithType: CustomLineView.useTypewriterEffect
+- uid: GrandmaGreen.Dialogue.Dialogueable
+  name: Dialogueable
+  href: api/GrandmaGreen.Dialogue.Dialogueable.html
+  commentId: T:GrandmaGreen.Dialogue.Dialogueable
+  fullName: GrandmaGreen.Dialogue.Dialogueable
+  nameWithType: Dialogueable
+- uid: GrandmaGreen.Dialogue.Dialogueable.dialogueSFX
+  name: dialogueSFX
+  href: api/GrandmaGreen.Dialogue.Dialogueable.html#GrandmaGreen_Dialogue_Dialogueable_dialogueSFX
+  commentId: F:GrandmaGreen.Dialogue.Dialogueable.dialogueSFX
+  fullName: GrandmaGreen.Dialogue.Dialogueable.dialogueSFX
+  nameWithType: Dialogueable.dialogueSFX
+- uid: GrandmaGreen.Dialogue.Dialogueable.idleDialogueCount
+  name: idleDialogueCount
+  href: api/GrandmaGreen.Dialogue.Dialogueable.html#GrandmaGreen_Dialogue_Dialogueable_idleDialogueCount
+  commentId: F:GrandmaGreen.Dialogue.Dialogueable.idleDialogueCount
+  fullName: GrandmaGreen.Dialogue.Dialogueable.idleDialogueCount
+  nameWithType: Dialogueable.idleDialogueCount
+- uid: GrandmaGreen.Dialogue.Dialogueable.interactionEventScript
+  name: interactionEventScript
+  href: api/GrandmaGreen.Dialogue.Dialogueable.html#GrandmaGreen_Dialogue_Dialogueable_interactionEventScript
+  commentId: F:GrandmaGreen.Dialogue.Dialogueable.interactionEventScript
+  fullName: GrandmaGreen.Dialogue.Dialogueable.interactionEventScript
+  nameWithType: Dialogueable.interactionEventScript
+- uid: GrandmaGreen.Dialogue.Dialogueable.onFinishDialogue
+  name: onFinishDialogue
+  href: api/GrandmaGreen.Dialogue.Dialogueable.html#GrandmaGreen_Dialogue_Dialogueable_onFinishDialogue
+  commentId: F:GrandmaGreen.Dialogue.Dialogueable.onFinishDialogue
+  fullName: GrandmaGreen.Dialogue.Dialogueable.onFinishDialogue
+  nameWithType: Dialogueable.onFinishDialogue
+- uid: GrandmaGreen.Dialogue.Dialogueable.TriggerDialogue
+  name: TriggerDialogue()
+  href: api/GrandmaGreen.Dialogue.Dialogueable.html#GrandmaGreen_Dialogue_Dialogueable_TriggerDialogue
+  commentId: M:GrandmaGreen.Dialogue.Dialogueable.TriggerDialogue
+  fullName: GrandmaGreen.Dialogue.Dialogueable.TriggerDialogue()
+  nameWithType: Dialogueable.TriggerDialogue()
+- uid: GrandmaGreen.Dialogue.Dialogueable.TriggerDialogue*
+  name: TriggerDialogue
+  href: api/GrandmaGreen.Dialogue.Dialogueable.html#GrandmaGreen_Dialogue_Dialogueable_TriggerDialogue_
+  commentId: Overload:GrandmaGreen.Dialogue.Dialogueable.TriggerDialogue
+  isSpec: "True"
+  fullName: GrandmaGreen.Dialogue.Dialogueable.TriggerDialogue
+  nameWithType: Dialogueable.TriggerDialogue
+- uid: GrandmaGreen.Dialogue.Dialogueable.yarnProject
+  name: yarnProject
+  href: api/GrandmaGreen.Dialogue.Dialogueable.html#GrandmaGreen_Dialogue_Dialogueable_yarnProject
+  commentId: F:GrandmaGreen.Dialogue.Dialogueable.yarnProject
+  fullName: GrandmaGreen.Dialogue.Dialogueable.yarnProject
+  nameWithType: Dialogueable.yarnProject
+- uid: GrandmaGreen.Dialogue.Effects
+  name: Effects
+  href: api/GrandmaGreen.Dialogue.Effects.html
+  commentId: T:GrandmaGreen.Dialogue.Effects
+  fullName: GrandmaGreen.Dialogue.Effects
+  nameWithType: Effects
+- uid: GrandmaGreen.Dialogue.Effects.CoroutineInterruptToken
+  name: Effects.CoroutineInterruptToken
+  href: api/GrandmaGreen.Dialogue.Effects.CoroutineInterruptToken.html
+  commentId: T:GrandmaGreen.Dialogue.Effects.CoroutineInterruptToken
+  fullName: GrandmaGreen.Dialogue.Effects.CoroutineInterruptToken
+  nameWithType: Effects.CoroutineInterruptToken
+- uid: GrandmaGreen.Dialogue.Effects.CoroutineInterruptToken.CanInterrupt
+  name: CanInterrupt
+  href: api/GrandmaGreen.Dialogue.Effects.CoroutineInterruptToken.html#GrandmaGreen_Dialogue_Effects_CoroutineInterruptToken_CanInterrupt
+  commentId: P:GrandmaGreen.Dialogue.Effects.CoroutineInterruptToken.CanInterrupt
+  fullName: GrandmaGreen.Dialogue.Effects.CoroutineInterruptToken.CanInterrupt
+  nameWithType: Effects.CoroutineInterruptToken.CanInterrupt
+- uid: GrandmaGreen.Dialogue.Effects.CoroutineInterruptToken.CanInterrupt*
+  name: CanInterrupt
+  href: api/GrandmaGreen.Dialogue.Effects.CoroutineInterruptToken.html#GrandmaGreen_Dialogue_Effects_CoroutineInterruptToken_CanInterrupt_
+  commentId: Overload:GrandmaGreen.Dialogue.Effects.CoroutineInterruptToken.CanInterrupt
+  isSpec: "True"
+  fullName: GrandmaGreen.Dialogue.Effects.CoroutineInterruptToken.CanInterrupt
+  nameWithType: Effects.CoroutineInterruptToken.CanInterrupt
+- uid: GrandmaGreen.Dialogue.Effects.CoroutineInterruptToken.Complete
+  name: Complete()
+  href: api/GrandmaGreen.Dialogue.Effects.CoroutineInterruptToken.html#GrandmaGreen_Dialogue_Effects_CoroutineInterruptToken_Complete
+  commentId: M:GrandmaGreen.Dialogue.Effects.CoroutineInterruptToken.Complete
+  fullName: GrandmaGreen.Dialogue.Effects.CoroutineInterruptToken.Complete()
+  nameWithType: Effects.CoroutineInterruptToken.Complete()
+- uid: GrandmaGreen.Dialogue.Effects.CoroutineInterruptToken.Complete*
+  name: Complete
+  href: api/GrandmaGreen.Dialogue.Effects.CoroutineInterruptToken.html#GrandmaGreen_Dialogue_Effects_CoroutineInterruptToken_Complete_
+  commentId: Overload:GrandmaGreen.Dialogue.Effects.CoroutineInterruptToken.Complete
+  isSpec: "True"
+  fullName: GrandmaGreen.Dialogue.Effects.CoroutineInterruptToken.Complete
+  nameWithType: Effects.CoroutineInterruptToken.Complete
+- uid: GrandmaGreen.Dialogue.Effects.CoroutineInterruptToken.Interrupt
+  name: Interrupt()
+  href: api/GrandmaGreen.Dialogue.Effects.CoroutineInterruptToken.html#GrandmaGreen_Dialogue_Effects_CoroutineInterruptToken_Interrupt
+  commentId: M:GrandmaGreen.Dialogue.Effects.CoroutineInterruptToken.Interrupt
+  fullName: GrandmaGreen.Dialogue.Effects.CoroutineInterruptToken.Interrupt()
+  nameWithType: Effects.CoroutineInterruptToken.Interrupt()
+- uid: GrandmaGreen.Dialogue.Effects.CoroutineInterruptToken.Interrupt*
+  name: Interrupt
+  href: api/GrandmaGreen.Dialogue.Effects.CoroutineInterruptToken.html#GrandmaGreen_Dialogue_Effects_CoroutineInterruptToken_Interrupt_
+  commentId: Overload:GrandmaGreen.Dialogue.Effects.CoroutineInterruptToken.Interrupt
+  isSpec: "True"
+  fullName: GrandmaGreen.Dialogue.Effects.CoroutineInterruptToken.Interrupt
+  nameWithType: Effects.CoroutineInterruptToken.Interrupt
+- uid: GrandmaGreen.Dialogue.Effects.CoroutineInterruptToken.Start
+  name: Start()
+  href: api/GrandmaGreen.Dialogue.Effects.CoroutineInterruptToken.html#GrandmaGreen_Dialogue_Effects_CoroutineInterruptToken_Start
+  commentId: M:GrandmaGreen.Dialogue.Effects.CoroutineInterruptToken.Start
+  fullName: GrandmaGreen.Dialogue.Effects.CoroutineInterruptToken.Start()
+  nameWithType: Effects.CoroutineInterruptToken.Start()
+- uid: GrandmaGreen.Dialogue.Effects.CoroutineInterruptToken.Start*
+  name: Start
+  href: api/GrandmaGreen.Dialogue.Effects.CoroutineInterruptToken.html#GrandmaGreen_Dialogue_Effects_CoroutineInterruptToken_Start_
+  commentId: Overload:GrandmaGreen.Dialogue.Effects.CoroutineInterruptToken.Start
+  isSpec: "True"
+  fullName: GrandmaGreen.Dialogue.Effects.CoroutineInterruptToken.Start
+  nameWithType: Effects.CoroutineInterruptToken.Start
+- uid: GrandmaGreen.Dialogue.Effects.CoroutineInterruptToken.WasInterrupted
+  name: WasInterrupted
+  href: api/GrandmaGreen.Dialogue.Effects.CoroutineInterruptToken.html#GrandmaGreen_Dialogue_Effects_CoroutineInterruptToken_WasInterrupted
+  commentId: P:GrandmaGreen.Dialogue.Effects.CoroutineInterruptToken.WasInterrupted
+  fullName: GrandmaGreen.Dialogue.Effects.CoroutineInterruptToken.WasInterrupted
+  nameWithType: Effects.CoroutineInterruptToken.WasInterrupted
+- uid: GrandmaGreen.Dialogue.Effects.CoroutineInterruptToken.WasInterrupted*
+  name: WasInterrupted
+  href: api/GrandmaGreen.Dialogue.Effects.CoroutineInterruptToken.html#GrandmaGreen_Dialogue_Effects_CoroutineInterruptToken_WasInterrupted_
+  commentId: Overload:GrandmaGreen.Dialogue.Effects.CoroutineInterruptToken.WasInterrupted
+  isSpec: "True"
+  fullName: GrandmaGreen.Dialogue.Effects.CoroutineInterruptToken.WasInterrupted
+  nameWithType: Effects.CoroutineInterruptToken.WasInterrupted
+- uid: GrandmaGreen.Dialogue.Effects.Typewriter(Label,LocalizedLine,System.Single,Action{System.Int32},GrandmaGreen.Dialogue.Effects.CoroutineInterruptToken)
+  name: Typewriter(Label, LocalizedLine, Single, Action<Int32>, Effects.CoroutineInterruptToken)
+  href: api/GrandmaGreen.Dialogue.Effects.html#GrandmaGreen_Dialogue_Effects_Typewriter_Label_LocalizedLine_System_Single_Action_System_Int32__GrandmaGreen_Dialogue_Effects_CoroutineInterruptToken_
+  commentId: M:GrandmaGreen.Dialogue.Effects.Typewriter(Label,LocalizedLine,System.Single,Action{System.Int32},GrandmaGreen.Dialogue.Effects.CoroutineInterruptToken)
+  name.vb: Typewriter(Label, LocalizedLine, Single, Action(Of Int32), Effects.CoroutineInterruptToken)
+  fullName: GrandmaGreen.Dialogue.Effects.Typewriter(Label, LocalizedLine, System.Single, Action<System.Int32>, GrandmaGreen.Dialogue.Effects.CoroutineInterruptToken)
+  fullName.vb: GrandmaGreen.Dialogue.Effects.Typewriter(Label, LocalizedLine, System.Single, Action(Of System.Int32), GrandmaGreen.Dialogue.Effects.CoroutineInterruptToken)
+  nameWithType: Effects.Typewriter(Label, LocalizedLine, Single, Action<Int32>, Effects.CoroutineInterruptToken)
+  nameWithType.vb: Effects.Typewriter(Label, LocalizedLine, Single, Action(Of Int32), Effects.CoroutineInterruptToken)
+- uid: GrandmaGreen.Dialogue.Effects.Typewriter*
+  name: Typewriter
+  href: api/GrandmaGreen.Dialogue.Effects.html#GrandmaGreen_Dialogue_Effects_Typewriter_
+  commentId: Overload:GrandmaGreen.Dialogue.Effects.Typewriter
+  isSpec: "True"
+  fullName: GrandmaGreen.Dialogue.Effects.Typewriter
+  nameWithType: Effects.Typewriter
 - uid: GrandmaGreen.Entities
   name: GrandmaGreen.Entities
   href: api/GrandmaGreen.Entities.html
@@ -3511,6 +3793,24 @@ references:
   commentId: F:GrandmaGreen.Entities.GolemData.happiness
   fullName: GrandmaGreen.Entities.GolemData.happiness
   nameWithType: GolemData.happiness
+- uid: GrandmaGreen.Entities.GolemData.info
+  name: info
+  href: api/GrandmaGreen.Entities.GolemData.html#GrandmaGreen_Entities_GolemData_info
+  commentId: F:GrandmaGreen.Entities.GolemData.info
+  fullName: GrandmaGreen.Entities.GolemData.info
+  nameWithType: GolemData.info
+- uid: GrandmaGreen.Entities.GolemData.isSpawned
+  name: isSpawned
+  href: api/GrandmaGreen.Entities.GolemData.html#GrandmaGreen_Entities_GolemData_isSpawned
+  commentId: F:GrandmaGreen.Entities.GolemData.isSpawned
+  fullName: GrandmaGreen.Entities.GolemData.isSpawned
+  nameWithType: GolemData.isSpawned
+- uid: GrandmaGreen.Entities.GolemData.isTravelling
+  name: isTravelling
+  href: api/GrandmaGreen.Entities.GolemData.html#GrandmaGreen_Entities_GolemData_isTravelling
+  commentId: F:GrandmaGreen.Entities.GolemData.isTravelling
+  fullName: GrandmaGreen.Entities.GolemData.isTravelling
+  nameWithType: GolemData.isTravelling
 - uid: GrandmaGreen.Entities.GolemData.spawnChance
   name: spawnChance
   href: api/GrandmaGreen.Entities.GolemData.html#GrandmaGreen_Entities_GolemData_spawnChance
@@ -3580,6 +3880,24 @@ references:
   commentId: F:GrandmaGreen.Entities.GolemManager.tulip
   fullName: GrandmaGreen.Entities.GolemManager.tulip
   nameWithType: GolemManager.tulip
+- uid: GrandmaGreen.Entities.GolemStage
+  name: GolemStage
+  href: api/GrandmaGreen.Entities.GolemStage.html
+  commentId: T:GrandmaGreen.Entities.GolemStage
+  fullName: GrandmaGreen.Entities.GolemStage
+  nameWithType: GolemStage
+- uid: GrandmaGreen.Entities.GolemStage.baby
+  name: baby
+  href: api/GrandmaGreen.Entities.GolemStage.html#GrandmaGreen_Entities_GolemStage_baby
+  commentId: F:GrandmaGreen.Entities.GolemStage.baby
+  fullName: GrandmaGreen.Entities.GolemStage.baby
+  nameWithType: GolemStage.baby
+- uid: GrandmaGreen.Entities.GolemStage.growUp
+  name: growUp
+  href: api/GrandmaGreen.Entities.GolemStage.html#GrandmaGreen_Entities_GolemStage_growUp
+  commentId: F:GrandmaGreen.Entities.GolemStage.growUp
+  fullName: GrandmaGreen.Entities.GolemStage.growUp
+  nameWithType: GolemStage.growUp
 - uid: GrandmaGreen.Entities.PlayerController
   name: PlayerController
   href: api/GrandmaGreen.Entities.PlayerController.html
@@ -3623,6 +3941,12 @@ references:
   commentId: T:GrandmaGreen.EventManager
   fullName: GrandmaGreen.EventManager
   nameWithType: EventManager
+- uid: GrandmaGreen.EventManager.EVENT_CLOSE_HUD
+  name: EVENT_CLOSE_HUD
+  href: api/GrandmaGreen.EventManager.html#GrandmaGreen_EventManager_EVENT_CLOSE_HUD
+  commentId: E:GrandmaGreen.EventManager.EVENT_CLOSE_HUD
+  fullName: GrandmaGreen.EventManager.EVENT_CLOSE_HUD
+  nameWithType: EventManager.EVENT_CLOSE_HUD
 - uid: GrandmaGreen.EventManager.EVENT_GOLEM_SPAWN
   name: EVENT_GOLEM_SPAWN
   href: api/GrandmaGreen.EventManager.html#GrandmaGreen_EventManager_EVENT_GOLEM_SPAWN
@@ -3635,24 +3959,43 @@ references:
   commentId: E:GrandmaGreen.EventManager.EVENT_INVENTORY_ADD
   fullName: GrandmaGreen.EventManager.EVENT_INVENTORY_ADD
   nameWithType: EventManager.EVENT_INVENTORY_ADD
+- uid: GrandmaGreen.EventManager.EVENT_INVENTORY_OPEN
+  name: EVENT_INVENTORY_OPEN
+  href: api/GrandmaGreen.EventManager.html#GrandmaGreen_EventManager_EVENT_INVENTORY_OPEN
+  commentId: E:GrandmaGreen.EventManager.EVENT_INVENTORY_OPEN
+  fullName: GrandmaGreen.EventManager.EVENT_INVENTORY_OPEN
+  nameWithType: EventManager.EVENT_INVENTORY_OPEN
 - uid: GrandmaGreen.EventManager.EVENT_INVENTORY_REMOVE
   name: EVENT_INVENTORY_REMOVE
   href: api/GrandmaGreen.EventManager.html#GrandmaGreen_EventManager_EVENT_INVENTORY_REMOVE
   commentId: E:GrandmaGreen.EventManager.EVENT_INVENTORY_REMOVE
   fullName: GrandmaGreen.EventManager.EVENT_INVENTORY_REMOVE
   nameWithType: EventManager.EVENT_INVENTORY_REMOVE
-- uid: GrandmaGreen.EventManager.EVENT_INVENTORY_UPDATE
-  name: EVENT_INVENTORY_UPDATE
-  href: api/GrandmaGreen.EventManager.html#GrandmaGreen_EventManager_EVENT_INVENTORY_UPDATE
-  commentId: E:GrandmaGreen.EventManager.EVENT_INVENTORY_UPDATE
-  fullName: GrandmaGreen.EventManager.EVENT_INVENTORY_UPDATE
-  nameWithType: EventManager.EVENT_INVENTORY_UPDATE
+- uid: GrandmaGreen.EventManager.EVENT_OPEN_HUD
+  name: EVENT_OPEN_HUD
+  href: api/GrandmaGreen.EventManager.html#GrandmaGreen_EventManager_EVENT_OPEN_HUD
+  commentId: E:GrandmaGreen.EventManager.EVENT_OPEN_HUD
+  fullName: GrandmaGreen.EventManager.EVENT_OPEN_HUD
+  nameWithType: EventManager.EVENT_OPEN_HUD
 - uid: GrandmaGreen.EventManager.EVENT_PLANT_UPDATE
   name: EVENT_PLANT_UPDATE
   href: api/GrandmaGreen.EventManager.html#GrandmaGreen_EventManager_EVENT_PLANT_UPDATE
   commentId: E:GrandmaGreen.EventManager.EVENT_PLANT_UPDATE
   fullName: GrandmaGreen.EventManager.EVENT_PLANT_UPDATE
   nameWithType: EventManager.EVENT_PLANT_UPDATE
+- uid: GrandmaGreen.EventManager.HandleEVENT_CLOSE_HUD
+  name: HandleEVENT_CLOSE_HUD()
+  href: api/GrandmaGreen.EventManager.html#GrandmaGreen_EventManager_HandleEVENT_CLOSE_HUD
+  commentId: M:GrandmaGreen.EventManager.HandleEVENT_CLOSE_HUD
+  fullName: GrandmaGreen.EventManager.HandleEVENT_CLOSE_HUD()
+  nameWithType: EventManager.HandleEVENT_CLOSE_HUD()
+- uid: GrandmaGreen.EventManager.HandleEVENT_CLOSE_HUD*
+  name: HandleEVENT_CLOSE_HUD
+  href: api/GrandmaGreen.EventManager.html#GrandmaGreen_EventManager_HandleEVENT_CLOSE_HUD_
+  commentId: Overload:GrandmaGreen.EventManager.HandleEVENT_CLOSE_HUD
+  isSpec: "True"
+  fullName: GrandmaGreen.EventManager.HandleEVENT_CLOSE_HUD
+  nameWithType: EventManager.HandleEVENT_CLOSE_HUD
 - uid: GrandmaGreen.EventManager.HandleEVENT_GOLEM_SPAWN(System.Int32,Vector3)
   name: HandleEVENT_GOLEM_SPAWN(Int32, Vector3)
   href: api/GrandmaGreen.EventManager.html#GrandmaGreen_EventManager_HandleEVENT_GOLEM_SPAWN_System_Int32_Vector3_
@@ -3679,6 +4022,19 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.EventManager.HandleEVENT_INVENTORY_ADD
   nameWithType: EventManager.HandleEVENT_INVENTORY_ADD
+- uid: GrandmaGreen.EventManager.HandleEVENT_INVENTORY_OPEN
+  name: HandleEVENT_INVENTORY_OPEN()
+  href: api/GrandmaGreen.EventManager.html#GrandmaGreen_EventManager_HandleEVENT_INVENTORY_OPEN
+  commentId: M:GrandmaGreen.EventManager.HandleEVENT_INVENTORY_OPEN
+  fullName: GrandmaGreen.EventManager.HandleEVENT_INVENTORY_OPEN()
+  nameWithType: EventManager.HandleEVENT_INVENTORY_OPEN()
+- uid: GrandmaGreen.EventManager.HandleEVENT_INVENTORY_OPEN*
+  name: HandleEVENT_INVENTORY_OPEN
+  href: api/GrandmaGreen.EventManager.html#GrandmaGreen_EventManager_HandleEVENT_INVENTORY_OPEN_
+  commentId: Overload:GrandmaGreen.EventManager.HandleEVENT_INVENTORY_OPEN
+  isSpec: "True"
+  fullName: GrandmaGreen.EventManager.HandleEVENT_INVENTORY_OPEN
+  nameWithType: EventManager.HandleEVENT_INVENTORY_OPEN
 - uid: GrandmaGreen.EventManager.HandleEVENT_INVENTORY_REMOVE(IInventoryItem,System.Int32)
   name: HandleEVENT_INVENTORY_REMOVE(IInventoryItem, Int32)
   href: api/GrandmaGreen.EventManager.html#GrandmaGreen_EventManager_HandleEVENT_INVENTORY_REMOVE_IInventoryItem_System_Int32_
@@ -3692,19 +4048,19 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.EventManager.HandleEVENT_INVENTORY_REMOVE
   nameWithType: EventManager.HandleEVENT_INVENTORY_REMOVE
-- uid: GrandmaGreen.EventManager.HandleEVENT_INVENTORY_UPDATE(IInventoryItem)
-  name: HandleEVENT_INVENTORY_UPDATE(IInventoryItem)
-  href: api/GrandmaGreen.EventManager.html#GrandmaGreen_EventManager_HandleEVENT_INVENTORY_UPDATE_IInventoryItem_
-  commentId: M:GrandmaGreen.EventManager.HandleEVENT_INVENTORY_UPDATE(IInventoryItem)
-  fullName: GrandmaGreen.EventManager.HandleEVENT_INVENTORY_UPDATE(IInventoryItem)
-  nameWithType: EventManager.HandleEVENT_INVENTORY_UPDATE(IInventoryItem)
-- uid: GrandmaGreen.EventManager.HandleEVENT_INVENTORY_UPDATE*
-  name: HandleEVENT_INVENTORY_UPDATE
-  href: api/GrandmaGreen.EventManager.html#GrandmaGreen_EventManager_HandleEVENT_INVENTORY_UPDATE_
-  commentId: Overload:GrandmaGreen.EventManager.HandleEVENT_INVENTORY_UPDATE
+- uid: GrandmaGreen.EventManager.HandleEVENT_OPEN_HUD
+  name: HandleEVENT_OPEN_HUD()
+  href: api/GrandmaGreen.EventManager.html#GrandmaGreen_EventManager_HandleEVENT_OPEN_HUD
+  commentId: M:GrandmaGreen.EventManager.HandleEVENT_OPEN_HUD
+  fullName: GrandmaGreen.EventManager.HandleEVENT_OPEN_HUD()
+  nameWithType: EventManager.HandleEVENT_OPEN_HUD()
+- uid: GrandmaGreen.EventManager.HandleEVENT_OPEN_HUD*
+  name: HandleEVENT_OPEN_HUD
+  href: api/GrandmaGreen.EventManager.html#GrandmaGreen_EventManager_HandleEVENT_OPEN_HUD_
+  commentId: Overload:GrandmaGreen.EventManager.HandleEVENT_OPEN_HUD
   isSpec: "True"
-  fullName: GrandmaGreen.EventManager.HandleEVENT_INVENTORY_UPDATE
-  nameWithType: EventManager.HandleEVENT_INVENTORY_UPDATE
+  fullName: GrandmaGreen.EventManager.HandleEVENT_OPEN_HUD
+  nameWithType: EventManager.HandleEVENT_OPEN_HUD
 - uid: GrandmaGreen.EventManager.HandleEVENT_PLANT_UPDATE(System.Int32,Vector3Int)
   name: HandleEVENT_PLANT_UPDATE(Int32, Vector3Int)
   href: api/GrandmaGreen.EventManager.html#GrandmaGreen_EventManager_HandleEVENT_PLANT_UPDATE_System_Int32_Vector3Int_
@@ -3730,6 +4086,37 @@ references:
   commentId: T:GrandmaGreen.FlowerController
   fullName: GrandmaGreen.FlowerController
   nameWithType: FlowerController
+- uid: GrandmaGreen.GamePortalTile
+  name: GamePortalTile
+  href: api/GrandmaGreen.GamePortalTile.html
+  commentId: T:GrandmaGreen.GamePortalTile
+  fullName: GrandmaGreen.GamePortalTile
+  nameWithType: GamePortalTile
+- uid: GrandmaGreen.GamePortalTile.DoTileAction
+  name: DoTileAction()
+  href: api/GrandmaGreen.GamePortalTile.html#GrandmaGreen_GamePortalTile_DoTileAction
+  commentId: M:GrandmaGreen.GamePortalTile.DoTileAction
+  fullName: GrandmaGreen.GamePortalTile.DoTileAction()
+  nameWithType: GamePortalTile.DoTileAction()
+- uid: GrandmaGreen.GamePortalTile.DoTileAction(EntityController)
+  name: DoTileAction(EntityController)
+  href: api/GrandmaGreen.GamePortalTile.html#GrandmaGreen_GamePortalTile_DoTileAction_EntityController_
+  commentId: M:GrandmaGreen.GamePortalTile.DoTileAction(EntityController)
+  fullName: GrandmaGreen.GamePortalTile.DoTileAction(EntityController)
+  nameWithType: GamePortalTile.DoTileAction(EntityController)
+- uid: GrandmaGreen.GamePortalTile.DoTileAction*
+  name: DoTileAction
+  href: api/GrandmaGreen.GamePortalTile.html#GrandmaGreen_GamePortalTile_DoTileAction_
+  commentId: Overload:GrandmaGreen.GamePortalTile.DoTileAction
+  isSpec: "True"
+  fullName: GrandmaGreen.GamePortalTile.DoTileAction
+  nameWithType: GamePortalTile.DoTileAction
+- uid: GrandmaGreen.GamePortalTile.toLoad
+  name: toLoad
+  href: api/GrandmaGreen.GamePortalTile.html#GrandmaGreen_GamePortalTile_toLoad
+  commentId: F:GrandmaGreen.GamePortalTile.toLoad
+  fullName: GrandmaGreen.GamePortalTile.toLoad
+  nameWithType: GamePortalTile.toLoad
 - uid: GrandmaGreen.GameScenePortal
   name: GameScenePortal
   href: api/GrandmaGreen.GameScenePortal.html
@@ -4026,6 +4413,12 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Garden.GardenAreaController.FertilizePlant
   nameWithType: GardenAreaController.FertilizePlant
+- uid: GrandmaGreen.Garden.GardenAreaController.FertilizerParticleBurst
+  name: FertilizerParticleBurst
+  href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_FertilizerParticleBurst
+  commentId: F:GrandmaGreen.Garden.GardenAreaController.FertilizerParticleBurst
+  fullName: GrandmaGreen.Garden.GardenAreaController.FertilizerParticleBurst
+  nameWithType: GardenAreaController.FertilizerParticleBurst
 - uid: GrandmaGreen.Garden.GardenAreaController.GardenTileSelected(Vector3Int)
   name: GardenTileSelected(Vector3Int)
   href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_GardenTileSelected_Vector3Int_
@@ -4115,12 +4508,6 @@ references:
   commentId: F:GrandmaGreen.Garden.GardenAreaController.plantStateManager
   fullName: GrandmaGreen.Garden.GardenAreaController.plantStateManager
   nameWithType: GardenAreaController.plantStateManager
-- uid: GrandmaGreen.Garden.GardenAreaController.plantTypeDictionary
-  name: plantTypeDictionary
-  href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_plantTypeDictionary
-  commentId: F:GrandmaGreen.Garden.GardenAreaController.plantTypeDictionary
-  fullName: GrandmaGreen.Garden.GardenAreaController.plantTypeDictionary
-  nameWithType: GardenAreaController.plantTypeDictionary
 - uid: GrandmaGreen.Garden.GardenAreaController.playerTools
   name: playerTools
   href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_playerTools
@@ -4140,6 +4527,12 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Garden.GardenAreaController.UpdatePlantPrefabOnCell
   nameWithType: GardenAreaController.UpdatePlantPrefabOnCell
+- uid: GrandmaGreen.Garden.GardenAreaController.WateringParticleBurst
+  name: WateringParticleBurst
+  href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_WateringParticleBurst
+  commentId: F:GrandmaGreen.Garden.GardenAreaController.WateringParticleBurst
+  fullName: GrandmaGreen.Garden.GardenAreaController.WateringParticleBurst
+  nameWithType: GardenAreaController.WateringParticleBurst
 - uid: GrandmaGreen.Garden.GardenAreaController.WaterPlant(Vector3Int)
   name: WaterPlant(Vector3Int)
   href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_WaterPlant_Vector3Int_
@@ -5350,6 +5743,31 @@ references:
   commentId: F:GrandmaGreen.GrandmaGreenGameState.s_Instance
   fullName: GrandmaGreen.GrandmaGreenGameState.s_Instance
   nameWithType: GrandmaGreenGameState.s_Instance
+- uid: GrandmaGreen.IGameTile
+  name: IGameTile
+  href: api/GrandmaGreen.IGameTile.html
+  commentId: T:GrandmaGreen.IGameTile
+  fullName: GrandmaGreen.IGameTile
+  nameWithType: IGameTile
+- uid: GrandmaGreen.IGameTile.DoTileAction
+  name: DoTileAction()
+  href: api/GrandmaGreen.IGameTile.html#GrandmaGreen_IGameTile_DoTileAction
+  commentId: M:GrandmaGreen.IGameTile.DoTileAction
+  fullName: GrandmaGreen.IGameTile.DoTileAction()
+  nameWithType: IGameTile.DoTileAction()
+- uid: GrandmaGreen.IGameTile.DoTileAction(EntityController)
+  name: DoTileAction(EntityController)
+  href: api/GrandmaGreen.IGameTile.html#GrandmaGreen_IGameTile_DoTileAction_EntityController_
+  commentId: M:GrandmaGreen.IGameTile.DoTileAction(EntityController)
+  fullName: GrandmaGreen.IGameTile.DoTileAction(EntityController)
+  nameWithType: IGameTile.DoTileAction(EntityController)
+- uid: GrandmaGreen.IGameTile.DoTileAction*
+  name: DoTileAction
+  href: api/GrandmaGreen.IGameTile.html#GrandmaGreen_IGameTile_DoTileAction_
+  commentId: Overload:GrandmaGreen.IGameTile.DoTileAction
+  isSpec: "True"
+  fullName: GrandmaGreen.IGameTile.DoTileAction
+  nameWithType: IGameTile.DoTileAction
 - uid: GrandmaGreen.IPathAgent
   name: IPathAgent
   href: api/GrandmaGreen.IPathAgent.html
@@ -6233,6 +6651,277 @@ references:
   commentId: F:GrandmaGreen.ShoppingItem.label
   fullName: GrandmaGreen.ShoppingItem.label
   nameWithType: ShoppingItem.label
+- uid: GrandmaGreen.Storyline
+  name: Storyline
+  href: api/GrandmaGreen.Storyline.html
+  commentId: T:GrandmaGreen.Storyline
+  fullName: GrandmaGreen.Storyline
+  nameWithType: Storyline
+- uid: GrandmaGreen.Storyline.CompleteStory
+  name: CompleteStory()
+  href: api/GrandmaGreen.Storyline.html#GrandmaGreen_Storyline_CompleteStory
+  commentId: M:GrandmaGreen.Storyline.CompleteStory
+  fullName: GrandmaGreen.Storyline.CompleteStory()
+  nameWithType: Storyline.CompleteStory()
+- uid: GrandmaGreen.Storyline.CompleteStory*
+  name: CompleteStory
+  href: api/GrandmaGreen.Storyline.html#GrandmaGreen_Storyline_CompleteStory_
+  commentId: Overload:GrandmaGreen.Storyline.CompleteStory
+  isSpec: "True"
+  fullName: GrandmaGreen.Storyline.CompleteStory
+  nameWithType: Storyline.CompleteStory
+- uid: GrandmaGreen.Storyline.currentState
+  name: currentState
+  href: api/GrandmaGreen.Storyline.html#GrandmaGreen_Storyline_currentState
+  commentId: P:GrandmaGreen.Storyline.currentState
+  fullName: GrandmaGreen.Storyline.currentState
+  nameWithType: Storyline.currentState
+- uid: GrandmaGreen.Storyline.currentState*
+  name: currentState
+  href: api/GrandmaGreen.Storyline.html#GrandmaGreen_Storyline_currentState_
+  commentId: Overload:GrandmaGreen.Storyline.currentState
+  isSpec: "True"
+  fullName: GrandmaGreen.Storyline.currentState
+  nameWithType: Storyline.currentState
+- uid: GrandmaGreen.Storyline.onCompletion
+  name: onCompletion
+  href: api/GrandmaGreen.Storyline.html#GrandmaGreen_Storyline_onCompletion
+  commentId: E:GrandmaGreen.Storyline.onCompletion
+  fullName: GrandmaGreen.Storyline.onCompletion
+  nameWithType: Storyline.onCompletion
+- uid: GrandmaGreen.Storyline.onProgress
+  name: onProgress
+  href: api/GrandmaGreen.Storyline.html#GrandmaGreen_Storyline_onProgress
+  commentId: E:GrandmaGreen.Storyline.onProgress
+  fullName: GrandmaGreen.Storyline.onProgress
+  nameWithType: Storyline.onProgress
+- uid: GrandmaGreen.Storyline.onRegress
+  name: onRegress
+  href: api/GrandmaGreen.Storyline.html#GrandmaGreen_Storyline_onRegress
+  commentId: E:GrandmaGreen.Storyline.onRegress
+  fullName: GrandmaGreen.Storyline.onRegress
+  nameWithType: Storyline.onRegress
+- uid: GrandmaGreen.Storyline.onStart
+  name: onStart
+  href: api/GrandmaGreen.Storyline.html#GrandmaGreen_Storyline_onStart
+  commentId: E:GrandmaGreen.Storyline.onStart
+  fullName: GrandmaGreen.Storyline.onStart
+  nameWithType: Storyline.onStart
+- uid: GrandmaGreen.Storyline.progress
+  name: progress
+  href: api/GrandmaGreen.Storyline.html#GrandmaGreen_Storyline_progress
+  commentId: P:GrandmaGreen.Storyline.progress
+  fullName: GrandmaGreen.Storyline.progress
+  nameWithType: Storyline.progress
+- uid: GrandmaGreen.Storyline.progress*
+  name: progress
+  href: api/GrandmaGreen.Storyline.html#GrandmaGreen_Storyline_progress_
+  commentId: Overload:GrandmaGreen.Storyline.progress
+  isSpec: "True"
+  fullName: GrandmaGreen.Storyline.progress
+  nameWithType: Storyline.progress
+- uid: GrandmaGreen.Storyline.ProgressStory
+  name: ProgressStory()
+  href: api/GrandmaGreen.Storyline.html#GrandmaGreen_Storyline_ProgressStory
+  commentId: M:GrandmaGreen.Storyline.ProgressStory
+  fullName: GrandmaGreen.Storyline.ProgressStory()
+  nameWithType: Storyline.ProgressStory()
+- uid: GrandmaGreen.Storyline.ProgressStory*
+  name: ProgressStory
+  href: api/GrandmaGreen.Storyline.html#GrandmaGreen_Storyline_ProgressStory_
+  commentId: Overload:GrandmaGreen.Storyline.ProgressStory
+  isSpec: "True"
+  fullName: GrandmaGreen.Storyline.ProgressStory
+  nameWithType: Storyline.ProgressStory
+- uid: GrandmaGreen.Storyline.RegressStory
+  name: RegressStory()
+  href: api/GrandmaGreen.Storyline.html#GrandmaGreen_Storyline_RegressStory
+  commentId: M:GrandmaGreen.Storyline.RegressStory
+  fullName: GrandmaGreen.Storyline.RegressStory()
+  nameWithType: Storyline.RegressStory()
+- uid: GrandmaGreen.Storyline.RegressStory*
+  name: RegressStory
+  href: api/GrandmaGreen.Storyline.html#GrandmaGreen_Storyline_RegressStory_
+  commentId: Overload:GrandmaGreen.Storyline.RegressStory
+  isSpec: "True"
+  fullName: GrandmaGreen.Storyline.RegressStory
+  nameWithType: Storyline.RegressStory
+- uid: GrandmaGreen.Storyline.requirements
+  name: requirements
+  href: api/GrandmaGreen.Storyline.html#GrandmaGreen_Storyline_requirements
+  commentId: F:GrandmaGreen.Storyline.requirements
+  fullName: GrandmaGreen.Storyline.requirements
+  nameWithType: Storyline.requirements
+- uid: GrandmaGreen.Storyline.SetProgress(System.UInt32,System.Boolean)
+  name: SetProgress(UInt32, Boolean)
+  href: api/GrandmaGreen.Storyline.html#GrandmaGreen_Storyline_SetProgress_System_UInt32_System_Boolean_
+  commentId: M:GrandmaGreen.Storyline.SetProgress(System.UInt32,System.Boolean)
+  fullName: GrandmaGreen.Storyline.SetProgress(System.UInt32, System.Boolean)
+  nameWithType: Storyline.SetProgress(UInt32, Boolean)
+- uid: GrandmaGreen.Storyline.SetProgress*
+  name: SetProgress
+  href: api/GrandmaGreen.Storyline.html#GrandmaGreen_Storyline_SetProgress_
+  commentId: Overload:GrandmaGreen.Storyline.SetProgress
+  isSpec: "True"
+  fullName: GrandmaGreen.Storyline.SetProgress
+  nameWithType: Storyline.SetProgress
+- uid: GrandmaGreen.Storyline.StartStory
+  name: StartStory()
+  href: api/GrandmaGreen.Storyline.html#GrandmaGreen_Storyline_StartStory
+  commentId: M:GrandmaGreen.Storyline.StartStory
+  fullName: GrandmaGreen.Storyline.StartStory()
+  nameWithType: Storyline.StartStory()
+- uid: GrandmaGreen.Storyline.StartStory*
+  name: StartStory
+  href: api/GrandmaGreen.Storyline.html#GrandmaGreen_Storyline_StartStory_
+  commentId: Overload:GrandmaGreen.Storyline.StartStory
+  isSpec: "True"
+  fullName: GrandmaGreen.Storyline.StartStory
+  nameWithType: Storyline.StartStory
+- uid: GrandmaGreen.StorylineDataStore
+  name: StorylineDataStore
+  href: api/GrandmaGreen.StorylineDataStore.html
+  commentId: T:GrandmaGreen.StorylineDataStore
+  fullName: GrandmaGreen.StorylineDataStore
+  nameWithType: StorylineDataStore
+- uid: GrandmaGreen.StorylineDataStore.Initalize
+  name: Initalize()
+  href: api/GrandmaGreen.StorylineDataStore.html#GrandmaGreen_StorylineDataStore_Initalize
+  commentId: M:GrandmaGreen.StorylineDataStore.Initalize
+  fullName: GrandmaGreen.StorylineDataStore.Initalize()
+  nameWithType: StorylineDataStore.Initalize()
+- uid: GrandmaGreen.StorylineDataStore.Initalize*
+  name: Initalize
+  href: api/GrandmaGreen.StorylineDataStore.html#GrandmaGreen_StorylineDataStore_Initalize_
+  commentId: Overload:GrandmaGreen.StorylineDataStore.Initalize
+  isSpec: "True"
+  fullName: GrandmaGreen.StorylineDataStore.Initalize
+  nameWithType: StorylineDataStore.Initalize
+- uid: GrandmaGreen.StorylineDataStore.LoadStorylineProgress
+  name: LoadStorylineProgress()
+  href: api/GrandmaGreen.StorylineDataStore.html#GrandmaGreen_StorylineDataStore_LoadStorylineProgress
+  commentId: M:GrandmaGreen.StorylineDataStore.LoadStorylineProgress
+  fullName: GrandmaGreen.StorylineDataStore.LoadStorylineProgress()
+  nameWithType: StorylineDataStore.LoadStorylineProgress()
+- uid: GrandmaGreen.StorylineDataStore.LoadStorylineProgress*
+  name: LoadStorylineProgress
+  href: api/GrandmaGreen.StorylineDataStore.html#GrandmaGreen_StorylineDataStore_LoadStorylineProgress_
+  commentId: Overload:GrandmaGreen.StorylineDataStore.LoadStorylineProgress
+  isSpec: "True"
+  fullName: GrandmaGreen.StorylineDataStore.LoadStorylineProgress
+  nameWithType: StorylineDataStore.LoadStorylineProgress
+- uid: GrandmaGreen.StorylineDataStore.Release
+  name: Release()
+  href: api/GrandmaGreen.StorylineDataStore.html#GrandmaGreen_StorylineDataStore_Release
+  commentId: M:GrandmaGreen.StorylineDataStore.Release
+  fullName: GrandmaGreen.StorylineDataStore.Release()
+  nameWithType: StorylineDataStore.Release()
+- uid: GrandmaGreen.StorylineDataStore.Release*
+  name: Release
+  href: api/GrandmaGreen.StorylineDataStore.html#GrandmaGreen_StorylineDataStore_Release_
+  commentId: Overload:GrandmaGreen.StorylineDataStore.Release
+  isSpec: "True"
+  fullName: GrandmaGreen.StorylineDataStore.Release
+  nameWithType: StorylineDataStore.Release
+- uid: GrandmaGreen.StorylineDataStore.storylineSet
+  name: storylineSet
+  href: api/GrandmaGreen.StorylineDataStore.html#GrandmaGreen_StorylineDataStore_storylineSet
+  commentId: F:GrandmaGreen.StorylineDataStore.storylineSet
+  fullName: GrandmaGreen.StorylineDataStore.storylineSet
+  nameWithType: StorylineDataStore.storylineSet
+- uid: GrandmaGreen.StorylineDataStore.UpdateStorylineProgress(GrandmaGreen.Storyline)
+  name: UpdateStorylineProgress(Storyline)
+  href: api/GrandmaGreen.StorylineDataStore.html#GrandmaGreen_StorylineDataStore_UpdateStorylineProgress_GrandmaGreen_Storyline_
+  commentId: M:GrandmaGreen.StorylineDataStore.UpdateStorylineProgress(GrandmaGreen.Storyline)
+  fullName: GrandmaGreen.StorylineDataStore.UpdateStorylineProgress(GrandmaGreen.Storyline)
+  nameWithType: StorylineDataStore.UpdateStorylineProgress(Storyline)
+- uid: GrandmaGreen.StorylineDataStore.UpdateStorylineProgress*
+  name: UpdateStorylineProgress
+  href: api/GrandmaGreen.StorylineDataStore.html#GrandmaGreen_StorylineDataStore_UpdateStorylineProgress_
+  commentId: Overload:GrandmaGreen.StorylineDataStore.UpdateStorylineProgress
+  isSpec: "True"
+  fullName: GrandmaGreen.StorylineDataStore.UpdateStorylineProgress
+  nameWithType: StorylineDataStore.UpdateStorylineProgress
+- uid: GrandmaGreen.StoryRequirement
+  name: StoryRequirement
+  href: api/GrandmaGreen.StoryRequirement.html
+  commentId: T:GrandmaGreen.StoryRequirement
+  fullName: GrandmaGreen.StoryRequirement
+  nameWithType: StoryRequirement
+- uid: GrandmaGreen.StoryRequirement.ActivateRequirement(System.Boolean)
+  name: ActivateRequirement(Boolean)
+  href: api/GrandmaGreen.StoryRequirement.html#GrandmaGreen_StoryRequirement_ActivateRequirement_System_Boolean_
+  commentId: M:GrandmaGreen.StoryRequirement.ActivateRequirement(System.Boolean)
+  fullName: GrandmaGreen.StoryRequirement.ActivateRequirement(System.Boolean)
+  nameWithType: StoryRequirement.ActivateRequirement(Boolean)
+- uid: GrandmaGreen.StoryRequirement.ActivateRequirement*
+  name: ActivateRequirement
+  href: api/GrandmaGreen.StoryRequirement.html#GrandmaGreen_StoryRequirement_ActivateRequirement_
+  commentId: Overload:GrandmaGreen.StoryRequirement.ActivateRequirement
+  isSpec: "True"
+  fullName: GrandmaGreen.StoryRequirement.ActivateRequirement
+  nameWithType: StoryRequirement.ActivateRequirement
+- uid: GrandmaGreen.StoryRequirement.CompleteRequirement
+  name: CompleteRequirement()
+  href: api/GrandmaGreen.StoryRequirement.html#GrandmaGreen_StoryRequirement_CompleteRequirement
+  commentId: M:GrandmaGreen.StoryRequirement.CompleteRequirement
+  fullName: GrandmaGreen.StoryRequirement.CompleteRequirement()
+  nameWithType: StoryRequirement.CompleteRequirement()
+- uid: GrandmaGreen.StoryRequirement.CompleteRequirement*
+  name: CompleteRequirement
+  href: api/GrandmaGreen.StoryRequirement.html#GrandmaGreen_StoryRequirement_CompleteRequirement_
+  commentId: Overload:GrandmaGreen.StoryRequirement.CompleteRequirement
+  isSpec: "True"
+  fullName: GrandmaGreen.StoryRequirement.CompleteRequirement
+  nameWithType: StoryRequirement.CompleteRequirement
+- uid: GrandmaGreen.StoryRequirement.currentState
+  name: currentState
+  href: api/GrandmaGreen.StoryRequirement.html#GrandmaGreen_StoryRequirement_currentState
+  commentId: F:GrandmaGreen.StoryRequirement.currentState
+  fullName: GrandmaGreen.StoryRequirement.currentState
+  nameWithType: StoryRequirement.currentState
+- uid: GrandmaGreen.StoryRequirement.flag
+  name: flag
+  href: api/GrandmaGreen.StoryRequirement.html#GrandmaGreen_StoryRequirement_flag
+  commentId: F:GrandmaGreen.StoryRequirement.flag
+  fullName: GrandmaGreen.StoryRequirement.flag
+  nameWithType: StoryRequirement.flag
+- uid: GrandmaGreen.StoryRequirement.onActivation
+  name: onActivation
+  href: api/GrandmaGreen.StoryRequirement.html#GrandmaGreen_StoryRequirement_onActivation
+  commentId: E:GrandmaGreen.StoryRequirement.onActivation
+  fullName: GrandmaGreen.StoryRequirement.onActivation
+  nameWithType: StoryRequirement.onActivation
+- uid: GrandmaGreen.StoryRequirement.onCompletion
+  name: onCompletion
+  href: api/GrandmaGreen.StoryRequirement.html#GrandmaGreen_StoryRequirement_onCompletion
+  commentId: E:GrandmaGreen.StoryRequirement.onCompletion
+  fullName: GrandmaGreen.StoryRequirement.onCompletion
+  nameWithType: StoryRequirement.onCompletion
+- uid: GrandmaGreen.StoryState
+  name: StoryState
+  href: api/GrandmaGreen.StoryState.html
+  commentId: T:GrandmaGreen.StoryState
+  fullName: GrandmaGreen.StoryState
+  nameWithType: StoryState
+- uid: GrandmaGreen.StoryState.ACTIVE
+  name: ACTIVE
+  href: api/GrandmaGreen.StoryState.html#GrandmaGreen_StoryState_ACTIVE
+  commentId: F:GrandmaGreen.StoryState.ACTIVE
+  fullName: GrandmaGreen.StoryState.ACTIVE
+  nameWithType: StoryState.ACTIVE
+- uid: GrandmaGreen.StoryState.COMPLETED
+  name: COMPLETED
+  href: api/GrandmaGreen.StoryState.html#GrandmaGreen_StoryState_COMPLETED
+  commentId: F:GrandmaGreen.StoryState.COMPLETED
+  fullName: GrandmaGreen.StoryState.COMPLETED
+  nameWithType: StoryState.COMPLETED
+- uid: GrandmaGreen.StoryState.INACTIVE
+  name: INACTIVE
+  href: api/GrandmaGreen.StoryState.html#GrandmaGreen_StoryState_INACTIVE
+  commentId: F:GrandmaGreen.StoryState.INACTIVE
+  fullName: GrandmaGreen.StoryState.INACTIVE
+  nameWithType: StoryState.INACTIVE
 - uid: GrandmaGreen.TileType
   name: TileType
   href: api/GrandmaGreen.TileType.html
@@ -6868,44 +7557,51 @@ references:
   commentId: F:GrandmaGreen.UI.Golems.GolemMenu.cameraZoom
   fullName: GrandmaGreen.UI.Golems.GolemMenu.cameraZoom
   nameWithType: GolemMenu.cameraZoom
-- uid: GrandmaGreen.UI.Golems.GolemMenu.dialogue
-  name: dialogue
-  href: api/GrandmaGreen.UI.Golems.GolemMenu.html#GrandmaGreen_UI_Golems_GolemMenu_dialogue
-  commentId: F:GrandmaGreen.UI.Golems.GolemMenu.dialogue
-  fullName: GrandmaGreen.UI.Golems.GolemMenu.dialogue
-  nameWithType: GolemMenu.dialogue
 - uid: GrandmaGreen.UI.Golems.GolemMenu.golemMenu
   name: golemMenu
   href: api/GrandmaGreen.UI.Golems.GolemMenu.html#GrandmaGreen_UI_Golems_GolemMenu_golemMenu
   commentId: F:GrandmaGreen.UI.Golems.GolemMenu.golemMenu
   fullName: GrandmaGreen.UI.Golems.GolemMenu.golemMenu
   nameWithType: GolemMenu.golemMenu
-- uid: GrandmaGreen.UI.Golems.GolemMenu.OnDialogueTap(ClickEvent)
-  name: OnDialogueTap(ClickEvent)
-  href: api/GrandmaGreen.UI.Golems.GolemMenu.html#GrandmaGreen_UI_Golems_GolemMenu_OnDialogueTap_ClickEvent_
-  commentId: M:GrandmaGreen.UI.Golems.GolemMenu.OnDialogueTap(ClickEvent)
-  fullName: GrandmaGreen.UI.Golems.GolemMenu.OnDialogueTap(ClickEvent)
-  nameWithType: GolemMenu.OnDialogueTap(ClickEvent)
-- uid: GrandmaGreen.UI.Golems.GolemMenu.OnDialogueTap*
-  name: OnDialogueTap
-  href: api/GrandmaGreen.UI.Golems.GolemMenu.html#GrandmaGreen_UI_Golems_GolemMenu_OnDialogueTap_
-  commentId: Overload:GrandmaGreen.UI.Golems.GolemMenu.OnDialogueTap
+- uid: GrandmaGreen.UI.Golems.GolemMenu.GolemMenuClose
+  name: GolemMenuClose()
+  href: api/GrandmaGreen.UI.Golems.GolemMenu.html#GrandmaGreen_UI_Golems_GolemMenu_GolemMenuClose
+  commentId: M:GrandmaGreen.UI.Golems.GolemMenu.GolemMenuClose
+  fullName: GrandmaGreen.UI.Golems.GolemMenu.GolemMenuClose()
+  nameWithType: GolemMenu.GolemMenuClose()
+- uid: GrandmaGreen.UI.Golems.GolemMenu.GolemMenuClose*
+  name: GolemMenuClose
+  href: api/GrandmaGreen.UI.Golems.GolemMenu.html#GrandmaGreen_UI_Golems_GolemMenu_GolemMenuClose_
+  commentId: Overload:GrandmaGreen.UI.Golems.GolemMenu.GolemMenuClose
   isSpec: "True"
-  fullName: GrandmaGreen.UI.Golems.GolemMenu.OnDialogueTap
-  nameWithType: GolemMenu.OnDialogueTap
-- uid: GrandmaGreen.UI.Golems.GolemMenu.SetDialogueLocation(Vector3)
-  name: SetDialogueLocation(Vector3)
-  href: api/GrandmaGreen.UI.Golems.GolemMenu.html#GrandmaGreen_UI_Golems_GolemMenu_SetDialogueLocation_Vector3_
-  commentId: M:GrandmaGreen.UI.Golems.GolemMenu.SetDialogueLocation(Vector3)
-  fullName: GrandmaGreen.UI.Golems.GolemMenu.SetDialogueLocation(Vector3)
-  nameWithType: GolemMenu.SetDialogueLocation(Vector3)
-- uid: GrandmaGreen.UI.Golems.GolemMenu.SetDialogueLocation*
-  name: SetDialogueLocation
-  href: api/GrandmaGreen.UI.Golems.GolemMenu.html#GrandmaGreen_UI_Golems_GolemMenu_SetDialogueLocation_
-  commentId: Overload:GrandmaGreen.UI.Golems.GolemMenu.SetDialogueLocation
+  fullName: GrandmaGreen.UI.Golems.GolemMenu.GolemMenuClose
+  nameWithType: GolemMenu.GolemMenuClose
+- uid: GrandmaGreen.UI.Golems.GolemMenu.GolemMenuOpen
+  name: GolemMenuOpen()
+  href: api/GrandmaGreen.UI.Golems.GolemMenu.html#GrandmaGreen_UI_Golems_GolemMenu_GolemMenuOpen
+  commentId: M:GrandmaGreen.UI.Golems.GolemMenu.GolemMenuOpen
+  fullName: GrandmaGreen.UI.Golems.GolemMenu.GolemMenuOpen()
+  nameWithType: GolemMenu.GolemMenuOpen()
+- uid: GrandmaGreen.UI.Golems.GolemMenu.GolemMenuOpen*
+  name: GolemMenuOpen
+  href: api/GrandmaGreen.UI.Golems.GolemMenu.html#GrandmaGreen_UI_Golems_GolemMenu_GolemMenuOpen_
+  commentId: Overload:GrandmaGreen.UI.Golems.GolemMenu.GolemMenuOpen
   isSpec: "True"
-  fullName: GrandmaGreen.UI.Golems.GolemMenu.SetDialogueLocation
-  nameWithType: GolemMenu.SetDialogueLocation
+  fullName: GrandmaGreen.UI.Golems.GolemMenu.GolemMenuOpen
+  nameWithType: GolemMenu.GolemMenuOpen
+- uid: GrandmaGreen.UI.Golems.GolemMenu.HandleGolemInteract
+  name: HandleGolemInteract()
+  href: api/GrandmaGreen.UI.Golems.GolemMenu.html#GrandmaGreen_UI_Golems_GolemMenu_HandleGolemInteract
+  commentId: M:GrandmaGreen.UI.Golems.GolemMenu.HandleGolemInteract
+  fullName: GrandmaGreen.UI.Golems.GolemMenu.HandleGolemInteract()
+  nameWithType: GolemMenu.HandleGolemInteract()
+- uid: GrandmaGreen.UI.Golems.GolemMenu.HandleGolemInteract*
+  name: HandleGolemInteract
+  href: api/GrandmaGreen.UI.Golems.GolemMenu.html#GrandmaGreen_UI_Golems_GolemMenu_HandleGolemInteract_
+  commentId: Overload:GrandmaGreen.UI.Golems.GolemMenu.HandleGolemInteract
+  isSpec: "True"
+  fullName: GrandmaGreen.UI.Golems.GolemMenu.HandleGolemInteract
+  nameWithType: GolemMenu.HandleGolemInteract
 - uid: GrandmaGreen.UI.Golems.GolemMenu.SetLocation(Vector3)
   name: SetLocation(Vector3)
   href: api/GrandmaGreen.UI.Golems.GolemMenu.html#GrandmaGreen_UI_Golems_GolemMenu_SetLocation_Vector3_
@@ -6919,19 +7615,6 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.UI.Golems.GolemMenu.SetLocation
   nameWithType: GolemMenu.SetLocation
-- uid: GrandmaGreen.UI.Golems.GolemMenu.TriggerMenu
-  name: TriggerMenu()
-  href: api/GrandmaGreen.UI.Golems.GolemMenu.html#GrandmaGreen_UI_Golems_GolemMenu_TriggerMenu
-  commentId: M:GrandmaGreen.UI.Golems.GolemMenu.TriggerMenu
-  fullName: GrandmaGreen.UI.Golems.GolemMenu.TriggerMenu()
-  nameWithType: GolemMenu.TriggerMenu()
-- uid: GrandmaGreen.UI.Golems.GolemMenu.TriggerMenu*
-  name: TriggerMenu
-  href: api/GrandmaGreen.UI.Golems.GolemMenu.html#GrandmaGreen_UI_Golems_GolemMenu_TriggerMenu_
-  commentId: Overload:GrandmaGreen.UI.Golems.GolemMenu.TriggerMenu
-  isSpec: "True"
-  fullName: GrandmaGreen.UI.Golems.GolemMenu.TriggerMenu
-  nameWithType: GolemMenu.TriggerMenu
 - uid: GrandmaGreen.UI.HUD
   name: GrandmaGreen.UI.HUD
   href: api/GrandmaGreen.UI.HUD.html
@@ -6944,12 +7627,19 @@ references:
   commentId: T:GrandmaGreen.UI.HUD.HUD
   fullName: GrandmaGreen.UI.HUD.HUD
   nameWithType: HUD
-- uid: GrandmaGreen.UI.HUD.HUD.instance
-  name: instance
-  href: api/GrandmaGreen.UI.HUD.HUD.html#GrandmaGreen_UI_HUD_HUD_instance
-  commentId: F:GrandmaGreen.UI.HUD.HUD.instance
-  fullName: GrandmaGreen.UI.HUD.HUD.instance
-  nameWithType: HUD.instance
+- uid: GrandmaGreen.UI.HUD.HUD.CloseHUD
+  name: CloseHUD()
+  href: api/GrandmaGreen.UI.HUD.HUD.html#GrandmaGreen_UI_HUD_HUD_CloseHUD
+  commentId: M:GrandmaGreen.UI.HUD.HUD.CloseHUD
+  fullName: GrandmaGreen.UI.HUD.HUD.CloseHUD()
+  nameWithType: HUD.CloseHUD()
+- uid: GrandmaGreen.UI.HUD.HUD.CloseHUD*
+  name: CloseHUD
+  href: api/GrandmaGreen.UI.HUD.HUD.html#GrandmaGreen_UI_HUD_HUD_CloseHUD_
+  commentId: Overload:GrandmaGreen.UI.HUD.HUD.CloseHUD
+  isSpec: "True"
+  fullName: GrandmaGreen.UI.HUD.HUD.CloseHUD
+  nameWithType: HUD.CloseHUD
 - uid: GrandmaGreen.UI.HUD.HUD.inventory
   name: inventory
   href: api/GrandmaGreen.UI.HUD.HUD.html#GrandmaGreen_UI_HUD_HUD_inventory
@@ -7092,67 +7782,3 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.UI.HUD.HUDController.RegisterButtonCallbacks
   nameWithType: HUDController.RegisterButtonCallbacks
-- uid: GrandmaGreen.YarnOverrides
-  name: GrandmaGreen.YarnOverrides
-  href: api/GrandmaGreen.YarnOverrides.html
-  commentId: N:GrandmaGreen.YarnOverrides
-  fullName: GrandmaGreen.YarnOverrides
-  nameWithType: GrandmaGreen.YarnOverrides
-- uid: GrandmaGreen.YarnOverrides.CustomLineView
-  name: CustomLineView
-  href: api/GrandmaGreen.YarnOverrides.CustomLineView.html
-  commentId: T:GrandmaGreen.YarnOverrides.CustomLineView
-  fullName: GrandmaGreen.YarnOverrides.CustomLineView
-  nameWithType: CustomLineView
-- uid: GrandmaGreen.YarnOverrides.CustomLineView.DismissLine(Action)
-  name: DismissLine(Action)
-  href: api/GrandmaGreen.YarnOverrides.CustomLineView.html#GrandmaGreen_YarnOverrides_CustomLineView_DismissLine_Action_
-  commentId: M:GrandmaGreen.YarnOverrides.CustomLineView.DismissLine(Action)
-  fullName: GrandmaGreen.YarnOverrides.CustomLineView.DismissLine(Action)
-  nameWithType: CustomLineView.DismissLine(Action)
-- uid: GrandmaGreen.YarnOverrides.CustomLineView.DismissLine*
-  name: DismissLine
-  href: api/GrandmaGreen.YarnOverrides.CustomLineView.html#GrandmaGreen_YarnOverrides_CustomLineView_DismissLine_
-  commentId: Overload:GrandmaGreen.YarnOverrides.CustomLineView.DismissLine
-  isSpec: "True"
-  fullName: GrandmaGreen.YarnOverrides.CustomLineView.DismissLine
-  nameWithType: CustomLineView.DismissLine
-- uid: GrandmaGreen.YarnOverrides.CustomLineView.InterruptLine(LocalizedLine,Action)
-  name: InterruptLine(LocalizedLine, Action)
-  href: api/GrandmaGreen.YarnOverrides.CustomLineView.html#GrandmaGreen_YarnOverrides_CustomLineView_InterruptLine_LocalizedLine_Action_
-  commentId: M:GrandmaGreen.YarnOverrides.CustomLineView.InterruptLine(LocalizedLine,Action)
-  fullName: GrandmaGreen.YarnOverrides.CustomLineView.InterruptLine(LocalizedLine, Action)
-  nameWithType: CustomLineView.InterruptLine(LocalizedLine, Action)
-- uid: GrandmaGreen.YarnOverrides.CustomLineView.InterruptLine*
-  name: InterruptLine
-  href: api/GrandmaGreen.YarnOverrides.CustomLineView.html#GrandmaGreen_YarnOverrides_CustomLineView_InterruptLine_
-  commentId: Overload:GrandmaGreen.YarnOverrides.CustomLineView.InterruptLine
-  isSpec: "True"
-  fullName: GrandmaGreen.YarnOverrides.CustomLineView.InterruptLine
-  nameWithType: CustomLineView.InterruptLine
-- uid: GrandmaGreen.YarnOverrides.CustomLineView.RunLine(LocalizedLine,Action)
-  name: RunLine(LocalizedLine, Action)
-  href: api/GrandmaGreen.YarnOverrides.CustomLineView.html#GrandmaGreen_YarnOverrides_CustomLineView_RunLine_LocalizedLine_Action_
-  commentId: M:GrandmaGreen.YarnOverrides.CustomLineView.RunLine(LocalizedLine,Action)
-  fullName: GrandmaGreen.YarnOverrides.CustomLineView.RunLine(LocalizedLine, Action)
-  nameWithType: CustomLineView.RunLine(LocalizedLine, Action)
-- uid: GrandmaGreen.YarnOverrides.CustomLineView.RunLine*
-  name: RunLine
-  href: api/GrandmaGreen.YarnOverrides.CustomLineView.html#GrandmaGreen_YarnOverrides_CustomLineView_RunLine_
-  commentId: Overload:GrandmaGreen.YarnOverrides.CustomLineView.RunLine
-  isSpec: "True"
-  fullName: GrandmaGreen.YarnOverrides.CustomLineView.RunLine
-  nameWithType: CustomLineView.RunLine
-- uid: GrandmaGreen.YarnOverrides.CustomLineView.SetLocation(Vector3)
-  name: SetLocation(Vector3)
-  href: api/GrandmaGreen.YarnOverrides.CustomLineView.html#GrandmaGreen_YarnOverrides_CustomLineView_SetLocation_Vector3_
-  commentId: M:GrandmaGreen.YarnOverrides.CustomLineView.SetLocation(Vector3)
-  fullName: GrandmaGreen.YarnOverrides.CustomLineView.SetLocation(Vector3)
-  nameWithType: CustomLineView.SetLocation(Vector3)
-- uid: GrandmaGreen.YarnOverrides.CustomLineView.SetLocation*
-  name: SetLocation
-  href: api/GrandmaGreen.YarnOverrides.CustomLineView.html#GrandmaGreen_YarnOverrides_CustomLineView_SetLocation_
-  commentId: Overload:GrandmaGreen.YarnOverrides.CustomLineView.SetLocation
-  isSpec: "True"
-  fullName: GrandmaGreen.YarnOverrides.CustomLineView.SetLocation
-  nameWithType: CustomLineView.SetLocation
