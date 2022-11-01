@@ -2933,6 +2933,31 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Dialogue.Effects.Typewriter
   nameWithType: Effects.Typewriter
+- uid: GrandmaGreen.DialogueController
+  name: DialogueController
+  href: api/GrandmaGreen.DialogueController.html
+  commentId: T:GrandmaGreen.DialogueController
+  fullName: GrandmaGreen.DialogueController
+  nameWithType: DialogueController
+- uid: GrandmaGreen.DialogueController.SetPosition
+  name: SetPosition()
+  href: api/GrandmaGreen.DialogueController.html#GrandmaGreen_DialogueController_SetPosition
+  commentId: M:GrandmaGreen.DialogueController.SetPosition
+  fullName: GrandmaGreen.DialogueController.SetPosition()
+  nameWithType: DialogueController.SetPosition()
+- uid: GrandmaGreen.DialogueController.SetPosition*
+  name: SetPosition
+  href: api/GrandmaGreen.DialogueController.html#GrandmaGreen_DialogueController_SetPosition_
+  commentId: Overload:GrandmaGreen.DialogueController.SetPosition
+  isSpec: "True"
+  fullName: GrandmaGreen.DialogueController.SetPosition
+  nameWithType: DialogueController.SetPosition
+- uid: GrandmaGreen.DialogueController.TransformToFollow
+  name: TransformToFollow
+  href: api/GrandmaGreen.DialogueController.html#GrandmaGreen_DialogueController_TransformToFollow
+  commentId: F:GrandmaGreen.DialogueController.TransformToFollow
+  fullName: GrandmaGreen.DialogueController.TransformToFollow
+  nameWithType: DialogueController.TransformToFollow
 - uid: GrandmaGreen.Entities
   name: GrandmaGreen.Entities
   href: api/GrandmaGreen.Entities.html
@@ -5679,6 +5704,25 @@ references:
   fullName.vb: GrandmaGreen.Garden.TraitSetData(Of T).weight
   nameWithType: TraitSetData<T>.weight
   nameWithType.vb: TraitSetData(Of T).weight
+- uid: GrandmaGreen.GeneralExtensions
+  name: GeneralExtensions
+  href: api/GrandmaGreen.GeneralExtensions.html
+  commentId: T:GrandmaGreen.GeneralExtensions
+  fullName: GrandmaGreen.GeneralExtensions
+  nameWithType: GeneralExtensions
+- uid: GrandmaGreen.GeneralExtensions.WithNewX(Vector2,System.Single)
+  name: WithNewX(Vector2, Single)
+  href: api/GrandmaGreen.GeneralExtensions.html#GrandmaGreen_GeneralExtensions_WithNewX_Vector2_System_Single_
+  commentId: M:GrandmaGreen.GeneralExtensions.WithNewX(Vector2,System.Single)
+  fullName: GrandmaGreen.GeneralExtensions.WithNewX(Vector2, System.Single)
+  nameWithType: GeneralExtensions.WithNewX(Vector2, Single)
+- uid: GrandmaGreen.GeneralExtensions.WithNewX*
+  name: WithNewX
+  href: api/GrandmaGreen.GeneralExtensions.html#GrandmaGreen_GeneralExtensions_WithNewX_
+  commentId: Overload:GrandmaGreen.GeneralExtensions.WithNewX
+  isSpec: "True"
+  fullName: GrandmaGreen.GeneralExtensions.WithNewX
+  nameWithType: GeneralExtensions.WithNewX
 - uid: GrandmaGreen.GrandmaGreenGameState
   name: GrandmaGreenGameState
   href: api/GrandmaGreen.GrandmaGreenGameState.html

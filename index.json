@@ -249,6 +249,11 @@
     "title": "Namespace GrandmaGreen.Dialogue",
     "keywords": "Namespace GrandmaGreen.Dialogue Classes CustomLineView Dialogueable Effects Contains coroutine methods that apply visual effects. This class is used by to handle animating the presentation of lines. Effects.CoroutineInterruptToken An object that can be used to signal to a coroutine that it should terminate early."
   },
+  "api/GrandmaGreen.DialogueController.html": {
+    "href": "api/GrandmaGreen.DialogueController.html",
+    "title": "Class DialogueController",
+    "keywords": "Class DialogueController Inheritance Object DialogueController Namespace : GrandmaGreen Assembly : cs.temp.dll.dll Syntax public class DialogueController : MonoBehaviour Fields TransformToFollow Declaration public Transform TransformToFollow Field Value Type Description Transform Methods SetPosition() Declaration public void SetPosition()"
+  },
   "api/GrandmaGreen.Entities.EntityBehavior.html": {
     "href": "api/GrandmaGreen.Entities.EntityBehavior.html",
     "title": "Class EntityBehavior",
@@ -474,6 +479,11 @@
     "title": "Class TraitSetData<T>",
     "keywords": "Class TraitSetData<T> Inheritance Object TraitSetData<T> ColorSet SizeSet Implements ITraitSetData Inherited Members Object.ToString() Object.Equals(Object) Object.Equals(Object, Object) Object.ReferenceEquals(Object, Object) Object.GetHashCode() Object.GetType() Object.MemberwiseClone() Namespace : GrandmaGreen.Garden Assembly : cs.temp.dll.dll Syntax public class TraitSetData<T> : ITraitSetData where T : struct Type Parameters Name Description T Fields weight Declaration public int weight Field Value Type Description Int32 Properties dominant Declaration public TraitData<T> dominant { get; } Property Value Type Description TraitData <T> mixed Declaration public TraitData<T> mixed { get; } Property Value Type Description TraitData <T> recessive Declaration public TraitData<T> recessive { get; } Property Value Type Description TraitData <T> type Declaration public Type type { get; } Property Value Type Description Type Explicit Interface Implementations ITraitSetData.dominant Declaration ITraitData ITraitSetData.dominant { get; } Returns Type Description ITraitData ITraitSetData.mixed Declaration ITraitData ITraitSetData.mixed { get; } Returns Type Description ITraitData ITraitSetData.recessive Declaration ITraitData ITraitSetData.recessive { get; } Returns Type Description ITraitData ITraitSetData.weight Declaration int ITraitSetData.weight { get; } Returns Type Description Int32 Implements ITraitSetData"
   },
+  "api/GrandmaGreen.GeneralExtensions.html": {
+    "href": "api/GrandmaGreen.GeneralExtensions.html",
+    "title": "Class GeneralExtensions",
+    "keywords": "Class GeneralExtensions Inheritance Object GeneralExtensions Inherited Members Object.ToString() Object.Equals(Object) Object.Equals(Object, Object) Object.ReferenceEquals(Object, Object) Object.GetHashCode() Object.GetType() Object.MemberwiseClone() Namespace : GrandmaGreen Assembly : cs.temp.dll.dll Syntax public static class GeneralExtensions Methods WithNewX(Vector2, Single) Returns the current vector with a new X Declaration public static Vector2 WithNewX(this Vector2 vector, float newX) Parameters Type Name Description Vector2 vector Single newX Returns Type Description Vector2"
+  },
   "api/GrandmaGreen.GrandmaGreenGameState.html": {
     "href": "api/GrandmaGreen.GrandmaGreenGameState.html",
     "title": "Class GrandmaGreenGameState",
@@ -482,7 +492,7 @@
   "api/GrandmaGreen.html": {
     "href": "api/GrandmaGreen.html",
     "title": "Namespace GrandmaGreen",
-    "keywords": "Namespace GrandmaGreen Classes AreaController AreaServices CameraZoom CatchUIInput CommonSFX DemoUIScript EventManager FlowerController GamePortalTile GameScenePortal GameSystemDummy GrandmaGreenGameState PlantType PlantTypeDictionary PlayAudioOnEnable ShoppingItem Storyline StorylineDataStore StoryRequirement TileType ToolTest2 Interfaces IGameTile IPathAgent IPathfinderServicer IServicer<T> IServiceUser<U, T> Enums StoryState"
+    "keywords": "Namespace GrandmaGreen Classes AreaController AreaServices CameraZoom CatchUIInput CommonSFX DemoUIScript DialogueController EventManager FlowerController GamePortalTile GameScenePortal GameSystemDummy GeneralExtensions GrandmaGreenGameState PlantType PlantTypeDictionary PlayAudioOnEnable ShoppingItem Storyline StorylineDataStore StoryRequirement TileType ToolTest2 Interfaces IGameTile IPathAgent IPathfinderServicer IServicer<T> IServiceUser<U, T> Enums StoryState"
   },
   "api/GrandmaGreen.IGameTile.html": {
     "href": "api/GrandmaGreen.IGameTile.html",

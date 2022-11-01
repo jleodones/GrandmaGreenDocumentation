@@ -624,6 +624,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/GrandmaGreen.DialogueController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GrandmaGreen.DialogueController.html",
+          "hash": "FPnkDE81kpo0g+eZRGRUzoAT9ffmBN7T9szRj5Aofb4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/GrandmaGreen.Entities.EntityBehavior.yml",
       "output": {
         ".html": {
@@ -1164,6 +1176,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/GrandmaGreen.GeneralExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GrandmaGreen.GeneralExtensions.html",
+          "hash": "Tkd8qo21Lf+UN5KVCM3PdgaT0NGSrFxVNLrPAIVbx98="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/GrandmaGreen.GrandmaGreenGameState.yml",
       "output": {
         ".html": {
@@ -1648,7 +1672,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.html",
-          "hash": "+2Revrueg/Qlb+xqzT0P3aQp31nkFRRUew/ZV3HzNBo="
+          "hash": "//UUdYPI5AtH+qKd6dYmDIMHzcFKh0oc64ih8sDLRgU="
         }
       },
       "is_incremental": false,
@@ -1660,7 +1684,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "hnXTDbOeWj0BTCU+I5cAavf6mpJSLyCDDOwEOyQqL0Q="
+          "hash": "sszddD9kbiN+zYavEdbwEUVs2YrEsHtWNkYWWtK31Q4="
         }
       },
       "is_incremental": false,
@@ -1769,7 +1793,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 136,
+          "total_file_count": 138,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
