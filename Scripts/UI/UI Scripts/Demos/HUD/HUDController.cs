@@ -18,10 +18,13 @@ namespace GrandmaGreen.UI.HUD
         /* Define member variables*/
 
         private VisualElement m_root;
+        private VisualElement m_draggable;
 
         public HUDController(VisualElement root)
         {
             m_root = root;
+            Debug.Log(Screen.width);
+            Debug.Log(Screen.height);
         }
 
         public void OpenHUD()
@@ -45,8 +48,47 @@ namespace GrandmaGreen.UI.HUD
             inventoryButton.RegisterCallback<ClickEvent>(InventoryOnClick);
             UQueryBuilder<Button> buttons = m_root.Query<Button>();
             buttons.ForEach((Button hud_button) => { hud_button.RegisterCallback<ClickEvent>(ButtonOnClick); });
+
+            // Adding draggable demo code here for now
+            m_draggable = m_root.Q<VisualElement>("draggable");
+            m_draggable.RegisterCallback<PointerDownEvent>(PointerDownHandler);
+            m_draggable.RegisterCallback<PointerMoveEvent>(PointerMoveHandler);
+            m_draggable.RegisterCallback<PointerUpEvent>(PointerUpHandler);
         }
-        
+
+        private Vector2 targetStartPosition { get; set; }
+        private Vector3 pointerStartPosition { get; set; }
+
+        private bool enabled { get; set; }
+
+        private void PointerDownHandler(PointerDownEvent evt)
+        {
+            targetStartPosition = m_draggable.transform.position;
+            pointerStartPosition = evt.position;
+            m_draggable.CapturePointer(evt.pointerId);
+            enabled = true;
+        }
+
+        private void PointerMoveHandler(PointerMoveEvent evt)
+        {
+            if (enabled && m_draggable.HasPointerCapture(evt.pointerId))
+            {
+                Vector3 pointerDelta = evt.position - pointerStartPosition;
+                Debug.Log(targetStartPosition.y + pointerDelta.y);
+                Debug.Log(targetStartPosition.x + pointerDelta.x);
+                m_draggable.transform.position = new Vector2(
+                    Mathf.Clamp(targetStartPosition.x + pointerDelta.x, 0, Screen.width - 150),
+                    Mathf.Clamp(targetStartPosition.y + pointerDelta.y, 0, Screen.height-50));
+            }
+        }
+
+        private void PointerUpHandler(PointerUpEvent evt)
+        {
+            if (enabled && m_draggable.HasPointerCapture(evt.pointerId))
+            {
+                m_draggable.ReleasePointer(evt.pointerId);
+            }
+        }
 
         public void InventoryOnClick(ClickEvent evt)
         {
