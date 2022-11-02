@@ -928,7 +928,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.Garden.GardenAreaController.html",
-          "hash": "AS/Ts+/j02FbLhMVC3skqiWuV8rz8U4qljaok90OeR8="
+          "hash": "g6SWrE95aBa/JSQ78GwbaD/QzyxJcGoxKQDf1Un/P/8="
         }
       },
       "is_incremental": false,
@@ -936,11 +936,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/GrandmaGreen.Garden.GardenData.yml",
+      "source_relative_path": "api/GrandmaGreen.Garden.GardenManager.yml",
       "output": {
         ".html": {
-          "relative_path": "api/GrandmaGreen.Garden.GardenData.html",
-          "hash": "O9fdF06yq3thj169phPXc6AX1Y9emV+18tnhL6nsKg4="
+          "relative_path": "api/GrandmaGreen.Garden.GardenManager.html",
+          "hash": "29S0eH8+DWp1Yf+p47A7NU/T9MC8btDuB/3vwWmwrT8="
         }
       },
       "is_incremental": false,
@@ -953,6 +953,18 @@
         ".html": {
           "relative_path": "api/GrandmaGreen.Garden.GardenPlant.html",
           "hash": "5veOqqh8uPAyWV56dePSU9klRsCiepb61kTWdX1aWJg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GrandmaGreen.Garden.GardenSaver.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GrandmaGreen.Garden.GardenSaver.html",
+          "hash": "KNBndQ9xh5KJONW73Gb6bJNIUdygIgnoPfpJ4+4rpkA="
         }
       },
       "is_incremental": false,
@@ -996,18 +1008,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/GrandmaGreen.Garden.GrowthEvent.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/GrandmaGreen.Garden.GrowthEvent.html",
-          "hash": "0gt5EQBxLPdXMVO3rp97qOe3UOnhxJmHA6YJfalivcg="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/GrandmaGreen.Garden.ITraitData.yml",
       "output": {
         ".html": {
@@ -1044,35 +1044,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/GrandmaGreen.Garden.PlantInteractable.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/GrandmaGreen.Garden.PlantInteractable.html",
-          "hash": "0cv1NlDHWpJhPzzDv5S8Hg6G3Iad2/bkc+64euVDkC4="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/GrandmaGreen.Garden.PlantState.yml",
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.Garden.PlantState.html",
           "hash": "Z0t8StgyDkHk5cVGxdklsLMhOct49nhQQeVlxR/UM7E="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/GrandmaGreen.Garden.PlantStateManager.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/GrandmaGreen.Garden.PlantStateManager.html",
-          "hash": "x8t/tt6Aay7ZQvzAOYLtenavXFIg45/c5f6ZCwT9Dv0="
         }
       },
       "is_incremental": false,
@@ -1168,7 +1144,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.Garden.html",
-          "hash": "FbzfQh3sOCSaooEr6tjW/DVPMaLLFIt6yGfb+Nupcs8="
+          "hash": "T3Lu2w6hxuUh8CnoWGk7UKxYIQ2hICYgtxBYCwOL7bw="
         }
       },
       "is_incremental": false,
@@ -1684,7 +1660,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "sszddD9kbiN+zYavEdbwEUVs2YrEsHtWNkYWWtK31Q4="
+          "hash": "aTmJE7Xu0MSU/qNdc8dIxn5/0BO2cXOMPZZtCUvRuy4="
         }
       },
       "is_incremental": false,
@@ -1793,7 +1769,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 138,
+          "total_file_count": 136,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

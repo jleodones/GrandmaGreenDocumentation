@@ -4347,19 +4347,6 @@ references:
   commentId: T:GrandmaGreen.Garden.GardenAreaController
   fullName: GrandmaGreen.Garden.GardenAreaController
   nameWithType: GardenAreaController
-- uid: GrandmaGreen.Garden.GardenAreaController.Activate
-  name: Activate()
-  href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_Activate
-  commentId: M:GrandmaGreen.Garden.GardenAreaController.Activate
-  fullName: GrandmaGreen.Garden.GardenAreaController.Activate()
-  nameWithType: GardenAreaController.Activate()
-- uid: GrandmaGreen.Garden.GardenAreaController.Activate*
-  name: Activate
-  href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_Activate_
-  commentId: Overload:GrandmaGreen.Garden.GardenAreaController.Activate
-  isSpec: "True"
-  fullName: GrandmaGreen.Garden.GardenAreaController.Activate
-  nameWithType: GardenAreaController.Activate
 - uid: GrandmaGreen.Garden.GardenAreaController.Awake
   name: Awake()
   href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_Awake
@@ -4373,6 +4360,19 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Garden.GardenAreaController.Awake
   nameWithType: GardenAreaController.Awake
+- uid: GrandmaGreen.Garden.GardenAreaController.ClearPlants
+  name: ClearPlants()
+  href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_ClearPlants
+  commentId: M:GrandmaGreen.Garden.GardenAreaController.ClearPlants
+  fullName: GrandmaGreen.Garden.GardenAreaController.ClearPlants()
+  nameWithType: GardenAreaController.ClearPlants()
+- uid: GrandmaGreen.Garden.GardenAreaController.ClearPlants*
+  name: ClearPlants
+  href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_ClearPlants_
+  commentId: Overload:GrandmaGreen.Garden.GardenAreaController.ClearPlants
+  isSpec: "True"
+  fullName: GrandmaGreen.Garden.GardenAreaController.ClearPlants
+  nameWithType: GardenAreaController.ClearPlants
 - uid: GrandmaGreen.Garden.GardenAreaController.CreatePlant(SeedId,Vector3Int)
   name: CreatePlant(SeedId, Vector3Int)
   href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_CreatePlant_SeedId_Vector3Int_
@@ -4386,19 +4386,6 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Garden.GardenAreaController.CreatePlant
   nameWithType: GardenAreaController.CreatePlant
-- uid: GrandmaGreen.Garden.GardenAreaController.DestroyAllPlants
-  name: DestroyAllPlants()
-  href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_DestroyAllPlants
-  commentId: M:GrandmaGreen.Garden.GardenAreaController.DestroyAllPlants
-  fullName: GrandmaGreen.Garden.GardenAreaController.DestroyAllPlants()
-  nameWithType: GardenAreaController.DestroyAllPlants()
-- uid: GrandmaGreen.Garden.GardenAreaController.DestroyAllPlants*
-  name: DestroyAllPlants
-  href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_DestroyAllPlants_
-  commentId: Overload:GrandmaGreen.Garden.GardenAreaController.DestroyAllPlants
-  isSpec: "True"
-  fullName: GrandmaGreen.Garden.GardenAreaController.DestroyAllPlants
-  nameWithType: GardenAreaController.DestroyAllPlants
 - uid: GrandmaGreen.Garden.GardenAreaController.DestroyPlantOnCell(Vector3Int)
   name: DestroyPlantOnCell(Vector3Int)
   href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_DestroyPlantOnCell_Vector3Int_
@@ -4444,6 +4431,12 @@ references:
   commentId: F:GrandmaGreen.Garden.GardenAreaController.FertilizerParticleBurst
   fullName: GrandmaGreen.Garden.GardenAreaController.FertilizerParticleBurst
   nameWithType: GardenAreaController.FertilizerParticleBurst
+- uid: GrandmaGreen.Garden.GardenAreaController.gardenManager
+  name: gardenManager
+  href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_gardenManager
+  commentId: F:GrandmaGreen.Garden.GardenAreaController.gardenManager
+  fullName: GrandmaGreen.Garden.GardenAreaController.gardenManager
+  nameWithType: GardenAreaController.gardenManager
 - uid: GrandmaGreen.Garden.GardenAreaController.GardenTileSelected(Vector3Int)
   name: GardenTileSelected(Vector3Int)
   href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_GardenTileSelected_Vector3Int_
@@ -4527,12 +4520,6 @@ references:
   commentId: F:GrandmaGreen.Garden.GardenAreaController.plantPrefabLookup
   fullName: GrandmaGreen.Garden.GardenAreaController.plantPrefabLookup
   nameWithType: GardenAreaController.plantPrefabLookup
-- uid: GrandmaGreen.Garden.GardenAreaController.plantStateManager
-  name: plantStateManager
-  href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_plantStateManager
-  commentId: F:GrandmaGreen.Garden.GardenAreaController.plantStateManager
-  fullName: GrandmaGreen.Garden.GardenAreaController.plantStateManager
-  nameWithType: GardenAreaController.plantStateManager
 - uid: GrandmaGreen.Garden.GardenAreaController.playerTools
   name: playerTools
   href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_playerTools
@@ -4571,62 +4558,207 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Garden.GardenAreaController.WaterPlant
   nameWithType: GardenAreaController.WaterPlant
-- uid: GrandmaGreen.Garden.GardenData
-  name: GardenData
-  href: api/GrandmaGreen.Garden.GardenData.html
-  commentId: T:GrandmaGreen.Garden.GardenData
-  fullName: GrandmaGreen.Garden.GardenData
-  nameWithType: GardenData
-- uid: GrandmaGreen.Garden.GardenData.cellSize
-  name: cellSize
-  href: api/GrandmaGreen.Garden.GardenData.html#GrandmaGreen_Garden_GardenData_cellSize
-  commentId: F:GrandmaGreen.Garden.GardenData.cellSize
-  fullName: GrandmaGreen.Garden.GardenData.cellSize
-  nameWithType: GardenData.cellSize
-- uid: GrandmaGreen.Garden.GardenData.gridSize
-  name: gridSize
-  href: api/GrandmaGreen.Garden.GardenData.html#GrandmaGreen_Garden_GardenData_gridSize
-  commentId: F:GrandmaGreen.Garden.GardenData.gridSize
-  fullName: GrandmaGreen.Garden.GardenData.gridSize
-  nameWithType: GardenData.gridSize
-- uid: GrandmaGreen.Garden.GardenData.IndexToWorldPos(System.Int32)
-  name: IndexToWorldPos(Int32)
-  href: api/GrandmaGreen.Garden.GardenData.html#GrandmaGreen_Garden_GardenData_IndexToWorldPos_System_Int32_
-  commentId: M:GrandmaGreen.Garden.GardenData.IndexToWorldPos(System.Int32)
-  fullName: GrandmaGreen.Garden.GardenData.IndexToWorldPos(System.Int32)
-  nameWithType: GardenData.IndexToWorldPos(Int32)
-- uid: GrandmaGreen.Garden.GardenData.IndexToWorldPos*
-  name: IndexToWorldPos
-  href: api/GrandmaGreen.Garden.GardenData.html#GrandmaGreen_Garden_GardenData_IndexToWorldPos_
-  commentId: Overload:GrandmaGreen.Garden.GardenData.IndexToWorldPos
+- uid: GrandmaGreen.Garden.GardenManager
+  name: GardenManager
+  href: api/GrandmaGreen.Garden.GardenManager.html
+  commentId: T:GrandmaGreen.Garden.GardenManager
+  fullName: GrandmaGreen.Garden.GardenManager
+  nameWithType: GardenManager
+- uid: GrandmaGreen.Garden.GardenManager.ClearGarden(System.Int32)
+  name: ClearGarden(Int32)
+  href: api/GrandmaGreen.Garden.GardenManager.html#GrandmaGreen_Garden_GardenManager_ClearGarden_System_Int32_
+  commentId: M:GrandmaGreen.Garden.GardenManager.ClearGarden(System.Int32)
+  fullName: GrandmaGreen.Garden.GardenManager.ClearGarden(System.Int32)
+  nameWithType: GardenManager.ClearGarden(Int32)
+- uid: GrandmaGreen.Garden.GardenManager.ClearGarden*
+  name: ClearGarden
+  href: api/GrandmaGreen.Garden.GardenManager.html#GrandmaGreen_Garden_GardenManager_ClearGarden_
+  commentId: Overload:GrandmaGreen.Garden.GardenManager.ClearGarden
   isSpec: "True"
-  fullName: GrandmaGreen.Garden.GardenData.IndexToWorldPos
-  nameWithType: GardenData.IndexToWorldPos
-- uid: GrandmaGreen.Garden.GardenData.plantStates
-  name: plantStates
-  href: api/GrandmaGreen.Garden.GardenData.html#GrandmaGreen_Garden_GardenData_plantStates
-  commentId: F:GrandmaGreen.Garden.GardenData.plantStates
-  fullName: GrandmaGreen.Garden.GardenData.plantStates
-  nameWithType: GardenData.plantStates
-- uid: GrandmaGreen.Garden.GardenData.worldOrigin
-  name: worldOrigin
-  href: api/GrandmaGreen.Garden.GardenData.html#GrandmaGreen_Garden_GardenData_worldOrigin
-  commentId: F:GrandmaGreen.Garden.GardenData.worldOrigin
-  fullName: GrandmaGreen.Garden.GardenData.worldOrigin
-  nameWithType: GardenData.worldOrigin
-- uid: GrandmaGreen.Garden.GardenData.WorldToGrid(Vector3)
-  name: WorldToGrid(Vector3)
-  href: api/GrandmaGreen.Garden.GardenData.html#GrandmaGreen_Garden_GardenData_WorldToGrid_Vector3_
-  commentId: M:GrandmaGreen.Garden.GardenData.WorldToGrid(Vector3)
-  fullName: GrandmaGreen.Garden.GardenData.WorldToGrid(Vector3)
-  nameWithType: GardenData.WorldToGrid(Vector3)
-- uid: GrandmaGreen.Garden.GardenData.WorldToGrid*
-  name: WorldToGrid
-  href: api/GrandmaGreen.Garden.GardenData.html#GrandmaGreen_Garden_GardenData_WorldToGrid_
-  commentId: Overload:GrandmaGreen.Garden.GardenData.WorldToGrid
+  fullName: GrandmaGreen.Garden.GardenManager.ClearGarden
+  nameWithType: GardenManager.ClearGarden
+- uid: GrandmaGreen.Garden.GardenManager.CreatePlant(PlantId,System.Int32,Vector3Int)
+  name: CreatePlant(PlantId, Int32, Vector3Int)
+  href: api/GrandmaGreen.Garden.GardenManager.html#GrandmaGreen_Garden_GardenManager_CreatePlant_PlantId_System_Int32_Vector3Int_
+  commentId: M:GrandmaGreen.Garden.GardenManager.CreatePlant(PlantId,System.Int32,Vector3Int)
+  fullName: GrandmaGreen.Garden.GardenManager.CreatePlant(PlantId, System.Int32, Vector3Int)
+  nameWithType: GardenManager.CreatePlant(PlantId, Int32, Vector3Int)
+- uid: GrandmaGreen.Garden.GardenManager.CreatePlant*
+  name: CreatePlant
+  href: api/GrandmaGreen.Garden.GardenManager.html#GrandmaGreen_Garden_GardenManager_CreatePlant_
+  commentId: Overload:GrandmaGreen.Garden.GardenManager.CreatePlant
   isSpec: "True"
-  fullName: GrandmaGreen.Garden.GardenData.WorldToGrid
-  nameWithType: GardenData.WorldToGrid
+  fullName: GrandmaGreen.Garden.GardenManager.CreatePlant
+  nameWithType: GardenManager.CreatePlant
+- uid: GrandmaGreen.Garden.GardenManager.DestroyPlant(System.Int32,Vector3Int)
+  name: DestroyPlant(Int32, Vector3Int)
+  href: api/GrandmaGreen.Garden.GardenManager.html#GrandmaGreen_Garden_GardenManager_DestroyPlant_System_Int32_Vector3Int_
+  commentId: M:GrandmaGreen.Garden.GardenManager.DestroyPlant(System.Int32,Vector3Int)
+  fullName: GrandmaGreen.Garden.GardenManager.DestroyPlant(System.Int32, Vector3Int)
+  nameWithType: GardenManager.DestroyPlant(Int32, Vector3Int)
+- uid: GrandmaGreen.Garden.GardenManager.DestroyPlant*
+  name: DestroyPlant
+  href: api/GrandmaGreen.Garden.GardenManager.html#GrandmaGreen_Garden_GardenManager_DestroyPlant_
+  commentId: Overload:GrandmaGreen.Garden.GardenManager.DestroyPlant
+  isSpec: "True"
+  fullName: GrandmaGreen.Garden.GardenManager.DestroyPlant
+  nameWithType: GardenManager.DestroyPlant
+- uid: GrandmaGreen.Garden.GardenManager.GetGrowthStage(System.Int32,Vector3Int)
+  name: GetGrowthStage(Int32, Vector3Int)
+  href: api/GrandmaGreen.Garden.GardenManager.html#GrandmaGreen_Garden_GardenManager_GetGrowthStage_System_Int32_Vector3Int_
+  commentId: M:GrandmaGreen.Garden.GardenManager.GetGrowthStage(System.Int32,Vector3Int)
+  fullName: GrandmaGreen.Garden.GardenManager.GetGrowthStage(System.Int32, Vector3Int)
+  nameWithType: GardenManager.GetGrowthStage(Int32, Vector3Int)
+- uid: GrandmaGreen.Garden.GardenManager.GetGrowthStage*
+  name: GetGrowthStage
+  href: api/GrandmaGreen.Garden.GardenManager.html#GrandmaGreen_Garden_GardenManager_GetGrowthStage_
+  commentId: Overload:GrandmaGreen.Garden.GardenManager.GetGrowthStage
+  isSpec: "True"
+  fullName: GrandmaGreen.Garden.GardenManager.GetGrowthStage
+  nameWithType: GardenManager.GetGrowthStage
+- uid: GrandmaGreen.Garden.GardenManager.GetPlant(System.Int32,Vector3Int)
+  name: GetPlant(Int32, Vector3Int)
+  href: api/GrandmaGreen.Garden.GardenManager.html#GrandmaGreen_Garden_GardenManager_GetPlant_System_Int32_Vector3Int_
+  commentId: M:GrandmaGreen.Garden.GardenManager.GetPlant(System.Int32,Vector3Int)
+  fullName: GrandmaGreen.Garden.GardenManager.GetPlant(System.Int32, Vector3Int)
+  nameWithType: GardenManager.GetPlant(Int32, Vector3Int)
+- uid: GrandmaGreen.Garden.GardenManager.GetPlant*
+  name: GetPlant
+  href: api/GrandmaGreen.Garden.GardenManager.html#GrandmaGreen_Garden_GardenManager_GetPlant_
+  commentId: Overload:GrandmaGreen.Garden.GardenManager.GetPlant
+  isSpec: "True"
+  fullName: GrandmaGreen.Garden.GardenManager.GetPlant
+  nameWithType: GardenManager.GetPlant
+- uid: GrandmaGreen.Garden.GardenManager.GetPlants(System.Int32)
+  name: GetPlants(Int32)
+  href: api/GrandmaGreen.Garden.GardenManager.html#GrandmaGreen_Garden_GardenManager_GetPlants_System_Int32_
+  commentId: M:GrandmaGreen.Garden.GardenManager.GetPlants(System.Int32)
+  fullName: GrandmaGreen.Garden.GardenManager.GetPlants(System.Int32)
+  nameWithType: GardenManager.GetPlants(Int32)
+- uid: GrandmaGreen.Garden.GardenManager.GetPlants*
+  name: GetPlants
+  href: api/GrandmaGreen.Garden.GardenManager.html#GrandmaGreen_Garden_GardenManager_GetPlants_
+  commentId: Overload:GrandmaGreen.Garden.GardenManager.GetPlants
+  isSpec: "True"
+  fullName: GrandmaGreen.Garden.GardenManager.GetPlants
+  nameWithType: GardenManager.GetPlants
+- uid: GrandmaGreen.Garden.GardenManager.GetPlantType(System.Int32,Vector3Int)
+  name: GetPlantType(Int32, Vector3Int)
+  href: api/GrandmaGreen.Garden.GardenManager.html#GrandmaGreen_Garden_GardenManager_GetPlantType_System_Int32_Vector3Int_
+  commentId: M:GrandmaGreen.Garden.GardenManager.GetPlantType(System.Int32,Vector3Int)
+  fullName: GrandmaGreen.Garden.GardenManager.GetPlantType(System.Int32, Vector3Int)
+  nameWithType: GardenManager.GetPlantType(Int32, Vector3Int)
+- uid: GrandmaGreen.Garden.GardenManager.GetPlantType*
+  name: GetPlantType
+  href: api/GrandmaGreen.Garden.GardenManager.html#GrandmaGreen_Garden_GardenManager_GetPlantType_
+  commentId: Overload:GrandmaGreen.Garden.GardenManager.GetPlantType
+  isSpec: "True"
+  fullName: GrandmaGreen.Garden.GardenManager.GetPlantType
+  nameWithType: GardenManager.GetPlantType
+- uid: GrandmaGreen.Garden.GardenManager.IncrementGrowthStage(System.Int32,Vector3Int)
+  name: IncrementGrowthStage(Int32, Vector3Int)
+  href: api/GrandmaGreen.Garden.GardenManager.html#GrandmaGreen_Garden_GardenManager_IncrementGrowthStage_System_Int32_Vector3Int_
+  commentId: M:GrandmaGreen.Garden.GardenManager.IncrementGrowthStage(System.Int32,Vector3Int)
+  fullName: GrandmaGreen.Garden.GardenManager.IncrementGrowthStage(System.Int32, Vector3Int)
+  nameWithType: GardenManager.IncrementGrowthStage(Int32, Vector3Int)
+- uid: GrandmaGreen.Garden.GardenManager.IncrementGrowthStage*
+  name: IncrementGrowthStage
+  href: api/GrandmaGreen.Garden.GardenManager.html#GrandmaGreen_Garden_GardenManager_IncrementGrowthStage_
+  commentId: Overload:GrandmaGreen.Garden.GardenManager.IncrementGrowthStage
+  isSpec: "True"
+  fullName: GrandmaGreen.Garden.GardenManager.IncrementGrowthStage
+  nameWithType: GardenManager.IncrementGrowthStage
+- uid: GrandmaGreen.Garden.GardenManager.Initialize
+  name: Initialize()
+  href: api/GrandmaGreen.Garden.GardenManager.html#GrandmaGreen_Garden_GardenManager_Initialize
+  commentId: M:GrandmaGreen.Garden.GardenManager.Initialize
+  fullName: GrandmaGreen.Garden.GardenManager.Initialize()
+  nameWithType: GardenManager.Initialize()
+- uid: GrandmaGreen.Garden.GardenManager.Initialize*
+  name: Initialize
+  href: api/GrandmaGreen.Garden.GardenManager.html#GrandmaGreen_Garden_GardenManager_Initialize_
+  commentId: Overload:GrandmaGreen.Garden.GardenManager.Initialize
+  isSpec: "True"
+  fullName: GrandmaGreen.Garden.GardenManager.Initialize
+  nameWithType: GardenManager.Initialize
+- uid: GrandmaGreen.Garden.GardenManager.IsEmpty(System.Int32,Vector3Int)
+  name: IsEmpty(Int32, Vector3Int)
+  href: api/GrandmaGreen.Garden.GardenManager.html#GrandmaGreen_Garden_GardenManager_IsEmpty_System_Int32_Vector3Int_
+  commentId: M:GrandmaGreen.Garden.GardenManager.IsEmpty(System.Int32,Vector3Int)
+  fullName: GrandmaGreen.Garden.GardenManager.IsEmpty(System.Int32, Vector3Int)
+  nameWithType: GardenManager.IsEmpty(Int32, Vector3Int)
+- uid: GrandmaGreen.Garden.GardenManager.IsEmpty*
+  name: IsEmpty
+  href: api/GrandmaGreen.Garden.GardenManager.html#GrandmaGreen_Garden_GardenManager_IsEmpty_
+  commentId: Overload:GrandmaGreen.Garden.GardenManager.IsEmpty
+  isSpec: "True"
+  fullName: GrandmaGreen.Garden.GardenManager.IsEmpty
+  nameWithType: GardenManager.IsEmpty
+- uid: GrandmaGreen.Garden.GardenManager.NumSeedDrops(System.Int32,Vector3Int)
+  name: NumSeedDrops(Int32, Vector3Int)
+  href: api/GrandmaGreen.Garden.GardenManager.html#GrandmaGreen_Garden_GardenManager_NumSeedDrops_System_Int32_Vector3Int_
+  commentId: M:GrandmaGreen.Garden.GardenManager.NumSeedDrops(System.Int32,Vector3Int)
+  fullName: GrandmaGreen.Garden.GardenManager.NumSeedDrops(System.Int32, Vector3Int)
+  nameWithType: GardenManager.NumSeedDrops(Int32, Vector3Int)
+- uid: GrandmaGreen.Garden.GardenManager.NumSeedDrops*
+  name: NumSeedDrops
+  href: api/GrandmaGreen.Garden.GardenManager.html#GrandmaGreen_Garden_GardenManager_NumSeedDrops_
+  commentId: Overload:GrandmaGreen.Garden.GardenManager.NumSeedDrops
+  isSpec: "True"
+  fullName: GrandmaGreen.Garden.GardenManager.NumSeedDrops
+  nameWithType: GardenManager.NumSeedDrops
+- uid: GrandmaGreen.Garden.GardenManager.RegisterGarden(System.Int32)
+  name: RegisterGarden(Int32)
+  href: api/GrandmaGreen.Garden.GardenManager.html#GrandmaGreen_Garden_GardenManager_RegisterGarden_System_Int32_
+  commentId: M:GrandmaGreen.Garden.GardenManager.RegisterGarden(System.Int32)
+  fullName: GrandmaGreen.Garden.GardenManager.RegisterGarden(System.Int32)
+  nameWithType: GardenManager.RegisterGarden(Int32)
+- uid: GrandmaGreen.Garden.GardenManager.RegisterGarden*
+  name: RegisterGarden
+  href: api/GrandmaGreen.Garden.GardenManager.html#GrandmaGreen_Garden_GardenManager_RegisterGarden_
+  commentId: Overload:GrandmaGreen.Garden.GardenManager.RegisterGarden
+  isSpec: "True"
+  fullName: GrandmaGreen.Garden.GardenManager.RegisterGarden
+  nameWithType: GardenManager.RegisterGarden
+- uid: GrandmaGreen.Garden.GardenManager.SetFertilization(System.Int32,Vector3Int)
+  name: SetFertilization(Int32, Vector3Int)
+  href: api/GrandmaGreen.Garden.GardenManager.html#GrandmaGreen_Garden_GardenManager_SetFertilization_System_Int32_Vector3Int_
+  commentId: M:GrandmaGreen.Garden.GardenManager.SetFertilization(System.Int32,Vector3Int)
+  fullName: GrandmaGreen.Garden.GardenManager.SetFertilization(System.Int32, Vector3Int)
+  nameWithType: GardenManager.SetFertilization(Int32, Vector3Int)
+- uid: GrandmaGreen.Garden.GardenManager.SetFertilization*
+  name: SetFertilization
+  href: api/GrandmaGreen.Garden.GardenManager.html#GrandmaGreen_Garden_GardenManager_SetFertilization_
+  commentId: Overload:GrandmaGreen.Garden.GardenManager.SetFertilization
+  isSpec: "True"
+  fullName: GrandmaGreen.Garden.GardenManager.SetFertilization
+  nameWithType: GardenManager.SetFertilization
+- uid: GrandmaGreen.Garden.GardenManager.UpdateGrowthStage(System.Int32,Vector3Int)
+  name: UpdateGrowthStage(Int32, Vector3Int)
+  href: api/GrandmaGreen.Garden.GardenManager.html#GrandmaGreen_Garden_GardenManager_UpdateGrowthStage_System_Int32_Vector3Int_
+  commentId: M:GrandmaGreen.Garden.GardenManager.UpdateGrowthStage(System.Int32,Vector3Int)
+  fullName: GrandmaGreen.Garden.GardenManager.UpdateGrowthStage(System.Int32, Vector3Int)
+  nameWithType: GardenManager.UpdateGrowthStage(Int32, Vector3Int)
+- uid: GrandmaGreen.Garden.GardenManager.UpdateGrowthStage*
+  name: UpdateGrowthStage
+  href: api/GrandmaGreen.Garden.GardenManager.html#GrandmaGreen_Garden_GardenManager_UpdateGrowthStage_
+  commentId: Overload:GrandmaGreen.Garden.GardenManager.UpdateGrowthStage
+  isSpec: "True"
+  fullName: GrandmaGreen.Garden.GardenManager.UpdateGrowthStage
+  nameWithType: GardenManager.UpdateGrowthStage
+- uid: GrandmaGreen.Garden.GardenManager.UpdateWaterStage(System.Int32,Vector3Int)
+  name: UpdateWaterStage(Int32, Vector3Int)
+  href: api/GrandmaGreen.Garden.GardenManager.html#GrandmaGreen_Garden_GardenManager_UpdateWaterStage_System_Int32_Vector3Int_
+  commentId: M:GrandmaGreen.Garden.GardenManager.UpdateWaterStage(System.Int32,Vector3Int)
+  fullName: GrandmaGreen.Garden.GardenManager.UpdateWaterStage(System.Int32, Vector3Int)
+  nameWithType: GardenManager.UpdateWaterStage(Int32, Vector3Int)
+- uid: GrandmaGreen.Garden.GardenManager.UpdateWaterStage*
+  name: UpdateWaterStage
+  href: api/GrandmaGreen.Garden.GardenManager.html#GrandmaGreen_Garden_GardenManager_UpdateWaterStage_
+  commentId: Overload:GrandmaGreen.Garden.GardenManager.UpdateWaterStage
+  isSpec: "True"
+  fullName: GrandmaGreen.Garden.GardenManager.UpdateWaterStage
+  nameWithType: GardenManager.UpdateWaterStage
 - uid: GrandmaGreen.Garden.GardenPlant
   name: GardenPlant
   href: api/GrandmaGreen.Garden.GardenPlant.html
@@ -4701,6 +4833,93 @@ references:
   commentId: F:GrandmaGreen.Garden.GardenPlant.traitList
   fullName: GrandmaGreen.Garden.GardenPlant.traitList
   nameWithType: GardenPlant.traitList
+- uid: GrandmaGreen.Garden.GardenSaver
+  name: GardenSaver
+  href: api/GrandmaGreen.Garden.GardenSaver.html
+  commentId: T:GrandmaGreen.Garden.GardenSaver
+  fullName: GrandmaGreen.Garden.GardenSaver
+  nameWithType: GardenSaver
+- uid: GrandmaGreen.Garden.GardenSaver.Clear
+  name: Clear()
+  href: api/GrandmaGreen.Garden.GardenSaver.html#GrandmaGreen_Garden_GardenSaver_Clear
+  commentId: M:GrandmaGreen.Garden.GardenSaver.Clear
+  fullName: GrandmaGreen.Garden.GardenSaver.Clear()
+  nameWithType: GardenSaver.Clear()
+- uid: GrandmaGreen.Garden.GardenSaver.Clear*
+  name: Clear
+  href: api/GrandmaGreen.Garden.GardenSaver.html#GrandmaGreen_Garden_GardenSaver_Clear_
+  commentId: Overload:GrandmaGreen.Garden.GardenSaver.Clear
+  isSpec: "True"
+  fullName: GrandmaGreen.Garden.GardenSaver.Clear
+  nameWithType: GardenSaver.Clear
+- uid: GrandmaGreen.Garden.GardenSaver.ContainsKey(Vector3Int)
+  name: ContainsKey(Vector3Int)
+  href: api/GrandmaGreen.Garden.GardenSaver.html#GrandmaGreen_Garden_GardenSaver_ContainsKey_Vector3Int_
+  commentId: M:GrandmaGreen.Garden.GardenSaver.ContainsKey(Vector3Int)
+  fullName: GrandmaGreen.Garden.GardenSaver.ContainsKey(Vector3Int)
+  nameWithType: GardenSaver.ContainsKey(Vector3Int)
+- uid: GrandmaGreen.Garden.GardenSaver.ContainsKey*
+  name: ContainsKey
+  href: api/GrandmaGreen.Garden.GardenSaver.html#GrandmaGreen_Garden_GardenSaver_ContainsKey_
+  commentId: Overload:GrandmaGreen.Garden.GardenSaver.ContainsKey
+  isSpec: "True"
+  fullName: GrandmaGreen.Garden.GardenSaver.ContainsKey
+  nameWithType: GardenSaver.ContainsKey
+- uid: GrandmaGreen.Garden.GardenSaver.Initialize
+  name: Initialize()
+  href: api/GrandmaGreen.Garden.GardenSaver.html#GrandmaGreen_Garden_GardenSaver_Initialize
+  commentId: M:GrandmaGreen.Garden.GardenSaver.Initialize
+  fullName: GrandmaGreen.Garden.GardenSaver.Initialize()
+  nameWithType: GardenSaver.Initialize()
+- uid: GrandmaGreen.Garden.GardenSaver.Initialize*
+  name: Initialize
+  href: api/GrandmaGreen.Garden.GardenSaver.html#GrandmaGreen_Garden_GardenSaver_Initialize_
+  commentId: Overload:GrandmaGreen.Garden.GardenSaver.Initialize
+  isSpec: "True"
+  fullName: GrandmaGreen.Garden.GardenSaver.Initialize
+  nameWithType: GardenSaver.Initialize
+- uid: GrandmaGreen.Garden.GardenSaver.Item(Vector3Int)
+  name: Item[Vector3Int]
+  href: api/GrandmaGreen.Garden.GardenSaver.html#GrandmaGreen_Garden_GardenSaver_Item_Vector3Int_
+  commentId: P:GrandmaGreen.Garden.GardenSaver.Item(Vector3Int)
+  name.vb: Item(Vector3Int)
+  fullName: GrandmaGreen.Garden.GardenSaver.Item[Vector3Int]
+  fullName.vb: GrandmaGreen.Garden.GardenSaver.Item(Vector3Int)
+  nameWithType: GardenSaver.Item[Vector3Int]
+  nameWithType.vb: GardenSaver.Item(Vector3Int)
+- uid: GrandmaGreen.Garden.GardenSaver.Item*
+  name: Item
+  href: api/GrandmaGreen.Garden.GardenSaver.html#GrandmaGreen_Garden_GardenSaver_Item_
+  commentId: Overload:GrandmaGreen.Garden.GardenSaver.Item
+  isSpec: "True"
+  fullName: GrandmaGreen.Garden.GardenSaver.Item
+  nameWithType: GardenSaver.Item
+- uid: GrandmaGreen.Garden.GardenSaver.Remove(Vector3Int)
+  name: Remove(Vector3Int)
+  href: api/GrandmaGreen.Garden.GardenSaver.html#GrandmaGreen_Garden_GardenSaver_Remove_Vector3Int_
+  commentId: M:GrandmaGreen.Garden.GardenSaver.Remove(Vector3Int)
+  fullName: GrandmaGreen.Garden.GardenSaver.Remove(Vector3Int)
+  nameWithType: GardenSaver.Remove(Vector3Int)
+- uid: GrandmaGreen.Garden.GardenSaver.Remove*
+  name: Remove
+  href: api/GrandmaGreen.Garden.GardenSaver.html#GrandmaGreen_Garden_GardenSaver_Remove_
+  commentId: Overload:GrandmaGreen.Garden.GardenSaver.Remove
+  isSpec: "True"
+  fullName: GrandmaGreen.Garden.GardenSaver.Remove
+  nameWithType: GardenSaver.Remove
+- uid: GrandmaGreen.Garden.GardenSaver.Values
+  name: Values()
+  href: api/GrandmaGreen.Garden.GardenSaver.html#GrandmaGreen_Garden_GardenSaver_Values
+  commentId: M:GrandmaGreen.Garden.GardenSaver.Values
+  fullName: GrandmaGreen.Garden.GardenSaver.Values()
+  nameWithType: GardenSaver.Values()
+- uid: GrandmaGreen.Garden.GardenSaver.Values*
+  name: Values
+  href: api/GrandmaGreen.Garden.GardenSaver.html#GrandmaGreen_Garden_GardenSaver_Values_
+  commentId: Overload:GrandmaGreen.Garden.GardenSaver.Values
+  isSpec: "True"
+  fullName: GrandmaGreen.Garden.GardenSaver.Values
+  nameWithType: GardenSaver.Values
 - uid: GrandmaGreen.Garden.GardenToolSet
   name: GardenToolSet
   href: api/GrandmaGreen.Garden.GardenToolSet.html
@@ -4813,30 +5032,6 @@ references:
   commentId: F:GrandmaGreen.Garden.GridUI.toolData
   fullName: GrandmaGreen.Garden.GridUI.toolData
   nameWithType: GridUI.toolData
-- uid: GrandmaGreen.Garden.GrowthEvent
-  name: GrowthEvent
-  href: api/GrandmaGreen.Garden.GrowthEvent.html
-  commentId: T:GrandmaGreen.Garden.GrowthEvent
-  fullName: GrandmaGreen.Garden.GrowthEvent
-  nameWithType: GrowthEvent
-- uid: GrandmaGreen.Garden.GrowthEvent.areaIndex
-  name: areaIndex
-  href: api/GrandmaGreen.Garden.GrowthEvent.html#GrandmaGreen_Garden_GrowthEvent_areaIndex
-  commentId: F:GrandmaGreen.Garden.GrowthEvent.areaIndex
-  fullName: GrandmaGreen.Garden.GrowthEvent.areaIndex
-  nameWithType: GrowthEvent.areaIndex
-- uid: GrandmaGreen.Garden.GrowthEvent.cell
-  name: cell
-  href: api/GrandmaGreen.Garden.GrowthEvent.html#GrandmaGreen_Garden_GrowthEvent_cell
-  commentId: F:GrandmaGreen.Garden.GrowthEvent.cell
-  fullName: GrandmaGreen.Garden.GrowthEvent.cell
-  nameWithType: GrowthEvent.cell
-- uid: GrandmaGreen.Garden.GrowthEvent.growthTime
-  name: growthTime
-  href: api/GrandmaGreen.Garden.GrowthEvent.html#GrandmaGreen_Garden_GrowthEvent_growthTime
-  commentId: F:GrandmaGreen.Garden.GrowthEvent.growthTime
-  fullName: GrandmaGreen.Garden.GrowthEvent.growthTime
-  nameWithType: GrowthEvent.growthTime
 - uid: GrandmaGreen.Garden.ITraitData
   name: ITraitData
   href: api/GrandmaGreen.Garden.ITraitData.html
@@ -4969,12 +5164,6 @@ references:
   commentId: F:GrandmaGreen.Garden.MoveToActionUI.toolData
   fullName: GrandmaGreen.Garden.MoveToActionUI.toolData
   nameWithType: MoveToActionUI.toolData
-- uid: GrandmaGreen.Garden.PlantInteractable
-  name: PlantInteractable
-  href: api/GrandmaGreen.Garden.PlantInteractable.html
-  commentId: T:GrandmaGreen.Garden.PlantInteractable
-  fullName: GrandmaGreen.Garden.PlantInteractable
-  nameWithType: PlantInteractable
 - uid: GrandmaGreen.Garden.PlantState
   name: PlantState
   href: api/GrandmaGreen.Garden.PlantState.html
@@ -5029,220 +5218,6 @@ references:
   commentId: F:GrandmaGreen.Garden.PlantState.waterTimer
   fullName: GrandmaGreen.Garden.PlantState.waterTimer
   nameWithType: PlantState.waterTimer
-- uid: GrandmaGreen.Garden.PlantStateManager
-  name: PlantStateManager
-  href: api/GrandmaGreen.Garden.PlantStateManager.html
-  commentId: T:GrandmaGreen.Garden.PlantStateManager
-  fullName: GrandmaGreen.Garden.PlantStateManager
-  nameWithType: PlantStateManager
-- uid: GrandmaGreen.Garden.PlantStateManager.ClearGarden(System.Int32)
-  name: ClearGarden(Int32)
-  href: api/GrandmaGreen.Garden.PlantStateManager.html#GrandmaGreen_Garden_PlantStateManager_ClearGarden_System_Int32_
-  commentId: M:GrandmaGreen.Garden.PlantStateManager.ClearGarden(System.Int32)
-  fullName: GrandmaGreen.Garden.PlantStateManager.ClearGarden(System.Int32)
-  nameWithType: PlantStateManager.ClearGarden(Int32)
-- uid: GrandmaGreen.Garden.PlantStateManager.ClearGarden*
-  name: ClearGarden
-  href: api/GrandmaGreen.Garden.PlantStateManager.html#GrandmaGreen_Garden_PlantStateManager_ClearGarden_
-  commentId: Overload:GrandmaGreen.Garden.PlantStateManager.ClearGarden
-  isSpec: "True"
-  fullName: GrandmaGreen.Garden.PlantStateManager.ClearGarden
-  nameWithType: PlantStateManager.ClearGarden
-- uid: GrandmaGreen.Garden.PlantStateManager.CreatePlant(PlantId,System.Int32,Vector3Int)
-  name: CreatePlant(PlantId, Int32, Vector3Int)
-  href: api/GrandmaGreen.Garden.PlantStateManager.html#GrandmaGreen_Garden_PlantStateManager_CreatePlant_PlantId_System_Int32_Vector3Int_
-  commentId: M:GrandmaGreen.Garden.PlantStateManager.CreatePlant(PlantId,System.Int32,Vector3Int)
-  fullName: GrandmaGreen.Garden.PlantStateManager.CreatePlant(PlantId, System.Int32, Vector3Int)
-  nameWithType: PlantStateManager.CreatePlant(PlantId, Int32, Vector3Int)
-- uid: GrandmaGreen.Garden.PlantStateManager.CreatePlant*
-  name: CreatePlant
-  href: api/GrandmaGreen.Garden.PlantStateManager.html#GrandmaGreen_Garden_PlantStateManager_CreatePlant_
-  commentId: Overload:GrandmaGreen.Garden.PlantStateManager.CreatePlant
-  isSpec: "True"
-  fullName: GrandmaGreen.Garden.PlantStateManager.CreatePlant
-  nameWithType: PlantStateManager.CreatePlant
-- uid: GrandmaGreen.Garden.PlantStateManager.DestroyPlant(System.Int32,Vector3Int)
-  name: DestroyPlant(Int32, Vector3Int)
-  href: api/GrandmaGreen.Garden.PlantStateManager.html#GrandmaGreen_Garden_PlantStateManager_DestroyPlant_System_Int32_Vector3Int_
-  commentId: M:GrandmaGreen.Garden.PlantStateManager.DestroyPlant(System.Int32,Vector3Int)
-  fullName: GrandmaGreen.Garden.PlantStateManager.DestroyPlant(System.Int32, Vector3Int)
-  nameWithType: PlantStateManager.DestroyPlant(Int32, Vector3Int)
-- uid: GrandmaGreen.Garden.PlantStateManager.DestroyPlant*
-  name: DestroyPlant
-  href: api/GrandmaGreen.Garden.PlantStateManager.html#GrandmaGreen_Garden_PlantStateManager_DestroyPlant_
-  commentId: Overload:GrandmaGreen.Garden.PlantStateManager.DestroyPlant
-  isSpec: "True"
-  fullName: GrandmaGreen.Garden.PlantStateManager.DestroyPlant
-  nameWithType: PlantStateManager.DestroyPlant
-- uid: GrandmaGreen.Garden.PlantStateManager.FireGrowthEvent
-  name: FireGrowthEvent()
-  href: api/GrandmaGreen.Garden.PlantStateManager.html#GrandmaGreen_Garden_PlantStateManager_FireGrowthEvent
-  commentId: M:GrandmaGreen.Garden.PlantStateManager.FireGrowthEvent
-  fullName: GrandmaGreen.Garden.PlantStateManager.FireGrowthEvent()
-  nameWithType: PlantStateManager.FireGrowthEvent()
-- uid: GrandmaGreen.Garden.PlantStateManager.FireGrowthEvent*
-  name: FireGrowthEvent
-  href: api/GrandmaGreen.Garden.PlantStateManager.html#GrandmaGreen_Garden_PlantStateManager_FireGrowthEvent_
-  commentId: Overload:GrandmaGreen.Garden.PlantStateManager.FireGrowthEvent
-  isSpec: "True"
-  fullName: GrandmaGreen.Garden.PlantStateManager.FireGrowthEvent
-  nameWithType: PlantStateManager.FireGrowthEvent
-- uid: GrandmaGreen.Garden.PlantStateManager.GetGrowthStage(System.Int32,Vector3Int)
-  name: GetGrowthStage(Int32, Vector3Int)
-  href: api/GrandmaGreen.Garden.PlantStateManager.html#GrandmaGreen_Garden_PlantStateManager_GetGrowthStage_System_Int32_Vector3Int_
-  commentId: M:GrandmaGreen.Garden.PlantStateManager.GetGrowthStage(System.Int32,Vector3Int)
-  fullName: GrandmaGreen.Garden.PlantStateManager.GetGrowthStage(System.Int32, Vector3Int)
-  nameWithType: PlantStateManager.GetGrowthStage(Int32, Vector3Int)
-- uid: GrandmaGreen.Garden.PlantStateManager.GetGrowthStage*
-  name: GetGrowthStage
-  href: api/GrandmaGreen.Garden.PlantStateManager.html#GrandmaGreen_Garden_PlantStateManager_GetGrowthStage_
-  commentId: Overload:GrandmaGreen.Garden.PlantStateManager.GetGrowthStage
-  isSpec: "True"
-  fullName: GrandmaGreen.Garden.PlantStateManager.GetGrowthStage
-  nameWithType: PlantStateManager.GetGrowthStage
-- uid: GrandmaGreen.Garden.PlantStateManager.GetPlant(System.Int32,Vector3Int)
-  name: GetPlant(Int32, Vector3Int)
-  href: api/GrandmaGreen.Garden.PlantStateManager.html#GrandmaGreen_Garden_PlantStateManager_GetPlant_System_Int32_Vector3Int_
-  commentId: M:GrandmaGreen.Garden.PlantStateManager.GetPlant(System.Int32,Vector3Int)
-  fullName: GrandmaGreen.Garden.PlantStateManager.GetPlant(System.Int32, Vector3Int)
-  nameWithType: PlantStateManager.GetPlant(Int32, Vector3Int)
-- uid: GrandmaGreen.Garden.PlantStateManager.GetPlant*
-  name: GetPlant
-  href: api/GrandmaGreen.Garden.PlantStateManager.html#GrandmaGreen_Garden_PlantStateManager_GetPlant_
-  commentId: Overload:GrandmaGreen.Garden.PlantStateManager.GetPlant
-  isSpec: "True"
-  fullName: GrandmaGreen.Garden.PlantStateManager.GetPlant
-  nameWithType: PlantStateManager.GetPlant
-- uid: GrandmaGreen.Garden.PlantStateManager.GetPlants(System.Int32)
-  name: GetPlants(Int32)
-  href: api/GrandmaGreen.Garden.PlantStateManager.html#GrandmaGreen_Garden_PlantStateManager_GetPlants_System_Int32_
-  commentId: M:GrandmaGreen.Garden.PlantStateManager.GetPlants(System.Int32)
-  fullName: GrandmaGreen.Garden.PlantStateManager.GetPlants(System.Int32)
-  nameWithType: PlantStateManager.GetPlants(Int32)
-- uid: GrandmaGreen.Garden.PlantStateManager.GetPlants*
-  name: GetPlants
-  href: api/GrandmaGreen.Garden.PlantStateManager.html#GrandmaGreen_Garden_PlantStateManager_GetPlants_
-  commentId: Overload:GrandmaGreen.Garden.PlantStateManager.GetPlants
-  isSpec: "True"
-  fullName: GrandmaGreen.Garden.PlantStateManager.GetPlants
-  nameWithType: PlantStateManager.GetPlants
-- uid: GrandmaGreen.Garden.PlantStateManager.GetPlantType(System.Int32,Vector3Int)
-  name: GetPlantType(Int32, Vector3Int)
-  href: api/GrandmaGreen.Garden.PlantStateManager.html#GrandmaGreen_Garden_PlantStateManager_GetPlantType_System_Int32_Vector3Int_
-  commentId: M:GrandmaGreen.Garden.PlantStateManager.GetPlantType(System.Int32,Vector3Int)
-  fullName: GrandmaGreen.Garden.PlantStateManager.GetPlantType(System.Int32, Vector3Int)
-  nameWithType: PlantStateManager.GetPlantType(Int32, Vector3Int)
-- uid: GrandmaGreen.Garden.PlantStateManager.GetPlantType*
-  name: GetPlantType
-  href: api/GrandmaGreen.Garden.PlantStateManager.html#GrandmaGreen_Garden_PlantStateManager_GetPlantType_
-  commentId: Overload:GrandmaGreen.Garden.PlantStateManager.GetPlantType
-  isSpec: "True"
-  fullName: GrandmaGreen.Garden.PlantStateManager.GetPlantType
-  nameWithType: PlantStateManager.GetPlantType
-- uid: GrandmaGreen.Garden.PlantStateManager.Initialize
-  name: Initialize()
-  href: api/GrandmaGreen.Garden.PlantStateManager.html#GrandmaGreen_Garden_PlantStateManager_Initialize
-  commentId: M:GrandmaGreen.Garden.PlantStateManager.Initialize
-  fullName: GrandmaGreen.Garden.PlantStateManager.Initialize()
-  nameWithType: PlantStateManager.Initialize()
-- uid: GrandmaGreen.Garden.PlantStateManager.Initialize*
-  name: Initialize
-  href: api/GrandmaGreen.Garden.PlantStateManager.html#GrandmaGreen_Garden_PlantStateManager_Initialize_
-  commentId: Overload:GrandmaGreen.Garden.PlantStateManager.Initialize
-  isSpec: "True"
-  fullName: GrandmaGreen.Garden.PlantStateManager.Initialize
-  nameWithType: PlantStateManager.Initialize
-- uid: GrandmaGreen.Garden.PlantStateManager.InsertGrowthEvent
-  name: InsertGrowthEvent()
-  href: api/GrandmaGreen.Garden.PlantStateManager.html#GrandmaGreen_Garden_PlantStateManager_InsertGrowthEvent
-  commentId: M:GrandmaGreen.Garden.PlantStateManager.InsertGrowthEvent
-  fullName: GrandmaGreen.Garden.PlantStateManager.InsertGrowthEvent()
-  nameWithType: PlantStateManager.InsertGrowthEvent()
-- uid: GrandmaGreen.Garden.PlantStateManager.InsertGrowthEvent*
-  name: InsertGrowthEvent
-  href: api/GrandmaGreen.Garden.PlantStateManager.html#GrandmaGreen_Garden_PlantStateManager_InsertGrowthEvent_
-  commentId: Overload:GrandmaGreen.Garden.PlantStateManager.InsertGrowthEvent
-  isSpec: "True"
-  fullName: GrandmaGreen.Garden.PlantStateManager.InsertGrowthEvent
-  nameWithType: PlantStateManager.InsertGrowthEvent
-- uid: GrandmaGreen.Garden.PlantStateManager.IsEmpty(System.Int32,Vector3Int)
-  name: IsEmpty(Int32, Vector3Int)
-  href: api/GrandmaGreen.Garden.PlantStateManager.html#GrandmaGreen_Garden_PlantStateManager_IsEmpty_System_Int32_Vector3Int_
-  commentId: M:GrandmaGreen.Garden.PlantStateManager.IsEmpty(System.Int32,Vector3Int)
-  fullName: GrandmaGreen.Garden.PlantStateManager.IsEmpty(System.Int32, Vector3Int)
-  nameWithType: PlantStateManager.IsEmpty(Int32, Vector3Int)
-- uid: GrandmaGreen.Garden.PlantStateManager.IsEmpty*
-  name: IsEmpty
-  href: api/GrandmaGreen.Garden.PlantStateManager.html#GrandmaGreen_Garden_PlantStateManager_IsEmpty_
-  commentId: Overload:GrandmaGreen.Garden.PlantStateManager.IsEmpty
-  isSpec: "True"
-  fullName: GrandmaGreen.Garden.PlantStateManager.IsEmpty
-  nameWithType: PlantStateManager.IsEmpty
-- uid: GrandmaGreen.Garden.PlantStateManager.NumSeedDrops(System.Int32,Vector3Int)
-  name: NumSeedDrops(Int32, Vector3Int)
-  href: api/GrandmaGreen.Garden.PlantStateManager.html#GrandmaGreen_Garden_PlantStateManager_NumSeedDrops_System_Int32_Vector3Int_
-  commentId: M:GrandmaGreen.Garden.PlantStateManager.NumSeedDrops(System.Int32,Vector3Int)
-  fullName: GrandmaGreen.Garden.PlantStateManager.NumSeedDrops(System.Int32, Vector3Int)
-  nameWithType: PlantStateManager.NumSeedDrops(Int32, Vector3Int)
-- uid: GrandmaGreen.Garden.PlantStateManager.NumSeedDrops*
-  name: NumSeedDrops
-  href: api/GrandmaGreen.Garden.PlantStateManager.html#GrandmaGreen_Garden_PlantStateManager_NumSeedDrops_
-  commentId: Overload:GrandmaGreen.Garden.PlantStateManager.NumSeedDrops
-  isSpec: "True"
-  fullName: GrandmaGreen.Garden.PlantStateManager.NumSeedDrops
-  nameWithType: PlantStateManager.NumSeedDrops
-- uid: GrandmaGreen.Garden.PlantStateManager.RegisterGarden(System.Int32)
-  name: RegisterGarden(Int32)
-  href: api/GrandmaGreen.Garden.PlantStateManager.html#GrandmaGreen_Garden_PlantStateManager_RegisterGarden_System_Int32_
-  commentId: M:GrandmaGreen.Garden.PlantStateManager.RegisterGarden(System.Int32)
-  fullName: GrandmaGreen.Garden.PlantStateManager.RegisterGarden(System.Int32)
-  nameWithType: PlantStateManager.RegisterGarden(Int32)
-- uid: GrandmaGreen.Garden.PlantStateManager.RegisterGarden*
-  name: RegisterGarden
-  href: api/GrandmaGreen.Garden.PlantStateManager.html#GrandmaGreen_Garden_PlantStateManager_RegisterGarden_
-  commentId: Overload:GrandmaGreen.Garden.PlantStateManager.RegisterGarden
-  isSpec: "True"
-  fullName: GrandmaGreen.Garden.PlantStateManager.RegisterGarden
-  nameWithType: PlantStateManager.RegisterGarden
-- uid: GrandmaGreen.Garden.PlantStateManager.SetFertilization(System.Int32,Vector3Int)
-  name: SetFertilization(Int32, Vector3Int)
-  href: api/GrandmaGreen.Garden.PlantStateManager.html#GrandmaGreen_Garden_PlantStateManager_SetFertilization_System_Int32_Vector3Int_
-  commentId: M:GrandmaGreen.Garden.PlantStateManager.SetFertilization(System.Int32,Vector3Int)
-  fullName: GrandmaGreen.Garden.PlantStateManager.SetFertilization(System.Int32, Vector3Int)
-  nameWithType: PlantStateManager.SetFertilization(Int32, Vector3Int)
-- uid: GrandmaGreen.Garden.PlantStateManager.SetFertilization*
-  name: SetFertilization
-  href: api/GrandmaGreen.Garden.PlantStateManager.html#GrandmaGreen_Garden_PlantStateManager_SetFertilization_
-  commentId: Overload:GrandmaGreen.Garden.PlantStateManager.SetFertilization
-  isSpec: "True"
-  fullName: GrandmaGreen.Garden.PlantStateManager.SetFertilization
-  nameWithType: PlantStateManager.SetFertilization
-- uid: GrandmaGreen.Garden.PlantStateManager.UpdateGrowthStage(System.Int32,Vector3Int)
-  name: UpdateGrowthStage(Int32, Vector3Int)
-  href: api/GrandmaGreen.Garden.PlantStateManager.html#GrandmaGreen_Garden_PlantStateManager_UpdateGrowthStage_System_Int32_Vector3Int_
-  commentId: M:GrandmaGreen.Garden.PlantStateManager.UpdateGrowthStage(System.Int32,Vector3Int)
-  fullName: GrandmaGreen.Garden.PlantStateManager.UpdateGrowthStage(System.Int32, Vector3Int)
-  nameWithType: PlantStateManager.UpdateGrowthStage(Int32, Vector3Int)
-- uid: GrandmaGreen.Garden.PlantStateManager.UpdateGrowthStage*
-  name: UpdateGrowthStage
-  href: api/GrandmaGreen.Garden.PlantStateManager.html#GrandmaGreen_Garden_PlantStateManager_UpdateGrowthStage_
-  commentId: Overload:GrandmaGreen.Garden.PlantStateManager.UpdateGrowthStage
-  isSpec: "True"
-  fullName: GrandmaGreen.Garden.PlantStateManager.UpdateGrowthStage
-  nameWithType: PlantStateManager.UpdateGrowthStage
-- uid: GrandmaGreen.Garden.PlantStateManager.UpdateWaterStage(System.Int32,Vector3Int)
-  name: UpdateWaterStage(Int32, Vector3Int)
-  href: api/GrandmaGreen.Garden.PlantStateManager.html#GrandmaGreen_Garden_PlantStateManager_UpdateWaterStage_System_Int32_Vector3Int_
-  commentId: M:GrandmaGreen.Garden.PlantStateManager.UpdateWaterStage(System.Int32,Vector3Int)
-  fullName: GrandmaGreen.Garden.PlantStateManager.UpdateWaterStage(System.Int32, Vector3Int)
-  nameWithType: PlantStateManager.UpdateWaterStage(Int32, Vector3Int)
-- uid: GrandmaGreen.Garden.PlantStateManager.UpdateWaterStage*
-  name: UpdateWaterStage
-  href: api/GrandmaGreen.Garden.PlantStateManager.html#GrandmaGreen_Garden_PlantStateManager_UpdateWaterStage_
-  commentId: Overload:GrandmaGreen.Garden.PlantStateManager.UpdateWaterStage
-  isSpec: "True"
-  fullName: GrandmaGreen.Garden.PlantStateManager.UpdateWaterStage
-  nameWithType: PlantStateManager.UpdateWaterStage
 - uid: GrandmaGreen.Garden.PlayerToolData
   name: PlayerToolData
   href: api/GrandmaGreen.Garden.PlayerToolData.html
