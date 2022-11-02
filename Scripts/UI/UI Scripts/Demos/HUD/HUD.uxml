@@ -1,19 +1,19 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/_GrandmaGreen/Scripts/UI/UI%20Scripts/StyleSheets/HUDStyleSheet.uss?fileID=7433441132597879392&amp;guid=fb47af834b15b44e59bcc04fdcbf92c5&amp;type=3#HUDStyleSheet" />
     <ui:VisualElement name="HUD-element" picking-mode="Ignore" style="flex-grow: 1; height: 1170px; justify-content: space-between; align-items: stretch;">
-        <ui:VisualElement name="draggable" style="width: 150px; height: 50px; border-left-width: 2px; border-right-width: 2px; border-top-width: 2px; border-bottom-width: 2px; border-left-color: rgb(0, 0, 0); border-right-color: rgb(0, 0, 0); border-top-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0); position: absolute; background-color: rgba(255, 198, 198, 255);">
+        <ui:VisualElement name="draggable" style="width: 150px; height: 50px; border-left-width: 2px; border-right-width: 2px; border-top-width: 2px; border-bottom-width: 2px; border-left-color: rgb(0, 0, 0); border-right-color: rgb(0, 0, 0); border-top-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0); position: absolute; background-color: rgb(255, 198, 198);">
             <ui:Label tabindex="-1" text="Drag me!" display-tooltip-when-elided="true" name="text" style="font-size: 30px;" />
         </ui:VisualElement>
-        <ui:VisualElement picking-mode="Ignore" name="screen-top" style="flex-direction: row; justify-content: space-between; padding-left: 5%; padding-right: 5%; height: 26%; align-items: flex-start; padding-top: 2.5%;">
-            <ui:GroupBox name="left-content" style="height: 100%; width: 20%; flex-direction: column; justify-content: flex-start; align-items: flex-start; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0;">
-                <ui:GroupBox name="currency-group" class="info-content-jar info-content">
-                    <ui:VisualElement class="info-border">
+        <ui:VisualElement picking-mode="Ignore" name="screen-top" style="flex-direction: row; justify-content: space-between; padding-left: 5%; padding-right: 5%; height: 20%; align-items: flex-start; padding-top: 2.5%;">
+            <ui:GroupBox name="left-content" style="height: 100%; width: 10%; flex-direction: column; justify-content: space-around; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0;">
+                <ui:GroupBox name="currency-group" class="info-content-jar info-content" style="width: 100%;">
+                    <ui:VisualElement class="info-border" style="width: 100%;">
                         <ui:VisualElement class="icon-test general-icon info-icon" style="background-image: url(&apos;project://database/Assets/_GrandmaGreen/Art/UI/Icons/HUD/UI_HUD_Gold%201.png?fileID=2800000&amp;guid=a905f87446937e343bfa7472f3e2bb77&amp;type=3#UI_HUD_Gold 1&apos;);" />
                         <ui:Label tabindex="-1" text="100" display-tooltip-when-elided="true" name="currency-text" class="info-text" />
                     </ui:VisualElement>
                 </ui:GroupBox>
                 <ui:GroupBox name="fertilizer-group" class="info-content-jar info-content">
-                    <ui:VisualElement class="info-border">
+                    <ui:VisualElement class="info-border" style="width: 100%;">
                         <ui:VisualElement class="general-icon info-icon" style="background-color: rgba(56, 56, 56, 0); align-items: center; justify-content: flex-start; background-image: url(&apos;project://database/Assets/_GrandmaGreen/Art/UI/Icons/HUD/UI_HUD_Fertilizer%201.png?fileID=2800000&amp;guid=678c215b08dc99c4ea71e479a214f960&amp;type=3#UI_HUD_Fertilizer 1&apos;);" />
                         <ui:Label tabindex="-1" text="100" display-tooltip-when-elided="true" name="fertilizer-text" class="info-text" />
                     </ui:VisualElement>

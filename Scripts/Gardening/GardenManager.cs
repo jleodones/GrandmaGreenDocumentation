@@ -1,5 +1,5 @@
-using System.Collections.Generic;
 using GrandmaGreen.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace GrandmaGreen.Garden
@@ -23,66 +23,30 @@ namespace GrandmaGreen.Garden
         public bool isFertilized;
     }
 
-    [System.Serializable]
-    public struct GrowthEvent
-    {
-        public int growthTime;
-        public int areaIndex;
-        public Vector3Int cell;
-    }
-
-    [CreateAssetMenu(menuName = "GrandmaGreen/Garden/GlobalPlantState")]
-    public class PlantStateManager : ScriptableObject
+    [CreateAssetMenu(menuName = "GrandmaGreen/Garden/GardenManager")]
+    public class GardenManager : ScriptableObject
     {
         [SerializeField]
         CollectionsSO collection;
 
-        private Dictionary<Vector3Int, PlantState>[] plantLookup;
-
         [SerializeField]
-        List<GrowthEvent> growthEventQueue;
+        GardenSaver[] plantLookup;
 
         [SerializeField]
         Timer timer;
 
-        private void InsertGrowthEvent(GrowthEvent item)
-        {
-            if (growthEventQueue.Count == 0)
-            {
-                growthEventQueue.Add(item);
-            }
-            else if (item.growthTime > growthEventQueue[^1].growthTime)
-            {
-                growthEventQueue.Add(item);
-            }
-            else if (item.growthTime < growthEventQueue[0].growthTime)
-            {
-                growthEventQueue.Insert(0, item);
-            }
-            else
-            {
-                int index = growthEventQueue.BinarySearch(
-                    item, Comparer<GrowthEvent>.Create((x, y)
-                    => x.growthTime.CompareTo(y.growthTime)));
-                index = index < 0 ? ~index : index;
-                growthEventQueue.Insert(index, item);
-            }
-        }
-
         public void Initialize()
         {
-            plantLookup = new Dictionary<Vector3Int, PlantState>[5];
-            growthEventQueue = new List<GrowthEvent>();
         }
 
         public void RegisterGarden(int areaIndex)
         {
-            plantLookup[areaIndex] = new Dictionary<Vector3Int, PlantState>();
+            plantLookup[areaIndex].Initialize();
         }
 
         public void ClearGarden(int areaIndex)
         {
-            plantLookup[areaIndex] = new Dictionary<Vector3Int, PlantState>();
+            plantLookup[areaIndex].Clear();
         }
 
         public bool IsEmpty(int areaIndex, Vector3Int cell)
@@ -127,7 +91,7 @@ namespace GrandmaGreen.Garden
 
         public List<PlantState> GetPlants(int areaIndex)
         {
-            return new List<PlantState>(plantLookup[areaIndex].Values);
+            return new List<PlantState>(plantLookup[areaIndex].Values());
         }
 
         public PlantId GetPlantType(int areaIndex, Vector3Int cell)
@@ -148,13 +112,30 @@ namespace GrandmaGreen.Garden
             return -1;
         }
 
+        public void IncrementGrowthStage(int areaIndex, Vector3Int cell)
+        {
+            if (!IsEmpty(areaIndex, cell))
+            {
+                PlantState plant = GetPlant(areaIndex, cell);
+                PlantProperties p = collection.GetPlant(plant.type);
+                plantLookup[areaIndex][cell] = new PlantState
+                {
+                    growthStage = plant.growthStage < p.growthStages - 1 ?
+                        plant.growthStage + 1 : p.growthStages - 1,
+                    type = plant.type,
+                    timePlanted = plant.timePlanted,
+                    cell = plant.cell
+                };
+            }
+        }
+
         public bool UpdateGrowthStage(int areaIndex, Vector3Int cell)
         {
             PlantState plant = GetPlant(areaIndex, cell);
             int max = collection.GetPlant(plant.type).growthStages;
 
             bool canGrow = false;
-            if (!IsEmpty(areaIndex, cell) && plant.growthStage < max-1)
+            if (!IsEmpty(areaIndex, cell) && plant.growthStage < max - 1)
             {
                 PlantState updatedPlant = plant;
                 updatedPlant.growthStage = plant.growthStage + 1;
@@ -176,16 +157,16 @@ namespace GrandmaGreen.Garden
             if (!IsEmpty(areaIndex, cell))
             {
                 PlantState plant = GetPlant(areaIndex, cell);
-                int waterRequirements= collection.GetPlant(plant.type).waterPerStage;
+                int waterRequirements = collection.GetPlant(plant.type).waterPerStage;
 
-                if(plant.waterStage < waterRequirements) //&& plant.isWatered == false)
+                if (plant.waterStage < waterRequirements) //&& plant.isWatered == false)
                 {
                     PlantState updatedPlant = plant;
                     updatedPlant.waterStage = plant.waterStage + 1;
                     updatedPlant.waterTimer = 0;
                     updatedPlant.isWatered = true;
 
-                    if(updatedPlant.waterStage == waterRequirements)
+                    if (updatedPlant.waterStage == waterRequirements)
                     {
                         plantGrowth = true;
                     }
@@ -193,7 +174,7 @@ namespace GrandmaGreen.Garden
                     plantLookup[areaIndex][cell] = updatedPlant;
                 }
             }
-            
+
             return plantGrowth;
         }
 
@@ -201,11 +182,11 @@ namespace GrandmaGreen.Garden
         {
             bool fertilizeSuccessful = false;
 
-            if(!IsEmpty(areaIndex, cell))
+            if (!IsEmpty(areaIndex, cell))
             {
                 PlantState plant = GetPlant(areaIndex, cell);
 
-                if(!(plant.isFertilized))
+                if (!(plant.isFertilized))
                 {
                     PlantState updatedPlant = plant;
                     updatedPlant.isFertilized = true;
@@ -222,24 +203,13 @@ namespace GrandmaGreen.Garden
             PlantState plant = GetPlant(areaIndex, cell);
             int seedDrop = 1;
 
-            if(plant.isFertilized)
+            if (plant.isFertilized)
             {
                 seedDrop = 2;
             }
 
             return seedDrop;
         }
-
-        [ContextMenu("FireGrowthEvent")]
-        public void FireGrowthEvent()
-        {
-            EventManager.instance.HandleEVENT_PLANT_UPDATE(0, Vector3Int.zero);
-        }
-
-        [ContextMenu("InsertGrowthEvent")]
-        public void InsertGrowthEvent()
-        {
-            InsertGrowthEvent(new GrowthEvent { growthTime = (int)(10 * Random.value) });
-        }
     }
 }
+
