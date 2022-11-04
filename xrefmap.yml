@@ -4360,6 +4360,58 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Garden.GardenAreaController.Awake
   nameWithType: GardenAreaController.Awake
+- uid: GrandmaGreen.Garden.GardenAreaController.ChangeGardenTile(Vector3Int,TileData)
+  name: ChangeGardenTile(Vector3Int, TileData)
+  href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_ChangeGardenTile_Vector3Int_TileData_
+  commentId: M:GrandmaGreen.Garden.GardenAreaController.ChangeGardenTile(Vector3Int,TileData)
+  fullName: GrandmaGreen.Garden.GardenAreaController.ChangeGardenTile(Vector3Int, TileData)
+  nameWithType: GardenAreaController.ChangeGardenTile(Vector3Int, TileData)
+- uid: GrandmaGreen.Garden.GardenAreaController.ChangeGardenTile*
+  name: ChangeGardenTile
+  href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_ChangeGardenTile_
+  commentId: Overload:GrandmaGreen.Garden.GardenAreaController.ChangeGardenTile
+  isSpec: "True"
+  fullName: GrandmaGreen.Garden.GardenAreaController.ChangeGardenTile
+  nameWithType: GardenAreaController.ChangeGardenTile
+- uid: GrandmaGreen.Garden.GardenAreaController.ChangeGardenTileToGrass(Vector3Int)
+  name: ChangeGardenTileToGrass(Vector3Int)
+  href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_ChangeGardenTileToGrass_Vector3Int_
+  commentId: M:GrandmaGreen.Garden.GardenAreaController.ChangeGardenTileToGrass(Vector3Int)
+  fullName: GrandmaGreen.Garden.GardenAreaController.ChangeGardenTileToGrass(Vector3Int)
+  nameWithType: GardenAreaController.ChangeGardenTileToGrass(Vector3Int)
+- uid: GrandmaGreen.Garden.GardenAreaController.ChangeGardenTileToGrass*
+  name: ChangeGardenTileToGrass
+  href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_ChangeGardenTileToGrass_
+  commentId: Overload:GrandmaGreen.Garden.GardenAreaController.ChangeGardenTileToGrass
+  isSpec: "True"
+  fullName: GrandmaGreen.Garden.GardenAreaController.ChangeGardenTileToGrass
+  nameWithType: GardenAreaController.ChangeGardenTileToGrass
+- uid: GrandmaGreen.Garden.GardenAreaController.ChangeGardenTileToPlot_Empty(Vector3Int)
+  name: ChangeGardenTileToPlot_Empty(Vector3Int)
+  href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_ChangeGardenTileToPlot_Empty_Vector3Int_
+  commentId: M:GrandmaGreen.Garden.GardenAreaController.ChangeGardenTileToPlot_Empty(Vector3Int)
+  fullName: GrandmaGreen.Garden.GardenAreaController.ChangeGardenTileToPlot_Empty(Vector3Int)
+  nameWithType: GardenAreaController.ChangeGardenTileToPlot_Empty(Vector3Int)
+- uid: GrandmaGreen.Garden.GardenAreaController.ChangeGardenTileToPlot_Empty*
+  name: ChangeGardenTileToPlot_Empty
+  href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_ChangeGardenTileToPlot_Empty_
+  commentId: Overload:GrandmaGreen.Garden.GardenAreaController.ChangeGardenTileToPlot_Empty
+  isSpec: "True"
+  fullName: GrandmaGreen.Garden.GardenAreaController.ChangeGardenTileToPlot_Empty
+  nameWithType: GardenAreaController.ChangeGardenTileToPlot_Empty
+- uid: GrandmaGreen.Garden.GardenAreaController.ChangeGardenTileToPlot_Occupied(Vector3Int)
+  name: ChangeGardenTileToPlot_Occupied(Vector3Int)
+  href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_ChangeGardenTileToPlot_Occupied_Vector3Int_
+  commentId: M:GrandmaGreen.Garden.GardenAreaController.ChangeGardenTileToPlot_Occupied(Vector3Int)
+  fullName: GrandmaGreen.Garden.GardenAreaController.ChangeGardenTileToPlot_Occupied(Vector3Int)
+  nameWithType: GardenAreaController.ChangeGardenTileToPlot_Occupied(Vector3Int)
+- uid: GrandmaGreen.Garden.GardenAreaController.ChangeGardenTileToPlot_Occupied*
+  name: ChangeGardenTileToPlot_Occupied
+  href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_ChangeGardenTileToPlot_Occupied_
+  commentId: Overload:GrandmaGreen.Garden.GardenAreaController.ChangeGardenTileToPlot_Occupied
+  isSpec: "True"
+  fullName: GrandmaGreen.Garden.GardenAreaController.ChangeGardenTileToPlot_Occupied
+  nameWithType: GardenAreaController.ChangeGardenTileToPlot_Occupied
 - uid: GrandmaGreen.Garden.GardenAreaController.ClearPlants
   name: ClearPlants()
   href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_ClearPlants
@@ -4386,6 +4438,19 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Garden.GardenAreaController.CreatePlant
   nameWithType: GardenAreaController.CreatePlant
+- uid: GrandmaGreen.Garden.GardenAreaController.DecrementWatering(System.Int32)
+  name: DecrementWatering(Int32)
+  href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_DecrementWatering_System_Int32_
+  commentId: M:GrandmaGreen.Garden.GardenAreaController.DecrementWatering(System.Int32)
+  fullName: GrandmaGreen.Garden.GardenAreaController.DecrementWatering(System.Int32)
+  nameWithType: GardenAreaController.DecrementWatering(Int32)
+- uid: GrandmaGreen.Garden.GardenAreaController.DecrementWatering*
+  name: DecrementWatering
+  href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_DecrementWatering_
+  commentId: Overload:GrandmaGreen.Garden.GardenAreaController.DecrementWatering
+  isSpec: "True"
+  fullName: GrandmaGreen.Garden.GardenAreaController.DecrementWatering
+  nameWithType: GardenAreaController.DecrementWatering
 - uid: GrandmaGreen.Garden.GardenAreaController.DestroyPlantOnCell(Vector3Int)
   name: DestroyPlantOnCell(Vector3Int)
   href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_DestroyPlantOnCell_Vector3Int_
@@ -4412,6 +4477,12 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Garden.GardenAreaController.DestroyPlantPrefabOnCell
   nameWithType: GardenAreaController.DestroyPlantPrefabOnCell
+- uid: GrandmaGreen.Garden.GardenAreaController.DryingUpBurst
+  name: DryingUpBurst
+  href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_DryingUpBurst
+  commentId: F:GrandmaGreen.Garden.GardenAreaController.DryingUpBurst
+  fullName: GrandmaGreen.Garden.GardenAreaController.DryingUpBurst
+  nameWithType: GardenAreaController.DryingUpBurst
 - uid: GrandmaGreen.Garden.GardenAreaController.FertilizePlant(Vector3Int)
   name: FertilizePlant(Vector3Int)
   href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_FertilizePlant_Vector3Int_
@@ -4526,6 +4597,12 @@ references:
   commentId: F:GrandmaGreen.Garden.GardenAreaController.playerTools
   fullName: GrandmaGreen.Garden.GardenAreaController.playerTools
   nameWithType: GardenAreaController.playerTools
+- uid: GrandmaGreen.Garden.GardenAreaController.tileStore
+  name: tileStore
+  href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_tileStore
+  commentId: F:GrandmaGreen.Garden.GardenAreaController.tileStore
+  fullName: GrandmaGreen.Garden.GardenAreaController.tileStore
+  nameWithType: GardenAreaController.tileStore
 - uid: GrandmaGreen.Garden.GardenAreaController.UpdatePlantPrefabOnCell(PlantId,Vector3Int)
   name: UpdatePlantPrefabOnCell(PlantId, Vector3Int)
   href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_UpdatePlantPrefabOnCell_PlantId_Vector3Int_
@@ -4590,6 +4667,19 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Garden.GardenManager.CreatePlant
   nameWithType: GardenManager.CreatePlant
+- uid: GrandmaGreen.Garden.GardenManager.DecrementWaterTimer(System.Int32,Vector3Int,System.Int32)
+  name: DecrementWaterTimer(Int32, Vector3Int, Int32)
+  href: api/GrandmaGreen.Garden.GardenManager.html#GrandmaGreen_Garden_GardenManager_DecrementWaterTimer_System_Int32_Vector3Int_System_Int32_
+  commentId: M:GrandmaGreen.Garden.GardenManager.DecrementWaterTimer(System.Int32,Vector3Int,System.Int32)
+  fullName: GrandmaGreen.Garden.GardenManager.DecrementWaterTimer(System.Int32, Vector3Int, System.Int32)
+  nameWithType: GardenManager.DecrementWaterTimer(Int32, Vector3Int, Int32)
+- uid: GrandmaGreen.Garden.GardenManager.DecrementWaterTimer*
+  name: DecrementWaterTimer
+  href: api/GrandmaGreen.Garden.GardenManager.html#GrandmaGreen_Garden_GardenManager_DecrementWaterTimer_
+  commentId: Overload:GrandmaGreen.Garden.GardenManager.DecrementWaterTimer
+  isSpec: "True"
+  fullName: GrandmaGreen.Garden.GardenManager.DecrementWaterTimer
+  nameWithType: GardenManager.DecrementWaterTimer
 - uid: GrandmaGreen.Garden.GardenManager.DestroyPlant(System.Int32,Vector3Int)
   name: DestroyPlant(Int32, Vector3Int)
   href: api/GrandmaGreen.Garden.GardenManager.html#GrandmaGreen_Garden_GardenManager_DestroyPlant_System_Int32_Vector3Int_
@@ -4655,6 +4745,19 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Garden.GardenManager.GetPlantType
   nameWithType: GardenManager.GetPlantType
+- uid: GrandmaGreen.Garden.GardenManager.GetTiles(System.Int32)
+  name: GetTiles(Int32)
+  href: api/GrandmaGreen.Garden.GardenManager.html#GrandmaGreen_Garden_GardenManager_GetTiles_System_Int32_
+  commentId: M:GrandmaGreen.Garden.GardenManager.GetTiles(System.Int32)
+  fullName: GrandmaGreen.Garden.GardenManager.GetTiles(System.Int32)
+  nameWithType: GardenManager.GetTiles(Int32)
+- uid: GrandmaGreen.Garden.GardenManager.GetTiles*
+  name: GetTiles
+  href: api/GrandmaGreen.Garden.GardenManager.html#GrandmaGreen_Garden_GardenManager_GetTiles_
+  commentId: Overload:GrandmaGreen.Garden.GardenManager.GetTiles
+  isSpec: "True"
+  fullName: GrandmaGreen.Garden.GardenManager.GetTiles
+  nameWithType: GardenManager.GetTiles
 - uid: GrandmaGreen.Garden.GardenManager.IncrementGrowthStage(System.Int32,Vector3Int)
   name: IncrementGrowthStage(Int32, Vector3Int)
   href: api/GrandmaGreen.Garden.GardenManager.html#GrandmaGreen_Garden_GardenManager_IncrementGrowthStage_System_Int32_Vector3Int_
@@ -4733,6 +4836,25 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Garden.GardenManager.SetFertilization
   nameWithType: GardenManager.SetFertilization
+- uid: GrandmaGreen.Garden.GardenManager.timer
+  name: timer
+  href: api/GrandmaGreen.Garden.GardenManager.html#GrandmaGreen_Garden_GardenManager_timer
+  commentId: F:GrandmaGreen.Garden.GardenManager.timer
+  fullName: GrandmaGreen.Garden.GardenManager.timer
+  nameWithType: GardenManager.timer
+- uid: GrandmaGreen.Garden.GardenManager.UpdateGardenTile(System.Int32,Vector3Int,System.Int32)
+  name: UpdateGardenTile(Int32, Vector3Int, Int32)
+  href: api/GrandmaGreen.Garden.GardenManager.html#GrandmaGreen_Garden_GardenManager_UpdateGardenTile_System_Int32_Vector3Int_System_Int32_
+  commentId: M:GrandmaGreen.Garden.GardenManager.UpdateGardenTile(System.Int32,Vector3Int,System.Int32)
+  fullName: GrandmaGreen.Garden.GardenManager.UpdateGardenTile(System.Int32, Vector3Int, System.Int32)
+  nameWithType: GardenManager.UpdateGardenTile(Int32, Vector3Int, Int32)
+- uid: GrandmaGreen.Garden.GardenManager.UpdateGardenTile*
+  name: UpdateGardenTile
+  href: api/GrandmaGreen.Garden.GardenManager.html#GrandmaGreen_Garden_GardenManager_UpdateGardenTile_
+  commentId: Overload:GrandmaGreen.Garden.GardenManager.UpdateGardenTile
+  isSpec: "True"
+  fullName: GrandmaGreen.Garden.GardenManager.UpdateGardenTile
+  nameWithType: GardenManager.UpdateGardenTile
 - uid: GrandmaGreen.Garden.GardenManager.UpdateGrowthStage(System.Int32,Vector3Int)
   name: UpdateGrowthStage(Int32, Vector3Int)
   href: api/GrandmaGreen.Garden.GardenManager.html#GrandmaGreen_Garden_GardenManager_UpdateGrowthStage_System_Int32_Vector3Int_
@@ -4907,6 +5029,32 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Garden.GardenSaver.Remove
   nameWithType: GardenSaver.Remove
+- uid: GrandmaGreen.Garden.GardenSaver.SetTileState(GrandmaGreen.Garden.TileState)
+  name: SetTileState(TileState)
+  href: api/GrandmaGreen.Garden.GardenSaver.html#GrandmaGreen_Garden_GardenSaver_SetTileState_GrandmaGreen_Garden_TileState_
+  commentId: M:GrandmaGreen.Garden.GardenSaver.SetTileState(GrandmaGreen.Garden.TileState)
+  fullName: GrandmaGreen.Garden.GardenSaver.SetTileState(GrandmaGreen.Garden.TileState)
+  nameWithType: GardenSaver.SetTileState(TileState)
+- uid: GrandmaGreen.Garden.GardenSaver.SetTileState*
+  name: SetTileState
+  href: api/GrandmaGreen.Garden.GardenSaver.html#GrandmaGreen_Garden_GardenSaver_SetTileState_
+  commentId: Overload:GrandmaGreen.Garden.GardenSaver.SetTileState
+  isSpec: "True"
+  fullName: GrandmaGreen.Garden.GardenSaver.SetTileState
+  nameWithType: GardenSaver.SetTileState
+- uid: GrandmaGreen.Garden.GardenSaver.Tiles
+  name: Tiles()
+  href: api/GrandmaGreen.Garden.GardenSaver.html#GrandmaGreen_Garden_GardenSaver_Tiles
+  commentId: M:GrandmaGreen.Garden.GardenSaver.Tiles
+  fullName: GrandmaGreen.Garden.GardenSaver.Tiles()
+  nameWithType: GardenSaver.Tiles()
+- uid: GrandmaGreen.Garden.GardenSaver.Tiles*
+  name: Tiles
+  href: api/GrandmaGreen.Garden.GardenSaver.html#GrandmaGreen_Garden_GardenSaver_Tiles_
+  commentId: Overload:GrandmaGreen.Garden.GardenSaver.Tiles
+  isSpec: "True"
+  fullName: GrandmaGreen.Garden.GardenSaver.Tiles
+  nameWithType: GardenSaver.Tiles
 - uid: GrandmaGreen.Garden.GardenSaver.Values
   name: Values()
   href: api/GrandmaGreen.Garden.GardenSaver.html#GrandmaGreen_Garden_GardenSaver_Values
@@ -4942,12 +5090,6 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Garden.GardenToolSet.Item
   nameWithType: GardenToolSet.Item
-- uid: GrandmaGreen.Garden.GardenToolSet.tileStore
-  name: tileStore
-  href: api/GrandmaGreen.Garden.GardenToolSet.html#GrandmaGreen_Garden_GardenToolSet_tileStore
-  commentId: F:GrandmaGreen.Garden.GardenToolSet.tileStore
-  fullName: GrandmaGreen.Garden.GardenToolSet.tileStore
-  nameWithType: GardenToolSet.tileStore
 - uid: GrandmaGreen.Garden.GardenToolSet.ToolAction(GrandmaGreen.Garden.ToolActionData)
   name: ToolAction(ToolActionData)
   href: api/GrandmaGreen.Garden.GardenToolSet.html#GrandmaGreen_Garden_GardenToolSet_ToolAction_GrandmaGreen_Garden_ToolActionData_
@@ -5188,12 +5330,6 @@ references:
   commentId: F:GrandmaGreen.Garden.PlantState.isFertilized
   fullName: GrandmaGreen.Garden.PlantState.isFertilized
   nameWithType: PlantState.isFertilized
-- uid: GrandmaGreen.Garden.PlantState.isWatered
-  name: isWatered
-  href: api/GrandmaGreen.Garden.PlantState.html#GrandmaGreen_Garden_PlantState_isWatered
-  commentId: F:GrandmaGreen.Garden.PlantState.isWatered
-  fullName: GrandmaGreen.Garden.PlantState.isWatered
-  nameWithType: PlantState.isWatered
 - uid: GrandmaGreen.Garden.PlantState.timePlanted
   name: timePlanted
   href: api/GrandmaGreen.Garden.PlantState.html#GrandmaGreen_Garden_PlantState_timePlanted
@@ -5324,12 +5460,12 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Garden.PlayerToolData.SetEquippedSeed
   nameWithType: PlayerToolData.SetEquippedSeed
-- uid: GrandmaGreen.Garden.PlayerToolData.SetToolAction(TileBase,Vector3Int,GrandmaGreen.Garden.GardenAreaController)
-  name: SetToolAction(TileBase, Vector3Int, GardenAreaController)
-  href: api/GrandmaGreen.Garden.PlayerToolData.html#GrandmaGreen_Garden_PlayerToolData_SetToolAction_TileBase_Vector3Int_GrandmaGreen_Garden_GardenAreaController_
-  commentId: M:GrandmaGreen.Garden.PlayerToolData.SetToolAction(TileBase,Vector3Int,GrandmaGreen.Garden.GardenAreaController)
-  fullName: GrandmaGreen.Garden.PlayerToolData.SetToolAction(TileBase, Vector3Int, GrandmaGreen.Garden.GardenAreaController)
-  nameWithType: PlayerToolData.SetToolAction(TileBase, Vector3Int, GardenAreaController)
+- uid: GrandmaGreen.Garden.PlayerToolData.SetToolAction(TileData,Vector3Int,GrandmaGreen.Garden.GardenAreaController)
+  name: SetToolAction(TileData, Vector3Int, GardenAreaController)
+  href: api/GrandmaGreen.Garden.PlayerToolData.html#GrandmaGreen_Garden_PlayerToolData_SetToolAction_TileData_Vector3Int_GrandmaGreen_Garden_GardenAreaController_
+  commentId: M:GrandmaGreen.Garden.PlayerToolData.SetToolAction(TileData,Vector3Int,GrandmaGreen.Garden.GardenAreaController)
+  fullName: GrandmaGreen.Garden.PlayerToolData.SetToolAction(TileData, Vector3Int, GrandmaGreen.Garden.GardenAreaController)
+  nameWithType: PlayerToolData.SetToolAction(TileData, Vector3Int, GardenAreaController)
 - uid: GrandmaGreen.Garden.PlayerToolData.SetToolAction*
   name: SetToolAction
   href: api/GrandmaGreen.Garden.PlayerToolData.html#GrandmaGreen_Garden_PlayerToolData_SetToolAction_
@@ -5400,6 +5536,24 @@ references:
   commentId: T:GrandmaGreen.Garden.SizeSet
   fullName: GrandmaGreen.Garden.SizeSet
   nameWithType: SizeSet
+- uid: GrandmaGreen.Garden.TileState
+  name: TileState
+  href: api/GrandmaGreen.Garden.TileState.html
+  commentId: T:GrandmaGreen.Garden.TileState
+  fullName: GrandmaGreen.Garden.TileState
+  nameWithType: TileState
+- uid: GrandmaGreen.Garden.TileState.cell
+  name: cell
+  href: api/GrandmaGreen.Garden.TileState.html#GrandmaGreen_Garden_TileState_cell
+  commentId: F:GrandmaGreen.Garden.TileState.cell
+  fullName: GrandmaGreen.Garden.TileState.cell
+  nameWithType: TileState.cell
+- uid: GrandmaGreen.Garden.TileState.tileIndex
+  name: tileIndex
+  href: api/GrandmaGreen.Garden.TileState.html#GrandmaGreen_Garden_TileState_tileIndex
+  commentId: F:GrandmaGreen.Garden.TileState.tileIndex
+  fullName: GrandmaGreen.Garden.TileState.tileIndex
+  nameWithType: TileState.tileIndex
 - uid: GrandmaGreen.Garden.ToolActionData
   name: ToolActionData
   href: api/GrandmaGreen.Garden.ToolActionData.html
@@ -7034,19 +7188,6 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.TimeLayer.ITimeLayer.Resume
   nameWithType: ITimeLayer.Resume
-- uid: GrandmaGreen.TimeLayer.ITimeLayer.scale
-  name: scale
-  href: api/GrandmaGreen.TimeLayer.ITimeLayer.html#GrandmaGreen_TimeLayer_ITimeLayer_scale
-  commentId: P:GrandmaGreen.TimeLayer.ITimeLayer.scale
-  fullName: GrandmaGreen.TimeLayer.ITimeLayer.scale
-  nameWithType: ITimeLayer.scale
-- uid: GrandmaGreen.TimeLayer.ITimeLayer.scale*
-  name: scale
-  href: api/GrandmaGreen.TimeLayer.ITimeLayer.html#GrandmaGreen_TimeLayer_ITimeLayer_scale_
-  commentId: Overload:GrandmaGreen.TimeLayer.ITimeLayer.scale
-  isSpec: "True"
-  fullName: GrandmaGreen.TimeLayer.ITimeLayer.scale
-  nameWithType: ITimeLayer.scale
 - uid: GrandmaGreen.TimeLayer.ITimeLayer.Tick(System.Double)
   name: Tick(Double)
   href: api/GrandmaGreen.TimeLayer.ITimeLayer.html#GrandmaGreen_TimeLayer_ITimeLayer_Tick_System_Double_
@@ -7060,6 +7201,19 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.TimeLayer.ITimeLayer.Tick
   nameWithType: ITimeLayer.Tick
+- uid: GrandmaGreen.TimeLayer.ITimeLayer.tickSeconds
+  name: tickSeconds
+  href: api/GrandmaGreen.TimeLayer.ITimeLayer.html#GrandmaGreen_TimeLayer_ITimeLayer_tickSeconds
+  commentId: P:GrandmaGreen.TimeLayer.ITimeLayer.tickSeconds
+  fullName: GrandmaGreen.TimeLayer.ITimeLayer.tickSeconds
+  nameWithType: ITimeLayer.tickSeconds
+- uid: GrandmaGreen.TimeLayer.ITimeLayer.tickSeconds*
+  name: tickSeconds
+  href: api/GrandmaGreen.TimeLayer.ITimeLayer.html#GrandmaGreen_TimeLayer_ITimeLayer_tickSeconds_
+  commentId: Overload:GrandmaGreen.TimeLayer.ITimeLayer.tickSeconds
+  isSpec: "True"
+  fullName: GrandmaGreen.TimeLayer.ITimeLayer.tickSeconds
+  nameWithType: ITimeLayer.tickSeconds
 - uid: GrandmaGreen.TimeLayer.TimeLayer
   name: TimeLayer
   href: api/GrandmaGreen.TimeLayer.TimeLayer.html
@@ -7111,19 +7265,6 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.TimeLayer.TimeLayer.Resume
   nameWithType: TimeLayer.Resume
-- uid: GrandmaGreen.TimeLayer.TimeLayer.scale
-  name: scale
-  href: api/GrandmaGreen.TimeLayer.TimeLayer.html#GrandmaGreen_TimeLayer_TimeLayer_scale
-  commentId: P:GrandmaGreen.TimeLayer.TimeLayer.scale
-  fullName: GrandmaGreen.TimeLayer.TimeLayer.scale
-  nameWithType: TimeLayer.scale
-- uid: GrandmaGreen.TimeLayer.TimeLayer.scale*
-  name: scale
-  href: api/GrandmaGreen.TimeLayer.TimeLayer.html#GrandmaGreen_TimeLayer_TimeLayer_scale_
-  commentId: Overload:GrandmaGreen.TimeLayer.TimeLayer.scale
-  isSpec: "True"
-  fullName: GrandmaGreen.TimeLayer.TimeLayer.scale
-  nameWithType: TimeLayer.scale
 - uid: GrandmaGreen.TimeLayer.TimeLayer.Tick(System.Double)
   name: Tick(Double)
   href: api/GrandmaGreen.TimeLayer.TimeLayer.html#GrandmaGreen_TimeLayer_TimeLayer_Tick_System_Double_
@@ -7137,6 +7278,19 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.TimeLayer.TimeLayer.Tick
   nameWithType: TimeLayer.Tick
+- uid: GrandmaGreen.TimeLayer.TimeLayer.tickSeconds
+  name: tickSeconds
+  href: api/GrandmaGreen.TimeLayer.TimeLayer.html#GrandmaGreen_TimeLayer_TimeLayer_tickSeconds
+  commentId: P:GrandmaGreen.TimeLayer.TimeLayer.tickSeconds
+  fullName: GrandmaGreen.TimeLayer.TimeLayer.tickSeconds
+  nameWithType: TimeLayer.tickSeconds
+- uid: GrandmaGreen.TimeLayer.TimeLayer.tickSeconds*
+  name: tickSeconds
+  href: api/GrandmaGreen.TimeLayer.TimeLayer.html#GrandmaGreen_TimeLayer_TimeLayer_tickSeconds_
+  commentId: Overload:GrandmaGreen.TimeLayer.TimeLayer.tickSeconds
+  isSpec: "True"
+  fullName: GrandmaGreen.TimeLayer.TimeLayer.tickSeconds
+  nameWithType: TimeLayer.tickSeconds
 - uid: GrandmaGreen.TimeLayer.TimeLayerClock
   name: TimeLayerClock
   href: api/GrandmaGreen.TimeLayer.TimeLayerClock.html

@@ -95,6 +95,32 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public class GardenManager : ScriptableObject</code></pre>
   </div>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="GrandmaGreen_Garden_GardenManager_timer" data-uid="GrandmaGreen.Garden.GardenManager.timer">timer</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TimeLayer timer</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="GrandmaGreen.TimeLayer.TimeLayer.html">TimeLayer</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
   </h3>
   
@@ -157,6 +183,43 @@
       <tr>
         <td><span class="xref">Vector3Int</span></td>
         <td><span class="parametername">cell</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="GrandmaGreen_Garden_GardenManager_DecrementWaterTimer_" data-uid="GrandmaGreen.Garden.GardenManager.DecrementWaterTimer*"></a>
+  <h4 id="GrandmaGreen_Garden_GardenManager_DecrementWaterTimer_System_Int32_Vector3Int_System_Int32_" data-uid="GrandmaGreen.Garden.GardenManager.DecrementWaterTimer(System.Int32,Vector3Int,System.Int32)">DecrementWaterTimer(Int32, Vector3Int, Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void DecrementWaterTimer(int areaIndex, Vector3Int cell, int value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">areaIndex</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Vector3Int</span></td>
+        <td><span class="parametername">cell</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">value</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -378,6 +441,48 @@
   </table>
   
   
+  <a id="GrandmaGreen_Garden_GardenManager_GetTiles_" data-uid="GrandmaGreen.Garden.GardenManager.GetTiles*"></a>
+  <h4 id="GrandmaGreen_Garden_GardenManager_GetTiles_System_Int32_" data-uid="GrandmaGreen.Garden.GardenManager.GetTiles(System.Int32)">GetTiles(Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;TileState&gt; GetTiles(int areaIndex)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">areaIndex</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="GrandmaGreen.Garden.TileState.html">TileState</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="GrandmaGreen_Garden_GardenManager_IncrementGrowthStage_" data-uid="GrandmaGreen.Garden.GardenManager.IncrementGrowthStage*"></a>
   <h4 id="GrandmaGreen_Garden_GardenManager_IncrementGrowthStage_System_Int32_Vector3Int_" data-uid="GrandmaGreen.Garden.GardenManager.IncrementGrowthStage(System.Int32,Vector3Int)">IncrementGrowthStage(Int32, Vector3Int)</h4>
   <div class="markdown level1 summary"></div>
@@ -582,6 +687,43 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="GrandmaGreen_Garden_GardenManager_UpdateGardenTile_" data-uid="GrandmaGreen.Garden.GardenManager.UpdateGardenTile*"></a>
+  <h4 id="GrandmaGreen_Garden_GardenManager_UpdateGardenTile_System_Int32_Vector3Int_System_Int32_" data-uid="GrandmaGreen.Garden.GardenManager.UpdateGardenTile(System.Int32,Vector3Int,System.Int32)">UpdateGardenTile(Int32, Vector3Int, Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void UpdateGardenTile(int areaIndex, Vector3Int cell, int tileIndex)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">areaIndex</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Vector3Int</span></td>
+        <td><span class="parametername">cell</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">tileIndex</span></td>
         <td></td>
       </tr>
     </tbody>
