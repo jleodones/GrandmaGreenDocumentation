@@ -20,7 +20,7 @@ namespace GrandmaGreen.Entities
         public EntityPermissions permissions;
         public Animator animator;
         public ASoundContainer sfx_Footsteps;
-        public int range = 30;
+        public int range = 300;
         public float delay = 5f;
 
         [Header("Behaviour Tree")]
@@ -165,7 +165,12 @@ namespace GrandmaGreen.Entities
         {
             if (velocity.magnitude != 0)
             {
-                animator.SetInteger("DIRECTION", velocity.x < 0 ? -1 : 1);
+                //animator.SetInteger("DIRECTION", velocity.x < 0 ? -1 : 1);
+                if (velocity.x < 0) {
+                    this.gameObject.transform.localScale = new Vector3(1, 1, 1);
+                } else {
+                    this.gameObject.transform.localScale = new Vector3(-1, 1, 1);
+                }
                 animator.SetInteger("MOVEMENT", (int)Mathf.Ceil(velocity.magnitude));
             }
             else

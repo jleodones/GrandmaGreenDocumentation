@@ -1,8 +1,10 @@
 using GrandmaGreen.Collections;
 using GrandmaGreen.Entities;
+using GrandmaGreen.TimeLayer;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 namespace GrandmaGreen.Garden
 {
@@ -19,10 +21,11 @@ namespace GrandmaGreen.Garden
         [Header("Player References")]
         public PlayerToolData playerTools;
 
-        [Header("Plant Management")]
+        [Header("Garden Management")]
         public GardenManager gardenManager;
         public Dictionary<Vector3Int, GameObject> plantPrefabLookup;
         public List<PlantState> plantListDebug;
+        public TileStore tileStore;
 
         [Header("Golem Management")]
         public GolemManager golemManager;
@@ -30,13 +33,14 @@ namespace GrandmaGreen.Garden
         [Header("Temporary Effects")]
         public ParticleSystem FertilizerParticleBurst;
         public ParticleSystem WateringParticleBurst;
+        public ParticleSystem DryingUpBurst;
 
         public override void Awake()
         {
             base.Awake();
             golemManager.Initialize();
             collection.DEBUGLoadPlantProperties();
-            gardenManager.RegisterGarden(areaIndex);    
+            gardenManager.RegisterGarden(areaIndex);
         }
 
         void OnEnable()
@@ -46,6 +50,8 @@ namespace GrandmaGreen.Garden
 
             plantPrefabLookup = new Dictionary<Vector3Int, GameObject>();
             RefreshGarden();
+
+            gardenManager.timer.onTick += (x) => DecrementWatering(x);
         }
 
         void OnDisable()
@@ -76,6 +82,32 @@ namespace GrandmaGreen.Garden
             {
                 PlantUpdate(areaIndex, plant.cell);
             }
+
+            List<TileState> tileStates = gardenManager.GetTiles(areaIndex);
+            foreach (TileState tileState in tileStates)
+            {
+                tilemap.SetTile(tileState.cell, tileStore[tileState.tileIndex].tile);
+            }
+        }
+        public void ChangeGardenTile(Vector3Int position, TileData newTile)
+        {
+            tilemap.SetTile(position, newTile.tile);
+            gardenManager.UpdateGardenTile(areaIndex, position, tileStore.tileDataSet.IndexOf(newTile));
+        }
+
+        public void ChangeGardenTileToGrass(Vector3Int position)
+        {
+            ChangeGardenTile(position, tileStore[0]);
+        }
+
+        public void ChangeGardenTileToPlot_Empty(Vector3Int position)
+        {
+            ChangeGardenTile(position, tileStore[1]);
+        }
+
+        public void ChangeGardenTileToPlot_Occupied(Vector3Int position)
+        {
+            ChangeGardenTile(position, tileStore[2]);
         }
 
         public void PlacePlantPrefabOnCell(Vector3Int cell, PlantId type, int growthStage)
@@ -112,8 +144,46 @@ namespace GrandmaGreen.Garden
             }
         }
 
+        public void DecrementWatering(int value)
+        {
+            List<PlantState> plants = gardenManager.GetPlants(areaIndex);
+
+            foreach (PlantState plant in plants)
+            {
+                int waterTimerReset = collection.GetPlant(plant.type).growthTime;
+
+                if (plant.waterTimer == 0)
+                {
+                    plantPrefabLookup[plant.cell].transform.localScale = Vector3.one * 0.9f;
+                }
+                else if (plant.waterTimer == (-1 * waterTimerReset))
+                {
+                    Vector3 centerOfCell = tilemap.GetCellCenterWorld(plant.cell);
+                    Quaternion particleQuat = Quaternion.Euler(-110, 0, 0);
+                    ParticleSystem PlayParticle = Instantiate(DryingUpBurst, centerOfCell + new Vector3(0, -1, -2), particleQuat);
+
+                    plantPrefabLookup[plant.cell].transform.localScale = Vector3.one * 0.8f;
+                }
+                else if (plant.waterTimer == (-2 * waterTimerReset))
+                {
+                    gardenManager.DecrementWaterTimer(areaIndex, plant.cell, (value * -1));
+
+                    Vector3 centerOfCell = tilemap.GetCellCenterWorld(plant.cell);
+                    Quaternion particleQuat = Quaternion.Euler(-110, 0, 0);
+                    ParticleSystem PlayParticle = Instantiate(DryingUpBurst, centerOfCell + new Vector3(0, -1, -2), particleQuat);
+
+                    plantPrefabLookup[plant.cell].transform.localScale = Vector3.one * 0.6f;
+                }
+
+                //Debug.Log(plant.waterTimer);
+                gardenManager.DecrementWaterTimer(areaIndex, plant.cell, (value * -1));
+            }
+        }
+
         public void WaterPlant(Vector3Int cell)
         {
+            plantPrefabLookup[cell].transform.localScale = Vector3.one;
+
             if (gardenManager.UpdateWaterStage(areaIndex, cell))
             {
                 PlantId type = gardenManager.GetPlantType(areaIndex, cell);
@@ -190,7 +260,7 @@ namespace GrandmaGreen.Garden
         public void GardenTileSelected(Vector3Int gridPos)
         {
             playerController.QueueEntityAction(DoToolAction);
-            playerTools.SetToolAction(lastSelectedTile, lastSelectedCell, this);
+            playerTools.SetToolAction(tileStore[lastSelectedTile], lastSelectedCell, this);
         }
 
         void DoToolAction(EntityController entityController)

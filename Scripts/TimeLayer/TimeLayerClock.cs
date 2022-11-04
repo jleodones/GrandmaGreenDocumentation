@@ -48,6 +48,8 @@ namespace GrandmaGreen.TimeLayer
             }
         }
 
+        
+
         public void SaveCurrentDateTime()
         {
             m_previousSessionEndDateTime = InternetDateTime();

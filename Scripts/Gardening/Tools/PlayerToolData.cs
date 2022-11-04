@@ -79,7 +79,7 @@ namespace GrandmaGreen.Garden
 
         public void SetEquippedSeed(int plantIndex) => equippedSeed = SeedId.Tulip;
 
-        public void SetToolAction(TileBase tile, Vector3Int cell, GardenAreaController area)
+        public void SetToolAction(TileData tile, Vector3Int cell, GardenAreaController area)
         {
 
             lastToolAction = new ToolActionData()

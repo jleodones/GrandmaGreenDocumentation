@@ -9,7 +9,7 @@ namespace GrandmaGreen.Garden
     public struct ToolActionData
     {
         public ToolData tool;
-        public TileBase tile;
+        public TileData tile;
         public Vector3Int gridcell;
         public GardenAreaController area;
         public SeedId seedType;
@@ -20,7 +20,6 @@ namespace GrandmaGreen.Garden
     public class GardenToolSet : ScriptableObject
     {
         [SerializeField] List<ToolData> toolSet;
-        public TileStore tileStore;
 
         public ToolData this[int i]
         {
@@ -56,30 +55,30 @@ namespace GrandmaGreen.Garden
 
         void TrowelAction(ToolActionData action)
         {
-            if (tileStore[action.tile].plottable)
+            if (action.tile.plottable)
             {
-                action.area.tilemap.SetTile(action.gridcell, tileStore[1].tile);
+                action.area.ChangeGardenTileToPlot_Empty(action.gridcell);
                 action.tool.toolSFX[0].Play();
 
             }
-            else if (tileStore[action.tile].plantable)
+            else if (action.tile.plantable)
             {
                 // "Plot" Tile -> Grass Tile
-                action.area.tilemap.SetTile(action.gridcell, tileStore[0].tile);
+                action.area.ChangeGardenTileToGrass(action.gridcell);
                 action.tool.toolSFX[1].Play();
             }
-            else if (tileStore[action.tile].occupied)
+            else if (action.tile.occupied)
             {
                 if (action.area.HarvestPlantOnCell(action.gridcell))
                     action.tool.toolSFX[2].Play();
 
-                action.area.tilemap.SetTile(action.gridcell, tileStore[1].tile);
+                action.area.ChangeGardenTileToPlot_Empty(action.gridcell);
             }
         }
 
         void FertilizerAction(ToolActionData action)
         {
-            if(tileStore[action.tile].occupied)
+            if(action.tile.occupied)
             {
                 action.area.FertilizePlant(action.gridcell);
             }
@@ -88,10 +87,10 @@ namespace GrandmaGreen.Garden
         void SeedPacketAction(ToolActionData action)
         {
             // Placing the Plant Prefab on a tile and setting the Tile to "Occupied Plot Tile"
-            if (tileStore[action.tile].plantable && action.seedType != 0)
+            if (action.tile.plantable && action.seedType != 0)
             {
                 action.area.CreatePlant(action.seedType, action.gridcell); 
-                action.area.tilemap.SetTile(action.gridcell, tileStore[2].tile);
+                action.area.ChangeGardenTileToPlot_Occupied(action.gridcell);
                 action.tool.toolSFX[0].Play();
             }
         }
@@ -99,7 +98,7 @@ namespace GrandmaGreen.Garden
         void WateringAction(ToolActionData action)
         {
             // Checking Tile for watering
-            if (tileStore[action.tile].occupied)
+            if (action.tile.occupied)
             {
                 action.area.WaterPlant(action.gridcell);
             }

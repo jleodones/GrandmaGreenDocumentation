@@ -9,6 +9,7 @@ namespace GrandmaGreen.Garden
     {
         private readonly int key = 0;
         private readonly int values = 1;
+        private readonly int tiles = 2;
 
         public void Initialize()
         {
@@ -16,6 +17,7 @@ namespace GrandmaGreen.Garden
             {
                 CreateNewStore(typeof(Vector3Int));
                 CreateNewStore(typeof(PlantState));
+                CreateNewStore(typeof(TileState));
             }
         }
 
@@ -74,6 +76,23 @@ namespace GrandmaGreen.Garden
                         .components.Add(value);
                 }
             }
+        }
+
+        public void SetTileState(TileState tileState)
+        {
+            if (((ComponentStore<TileState>)componentStores[tiles]).components.Contains(tileState))
+            {
+                int index = ((ComponentStore<TileState>)componentStores[tiles]).components.IndexOf(tileState);
+                ((ComponentStore<TileState>)componentStores[tiles]).components[index] = tileState;
+            }
+            else
+                ((ComponentStore<TileState>)componentStores[tiles]).components.Add(tileState);
+
+        }
+
+        public List<TileState> Tiles()
+        {
+            return ((ComponentStore<TileState>)componentStores[tiles]).components;
         }
     }
 }

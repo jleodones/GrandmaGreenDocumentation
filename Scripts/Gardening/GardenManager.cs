@@ -17,10 +17,16 @@ namespace GrandmaGreen.Garden
         // Counters and State Manager for Watering Tool Use
         public int waterStage;
         public int waterTimer;
-        public bool isWatered;
 
         // State Manager for Fertilization Use
         public bool isFertilized;
+    }
+
+    [System.Serializable]
+    public struct TileState
+    {
+        public Vector3Int cell;
+        public int tileIndex;
     }
 
     [CreateAssetMenu(menuName = "GrandmaGreen/Garden/GardenManager")]
@@ -33,7 +39,7 @@ namespace GrandmaGreen.Garden
         GardenSaver[] plantLookup;
 
         [SerializeField]
-        Timer timer;
+        public Timer timer;
 
         public void Initialize()
         {
@@ -66,8 +72,7 @@ namespace GrandmaGreen.Garden
                 // Adding for watering. I think when we create plants it makes the most sense
                 // to set the watering stage and timer here.
                 waterStage = 0, // # of times it has been watered
-                waterTimer = 0, // Could be deleted, but might be able to do it through Time
-                isWatered = false,
+                waterTimer = 0,
                 isFertilized = false
             };
         }
@@ -140,14 +145,24 @@ namespace GrandmaGreen.Garden
                 PlantState updatedPlant = plant;
                 updatedPlant.growthStage = plant.growthStage + 1;
                 updatedPlant.waterStage = 0;
-                updatedPlant.waterTimer = 0;
-                updatedPlant.isWatered = false;
 
                 plantLookup[areaIndex][cell] = updatedPlant;
                 canGrow = true;
             }
 
             return canGrow;
+        }
+
+
+        public void DecrementWaterTimer(int areaIndex, Vector3Int cell, int value)
+        {
+            if (!IsEmpty(areaIndex, cell))
+            {
+                PlantState plant = GetPlant(areaIndex, cell);
+                plant.waterTimer += value;
+
+                plantLookup[areaIndex][cell] = plant;
+            }
         }
 
         public bool UpdateWaterStage(int areaIndex, Vector3Int cell)
@@ -159,12 +174,13 @@ namespace GrandmaGreen.Garden
                 PlantState plant = GetPlant(areaIndex, cell);
                 int waterRequirements = collection.GetPlant(plant.type).waterPerStage;
 
-                if (plant.waterStage < waterRequirements) //&& plant.isWatered == false)
+                if (plant.waterStage < waterRequirements && plant.waterTimer <= 0)
                 {
+                    int waterTimerReset = collection.GetPlant(plant.type).growthTime;
+
                     PlantState updatedPlant = plant;
                     updatedPlant.waterStage = plant.waterStage + 1;
-                    updatedPlant.waterTimer = 0;
-                    updatedPlant.isWatered = true;
+                    updatedPlant.waterTimer = waterTimerReset;
 
                     if (updatedPlant.waterStage == waterRequirements)
                     {
@@ -210,6 +226,21 @@ namespace GrandmaGreen.Garden
 
             return seedDrop;
         }
+
+        public List<TileState> GetTiles(int areaIndex)
+        {
+            return new List<TileState>(plantLookup[areaIndex].Tiles());
+        }
+
+        public void UpdateGardenTile(int areaIndex, Vector3Int cell, int tileIndex)
+        {
+            plantLookup[areaIndex].SetTileState(new TileState()
+            {
+                cell = cell,
+                tileIndex=tileIndex
+            });
+        }
+
     }
 }
 

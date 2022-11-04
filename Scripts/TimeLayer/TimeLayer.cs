@@ -9,7 +9,7 @@ namespace GrandmaGreen.TimeLayer
     {
         event System.Action<int> onTick;
 
-        float scale { get; }
+        float tickSeconds { get; }
         bool paused { get; }
         void Tick(double deltaTime);
 
@@ -24,7 +24,7 @@ namespace GrandmaGreen.TimeLayer
     [CreateAssetMenu(menuName = "GrandmaGreen/Time/Time Layer")]
     public class TimeLayer : ScriptableObject, ITimeLayer
     {
-        [field: SerializeField] public float scale { get; private set; } = 1;
+        [field: SerializeField] public float tickSeconds { get; private set; } = 1;
 
         public bool paused { get; private set; } = false;
         public event Action<int> onTick;
@@ -35,9 +35,9 @@ namespace GrandmaGreen.TimeLayer
         {
             m_tickValue += deltaTime;
 
-            if (m_tickValue >= scale && !paused)
+            if (m_tickValue >= tickSeconds && !paused)
             {
-                int tickCount = (int)(m_tickValue / scale);
+                int tickCount = (int)(m_tickValue / tickSeconds);
 
                 if (tickCount > 0) onTick?.Invoke(tickCount);
 

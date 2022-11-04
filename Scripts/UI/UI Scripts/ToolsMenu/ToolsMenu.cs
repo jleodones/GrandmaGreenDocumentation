@@ -10,10 +10,11 @@ public class ToolsMenu : MonoBehaviour
 	
     [SerializeField] public PlayerToolData toolData;
     [SerializeField] public CameraZoom zoom;
-    private ToolsMenuController controller;
+    [SerializeField] private ToolsMenuController controller;
 
-    void OnEnable()
+    void Start()
     {
+        
         UIDocument inventory = GetComponent<UIDocument>();
         VisualElement root = inventory.rootVisualElement;
 
