@@ -208,7 +208,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.AreaController.html",
-          "hash": "yoL4GEUCK3uMu1O3evvLeglJL8x69IXAlMjOweWIwPg="
+          "hash": "6Fm2AL0yZZ/XkOwkRWDHLhbVccPVYC2YuG1rkrIaQwc="
         }
       },
       "is_incremental": false,
@@ -304,7 +304,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.CatchUIInput.html",
-          "hash": "xcgXOhcdaS9Re7pi/AjHGbL91KU9T1JobX3AfT5cwkg="
+          "hash": "la7AzUbePpSferEqsCQkJqym0Tcr0APxOitbb7NC4WI="
         }
       },
       "is_incremental": false,
@@ -928,7 +928,19 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.Garden.GardenAreaController.html",
-          "hash": "+pid5KtAYKttqTM0GooJs57GI02sVLT2GkC8sQtEEZY="
+          "hash": "pzuzAr6WWYGrKT2vmTBZEomBEGFcxtJKWEiFk/U5vRg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GrandmaGreen.Garden.GardenCustomizer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GrandmaGreen.Garden.GardenCustomizer.html",
+          "hash": "52PUr6e+4mdGGdrpaC8sZAhYb6IlriIGToxUJDpijk4="
         }
       },
       "is_incremental": false,
@@ -948,23 +960,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/GrandmaGreen.Garden.GardenPlant.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/GrandmaGreen.Garden.GardenPlant.html",
-          "hash": "5veOqqh8uPAyWV56dePSU9klRsCiepb61kTWdX1aWJg="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/GrandmaGreen.Garden.GardenSaver.yml",
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.Garden.GardenSaver.html",
-          "hash": "7vdHWM6iNZnF14WVcOEmZoMWHq057WVQARFLMkxY8rg="
+          "hash": "vV9eOAun5Ww0Rog8H/6UDYEbDHGwtF92T5N8OtGmHIc="
         }
       },
       "is_incremental": false,
@@ -1156,7 +1156,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.Garden.html",
-          "hash": "lHH043F11oq7k0tkPRU9UW/vZjoT2bjrYn+9OzG+YUw="
+          "hash": "kaA/oEa2E73hg++NEi9MFCzbxz5K2cfzTaeojaGMlug="
         }
       },
       "is_incremental": false,
@@ -1672,7 +1672,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "OevSevXeYVDNXSrFjH8G1tXXFA5KFwUyJs6VeAyVPZY="
+          "hash": "wL369RpGKmsv9bspRT7GqpJXdJi2K7pYfiuvpkgODR0="
         }
       },
       "is_incremental": false,

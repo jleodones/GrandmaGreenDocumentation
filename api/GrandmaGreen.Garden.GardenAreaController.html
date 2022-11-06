@@ -113,6 +113,12 @@ TODO: Implement functionality for save/loading changed tiles </p>
       <a class="xref" href="GrandmaGreen.AreaController.html#GrandmaGreen_AreaController_areaIndex">AreaController.areaIndex</a>
     </div>
     <div>
+      <a class="xref" href="GrandmaGreen.AreaController.html#GrandmaGreen_AreaController_lastSelectedPosition">AreaController.lastSelectedPosition</a>
+    </div>
+    <div>
+      <a class="xref" href="GrandmaGreen.AreaController.html#GrandmaGreen_AreaController_lastDraggedPosition">AreaController.lastDraggedPosition</a>
+    </div>
+    <div>
       <a class="xref" href="GrandmaGreen.AreaController.html#GrandmaGreen_AreaController_lastSelectedCell">AreaController.lastSelectedCell</a>
     </div>
     <div>
@@ -137,6 +143,9 @@ TODO: Implement functionality for save/loading changed tiles </p>
       <a class="xref" href="GrandmaGreen.AreaController.html#GrandmaGreen_AreaController_AreaSelection_Vector3_">AreaController.AreaSelection(Vector3)</a>
     </div>
     <div>
+      <a class="xref" href="GrandmaGreen.AreaController.html#GrandmaGreen_AreaController_AreaDragged_Vector3_">AreaController.AreaDragged(Vector3)</a>
+    </div>
+    <div>
       <a class="xref" href="GrandmaGreen.AreaController.html#GrandmaGreen_AreaController_ParseTilemap">AreaController.ParseTilemap()</a>
     </div>
     <div>
@@ -151,6 +160,54 @@ TODO: Implement functionality for save/loading changed tiles </p>
   </div>
   <h3 id="fields">Fields
   </h3>
+  
+  
+  <h4 id="GrandmaGreen_Garden_GardenAreaController_DEBUG_CUSTOMIZATION" data-uid="GrandmaGreen.Garden.GardenAreaController.DEBUG_CUSTOMIZATION">DEBUG_CUSTOMIZATION</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool DEBUG_CUSTOMIZATION</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="GrandmaGreen_Garden_GardenAreaController_decorList" data-uid="GrandmaGreen.Garden.GardenAreaController.decorList">decorList</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;Collider&gt; decorList</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<span class="xref">Collider</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <h4 id="GrandmaGreen_Garden_GardenAreaController_DryingUpBurst" data-uid="GrandmaGreen.Garden.GardenAreaController.DryingUpBurst">DryingUpBurst</h4>
@@ -195,6 +252,30 @@ TODO: Implement functionality for save/loading changed tiles </p>
     <tbody>
       <tr>
         <td><span class="xref">ParticleSystem</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="GrandmaGreen_Garden_GardenAreaController_gardenCustomizer" data-uid="GrandmaGreen.Garden.GardenAreaController.gardenCustomizer">gardenCustomizer</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GardenCustomizer gardenCustomizer</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="GrandmaGreen.Garden.GardenCustomizer.html">GardenCustomizer</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -369,6 +450,33 @@ TODO: Implement functionality for save/loading changed tiles </p>
   </table>
   <h3 id="methods">Methods
   </h3>
+  
+  
+  <a id="GrandmaGreen_Garden_GardenAreaController_AddDecorItem_" data-uid="GrandmaGreen.Garden.GardenAreaController.AddDecorItem*"></a>
+  <h4 id="GrandmaGreen_Garden_GardenAreaController_AddDecorItem_BoxCollider_" data-uid="GrandmaGreen.Garden.GardenAreaController.AddDecorItem(BoxCollider)">AddDecorItem(BoxCollider)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddDecorItem(BoxCollider decorItem)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">BoxCollider</span></td>
+        <td><span class="parametername">decorItem</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="GrandmaGreen_Garden_GardenAreaController_Awake_" data-uid="GrandmaGreen.Garden.GardenAreaController.Awake*"></a>
@@ -619,6 +727,16 @@ TODO: Implement functionality for save/loading changed tiles </p>
   </table>
   
   
+  <a id="GrandmaGreen_Garden_GardenAreaController_EnterCustomizationMode_" data-uid="GrandmaGreen.Garden.GardenAreaController.EnterCustomizationMode*"></a>
+  <h4 id="GrandmaGreen_Garden_GardenAreaController_EnterCustomizationMode" data-uid="GrandmaGreen.Garden.GardenAreaController.EnterCustomizationMode">EnterCustomizationMode()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void EnterCustomizationMode()</code></pre>
+  </div>
+  
+  
   <a id="GrandmaGreen_Garden_GardenAreaController_FertilizePlant_" data-uid="GrandmaGreen.Garden.GardenAreaController.FertilizePlant*"></a>
   <h4 id="GrandmaGreen_Garden_GardenAreaController_FertilizePlant_Vector3Int_" data-uid="GrandmaGreen.Garden.GardenAreaController.FertilizePlant(Vector3Int)">FertilizePlant(Vector3Int)</h4>
   <div class="markdown level1 summary"></div>
@@ -667,38 +785,6 @@ TODO: Implement functionality for save/loading changed tiles </p>
       <tr>
         <td><span class="xref">Vector3Int</span></td>
         <td><span class="parametername">gridPos</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="GrandmaGreen_Garden_GardenAreaController_Harvest_" data-uid="GrandmaGreen.Garden.GardenAreaController.Harvest*"></a>
-  <h4 id="GrandmaGreen_Garden_GardenAreaController_Harvest_GrandmaGreen_Garden_BasePhenotypeData_GrandmaGreen_Garden_Genotype_" data-uid="GrandmaGreen.Garden.GardenAreaController.Harvest(GrandmaGreen.Garden.BasePhenotypeData,GrandmaGreen.Garden.Genotype)">Harvest(BasePhenotypeData, Genotype)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Harvest(BasePhenotypeData phenotypeData, Genotype genotype)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="GrandmaGreen.Garden.BasePhenotypeData.html">BasePhenotypeData</a></td>
-        <td><span class="parametername">phenotypeData</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="GrandmaGreen.Garden.Genotype.html">Genotype</a></td>
-        <td><span class="parametername">genotype</span></td>
         <td></td>
       </tr>
     </tbody>
