@@ -173,11 +173,10 @@ namespace GrandmaGreen.Garden
             {
                 PlantState plant = GetPlant(areaIndex, cell);
                 int waterRequirements = collection.GetPlant(plant.type).waterPerStage;
+                int waterTimerReset = collection.GetPlant(plant.type).growthTime;
 
-                if (plant.waterStage < waterRequirements && plant.waterTimer <= 0)
+                if (plant.waterStage < waterRequirements && (plant.waterTimer <= 0 && plant.waterTimer >= (-2 * waterTimerReset)))
                 {
-                    int waterTimerReset = collection.GetPlant(plant.type).growthTime;
-
                     PlantState updatedPlant = plant;
                     updatedPlant.waterStage = plant.waterStage + 1;
                     updatedPlant.waterTimer = waterTimerReset;

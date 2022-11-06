@@ -20,6 +20,8 @@ namespace GrandmaGreen
 
         [field: Header("Area Variables")]
         [field: SerializeField] public int areaIndex { get; protected set; } = 0;
+        [field: SerializeField][field: ReadOnly] public Vector3 lastSelectedPosition { get; protected set; }
+        [field: SerializeField][field: ReadOnly] public Vector3 lastDraggedPosition { get; protected set; }
         [field: SerializeField][field: ReadOnly] public Vector3Int lastSelectedCell { get; protected set; }
         [field: SerializeField][field: ReadOnly] public TileBase lastSelectedTile { get; protected set; }
 
@@ -52,16 +54,24 @@ namespace GrandmaGreen
 
         public virtual void AreaSelection(Vector3 worldPoint)
         {
+            lastSelectedPosition = worldPoint;
             lastSelectedCell = tilemap.WorldToCell(worldPoint);
             lastSelectedTile = tilemap.GetTile(lastSelectedCell);
+            
+
             onTilemapSelection?.Invoke(lastSelectedCell);
 
             playerController.SetDestination(worldPoint);
-
             if (((lastSelectedTile as IGameTile)) != null)
             {
                 playerController.QueueEntityAction(((IGameTile)lastSelectedTile).DoTileAction);
             }
+
+        }
+
+        public virtual void AreaDragged(Vector3 worldPoint)
+        {
+            lastDraggedPosition = worldPoint;
         }
 
         [ContextMenu("ParseTilemap")]
