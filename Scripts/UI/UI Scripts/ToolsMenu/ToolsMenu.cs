@@ -14,7 +14,6 @@ public class ToolsMenu : MonoBehaviour
 
     void Start()
     {
-        
         UIDocument inventory = GetComponent<UIDocument>();
         VisualElement root = inventory.rootVisualElement;
 

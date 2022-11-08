@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -18,7 +19,7 @@ namespace GrandmaGreen.Garden
     /// Struct that defines a trait
     /// Currently defined with 2 Alleles
     /// </summary>
-    [System.Serializable]
+    [Serializable]
     public struct Trait
     {
         public Allele allele1;
@@ -29,11 +30,13 @@ namespace GrandmaGreen.Garden
     /// Defines a unique Genotype
     /// A genotype can have up to 3 unique traits
     /// </summary>
-    [System.Serializable]
+    [Serializable]
     public class Genotype
     {
         public static readonly int MAX_TRAIT_COUNT = 3;
-        [SerializeField] Trait[] traits = new Trait[MAX_TRAIT_COUNT];
+        
+        [SerializeField]
+        Trait[] traits = new Trait[MAX_TRAIT_COUNT];
 
         public Genotype()
         {

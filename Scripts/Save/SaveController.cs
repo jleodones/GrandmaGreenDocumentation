@@ -19,6 +19,16 @@ namespace GrandmaGreen.SaveSystem
         /// Call this to save data during auto save or upon game pause.
         /// </summary>
         void SaveAllData();
+
+        /// <summary>
+        /// Call this to delete all currently saved data, ie. delete any files.
+        /// </summary>
+        void DeleteAllData();
+
+        /// <summary>
+        /// Recreates save file given new object savers.
+        /// </summary>
+        void CreateDefaultSaveFile();
     }
     
     /// <summary>
@@ -82,6 +92,28 @@ namespace GrandmaGreen.SaveSystem
                 saveLoader.SaveAllData();
             }
             toBeSaved.Clear();
+        }
+
+        /// <summary>
+        /// Deletes all data in all save loaders.
+        /// </summary>
+        public void DeleteAllData()
+        {
+            foreach (ISaveLoader saveLoader in m_saveLoaders)
+            {
+                saveLoader.DeleteAllData();
+            }
+        }
+        
+        /// <summary>
+        /// Creates new default save file for each save loader.
+        /// </summary>
+        public void CreateNewDefaultSaveFile()
+        {
+            foreach (ISaveLoader saveLoader in m_saveLoaders)
+            {
+                saveLoader.CreateDefaultSaveFile();
+            }
         }
     }
 }

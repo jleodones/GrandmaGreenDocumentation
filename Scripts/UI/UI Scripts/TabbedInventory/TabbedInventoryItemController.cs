@@ -1,18 +1,17 @@
-using System.Collections;
-using System.Collections.Generic;
 using GrandmaGreen.Collections;
-using UnityEngine;
 using UnityEngine.UIElements;
-using GrandmaGreen.Garden;
 
 namespace GrandmaGreen.UI.Collections
 {
     public class TabbedInventoryItemController
     {
+        private IInventoryItem m_inventoryItemData;
+        
         private Button m_button;
-        System.Action<int> m_clickCallback;
-        int itemID;
-        public TabbedInventoryItemController(Button button, System.Action<int> clickCallback)
+        
+        private System.Action<ushort> m_clickCallback;
+
+        public TabbedInventoryItemController(Button button, System.Action<ushort> clickCallback)
         {
             m_button = button;
             m_clickCallback = clickCallback;
@@ -29,19 +28,13 @@ namespace GrandmaGreen.UI.Collections
         {
             m_button.Q<Label>("quantity").text = inventoryItem.GetQuantityToString();
             m_button.Q<Label>("item-name").text = inventoryItem.itemName;
-            itemID = inventoryItem.itemID;
+
+            m_inventoryItemData = inventoryItem;
         }
 
-        void CheckOpenInventory(ToolData selectedTool)
+        private void OnButtonClicked()
         {
-
+            m_clickCallback?.Invoke(m_inventoryItemData.itemID);
         }
-
-        void OnButtonClicked()
-        {
-            m_clickCallback?.Invoke(itemID);
-        }
-
-
     }
 }

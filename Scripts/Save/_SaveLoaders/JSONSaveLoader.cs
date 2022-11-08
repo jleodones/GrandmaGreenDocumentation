@@ -18,22 +18,12 @@ namespace GrandmaGreen.SaveSystem
     public class JSONSaveLoader : ISaveLoader
     {
         private string m_baseFilePath = Application.persistentDataPath + "/save.grandma";
-
-        // private string m_baseFilePath = Application.dataPath + "/_GrandmaGreen/Scripts/Save/FirstPlayableSave.grandma";
-
+        
         [SerializeField]
         [ReadOnly]
         private SaveController m_saveController;
 
         [ShowInInspector] private List<ObjectSaver> m_objectSavers;
-        
-        // Archived below -- these were initially used to concurrently keep track of data for future scene loads without making
-        // further calls to JSON deserializers, but it felt like a waste of space. In this case, the optimization wasn't really
-        // worth it...But I am concerned about data corruption.
-
-        // [ShowInInspector] private List<ObjectSaver> m_loadedList;
-
-        // [ReadOnly] public JArray jsonDataArray;
 
         public JSONSaveLoader(SaveController saveController)
         {
@@ -43,8 +33,7 @@ namespace GrandmaGreen.SaveSystem
             {
                 using (StreamWriter file = File.CreateText(m_baseFilePath))
                 {
-                    // TODO: Replace this with an actual default save file.
-                    TextAsset f = Resources.Load("FirstPlayableSave") as TextAsset;
+                    TextAsset f = Resources.Load("DefaultSaveFile") as TextAsset;
                     
                     file.Write(f.text);
                 }
@@ -79,6 +68,34 @@ namespace GrandmaGreen.SaveSystem
         {
             // Serializes and write to file.
             using (StreamWriter file = new StreamWriter(m_baseFilePath))
+            {
+                JsonSerializer serializer = new JsonSerializer()
+                {
+                    Formatting = Formatting.Indented,
+                    TypeNameHandling = TypeNameHandling.Auto
+                };
+                serializer.Serialize(file, m_objectSavers);
+            }
+        }
+
+        /// <summary>
+        /// Fully deletes current save file.
+        /// </summary>
+        public void DeleteAllData()
+        {
+            if (File.Exists(m_baseFilePath)) // If the save file exists, delete it.
+            {
+                File.Delete(m_baseFilePath);
+            }
+        }
+
+        public void CreateDefaultSaveFile()
+        {
+            // Loads from relative path—editor only.
+            string defaultSavePath = "Assets/_GrandmaGreen/_Modules/_App/Resources/DefaultSaveFile.txt";
+
+            // Serializes and write to file.
+            using (StreamWriter file = new StreamWriter(defaultSavePath))
             {
                 JsonSerializer serializer = new JsonSerializer()
                 {

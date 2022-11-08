@@ -216,8 +216,8 @@ namespace GrandmaGreen.Garden
 
                 EventManager.instance.HandleEVENT_GOLEM_SPAWN(0, cell);
 
-                EventManager.instance.HandleEVENT_INVENTORY_ADD(
-                    new Plant(2, properties.name, 1, new Trait()), numSeedsDropped);
+                EventManager.instance.HandleEVENT_INVENTORY_ADD_PLANT_OR_SEED(
+                    new Plant(2, properties.name, 1, new List<Genotype>()), new Genotype());
                 DestroyPlantOnCell(cell);
                 return true;
             }

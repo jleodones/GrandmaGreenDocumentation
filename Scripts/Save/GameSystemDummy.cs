@@ -24,41 +24,41 @@ namespace GrandmaGreen {
         }
 
         [Button()]
-        public void AddToInventory(int type, int id, int quantity)
+        public void AddToInventory(int type, ushort id, int quantity)
         {
             switch (type)
             {
                 case 0: // Tool
-                    EventManager.instance.HandleEVENT_INVENTORY_ADD(new GrandmaGreen.Collections.Tool(id, null, 0), quantity);
+                    EventManager.instance.HandleEVENT_INVENTORY_ADD_TOOL_OR_DECOR(new GrandmaGreen.Collections.Tool(id, null, 0), quantity);
                     break;
                 case 1: // Plant
-                    EventManager.instance.HandleEVENT_INVENTORY_ADD(new GrandmaGreen.Collections.Plant(id, null, 0, new Trait()), quantity);
+                    EventManager.instance.HandleEVENT_INVENTORY_ADD_PLANT_OR_SEED(new GrandmaGreen.Collections.Plant(id, null, 0, new List<Genotype>()), new Genotype());
                     break;
                 case 2: // Seed
-                    EventManager.instance.HandleEVENT_INVENTORY_ADD(new GrandmaGreen.Collections.Seed(id, null, 0), quantity);
+                    EventManager.instance.HandleEVENT_INVENTORY_ADD_PLANT_OR_SEED(new GrandmaGreen.Collections.Seed(id, null, new List<Genotype>()), new Genotype());
                     break;
                 case 3: // Decor
-                    EventManager.instance.HandleEVENT_INVENTORY_ADD(new GrandmaGreen.Collections.Decor(id, null, 0), quantity);
+                    EventManager.instance.HandleEVENT_INVENTORY_ADD_TOOL_OR_DECOR(new GrandmaGreen.Collections.Decor(id, null, 0), quantity);
                     break;
             }
         }
 
         [Button()]
-        public void RemoveFromInventory(int type, int id, int quantity)
+        public void RemoveFromInventory(int type, ushort id, int quantity)
         {
             switch (type)
             {
                 case 0: // Tool
-                    EventManager.instance.HandleEVENT_INVENTORY_REMOVE(new GrandmaGreen.Collections.Tool(id, null, 0), quantity);
+                    EventManager.instance.HandleEVENT_INVENTORY_REMOVE_TOOL_OR_DECOR(new GrandmaGreen.Collections.Tool(id, null, 0), quantity);
                     break;
                 case 1: // Plant
-                    EventManager.instance.HandleEVENT_INVENTORY_REMOVE(new GrandmaGreen.Collections.Plant(id, null, 0, new Trait()), quantity);
+                    EventManager.instance.HandleEVENT_INVENTORY_REMOVE_PLANT_OR_SEED(new GrandmaGreen.Collections.Plant(id, null, 0, new List<Genotype>()), new Genotype());
                     break;
                 case 2: // Seed
-                    EventManager.instance.HandleEVENT_INVENTORY_REMOVE(new GrandmaGreen.Collections.Seed(id, null, 0), quantity);
+                    EventManager.instance.HandleEVENT_INVENTORY_REMOVE_PLANT_OR_SEED(new GrandmaGreen.Collections.Seed(id, null, new List<Genotype>()), new Genotype());
                     break;
                 case 3: // Decor
-                    EventManager.instance.HandleEVENT_INVENTORY_REMOVE(new GrandmaGreen.Collections.Decor(id, null, 0), quantity);
+                    EventManager.instance.HandleEVENT_INVENTORY_REMOVE_TOOL_OR_DECOR(new GrandmaGreen.Collections.Decor(id, null, 0), quantity);
                     break;
             }
         }

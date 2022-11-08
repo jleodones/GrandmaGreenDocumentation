@@ -52,5 +52,31 @@ namespace GrandmaGreen.SaveSystem
         {
             m_saveController.AutoSave();
         }
+
+
+        /// <summary>
+        /// Wipe the player's saved data.
+        /// </summary>
+        [Button(ButtonSizes.Medium)]
+        public void TriggerDeleteAllData()
+        {
+            m_saveController ??= new SaveController(m_objectSavers);
+
+            m_saveController.DeleteAllData();
+        }
+        
+        /// <summary>
+        /// Editor only—creates a new default save file out of any developer adjustments. Run from the prefab.
+        /// </summary>
+        [Button(ButtonSizes.Medium)]
+        public void TriggerAddNewComponentToDefault(ObjectSaver objectSaver)
+        {
+            m_objectSavers.Add(objectSaver);
+            
+            // Creates new save controller with the object savers. This automatically loads the save loaders based on the save file we already have.
+            m_saveController = new SaveController(m_objectSavers);
+            
+            m_saveController.CreateNewDefaultSaveFile();
+        }
     }   
 }

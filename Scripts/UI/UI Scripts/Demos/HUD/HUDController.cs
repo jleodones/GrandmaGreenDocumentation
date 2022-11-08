@@ -29,14 +29,26 @@ namespace GrandmaGreen.UI.HUD
 
         public void OpenHUD()
         {
+            Debug.Log("OPENED");
             m_root.style.display = DisplayStyle.Flex;
         }
         public void OpenHUDAnimated()
         {
+            m_root.style.transitionProperty = new List<StylePropertyName> { "display" };
+            m_root.style.transitionTimingFunction = new List<EasingFunction> { EasingMode.Ease };
+            m_root.style.transitionDuration = new List<TimeValue>{ new TimeValue(300, TimeUnit.Millisecond) };
             m_root.style.display = DisplayStyle.Flex;
         }
          public void CloseHUD()
         {
+            Debug.Log("CLOSED");
+            m_root.style.display = DisplayStyle.None;
+        }
+        public void CloseHUDAnimated()
+        {
+            m_root.style.transitionProperty = new List<StylePropertyName> { "display" };
+            m_root.style.transitionTimingFunction = new List<EasingFunction> { EasingMode.Ease };
+            m_root.style.transitionDuration = new List<TimeValue>{ new TimeValue(300, TimeUnit.Millisecond) };
             m_root.style.display = DisplayStyle.None;
         }
 

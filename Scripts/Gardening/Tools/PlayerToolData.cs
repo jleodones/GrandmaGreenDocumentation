@@ -77,7 +77,10 @@ namespace GrandmaGreen.Garden
             EndToolSelection();
         }
 
-        public void SetEquippedSeed(int plantIndex) => equippedSeed = SeedId.Tulip;
+        public void SetEquippedSeed(ushort plantIndex, Genotype genotype)
+        {
+            equippedSeed = (SeedId) plantIndex;
+        }
 
         public void SetToolAction(TileData tile, Vector3Int cell, GardenAreaController area)
         {

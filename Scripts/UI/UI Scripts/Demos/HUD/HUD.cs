@@ -23,7 +23,9 @@ namespace GrandmaGreen.UI.HUD
             
             // Register global events.
             EventManager.instance.EVENT_OPEN_HUD += OpenHUD;
+            EventManager.instance.EVENT_OPEN_HUD_ANIMATED += OpenHUDAnimated;
             EventManager.instance.EVENT_CLOSE_HUD += CloseHUD;
+            EventManager.instance.EVENT_CLOSE_HUD_ANIMATED += CloseHUDAnimated;
         }
 
         public void OpenHUD()
@@ -34,6 +36,15 @@ namespace GrandmaGreen.UI.HUD
         public void CloseHUD()
         {
             m_controller.CloseHUD();
+        }
+        public void OpenHUDAnimated()
+        {
+            m_controller.OpenHUDAnimated();
+        }
+
+        public void CloseHUDAnimated()
+        {
+            m_controller.CloseHUDAnimated();
         }
         
     }

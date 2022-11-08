@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using GrandmaGreen.Garden;
 using JetBrains.Annotations;
+using Sirenix.OdinInspector;
 using UnityEngine;
 using Object = UnityEngine.Object;
 
@@ -11,7 +12,7 @@ namespace GrandmaGreen.Collections {
     // Used as a wrapper for all the inventory item types.
     public interface IInventoryItem
     {
-        public int itemID { get; set; }
+        public ushort itemID { get; set; }
         public ItemType itemType { get; set; }
         
         public string itemName { get; set; }
@@ -19,6 +20,8 @@ namespace GrandmaGreen.Collections {
         public string GetQuantityToString();
 
     }
+    
+    [Serializable]
     public enum ItemType
     {
         Tool,
@@ -31,7 +34,7 @@ namespace GrandmaGreen.Collections {
     public struct Tool : IInventoryItem
     {
         // Item ID.
-        public int itemID { get; set; }
+        public ushort itemID { get; set; }
 
         // This item type;
         public ItemType itemType { get; set; }
@@ -42,7 +45,7 @@ namespace GrandmaGreen.Collections {
         // Amount of the object present in the inventory.
         public int quantity;
 
-        public Tool(int id, string name, int num)
+        public Tool(ushort id, string name, int num)
         {
             itemType = ItemType.Tool;
             
@@ -64,7 +67,7 @@ namespace GrandmaGreen.Collections {
     public struct Plant : IInventoryItem
     {
         // Item ID.
-        public int itemID { get; set; }
+        public ushort itemID { get; set; }
         
         // This item type;
         public ItemType itemType { get; set; }
@@ -73,18 +76,17 @@ namespace GrandmaGreen.Collections {
         public string itemName { get; set; }
         
         // Amount of the object present in the inventory.
-        public int quantity;
+        public int quantity => genotypes.Count;
 
-        public Trait trait;
+        public List<Genotype> genotypes;
 
-        public Plant(int id, string name, int num, Trait plantTrait)
+        public Plant(ushort id, string name, int num, List<Genotype> plantGenotypes)
         {
             itemType = ItemType.Plant;
             
             itemID = id;
             itemName = name;
-            quantity = num;
-            trait = plantTrait;
+            genotypes = plantGenotypes;
         }
         
         public string GetQuantityToString()
@@ -98,25 +100,30 @@ namespace GrandmaGreen.Collections {
     [Serializable]
     public struct Seed : IInventoryItem
     {
+        [ShowInInspector]
         // Item ID.
-        public int itemID { get; set; }
+        public ushort itemID { get; set; }
         
         // This item type;
-        public ItemType itemType { get; set; }
+        [ShowInInspector] public ItemType itemType { get; set; }
 
         // Name of object.
+        [ShowInInspector]
         public string itemName { get; set; }
         
         // Amount of the object present in the inventory.
-        public int quantity;
+        public int quantity => genotypes.Count;
+
+        // Array of genotypes.
+        public List<Genotype> genotypes;
         
-        public Seed(int id, string name, int num)
+        public Seed(ushort id, string name, List<Genotype> plantGenotypes)
         {
             itemType = ItemType.Seed;
             
             itemID = id;
             itemName = name;
-            quantity = num;
+            genotypes = plantGenotypes;
         }
         
         public string GetQuantityToString()
@@ -132,7 +139,7 @@ namespace GrandmaGreen.Collections {
     public struct Decor : IInventoryItem
     {
         // Item ID.
-        public int itemID { get; set; }
+        public ushort itemID { get; set; }
         
         // This item type;
         public ItemType itemType { get; set; }
@@ -143,7 +150,7 @@ namespace GrandmaGreen.Collections {
         // Amount of the object present in the inventory.
         public int quantity;
         
-        public Decor(int id, string name, int num)
+        public Decor(ushort id, string name, int num)
         {
             itemType = ItemType.Decor;
             

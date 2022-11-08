@@ -52,7 +52,7 @@ namespace GrandmaGreen.UI.Collections
         private Length inventoryWidth = (Length)(.45 * Screen.width);
 
 
-        public event System.Action<int> onItemEntryClicked;
+        public event System.Action<ushort> onItemEntryClicked;
         /// <summary>
         /// The TabbedInventoryController is attached to the TabbedInventory UI. It registers and controlls tab switching, as well as loading old and new items into the inventory.
         /// </summary>
@@ -108,7 +108,7 @@ namespace GrandmaGreen.UI.Collections
         public void OpenInventory()
         {
             // Disable HUD.
-            EventManager.instance.HandleEVENT_OPEN_HUD();
+            EventManager.instance.HandleEVENT_CLOSE_HUD_ANIMATED();
 
             inventory.style.transitionProperty = new List<StylePropertyName> { "translate" };
             inventory.style.transitionTimingFunction = new List<EasingFunction> { EasingMode.Ease };
@@ -132,7 +132,7 @@ namespace GrandmaGreen.UI.Collections
             m_soundContainers[1].Play();
 
             // Open the HUD.
-            EventManager.instance.HandleEVENT_OPEN_HUD();
+            EventManager.instance.HandleEVENT_OPEN_HUD_ANIMATED();
         }
 
         /* Method for the tab on-click event: 
@@ -215,10 +215,17 @@ namespace GrandmaGreen.UI.Collections
                 var newListEntry = listEntryTemplate.Instantiate();
 
                 // Instantiate a controller for the data
-                var newListEntryLogic = new TabbedInventoryItemController(newListEntry.Q<Button>(), OnItemEntryClicked);
-
-                // Assign the controller script to the visual element
-                newListEntry.userData = newListEntryLogic;
+                if (typeof(T) == new Seed().GetType())
+                {
+                    var newListEntryLogic =
+                        new TabbedInventorySeedItemController(newListEntry.Q<Button>(), OnSeedEntryClicked);
+                    newListEntry.userData = newListEntryLogic;
+                }
+                else
+                {
+                    var newListEntryLogic = new TabbedInventoryItemController(newListEntry.Q<Button>(), OnItemEntryClicked);
+                    newListEntry.userData = newListEntryLogic;
+                }
 
                 // Return the root of the instantiated visual tree
                 return newListEntry;
@@ -229,9 +236,15 @@ namespace GrandmaGreen.UI.Collections
             // Set up bind function for a specific list entry.
             jar.bindItem = (item, index) =>
             {
-                // For now, this doesn't do anything.
-                // We can connect this to the Sprite stored in the struct (?) or the collections item later.
-                (item.userData as TabbedInventoryItemController).SetInventoryData((IInventoryItem)(jar.itemsSource[index]));
+                // Instantiate a controller for the data
+                if (typeof(T) == new Seed().GetType())
+                {
+                    (item.userData as TabbedInventorySeedItemController).SetInventoryData((IInventoryItem)(jar.itemsSource[index]));
+                }
+                else
+                {
+                    (item.userData as TabbedInventoryItemController).SetInventoryData((IInventoryItem)(jar.itemsSource[index]));
+                }
             };
 
             // Set a fixed item height
@@ -275,18 +288,20 @@ namespace GrandmaGreen.UI.Collections
             {
                 if (componentStore.GetType() == typeof(T))
                 {
-                    jar.itemsSource = ((ComponentStore<T>)componentStore).components;
+                    jar.itemsSource = ((ComponentStore<T>) componentStore).components;
                 }
             }
         }
 
-        public void OnItemEntryClicked(int itemID)
+        public void OnSeedEntryClicked(ushort itemID, Genotype genotype)
         {
-            playerToolData.SetEquippedSeed(itemID);
-            onItemEntryClicked?.Invoke(itemID);
-            if(itemID != null){
-                CloseInventory(new ClickEvent());
-            }
+            playerToolData.SetEquippedSeed(itemID, genotype);
+            CloseInventory(new ClickEvent());
+        }
+        
+        public void OnItemEntryClicked(ushort itemID)
+        {
+            CloseInventory(new ClickEvent());
         }
 
         void CheckOpenInventory(ToolData selectedTool)

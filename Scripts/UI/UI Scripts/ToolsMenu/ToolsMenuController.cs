@@ -19,6 +19,7 @@ public class ToolsMenuController
     public ToolsMenuController(VisualElement root)
     {
         this.root = root;
+        panel = root.panel;
         Debug.Log(root);
     }
 
@@ -102,8 +103,6 @@ public class ToolsMenuController
 
     void SetToolMenuPosition(Vector3 worldSpace)
     {
-        
-
-        root.transform.position = RuntimePanelUtils.CameraTransformWorldToPanel(root.panel, worldSpace, Camera.main);
+        root.transform.position = RuntimePanelUtils.CameraTransformWorldToPanel(panel, worldSpace, Camera.main);
     }
 }
