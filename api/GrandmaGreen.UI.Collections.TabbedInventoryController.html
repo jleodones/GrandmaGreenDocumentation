@@ -201,12 +201,12 @@
   
   
   <a id="GrandmaGreen_UI_Collections_TabbedInventoryController_OnItemEntryClicked_" data-uid="GrandmaGreen.UI.Collections.TabbedInventoryController.OnItemEntryClicked*"></a>
-  <h4 id="GrandmaGreen_UI_Collections_TabbedInventoryController_OnItemEntryClicked_System_Int32_" data-uid="GrandmaGreen.UI.Collections.TabbedInventoryController.OnItemEntryClicked(System.Int32)">OnItemEntryClicked(Int32)</h4>
+  <h4 id="GrandmaGreen_UI_Collections_TabbedInventoryController_OnItemEntryClicked_System_UInt16_" data-uid="GrandmaGreen.UI.Collections.TabbedInventoryController.OnItemEntryClicked(System.UInt16)">OnItemEntryClicked(UInt16)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void OnItemEntryClicked(int itemID)</code></pre>
+    <pre><code class="lang-csharp hljs">public void OnItemEntryClicked(ushort itemID)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -219,8 +219,40 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">UInt16</a></td>
         <td><span class="parametername">itemID</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="GrandmaGreen_UI_Collections_TabbedInventoryController_OnSeedEntryClicked_" data-uid="GrandmaGreen.UI.Collections.TabbedInventoryController.OnSeedEntryClicked*"></a>
+  <h4 id="GrandmaGreen_UI_Collections_TabbedInventoryController_OnSeedEntryClicked_System_UInt16_Genotype_" data-uid="GrandmaGreen.UI.Collections.TabbedInventoryController.OnSeedEntryClicked(System.UInt16,Genotype)">OnSeedEntryClicked(UInt16, Genotype)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void OnSeedEntryClicked(ushort itemID, Genotype genotype)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">UInt16</a></td>
+        <td><span class="parametername">itemID</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Genotype</span></td>
+        <td><span class="parametername">genotype</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -301,7 +333,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public event Action&lt;int&gt; onItemEntryClicked</code></pre>
+    <pre><code class="lang-csharp hljs">public event Action&lt;ushort&gt; onItemEntryClicked</code></pre>
   </div>
   <h5 class="eventType">Event Type</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -313,7 +345,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">UInt16</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>

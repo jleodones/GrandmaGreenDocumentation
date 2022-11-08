@@ -1131,12 +1131,12 @@ references:
   commentId: T:GrandmaGreen.Collections.Decor
   fullName: GrandmaGreen.Collections.Decor
   nameWithType: Decor
-- uid: GrandmaGreen.Collections.Decor.#ctor(System.Int32,System.String,System.Int32)
-  name: Decor(Int32, String, Int32)
-  href: api/GrandmaGreen.Collections.Decor.html#GrandmaGreen_Collections_Decor__ctor_System_Int32_System_String_System_Int32_
-  commentId: M:GrandmaGreen.Collections.Decor.#ctor(System.Int32,System.String,System.Int32)
-  fullName: GrandmaGreen.Collections.Decor.Decor(System.Int32, System.String, System.Int32)
-  nameWithType: Decor.Decor(Int32, String, Int32)
+- uid: GrandmaGreen.Collections.Decor.#ctor(System.UInt16,System.String,System.Int32)
+  name: Decor(UInt16, String, Int32)
+  href: api/GrandmaGreen.Collections.Decor.html#GrandmaGreen_Collections_Decor__ctor_System_UInt16_System_String_System_Int32_
+  commentId: M:GrandmaGreen.Collections.Decor.#ctor(System.UInt16,System.String,System.Int32)
+  fullName: GrandmaGreen.Collections.Decor.Decor(System.UInt16, System.String, System.Int32)
+  nameWithType: Decor.Decor(UInt16, String, Int32)
 - uid: GrandmaGreen.Collections.Decor.#ctor*
   name: Decor
   href: api/GrandmaGreen.Collections.Decor.html#GrandmaGreen_Collections_Decor__ctor_
@@ -2035,12 +2035,15 @@ references:
   commentId: T:GrandmaGreen.Collections.Plant
   fullName: GrandmaGreen.Collections.Plant
   nameWithType: Plant
-- uid: GrandmaGreen.Collections.Plant.#ctor(System.Int32,System.String,System.Int32,Trait)
-  name: Plant(Int32, String, Int32, Trait)
-  href: api/GrandmaGreen.Collections.Plant.html#GrandmaGreen_Collections_Plant__ctor_System_Int32_System_String_System_Int32_Trait_
-  commentId: M:GrandmaGreen.Collections.Plant.#ctor(System.Int32,System.String,System.Int32,Trait)
-  fullName: GrandmaGreen.Collections.Plant.Plant(System.Int32, System.String, System.Int32, Trait)
-  nameWithType: Plant.Plant(Int32, String, Int32, Trait)
+- uid: GrandmaGreen.Collections.Plant.#ctor(System.UInt16,System.String,System.Int32,System.Collections.Generic.List{Genotype})
+  name: Plant(UInt16, String, Int32, List<Genotype>)
+  href: api/GrandmaGreen.Collections.Plant.html#GrandmaGreen_Collections_Plant__ctor_System_UInt16_System_String_System_Int32_System_Collections_Generic_List_Genotype__
+  commentId: M:GrandmaGreen.Collections.Plant.#ctor(System.UInt16,System.String,System.Int32,System.Collections.Generic.List{Genotype})
+  name.vb: Plant(UInt16, String, Int32, List(Of Genotype))
+  fullName: GrandmaGreen.Collections.Plant.Plant(System.UInt16, System.String, System.Int32, System.Collections.Generic.List<Genotype>)
+  fullName.vb: GrandmaGreen.Collections.Plant.Plant(System.UInt16, System.String, System.Int32, System.Collections.Generic.List(Of Genotype))
+  nameWithType: Plant.Plant(UInt16, String, Int32, List<Genotype>)
+  nameWithType.vb: Plant.Plant(UInt16, String, Int32, List(Of Genotype))
 - uid: GrandmaGreen.Collections.Plant.#ctor*
   name: Plant
   href: api/GrandmaGreen.Collections.Plant.html#GrandmaGreen_Collections_Plant__ctor_
@@ -2061,6 +2064,12 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Collections.Plant.Equals
   nameWithType: Plant.Equals
+- uid: GrandmaGreen.Collections.Plant.genotypes
+  name: genotypes
+  href: api/GrandmaGreen.Collections.Plant.html#GrandmaGreen_Collections_Plant_genotypes
+  commentId: F:GrandmaGreen.Collections.Plant.genotypes
+  fullName: GrandmaGreen.Collections.Plant.genotypes
+  nameWithType: Plant.genotypes
 - uid: GrandmaGreen.Collections.Plant.GetQuantityToString
   name: GetQuantityToString()
   href: api/GrandmaGreen.Collections.Plant.html#GrandmaGreen_Collections_Plant_GetQuantityToString
@@ -2116,15 +2125,16 @@ references:
 - uid: GrandmaGreen.Collections.Plant.quantity
   name: quantity
   href: api/GrandmaGreen.Collections.Plant.html#GrandmaGreen_Collections_Plant_quantity
-  commentId: F:GrandmaGreen.Collections.Plant.quantity
+  commentId: P:GrandmaGreen.Collections.Plant.quantity
   fullName: GrandmaGreen.Collections.Plant.quantity
   nameWithType: Plant.quantity
-- uid: GrandmaGreen.Collections.Plant.trait
-  name: trait
-  href: api/GrandmaGreen.Collections.Plant.html#GrandmaGreen_Collections_Plant_trait
-  commentId: F:GrandmaGreen.Collections.Plant.trait
-  fullName: GrandmaGreen.Collections.Plant.trait
-  nameWithType: Plant.trait
+- uid: GrandmaGreen.Collections.Plant.quantity*
+  name: quantity
+  href: api/GrandmaGreen.Collections.Plant.html#GrandmaGreen_Collections_Plant_quantity_
+  commentId: Overload:GrandmaGreen.Collections.Plant.quantity
+  isSpec: "True"
+  fullName: GrandmaGreen.Collections.Plant.quantity
+  nameWithType: Plant.quantity
 - uid: GrandmaGreen.Collections.PlantId
   name: PlantId
   href: api/GrandmaGreen.Collections.PlantId.html
@@ -2305,12 +2315,15 @@ references:
   commentId: T:GrandmaGreen.Collections.Seed
   fullName: GrandmaGreen.Collections.Seed
   nameWithType: Seed
-- uid: GrandmaGreen.Collections.Seed.#ctor(System.Int32,System.String,System.Int32)
-  name: Seed(Int32, String, Int32)
-  href: api/GrandmaGreen.Collections.Seed.html#GrandmaGreen_Collections_Seed__ctor_System_Int32_System_String_System_Int32_
-  commentId: M:GrandmaGreen.Collections.Seed.#ctor(System.Int32,System.String,System.Int32)
-  fullName: GrandmaGreen.Collections.Seed.Seed(System.Int32, System.String, System.Int32)
-  nameWithType: Seed.Seed(Int32, String, Int32)
+- uid: GrandmaGreen.Collections.Seed.#ctor(System.UInt16,System.String,System.Collections.Generic.List{Genotype})
+  name: Seed(UInt16, String, List<Genotype>)
+  href: api/GrandmaGreen.Collections.Seed.html#GrandmaGreen_Collections_Seed__ctor_System_UInt16_System_String_System_Collections_Generic_List_Genotype__
+  commentId: M:GrandmaGreen.Collections.Seed.#ctor(System.UInt16,System.String,System.Collections.Generic.List{Genotype})
+  name.vb: Seed(UInt16, String, List(Of Genotype))
+  fullName: GrandmaGreen.Collections.Seed.Seed(System.UInt16, System.String, System.Collections.Generic.List<Genotype>)
+  fullName.vb: GrandmaGreen.Collections.Seed.Seed(System.UInt16, System.String, System.Collections.Generic.List(Of Genotype))
+  nameWithType: Seed.Seed(UInt16, String, List<Genotype>)
+  nameWithType.vb: Seed.Seed(UInt16, String, List(Of Genotype))
 - uid: GrandmaGreen.Collections.Seed.#ctor*
   name: Seed
   href: api/GrandmaGreen.Collections.Seed.html#GrandmaGreen_Collections_Seed__ctor_
@@ -2331,6 +2344,12 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Collections.Seed.Equals
   nameWithType: Seed.Equals
+- uid: GrandmaGreen.Collections.Seed.genotypes
+  name: genotypes
+  href: api/GrandmaGreen.Collections.Seed.html#GrandmaGreen_Collections_Seed_genotypes
+  commentId: F:GrandmaGreen.Collections.Seed.genotypes
+  fullName: GrandmaGreen.Collections.Seed.genotypes
+  nameWithType: Seed.genotypes
 - uid: GrandmaGreen.Collections.Seed.GetQuantityToString
   name: GetQuantityToString()
   href: api/GrandmaGreen.Collections.Seed.html#GrandmaGreen_Collections_Seed_GetQuantityToString
@@ -2386,7 +2405,14 @@ references:
 - uid: GrandmaGreen.Collections.Seed.quantity
   name: quantity
   href: api/GrandmaGreen.Collections.Seed.html#GrandmaGreen_Collections_Seed_quantity
-  commentId: F:GrandmaGreen.Collections.Seed.quantity
+  commentId: P:GrandmaGreen.Collections.Seed.quantity
+  fullName: GrandmaGreen.Collections.Seed.quantity
+  nameWithType: Seed.quantity
+- uid: GrandmaGreen.Collections.Seed.quantity*
+  name: quantity
+  href: api/GrandmaGreen.Collections.Seed.html#GrandmaGreen_Collections_Seed_quantity_
+  commentId: Overload:GrandmaGreen.Collections.Seed.quantity
+  isSpec: "True"
   fullName: GrandmaGreen.Collections.Seed.quantity
   nameWithType: Seed.quantity
 - uid: GrandmaGreen.Collections.SeedId
@@ -2527,12 +2553,12 @@ references:
   commentId: T:GrandmaGreen.Collections.Tool
   fullName: GrandmaGreen.Collections.Tool
   nameWithType: Tool
-- uid: GrandmaGreen.Collections.Tool.#ctor(System.Int32,System.String,System.Int32)
-  name: Tool(Int32, String, Int32)
-  href: api/GrandmaGreen.Collections.Tool.html#GrandmaGreen_Collections_Tool__ctor_System_Int32_System_String_System_Int32_
-  commentId: M:GrandmaGreen.Collections.Tool.#ctor(System.Int32,System.String,System.Int32)
-  fullName: GrandmaGreen.Collections.Tool.Tool(System.Int32, System.String, System.Int32)
-  nameWithType: Tool.Tool(Int32, String, Int32)
+- uid: GrandmaGreen.Collections.Tool.#ctor(System.UInt16,System.String,System.Int32)
+  name: Tool(UInt16, String, Int32)
+  href: api/GrandmaGreen.Collections.Tool.html#GrandmaGreen_Collections_Tool__ctor_System_UInt16_System_String_System_Int32_
+  commentId: M:GrandmaGreen.Collections.Tool.#ctor(System.UInt16,System.String,System.Int32)
+  fullName: GrandmaGreen.Collections.Tool.Tool(System.UInt16, System.String, System.Int32)
+  nameWithType: Tool.Tool(UInt16, String, Int32)
 - uid: GrandmaGreen.Collections.Tool.#ctor*
   name: Tool
   href: api/GrandmaGreen.Collections.Tool.html#GrandmaGreen_Collections_Tool__ctor_
@@ -4011,36 +4037,60 @@ references:
   commentId: E:GrandmaGreen.EventManager.EVENT_CLOSE_HUD
   fullName: GrandmaGreen.EventManager.EVENT_CLOSE_HUD
   nameWithType: EventManager.EVENT_CLOSE_HUD
+- uid: GrandmaGreen.EventManager.EVENT_CLOSE_HUD_ANIMATED
+  name: EVENT_CLOSE_HUD_ANIMATED
+  href: api/GrandmaGreen.EventManager.html#GrandmaGreen_EventManager_EVENT_CLOSE_HUD_ANIMATED
+  commentId: E:GrandmaGreen.EventManager.EVENT_CLOSE_HUD_ANIMATED
+  fullName: GrandmaGreen.EventManager.EVENT_CLOSE_HUD_ANIMATED
+  nameWithType: EventManager.EVENT_CLOSE_HUD_ANIMATED
 - uid: GrandmaGreen.EventManager.EVENT_GOLEM_SPAWN
   name: EVENT_GOLEM_SPAWN
   href: api/GrandmaGreen.EventManager.html#GrandmaGreen_EventManager_EVENT_GOLEM_SPAWN
   commentId: E:GrandmaGreen.EventManager.EVENT_GOLEM_SPAWN
   fullName: GrandmaGreen.EventManager.EVENT_GOLEM_SPAWN
   nameWithType: EventManager.EVENT_GOLEM_SPAWN
-- uid: GrandmaGreen.EventManager.EVENT_INVENTORY_ADD
-  name: EVENT_INVENTORY_ADD
-  href: api/GrandmaGreen.EventManager.html#GrandmaGreen_EventManager_EVENT_INVENTORY_ADD
-  commentId: E:GrandmaGreen.EventManager.EVENT_INVENTORY_ADD
-  fullName: GrandmaGreen.EventManager.EVENT_INVENTORY_ADD
-  nameWithType: EventManager.EVENT_INVENTORY_ADD
+- uid: GrandmaGreen.EventManager.EVENT_INVENTORY_ADD_PLANT_OR_SEED
+  name: EVENT_INVENTORY_ADD_PLANT_OR_SEED
+  href: api/GrandmaGreen.EventManager.html#GrandmaGreen_EventManager_EVENT_INVENTORY_ADD_PLANT_OR_SEED
+  commentId: E:GrandmaGreen.EventManager.EVENT_INVENTORY_ADD_PLANT_OR_SEED
+  fullName: GrandmaGreen.EventManager.EVENT_INVENTORY_ADD_PLANT_OR_SEED
+  nameWithType: EventManager.EVENT_INVENTORY_ADD_PLANT_OR_SEED
+- uid: GrandmaGreen.EventManager.EVENT_INVENTORY_ADD_TOOL_OR_DECOR
+  name: EVENT_INVENTORY_ADD_TOOL_OR_DECOR
+  href: api/GrandmaGreen.EventManager.html#GrandmaGreen_EventManager_EVENT_INVENTORY_ADD_TOOL_OR_DECOR
+  commentId: E:GrandmaGreen.EventManager.EVENT_INVENTORY_ADD_TOOL_OR_DECOR
+  fullName: GrandmaGreen.EventManager.EVENT_INVENTORY_ADD_TOOL_OR_DECOR
+  nameWithType: EventManager.EVENT_INVENTORY_ADD_TOOL_OR_DECOR
 - uid: GrandmaGreen.EventManager.EVENT_INVENTORY_OPEN
   name: EVENT_INVENTORY_OPEN
   href: api/GrandmaGreen.EventManager.html#GrandmaGreen_EventManager_EVENT_INVENTORY_OPEN
   commentId: E:GrandmaGreen.EventManager.EVENT_INVENTORY_OPEN
   fullName: GrandmaGreen.EventManager.EVENT_INVENTORY_OPEN
   nameWithType: EventManager.EVENT_INVENTORY_OPEN
-- uid: GrandmaGreen.EventManager.EVENT_INVENTORY_REMOVE
-  name: EVENT_INVENTORY_REMOVE
-  href: api/GrandmaGreen.EventManager.html#GrandmaGreen_EventManager_EVENT_INVENTORY_REMOVE
-  commentId: E:GrandmaGreen.EventManager.EVENT_INVENTORY_REMOVE
-  fullName: GrandmaGreen.EventManager.EVENT_INVENTORY_REMOVE
-  nameWithType: EventManager.EVENT_INVENTORY_REMOVE
+- uid: GrandmaGreen.EventManager.EVENT_INVENTORY_REMOVE_PLANT_OR_SEED
+  name: EVENT_INVENTORY_REMOVE_PLANT_OR_SEED
+  href: api/GrandmaGreen.EventManager.html#GrandmaGreen_EventManager_EVENT_INVENTORY_REMOVE_PLANT_OR_SEED
+  commentId: E:GrandmaGreen.EventManager.EVENT_INVENTORY_REMOVE_PLANT_OR_SEED
+  fullName: GrandmaGreen.EventManager.EVENT_INVENTORY_REMOVE_PLANT_OR_SEED
+  nameWithType: EventManager.EVENT_INVENTORY_REMOVE_PLANT_OR_SEED
+- uid: GrandmaGreen.EventManager.EVENT_INVENTORY_REMOVE_TOOL_OR_DECOR
+  name: EVENT_INVENTORY_REMOVE_TOOL_OR_DECOR
+  href: api/GrandmaGreen.EventManager.html#GrandmaGreen_EventManager_EVENT_INVENTORY_REMOVE_TOOL_OR_DECOR
+  commentId: E:GrandmaGreen.EventManager.EVENT_INVENTORY_REMOVE_TOOL_OR_DECOR
+  fullName: GrandmaGreen.EventManager.EVENT_INVENTORY_REMOVE_TOOL_OR_DECOR
+  nameWithType: EventManager.EVENT_INVENTORY_REMOVE_TOOL_OR_DECOR
 - uid: GrandmaGreen.EventManager.EVENT_OPEN_HUD
   name: EVENT_OPEN_HUD
   href: api/GrandmaGreen.EventManager.html#GrandmaGreen_EventManager_EVENT_OPEN_HUD
   commentId: E:GrandmaGreen.EventManager.EVENT_OPEN_HUD
   fullName: GrandmaGreen.EventManager.EVENT_OPEN_HUD
   nameWithType: EventManager.EVENT_OPEN_HUD
+- uid: GrandmaGreen.EventManager.EVENT_OPEN_HUD_ANIMATED
+  name: EVENT_OPEN_HUD_ANIMATED
+  href: api/GrandmaGreen.EventManager.html#GrandmaGreen_EventManager_EVENT_OPEN_HUD_ANIMATED
+  commentId: E:GrandmaGreen.EventManager.EVENT_OPEN_HUD_ANIMATED
+  fullName: GrandmaGreen.EventManager.EVENT_OPEN_HUD_ANIMATED
+  nameWithType: EventManager.EVENT_OPEN_HUD_ANIMATED
 - uid: GrandmaGreen.EventManager.EVENT_PLANT_UPDATE
   name: EVENT_PLANT_UPDATE
   href: api/GrandmaGreen.EventManager.html#GrandmaGreen_EventManager_EVENT_PLANT_UPDATE
@@ -4060,6 +4110,19 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.EventManager.HandleEVENT_CLOSE_HUD
   nameWithType: EventManager.HandleEVENT_CLOSE_HUD
+- uid: GrandmaGreen.EventManager.HandleEVENT_CLOSE_HUD_ANIMATED
+  name: HandleEVENT_CLOSE_HUD_ANIMATED()
+  href: api/GrandmaGreen.EventManager.html#GrandmaGreen_EventManager_HandleEVENT_CLOSE_HUD_ANIMATED
+  commentId: M:GrandmaGreen.EventManager.HandleEVENT_CLOSE_HUD_ANIMATED
+  fullName: GrandmaGreen.EventManager.HandleEVENT_CLOSE_HUD_ANIMATED()
+  nameWithType: EventManager.HandleEVENT_CLOSE_HUD_ANIMATED()
+- uid: GrandmaGreen.EventManager.HandleEVENT_CLOSE_HUD_ANIMATED*
+  name: HandleEVENT_CLOSE_HUD_ANIMATED
+  href: api/GrandmaGreen.EventManager.html#GrandmaGreen_EventManager_HandleEVENT_CLOSE_HUD_ANIMATED_
+  commentId: Overload:GrandmaGreen.EventManager.HandleEVENT_CLOSE_HUD_ANIMATED
+  isSpec: "True"
+  fullName: GrandmaGreen.EventManager.HandleEVENT_CLOSE_HUD_ANIMATED
+  nameWithType: EventManager.HandleEVENT_CLOSE_HUD_ANIMATED
 - uid: GrandmaGreen.EventManager.HandleEVENT_GOLEM_SPAWN(System.Int32,Vector3)
   name: HandleEVENT_GOLEM_SPAWN(Int32, Vector3)
   href: api/GrandmaGreen.EventManager.html#GrandmaGreen_EventManager_HandleEVENT_GOLEM_SPAWN_System_Int32_Vector3_
@@ -4073,19 +4136,32 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.EventManager.HandleEVENT_GOLEM_SPAWN
   nameWithType: EventManager.HandleEVENT_GOLEM_SPAWN
-- uid: GrandmaGreen.EventManager.HandleEVENT_INVENTORY_ADD(IInventoryItem,System.Int32)
-  name: HandleEVENT_INVENTORY_ADD(IInventoryItem, Int32)
-  href: api/GrandmaGreen.EventManager.html#GrandmaGreen_EventManager_HandleEVENT_INVENTORY_ADD_IInventoryItem_System_Int32_
-  commentId: M:GrandmaGreen.EventManager.HandleEVENT_INVENTORY_ADD(IInventoryItem,System.Int32)
-  fullName: GrandmaGreen.EventManager.HandleEVENT_INVENTORY_ADD(IInventoryItem, System.Int32)
-  nameWithType: EventManager.HandleEVENT_INVENTORY_ADD(IInventoryItem, Int32)
-- uid: GrandmaGreen.EventManager.HandleEVENT_INVENTORY_ADD*
-  name: HandleEVENT_INVENTORY_ADD
-  href: api/GrandmaGreen.EventManager.html#GrandmaGreen_EventManager_HandleEVENT_INVENTORY_ADD_
-  commentId: Overload:GrandmaGreen.EventManager.HandleEVENT_INVENTORY_ADD
+- uid: GrandmaGreen.EventManager.HandleEVENT_INVENTORY_ADD_PLANT_OR_SEED(IInventoryItem,Genotype)
+  name: HandleEVENT_INVENTORY_ADD_PLANT_OR_SEED(IInventoryItem, Genotype)
+  href: api/GrandmaGreen.EventManager.html#GrandmaGreen_EventManager_HandleEVENT_INVENTORY_ADD_PLANT_OR_SEED_IInventoryItem_Genotype_
+  commentId: M:GrandmaGreen.EventManager.HandleEVENT_INVENTORY_ADD_PLANT_OR_SEED(IInventoryItem,Genotype)
+  fullName: GrandmaGreen.EventManager.HandleEVENT_INVENTORY_ADD_PLANT_OR_SEED(IInventoryItem, Genotype)
+  nameWithType: EventManager.HandleEVENT_INVENTORY_ADD_PLANT_OR_SEED(IInventoryItem, Genotype)
+- uid: GrandmaGreen.EventManager.HandleEVENT_INVENTORY_ADD_PLANT_OR_SEED*
+  name: HandleEVENT_INVENTORY_ADD_PLANT_OR_SEED
+  href: api/GrandmaGreen.EventManager.html#GrandmaGreen_EventManager_HandleEVENT_INVENTORY_ADD_PLANT_OR_SEED_
+  commentId: Overload:GrandmaGreen.EventManager.HandleEVENT_INVENTORY_ADD_PLANT_OR_SEED
   isSpec: "True"
-  fullName: GrandmaGreen.EventManager.HandleEVENT_INVENTORY_ADD
-  nameWithType: EventManager.HandleEVENT_INVENTORY_ADD
+  fullName: GrandmaGreen.EventManager.HandleEVENT_INVENTORY_ADD_PLANT_OR_SEED
+  nameWithType: EventManager.HandleEVENT_INVENTORY_ADD_PLANT_OR_SEED
+- uid: GrandmaGreen.EventManager.HandleEVENT_INVENTORY_ADD_TOOL_OR_DECOR(IInventoryItem,System.Int32)
+  name: HandleEVENT_INVENTORY_ADD_TOOL_OR_DECOR(IInventoryItem, Int32)
+  href: api/GrandmaGreen.EventManager.html#GrandmaGreen_EventManager_HandleEVENT_INVENTORY_ADD_TOOL_OR_DECOR_IInventoryItem_System_Int32_
+  commentId: M:GrandmaGreen.EventManager.HandleEVENT_INVENTORY_ADD_TOOL_OR_DECOR(IInventoryItem,System.Int32)
+  fullName: GrandmaGreen.EventManager.HandleEVENT_INVENTORY_ADD_TOOL_OR_DECOR(IInventoryItem, System.Int32)
+  nameWithType: EventManager.HandleEVENT_INVENTORY_ADD_TOOL_OR_DECOR(IInventoryItem, Int32)
+- uid: GrandmaGreen.EventManager.HandleEVENT_INVENTORY_ADD_TOOL_OR_DECOR*
+  name: HandleEVENT_INVENTORY_ADD_TOOL_OR_DECOR
+  href: api/GrandmaGreen.EventManager.html#GrandmaGreen_EventManager_HandleEVENT_INVENTORY_ADD_TOOL_OR_DECOR_
+  commentId: Overload:GrandmaGreen.EventManager.HandleEVENT_INVENTORY_ADD_TOOL_OR_DECOR
+  isSpec: "True"
+  fullName: GrandmaGreen.EventManager.HandleEVENT_INVENTORY_ADD_TOOL_OR_DECOR
+  nameWithType: EventManager.HandleEVENT_INVENTORY_ADD_TOOL_OR_DECOR
 - uid: GrandmaGreen.EventManager.HandleEVENT_INVENTORY_OPEN
   name: HandleEVENT_INVENTORY_OPEN()
   href: api/GrandmaGreen.EventManager.html#GrandmaGreen_EventManager_HandleEVENT_INVENTORY_OPEN
@@ -4099,19 +4175,32 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.EventManager.HandleEVENT_INVENTORY_OPEN
   nameWithType: EventManager.HandleEVENT_INVENTORY_OPEN
-- uid: GrandmaGreen.EventManager.HandleEVENT_INVENTORY_REMOVE(IInventoryItem,System.Int32)
-  name: HandleEVENT_INVENTORY_REMOVE(IInventoryItem, Int32)
-  href: api/GrandmaGreen.EventManager.html#GrandmaGreen_EventManager_HandleEVENT_INVENTORY_REMOVE_IInventoryItem_System_Int32_
-  commentId: M:GrandmaGreen.EventManager.HandleEVENT_INVENTORY_REMOVE(IInventoryItem,System.Int32)
-  fullName: GrandmaGreen.EventManager.HandleEVENT_INVENTORY_REMOVE(IInventoryItem, System.Int32)
-  nameWithType: EventManager.HandleEVENT_INVENTORY_REMOVE(IInventoryItem, Int32)
-- uid: GrandmaGreen.EventManager.HandleEVENT_INVENTORY_REMOVE*
-  name: HandleEVENT_INVENTORY_REMOVE
-  href: api/GrandmaGreen.EventManager.html#GrandmaGreen_EventManager_HandleEVENT_INVENTORY_REMOVE_
-  commentId: Overload:GrandmaGreen.EventManager.HandleEVENT_INVENTORY_REMOVE
+- uid: GrandmaGreen.EventManager.HandleEVENT_INVENTORY_REMOVE_PLANT_OR_SEED(IInventoryItem,Genotype)
+  name: HandleEVENT_INVENTORY_REMOVE_PLANT_OR_SEED(IInventoryItem, Genotype)
+  href: api/GrandmaGreen.EventManager.html#GrandmaGreen_EventManager_HandleEVENT_INVENTORY_REMOVE_PLANT_OR_SEED_IInventoryItem_Genotype_
+  commentId: M:GrandmaGreen.EventManager.HandleEVENT_INVENTORY_REMOVE_PLANT_OR_SEED(IInventoryItem,Genotype)
+  fullName: GrandmaGreen.EventManager.HandleEVENT_INVENTORY_REMOVE_PLANT_OR_SEED(IInventoryItem, Genotype)
+  nameWithType: EventManager.HandleEVENT_INVENTORY_REMOVE_PLANT_OR_SEED(IInventoryItem, Genotype)
+- uid: GrandmaGreen.EventManager.HandleEVENT_INVENTORY_REMOVE_PLANT_OR_SEED*
+  name: HandleEVENT_INVENTORY_REMOVE_PLANT_OR_SEED
+  href: api/GrandmaGreen.EventManager.html#GrandmaGreen_EventManager_HandleEVENT_INVENTORY_REMOVE_PLANT_OR_SEED_
+  commentId: Overload:GrandmaGreen.EventManager.HandleEVENT_INVENTORY_REMOVE_PLANT_OR_SEED
   isSpec: "True"
-  fullName: GrandmaGreen.EventManager.HandleEVENT_INVENTORY_REMOVE
-  nameWithType: EventManager.HandleEVENT_INVENTORY_REMOVE
+  fullName: GrandmaGreen.EventManager.HandleEVENT_INVENTORY_REMOVE_PLANT_OR_SEED
+  nameWithType: EventManager.HandleEVENT_INVENTORY_REMOVE_PLANT_OR_SEED
+- uid: GrandmaGreen.EventManager.HandleEVENT_INVENTORY_REMOVE_TOOL_OR_DECOR(IInventoryItem,System.Int32)
+  name: HandleEVENT_INVENTORY_REMOVE_TOOL_OR_DECOR(IInventoryItem, Int32)
+  href: api/GrandmaGreen.EventManager.html#GrandmaGreen_EventManager_HandleEVENT_INVENTORY_REMOVE_TOOL_OR_DECOR_IInventoryItem_System_Int32_
+  commentId: M:GrandmaGreen.EventManager.HandleEVENT_INVENTORY_REMOVE_TOOL_OR_DECOR(IInventoryItem,System.Int32)
+  fullName: GrandmaGreen.EventManager.HandleEVENT_INVENTORY_REMOVE_TOOL_OR_DECOR(IInventoryItem, System.Int32)
+  nameWithType: EventManager.HandleEVENT_INVENTORY_REMOVE_TOOL_OR_DECOR(IInventoryItem, Int32)
+- uid: GrandmaGreen.EventManager.HandleEVENT_INVENTORY_REMOVE_TOOL_OR_DECOR*
+  name: HandleEVENT_INVENTORY_REMOVE_TOOL_OR_DECOR
+  href: api/GrandmaGreen.EventManager.html#GrandmaGreen_EventManager_HandleEVENT_INVENTORY_REMOVE_TOOL_OR_DECOR_
+  commentId: Overload:GrandmaGreen.EventManager.HandleEVENT_INVENTORY_REMOVE_TOOL_OR_DECOR
+  isSpec: "True"
+  fullName: GrandmaGreen.EventManager.HandleEVENT_INVENTORY_REMOVE_TOOL_OR_DECOR
+  nameWithType: EventManager.HandleEVENT_INVENTORY_REMOVE_TOOL_OR_DECOR
 - uid: GrandmaGreen.EventManager.HandleEVENT_OPEN_HUD
   name: HandleEVENT_OPEN_HUD()
   href: api/GrandmaGreen.EventManager.html#GrandmaGreen_EventManager_HandleEVENT_OPEN_HUD
@@ -4125,6 +4214,19 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.EventManager.HandleEVENT_OPEN_HUD
   nameWithType: EventManager.HandleEVENT_OPEN_HUD
+- uid: GrandmaGreen.EventManager.HandleEVENT_OPEN_HUD_ANIMATED
+  name: HandleEVENT_OPEN_HUD_ANIMATED()
+  href: api/GrandmaGreen.EventManager.html#GrandmaGreen_EventManager_HandleEVENT_OPEN_HUD_ANIMATED
+  commentId: M:GrandmaGreen.EventManager.HandleEVENT_OPEN_HUD_ANIMATED
+  fullName: GrandmaGreen.EventManager.HandleEVENT_OPEN_HUD_ANIMATED()
+  nameWithType: EventManager.HandleEVENT_OPEN_HUD_ANIMATED()
+- uid: GrandmaGreen.EventManager.HandleEVENT_OPEN_HUD_ANIMATED*
+  name: HandleEVENT_OPEN_HUD_ANIMATED
+  href: api/GrandmaGreen.EventManager.html#GrandmaGreen_EventManager_HandleEVENT_OPEN_HUD_ANIMATED_
+  commentId: Overload:GrandmaGreen.EventManager.HandleEVENT_OPEN_HUD_ANIMATED
+  isSpec: "True"
+  fullName: GrandmaGreen.EventManager.HandleEVENT_OPEN_HUD_ANIMATED
+  nameWithType: EventManager.HandleEVENT_OPEN_HUD_ANIMATED
 - uid: GrandmaGreen.EventManager.HandleEVENT_PLANT_UPDATE(System.Int32,Vector3Int)
   name: HandleEVENT_PLANT_UPDATE(Int32, Vector3Int)
   href: api/GrandmaGreen.EventManager.html#GrandmaGreen_EventManager_HandleEVENT_PLANT_UPDATE_System_Int32_Vector3Int_
@@ -4199,12 +4301,12 @@ references:
   commentId: T:GrandmaGreen.GameSystemDummy
   fullName: GrandmaGreen.GameSystemDummy
   nameWithType: GameSystemDummy
-- uid: GrandmaGreen.GameSystemDummy.AddToInventory(System.Int32,System.Int32,System.Int32)
-  name: AddToInventory(Int32, Int32, Int32)
-  href: api/GrandmaGreen.GameSystemDummy.html#GrandmaGreen_GameSystemDummy_AddToInventory_System_Int32_System_Int32_System_Int32_
-  commentId: M:GrandmaGreen.GameSystemDummy.AddToInventory(System.Int32,System.Int32,System.Int32)
-  fullName: GrandmaGreen.GameSystemDummy.AddToInventory(System.Int32, System.Int32, System.Int32)
-  nameWithType: GameSystemDummy.AddToInventory(Int32, Int32, Int32)
+- uid: GrandmaGreen.GameSystemDummy.AddToInventory(System.Int32,System.UInt16,System.Int32)
+  name: AddToInventory(Int32, UInt16, Int32)
+  href: api/GrandmaGreen.GameSystemDummy.html#GrandmaGreen_GameSystemDummy_AddToInventory_System_Int32_System_UInt16_System_Int32_
+  commentId: M:GrandmaGreen.GameSystemDummy.AddToInventory(System.Int32,System.UInt16,System.Int32)
+  fullName: GrandmaGreen.GameSystemDummy.AddToInventory(System.Int32, System.UInt16, System.Int32)
+  nameWithType: GameSystemDummy.AddToInventory(Int32, UInt16, Int32)
 - uid: GrandmaGreen.GameSystemDummy.AddToInventory*
   name: AddToInventory
   href: api/GrandmaGreen.GameSystemDummy.html#GrandmaGreen_GameSystemDummy_AddToInventory_
@@ -4225,12 +4327,12 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.GameSystemDummy.AddTrait
   nameWithType: GameSystemDummy.AddTrait
-- uid: GrandmaGreen.GameSystemDummy.RemoveFromInventory(System.Int32,System.Int32,System.Int32)
-  name: RemoveFromInventory(Int32, Int32, Int32)
-  href: api/GrandmaGreen.GameSystemDummy.html#GrandmaGreen_GameSystemDummy_RemoveFromInventory_System_Int32_System_Int32_System_Int32_
-  commentId: M:GrandmaGreen.GameSystemDummy.RemoveFromInventory(System.Int32,System.Int32,System.Int32)
-  fullName: GrandmaGreen.GameSystemDummy.RemoveFromInventory(System.Int32, System.Int32, System.Int32)
-  nameWithType: GameSystemDummy.RemoveFromInventory(Int32, Int32, Int32)
+- uid: GrandmaGreen.GameSystemDummy.RemoveFromInventory(System.Int32,System.UInt16,System.Int32)
+  name: RemoveFromInventory(Int32, UInt16, Int32)
+  href: api/GrandmaGreen.GameSystemDummy.html#GrandmaGreen_GameSystemDummy_RemoveFromInventory_System_Int32_System_UInt16_System_Int32_
+  commentId: M:GrandmaGreen.GameSystemDummy.RemoveFromInventory(System.Int32,System.UInt16,System.Int32)
+  fullName: GrandmaGreen.GameSystemDummy.RemoveFromInventory(System.Int32, System.UInt16, System.Int32)
+  nameWithType: GameSystemDummy.RemoveFromInventory(Int32, UInt16, Int32)
 - uid: GrandmaGreen.GameSystemDummy.RemoveFromInventory*
   name: RemoveFromInventory
   href: api/GrandmaGreen.GameSystemDummy.html#GrandmaGreen_GameSystemDummy_RemoveFromInventory_
@@ -5520,12 +5622,12 @@ references:
   commentId: F:GrandmaGreen.Garden.PlayerToolData.playerController
   fullName: GrandmaGreen.Garden.PlayerToolData.playerController
   nameWithType: PlayerToolData.playerController
-- uid: GrandmaGreen.Garden.PlayerToolData.SetEquippedSeed(System.Int32)
-  name: SetEquippedSeed(Int32)
-  href: api/GrandmaGreen.Garden.PlayerToolData.html#GrandmaGreen_Garden_PlayerToolData_SetEquippedSeed_System_Int32_
-  commentId: M:GrandmaGreen.Garden.PlayerToolData.SetEquippedSeed(System.Int32)
-  fullName: GrandmaGreen.Garden.PlayerToolData.SetEquippedSeed(System.Int32)
-  nameWithType: PlayerToolData.SetEquippedSeed(Int32)
+- uid: GrandmaGreen.Garden.PlayerToolData.SetEquippedSeed(System.UInt16,GrandmaGreen.Garden.Genotype)
+  name: SetEquippedSeed(UInt16, Genotype)
+  href: api/GrandmaGreen.Garden.PlayerToolData.html#GrandmaGreen_Garden_PlayerToolData_SetEquippedSeed_System_UInt16_GrandmaGreen_Garden_Genotype_
+  commentId: M:GrandmaGreen.Garden.PlayerToolData.SetEquippedSeed(System.UInt16,GrandmaGreen.Garden.Genotype)
+  fullName: GrandmaGreen.Garden.PlayerToolData.SetEquippedSeed(System.UInt16, GrandmaGreen.Garden.Genotype)
+  nameWithType: PlayerToolData.SetEquippedSeed(UInt16, Genotype)
 - uid: GrandmaGreen.Garden.PlayerToolData.SetEquippedSeed*
   name: SetEquippedSeed
   href: api/GrandmaGreen.Garden.PlayerToolData.html#GrandmaGreen_Garden_PlayerToolData_SetEquippedSeed_
@@ -6554,6 +6656,32 @@ references:
   commentId: T:GrandmaGreen.SaveSystem.ISaveLoader
   fullName: GrandmaGreen.SaveSystem.ISaveLoader
   nameWithType: ISaveLoader
+- uid: GrandmaGreen.SaveSystem.ISaveLoader.CreateDefaultSaveFile
+  name: CreateDefaultSaveFile()
+  href: api/GrandmaGreen.SaveSystem.ISaveLoader.html#GrandmaGreen_SaveSystem_ISaveLoader_CreateDefaultSaveFile
+  commentId: M:GrandmaGreen.SaveSystem.ISaveLoader.CreateDefaultSaveFile
+  fullName: GrandmaGreen.SaveSystem.ISaveLoader.CreateDefaultSaveFile()
+  nameWithType: ISaveLoader.CreateDefaultSaveFile()
+- uid: GrandmaGreen.SaveSystem.ISaveLoader.CreateDefaultSaveFile*
+  name: CreateDefaultSaveFile
+  href: api/GrandmaGreen.SaveSystem.ISaveLoader.html#GrandmaGreen_SaveSystem_ISaveLoader_CreateDefaultSaveFile_
+  commentId: Overload:GrandmaGreen.SaveSystem.ISaveLoader.CreateDefaultSaveFile
+  isSpec: "True"
+  fullName: GrandmaGreen.SaveSystem.ISaveLoader.CreateDefaultSaveFile
+  nameWithType: ISaveLoader.CreateDefaultSaveFile
+- uid: GrandmaGreen.SaveSystem.ISaveLoader.DeleteAllData
+  name: DeleteAllData()
+  href: api/GrandmaGreen.SaveSystem.ISaveLoader.html#GrandmaGreen_SaveSystem_ISaveLoader_DeleteAllData
+  commentId: M:GrandmaGreen.SaveSystem.ISaveLoader.DeleteAllData
+  fullName: GrandmaGreen.SaveSystem.ISaveLoader.DeleteAllData()
+  nameWithType: ISaveLoader.DeleteAllData()
+- uid: GrandmaGreen.SaveSystem.ISaveLoader.DeleteAllData*
+  name: DeleteAllData
+  href: api/GrandmaGreen.SaveSystem.ISaveLoader.html#GrandmaGreen_SaveSystem_ISaveLoader_DeleteAllData_
+  commentId: Overload:GrandmaGreen.SaveSystem.ISaveLoader.DeleteAllData
+  isSpec: "True"
+  fullName: GrandmaGreen.SaveSystem.ISaveLoader.DeleteAllData
+  nameWithType: ISaveLoader.DeleteAllData
 - uid: GrandmaGreen.SaveSystem.ISaveLoader.LoadAllData(System.Collections.Generic.List{GrandmaGreen.SaveSystem.ObjectSaver}@)
   name: LoadAllData(ref List<ObjectSaver>)
   href: api/GrandmaGreen.SaveSystem.ISaveLoader.html#GrandmaGreen_SaveSystem_ISaveLoader_LoadAllData_System_Collections_Generic_List_GrandmaGreen_SaveSystem_ObjectSaver___
@@ -6602,6 +6730,32 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.SaveSystem.JSONSaveLoader.JSONSaveLoader
   nameWithType: JSONSaveLoader.JSONSaveLoader
+- uid: GrandmaGreen.SaveSystem.JSONSaveLoader.CreateDefaultSaveFile
+  name: CreateDefaultSaveFile()
+  href: api/GrandmaGreen.SaveSystem.JSONSaveLoader.html#GrandmaGreen_SaveSystem_JSONSaveLoader_CreateDefaultSaveFile
+  commentId: M:GrandmaGreen.SaveSystem.JSONSaveLoader.CreateDefaultSaveFile
+  fullName: GrandmaGreen.SaveSystem.JSONSaveLoader.CreateDefaultSaveFile()
+  nameWithType: JSONSaveLoader.CreateDefaultSaveFile()
+- uid: GrandmaGreen.SaveSystem.JSONSaveLoader.CreateDefaultSaveFile*
+  name: CreateDefaultSaveFile
+  href: api/GrandmaGreen.SaveSystem.JSONSaveLoader.html#GrandmaGreen_SaveSystem_JSONSaveLoader_CreateDefaultSaveFile_
+  commentId: Overload:GrandmaGreen.SaveSystem.JSONSaveLoader.CreateDefaultSaveFile
+  isSpec: "True"
+  fullName: GrandmaGreen.SaveSystem.JSONSaveLoader.CreateDefaultSaveFile
+  nameWithType: JSONSaveLoader.CreateDefaultSaveFile
+- uid: GrandmaGreen.SaveSystem.JSONSaveLoader.DeleteAllData
+  name: DeleteAllData()
+  href: api/GrandmaGreen.SaveSystem.JSONSaveLoader.html#GrandmaGreen_SaveSystem_JSONSaveLoader_DeleteAllData
+  commentId: M:GrandmaGreen.SaveSystem.JSONSaveLoader.DeleteAllData
+  fullName: GrandmaGreen.SaveSystem.JSONSaveLoader.DeleteAllData()
+  nameWithType: JSONSaveLoader.DeleteAllData()
+- uid: GrandmaGreen.SaveSystem.JSONSaveLoader.DeleteAllData*
+  name: DeleteAllData
+  href: api/GrandmaGreen.SaveSystem.JSONSaveLoader.html#GrandmaGreen_SaveSystem_JSONSaveLoader_DeleteAllData_
+  commentId: Overload:GrandmaGreen.SaveSystem.JSONSaveLoader.DeleteAllData
+  isSpec: "True"
+  fullName: GrandmaGreen.SaveSystem.JSONSaveLoader.DeleteAllData
+  nameWithType: JSONSaveLoader.DeleteAllData
 - uid: GrandmaGreen.SaveSystem.JSONSaveLoader.LoadAllData(System.Collections.Generic.List{GrandmaGreen.SaveSystem.ObjectSaver}@)
   name: LoadAllData(ref List<ObjectSaver>)
   href: api/GrandmaGreen.SaveSystem.JSONSaveLoader.html#GrandmaGreen_SaveSystem_JSONSaveLoader_LoadAllData_System_Collections_Generic_List_GrandmaGreen_SaveSystem_ObjectSaver___
@@ -6809,6 +6963,32 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.SaveSystem.SaveController.AutoSave
   nameWithType: SaveController.AutoSave
+- uid: GrandmaGreen.SaveSystem.SaveController.CreateNewDefaultSaveFile
+  name: CreateNewDefaultSaveFile()
+  href: api/GrandmaGreen.SaveSystem.SaveController.html#GrandmaGreen_SaveSystem_SaveController_CreateNewDefaultSaveFile
+  commentId: M:GrandmaGreen.SaveSystem.SaveController.CreateNewDefaultSaveFile
+  fullName: GrandmaGreen.SaveSystem.SaveController.CreateNewDefaultSaveFile()
+  nameWithType: SaveController.CreateNewDefaultSaveFile()
+- uid: GrandmaGreen.SaveSystem.SaveController.CreateNewDefaultSaveFile*
+  name: CreateNewDefaultSaveFile
+  href: api/GrandmaGreen.SaveSystem.SaveController.html#GrandmaGreen_SaveSystem_SaveController_CreateNewDefaultSaveFile_
+  commentId: Overload:GrandmaGreen.SaveSystem.SaveController.CreateNewDefaultSaveFile
+  isSpec: "True"
+  fullName: GrandmaGreen.SaveSystem.SaveController.CreateNewDefaultSaveFile
+  nameWithType: SaveController.CreateNewDefaultSaveFile
+- uid: GrandmaGreen.SaveSystem.SaveController.DeleteAllData
+  name: DeleteAllData()
+  href: api/GrandmaGreen.SaveSystem.SaveController.html#GrandmaGreen_SaveSystem_SaveController_DeleteAllData
+  commentId: M:GrandmaGreen.SaveSystem.SaveController.DeleteAllData
+  fullName: GrandmaGreen.SaveSystem.SaveController.DeleteAllData()
+  nameWithType: SaveController.DeleteAllData()
+- uid: GrandmaGreen.SaveSystem.SaveController.DeleteAllData*
+  name: DeleteAllData
+  href: api/GrandmaGreen.SaveSystem.SaveController.html#GrandmaGreen_SaveSystem_SaveController_DeleteAllData_
+  commentId: Overload:GrandmaGreen.SaveSystem.SaveController.DeleteAllData
+  isSpec: "True"
+  fullName: GrandmaGreen.SaveSystem.SaveController.DeleteAllData
+  nameWithType: SaveController.DeleteAllData
 - uid: GrandmaGreen.SaveSystem.SaveController.toBeSaved
   name: toBeSaved
   href: api/GrandmaGreen.SaveSystem.SaveController.html#GrandmaGreen_SaveSystem_SaveController_toBeSaved
@@ -6834,6 +7014,32 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.SaveSystem.SaveManager.Awake
   nameWithType: SaveManager.Awake
+- uid: GrandmaGreen.SaveSystem.SaveManager.TriggerAddNewComponentToDefault(GrandmaGreen.SaveSystem.ObjectSaver)
+  name: TriggerAddNewComponentToDefault(ObjectSaver)
+  href: api/GrandmaGreen.SaveSystem.SaveManager.html#GrandmaGreen_SaveSystem_SaveManager_TriggerAddNewComponentToDefault_GrandmaGreen_SaveSystem_ObjectSaver_
+  commentId: M:GrandmaGreen.SaveSystem.SaveManager.TriggerAddNewComponentToDefault(GrandmaGreen.SaveSystem.ObjectSaver)
+  fullName: GrandmaGreen.SaveSystem.SaveManager.TriggerAddNewComponentToDefault(GrandmaGreen.SaveSystem.ObjectSaver)
+  nameWithType: SaveManager.TriggerAddNewComponentToDefault(ObjectSaver)
+- uid: GrandmaGreen.SaveSystem.SaveManager.TriggerAddNewComponentToDefault*
+  name: TriggerAddNewComponentToDefault
+  href: api/GrandmaGreen.SaveSystem.SaveManager.html#GrandmaGreen_SaveSystem_SaveManager_TriggerAddNewComponentToDefault_
+  commentId: Overload:GrandmaGreen.SaveSystem.SaveManager.TriggerAddNewComponentToDefault
+  isSpec: "True"
+  fullName: GrandmaGreen.SaveSystem.SaveManager.TriggerAddNewComponentToDefault
+  nameWithType: SaveManager.TriggerAddNewComponentToDefault
+- uid: GrandmaGreen.SaveSystem.SaveManager.TriggerDeleteAllData
+  name: TriggerDeleteAllData()
+  href: api/GrandmaGreen.SaveSystem.SaveManager.html#GrandmaGreen_SaveSystem_SaveManager_TriggerDeleteAllData
+  commentId: M:GrandmaGreen.SaveSystem.SaveManager.TriggerDeleteAllData
+  fullName: GrandmaGreen.SaveSystem.SaveManager.TriggerDeleteAllData()
+  nameWithType: SaveManager.TriggerDeleteAllData()
+- uid: GrandmaGreen.SaveSystem.SaveManager.TriggerDeleteAllData*
+  name: TriggerDeleteAllData
+  href: api/GrandmaGreen.SaveSystem.SaveManager.html#GrandmaGreen_SaveSystem_SaveManager_TriggerDeleteAllData_
+  commentId: Overload:GrandmaGreen.SaveSystem.SaveManager.TriggerDeleteAllData
+  isSpec: "True"
+  fullName: GrandmaGreen.SaveSystem.SaveManager.TriggerDeleteAllData
+  nameWithType: SaveManager.TriggerDeleteAllData
 - uid: GrandmaGreen.SaveSystem.SaveManager.TriggerSave
   name: TriggerSave()
   href: api/GrandmaGreen.SaveSystem.SaveManager.html#GrandmaGreen_SaveSystem_SaveManager_TriggerSave
@@ -7562,38 +7768,12 @@ references:
   commentId: T:GrandmaGreen.UI.Collections.TabbedInventory
   fullName: GrandmaGreen.UI.Collections.TabbedInventory
   nameWithType: TabbedInventory
-- uid: GrandmaGreen.UI.Collections.TabbedInventory.InventoryAdd(IInventoryItem,System.Int32)
-  name: InventoryAdd(IInventoryItem, Int32)
-  href: api/GrandmaGreen.UI.Collections.TabbedInventory.html#GrandmaGreen_UI_Collections_TabbedInventory_InventoryAdd_IInventoryItem_System_Int32_
-  commentId: M:GrandmaGreen.UI.Collections.TabbedInventory.InventoryAdd(IInventoryItem,System.Int32)
-  fullName: GrandmaGreen.UI.Collections.TabbedInventory.InventoryAdd(IInventoryItem, System.Int32)
-  nameWithType: TabbedInventory.InventoryAdd(IInventoryItem, Int32)
-- uid: GrandmaGreen.UI.Collections.TabbedInventory.InventoryAdd*
-  name: InventoryAdd
-  href: api/GrandmaGreen.UI.Collections.TabbedInventory.html#GrandmaGreen_UI_Collections_TabbedInventory_InventoryAdd_
-  commentId: Overload:GrandmaGreen.UI.Collections.TabbedInventory.InventoryAdd
-  isSpec: "True"
-  fullName: GrandmaGreen.UI.Collections.TabbedInventory.InventoryAdd
-  nameWithType: TabbedInventory.InventoryAdd
 - uid: GrandmaGreen.UI.Collections.TabbedInventory.inventoryData
   name: inventoryData
   href: api/GrandmaGreen.UI.Collections.TabbedInventory.html#GrandmaGreen_UI_Collections_TabbedInventory_inventoryData
   commentId: F:GrandmaGreen.UI.Collections.TabbedInventory.inventoryData
   fullName: GrandmaGreen.UI.Collections.TabbedInventory.inventoryData
   nameWithType: TabbedInventory.inventoryData
-- uid: GrandmaGreen.UI.Collections.TabbedInventory.InventoryRemove(IInventoryItem,System.Int32)
-  name: InventoryRemove(IInventoryItem, Int32)
-  href: api/GrandmaGreen.UI.Collections.TabbedInventory.html#GrandmaGreen_UI_Collections_TabbedInventory_InventoryRemove_IInventoryItem_System_Int32_
-  commentId: M:GrandmaGreen.UI.Collections.TabbedInventory.InventoryRemove(IInventoryItem,System.Int32)
-  fullName: GrandmaGreen.UI.Collections.TabbedInventory.InventoryRemove(IInventoryItem, System.Int32)
-  nameWithType: TabbedInventory.InventoryRemove(IInventoryItem, Int32)
-- uid: GrandmaGreen.UI.Collections.TabbedInventory.InventoryRemove*
-  name: InventoryRemove
-  href: api/GrandmaGreen.UI.Collections.TabbedInventory.html#GrandmaGreen_UI_Collections_TabbedInventory_InventoryRemove_
-  commentId: Overload:GrandmaGreen.UI.Collections.TabbedInventory.InventoryRemove
-  isSpec: "True"
-  fullName: GrandmaGreen.UI.Collections.TabbedInventory.InventoryRemove
-  nameWithType: TabbedInventory.InventoryRemove
 - uid: GrandmaGreen.UI.Collections.TabbedInventory.listEntryTemplate
   name: listEntryTemplate
   href: api/GrandmaGreen.UI.Collections.TabbedInventory.html#GrandmaGreen_UI_Collections_TabbedInventory_listEntryTemplate
@@ -7666,12 +7846,12 @@ references:
   commentId: E:GrandmaGreen.UI.Collections.TabbedInventoryController.onItemEntryClicked
   fullName: GrandmaGreen.UI.Collections.TabbedInventoryController.onItemEntryClicked
   nameWithType: TabbedInventoryController.onItemEntryClicked
-- uid: GrandmaGreen.UI.Collections.TabbedInventoryController.OnItemEntryClicked(System.Int32)
-  name: OnItemEntryClicked(Int32)
-  href: api/GrandmaGreen.UI.Collections.TabbedInventoryController.html#GrandmaGreen_UI_Collections_TabbedInventoryController_OnItemEntryClicked_System_Int32_
-  commentId: M:GrandmaGreen.UI.Collections.TabbedInventoryController.OnItemEntryClicked(System.Int32)
-  fullName: GrandmaGreen.UI.Collections.TabbedInventoryController.OnItemEntryClicked(System.Int32)
-  nameWithType: TabbedInventoryController.OnItemEntryClicked(Int32)
+- uid: GrandmaGreen.UI.Collections.TabbedInventoryController.OnItemEntryClicked(System.UInt16)
+  name: OnItemEntryClicked(UInt16)
+  href: api/GrandmaGreen.UI.Collections.TabbedInventoryController.html#GrandmaGreen_UI_Collections_TabbedInventoryController_OnItemEntryClicked_System_UInt16_
+  commentId: M:GrandmaGreen.UI.Collections.TabbedInventoryController.OnItemEntryClicked(System.UInt16)
+  fullName: GrandmaGreen.UI.Collections.TabbedInventoryController.OnItemEntryClicked(System.UInt16)
+  nameWithType: TabbedInventoryController.OnItemEntryClicked(UInt16)
 - uid: GrandmaGreen.UI.Collections.TabbedInventoryController.OnItemEntryClicked*
   name: OnItemEntryClicked
   href: api/GrandmaGreen.UI.Collections.TabbedInventoryController.html#GrandmaGreen_UI_Collections_TabbedInventoryController_OnItemEntryClicked_
@@ -7679,6 +7859,19 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.UI.Collections.TabbedInventoryController.OnItemEntryClicked
   nameWithType: TabbedInventoryController.OnItemEntryClicked
+- uid: GrandmaGreen.UI.Collections.TabbedInventoryController.OnSeedEntryClicked(System.UInt16,Genotype)
+  name: OnSeedEntryClicked(UInt16, Genotype)
+  href: api/GrandmaGreen.UI.Collections.TabbedInventoryController.html#GrandmaGreen_UI_Collections_TabbedInventoryController_OnSeedEntryClicked_System_UInt16_Genotype_
+  commentId: M:GrandmaGreen.UI.Collections.TabbedInventoryController.OnSeedEntryClicked(System.UInt16,Genotype)
+  fullName: GrandmaGreen.UI.Collections.TabbedInventoryController.OnSeedEntryClicked(System.UInt16, Genotype)
+  nameWithType: TabbedInventoryController.OnSeedEntryClicked(UInt16, Genotype)
+- uid: GrandmaGreen.UI.Collections.TabbedInventoryController.OnSeedEntryClicked*
+  name: OnSeedEntryClicked
+  href: api/GrandmaGreen.UI.Collections.TabbedInventoryController.html#GrandmaGreen_UI_Collections_TabbedInventoryController_OnSeedEntryClicked_
+  commentId: Overload:GrandmaGreen.UI.Collections.TabbedInventoryController.OnSeedEntryClicked
+  isSpec: "True"
+  fullName: GrandmaGreen.UI.Collections.TabbedInventoryController.OnSeedEntryClicked
+  nameWithType: TabbedInventoryController.OnSeedEntryClicked
 - uid: GrandmaGreen.UI.Collections.TabbedInventoryController.OpenInventory
   name: OpenInventory()
   href: api/GrandmaGreen.UI.Collections.TabbedInventoryController.html#GrandmaGreen_UI_Collections_TabbedInventoryController_OpenInventory
@@ -7756,15 +7949,15 @@ references:
   commentId: T:GrandmaGreen.UI.Collections.TabbedInventoryItemController
   fullName: GrandmaGreen.UI.Collections.TabbedInventoryItemController
   nameWithType: TabbedInventoryItemController
-- uid: GrandmaGreen.UI.Collections.TabbedInventoryItemController.#ctor(Button,System.Action{System.Int32})
-  name: TabbedInventoryItemController(Button, Action<Int32>)
-  href: api/GrandmaGreen.UI.Collections.TabbedInventoryItemController.html#GrandmaGreen_UI_Collections_TabbedInventoryItemController__ctor_Button_System_Action_System_Int32__
-  commentId: M:GrandmaGreen.UI.Collections.TabbedInventoryItemController.#ctor(Button,System.Action{System.Int32})
-  name.vb: TabbedInventoryItemController(Button, Action(Of Int32))
-  fullName: GrandmaGreen.UI.Collections.TabbedInventoryItemController.TabbedInventoryItemController(Button, System.Action<System.Int32>)
-  fullName.vb: GrandmaGreen.UI.Collections.TabbedInventoryItemController.TabbedInventoryItemController(Button, System.Action(Of System.Int32))
-  nameWithType: TabbedInventoryItemController.TabbedInventoryItemController(Button, Action<Int32>)
-  nameWithType.vb: TabbedInventoryItemController.TabbedInventoryItemController(Button, Action(Of Int32))
+- uid: GrandmaGreen.UI.Collections.TabbedInventoryItemController.#ctor(Button,System.Action{System.UInt16})
+  name: TabbedInventoryItemController(Button, Action<UInt16>)
+  href: api/GrandmaGreen.UI.Collections.TabbedInventoryItemController.html#GrandmaGreen_UI_Collections_TabbedInventoryItemController__ctor_Button_System_Action_System_UInt16__
+  commentId: M:GrandmaGreen.UI.Collections.TabbedInventoryItemController.#ctor(Button,System.Action{System.UInt16})
+  name.vb: TabbedInventoryItemController(Button, Action(Of UInt16))
+  fullName: GrandmaGreen.UI.Collections.TabbedInventoryItemController.TabbedInventoryItemController(Button, System.Action<System.UInt16>)
+  fullName.vb: GrandmaGreen.UI.Collections.TabbedInventoryItemController.TabbedInventoryItemController(Button, System.Action(Of System.UInt16))
+  nameWithType: TabbedInventoryItemController.TabbedInventoryItemController(Button, Action<UInt16>)
+  nameWithType.vb: TabbedInventoryItemController.TabbedInventoryItemController(Button, Action(Of UInt16))
 - uid: GrandmaGreen.UI.Collections.TabbedInventoryItemController.#ctor*
   name: TabbedInventoryItemController
   href: api/GrandmaGreen.UI.Collections.TabbedInventoryItemController.html#GrandmaGreen_UI_Collections_TabbedInventoryItemController__ctor_
@@ -7785,6 +7978,41 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.UI.Collections.TabbedInventoryItemController.SetInventoryData
   nameWithType: TabbedInventoryItemController.SetInventoryData
+- uid: GrandmaGreen.UI.Collections.TabbedInventorySeedItemController
+  name: TabbedInventorySeedItemController
+  href: api/GrandmaGreen.UI.Collections.TabbedInventorySeedItemController.html
+  commentId: T:GrandmaGreen.UI.Collections.TabbedInventorySeedItemController
+  fullName: GrandmaGreen.UI.Collections.TabbedInventorySeedItemController
+  nameWithType: TabbedInventorySeedItemController
+- uid: GrandmaGreen.UI.Collections.TabbedInventorySeedItemController.#ctor(Button,System.Action{System.UInt16,Genotype})
+  name: TabbedInventorySeedItemController(Button, Action<UInt16, Genotype>)
+  href: api/GrandmaGreen.UI.Collections.TabbedInventorySeedItemController.html#GrandmaGreen_UI_Collections_TabbedInventorySeedItemController__ctor_Button_System_Action_System_UInt16_Genotype__
+  commentId: M:GrandmaGreen.UI.Collections.TabbedInventorySeedItemController.#ctor(Button,System.Action{System.UInt16,Genotype})
+  name.vb: TabbedInventorySeedItemController(Button, Action(Of UInt16, Genotype))
+  fullName: GrandmaGreen.UI.Collections.TabbedInventorySeedItemController.TabbedInventorySeedItemController(Button, System.Action<System.UInt16, Genotype>)
+  fullName.vb: GrandmaGreen.UI.Collections.TabbedInventorySeedItemController.TabbedInventorySeedItemController(Button, System.Action(Of System.UInt16, Genotype))
+  nameWithType: TabbedInventorySeedItemController.TabbedInventorySeedItemController(Button, Action<UInt16, Genotype>)
+  nameWithType.vb: TabbedInventorySeedItemController.TabbedInventorySeedItemController(Button, Action(Of UInt16, Genotype))
+- uid: GrandmaGreen.UI.Collections.TabbedInventorySeedItemController.#ctor*
+  name: TabbedInventorySeedItemController
+  href: api/GrandmaGreen.UI.Collections.TabbedInventorySeedItemController.html#GrandmaGreen_UI_Collections_TabbedInventorySeedItemController__ctor_
+  commentId: Overload:GrandmaGreen.UI.Collections.TabbedInventorySeedItemController.#ctor
+  isSpec: "True"
+  fullName: GrandmaGreen.UI.Collections.TabbedInventorySeedItemController.TabbedInventorySeedItemController
+  nameWithType: TabbedInventorySeedItemController.TabbedInventorySeedItemController
+- uid: GrandmaGreen.UI.Collections.TabbedInventorySeedItemController.SetInventoryData(IInventoryItem)
+  name: SetInventoryData(IInventoryItem)
+  href: api/GrandmaGreen.UI.Collections.TabbedInventorySeedItemController.html#GrandmaGreen_UI_Collections_TabbedInventorySeedItemController_SetInventoryData_IInventoryItem_
+  commentId: M:GrandmaGreen.UI.Collections.TabbedInventorySeedItemController.SetInventoryData(IInventoryItem)
+  fullName: GrandmaGreen.UI.Collections.TabbedInventorySeedItemController.SetInventoryData(IInventoryItem)
+  nameWithType: TabbedInventorySeedItemController.SetInventoryData(IInventoryItem)
+- uid: GrandmaGreen.UI.Collections.TabbedInventorySeedItemController.SetInventoryData*
+  name: SetInventoryData
+  href: api/GrandmaGreen.UI.Collections.TabbedInventorySeedItemController.html#GrandmaGreen_UI_Collections_TabbedInventorySeedItemController_SetInventoryData_
+  commentId: Overload:GrandmaGreen.UI.Collections.TabbedInventorySeedItemController.SetInventoryData
+  isSpec: "True"
+  fullName: GrandmaGreen.UI.Collections.TabbedInventorySeedItemController.SetInventoryData
+  nameWithType: TabbedInventorySeedItemController.SetInventoryData
 - uid: GrandmaGreen.UI.Golems
   name: GrandmaGreen.UI.Golems
   href: api/GrandmaGreen.UI.Golems.html
@@ -7886,6 +8114,19 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.UI.HUD.HUD.CloseHUD
   nameWithType: HUD.CloseHUD
+- uid: GrandmaGreen.UI.HUD.HUD.CloseHUDAnimated
+  name: CloseHUDAnimated()
+  href: api/GrandmaGreen.UI.HUD.HUD.html#GrandmaGreen_UI_HUD_HUD_CloseHUDAnimated
+  commentId: M:GrandmaGreen.UI.HUD.HUD.CloseHUDAnimated
+  fullName: GrandmaGreen.UI.HUD.HUD.CloseHUDAnimated()
+  nameWithType: HUD.CloseHUDAnimated()
+- uid: GrandmaGreen.UI.HUD.HUD.CloseHUDAnimated*
+  name: CloseHUDAnimated
+  href: api/GrandmaGreen.UI.HUD.HUD.html#GrandmaGreen_UI_HUD_HUD_CloseHUDAnimated_
+  commentId: Overload:GrandmaGreen.UI.HUD.HUD.CloseHUDAnimated
+  isSpec: "True"
+  fullName: GrandmaGreen.UI.HUD.HUD.CloseHUDAnimated
+  nameWithType: HUD.CloseHUDAnimated
 - uid: GrandmaGreen.UI.HUD.HUD.inventory
   name: inventory
   href: api/GrandmaGreen.UI.HUD.HUD.html#GrandmaGreen_UI_HUD_HUD_inventory
@@ -7905,6 +8146,19 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.UI.HUD.HUD.OpenHUD
   nameWithType: HUD.OpenHUD
+- uid: GrandmaGreen.UI.HUD.HUD.OpenHUDAnimated
+  name: OpenHUDAnimated()
+  href: api/GrandmaGreen.UI.HUD.HUD.html#GrandmaGreen_UI_HUD_HUD_OpenHUDAnimated
+  commentId: M:GrandmaGreen.UI.HUD.HUD.OpenHUDAnimated
+  fullName: GrandmaGreen.UI.HUD.HUD.OpenHUDAnimated()
+  nameWithType: HUD.OpenHUDAnimated()
+- uid: GrandmaGreen.UI.HUD.HUD.OpenHUDAnimated*
+  name: OpenHUDAnimated
+  href: api/GrandmaGreen.UI.HUD.HUD.html#GrandmaGreen_UI_HUD_HUD_OpenHUDAnimated_
+  commentId: Overload:GrandmaGreen.UI.HUD.HUD.OpenHUDAnimated
+  isSpec: "True"
+  fullName: GrandmaGreen.UI.HUD.HUD.OpenHUDAnimated
+  nameWithType: HUD.OpenHUDAnimated
 - uid: GrandmaGreen.UI.HUD.HUDController
   name: HUDController
   href: api/GrandmaGreen.UI.HUD.HUDController.html
@@ -7950,6 +8204,19 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.UI.HUD.HUDController.CloseHUD
   nameWithType: HUDController.CloseHUD
+- uid: GrandmaGreen.UI.HUD.HUDController.CloseHUDAnimated
+  name: CloseHUDAnimated()
+  href: api/GrandmaGreen.UI.HUD.HUDController.html#GrandmaGreen_UI_HUD_HUDController_CloseHUDAnimated
+  commentId: M:GrandmaGreen.UI.HUD.HUDController.CloseHUDAnimated
+  fullName: GrandmaGreen.UI.HUD.HUDController.CloseHUDAnimated()
+  nameWithType: HUDController.CloseHUDAnimated()
+- uid: GrandmaGreen.UI.HUD.HUDController.CloseHUDAnimated*
+  name: CloseHUDAnimated
+  href: api/GrandmaGreen.UI.HUD.HUDController.html#GrandmaGreen_UI_HUD_HUDController_CloseHUDAnimated_
+  commentId: Overload:GrandmaGreen.UI.HUD.HUDController.CloseHUDAnimated
+  isSpec: "True"
+  fullName: GrandmaGreen.UI.HUD.HUDController.CloseHUDAnimated
+  nameWithType: HUDController.CloseHUDAnimated
 - uid: GrandmaGreen.UI.HUD.HUDController.InventoryOnClick(ClickEvent)
   name: InventoryOnClick(ClickEvent)
   href: api/GrandmaGreen.UI.HUD.HUDController.html#GrandmaGreen_UI_HUD_HUDController_InventoryOnClick_ClickEvent_
