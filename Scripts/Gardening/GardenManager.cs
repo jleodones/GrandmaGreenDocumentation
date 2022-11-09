@@ -10,6 +10,7 @@ namespace GrandmaGreen.Garden
     public struct PlantState
     {
         public PlantId type;
+        public Genotype genotype;
         public int growthStage;
         public float timePlanted;
         public Vector3Int cell;
@@ -60,12 +61,13 @@ namespace GrandmaGreen.Garden
             return !plantLookup[areaIndex].ContainsKey(cell);
         }
 
-        public void CreatePlant(PlantId type, int areaIndex, Vector3Int cell)
+        public void CreatePlant(PlantId type, Genotype genotype, int growthStage, int areaIndex, Vector3Int cell)
         {
             plantLookup[areaIndex][cell] = new PlantState
             {
                 type = type,
-                growthStage = 0,
+                genotype = genotype,
+                growthStage = growthStage,
                 timePlanted = Time.time,
                 cell = cell,
 
@@ -117,6 +119,15 @@ namespace GrandmaGreen.Garden
             return -1;
         }
 
+        public Genotype GetGenotype(int areaIndex, Vector3Int cell)
+        {
+	        if (!IsEmpty(areaIndex, cell))
+            {
+                return plantLookup[areaIndex][cell].genotype;
+	        }
+            return new Genotype(); 
+	    }
+
         public void IncrementGrowthStage(int areaIndex, Vector3Int cell)
         {
             if (!IsEmpty(areaIndex, cell))
@@ -128,6 +139,7 @@ namespace GrandmaGreen.Garden
                     growthStage = plant.growthStage < p.growthStages - 1 ?
                         plant.growthStage + 1 : p.growthStages - 1,
                     type = plant.type,
+                    genotype = plant.genotype,
                     timePlanted = plant.timePlanted,
                     cell = plant.cell
                 };
@@ -213,6 +225,34 @@ namespace GrandmaGreen.Garden
             return fertilizeSuccessful;
         }
 
+        public bool PlantIsFullyGrown(int areaIndex, Vector3Int cell)
+        {
+            PlantState plant = GetPlant(areaIndex, cell);
+            PlantProperties properties = collection.GetPlant(plant.type);
+            return plant.growthStage == properties.growthStages - 1;
+        }
+
+        public bool PlantIsDry(int areaIndex, Vector3Int cell)
+        {
+            PlantState plant = GetPlant(areaIndex, cell);
+            PlantProperties properties = collection.GetPlant(plant.type);
+            return plant.waterTimer <= -1 * properties.growthTime
+                && plant.waterTimer > -2 * properties.growthTime;
+        }
+
+        public bool PlantIsDead(int areaIndex, Vector3Int cell)
+        {
+            PlantState plant = GetPlant(areaIndex, cell);
+            PlantProperties properties = collection.GetPlant(plant.type);
+            return plant.waterTimer <= -2 * properties.growthTime;
+        }
+
+        public bool PlantIsBreedable(int areaIndex, Vector3Int cell)
+        {
+            if (PlantIsFullyGrown(areaIndex, cell)) return true;
+            else return !(PlantIsDry(areaIndex, cell) || PlantIsDead(areaIndex, cell));
+	    }
+
         public int NumSeedDrops(int areaIndex, Vector3Int cell)
         {
             PlantState plant = GetPlant(areaIndex, cell);
@@ -239,7 +279,6 @@ namespace GrandmaGreen.Garden
                 tileIndex=tileIndex
             });
         }
-
     }
 }
 

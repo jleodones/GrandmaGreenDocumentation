@@ -24,7 +24,8 @@ namespace GrandmaGreen.Garden
 
         public bool toolSelectionActive = false;
         
-        public SeedId equippedSeed; 
+        public SeedId equippedSeed;
+        public Genotype equippedSeedGenotype;
 
         public void ToggleToolSelection()
         {
@@ -80,6 +81,7 @@ namespace GrandmaGreen.Garden
         public void SetEquippedSeed(ushort plantIndex, Genotype genotype)
         {
             equippedSeed = (SeedId) plantIndex;
+            equippedSeedGenotype = genotype;
         }
 
         public void SetToolAction(TileData tile, Vector3Int cell, GardenAreaController area)
@@ -91,7 +93,8 @@ namespace GrandmaGreen.Garden
                 tile = tile,
                 gridcell = cell,
                 area = area,
-                seedType = equippedSeed
+                seedType = equippedSeed,
+                seedGenotype = equippedSeedGenotype
             };
         }
 

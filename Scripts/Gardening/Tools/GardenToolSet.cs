@@ -13,6 +13,7 @@ namespace GrandmaGreen.Garden
         public Vector3Int gridcell;
         public GardenAreaController area;
         public SeedId seedType;
+        public Genotype seedGenotype;
     }
 
 
@@ -69,7 +70,7 @@ namespace GrandmaGreen.Garden
             }
             else if (action.tile.occupied)
             {
-                if (action.area.HarvestPlantOnCell(action.gridcell))
+                if (action.area.HarvestPlant(action.gridcell))
                     action.tool.toolSFX[2].Play();
 
                 action.area.ChangeGardenTileToPlot_Empty(action.gridcell);
@@ -89,7 +90,7 @@ namespace GrandmaGreen.Garden
             // Placing the Plant Prefab on a tile and setting the Tile to "Occupied Plot Tile"
             if (action.tile.plantable && action.seedType != 0)
             {
-                action.area.CreatePlant(action.seedType, action.gridcell); 
+                action.area.CreatePlant(action.seedType, action.seedGenotype, action.gridcell); 
                 action.area.ChangeGardenTileToPlot_Occupied(action.gridcell);
                 action.tool.toolSFX[0].Play();
             }

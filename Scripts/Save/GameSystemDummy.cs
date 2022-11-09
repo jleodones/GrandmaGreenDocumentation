@@ -13,14 +13,14 @@ namespace GrandmaGreen {
         [Button(ButtonSizes.Medium)]
         public void AddTrait()
         {
-            Allele[] arr = {(Allele) 1, (Allele) 0};
-            var rand = new System.Random();
+            //Allele[] arr = {(Allele) 1, (Allele) 0};
+            //var rand = new System.Random();
 
-            Trait t;
-            t.allele1 = arr[rand.Next() % 2];
-            t.allele2 = arr[rand.Next() % 2];
+            //Trait t;
+            //t.allele1 = arr[rand.Next() % 2];
+            //t.allele2 = arr[rand.Next() % 2];
 
-            m_objectSavers[0].AddComponent<Trait>(-1, t);
+            //m_objectSavers[0].AddComponent<Trait>(-1, t);
         }
 
         [Button()]
