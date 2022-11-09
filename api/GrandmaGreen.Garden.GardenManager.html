@@ -153,12 +153,12 @@
   
   
   <a id="GrandmaGreen_Garden_GardenManager_CreatePlant_" data-uid="GrandmaGreen.Garden.GardenManager.CreatePlant*"></a>
-  <h4 id="GrandmaGreen_Garden_GardenManager_CreatePlant_PlantId_System_Int32_Vector3Int_" data-uid="GrandmaGreen.Garden.GardenManager.CreatePlant(PlantId,System.Int32,Vector3Int)">CreatePlant(PlantId, Int32, Vector3Int)</h4>
+  <h4 id="GrandmaGreen_Garden_GardenManager_CreatePlant_PlantId_GrandmaGreen_Garden_Genotype_System_Int32_System_Int32_Vector3Int_" data-uid="GrandmaGreen.Garden.GardenManager.CreatePlant(PlantId,GrandmaGreen.Garden.Genotype,System.Int32,System.Int32,Vector3Int)">CreatePlant(PlantId, Genotype, Int32, Int32, Vector3Int)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void CreatePlant(PlantId type, int areaIndex, Vector3Int cell)</code></pre>
+    <pre><code class="lang-csharp hljs">public void CreatePlant(PlantId type, Genotype genotype, int growthStage, int areaIndex, Vector3Int cell)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -173,6 +173,16 @@
       <tr>
         <td><span class="xref">PlantId</span></td>
         <td><span class="parametername">type</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="GrandmaGreen.Garden.Genotype.html">Genotype</a></td>
+        <td><span class="parametername">genotype</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">growthStage</span></td>
         <td></td>
       </tr>
       <tr>
@@ -252,6 +262,53 @@
       <tr>
         <td><span class="xref">Vector3Int</span></td>
         <td><span class="parametername">cell</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="GrandmaGreen_Garden_GardenManager_GetGenotype_" data-uid="GrandmaGreen.Garden.GardenManager.GetGenotype*"></a>
+  <h4 id="GrandmaGreen_Garden_GardenManager_GetGenotype_System_Int32_Vector3Int_" data-uid="GrandmaGreen.Garden.GardenManager.GetGenotype(System.Int32,Vector3Int)">GetGenotype(Int32, Vector3Int)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Genotype GetGenotype(int areaIndex, Vector3Int cell)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">areaIndex</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Vector3Int</span></td>
+        <td><span class="parametername">cell</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="GrandmaGreen.Garden.Genotype.html">Genotype</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -613,6 +670,194 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="GrandmaGreen_Garden_GardenManager_PlantIsBreedable_" data-uid="GrandmaGreen.Garden.GardenManager.PlantIsBreedable*"></a>
+  <h4 id="GrandmaGreen_Garden_GardenManager_PlantIsBreedable_System_Int32_Vector3Int_" data-uid="GrandmaGreen.Garden.GardenManager.PlantIsBreedable(System.Int32,Vector3Int)">PlantIsBreedable(Int32, Vector3Int)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool PlantIsBreedable(int areaIndex, Vector3Int cell)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">areaIndex</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Vector3Int</span></td>
+        <td><span class="parametername">cell</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="GrandmaGreen_Garden_GardenManager_PlantIsDead_" data-uid="GrandmaGreen.Garden.GardenManager.PlantIsDead*"></a>
+  <h4 id="GrandmaGreen_Garden_GardenManager_PlantIsDead_System_Int32_Vector3Int_" data-uid="GrandmaGreen.Garden.GardenManager.PlantIsDead(System.Int32,Vector3Int)">PlantIsDead(Int32, Vector3Int)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool PlantIsDead(int areaIndex, Vector3Int cell)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">areaIndex</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Vector3Int</span></td>
+        <td><span class="parametername">cell</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="GrandmaGreen_Garden_GardenManager_PlantIsDry_" data-uid="GrandmaGreen.Garden.GardenManager.PlantIsDry*"></a>
+  <h4 id="GrandmaGreen_Garden_GardenManager_PlantIsDry_System_Int32_Vector3Int_" data-uid="GrandmaGreen.Garden.GardenManager.PlantIsDry(System.Int32,Vector3Int)">PlantIsDry(Int32, Vector3Int)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool PlantIsDry(int areaIndex, Vector3Int cell)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">areaIndex</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Vector3Int</span></td>
+        <td><span class="parametername">cell</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="GrandmaGreen_Garden_GardenManager_PlantIsFullyGrown_" data-uid="GrandmaGreen.Garden.GardenManager.PlantIsFullyGrown*"></a>
+  <h4 id="GrandmaGreen_Garden_GardenManager_PlantIsFullyGrown_System_Int32_Vector3Int_" data-uid="GrandmaGreen.Garden.GardenManager.PlantIsFullyGrown(System.Int32,Vector3Int)">PlantIsFullyGrown(Int32, Vector3Int)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool PlantIsFullyGrown(int areaIndex, Vector3Int cell)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">areaIndex</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Vector3Int</span></td>
+        <td><span class="parametername">cell</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td></td>
       </tr>
     </tbody>

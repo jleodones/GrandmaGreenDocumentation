@@ -876,59 +876,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/GrandmaGreen.Garden.Allele.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/GrandmaGreen.Garden.Allele.html",
-          "hash": "MQafZ1VRCtTHqx29Gm6gPCuTGDHPqbS0h/Kwn2l/oAE="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/GrandmaGreen.Garden.BasePhenotypeData.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/GrandmaGreen.Garden.BasePhenotypeData.html",
-          "hash": "DhOHpJXaRnQCr0pi0aw0KgARw32Of/BLEAfUspn84fQ="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/GrandmaGreen.Garden.ColorSet.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/GrandmaGreen.Garden.ColorSet.html",
-          "hash": "IKF7f/Zqe9TSRsiOC5S2PJuf4ePOXtPmEVr72qJFd4g="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/GrandmaGreen.Garden.FlowerPhenotypeData.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/GrandmaGreen.Garden.FlowerPhenotypeData.html",
-          "hash": "RnkqrLjxmD+o8sFk7C8zOXlGn7BllX1tUAkdhuh9wko="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/GrandmaGreen.Garden.GardenAreaController.yml",
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.Garden.GardenAreaController.html",
-          "hash": "pzuzAr6WWYGrKT2vmTBZEomBEGFcxtJKWEiFk/U5vRg="
+          "hash": "ALGae/dTBFIQWKOLeSyOVXwrpyfqN6mLT7+J+y4GEmo="
         }
       },
       "is_incremental": false,
@@ -952,7 +904,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.Garden.GardenManager.html",
-          "hash": "0aylvetLWLBwenrTeZA4uCCAFhwcXdAuhGa/URibS2o="
+          "hash": "kqrADlb44YThRn/s7vPG3z/NkixFyNiqc9eCiFKLvMA="
         }
       },
       "is_incremental": false,
@@ -988,7 +940,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.Garden.Genotype.html",
-          "hash": "ROV2xA8lQIKR8swHh5ssIFHTIHbUAh9qEjSDccXuL/A="
+          "hash": "KJgSDGMepYff542yTIF8IQWZd+gauv8ILR4DA4fMWqE="
         }
       },
       "is_incremental": false,
@@ -1001,30 +953,6 @@
         ".html": {
           "relative_path": "api/GrandmaGreen.Garden.GridUI.html",
           "hash": "Xi1MokeSxfM6JYx4ZXLNoYIT5bIzlVBjoAbhwdUkc7c="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/GrandmaGreen.Garden.ITraitData.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/GrandmaGreen.Garden.ITraitData.html",
-          "hash": "IT2Ap2obT/tlcaJ12zr+OLDhztbLaY+BlslYgrKUT1Y="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/GrandmaGreen.Garden.ITraitSetData.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/GrandmaGreen.Garden.ITraitSetData.html",
-          "hash": "123cTAb1RZCumLwsLuwA6xlMijLrm6c4m2i/PtaB7Kg="
         }
       },
       "is_incremental": false,
@@ -1048,7 +976,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.Garden.PlantState.html",
-          "hash": "aDkbCMR/AQbYyR/ls7FsXz2dH+d+edqHMZVOtdCFIHk="
+          "hash": "ZacVoNezWCloWnrzqzl2MFuAr+AwE3FOdJtTSTG2dpo="
         }
       },
       "is_incremental": false,
@@ -1060,19 +988,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.Garden.PlayerToolData.html",
-          "hash": "vGPakzHkD8mqCXJXEBbT0URCBau79b0dZ3kSCX8gY/Q="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/GrandmaGreen.Garden.SizeSet.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/GrandmaGreen.Garden.SizeSet.html",
-          "hash": "1MU7CGiwbLcg1bOKElVWXPjiIIWDx7bmpxvfvRT3W5s="
+          "hash": "Wb0wMREHwECWfsUhE8qzidgv+6uVExVvCzu4CItfTEk="
         }
       },
       "is_incremental": false,
@@ -1096,7 +1012,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.Garden.ToolActionData.html",
-          "hash": "PfwrPGhbhh2z2YoWK3ZojJ7NTFRmG7SRkAI/E75sbJ0="
+          "hash": "gOKM84qzM1F2Tvi6AITdE4TlRxdubdhq9YyP9g6OtFE="
         }
       },
       "is_incremental": false,
@@ -1116,47 +1032,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/GrandmaGreen.Garden.Trait.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/GrandmaGreen.Garden.Trait.html",
-          "hash": "Q1J9R1n7fo7KfORzoGHLyr3CodrW3qpV5uoxv7CTVas="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/GrandmaGreen.Garden.TraitData-1.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/GrandmaGreen.Garden.TraitData-1.html",
-          "hash": "R+92PuP7tBSqUcbkpAosv7vCiM+N2JM9vgWSHBV6SiM="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/GrandmaGreen.Garden.TraitSetData-1.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/GrandmaGreen.Garden.TraitSetData-1.html",
-          "hash": "4bK/nwKhMnAvPcxGj73pyHY02tY8QcbyFkrVq8BEKrw="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/GrandmaGreen.Garden.yml",
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.Garden.html",
-          "hash": "kaA/oEa2E73hg++NEi9MFCzbxz5K2cfzTaeojaGMlug="
+          "hash": "p35MktLWnG7+WsQoI3DMgZCrUieA3B1F8qxwJoGgTPg="
         }
       },
       "is_incremental": false,
@@ -1684,7 +1564,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "/6A4olT/W9nammEg1Tx5QFN4BRdRqax4LFVoB2D2irc="
+          "hash": "RKKntaPLd7tNemlOXaijUlXO1c3AIVIQ3WxRxnw4+vQ="
         }
       },
       "is_incremental": false,
@@ -1793,7 +1673,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 138,
+          "total_file_count": 128,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
