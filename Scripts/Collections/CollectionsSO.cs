@@ -1,3 +1,4 @@
+using GrandmaGreen.Garden;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -182,6 +183,13 @@ namespace GrandmaGreen.Collections
         RadishGolem = 5009
     }
 
+    public enum SeedType : ushort
+    {
+        Flower = 1,
+        Veggie = 2,
+        Fruit = 3
+    }
+
     //for anything in inventory
     public struct ItemProperties
     {
@@ -190,6 +198,9 @@ namespace GrandmaGreen.Collections
         public string spritePath;
         //decor items
         public string tag;
+        public int baseCost;
+        //set cooldown to specified #cycles until it can appear again. 0 by default.
+        public int cycleCooldown;
     }
 
     public struct CharacterProperties
@@ -206,7 +217,18 @@ namespace GrandmaGreen.Collections
         public int growthStages;
         public int growthTime;
         public int waterPerStage;
-        public List<string> spritePaths;
+        public string spriteBasePath;
+    }
+    //for shop
+    public struct SeedProperties
+    {
+        public string name;
+        public string description;
+        public string spritePath;
+        public int baseCost;
+        public int cycleCooldown;
+        //in this context, seedtype is flower, veggie, or fruit
+        public SeedType seedType;
     }
 }
 
@@ -222,12 +244,8 @@ namespace GrandmaGreen.Collections
         public Dictionary<Id, ItemProperties> ItemLookup;
         public Dictionary<PlantId, PlantProperties> PlantLookup;
         public Dictionary<CharacterId, CharacterProperties> CharacterLookup;
+        public Dictionary<SeedId, SeedProperties> SeedLookup;
         public Dictionary<string, Sprite> SpriteCache;
-
-        // public void LoadCollectionFromDisk()
-        // {
-        //     GenerateCollectionsSO();
-        // }
 
         ///<summary>
         ///Get any item by its id
@@ -245,22 +263,6 @@ namespace GrandmaGreen.Collections
             return PlantLookup[id];
         }
 
-        //need to get this working
-
-        // public Sprite GetSprite(string spritePath)
-        // {
-        //     if (SpriteCache.ContainsKey(spritePath))
-        //     {
-        //         return SpriteCache[spritePath];
-        //     }
-        //     else
-        //     {
-        //         Sprite sprite = LoadSpriteFromDisk(spritePath);
-        //         SpriteCache[spritePath] = sprite;
-        //         return sprite;
-        //     }
-        // }
-
         ///<summary>
         ///Retrieve a sprite by its sprite path (which is just its filename)
         ///</summary>
@@ -269,14 +271,13 @@ namespace GrandmaGreen.Collections
             return Resources.Load(spritePath, typeof(Sprite)) as Sprite;
         }
 
-        // temporary substitute for sprite resolution -
-	    // jank hard-coded plant prefabs :D
-        [SerializeField] List<GameObject> plantPrefabs;
-
-        public GameObject GetPrefab(string prefab)
+        ///<summary>
+        ///Retrieve item name by its id
+        ///</summary>
+        public string GetItemName(Id id)
         {
-            return plantPrefabs[int.Parse(prefab)];
-	    }
+            return ItemLookup[id].name;
+        }
 
         public PlantId SeedToPlant(SeedId id)
         {
@@ -304,7 +305,7 @@ namespace GrandmaGreen.Collections
             }
         }
 
-        public CharacterId Plant2Golem(PlantId id)
+        public CharacterId PlantToGolem(PlantId id)
         {
             switch (id)
             {
@@ -313,6 +314,59 @@ namespace GrandmaGreen.Collections
                 default:
                     return 0;
             }
+        }
+
+        // TODO: resolve sprites by modifying base path
+        //       instead of these hard-coded references
+        [SerializeField] Sprite rose_seedling;
+        [SerializeField] Sprite rose_growing;
+        [SerializeField] Sprite rose_bb;
+        [SerializeField] Sprite rose_Bb;
+        [SerializeField] Sprite rose_BB;
+        [SerializeField] Sprite tulip_seedling;
+        [SerializeField] Sprite tulip_growing;
+        [SerializeField] Sprite tulip_bb;
+        [SerializeField] Sprite tulip_Bb;
+        [SerializeField] Sprite tulip_BB;
+
+        public Sprite GetSprite(PlantId type, Genotype genotype, int growthStage)
+        {
+            if (type == PlantId.Rose)
+            {
+                if (growthStage == 0) return rose_seedling;
+                else if (growthStage == 1) return rose_growing;
+                else
+                {
+                    switch (genotype.trait)
+                    {
+                        case Genotype.Trait.Recessive:
+                            return rose_bb;
+                        case Genotype.Trait.Heterozygous:
+                            return rose_Bb;
+                        case Genotype.Trait.Dominant:
+                            return rose_BB;
+                    }
+                }
+            }
+            else if (type == PlantId.Tulip)
+            {
+                if (growthStage == 0) return tulip_seedling;
+                else if (growthStage == 1) return tulip_growing;
+                else
+                {
+                    switch (genotype.trait)
+                    {
+                        case Genotype.Trait.Recessive:
+                            return tulip_bb;
+                        case Genotype.Trait.Heterozygous:
+                            return tulip_Bb;
+                        case Genotype.Trait.Dominant:
+                            return tulip_BB;
+                    }
+                }
+            }
+
+            return null;
         }
 
         // temporary hard-coded plant properties
@@ -329,7 +383,6 @@ namespace GrandmaGreen.Collections
                         growthStages = 3, // # of prefabs
                         growthTime = 10, // Probably can delete
                         waterPerStage = 1, // # of times it needs to be watered per stage
-                        spritePaths = new List<string>{"0", "1", "2"}
                     }
                 },
                 {
@@ -339,7 +392,6 @@ namespace GrandmaGreen.Collections
                         growthStages = 3,
                         growthTime = 10,
                         waterPerStage = 2,
-                        spritePaths = new List<string>{"3", "4", "5"}
                     }
                 }
             };

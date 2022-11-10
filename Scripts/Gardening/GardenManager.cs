@@ -124,8 +124,8 @@ namespace GrandmaGreen.Garden
 	        if (!IsEmpty(areaIndex, cell))
             {
                 return plantLookup[areaIndex][cell].genotype;
-	        }
-            return new Genotype(); 
+            }
+            return new Genotype();
 	    }
 
         public void IncrementGrowthStage(int areaIndex, Vector3Int cell)
@@ -139,7 +139,6 @@ namespace GrandmaGreen.Garden
                     growthStage = plant.growthStage < p.growthStages - 1 ?
                         plant.growthStage + 1 : p.growthStages - 1,
                     type = plant.type,
-                    genotype = plant.genotype,
                     timePlanted = plant.timePlanted,
                     cell = plant.cell
                 };
@@ -234,23 +233,40 @@ namespace GrandmaGreen.Garden
 
         public bool PlantIsDry(int areaIndex, Vector3Int cell)
         {
-            PlantState plant = GetPlant(areaIndex, cell);
-            PlantProperties properties = collection.GetPlant(plant.type);
-            return plant.waterTimer <= -1 * properties.growthTime
-                && plant.waterTimer > -2 * properties.growthTime;
+            if (!IsEmpty(areaIndex, cell))
+            {
+                PlantState plant = GetPlant(areaIndex, cell);
+                PlantProperties properties = collection.GetPlant(plant.type);
+                return plant.waterTimer <= -1 * properties.growthTime
+                    && plant.waterTimer > -2 * properties.growthTime;
+            }
+            else
+                return false;
         }
 
         public bool PlantIsDead(int areaIndex, Vector3Int cell)
         {
-            PlantState plant = GetPlant(areaIndex, cell);
-            PlantProperties properties = collection.GetPlant(plant.type);
-            return plant.waterTimer <= -2 * properties.growthTime;
+            if (!IsEmpty(areaIndex, cell))
+            {
+                PlantState plant = GetPlant(areaIndex, cell);
+                PlantProperties properties = collection.GetPlant(plant.type);
+                return plant.waterTimer <= -2 * properties.growthTime;
+            }
+            else
+                return false;
+
         }
 
         public bool PlantIsBreedable(int areaIndex, Vector3Int cell)
         {
-            if (PlantIsFullyGrown(areaIndex, cell)) return true;
-            else return !(PlantIsDry(areaIndex, cell) || PlantIsDead(areaIndex, cell));
+            if (!IsEmpty(areaIndex, cell))
+            {
+                if (PlantIsFullyGrown(areaIndex, cell)) return true;
+                else return !(PlantIsDry(areaIndex, cell) || PlantIsDead(areaIndex, cell));
+            }
+            else
+                return false;
+
 	    }
 
         public int NumSeedDrops(int areaIndex, Vector3Int cell)

@@ -4,58 +4,19 @@ using Random = UnityEngine.Random;
 
 namespace GrandmaGreen.Garden
 {
-    /// <summary>
-    /// Simple enum to define an Allele
-    /// Either recessive or dominant
-    /// </summary>
-    //public enum Allele
-    //{
-    //    recessive = 0,
-    //    dominant = 1
-    //}
-
-    /// <summary>
-    /// Struct that defines a trait
-    /// Currently defined with 2 Alleles
-    /// </summary>
-    //[Serializable]
-    //public struct Trait
-    //{
-    //    public Allele allele1;
-    //    public Allele allele2;
-    //}
-
-    /// <summary>
-    /// Defines a unique Genotype
-    /// A genotype can have up to 3 unique traits
-    /// </summary>
-    //[Serializable]
-    //public class Genotype
-    //{
-    //    public static readonly int MAX_TRAIT_COUNT = 3;
-
-    //    [SerializeField]
-    //    Trait[] traits = new Trait[MAX_TRAIT_COUNT];
-
-    //    public Genotype()
-    //    {
-    //        traits = new Trait[MAX_TRAIT_COUNT];
-    //    }
-
-    //    public Trait this[int i]
-    //    {
-    //        get { return traits[i]; }
-    //        set { traits[i] = value; }
-    //    }
-    //}
-
     [System.Serializable]
     public struct Genotype
     {
-        public readonly bool a1;
-        public readonly bool a2;
-        public readonly bool b1;
-        public readonly bool b2;
+        public enum Size { Big, Medium, Small };
+        public enum Trait { Dominant, Heterozygous, Recessive };
+
+        public bool a1;
+        public bool a2;
+        public bool b1;
+        public bool b2;
+
+        public Size size;
+        public Trait trait;
 
         public Genotype(string genotype)
         {
@@ -72,6 +33,8 @@ namespace GrandmaGreen.Garden
             a2 = genotype[1] == 'A';
             b1 = genotype[2] == 'B';
             b2 = genotype[3] == 'B';
+            size = a1 && a2 ? Size.Big : (a1 || a2 ? Size.Medium : Size.Small);
+            trait = b1 && b2 ? Trait.Dominant : (b1 || b2 ? Trait.Heterozygous : Trait.Recessive);
         }
 
         public override string ToString()

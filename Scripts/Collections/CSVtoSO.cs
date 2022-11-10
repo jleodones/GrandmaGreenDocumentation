@@ -21,54 +21,33 @@ namespace GrandmaGreen.Collections {
     public class CSVtoSO : ScriptableObject
     {
         private string inventoryCSVPath = "/_GrandmaGreen/Scripts/Collections/CollectionsDatabase.csv";
-
-        /// <summary>
-        /// Function to retrieve sprite by id. Returns null if there does not exist a sprite for the id.
-        /// </summary>
-        // [Button()]
-        // public Sprite GetSpriteById(int id)
-        // {
-        //     CollectionsSO collection = (CollectionsSO)AssetDatabase.LoadAssetAtPath("Assets/_GrandmaGreen/Scripts/Collections/CollectionsSystemData.asset", typeof(CollectionsSO));
-        //     if(collection)
-        //     {
-        //         List<Item> items = collection.items;
-        //         foreach(Item i in items)
-        //         {
-        //             if(i.id == id)
-        //             {
-        //                 return i.GetImage();
-        //             }
-        //         }
-        //     }
-        //     return null;
-        // }
         
         /// <summary>
         /// Function to populate and creates the Collections SO by reading the CSV file
         /// </summary>
         [Button()]
         public void GenerateCollectionsSO() {
-            // EventManager.instance.EVENT_INVENTORY_GETSPRITE += GetSpriteById;
 
             string[] allLines = File.ReadAllLines(Application.dataPath + inventoryCSVPath);
             CollectionsSO collections = ScriptableObject.CreateInstance<CollectionsSO>();
             collections.ItemLookup = new Dictionary<Id, ItemProperties>();
             collections.PlantLookup = new Dictionary<PlantId, PlantProperties>();
             collections.CharacterLookup = new Dictionary<CharacterId, CharacterProperties>();
-            // SpriteMapSO spriteMap = ScriptableObject.CreateInstance<SpriteMapSO>();
+            collections.SeedLookup = new Dictionary<SeedId, SeedProperties>();
             for(int i=2; i<allLines.Length; i++)
             {
                 //current line in file
                 var line = allLines[i].Split(',');
-                // t.id = Int32.Parse(line[0]);
                 int csvID = Int32.Parse(line[0]);
                 string name = line[2];
                 string description = line[3];
                 string tag = line[4];
+                int baseCost = Int32.Parse(line[5]);
                 string spritePath = "";
                 ItemProperties itemProps = new ItemProperties();;
                 itemProps.name = name;
                 itemProps.description = description;
+                itemProps.baseCost = baseCost;
                 //plant
                 if(csvID/1000 == 1)
                 {
@@ -77,9 +56,7 @@ namespace GrandmaGreen.Collections {
                     plantProps.name = name;
                     plantProps.description = description;
                     //csv does not provide growth stages
-                    spritePath = "PLA_" + name;
-                    plantProps.spritePaths = new List<string>();
-                    plantProps.spritePaths.Add(spritePath);
+                    plantProps.spriteBasePath = "PLA_" + name;
                     collections.PlantLookup.Add(plantId, plantProps);
                     collections.ItemLookup.Add(plantId, itemProps);
                 }
@@ -87,22 +64,49 @@ namespace GrandmaGreen.Collections {
                 else if(csvID/1000 == 2)
                 {
                     SeedId seedId = (SeedId)csvID;
-                    itemProps.spritePath = "GAR_" + name;
+                    spritePath = "GAR_" + name;
+                    itemProps.spritePath = spritePath;
+                    itemProps.baseCost = baseCost;
+                    itemProps.cycleCooldown = 0;
                     collections.ItemLookup.Add(seedId, itemProps);
+                    SeedProperties seedProps = new SeedProperties();
+                    seedProps.name = name;
+                    seedProps.description = description;
+                    seedProps.spritePath = spritePath;
+                    seedProps.baseCost = baseCost;
+                    seedProps.cycleCooldown = 0;
+                    //flower
+                    if(2001 <= csvID && csvID <= 2007)
+                    {
+                        seedProps.seedType = (SeedType)1;
+                    }
+                    //veggie
+                    else if(2008 <= csvID && csvID <= 2014)
+                    {
+                        seedProps.seedType = (SeedType)2;
+                    }
+                    //fruit
+                    else if(2015 <= csvID && csvID <= 2021)
+                    {
+                        seedProps.seedType = (SeedType)3;
+                    }
+                    collections.SeedLookup.Add(seedId, seedProps);
                 }
                 //tool
                 else if(csvID/1000 == 3)
                 {
                     ToolId toolId = (ToolId)csvID;
                     itemProps.spritePath = "GAR_" + name;
+                    itemProps.baseCost = baseCost;
                     collections.ItemLookup.Add(toolId, itemProps);
-
                 }
                 //decor
                 else if(csvID/1000 == 4)
                 {
                     DecorationId decorId = (DecorationId)csvID;
                     itemProps.spritePath = "DEC_" + name;
+                    itemProps.cycleCooldown = 0;
+                    itemProps.baseCost = baseCost;
                     collections.ItemLookup.Add(decorId, itemProps);
                 }
                 //character
@@ -118,51 +122,7 @@ namespace GrandmaGreen.Collections {
                     collections.CharacterLookup.Add(characterId, characterProps);
                     collections.ItemLookup.Add(characterId, itemProps);
                 }
-
-                //figure out if we need to manually put filepath in csv or if its possible to automatically figure out the filepath here
-
-                // string type = line[1];
-                // string imgName = "";
-                // t.name = line[2];
-                // //idk what default variant each naming convention should be so i'll add the variant part later
-                // if(type == "Tool")
-                // {
-                //     t.itemType = itemTypes.Tool;
-                //     imgName = "GAR_" + t.name;
-                // }
-                // else if(type == "Seed")
-                // {
-                //     t.itemType = itemTypes.Seed;
-                //     imgName = "GAR_" + t.name;
-                // }
-                // else if(type == "Plant")
-                // {
-                //     t.itemType = itemTypes.Plant;
-                //     imgName = "PLA_" + t.name;
-                // }
-                // else if(type == "Decor")
-                // {
-                //     t.itemType = itemTypes.Decor;
-                //     t.tag = line[4];
-                //     imgName = "DEC_" + t.name;
-                // }
-                // else if(type == "Character")
-                // {
-                //     t.itemType = itemTypes.Character;
-                //     imgName = "CHA_" + t.name;
-                // }
-                // t.description = line[3];
-
-                // //add to the SpriteMapSO at the index corresponding to item id
-                // List<Sprite> sprites = new List<Sprite>();
-                // sprites.Add(Resources.Load(imgName, typeof(Sprite)) as Sprite);
-                // spriteMap.itemSprites.Insert(t.id, sprites);
-
-                // // t.SetImage(Resources.Load(imgName, typeof(Sprite)) as Sprite);
-
-                // collections.items.Add(t);
             }
-            //might want to change where this gets saved
             AssetDatabase.CreateAsset(collections, $"Assets/_GrandmaGreen/Scripts/Collections/CollectionsSystemData.asset");
             AssetDatabase.SaveAssets();
         }

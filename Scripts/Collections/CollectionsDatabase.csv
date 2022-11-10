@@ -1,159 +1,159 @@
-Inventory,,,,
-Item ID,Item type,Item Name,Item Description,Aesthetic tag (decor only)
-1001,Plant,Rose,,
-1002,Plant,Tulip,,
-1003,Plant,Calla Lily,,
-1004,Plant,Dahlia,,
-1005,Plant,Hyacinth,,
-1006,Plant,Pansy,,
-1007,Plant,Crocus,,
-1008,Plant,Cucumber,,
-1009,Plant,Tomato,,
-1010,Plant,Pepper,,
-1011,Plant,Sweet Potato,,
-1012,Plant,Corn,,
-1013,Plant,Radish,,
-1014,Plant,Pumpkin,,
-1015,Plant,Apple,,
-1016,Plant,Pear,,
-1017,Plant,Watermelon,,
-1018,Plant,Cherry,,
-1019,Plant,Plum,,
-1020,Plant,Peach,,
-1021,Plant,Blueberry,,
-2001,Seed,Rose,,
-2002,Seed,Tulip,,
-2003,Seed,Calla Lily,,
-2004,Seed,Dahlia,,
-2005,Seed,Hyacinth,,
-2006,Seed,Pansy,,
-2007,Seed,Crocus,,
-2008,Seed,Cucumber,,
-2009,Seed,Tomato,,
-2010,Seed,Pepper,,
-2011,Seed,Sweet Potato,,
-2012,Seed,Corn,,
-2013,Seed,Radish,,
-2014,Seed,Pumpkin,,
-2015,Seed,Apple,,
-2016,Seed,Pear,,
-2017,Seed,Watermelon,,
-2018,Seed,Cherry,,
-2019,Seed,Plum,,
-2020,Seed,Peach,,
-2021,Seed,Blueberry,,
-3001,Tool,Trowel,desc,
-3002,Tool,Watering Can,,
-3003,Tool,Seed Packet,,
-3004,Tool,Upgraded Trowel,,
-3005,Tool,Upgraded Watering Can,,
-3006,Tool,Fertilizer,,
-4001,Decor,Torch,,
-4002,Decor,Tulip Golem Memento,,
-4003,Decor,Apple Golem Memento,,
-4004,Decor,Crocus Golem Memento,,
-4005,Decor,Radish Golem Memento,,
-4006,Decor,Pumpkin Golem Memento,,
-4007,Decor,Cotton Golem Memento,,
-4008,Decor,Camping Lantern,,
-4009,Decor,Simple Hanging Lamp Post,,
-4010,Decor,Jack-O-Lantern,,
-4011,Decor,Iron Lamp Post,,
-4012,Decor,Japanese Garden Lantern,,
-4013,Decor,Mushroom Lamp,,
-4014,Decor,Scarecrow,,
-4015,Decor,Bicycle,,
-4016,Decor,Flower Wagon,,
-4017,Decor,Harvest Basket,,
-4018,Decor,Umbrella,,
-4019,Decor,Swingset,,
-4020,Decor,Leafpile,,
-4021,Decor,Potted Plant 01,,
-4022,Decor,Potted Plant 02,,
-4023,Decor,Potted Plant 03,,
-4024,Decor,French Country Urn,,
-4025,Decor,Garden Gnome Basic,,
-4026,Decor,Garden Gnome Sexy,,
-4027,Decor,Garden Gnome Gold,,
-4028,Decor,Frog Sculpture,,
-4029,Decor,Flamingo,,
-4030,Decor,Art Nouveau Sculture 01,,
-4031,Decor,Art Nouveau Sculture 02,,
-4032,Decor,Art Nouveau Sculture 03,,
-4033,Decor,Simple Wooden Bench,,
-4034,Decor,Simple Wooden Chair,,
-4035,Decor,Stone Bench,,
-4036,Decor,Iron Bench,,
-4037,Decor,Iron Chair,,
-4038,Decor,Rocking Chair,,
-4039,Decor,Mushroom Stool,,
-4040,Decor,Picnic Spread,,
-4041,Decor,Simple Wooden Table,,
-4042,Decor,Flower Table,,
-4043,Decor,Iron Table,,
-4044,Decor,Bird Bath,,
-4045,Decor,Natural Pond,,
-4046,Decor,Fancy Pond,,
-4047,Decor,Koi Pond,,
-4048,Decor,Simple Fountain,,
-4049,Decor,Fancy Fountain,,
-4050,Decor,Magic Fountain,,
-4051,Decor,Well,,
-4052,Decor,Waterpump,,
-4053,Decor,Grecian Ruin,,
-4054,Decor,Sundial,,
-4055,Decor,Claude Monet Painting,,
-4056,Decor,John Singer Sargent Painting,,
-4057,Decor,Mailbox Basic,,
-4058,Decor,Mailbox Cottagecore,,
-4059,Decor,Mailbox Goth,,
-4060,Decor,Mailbox Fairy,,
-4061,Decor,Mailbox Oriental,,
-4062,Decor,Mailbox Cabin,,
-4063,Decor,Mailbox Pastel,,
-4064,Decor,White Picket Fence,,
-4065,Decor,Simple Wooden Fence,,
-4066,Decor,Farm Fence,,
-4067,Decor,Fancy Iron Fence,,
-4068,Decor,Fieldstone Fence,,
-4069,Decor,Ivy-Covered Brick Fence,,
-4070,Decor,Historical English Exterior,,
-4071,Decor,French Provincial Exterior,,
-4072,Decor,PNW Cabin Exterior,,
-4073,Decor,Traditional Japanese Exterior,,
-4074,Decor,Modern Exterior,,
-4075,Decor,Acorn Exterior,,
-4076,Decor,Pastel Exterior,,
-4077,Decor,Witchy Goth Exterior,,
-4078,Decor,Fairy Magic Exterior,,
-4079,Decor,European Castle Exterior,,
-4080,Decor,Dirt Path,,
-4081,Decor,Cobblestone Path,,
-4082,Decor,Tile Path,,
-4083,Decor,Wood Path,,
-4084,Decor,Oak Tree,,
-4085,Decor,Pine Tree,,
-4086,Decor,Willow Tree,,
-4087,Decor,Palm Tree,,
-4088,Decor,Maple Tree,,
-4089,Decor,Poplar Tree,,
-4090,Decor,Stump Tree,,
-4091,Decor,Hydrangea Bush,,
-4092,Decor,Oleander Bush,,
-4093,Decor,Gardenia Bush,,
-4094,Decor,Boxwood Bush,,
-4095,Decor,Common Poppy,,
-4096,Decor,Forget Me Not,,
-4097,Decor,Wild Daisies,,
-4098,Decor,Dandelion,,
-4099,Decor,Clover,,
-4100,Decor,Hemlock,,
-5001,Character,Grandma,,
-5002,Character,Gardening Shopkeeper,,
-5003,Character,Decor Shopkeeper,,
-5004,Character,Tulip Golem,,
-5005,Character,Apple Golem,,
-5006,Character,Cotton Golem,,
-5007,Character,Crocus Golem,,
-5008,Character,Pumpkin Golem,,
-5009,Character,Radish Golem,,
+Inventory,,,,,
+Item ID,Item type,Item Name,Item Description,Aesthetic tag (decor only),Base Cost
+1001,Plant,Rose,,,0
+1002,Plant,Tulip,,,0
+1003,Plant,Calla Lily,,,0
+1004,Plant,Dahlia,,,0
+1005,Plant,Hyacinth,,,0
+1006,Plant,Pansy,,,0
+1007,Plant,Crocus,,,0
+1008,Plant,Cucumber,,,0
+1009,Plant,Tomato,,,0
+1010,Plant,Pepper,,,0
+1011,Plant,Sweet Potato,,,0
+1012,Plant,Corn,,,0
+1013,Plant,Radish,,,0
+1014,Plant,Pumpkin,,,0
+1015,Plant,Apple,,,0
+1016,Plant,Pear,,,0
+1017,Plant,Watermelon,,,0
+1018,Plant,Cherry,,,0
+1019,Plant,Plum,,,0
+1020,Plant,Peach,,,0
+1021,Plant,Blueberry,,,0
+2001,Seed,Rose,,,1
+2002,Seed,Tulip,,,1
+2003,Seed,Calla Lily,,,1
+2004,Seed,Dahlia,,,1
+2005,Seed,Hyacinth,,,1
+2006,Seed,Pansy,,,1
+2007,Seed,Crocus,,,1
+2008,Seed,Cucumber,,,1
+2009,Seed,Tomato,,,1
+2010,Seed,Pepper,,,1
+2011,Seed,Sweet Potato,,,1
+2012,Seed,Corn,,,1
+2013,Seed,Radish,,,1
+2014,Seed,Pumpkin,,,1
+2015,Seed,Apple,,,1
+2016,Seed,Pear,,,1
+2017,Seed,Watermelon,,,1
+2018,Seed,Cherry,,,1
+2019,Seed,Plum,,,1
+2020,Seed,Peach,,,1
+2021,Seed,Blueberry,,,1
+3001,Tool,Trowel,desc,,1
+3002,Tool,Watering Can,,,1
+3003,Tool,Seed Packet,,,1
+3004,Tool,Upgraded Trowel,,,1
+3005,Tool,Upgraded Watering Can,,,1
+3006,Tool,Fertilizer,,,1
+4001,Decor,Torch,,,1
+4002,Decor,Tulip Golem Memento,,,1
+4003,Decor,Apple Golem Memento,,,1
+4004,Decor,Crocus Golem Memento,,,1
+4005,Decor,Radish Golem Memento,,,1
+4006,Decor,Pumpkin Golem Memento,,,1
+4007,Decor,Cotton Golem Memento,,,1
+4008,Decor,Camping Lantern,,,1
+4009,Decor,Simple Hanging Lamp Post,,,1
+4010,Decor,Jack-O-Lantern,,,1
+4011,Decor,Iron Lamp Post,,,1
+4012,Decor,Japanese Garden Lantern,,,1
+4013,Decor,Mushroom Lamp,,,1
+4014,Decor,Scarecrow,,,1
+4015,Decor,Bicycle,,,1
+4016,Decor,Flower Wagon,,,1
+4017,Decor,Harvest Basket,,,1
+4018,Decor,Umbrella,,,1
+4019,Decor,Swingset,,,1
+4020,Decor,Leafpile,,,1
+4021,Decor,Potted Plant 01,,,1
+4022,Decor,Potted Plant 02,,,1
+4023,Decor,Potted Plant 03,,,1
+4024,Decor,French Country Urn,,,1
+4025,Decor,Garden Gnome Basic,,,1
+4026,Decor,Garden Gnome Sexy,,,1
+4027,Decor,Garden Gnome Gold,,,1
+4028,Decor,Frog Sculpture,,,1
+4029,Decor,Flamingo,,,1
+4030,Decor,Art Nouveau Sculture 01,,,1
+4031,Decor,Art Nouveau Sculture 02,,,1
+4032,Decor,Art Nouveau Sculture 03,,,1
+4033,Decor,Simple Wooden Bench,,,1
+4034,Decor,Simple Wooden Chair,,,1
+4035,Decor,Stone Bench,,,1
+4036,Decor,Iron Bench,,,1
+4037,Decor,Iron Chair,,,1
+4038,Decor,Rocking Chair,,,1
+4039,Decor,Mushroom Stool,,,1
+4040,Decor,Picnic Spread,,,1
+4041,Decor,Simple Wooden Table,,,1
+4042,Decor,Flower Table,,,1
+4043,Decor,Iron Table,,,1
+4044,Decor,Bird Bath,,,1
+4045,Decor,Natural Pond,,,1
+4046,Decor,Fancy Pond,,,1
+4047,Decor,Koi Pond,,,1
+4048,Decor,Simple Fountain,,,1
+4049,Decor,Fancy Fountain,,,1
+4050,Decor,Magic Fountain,,,1
+4051,Decor,Well,,,1
+4052,Decor,Waterpump,,,1
+4053,Decor,Grecian Ruin,,,1
+4054,Decor,Sundial,,,1
+4055,Decor,Claude Monet Painting,,,1
+4056,Decor,John Singer Sargent Painting,,,1
+4057,Decor,Mailbox Basic,,,1
+4058,Decor,Mailbox Cottagecore,,,1
+4059,Decor,Mailbox Goth,,,1
+4060,Decor,Mailbox Fairy,,,1
+4061,Decor,Mailbox Oriental,,,1
+4062,Decor,Mailbox Cabin,,,1
+4063,Decor,Mailbox Pastel,,,1
+4064,Decor,White Picket Fence,,,1
+4065,Decor,Simple Wooden Fence,,,1
+4066,Decor,Farm Fence,,,1
+4067,Decor,Fancy Iron Fence,,,1
+4068,Decor,Fieldstone Fence,,,1
+4069,Decor,Ivy-Covered Brick Fence,,,1
+4070,Decor,Historical English Exterior,,,1
+4071,Decor,French Provincial Exterior,,,1
+4072,Decor,PNW Cabin Exterior,,,1
+4073,Decor,Traditional Japanese Exterior,,,1
+4074,Decor,Modern Exterior,,,1
+4075,Decor,Acorn Exterior,,,1
+4076,Decor,Pastel Exterior,,,1
+4077,Decor,Witchy Goth Exterior,,,1
+4078,Decor,Fairy Magic Exterior,,,1
+4079,Decor,European Castle Exterior,,,1
+4080,Decor,Dirt Path,,,1
+4081,Decor,Cobblestone Path,,,1
+4082,Decor,Tile Path,,,1
+4083,Decor,Wood Path,,,1
+4084,Decor,Oak Tree,,,1
+4085,Decor,Pine Tree,,,1
+4086,Decor,Willow Tree,,,1
+4087,Decor,Palm Tree,,,1
+4088,Decor,Maple Tree,,,1
+4089,Decor,Poplar Tree,,,1
+4090,Decor,Stump Tree,,,1
+4091,Decor,Hydrangea Bush,,,1
+4092,Decor,Oleander Bush,,,1
+4093,Decor,Gardenia Bush,,,1
+4094,Decor,Boxwood Bush,,,1
+4095,Decor,Common Poppy,,,1
+4096,Decor,Forget Me Not,,,1
+4097,Decor,Wild Daisies,,,1
+4098,Decor,Dandelion,,,1
+4099,Decor,Clover,,,1
+4100,Decor,Hemlock,,,1
+5001,Character,Grandma,,,0
+5002,Character,Gardening Shopkeeper,,,0
+5003,Character,Decor Shopkeeper,,,0
+5004,Character,Tulip Golem,,,0
+5005,Character,Apple Golem,,,0
+5006,Character,Cotton Golem,,,0
+5007,Character,Crocus Golem,,,0
+5008,Character,Pumpkin Golem,,,0
+5009,Character,Radish Golem,,,0
