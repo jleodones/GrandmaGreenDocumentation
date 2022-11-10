@@ -210,6 +210,30 @@ TODO: Implement functionality for save/loading changed tiles </p>
   </table>
   
   
+  <h4 id="GrandmaGreen_Garden_GardenAreaController_defaultPlantPrefab" data-uid="GrandmaGreen.Garden.GardenAreaController.defaultPlantPrefab">defaultPlantPrefab</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GameObject defaultPlantPrefab</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">GameObject</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <h4 id="GrandmaGreen_Garden_GardenAreaController_DryingUpBurst" data-uid="GrandmaGreen.Garden.GardenAreaController.DryingUpBurst">DryingUpBurst</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
@@ -863,13 +887,13 @@ TODO: Implement functionality for save/loading changed tiles </p>
   </div>
   
   
-  <a id="GrandmaGreen_Garden_GardenAreaController_PlacePlantPrefab_" data-uid="GrandmaGreen.Garden.GardenAreaController.PlacePlantPrefab*"></a>
-  <h4 id="GrandmaGreen_Garden_GardenAreaController_PlacePlantPrefab_Vector3Int_PlantId_System_Int32_" data-uid="GrandmaGreen.Garden.GardenAreaController.PlacePlantPrefab(Vector3Int,PlantId,System.Int32)">PlacePlantPrefab(Vector3Int, PlantId, Int32)</h4>
+  <a id="GrandmaGreen_Garden_GardenAreaController_InstantiatePlantPrefab_" data-uid="GrandmaGreen.Garden.GardenAreaController.InstantiatePlantPrefab*"></a>
+  <h4 id="GrandmaGreen_Garden_GardenAreaController_InstantiatePlantPrefab_Vector3Int_PlantId_System_Int32_" data-uid="GrandmaGreen.Garden.GardenAreaController.InstantiatePlantPrefab(Vector3Int,PlantId,System.Int32)">InstantiatePlantPrefab(Vector3Int, PlantId, Int32)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void PlacePlantPrefab(Vector3Int cell, PlantId type, int growthStage)</code></pre>
+    <pre><code class="lang-csharp hljs">public void InstantiatePlantPrefab(Vector3Int cell, PlantId type, int growthStage)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -910,13 +934,13 @@ TODO: Implement functionality for save/loading changed tiles </p>
   </div>
   
   
-  <a id="GrandmaGreen_Garden_GardenAreaController_UpdatePlantPrefab_" data-uid="GrandmaGreen.Garden.GardenAreaController.UpdatePlantPrefab*"></a>
-  <h4 id="GrandmaGreen_Garden_GardenAreaController_UpdatePlantPrefab_PlantId_Vector3Int_" data-uid="GrandmaGreen.Garden.GardenAreaController.UpdatePlantPrefab(PlantId,Vector3Int)">UpdatePlantPrefab(PlantId, Vector3Int)</h4>
+  <a id="GrandmaGreen_Garden_GardenAreaController_UpdateSprite_" data-uid="GrandmaGreen.Garden.GardenAreaController.UpdateSprite*"></a>
+  <h4 id="GrandmaGreen_Garden_GardenAreaController_UpdateSprite_Vector3Int_" data-uid="GrandmaGreen.Garden.GardenAreaController.UpdateSprite(Vector3Int)">UpdateSprite(Vector3Int)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void UpdatePlantPrefab(PlantId type, Vector3Int cell)</code></pre>
+    <pre><code class="lang-csharp hljs">public void UpdateSprite(Vector3Int cell)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -928,11 +952,6 @@ TODO: Implement functionality for save/loading changed tiles </p>
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td><span class="xref">PlantId</span></td>
-        <td><span class="parametername">type</span></td>
-        <td></td>
-      </tr>
       <tr>
         <td><span class="xref">Vector3Int</span></td>
         <td><span class="parametername">cell</span></td>

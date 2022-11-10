@@ -171,6 +171,30 @@
   </table>
   
   
+  <h4 id="GrandmaGreen_Collections_CollectionsSO_SeedLookup" data-uid="GrandmaGreen.Collections.CollectionsSO.SeedLookup">SeedLookup</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Dictionary&lt;SeedId, SeedProperties&gt; SeedLookup</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="GrandmaGreen.Collections.SeedId.html">SeedId</a>, <a class="xref" href="GrandmaGreen.Collections.SeedProperties.html">SeedProperties</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <h4 id="GrandmaGreen_Collections_CollectionsSO_SpriteCache" data-uid="GrandmaGreen.Collections.CollectionsSO.SpriteCache">SpriteCache</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
@@ -250,6 +274,49 @@
   </table>
   
   
+  <a id="GrandmaGreen_Collections_CollectionsSO_GetItemName_" data-uid="GrandmaGreen.Collections.CollectionsSO.GetItemName*"></a>
+  <h4 id="GrandmaGreen_Collections_CollectionsSO_GetItemName_System_Enum_" data-uid="GrandmaGreen.Collections.CollectionsSO.GetItemName(System.Enum)">GetItemName(Enum)</h4>
+  <div class="markdown level1 summary"><p>Retrieve item name by its id</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string GetItemName(Enum id)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.enum">Enum</a></td>
+        <td><span class="parametername">id</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="GrandmaGreen_Collections_CollectionsSO_GetPlant_" data-uid="GrandmaGreen.Collections.CollectionsSO.GetPlant*"></a>
   <h4 id="GrandmaGreen_Collections_CollectionsSO_GetPlant_GrandmaGreen_Collections_PlantId_" data-uid="GrandmaGreen.Collections.CollectionsSO.GetPlant(GrandmaGreen.Collections.PlantId)">GetPlant(PlantId)</h4>
   <div class="markdown level1 summary"><p>Get any plant by its id</p>
@@ -293,13 +360,13 @@
   </table>
   
   
-  <a id="GrandmaGreen_Collections_CollectionsSO_GetPrefab_" data-uid="GrandmaGreen.Collections.CollectionsSO.GetPrefab*"></a>
-  <h4 id="GrandmaGreen_Collections_CollectionsSO_GetPrefab_System_String_" data-uid="GrandmaGreen.Collections.CollectionsSO.GetPrefab(System.String)">GetPrefab(String)</h4>
+  <a id="GrandmaGreen_Collections_CollectionsSO_GetSprite_" data-uid="GrandmaGreen.Collections.CollectionsSO.GetSprite*"></a>
+  <h4 id="GrandmaGreen_Collections_CollectionsSO_GetSprite_GrandmaGreen_Collections_PlantId_Genotype_System_Int32_" data-uid="GrandmaGreen.Collections.CollectionsSO.GetSprite(GrandmaGreen.Collections.PlantId,Genotype,System.Int32)">GetSprite(PlantId, Genotype, Int32)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public GameObject GetPrefab(string prefab)</code></pre>
+    <pre><code class="lang-csharp hljs">public Sprite GetSprite(PlantId type, Genotype genotype, int growthStage)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -312,8 +379,18 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">prefab</span></td>
+        <td><a class="xref" href="GrandmaGreen.Collections.PlantId.html">PlantId</a></td>
+        <td><span class="parametername">type</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Genotype</span></td>
+        <td><span class="parametername">genotype</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">growthStage</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -328,7 +405,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">GameObject</span></td>
+        <td><span class="xref">Sprite</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -378,13 +455,13 @@
   </table>
   
   
-  <a id="GrandmaGreen_Collections_CollectionsSO_Plant2Golem_" data-uid="GrandmaGreen.Collections.CollectionsSO.Plant2Golem*"></a>
-  <h4 id="GrandmaGreen_Collections_CollectionsSO_Plant2Golem_GrandmaGreen_Collections_PlantId_" data-uid="GrandmaGreen.Collections.CollectionsSO.Plant2Golem(GrandmaGreen.Collections.PlantId)">Plant2Golem(PlantId)</h4>
+  <a id="GrandmaGreen_Collections_CollectionsSO_PlantToGolem_" data-uid="GrandmaGreen.Collections.CollectionsSO.PlantToGolem*"></a>
+  <h4 id="GrandmaGreen_Collections_CollectionsSO_PlantToGolem_GrandmaGreen_Collections_PlantId_" data-uid="GrandmaGreen.Collections.CollectionsSO.PlantToGolem(GrandmaGreen.Collections.PlantId)">PlantToGolem(PlantId)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public CharacterId Plant2Golem(PlantId id)</code></pre>
+    <pre><code class="lang-csharp hljs">public CharacterId PlantToGolem(PlantId id)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
