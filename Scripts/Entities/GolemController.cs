@@ -8,6 +8,7 @@ using Unity.Mathematics;
 using UnityEngine.Splines;
 using NPBehave;
 using SpookuleleAudio;
+using Sirenix.OdinInspector;
 
 namespace GrandmaGreen.Entities
 {
@@ -18,10 +19,10 @@ namespace GrandmaGreen.Entities
     {
         [Header("Entity References")]
         public EntityPermissions permissions;
+        public GameObject BabyRig;
+        public GameObject MatureRig;
         public Animator animator;
         public ASoundContainer sfx_Footsteps;
-        public int range = 300;
-        public float delay = 5f;
 
         [Header("Behaviour Tree")]
         private Blackboard blackboard;
@@ -30,12 +31,14 @@ namespace GrandmaGreen.Entities
         const string BK_WANDER_POSITION = "wanderPosition";
 
         [field: Header("Entity Variables")]
+        public bool isMature = false;
         public Vector3 velocity;
+        public int range = 300;
+        public float delay = 5f;
         [Header("Pathing")]
         public SplineFollow splineFollow;
         [Range(0, 1)]
         public float smoothFactor = 0.2f;
-
         public IPathfinderServicer pathfinderServicer => IPathAgent.Servicer;
         public bool isPathing => splineFollow.isFollowing;
 
@@ -46,7 +49,6 @@ namespace GrandmaGreen.Entities
         SoundPlayer footstepsPlayer;
 
         private bool m_isInteracting = false;
-        
         #endregion
 
         #region events
@@ -184,6 +186,28 @@ namespace GrandmaGreen.Entities
             m_isInteracting = !m_isInteracting;
             behaviorTree.Blackboard.Set("isInteract", m_isInteracting);
         }
+
+        #region Golem Look Changes
+        //Golem sprite change
+        public void UpdateMatureState(bool isGrowUp) {
+            if (this.isMature == true) return;
+
+            if (isGrowUp) {
+                this.isMature = isGrowUp;
+                BabyRig.SetActive(false);
+                MatureRig.SetActive(true);
+                animator = MatureRig.GetComponent<Animator>();
+            }
+        }
+
+        //For debugging
+        [ContextMenu("Evolve")]
+        public void EvolveGolem()
+        {
+            UpdateMatureState(true);
+        }
+
+        #endregion
 
         //traverse
         public virtual void SetDestination(Vector3 worldPos)

@@ -5,13 +5,13 @@ namespace GrandmaGreen.UI.Collections
 {
     public class TabbedInventoryItemController
     {
-        private IInventoryItem m_inventoryItemData;
+        public IInventoryItem m_inventoryItemData;
         
-        private Button m_button;
+        public Button m_button;
         
-        private System.Action<ushort> m_clickCallback;
+        public event System.Action<TabbedInventoryItemController> m_clickCallback;
 
-        public TabbedInventoryItemController(Button button, System.Action<ushort> clickCallback)
+        public TabbedInventoryItemController(Button button, System.Action<TabbedInventoryItemController> clickCallback)
         {
             m_button = button;
             m_clickCallback = clickCallback;
@@ -28,13 +28,12 @@ namespace GrandmaGreen.UI.Collections
         {
             m_button.Q<Label>("quantity").text = inventoryItem.GetQuantityToString();
             m_button.Q<Label>("item-name").text = inventoryItem.itemName;
-
             m_inventoryItemData = inventoryItem;
         }
 
         private void OnButtonClicked()
         {
-            m_clickCallback?.Invoke(m_inventoryItemData.itemID);
+            m_clickCallback?.Invoke(this);
         }
     }
 }

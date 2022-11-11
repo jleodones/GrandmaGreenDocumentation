@@ -50,6 +50,11 @@ namespace GrandmaGreen.UI.Collections
         private VisualElement inventory;
         // Inventory width varibles for show/hide
         private Length inventoryWidth = (Length)(.45 * Screen.width);
+        // Customization variables
+        private VisualElement threshold; 
+        private Button m_draggable;
+        private IInventoryItem m_id;
+
 
 
         public event System.Action<ushort> onItemEntryClicked;
@@ -84,13 +89,17 @@ namespace GrandmaGreen.UI.Collections
 
             // Instantiate inventory visual element
             inventory = root.Q(inventoryElement);
+
+            // Instantiate customization drag threshold
+            threshold = root.Q("inventory-threshold");
         }
 
         // This hides the entire inventory panel on initialize without animations
         public void SetInventoryPosition()
         {
             // Add animation duration
-            inventory.style.translate = new Translate(inventoryWidth,0,0);
+            // inventory.style.translate = new Translate(inventoryWidth,0,0);
+            inventory.style.display = DisplayStyle.None;
         }
 
         public void RegisterTabCallbacks()
@@ -110,10 +119,11 @@ namespace GrandmaGreen.UI.Collections
             // Disable HUD.
             EventManager.instance.HandleEVENT_CLOSE_HUD_ANIMATED();
 
-            inventory.style.transitionProperty = new List<StylePropertyName> { "translate" };
-            inventory.style.transitionTimingFunction = new List<EasingFunction> { EasingMode.Ease };
-            inventory.style.transitionDuration = new List<TimeValue>{ new TimeValue(300, TimeUnit.Millisecond) };
-            inventory.style.translate = new Translate(0,0,0);
+            // inventory.style.transitionProperty = new List<StylePropertyName> { "translate" };
+            // inventory.style.transitionTimingFunction = new List<EasingFunction> { EasingMode.Ease };
+            // inventory.style.transitionDuration = new List<TimeValue>{ new TimeValue(300, TimeUnit.Millisecond) };
+            // inventory.style.translate = new Translate(0,0,0);
+            inventory.style.display = DisplayStyle.Flex;
             
             // Play open inventory SFX.
             m_soundContainers[0].Play();
@@ -123,10 +133,11 @@ namespace GrandmaGreen.UI.Collections
         private void CloseInventory(ClickEvent evt)
         {
             // Add animation duration
-            inventory.style.transitionProperty = new List<StylePropertyName> { "translate" };
-            inventory.style.transitionTimingFunction = new List<EasingFunction> { EasingMode.Ease };
-            inventory.style.transitionDuration = new List<TimeValue>{ new TimeValue(300, TimeUnit.Millisecond) };
-            inventory.style.translate = new Translate(inventoryWidth,0,0);
+            // inventory.style.transitionProperty = new List<StylePropertyName> { "translate" };
+            // inventory.style.transitionTimingFunction = new List<EasingFunction> { EasingMode.Ease };
+            // inventory.style.transitionDuration = new List<TimeValue>{ new TimeValue(300, TimeUnit.Millisecond) };
+            // inventory.style.translate = new Translate(inventoryWidth,0,0);
+            inventory.style.display = DisplayStyle.None;
 
             // Play the inventory close SFX.
             m_soundContainers[1].Play();
@@ -299,9 +310,56 @@ namespace GrandmaGreen.UI.Collections
             CloseInventory(new ClickEvent());
         }
         
-        public void OnItemEntryClicked(ushort itemID)
+        public void OnItemEntryClicked(TabbedInventoryItemController itemController)
         {
-            CloseInventory(new ClickEvent());
+            m_id = itemController.m_inventoryItemData;
+            itemController.m_button.RegisterCallback<PointerDownEvent>(PointerDownHandler);
+            itemController.m_button.RegisterCallback<PointerMoveEvent>(PointerMoveHandler);
+            itemController.m_button.RegisterCallback<PointerUpEvent>(PointerUpHandler);
+
+            // CloseInventory(new ClickEvent());
+        }
+        private Vector2 targetStartPosition { get; set; }
+        private Vector3 pointerStartPosition { get; set; }
+
+        private bool enabled { get; set; }
+        private bool handled { get; set; }
+        private void PointerDownHandler(PointerDownEvent evt)
+        {
+            m_draggable = evt.currentTarget as Button;
+            targetStartPosition = m_draggable.transform.position;
+            pointerStartPosition = evt.position;
+            m_draggable.CapturePointer(evt.pointerId);
+            enabled = true;
+            handled = false;
+        }
+
+        private void PointerMoveHandler(PointerMoveEvent evt)
+        {
+            if (enabled && m_draggable.HasPointerCapture(evt.pointerId))
+            {
+                Vector3 pointerDelta = evt.position - pointerStartPosition;
+                m_draggable.transform.position = new Vector2(targetStartPosition.x + pointerDelta.x, targetStartPosition.y + pointerDelta.y);
+            }
+
+            // To-Do: Bound Checks
+            
+            // Threshold Check
+            if(m_draggable.worldTransform.GetPosition().x <= threshold.worldTransform.GetPosition().x && !handled){
+                CloseInventory(new ClickEvent());
+                m_draggable.style.display = DisplayStyle.None;
+                // UI to GameObject here
+                EventManager.instance.HandleEVENT_CUSTOMIZATION_START(m_id);
+                handled = true;
+            }
+        }
+
+        private void PointerUpHandler(PointerUpEvent evt)
+        {
+            if (enabled && m_draggable.HasPointerCapture(evt.pointerId))
+            {
+                m_draggable.ReleasePointer(evt.pointerId);
+            }
         }
 
         void CheckOpenInventory(ToolData selectedTool)

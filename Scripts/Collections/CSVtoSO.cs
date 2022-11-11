@@ -48,6 +48,7 @@ namespace GrandmaGreen.Collections {
                 itemProps.name = name;
                 itemProps.description = description;
                 itemProps.baseCost = baseCost;
+                itemProps.spritePath = spritePath;
                 //plant
                 if(csvID/1000 == 1)
                 {
@@ -57,6 +58,8 @@ namespace GrandmaGreen.Collections {
                     plantProps.description = description;
                     //csv does not provide growth stages
                     plantProps.spriteBasePath = "PLA_" + name;
+                    spritePath = "PLA_" + name;
+                    itemProps.spritePath = spritePath;
                     collections.PlantLookup.Add(plantId, plantProps);
                     collections.ItemLookup.Add(plantId, itemProps);
                 }
@@ -66,7 +69,6 @@ namespace GrandmaGreen.Collections {
                     SeedId seedId = (SeedId)csvID;
                     spritePath = "GAR_" + name;
                     itemProps.spritePath = spritePath;
-                    itemProps.baseCost = baseCost;
                     itemProps.cycleCooldown = 0;
                     collections.ItemLookup.Add(seedId, itemProps);
                     SeedProperties seedProps = new SeedProperties();
@@ -119,10 +121,12 @@ namespace GrandmaGreen.Collections {
                     characterProps.spritePaths = new List<string>();
                     spritePath = "CHA_" + name;
                     characterProps.spritePaths.Add(spritePath);
+                    itemProps.spritePath = spritePath;
                     collections.CharacterLookup.Add(characterId, characterProps);
                     collections.ItemLookup.Add(characterId, itemProps);
                 }
             }
+            EditorUtility.SetDirty(collections);
             AssetDatabase.CreateAsset(collections, $"Assets/_GrandmaGreen/Scripts/Collections/CollectionsSystemData.asset");
             AssetDatabase.SaveAssets();
         }

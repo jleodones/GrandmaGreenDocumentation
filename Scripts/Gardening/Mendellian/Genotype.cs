@@ -1,5 +1,4 @@
-using System;
-using UnityEngine;
+using Exception = System.Exception;
 using Random = UnityEngine.Random;
 
 namespace GrandmaGreen.Garden
@@ -22,7 +21,7 @@ namespace GrandmaGreen.Garden
         {
             if (genotype.Length != 4)
             {
-                throw new System.Exception("Invalid genotype: " + genotype); 
+                throw new Exception("Invalid genotype: " + genotype); 
 	        }
             string valid = "AaBb";
             foreach (char c in genotype)
@@ -47,21 +46,11 @@ namespace GrandmaGreen.Garden
 
         public Genotype Cross(Genotype dad)
         {
-            int[][] punnettSquare = {
-                new int[]{ 0, 4, 2, 6 }, new int[]{ 0, 4, 3, 6 }, new int[]{ 1, 4, 2, 6 }, new int[]{ 1, 4, 3, 6 },
-                new int[]{ 0, 4, 2, 7 }, new int[]{ 0, 4, 3, 7 }, new int[]{ 1, 4, 2, 7 }, new int[]{ 1, 4, 3, 7 },
-                new int[]{ 0, 5, 2, 6 }, new int[]{ 0, 5, 3, 6 }, new int[]{ 1, 5, 2, 6 }, new int[]{ 1, 5, 3, 6 },
-                new int[]{ 0, 5, 2, 7 }, new int[]{ 0, 5, 3, 7 }, new int[]{ 1, 5, 2, 7 }, new int[]{ 1, 5, 3, 7 }
-            };
-
-            string traits = this.ToString() + dad.ToString();
             string childGenotype = "";
-
-            foreach(int i in punnettSquare[Random.Range(0, punnettSquare.Length)])
+            for (int i = 0; i < 4; i++)
             {
-                childGenotype += traits[i];
+                childGenotype += (Random.value > 0.5f) ? dad.ToString()[i] : this.ToString()[i];
 	        }
-
             return new Genotype(childGenotype);
         }
     }

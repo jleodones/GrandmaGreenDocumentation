@@ -11,14 +11,18 @@ namespace GrandmaGreen
     {
         public static EventManager instance;
 
-        private void Awake() {
-            if (instance == null) {
-                instance = this;    
-            } else {
+        private void Awake()
+        {
+            if (instance == null)
+            {
+                instance = this;
+            }
+            else
+            {
                 Destroy(this);
-            }   
+            }
         }
-        
+
         // HUD events and handlers.
         public event Action EVENT_OPEN_HUD;
         public event Action EVENT_OPEN_HUD_ANIMATED;
@@ -46,17 +50,20 @@ namespace GrandmaGreen
 
         // Inventory related events and handlers.
         public event Action EVENT_INVENTORY_OPEN;
-        public event Action<IInventoryItem,int> EVENT_INVENTORY_ADD_TOOL_OR_DECOR;
-        public event Action<IInventoryItem,int> EVENT_INVENTORY_REMOVE_TOOL_OR_DECOR;
-        
-        public event Action<IInventoryItem,Genotype> EVENT_INVENTORY_ADD_PLANT_OR_SEED;
-        public event Action<IInventoryItem,Genotype> EVENT_INVENTORY_REMOVE_PLANT_OR_SEED;
+        public event Action<IInventoryItem, int> EVENT_INVENTORY_ADD_TOOL_OR_DECOR;
+        public event Action<IInventoryItem, int> EVENT_INVENTORY_REMOVE_TOOL_OR_DECOR;
+
+        public event Action<IInventoryItem, Genotype> EVENT_INVENTORY_ADD_PLANT_OR_SEED;
+        public event Action<IInventoryItem, Genotype> EVENT_INVENTORY_REMOVE_PLANT_OR_SEED;
+
+        public event Action<IInventoryItem> EVENT_CUSTOMIZATION_START;
+        public event Action<bool> EVENT_CUSTOMIZATION_END;
 
         public void HandleEVENT_INVENTORY_OPEN()
         {
             EVENT_INVENTORY_OPEN?.Invoke();
         }
-        
+
         public void HandleEVENT_INVENTORY_ADD_TOOL_OR_DECOR(IInventoryItem item, int num)
         {
             EVENT_INVENTORY_ADD_TOOL_OR_DECOR?.Invoke(item, num);
@@ -66,7 +73,7 @@ namespace GrandmaGreen
         {
             EVENT_INVENTORY_REMOVE_TOOL_OR_DECOR?.Invoke(item, num);
         }
-        
+
         public void HandleEVENT_INVENTORY_ADD_PLANT_OR_SEED(IInventoryItem item, Genotype genotype)
         {
             EVENT_INVENTORY_ADD_PLANT_OR_SEED?.Invoke(item, genotype);
@@ -80,7 +87,7 @@ namespace GrandmaGreen
         // Golem events and handlers.
         public event Action<int, Vector3> EVENT_GOLEM_SPAWN;
 
-        public void HandleEVENT_GOLEM_SPAWN(int id, Vector3 pos) {EVENT_GOLEM_SPAWN?.Invoke(id, pos);}
+        public void HandleEVENT_GOLEM_SPAWN(int id, Vector3 pos) { EVENT_GOLEM_SPAWN?.Invoke(id, pos); }
 
         // Plant growth event.
         public event Action<int, Vector3Int> EVENT_PLANT_UPDATE;
@@ -89,6 +96,16 @@ namespace GrandmaGreen
         {
             EVENT_PLANT_UPDATE?.Invoke(areaIndex, cell);
         }
-    }    
+
+        public void HandleEVENT_CUSTOMIZATION_START(IInventoryItem item)
+        {
+            EVENT_CUSTOMIZATION_START?.Invoke(item);
+        }
+
+        public void HandleEVENT_CUSTOMIZATION_END(bool successful)
+        {
+            EVENT_CUSTOMIZATION_END?.Invoke(successful);
+        }
+    }
 }
 

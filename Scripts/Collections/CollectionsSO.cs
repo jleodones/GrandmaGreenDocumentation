@@ -1,4 +1,5 @@
 using GrandmaGreen.Garden;
+using Sirenix.OdinInspector;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -239,8 +240,9 @@ namespace GrandmaGreen.Collections
     ///<summary>
     ///Template to generate the Collections SO, so that it will contain a list of Items
     ///</summary>
-    public class CollectionsSO : ScriptableObject
+    public class CollectionsSO : Sirenix.OdinInspector.SerializedScriptableObject
     {
+        [ShowInInspector]
         public Dictionary<Id, ItemProperties> ItemLookup;
         public Dictionary<PlantId, PlantProperties> PlantLookup;
         public Dictionary<CharacterId, CharacterProperties> CharacterLookup;
@@ -266,9 +268,18 @@ namespace GrandmaGreen.Collections
         ///<summary>
         ///Retrieve a sprite by its sprite path (which is just its filename)
         ///</summary>
-        public Sprite GetSprite(string spritePath)
+        public Sprite GetSpriteByPath(string spritePath)
         {
             return Resources.Load(spritePath, typeof(Sprite)) as Sprite;
+        }
+
+        ///<summary>
+        ///Retrieve a sprite by its sprite path (which is just its filename)
+        ///</summary>
+        ///
+        public Sprite GetSpriteById(Id id)
+        {
+            return Resources.Load(GetItem(id).spritePath, typeof(Sprite)) as Sprite;
         }
 
         ///<summary>

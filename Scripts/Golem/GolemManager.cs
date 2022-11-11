@@ -6,16 +6,27 @@ using Pathfinding;
 using Core.RNG;
 
 namespace GrandmaGreen.Entities {
-    [CreateAssetMenu(menuName = "GrandmaGreen/Entities/Golem Manager")]
+    [CreateAssetMenu(menuName = "GrandmaGreen/Entities/GolemManager")]
     public class GolemManager : ScriptableObject
     {
-        public GameObject tulip;
-        public List<int> golemList; //golem id
+        public List<GameObject> golemPrefabs;
+        public Dictionary<int, GameObject> golemObjectTable; //active golems
+        public GolemState[] golemStateTable;
 
         public void Initialize()
         {
             //Subscribe
             EventManager.instance.EVENT_GOLEM_SPAWN += OnGolemSpawn;
+        }
+
+        public void CreateGolem(int id) {
+            return new GolemState {
+                golemID = id,
+                happiness = 50,
+                isSpawned = true,
+                isMature = false,
+                isTravelling = false,
+            };
         }
 
         /// <summary>
@@ -25,19 +36,19 @@ namespace GrandmaGreen.Entities {
             Debug.Log("A Golem is spawned" + pos.ToString());
             
             // if golem existed, not spawn
-            if (golemList.Contains(id)) return;
+            if (golemObjectTable.ContainsKey(id)) return;
 
             GameObject newGolemParent = new GameObject("newGolemParent_"+id);
             newGolemParent.AddComponent<SplineContainer>();
             
             // Instantiate at position and zero rotation.
-            GameObject newGolem = Instantiate(tulip, pos, Quaternion.identity);
+            GameObject newGolem = Instantiate(golemPrefabs[0], pos, Quaternion.identity);
             newGolem.transform.rotation = Quaternion.Euler(-45,0,0);
             newGolem.transform.SetParent(newGolemParent.transform);
             newGolem.GetComponent<SplineFollow>().target = newGolemParent.GetComponent<SplineContainer>();
 
             // Add golem to the table
-            golemList.Add(id);
+            golemObjectTable[id] = newGolem;
         }
 
         public void OnDestroy() {

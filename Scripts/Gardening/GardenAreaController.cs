@@ -1,17 +1,12 @@
 using GrandmaGreen.Collections;
 using GrandmaGreen.Entities;
-using GrandmaGreen.TimeLayer;
-using System.Collections;
 using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
-using UnityEngine.Tilemaps;
 
 namespace GrandmaGreen.Garden
 {
     /// <summary>
     /// Responsible for functionality of a single Garden screen
-    /// TODO: Implement functionality for save/loading changed tiles 
     /// </summary>
     public class GardenAreaController : AreaController
     {
@@ -57,7 +52,7 @@ namespace GrandmaGreen.Garden
             decorList = new List<Collider>();
             RefreshGarden();
 
-            gardenManager.timer.onTick += (x) => DecrementWatering(x);
+            gardenManager.timer.onTick += DecrementWatering;
         }
 
         void OnDisable()
@@ -65,7 +60,7 @@ namespace GrandmaGreen.Garden
             onTilemapSelection -= GardenTileSelected;
             EventManager.instance.EVENT_PLANT_UPDATE -= PlantUpdate;
 
-            gardenManager.timer.onTick -= (x) => DecrementWatering(x);
+            gardenManager.timer.onTick -= DecrementWatering;
         }
 
         #region Plants
@@ -148,7 +143,7 @@ namespace GrandmaGreen.Garden
                     if (plant.waterTimer >= (-2 * waterTimerReset)) {
                         // This section is all Temporary Code until we find a different visual solution
                         // for showing the state of a plant.
-                        /*if (plant.waterTimer == waterTimerReset)
+                        if (plant.waterTimer == waterTimerReset)
                         {
                             plantPrefabLookup[plant.cell].transform.localScale = Vector3.one;
                         }
@@ -171,9 +166,9 @@ namespace GrandmaGreen.Garden
                             ParticleSystem PlayParticle = Instantiate(DryingUpBurst, centerOfCell + new Vector3(0, -1, -2), particleQuat);
 
                             plantPrefabLookup[plant.cell].transform.localScale = Vector3.one * 0.6f;
-                        }*/
+                        }
 
-                        Debug.Log(plant.waterTimer);
+                        //Debug.Log(plant.waterTimer);
                         gardenManager.DecrementWaterTimer(areaIndex, plant.cell, (value * -1));
                     }
                 }
@@ -257,9 +252,9 @@ namespace GrandmaGreen.Garden
                     new Plant((ushort)motherPlantType, properties.name, 1, new List<Genotype> { motherGenotype }), motherGenotype);
                 EventManager.instance.HandleEVENT_INVENTORY_ADD_PLANT_OR_SEED(
                     new Seed((ushort)collection.PlantToSeed(childPlantType), properties.name, new List<Genotype> { childGenotype }), childGenotype);
-                EventManager.instance.HandleEVENT_GOLEM_SPAWN(0, cell);
-
                 DestroyPlant(cell);
+
+                EventManager.instance.HandleEVENT_GOLEM_SPAWN(0, cell);
 		        return true;
             }
 
@@ -323,6 +318,20 @@ namespace GrandmaGreen.Garden
             CreatePlant(SeedId.Rose, new Genotype("aabb"), Vector3Int.down, 2);
             CreatePlant(SeedId.Rose, new Genotype("aAbB"), Vector3Int.left, 2);
             CreatePlant(SeedId.Rose, new Genotype("AaBb"), Vector3Int.right, 2);
+
+            Vector3Int right = Vector3Int.zero + 5 * Vector3Int.right + 5 * Vector3Int.up;
+            for (int i = 0; i <= 6; i+=2)
+            {
+                DestroyPlant(right + i * Vector3Int.down);
+                DestroyPlant(right + i * Vector3Int.down + Vector3Int.right);
+                ChangeGardenTileToPlot_Occupied(right + i * Vector3Int.down);
+                ChangeGardenTileToPlot_Occupied(right + i * Vector3Int.down + Vector3Int.right);
+                CreatePlant(SeedId.Tulip, new Genotype("AaBb"), right + i * Vector3Int.down, 2);
+            }
+            CreatePlant(SeedId.Rose, new Genotype("aabb"), right + 0 * Vector3Int.down + Vector3Int.right, 2);
+            CreatePlant(SeedId.Rose, new Genotype("AaBb"), right + 2 * Vector3Int.down + Vector3Int.right, 2);
+            CreatePlant(SeedId.Rose, new Genotype("aAbB"), right + 4 * Vector3Int.down + Vector3Int.right, 2);
+            CreatePlant(SeedId.Rose, new Genotype("AABB"), right + 6 * Vector3Int.down + Vector3Int.right, 2);
         }
         #endregion
 
@@ -386,119 +395,5 @@ namespace GrandmaGreen.Garden
             //Save decor item here
             //Adjust pathfinding grid here
         }
-
-        /*
-        /// <summary>
-        /// Punnet square logic
-        /// </summary>
-        List<Genotype> punnetSquare;
-        List<GardenPlant> neighbours;
-        public void Harvest(BasePhenotypeData phenotypeData, Genotype genotype)
-        {
-            //NOTE: This would be calculated when the plant is placed down// when a tile near it is updated
-
-            System.Type phenotype = phenotypeData.GetType();
-            List<Genotype> daddies = new List<Genotype>();
-
-            foreach (GardenPlant plant in neighbours)
-            {
-                if (plant.phenotypeData.GetType() != phenotype) continue;
-                daddies.Add(plant.genotype);
-            }
-            //--------------------------------
-
-            //Punnet square Row + Column
-
-            Genotype daddyGenotype = daddies[Random.Range(0, daddies.Count)];    //NOTE: This should check weighting in the future
-
-            int squareSide = (int)Mathf.Pow(2, phenotypeData.TraitCount);
-
-            List<List<Allele>> topRow = new List<List<Allele>>();
-            List<List<Allele>> leftCol = new List<List<Allele>>();
-
-            //Pseudo bit array 
-            int[] bitArray = new int[phenotypeData.TraitCount];
-            int index;
-            //Filling up the punnet square top/left headers
-            for (int i = 0; i < squareSide; i++)
-            {
-                topRow.Add(new List<Allele>());
-                leftCol.Add(new List<Allele>());
-
-                for (int j = 0; j < phenotypeData.TraitCount; j++)
-                {
-                    index = bitArray[j];
-
-                    if (index == 0)
-                    {
-                        topRow[i].Add(daddyGenotype[j].allele1);
-                        leftCol[i].Add(genotype[j].allele1);
-                    }
-                    else
-                    {
-                        topRow[i].Add(daddyGenotype[j].allele2);
-                        leftCol[i].Add(genotype[j].allele2);
-                    }
-                }
-
-                //Incrementing our pseudo binary number (int array)
-                bitArray[0] += 1;
-                for (int k = 0; k < phenotypeData.TraitCount - 1; k++)
-                {
-                    if (bitArray[k] > 1)
-                    {
-                        bitArray[k + 1] += 1;
-                        bitArray[k] = 0;
-                    }
-                }
-            }
-
-            //Storing the actual combinations
-            punnetSquare = new List<Genotype>();
-            Genotype squareValue = null;
-            for (int y = 0; y < squareSide; y++)
-            {
-                for (int x = 0; x < squareSide; x++)
-                {
-                    squareValue = new Genotype();
-
-                    for (int i = 0; i < phenotypeData.TraitCount; i++)
-                    {
-                        Trait trait;
-                        trait.allele1 = topRow[x][i];
-                        trait.allele2 = leftCol[y][i];
-
-                        squareValue[i] = trait;
-                    }
-
-                    punnetSquare.Add(squareValue);
-                }
-            }
-
-            Genotype childGenotype = punnetSquare[Random.Range(0, punnetSquare.Count)];
-
-            ITraitSetData[] traitList = new ITraitSetData[phenotypeData.TraitCount];
-
-            for (int i = 0; i < phenotypeData.TraitCount; i++)
-            {
-                traitList[i] = phenotypeData.TraitList[i];
-
-                //traitList[i].dominant.
-                if (childGenotype[i].allele1 == Allele.dominant && childGenotype[i].allele2 == Allele.dominant)
-                {
-                    //traits[i] = phenotypeData.TraitList[i];
-                }
-                else if (childGenotype[i].allele1 == Allele.recessive && childGenotype[i].allele2 == Allele.recessive)
-                {
-                    //traits[i] = phenotypeData.TraitList[i];
-                }
-                else
-                {
-                    // traits[i] = phenotypeData.TraitList[i];
-                }
-            }
-        }
-        */
     }
-    
 }

@@ -12,13 +12,7958 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7366940f57e724cbea64b85b9c958ad2, type: 3}
   m_Name: CollectionsSystemData
   m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: ItemLookup
+      Entry: 7
+      Data: 0|System.Collections.Generic.Dictionary`2[[System.Enum, mscorlib],[GrandmaGreen.Collections.ItemProperties,
+        GrandmaGreen]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 1|System.Collections.Generic.ObjectEqualityComparer`1[[System.Enum, mscorlib]],
+        mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 157
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 2|GrandmaGreen.Collections.PlantId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 1001
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Rose
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: PLA_Rose
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 0
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 3|GrandmaGreen.Collections.PlantId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 1002
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Tulip
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: PLA_Tulip
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 0
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 4|GrandmaGreen.Collections.PlantId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 1003
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Calla Lily
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: PLA_Calla Lily
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 0
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 5|GrandmaGreen.Collections.PlantId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 1004
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Dahlia
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: PLA_Dahlia
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 0
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 6|GrandmaGreen.Collections.PlantId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 1005
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Hyacinth
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: PLA_Hyacinth
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 0
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 7|GrandmaGreen.Collections.PlantId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 1006
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Pansy
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: PLA_Pansy
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 0
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 8|GrandmaGreen.Collections.PlantId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 1007
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Crocus
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: PLA_Crocus
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 0
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 9|GrandmaGreen.Collections.PlantId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 1008
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Cucumber
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: PLA_Cucumber
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 0
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 10|GrandmaGreen.Collections.PlantId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 1009
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Tomato
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: PLA_Tomato
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 0
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 11|GrandmaGreen.Collections.PlantId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 1010
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Pepper
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: PLA_Pepper
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 0
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 12|GrandmaGreen.Collections.PlantId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 1011
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Sweet Potato
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: PLA_Sweet Potato
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 0
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 13|GrandmaGreen.Collections.PlantId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 1012
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Corn
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: PLA_Corn
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 0
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 14|GrandmaGreen.Collections.PlantId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 1013
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Radish
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: PLA_Radish
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 0
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 15|GrandmaGreen.Collections.PlantId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 1014
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Pumpkin
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: PLA_Pumpkin
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 0
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 16|GrandmaGreen.Collections.PlantId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 1015
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Apple
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: PLA_Apple
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 0
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 17|GrandmaGreen.Collections.PlantId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 1016
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Pear
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: PLA_Pear
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 0
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 18|GrandmaGreen.Collections.PlantId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 1017
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Watermelon
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: PLA_Watermelon
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 0
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 19|GrandmaGreen.Collections.PlantId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 1018
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Cherry
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: PLA_Cherry
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 0
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 20|GrandmaGreen.Collections.PlantId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 1019
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Plum
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: PLA_Plum
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 0
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 21|GrandmaGreen.Collections.PlantId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 1020
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Peach
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: PLA_Peach
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 0
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 22|GrandmaGreen.Collections.PlantId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 1021
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Blueberry
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: PLA_Blueberry
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 0
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 23|GrandmaGreen.Collections.SeedId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 2001
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Rose
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: GAR_Rose
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 24|GrandmaGreen.Collections.SeedId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 2002
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Tulip
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: GAR_Tulip
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 25|GrandmaGreen.Collections.SeedId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 2003
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Calla Lily
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: GAR_Calla Lily
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 26|GrandmaGreen.Collections.SeedId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 2004
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Dahlia
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: GAR_Dahlia
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 27|GrandmaGreen.Collections.SeedId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 2005
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Hyacinth
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: GAR_Hyacinth
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 28|GrandmaGreen.Collections.SeedId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 2006
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Pansy
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: GAR_Pansy
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 29|GrandmaGreen.Collections.SeedId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 2007
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Crocus
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: GAR_Crocus
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 30|GrandmaGreen.Collections.SeedId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 2008
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Cucumber
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: GAR_Cucumber
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 31|GrandmaGreen.Collections.SeedId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 2009
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Tomato
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: GAR_Tomato
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 32|GrandmaGreen.Collections.SeedId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 2010
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Pepper
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: GAR_Pepper
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 33|GrandmaGreen.Collections.SeedId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 2011
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Sweet Potato
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: GAR_Sweet Potato
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 34|GrandmaGreen.Collections.SeedId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 2012
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Corn
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: GAR_Corn
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 35|GrandmaGreen.Collections.SeedId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 2013
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Radish
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: GAR_Radish
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 36|GrandmaGreen.Collections.SeedId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 2014
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Pumpkin
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: GAR_Pumpkin
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 37|GrandmaGreen.Collections.SeedId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 2015
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Apple
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: GAR_Apple
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 38|GrandmaGreen.Collections.SeedId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 2016
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Pear
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: GAR_Pear
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 39|GrandmaGreen.Collections.SeedId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 2017
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Watermelon
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: GAR_Watermelon
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 40|GrandmaGreen.Collections.SeedId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 2018
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Cherry
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: GAR_Cherry
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 41|GrandmaGreen.Collections.SeedId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 2019
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Plum
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: GAR_Plum
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 42|GrandmaGreen.Collections.SeedId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 2020
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Peach
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: GAR_Peach
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 43|GrandmaGreen.Collections.SeedId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 2021
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Blueberry
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: GAR_Blueberry
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 44|GrandmaGreen.Collections.ToolId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 3001
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Trowel
+    - Name: description
+      Entry: 1
+      Data: desc
+    - Name: spritePath
+      Entry: 1
+      Data: GAR_Trowel
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 45|GrandmaGreen.Collections.ToolId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 3002
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Watering Can
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: GAR_Watering Can
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 46|GrandmaGreen.Collections.ToolId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 3003
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Seed Packet
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: GAR_Seed Packet
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 47|GrandmaGreen.Collections.ToolId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 3004
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Upgraded Trowel
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: GAR_Upgraded Trowel
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 48|GrandmaGreen.Collections.ToolId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 3005
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Upgraded Watering Can
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: GAR_Upgraded Watering Can
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 49|GrandmaGreen.Collections.ToolId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 3006
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Fertilizer
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: GAR_Fertilizer
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 50|GrandmaGreen.Collections.DecorationId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 4001
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Torch
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Torch
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 51|GrandmaGreen.Collections.DecorationId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 4002
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Tulip Golem Memento
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Tulip Golem Memento
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 52|GrandmaGreen.Collections.DecorationId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 4003
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Apple Golem Memento
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Apple Golem Memento
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 53|GrandmaGreen.Collections.DecorationId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 4004
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Crocus Golem Memento
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Crocus Golem Memento
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 54|GrandmaGreen.Collections.DecorationId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 4005
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Radish Golem Memento
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Radish Golem Memento
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 55|GrandmaGreen.Collections.DecorationId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 4006
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Pumpkin Golem Memento
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Pumpkin Golem Memento
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 56|GrandmaGreen.Collections.DecorationId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 4007
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Cotton Golem Memento
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Cotton Golem Memento
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 57|GrandmaGreen.Collections.DecorationId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 4008
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Camping Lantern
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Camping Lantern
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 58|GrandmaGreen.Collections.DecorationId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 4009
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Simple Hanging Lamp Post
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Simple Hanging Lamp Post
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 59|GrandmaGreen.Collections.DecorationId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 4010
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Jack-O-Lantern
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Jack-O-Lantern
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 60|GrandmaGreen.Collections.DecorationId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 4011
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Iron Lamp Post
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Iron Lamp Post
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 61|GrandmaGreen.Collections.DecorationId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 4012
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Japanese Garden Lantern
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Japanese Garden Lantern
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 62|GrandmaGreen.Collections.DecorationId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 4013
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Mushroom Lamp
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Mushroom Lamp
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 63|GrandmaGreen.Collections.DecorationId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 4014
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Scarecrow
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Scarecrow
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 64|GrandmaGreen.Collections.DecorationId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 4015
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Bicycle
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Bicycle
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 65|GrandmaGreen.Collections.DecorationId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 4016
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Flower Wagon
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Flower Wagon
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 66|GrandmaGreen.Collections.DecorationId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 4017
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Harvest Basket
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Harvest Basket
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 67|GrandmaGreen.Collections.DecorationId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 4018
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Umbrella
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Umbrella
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 68|GrandmaGreen.Collections.DecorationId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 4019
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Swingset
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Swingset
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 69|GrandmaGreen.Collections.DecorationId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 4020
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Leafpile
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Leafpile
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 70|GrandmaGreen.Collections.DecorationId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 4021
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Potted Plant 01
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Potted Plant 01
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 71|GrandmaGreen.Collections.DecorationId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 4022
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Potted Plant 02
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Potted Plant 02
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 72|GrandmaGreen.Collections.DecorationId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 4023
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Potted Plant 03
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Potted Plant 03
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 73|GrandmaGreen.Collections.DecorationId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 4024
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: French Country Urn
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_French Country Urn
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 74|GrandmaGreen.Collections.DecorationId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 4025
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Garden Gnome Basic
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Garden Gnome Basic
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 75|GrandmaGreen.Collections.DecorationId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 4026
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Garden Gnome Sexy
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Garden Gnome Sexy
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 76|GrandmaGreen.Collections.DecorationId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 4027
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Garden Gnome Gold
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Garden Gnome Gold
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 77|GrandmaGreen.Collections.DecorationId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 4028
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Frog Sculpture
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Frog Sculpture
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 78|GrandmaGreen.Collections.DecorationId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 4029
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Flamingo
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Flamingo
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 79|GrandmaGreen.Collections.DecorationId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 4030
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Art Nouveau Sculture 01
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Art Nouveau Sculture 01
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 80|GrandmaGreen.Collections.DecorationId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 4031
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Art Nouveau Sculture 02
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Art Nouveau Sculture 02
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 81|GrandmaGreen.Collections.DecorationId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 4032
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Art Nouveau Sculture 03
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Art Nouveau Sculture 03
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 82|GrandmaGreen.Collections.DecorationId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 4033
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Simple Wooden Bench
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Simple Wooden Bench
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 83|GrandmaGreen.Collections.DecorationId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 4034
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Simple Wooden Chair
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Simple Wooden Chair
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 84|GrandmaGreen.Collections.DecorationId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 4035
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Stone Bench
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Stone Bench
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 85|GrandmaGreen.Collections.DecorationId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 4036
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Iron Bench
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Iron Bench
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 86|GrandmaGreen.Collections.DecorationId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 4037
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Iron Chair
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Iron Chair
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 87|GrandmaGreen.Collections.DecorationId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 4038
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Rocking Chair
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Rocking Chair
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 88|GrandmaGreen.Collections.DecorationId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 4039
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Mushroom Stool
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Mushroom Stool
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 89|GrandmaGreen.Collections.DecorationId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 4040
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Picnic Spread
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Picnic Spread
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 90|GrandmaGreen.Collections.DecorationId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 4041
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Simple Wooden Table
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Simple Wooden Table
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 91|GrandmaGreen.Collections.DecorationId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 4042
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Flower Table
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Flower Table
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 92|GrandmaGreen.Collections.DecorationId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 4043
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Iron Table
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Iron Table
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 93|GrandmaGreen.Collections.DecorationId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 4044
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Bird Bath
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Bird Bath
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 94|GrandmaGreen.Collections.DecorationId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 4045
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Natural Pond
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Natural Pond
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 95|GrandmaGreen.Collections.DecorationId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 4046
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Fancy Pond
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Fancy Pond
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 96|GrandmaGreen.Collections.DecorationId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 4047
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Koi Pond
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Koi Pond
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 97|GrandmaGreen.Collections.DecorationId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 4048
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Simple Fountain
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Simple Fountain
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 98|GrandmaGreen.Collections.DecorationId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 4049
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Fancy Fountain
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Fancy Fountain
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 99|GrandmaGreen.Collections.DecorationId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 4050
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Magic Fountain
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Magic Fountain
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 100|GrandmaGreen.Collections.DecorationId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 4051
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Well
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Well
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 101|GrandmaGreen.Collections.DecorationId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 4052
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Waterpump
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Waterpump
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 102|GrandmaGreen.Collections.DecorationId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 4053
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Grecian Ruin
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Grecian Ruin
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 103|GrandmaGreen.Collections.DecorationId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 4054
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Sundial
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Sundial
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 104|GrandmaGreen.Collections.DecorationId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 4055
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Claude Monet Painting
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Claude Monet Painting
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 105|GrandmaGreen.Collections.DecorationId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 4056
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: John Singer Sargent Painting
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_John Singer Sargent Painting
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 106|GrandmaGreen.Collections.DecorationId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 4057
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Mailbox Basic
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Mailbox Basic
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 107|GrandmaGreen.Collections.DecorationId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 4058
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Mailbox Cottagecore
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Mailbox Cottagecore
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 108|GrandmaGreen.Collections.DecorationId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 4059
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Mailbox Goth
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Mailbox Goth
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 109|GrandmaGreen.Collections.DecorationId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 4060
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Mailbox Fairy
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Mailbox Fairy
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 110|GrandmaGreen.Collections.DecorationId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 4061
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Mailbox Oriental
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Mailbox Oriental
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 111|GrandmaGreen.Collections.DecorationId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 4062
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Mailbox Cabin
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Mailbox Cabin
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 112|GrandmaGreen.Collections.DecorationId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 4063
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Mailbox Pastel
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Mailbox Pastel
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 113|GrandmaGreen.Collections.DecorationId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 4064
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: White Picket Fence
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_White Picket Fence
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 114|GrandmaGreen.Collections.DecorationId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 4065
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Simple Wooden Fence
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Simple Wooden Fence
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 115|GrandmaGreen.Collections.DecorationId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 4066
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Farm Fence
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Farm Fence
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 116|GrandmaGreen.Collections.DecorationId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 4067
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Fancy Iron Fence
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Fancy Iron Fence
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 117|GrandmaGreen.Collections.DecorationId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 4068
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Fieldstone Fence
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Fieldstone Fence
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 118|GrandmaGreen.Collections.DecorationId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 4069
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Ivy-Covered Brick Fence
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Ivy-Covered Brick Fence
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 119|GrandmaGreen.Collections.DecorationId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 4070
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Historical English Exterior
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Historical English Exterior
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 120|GrandmaGreen.Collections.DecorationId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 4071
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: French Provincial Exterior
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_French Provincial Exterior
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 121|GrandmaGreen.Collections.DecorationId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 4072
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: PNW Cabin Exterior
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_PNW Cabin Exterior
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 122|GrandmaGreen.Collections.DecorationId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 4073
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Traditional Japanese Exterior
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Traditional Japanese Exterior
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 123|GrandmaGreen.Collections.DecorationId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 4074
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Modern Exterior
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Modern Exterior
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 124|GrandmaGreen.Collections.DecorationId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 4075
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Acorn Exterior
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Acorn Exterior
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 125|GrandmaGreen.Collections.DecorationId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 4076
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Pastel Exterior
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Pastel Exterior
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 126|GrandmaGreen.Collections.DecorationId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 4077
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Witchy Goth Exterior
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Witchy Goth Exterior
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 127|GrandmaGreen.Collections.DecorationId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 4078
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Fairy Magic Exterior
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Fairy Magic Exterior
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 128|GrandmaGreen.Collections.DecorationId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 4079
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: European Castle Exterior
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_European Castle Exterior
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 129|GrandmaGreen.Collections.DecorationId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 4080
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Dirt Path
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Dirt Path
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 130|GrandmaGreen.Collections.DecorationId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 4081
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Cobblestone Path
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Cobblestone Path
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 131|GrandmaGreen.Collections.DecorationId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 4082
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Tile Path
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Tile Path
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 132|GrandmaGreen.Collections.DecorationId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 4083
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Wood Path
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Wood Path
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 133|GrandmaGreen.Collections.DecorationId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 4084
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Oak Tree
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Oak Tree
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 134|GrandmaGreen.Collections.DecorationId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 4085
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Pine Tree
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Pine Tree
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 135|GrandmaGreen.Collections.DecorationId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 4086
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Willow Tree
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Willow Tree
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 136|GrandmaGreen.Collections.DecorationId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 4087
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Palm Tree
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Palm Tree
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 137|GrandmaGreen.Collections.DecorationId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 4088
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Maple Tree
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Maple Tree
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 138|GrandmaGreen.Collections.DecorationId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 4089
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Poplar Tree
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Poplar Tree
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 139|GrandmaGreen.Collections.DecorationId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 4090
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Stump Tree
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Stump Tree
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 140|GrandmaGreen.Collections.DecorationId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 4091
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Hydrangea Bush
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Hydrangea Bush
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 141|GrandmaGreen.Collections.DecorationId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 4092
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Oleander Bush
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Oleander Bush
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 142|GrandmaGreen.Collections.DecorationId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 4093
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Gardenia Bush
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Gardenia Bush
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 143|GrandmaGreen.Collections.DecorationId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 4094
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Boxwood Bush
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Boxwood Bush
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 144|GrandmaGreen.Collections.DecorationId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 4095
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Common Poppy
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Common Poppy
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 145|GrandmaGreen.Collections.DecorationId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 4096
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Forget Me Not
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Forget Me Not
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 146|GrandmaGreen.Collections.DecorationId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 4097
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Wild Daisies
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Wild Daisies
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 147|GrandmaGreen.Collections.DecorationId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 4098
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Dandelion
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Dandelion
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 148|GrandmaGreen.Collections.DecorationId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 4099
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Clover
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Clover
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 149|GrandmaGreen.Collections.DecorationId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 4100
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Hemlock
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Hemlock
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 150|GrandmaGreen.Collections.CharacterId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 5001
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Grandma
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: CHA_Grandma
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 0
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 151|GrandmaGreen.Collections.CharacterId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 5002
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Gardening Shopkeeper
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: CHA_Gardening Shopkeeper
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 0
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 152|GrandmaGreen.Collections.CharacterId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 5003
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Decor Shopkeeper
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: CHA_Decor Shopkeeper
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 0
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 153|GrandmaGreen.Collections.CharacterId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 5004
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Tulip Golem
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: CHA_Tulip Golem
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 0
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 154|GrandmaGreen.Collections.CharacterId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 5005
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Apple Golem
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: CHA_Apple Golem
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 0
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 155|GrandmaGreen.Collections.CharacterId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 5006
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Cotton Golem
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: CHA_Cotton Golem
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 0
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 156|GrandmaGreen.Collections.CharacterId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 5007
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Crocus Golem
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: CHA_Crocus Golem
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 0
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 157|GrandmaGreen.Collections.CharacterId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 5008
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Pumpkin Golem
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: CHA_Pumpkin Golem
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 0
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 158|GrandmaGreen.Collections.CharacterId, GrandmaGreen
+    - Name: 
+      Entry: 3
+      Data: 5009
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Radish Golem
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: CHA_Radish Golem
+    - Name: tag
+      Entry: 6
+      Data: 
+    - Name: baseCost
+      Entry: 3
+      Data: 0
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: PlantLookup
+      Entry: 7
+      Data: 159|System.Collections.Generic.Dictionary`2[[GrandmaGreen.Collections.PlantId,
+        GrandmaGreen],[GrandmaGreen.Collections.PlantProperties, GrandmaGreen]],
+        mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 160|System.Collections.Generic.EnumEqualityComparer`1[[GrandmaGreen.Collections.PlantId,
+        GrandmaGreen]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 21
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 1001
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.PlantProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Rose
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: growthStages
+      Entry: 3
+      Data: 0
+    - Name: growthTime
+      Entry: 3
+      Data: 0
+    - Name: waterPerStage
+      Entry: 3
+      Data: 0
+    - Name: spriteBasePath
+      Entry: 1
+      Data: PLA_Rose
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 1002
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.PlantProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Tulip
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: growthStages
+      Entry: 3
+      Data: 0
+    - Name: growthTime
+      Entry: 3
+      Data: 0
+    - Name: waterPerStage
+      Entry: 3
+      Data: 0
+    - Name: spriteBasePath
+      Entry: 1
+      Data: PLA_Tulip
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 1003
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.PlantProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Calla Lily
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: growthStages
+      Entry: 3
+      Data: 0
+    - Name: growthTime
+      Entry: 3
+      Data: 0
+    - Name: waterPerStage
+      Entry: 3
+      Data: 0
+    - Name: spriteBasePath
+      Entry: 1
+      Data: PLA_Calla Lily
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 1004
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.PlantProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Dahlia
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: growthStages
+      Entry: 3
+      Data: 0
+    - Name: growthTime
+      Entry: 3
+      Data: 0
+    - Name: waterPerStage
+      Entry: 3
+      Data: 0
+    - Name: spriteBasePath
+      Entry: 1
+      Data: PLA_Dahlia
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 1005
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.PlantProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Hyacinth
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: growthStages
+      Entry: 3
+      Data: 0
+    - Name: growthTime
+      Entry: 3
+      Data: 0
+    - Name: waterPerStage
+      Entry: 3
+      Data: 0
+    - Name: spriteBasePath
+      Entry: 1
+      Data: PLA_Hyacinth
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 1006
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.PlantProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Pansy
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: growthStages
+      Entry: 3
+      Data: 0
+    - Name: growthTime
+      Entry: 3
+      Data: 0
+    - Name: waterPerStage
+      Entry: 3
+      Data: 0
+    - Name: spriteBasePath
+      Entry: 1
+      Data: PLA_Pansy
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 1007
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.PlantProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Crocus
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: growthStages
+      Entry: 3
+      Data: 0
+    - Name: growthTime
+      Entry: 3
+      Data: 0
+    - Name: waterPerStage
+      Entry: 3
+      Data: 0
+    - Name: spriteBasePath
+      Entry: 1
+      Data: PLA_Crocus
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 1008
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.PlantProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Cucumber
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: growthStages
+      Entry: 3
+      Data: 0
+    - Name: growthTime
+      Entry: 3
+      Data: 0
+    - Name: waterPerStage
+      Entry: 3
+      Data: 0
+    - Name: spriteBasePath
+      Entry: 1
+      Data: PLA_Cucumber
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 1009
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.PlantProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Tomato
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: growthStages
+      Entry: 3
+      Data: 0
+    - Name: growthTime
+      Entry: 3
+      Data: 0
+    - Name: waterPerStage
+      Entry: 3
+      Data: 0
+    - Name: spriteBasePath
+      Entry: 1
+      Data: PLA_Tomato
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 1010
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.PlantProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Pepper
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: growthStages
+      Entry: 3
+      Data: 0
+    - Name: growthTime
+      Entry: 3
+      Data: 0
+    - Name: waterPerStage
+      Entry: 3
+      Data: 0
+    - Name: spriteBasePath
+      Entry: 1
+      Data: PLA_Pepper
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 1011
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.PlantProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Sweet Potato
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: growthStages
+      Entry: 3
+      Data: 0
+    - Name: growthTime
+      Entry: 3
+      Data: 0
+    - Name: waterPerStage
+      Entry: 3
+      Data: 0
+    - Name: spriteBasePath
+      Entry: 1
+      Data: PLA_Sweet Potato
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 1012
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.PlantProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Corn
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: growthStages
+      Entry: 3
+      Data: 0
+    - Name: growthTime
+      Entry: 3
+      Data: 0
+    - Name: waterPerStage
+      Entry: 3
+      Data: 0
+    - Name: spriteBasePath
+      Entry: 1
+      Data: PLA_Corn
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 1013
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.PlantProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Radish
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: growthStages
+      Entry: 3
+      Data: 0
+    - Name: growthTime
+      Entry: 3
+      Data: 0
+    - Name: waterPerStage
+      Entry: 3
+      Data: 0
+    - Name: spriteBasePath
+      Entry: 1
+      Data: PLA_Radish
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 1014
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.PlantProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Pumpkin
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: growthStages
+      Entry: 3
+      Data: 0
+    - Name: growthTime
+      Entry: 3
+      Data: 0
+    - Name: waterPerStage
+      Entry: 3
+      Data: 0
+    - Name: spriteBasePath
+      Entry: 1
+      Data: PLA_Pumpkin
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 1015
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.PlantProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Apple
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: growthStages
+      Entry: 3
+      Data: 0
+    - Name: growthTime
+      Entry: 3
+      Data: 0
+    - Name: waterPerStage
+      Entry: 3
+      Data: 0
+    - Name: spriteBasePath
+      Entry: 1
+      Data: PLA_Apple
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 1016
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.PlantProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Pear
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: growthStages
+      Entry: 3
+      Data: 0
+    - Name: growthTime
+      Entry: 3
+      Data: 0
+    - Name: waterPerStage
+      Entry: 3
+      Data: 0
+    - Name: spriteBasePath
+      Entry: 1
+      Data: PLA_Pear
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 1017
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.PlantProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Watermelon
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: growthStages
+      Entry: 3
+      Data: 0
+    - Name: growthTime
+      Entry: 3
+      Data: 0
+    - Name: waterPerStage
+      Entry: 3
+      Data: 0
+    - Name: spriteBasePath
+      Entry: 1
+      Data: PLA_Watermelon
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 1018
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.PlantProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Cherry
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: growthStages
+      Entry: 3
+      Data: 0
+    - Name: growthTime
+      Entry: 3
+      Data: 0
+    - Name: waterPerStage
+      Entry: 3
+      Data: 0
+    - Name: spriteBasePath
+      Entry: 1
+      Data: PLA_Cherry
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 1019
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.PlantProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Plum
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: growthStages
+      Entry: 3
+      Data: 0
+    - Name: growthTime
+      Entry: 3
+      Data: 0
+    - Name: waterPerStage
+      Entry: 3
+      Data: 0
+    - Name: spriteBasePath
+      Entry: 1
+      Data: PLA_Plum
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 1020
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.PlantProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Peach
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: growthStages
+      Entry: 3
+      Data: 0
+    - Name: growthTime
+      Entry: 3
+      Data: 0
+    - Name: waterPerStage
+      Entry: 3
+      Data: 0
+    - Name: spriteBasePath
+      Entry: 1
+      Data: PLA_Peach
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 1021
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.PlantProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Blueberry
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: growthStages
+      Entry: 3
+      Data: 0
+    - Name: growthTime
+      Entry: 3
+      Data: 0
+    - Name: waterPerStage
+      Entry: 3
+      Data: 0
+    - Name: spriteBasePath
+      Entry: 1
+      Data: PLA_Blueberry
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: CharacterLookup
+      Entry: 7
+      Data: 161|System.Collections.Generic.Dictionary`2[[GrandmaGreen.Collections.CharacterId,
+        GrandmaGreen],[GrandmaGreen.Collections.CharacterProperties, GrandmaGreen]],
+        mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 162|System.Collections.Generic.EnumEqualityComparer`1[[GrandmaGreen.Collections.CharacterId,
+        GrandmaGreen]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 9
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 5001
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.CharacterProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Grandma
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePaths
+      Entry: 7
+      Data: 163|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 1
+      Data: CHA_Grandma
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 5002
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.CharacterProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Gardening Shopkeeper
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePaths
+      Entry: 7
+      Data: 164|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 1
+      Data: CHA_Gardening Shopkeeper
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 5003
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.CharacterProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Decor Shopkeeper
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePaths
+      Entry: 7
+      Data: 165|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 1
+      Data: CHA_Decor Shopkeeper
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 5004
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.CharacterProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Tulip Golem
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePaths
+      Entry: 7
+      Data: 166|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 1
+      Data: CHA_Tulip Golem
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 5005
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.CharacterProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Apple Golem
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePaths
+      Entry: 7
+      Data: 167|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 1
+      Data: CHA_Apple Golem
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 5006
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.CharacterProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Cotton Golem
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePaths
+      Entry: 7
+      Data: 168|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 1
+      Data: CHA_Cotton Golem
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 5007
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.CharacterProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Crocus Golem
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePaths
+      Entry: 7
+      Data: 169|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 1
+      Data: CHA_Crocus Golem
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 5008
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.CharacterProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Pumpkin Golem
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePaths
+      Entry: 7
+      Data: 170|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 1
+      Data: CHA_Pumpkin Golem
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 5009
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.CharacterProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Radish Golem
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePaths
+      Entry: 7
+      Data: 171|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 1
+      Data: CHA_Radish Golem
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: SeedLookup
+      Entry: 7
+      Data: 172|System.Collections.Generic.Dictionary`2[[GrandmaGreen.Collections.SeedId,
+        GrandmaGreen],[GrandmaGreen.Collections.SeedProperties, GrandmaGreen]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 173|System.Collections.Generic.EnumEqualityComparer`1[[GrandmaGreen.Collections.SeedId,
+        GrandmaGreen]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 21
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 2001
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.SeedProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Rose
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: GAR_Rose
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: seedType
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 2002
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.SeedProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Tulip
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: GAR_Tulip
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: seedType
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 2003
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.SeedProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Calla Lily
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: GAR_Calla Lily
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: seedType
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 2004
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.SeedProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Dahlia
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: GAR_Dahlia
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: seedType
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 2005
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.SeedProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Hyacinth
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: GAR_Hyacinth
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: seedType
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 2006
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.SeedProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Pansy
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: GAR_Pansy
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: seedType
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 2007
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.SeedProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Crocus
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: GAR_Crocus
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: seedType
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 2008
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.SeedProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Cucumber
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: GAR_Cucumber
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: seedType
+      Entry: 3
+      Data: 2
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 2009
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.SeedProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Tomato
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: GAR_Tomato
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: seedType
+      Entry: 3
+      Data: 2
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 2010
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.SeedProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Pepper
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: GAR_Pepper
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: seedType
+      Entry: 3
+      Data: 2
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 2011
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.SeedProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Sweet Potato
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: GAR_Sweet Potato
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: seedType
+      Entry: 3
+      Data: 2
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 2012
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.SeedProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Corn
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: GAR_Corn
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: seedType
+      Entry: 3
+      Data: 2
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 2013
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.SeedProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Radish
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: GAR_Radish
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: seedType
+      Entry: 3
+      Data: 2
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 2014
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.SeedProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Pumpkin
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: GAR_Pumpkin
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: seedType
+      Entry: 3
+      Data: 2
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 2015
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.SeedProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Apple
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: GAR_Apple
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: seedType
+      Entry: 3
+      Data: 3
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 2016
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.SeedProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Pear
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: GAR_Pear
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: seedType
+      Entry: 3
+      Data: 3
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 2017
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.SeedProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Watermelon
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: GAR_Watermelon
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: seedType
+      Entry: 3
+      Data: 3
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 2018
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.SeedProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Cherry
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: GAR_Cherry
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: seedType
+      Entry: 3
+      Data: 3
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 2019
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.SeedProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Plum
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: GAR_Plum
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: seedType
+      Entry: 3
+      Data: 3
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 2020
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.SeedProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Peach
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: GAR_Peach
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: seedType
+      Entry: 3
+      Data: 3
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 2021
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.SeedProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Blueberry
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: GAR_Blueberry
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: cycleCooldown
+      Entry: 3
+      Data: 0
+    - Name: seedType
+      Entry: 3
+      Data: 3
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: SpriteCache
+      Entry: 6
+      Data: 
   rose_seedling: {fileID: -805238457, guid: c477f60b3e98d48b1b259aa9755d56ca, type: 3}
   rose_growing: {fileID: -630399192, guid: c477f60b3e98d48b1b259aa9755d56ca, type: 3}
   rose_bb: {fileID: -177263465, guid: c477f60b3e98d48b1b259aa9755d56ca, type: 3}
   rose_Bb: {fileID: -2004269523, guid: c477f60b3e98d48b1b259aa9755d56ca, type: 3}
   rose_BB: {fileID: -2103551524, guid: c477f60b3e98d48b1b259aa9755d56ca, type: 3}
   tulip_seedling: {fileID: -1356113443, guid: bc6a83635e1f34a81afc1a5b2f3d45d9, type: 3}
-  tulip_growing: {fileID: 1854054624, guid: bc6a83635e1f34a81afc1a5b2f3d45d9, type: 3}
+  tulip_growing: {fileID: -1356113443, guid: bc6a83635e1f34a81afc1a5b2f3d45d9, type: 3}
   tulip_bb: {fileID: 704157985, guid: bc6a83635e1f34a81afc1a5b2f3d45d9, type: 3}
   tulip_Bb: {fileID: -923436979, guid: bc6a83635e1f34a81afc1a5b2f3d45d9, type: 3}
   tulip_BB: {fileID: -30384175, guid: bc6a83635e1f34a81afc1a5b2f3d45d9, type: 3}
