@@ -99,12 +99,12 @@
   </h3>
   
   
-  <h4 id="GrandmaGreen_Entities_GolemManager_golemList" data-uid="GrandmaGreen.Entities.GolemManager.golemList">golemList</h4>
+  <h4 id="GrandmaGreen_Entities_GolemManager_golemObjectTable" data-uid="GrandmaGreen.Entities.GolemManager.golemObjectTable">golemObjectTable</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public List&lt;int&gt; golemList</code></pre>
+    <pre><code class="lang-csharp hljs">public Dictionary&lt;int, GameObject&gt; golemObjectTable</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -116,19 +116,19 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a>, <span class="xref">GameObject</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <h4 id="GrandmaGreen_Entities_GolemManager_tulip" data-uid="GrandmaGreen.Entities.GolemManager.tulip">tulip</h4>
+  <h4 id="GrandmaGreen_Entities_GolemManager_golemPrefabs" data-uid="GrandmaGreen.Entities.GolemManager.golemPrefabs">golemPrefabs</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public GameObject tulip</code></pre>
+    <pre><code class="lang-csharp hljs">public List&lt;GameObject&gt; golemPrefabs</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -140,13 +140,64 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">GameObject</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<span class="xref">GameObject</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="GrandmaGreen_Entities_GolemManager_golemStateTable" data-uid="GrandmaGreen.Entities.GolemManager.golemStateTable">golemStateTable</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GolemState[] golemStateTable</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="GrandmaGreen.Entities.GolemState.html">GolemState</a>[]</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h3 id="methods">Methods
   </h3>
+  
+  
+  <a id="GrandmaGreen_Entities_GolemManager_CreateGolem_" data-uid="GrandmaGreen.Entities.GolemManager.CreateGolem*"></a>
+  <h4 id="GrandmaGreen_Entities_GolemManager_CreateGolem_System_Int32_" data-uid="GrandmaGreen.Entities.GolemManager.CreateGolem(System.Int32)">CreateGolem(Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CreateGolem(int id)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">id</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="GrandmaGreen_Entities_GolemManager_Initialize_" data-uid="GrandmaGreen.Entities.GolemManager.Initialize*"></a>
