@@ -638,12 +638,12 @@
   
   
   <a id="GrandmaGreen_Garden_GardenAreaController_CreatePlant_" data-uid="GrandmaGreen.Garden.GardenAreaController.CreatePlant*"></a>
-  <h4 id="GrandmaGreen_Garden_GardenAreaController_CreatePlant_SeedId_GrandmaGreen_Garden_Genotype_Vector3Int_System_Int32_" data-uid="GrandmaGreen.Garden.GardenAreaController.CreatePlant(SeedId,GrandmaGreen.Garden.Genotype,Vector3Int,System.Int32)">CreatePlant(SeedId, Genotype, Vector3Int, Int32)</h4>
+  <h4 id="GrandmaGreen_Garden_GardenAreaController_CreatePlant_PlantId_GrandmaGreen_Garden_Genotype_Vector3Int_System_Int32_" data-uid="GrandmaGreen.Garden.GardenAreaController.CreatePlant(PlantId,GrandmaGreen.Garden.Genotype,Vector3Int,System.Int32)">CreatePlant(PlantId, Genotype, Vector3Int, Int32)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void CreatePlant(SeedId seed, Genotype genotype, Vector3Int cell, int growthStage = 0)</code></pre>
+    <pre><code class="lang-csharp hljs">public void CreatePlant(PlantId seed, Genotype genotype, Vector3Int cell, int growthStage = 0)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -656,7 +656,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">SeedId</span></td>
+        <td><span class="xref">PlantId</span></td>
         <td><span class="parametername">seed</span></td>
         <td></td>
       </tr>
@@ -771,13 +771,57 @@
   
   
   <a id="GrandmaGreen_Garden_GardenAreaController_EnterCustomizationMode_" data-uid="GrandmaGreen.Garden.GardenAreaController.EnterCustomizationMode*"></a>
-  <h4 id="GrandmaGreen_Garden_GardenAreaController_EnterCustomizationMode" data-uid="GrandmaGreen.Garden.GardenAreaController.EnterCustomizationMode">EnterCustomizationMode()</h4>
+  <h4 id="GrandmaGreen_Garden_GardenAreaController_EnterCustomizationMode_IInventoryItem_" data-uid="GrandmaGreen.Garden.GardenAreaController.EnterCustomizationMode(IInventoryItem)">EnterCustomizationMode(IInventoryItem)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void EnterCustomizationMode()</code></pre>
+    <pre><code class="lang-csharp hljs">public void EnterCustomizationMode(IInventoryItem item)</code></pre>
   </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IInventoryItem</span></td>
+        <td><span class="parametername">item</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="GrandmaGreen_Garden_GardenAreaController_ExitCustomizationMode_" data-uid="GrandmaGreen.Garden.GardenAreaController.ExitCustomizationMode*"></a>
+  <h4 id="GrandmaGreen_Garden_GardenAreaController_ExitCustomizationMode_System_Boolean_" data-uid="GrandmaGreen.Garden.GardenAreaController.ExitCustomizationMode(System.Boolean)">ExitCustomizationMode(Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ExitCustomizationMode(bool successful)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">successful</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="GrandmaGreen_Garden_GardenAreaController_FertilizePlant_" data-uid="GrandmaGreen.Garden.GardenAreaController.FertilizePlant*"></a>
