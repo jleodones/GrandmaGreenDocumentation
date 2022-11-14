@@ -67,12 +67,14 @@ namespace GrandmaGreen
 
         void InitalizeState()
         {
+            collectionsData.LoadCollections();
             areaServicer.StartServices();
             storylineData.Initalize();
         }
 
         void ReleaseState()
         {
+            collectionsData.UnloadCollections();
             timeClock.SaveCurrentDateTime();
             storylineData.Release();
             saveManager.TriggerSave();

@@ -12,7 +12,7 @@ namespace GrandmaGreen.Garden
         public TileData tile;
         public Vector3Int gridcell;
         public GardenAreaController area;
-        public SeedId seedType;
+        public PlantId seedType;
         public Genotype seedGenotype;
     }
 

@@ -28,7 +28,7 @@ namespace GrandmaGreen.UI.Collections
 
         private Length inventoryWidth = (Length)(.45 * Screen.width);
 
-        void OnEnable()
+        void Awake()
         {
             // Gets the root of the tabbed inventory, which holds all the tabs in it.
             VisualElement root = GetComponent<UIDocument>().rootVisualElement;
@@ -50,6 +50,35 @@ namespace GrandmaGreen.UI.Collections
             
             EventManager.instance.EVENT_INVENTORY_ADD_PLANT_OR_SEED += InventoryAddPlantOrSeed;
             EventManager.instance.EVENT_INVENTORY_REMOVE_PLANT_OR_SEED += InventoryRemovePlantOrSeed;
+            
+            // Money.
+            EventManager.instance.EVENT_INVENTORY_ADD_MONEY += (int money) =>
+            {
+                // Adds to the singular money component store (int).
+                int currentMoney = money;
+                if (inventoryData.RequestData<int>(0, ref currentMoney))
+                {
+                    currentMoney += money;
+                    inventoryData.UpdateValue<int>(0, currentMoney);
+                }
+            };
+
+            EventManager.instance.EVENT_INVENTORY_REMOVE_MONEY += (int money) =>
+            {
+                int currentMoney = money;
+                if (inventoryData.RequestData<int>(0, ref currentMoney))
+                {
+                    currentMoney -= money;
+                    inventoryData.UpdateValue<int>(0, currentMoney);
+                }
+            };
+
+            EventManager.instance.EVENT_INVENTORY_GET_MONEY += () =>
+            {
+                int currentMoney = 0;
+                inventoryData.RequestData<int>(0, ref currentMoney);
+                return currentMoney;
+            };
         }
 
         public void SetInventoryPosition()

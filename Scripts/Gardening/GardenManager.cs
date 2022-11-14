@@ -30,6 +30,13 @@ namespace GrandmaGreen.Garden
         public int tileIndex;
     }
 
+    [System.Serializable]
+    public struct DecorState
+    {
+        public Vector3 position;
+        public DecorationId ID;
+    }
+
     [CreateAssetMenu(menuName = "GrandmaGreen/Garden/GardenManager")]
     public class GardenManager : ScriptableObject
     {

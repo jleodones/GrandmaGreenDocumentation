@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.Splines;
 using Pathfinding;
 using Core.RNG;
+using GrandmaGreen.Collections;
 
 namespace GrandmaGreen.Entities {
     [CreateAssetMenu(menuName = "GrandmaGreen/Entities/GolemManager")]
@@ -19,7 +20,7 @@ namespace GrandmaGreen.Entities {
             EventManager.instance.EVENT_GOLEM_SPAWN += OnGolemSpawn;
         }
 
-        public void CreateGolem(int id) {
+        public GolemState CreateGolem(CharacterId id) {
             return new GolemState {
                 golemID = id,
                 happiness = 50,

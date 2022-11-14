@@ -1,0 +1,9 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:Button tabindex="-1" text="Button" display-tooltip-when-elided="true" name="rootVisualElement" style="width: 100%; height: 100%; align-items: center; justify-content: space-between;">
+        <ui:VisualElement name="itemImage" style="width: 100%; height: 75%; background-image: none; background-color: rgb(126, 190, 128);" />
+        <ui:VisualElement name="priceContainer" style="background-image: url(&apos;project://database/Assets/_GrandmaGreen/Art/UI/Icons/HUD/UI_HUD_Whiteboarder.png?fileID=2800000&amp;guid=1754d1a71dbfa73458c56557a14161c6&amp;type=3#UI_HUD_Whiteboarder&apos;); width: 80%; height: 20%;">
+            <ui:VisualElement name="goldImage" style="width: 20%; height: 50%; background-image: url(&apos;project://database/Assets/_GrandmaGreen/Art/UI/Icons/HUD/UI_HUD_Gold%201.png?fileID=2800000&amp;guid=a905f87446937e343bfa7472f3e2bb77&amp;type=3#UI_HUD_Gold 1&apos;); position: relative; left: 10%; top: 25%; right: 0; bottom: 0;" />
+            <ui:Label tabindex="-1" text="0" display-tooltip-when-elided="true" name="priceText" style="width: 60%; height: 100%; align-items: center; justify-content: flex-start; -unity-text-align: middle-center; font-size: 30%; color: rgb(0, 0, 0); position: absolute; left: 30%;" />
+        </ui:VisualElement>
+    </ui:Button>
+</ui:UXML>

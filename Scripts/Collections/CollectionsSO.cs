@@ -4,9 +4,21 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 namespace GrandmaGreen.Collections
 {
+    //TODO: start from 0
+    public enum ToolId : ushort
+    {
+        Trowel = 3001,
+        WateringCan = 3002,
+        SeedPacket = 3003,
+        UpgradedTrowel = 3004,
+        UpgradedWateringCan = 3005,
+        Fertilizer = 3006
+    }
+
     public enum PlantId : ushort
     {
         Rose = 1001,
@@ -32,39 +44,18 @@ namespace GrandmaGreen.Collections
         Blueberry = 1021
     }
 
-    public enum SeedId : ushort
-    {
-        Rose = 2001,
-        Tulip = 2002,
-        CallaLily = 2003,
-        Dahlia = 2004,
-        Hyacinth = 2005,
-        Pansy = 2006,
-        Crocus = 2007,
-        Cucumber = 2008,
-        Tomato = 2009,
-        Pepper = 2010,
-        SweetPotato = 2011,
-        Corn = 2012,
-        Radish = 2013,
-        Pumpkin = 2014,
-        Apple = 2015,
-        Pear = 2016,
-        Watermelon = 2017,
-        Cherry = 2018,
-        Plum = 2019,
-        Peach = 2020,
-        Blueberry = 2021
-    }
 
-    public enum ToolId : ushort
+    public enum CharacterId : ushort
     {
-        Trowel = 3001,
-        WateringCan = 3002,
-        SeedPacket = 3003,
-        UpgradedTrowel = 3004,
-        UpgradedWateringCan = 3005,
-        Fertilizer = 3006
+        Grandma = 5001,
+        GardeningShopkeeper = 5002,
+        DecorShopkeeper = 5003,
+        TulipGolem = 5004,
+        AppleGolem = 5005,
+        CottonGolem = 5006,
+        CrocusGolem = 5007,
+        PumpkinGolem = 5008,
+        RadishGolem = 5009
     }
 
     public enum DecorationId : ushort
@@ -171,26 +162,14 @@ namespace GrandmaGreen.Collections
         Hemlock = 4100
     }
 
-    public enum CharacterId : ushort
-    {
-        Grandma = 5001,
-        GardeningShopkeeper = 5002,
-        DecorShopkeeper = 5003,
-        TulipGolem = 5004,
-        AppleGolem = 5005,
-        CottonGolem = 5006,
-        CrocusGolem = 5007,
-        PumpkinGolem = 5008,
-        RadishGolem = 5009
-    }
-
-    public enum SeedType : ushort
+    public enum PlantType : ushort
     {
         Flower = 1,
         Veggie = 2,
         Fruit = 3
     }
 
+    //TODO: Needs item type
     //for anything in inventory
     public struct ItemProperties
     {
@@ -200,8 +179,6 @@ namespace GrandmaGreen.Collections
         //decor items
         public string tag;
         public int baseCost;
-        //set cooldown to specified #cycles until it can appear again. 0 by default.
-        public int cycleCooldown;
     }
 
     public struct CharacterProperties
@@ -211,6 +188,7 @@ namespace GrandmaGreen.Collections
         public List<string> spritePaths;
     }
 
+    //TODO: expand with all stats for plants (based on plant data sheet)
     public struct PlantProperties
     {
         public string name;
@@ -219,7 +197,9 @@ namespace GrandmaGreen.Collections
         public int growthTime;
         public int waterPerStage;
         public string spriteBasePath;
+        public PlantType plantType;
     }
+
     //for shop
     public struct SeedProperties
     {
@@ -227,34 +207,80 @@ namespace GrandmaGreen.Collections
         public string description;
         public string spritePath;
         public int baseCost;
-        public int cycleCooldown;
-        //in this context, seedtype is flower, veggie, or fruit
-        public SeedType seedType;
+
+        //in this context, plantType is flower, veggie, or fruit
+        public PlantType plantType;
     }
 }
 
 namespace GrandmaGreen.Collections
 {
-    using Id = System.Enum;
+    using ID = System.Enum;
     [CreateAssetMenu(fileName = "New Collections SO")]
     ///<summary>
     ///Template to generate the Collections SO, so that it will contain a list of Items
     ///</summary>
-    public class CollectionsSO : Sirenix.OdinInspector.SerializedScriptableObject
+    public class CollectionsSO : ScriptableObject
     {
+        [SerializeField] TextAsset dataSheet;
         [ShowInInspector]
-        public Dictionary<Id, ItemProperties> ItemLookup;
-        public Dictionary<PlantId, PlantProperties> PlantLookup;
-        public Dictionary<CharacterId, CharacterProperties> CharacterLookup;
-        public Dictionary<SeedId, SeedProperties> SeedLookup;
-        public Dictionary<string, Sprite> SpriteCache;
+        public Dictionary<ushort, ItemProperties> ItemLookup;
+        public Dictionary<ushort, PlantProperties> PlantLookup;
+        public Dictionary<ushort, CharacterProperties> CharacterLookup;
+        public Dictionary<ushort, SeedProperties> SeedLookup;
+
+        static CollectionsSO s_Instance;
+        public CollectionsSO LoadedInstance => s_Instance;
+        public void LoadCollections()
+        {
+            GenerateCollections();
+            s_Instance = this;
+        }
+
+        public void UnloadCollections()
+        {
+            s_Instance = null;
+        }
+
+        [Button()]
+        public void GenerateCollections()
+        {
+            CSVtoSO.GenerateCollectionsSO(this, dataSheet);
+        }
+
+        public bool PlantToGolem(PlantId id, out CharacterId golemID)
+        {
+            golemID = default;
+
+            switch (id)
+            {
+                case PlantId.Tulip:
+                    golemID = CharacterId.TulipGolem;
+                    return true;
+                case PlantId.Crocus:
+                    golemID = CharacterId.CrocusGolem;
+                    return true;
+                case PlantId.Pumpkin:
+                    golemID = CharacterId.PumpkinGolem;
+                    return true;
+                case PlantId.Apple:
+                    golemID = CharacterId.AppleGolem;
+                    return true;
+                case PlantId.Radish:
+                    golemID = CharacterId.RadishGolem;
+                    return true;
+                default:
+                    return false;
+            }
+
+        }
 
         ///<summary>
         ///Get any item by its id
         ///</summary>
-        public ItemProperties GetItem(Id id)
+        public ItemProperties GetItem(ID id)
         {
-            return ItemLookup[id];
+            return ItemLookup[(ushort)Convert.ToInt32(id)];
         }
 
         ///<summary>
@@ -262,13 +288,21 @@ namespace GrandmaGreen.Collections
         ///</summary>
         public PlantProperties GetPlant(PlantId id)
         {
-            return PlantLookup[id];
+            return PlantLookup[(ushort)id];
+        }
+
+        ///<summary>
+        ///Get any plant by its id
+        ///</summary>
+        public SeedProperties GetSeed(PlantId id)
+        {
+            return SeedLookup[(ushort)((ushort)id + CSVtoSO.SEED_ID_OFFSET)];
         }
 
         ///<summary>
         ///Retrieve a sprite by its sprite path (which is just its filename)
         ///</summary>
-        public Sprite GetSpriteByPath(string spritePath)
+        public Sprite GetSprite(string spritePath)
         {
             return Resources.Load(spritePath, typeof(Sprite)) as Sprite;
         }
@@ -277,107 +311,60 @@ namespace GrandmaGreen.Collections
         ///Retrieve a sprite by its sprite path (which is just its filename)
         ///</summary>
         ///
-        public Sprite GetSpriteById(Id id)
+        public Sprite GetSprite(ID id)
         {
             return Resources.Load(GetItem(id).spritePath, typeof(Sprite)) as Sprite;
         }
 
-        ///<summary>
-        ///Retrieve item name by its id
-        ///</summary>
-        public string GetItemName(Id id)
-        {
-            return ItemLookup[id].name;
-        }
-
-        public PlantId SeedToPlant(SeedId id)
-        {
-            switch (id)
-            {
-                case SeedId.Rose:
-                    return PlantId.Rose;
-                case SeedId.Tulip:
-                    return PlantId.Tulip;
-                default:
-                    return 0;
-            }
-        }
-
-        public SeedId PlantToSeed(PlantId id)
-        {
-            switch (id)
-            {
-                case PlantId.Rose:
-                    return SeedId.Rose;
-                case PlantId.Tulip:
-                    return SeedId.Tulip;
-                default:
-                    return 0;
-            }
-        }
-
-        public CharacterId PlantToGolem(PlantId id)
-        {
-            switch (id)
-            {
-                case PlantId.Tulip:
-                    return CharacterId.TulipGolem;
-                default:
-                    return 0;
-            }
-        }
-
-        // TODO: resolve sprites by modifying base path
-        //       instead of these hard-coded references
-        [SerializeField] Sprite rose_seedling;
-        [SerializeField] Sprite rose_growing;
-        [SerializeField] Sprite rose_bb;
-        [SerializeField] Sprite rose_Bb;
-        [SerializeField] Sprite rose_BB;
-        [SerializeField] Sprite tulip_seedling;
-        [SerializeField] Sprite tulip_growing;
-        [SerializeField] Sprite tulip_bb;
-        [SerializeField] Sprite tulip_Bb;
-        [SerializeField] Sprite tulip_BB;
-
+        /// <summary>
+        ///// TODO: use string builder for this
+        /// TODO: checks for single sprite vs spritesheet
+        /// </summary>
+        /// <param name="type"></param>
+        /// <param name="genotype"></param>
+        /// <param name="growthStage"></param>
+        /// <returns></returns>
         public Sprite GetSprite(PlantId type, Genotype genotype, int growthStage)
         {
-            if (type == PlantId.Rose)
+            PlantProperties plant = GetPlant(type);
+
+            Sprite[] plantSpriteSheet = Resources.LoadAll<Sprite>(plant.plantType.ToString() + "s/" + plant.spriteBasePath);
+
+            if (plantSpriteSheet.Length == 0)
             {
-                if (growthStage == 0) return rose_seedling;
-                else if (growthStage == 1) return rose_growing;
-                else
-                {
-                    switch (genotype.trait)
-                    {
-                        case Genotype.Trait.Recessive:
-                            return rose_bb;
-                        case Genotype.Trait.Heterozygous:
-                            return rose_Bb;
-                        case Genotype.Trait.Dominant:
-                            return rose_BB;
-                    }
-                }
-            }
-            else if (type == PlantId.Tulip)
-            {
-                if (growthStage == 0) return tulip_seedling;
-                else if (growthStage == 1) return tulip_growing;
-                else
-                {
-                    switch (genotype.trait)
-                    {
-                        case Genotype.Trait.Recessive:
-                            return tulip_bb;
-                        case Genotype.Trait.Heterozygous:
-                            return tulip_Bb;
-                        case Genotype.Trait.Dominant:
-                            return tulip_BB;
-                    }
-                }
+                Debug.Log("Spritesheet not found");
+                return null;
             }
 
-            return null;
+            string suffix = "";
+
+            switch (growthStage)
+            {
+                case 0:
+                    suffix = "_Seedling";
+                    break;
+                case 1:
+                    suffix = "_Growing";
+                    break;
+                case 2:
+                    suffix = "_Mature";
+                    switch (genotype.trait)
+                    {
+                        case Genotype.Trait.Recessive:
+                            suffix += "_bb";
+                            break;
+                        case Genotype.Trait.Heterozygous:
+                            suffix += "_Bb";
+                            break;
+                        case Genotype.Trait.Dominant:
+                            suffix += "_BB";
+                            break;
+                    }
+                    break;
+            }
+
+            string finalSpritePath = plant.spriteBasePath + suffix;
+            return plantSpriteSheet.Single(s => s.name == finalSpritePath);
         }
 
         // temporary hard-coded plant properties
@@ -385,27 +372,20 @@ namespace GrandmaGreen.Collections
         [ContextMenu("DEBUGLoadPlantProperties")]
         public void DEBUGLoadPlantProperties()
         {
-            PlantLookup = new Dictionary<PlantId, PlantProperties>()
-            {
-                {
-                    PlantId.Rose, new PlantProperties
-                    {
-                        name = "Rose",
-                        growthStages = 3, // # of prefabs
-                        growthTime = 10, // Probably can delete
-                        waterPerStage = 1, // # of times it needs to be watered per stage
-                    }
-                },
-                {
-                    PlantId.Tulip, new PlantProperties
-                    {
-                        name = "Tulip",
-                        growthStages = 3,
-                        growthTime = 10,
-                        waterPerStage = 2,
-                    }
-                }
-            };
+            PlantProperties roseProp = PlantLookup[(ushort)PlantId.Rose];
+            roseProp.growthStages = 3;
+            roseProp.growthTime = 10;
+            roseProp.waterPerStage = 1;
+
+            PlantLookup[(ushort)PlantId.Rose] = roseProp;
+
+
+            PlantProperties tulipProp = PlantLookup[(ushort)PlantId.Tulip];
+            tulipProp.growthStages = 3;
+            tulipProp.growthTime = 10;
+            tulipProp.waterPerStage = 2;
+
+            PlantLookup[(ushort)PlantId.Tulip] = tulipProp;
         }
     }
 }

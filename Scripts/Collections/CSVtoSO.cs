@@ -6,131 +6,140 @@ using System.IO;
 using System.Collections.Generic;
 using GrandmaGreen.SaveSystem;
 using Sirenix.OdinInspector;
+using System.Globalization;
 
-#if (UNITY_EDITOR)
+//#if (UNITY_EDITOR)
 
 
 /// <summary>
 /// This class populates and creates the Collections SO by reading the CSV file.
-/// Also contains GetSpriteById(int id) to retrieve a sprite by id.
 /// </summary>
-namespace GrandmaGreen.Collections {
+namespace GrandmaGreen.Collections
+{
     using Id = System.Enum;
-    
-    [CreateAssetMenu(menuName = "Utilities/CSV Generator", fileName = "CSVGenerator")]
-    public class CSVtoSO : ScriptableObject
+
+    //TODO: Expoand csv for plant entries to include seeds + extra stats
+    public class CSVtoSO
     {
-        private string inventoryCSVPath = "/_GrandmaGreen/Scripts/Collections/CollectionsDatabase.csv";
-        
+        private static readonly string inventoryCSVPath = "/_GrandmaGreen/Scripts/Collections/CollectionsDatabase.csv";
+        public const ushort SEED_ID_OFFSET = 1000;
         /// <summary>
         /// Function to populate and creates the Collections SO by reading the CSV file
         /// </summary>
-        [Button()]
-        public void GenerateCollectionsSO() {
+        public static void GenerateCollectionsSO(CollectionsSO collections, TextAsset dataSheet)
+        {
+            string[] allLines = dataSheet.text.Split('\n');
+            //File.ReadAllLines(Application.dataPath + inventoryCSVPath, System.Text.Encoding.Default);
 
-            string[] allLines = File.ReadAllLines(Application.dataPath + inventoryCSVPath);
-            CollectionsSO collections = ScriptableObject.CreateInstance<CollectionsSO>();
-            collections.ItemLookup = new Dictionary<Id, ItemProperties>();
-            collections.PlantLookup = new Dictionary<PlantId, PlantProperties>();
-            collections.CharacterLookup = new Dictionary<CharacterId, CharacterProperties>();
-            collections.SeedLookup = new Dictionary<SeedId, SeedProperties>();
-            for(int i=2; i<allLines.Length; i++)
+            collections.ItemLookup = new Dictionary<ushort, ItemProperties>();
+            collections.PlantLookup = new Dictionary<ushort, PlantProperties>();
+            collections.CharacterLookup = new Dictionary<ushort, CharacterProperties>();
+            collections.SeedLookup = new Dictionary<ushort, SeedProperties>();
+
+            for (int i = 2; i < allLines.Length; i++)
             {
                 //current line in file
                 var line = allLines[i].Split(',');
-                int csvID = Int32.Parse(line[0]);
+
+                if (line == null)
+                    continue;
+                if (!ushort.TryParse(line[0], out ushort csvID))
+                    continue;
+
+                string entryType = line[1];
                 string name = line[2];
                 string description = line[3];
                 string tag = line[4];
                 int baseCost = Int32.Parse(line[5]);
                 string spritePath = "";
-                ItemProperties itemProps = new ItemProperties();;
+                ItemProperties itemProps = new ItemProperties(); ;
                 itemProps.name = name;
                 itemProps.description = description;
                 itemProps.baseCost = baseCost;
                 itemProps.spritePath = spritePath;
-                //plant
-                if(csvID/1000 == 1)
+
+                switch (entryType)
                 {
-                    PlantId plantId = (PlantId)csvID;
-                    PlantProperties plantProps = new PlantProperties();
-                    plantProps.name = name;
-                    plantProps.description = description;
-                    //csv does not provide growth stages
-                    plantProps.spriteBasePath = "PLA_" + name;
-                    spritePath = "PLA_" + name;
-                    itemProps.spritePath = spritePath;
-                    collections.PlantLookup.Add(plantId, plantProps);
-                    collections.ItemLookup.Add(plantId, itemProps);
-                }
-                //seed
-                else if(csvID/1000 == 2)
-                {
-                    SeedId seedId = (SeedId)csvID;
-                    spritePath = "GAR_" + name;
-                    itemProps.spritePath = spritePath;
-                    itemProps.cycleCooldown = 0;
-                    collections.ItemLookup.Add(seedId, itemProps);
-                    SeedProperties seedProps = new SeedProperties();
-                    seedProps.name = name;
-                    seedProps.description = description;
-                    seedProps.spritePath = spritePath;
-                    seedProps.baseCost = baseCost;
-                    seedProps.cycleCooldown = 0;
-                    //flower
-                    if(2001 <= csvID && csvID <= 2007)
-                    {
-                        seedProps.seedType = (SeedType)1;
-                    }
-                    //veggie
-                    else if(2008 <= csvID && csvID <= 2014)
-                    {
-                        seedProps.seedType = (SeedType)2;
-                    }
-                    //fruit
-                    else if(2015 <= csvID && csvID <= 2021)
-                    {
-                        seedProps.seedType = (SeedType)3;
-                    }
-                    collections.SeedLookup.Add(seedId, seedProps);
-                }
-                //tool
-                else if(csvID/1000 == 3)
-                {
-                    ToolId toolId = (ToolId)csvID;
-                    itemProps.spritePath = "GAR_" + name;
-                    itemProps.baseCost = baseCost;
-                    collections.ItemLookup.Add(toolId, itemProps);
-                }
-                //decor
-                else if(csvID/1000 == 4)
-                {
-                    DecorationId decorId = (DecorationId)csvID;
-                    itemProps.spritePath = "DEC_" + name;
-                    itemProps.cycleCooldown = 0;
-                    itemProps.baseCost = baseCost;
-                    collections.ItemLookup.Add(decorId, itemProps);
-                }
-                //character
-                else if(csvID/1000 == 5)
-                {
-                    CharacterId characterId = (CharacterId)csvID;
-                    CharacterProperties characterProps = new CharacterProperties();
-                    characterProps.name = name;
-                    characterProps.description = description;
-                    characterProps.spritePaths = new List<string>();
-                    spritePath = "CHA_" + name;
-                    characterProps.spritePaths.Add(spritePath);
-                    itemProps.spritePath = spritePath;
-                    collections.CharacterLookup.Add(characterId, characterProps);
-                    collections.ItemLookup.Add(characterId, itemProps);
+                    case "Plant":
+                        //Plant data
+                        PlantProperties plantProps = new PlantProperties();
+                        plantProps.name = name;
+                        plantProps.description = description;
+                        //csv does not provide growth stages
+                        plantProps.spriteBasePath = "PLA_" + name;
+                        spritePath = "PLA_" + name;
+                        itemProps.spritePath = spritePath;
+
+                        //TODO: Create Plant Type entry in csv instead of this
+                        //TODO: fill up other plant properties
+                        //flower
+                        if (1001 <= csvID && csvID <= 1007)
+                        {
+                            plantProps.plantType = (PlantType)1;
+                        }
+                        //veggie
+                        else if (1008 <= csvID && csvID <= 1014)
+                        {
+                            plantProps.plantType = (PlantType)2;
+                        }
+                        //fruit
+                        else if (1015 <= csvID && csvID <= 12021)
+                        {
+                            plantProps.plantType = (PlantType)3;
+                        }
+
+                        collections.PlantLookup.Add(csvID, plantProps);
+                        collections.ItemLookup.Add(csvID, itemProps);
+
+                        //Seed Data
+                        spritePath = "GAR_" + name;
+                        itemProps.spritePath = spritePath;
+
+                        collections.ItemLookup.Add((ushort)(csvID + SEED_ID_OFFSET), itemProps);
+                        SeedProperties seedProps = new SeedProperties();
+                        seedProps.name = name;
+                        seedProps.description = description;
+                        seedProps.spritePath = spritePath;
+                        seedProps.baseCost = baseCost;
+                        seedProps.plantType = plantProps.plantType;
+
+                        collections.SeedLookup.Add(csvID, seedProps);
+
+                        break;
+
+                    case "Tool":
+                        itemProps.spritePath = "GAR_" + name;
+                        itemProps.baseCost = baseCost;
+                        collections.ItemLookup.Add(csvID, itemProps);
+                        break;
+
+                    case "Decor":
+                        itemProps.spritePath = "DEC_" + name;
+                        itemProps.baseCost = baseCost;
+                        collections.ItemLookup.Add(csvID, itemProps);
+                        break;
+
+                    case "Character":
+                        CharacterProperties characterProps = new CharacterProperties();
+                        characterProps.name = name;
+                        characterProps.description = description;
+                        characterProps.spritePaths = new List<string>();
+                        spritePath = "CHA_" + name;
+                        characterProps.spritePaths.Add(spritePath);
+                        itemProps.spritePath = spritePath;
+                        collections.CharacterLookup.Add(csvID, characterProps);
+                        collections.ItemLookup.Add(csvID, itemProps);
+                        break;
+
+                    default:
+                        Debug.Log("Entry Type not valid");
+                        break;
+
                 }
             }
-            EditorUtility.SetDirty(collections);
-            AssetDatabase.CreateAsset(collections, $"Assets/_GrandmaGreen/Scripts/Collections/CollectionsSystemData.asset");
-            AssetDatabase.SaveAssets();
+
         }
 
     }
 }
-#endif
+//#endif

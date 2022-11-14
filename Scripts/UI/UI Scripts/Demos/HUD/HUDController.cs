@@ -61,11 +61,11 @@ namespace GrandmaGreen.UI.HUD
             UQueryBuilder<Button> buttons = m_root.Query<Button>();
             buttons.ForEach((Button hud_button) => { hud_button.RegisterCallback<ClickEvent>(ButtonOnClick); });
 
-            // Adding draggable demo code here for now
-            m_draggable = m_root.Q<VisualElement>("draggable");
-            m_draggable.RegisterCallback<PointerDownEvent>(PointerDownHandler);
-            m_draggable.RegisterCallback<PointerMoveEvent>(PointerMoveHandler);
-            m_draggable.RegisterCallback<PointerUpEvent>(PointerUpHandler);
+            // // Adding draggable demo code here for now
+            // m_draggable = m_root.Q<VisualElement>("draggable");
+            // m_draggable.RegisterCallback<PointerDownEvent>(PointerDownHandler);
+            // m_draggable.RegisterCallback<PointerMoveEvent>(PointerMoveHandler);
+            // m_draggable.RegisterCallback<PointerUpEvent>(PointerUpHandler);
         }
 
         private Vector2 targetStartPosition { get; set; }

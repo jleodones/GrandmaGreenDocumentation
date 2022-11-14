@@ -34,7 +34,7 @@ namespace GrandmaGreen
         void OnWorldPointerMove(PointerMoveEvent e)
         {
             //Debug.Log("No UI Detected");
-            onWorldPointerEvent?.Invoke();
+            //onWorldPointerEvent?.Invoke();
         }
     }
 }

@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using Sirenix.OdinInspector;
 using GrandmaGreen.SaveSystem;
@@ -10,6 +11,14 @@ namespace GrandmaGreen {
         [SerializeField]
         private List<ObjectSaver> m_objectSavers = new List<ObjectSaver>();
 
+        [Button(ButtonSizes.Medium)]
+        public void ResourcesLoadTest()
+        {
+            Sprite[] sprites = Resources.LoadAll<Sprite>("PLA_Tulip");
+
+            Sprite sprite = sprites.Single(s => s.name == "PLA_Tulip_Seedling");
+        }
+        
         [Button(ButtonSizes.Medium)]
         public void AddTrait()
         {

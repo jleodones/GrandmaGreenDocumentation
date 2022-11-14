@@ -1,5 +1,6 @@
 // This script attaches the tabbed menu logic to the game.
 
+using System;
 using GrandmaGreen.UI.Collections;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -12,7 +13,7 @@ namespace GrandmaGreen.UI.HUD
         public TabbedInventory inventory;
         private HUDController m_controller;
 
-        private void Awake()
+        private void OnEnable()
         {
             UIDocument HUD = GetComponent<UIDocument>();
             VisualElement root = HUD.rootVisualElement;
@@ -26,6 +27,18 @@ namespace GrandmaGreen.UI.HUD
             EventManager.instance.EVENT_OPEN_HUD_ANIMATED += OpenHUDAnimated;
             EventManager.instance.EVENT_CLOSE_HUD += CloseHUD;
             EventManager.instance.EVENT_CLOSE_HUD_ANIMATED += CloseHUDAnimated;
+
+            EventManager.instance.EVENT_UPDATE_MONEY_DISPLAY += () =>
+            {
+                int currentMoney = EventManager.instance.HandleEVENT_INVENTORY_GET_MONEY();
+                root.Q<Label>("currency-text").text = currentMoney.ToString();
+            };
+        }
+
+        private void FixedUpdate()
+        {
+            // Set money count, on awake.
+            EventManager.instance.HandleEVENT_UPDATE_MONEY_DISPLAY();
         }
 
         public void OpenHUD()

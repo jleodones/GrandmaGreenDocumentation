@@ -28,6 +28,7 @@ namespace GrandmaGreen
         public event Action EVENT_OPEN_HUD_ANIMATED;
         public event Action EVENT_CLOSE_HUD;
         public event Action EVENT_CLOSE_HUD_ANIMATED;
+        public event Action EVENT_UPDATE_MONEY_DISPLAY;
 
         public void HandleEVENT_OPEN_HUD()
         {
@@ -48,6 +49,11 @@ namespace GrandmaGreen
             EVENT_CLOSE_HUD_ANIMATED?.Invoke();
         }
 
+        public void HandleEVENT_UPDATE_MONEY_DISPLAY()
+        {
+            EVENT_UPDATE_MONEY_DISPLAY?.Invoke();
+        }
+
         // Inventory related events and handlers.
         public event Action EVENT_INVENTORY_OPEN;
         public event Action<IInventoryItem, int> EVENT_INVENTORY_ADD_TOOL_OR_DECOR;
@@ -56,6 +62,10 @@ namespace GrandmaGreen
         public event Action<IInventoryItem, Genotype> EVENT_INVENTORY_ADD_PLANT_OR_SEED;
         public event Action<IInventoryItem, Genotype> EVENT_INVENTORY_REMOVE_PLANT_OR_SEED;
 
+        public event Action<int> EVENT_INVENTORY_ADD_MONEY;
+        public event Action<int> EVENT_INVENTORY_REMOVE_MONEY;
+        public event Func<int> EVENT_INVENTORY_GET_MONEY;
+        
         public event Action<IInventoryItem> EVENT_CUSTOMIZATION_START;
         public event Action<bool> EVENT_CUSTOMIZATION_END;
 
@@ -82,6 +92,23 @@ namespace GrandmaGreen
         public void HandleEVENT_INVENTORY_REMOVE_PLANT_OR_SEED(IInventoryItem item, Genotype genotype)
         {
             EVENT_INVENTORY_REMOVE_PLANT_OR_SEED?.Invoke(item, genotype);
+        }
+
+        public void HandleEVENT_INVENTORY_ADD_MONEY(int money)
+        {
+            EVENT_INVENTORY_ADD_MONEY?.Invoke(money);
+            HandleEVENT_UPDATE_MONEY_DISPLAY();
+        }
+
+        public void HandleEVENT_INVENTORY_REMOVE_MONEY(int money)
+        {
+            EVENT_INVENTORY_REMOVE_MONEY?.Invoke(money);
+            HandleEVENT_UPDATE_MONEY_DISPLAY();
+        }
+
+        public int HandleEVENT_INVENTORY_GET_MONEY()
+        {
+            return EVENT_INVENTORY_GET_MONEY();
         }
 
         // Golem events and handlers.

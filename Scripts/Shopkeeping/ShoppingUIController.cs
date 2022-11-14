@@ -5,20 +5,25 @@ using System;
 using System.IO;
 using System.Collections.Generic;
 using GrandmaGreen.Collections;
+using GrandmaGreen.Garden;
 using Sirenix.OdinInspector;
 
 namespace GrandmaGreen.Shopkeeping
 {
     using Id = System.Enum;
 
+    [Serializable]
     public struct ShopItem
     {
         public int baseCost;
-        public string type;
+
+        public ItemType type;
         //quantity 3 for seeds, 1 for tools, etc
-        public int quantity;
         //test
         public string spritePath;
+        public Sprite sprite;
+        public string itemName;
+        public ushort id;
     }
 
     /// <summary>
@@ -48,12 +53,14 @@ namespace GrandmaGreen.Shopkeeping
             //Seeds:
             for (int i = 2001; i <= 2009; i++)
             {
-                SeedId id = (SeedId)i;
+                Enum id = (PlantId)i;
                 ShopItem itemProps = new ShopItem();
                 itemProps.baseCost = collections.GetItem(id).baseCost;
-                itemProps.type = "Seed";
-                itemProps.quantity = 3;
+                itemProps.type = ItemType.Seed;
                 itemProps.spritePath = collections.GetItem(id).spritePath;
+                itemProps.sprite = collections.GetSprite(id);
+                itemProps.itemName = collections.GetItem(id).name;
+                itemProps.id = (ushort)i;
                 GardenList.Add(id, itemProps);
             }
 
@@ -62,12 +69,14 @@ namespace GrandmaGreen.Shopkeeping
             {
                 if (i != 3003)
                 {
-                    ToolId id = (ToolId)i;
+                    Enum id = (ToolId)i;
                     ShopItem itemProps = new ShopItem();
                     itemProps.baseCost = collections.GetItem(id).baseCost;
-                    itemProps.type = "Tool";
-                    itemProps.quantity = 1;
+                    itemProps.type = ItemType.Tool;
                     itemProps.spritePath = collections.GetItem(id).spritePath;
+                    itemProps.sprite = collections.GetSprite(id);
+                    itemProps.itemName = collections.GetItem(id).name;
+                    itemProps.id = (ushort)i;
                     GardenList.Add(id, itemProps);
                 }
             }
@@ -93,13 +102,13 @@ namespace GrandmaGreen.Shopkeeping
         {
             return collections.GetItem(id).baseCost / 2;
         }
-        /// <summary>
-        /// Get the item type of a gardening shop item, pass in id
-        /// </summary>
-        public string GetTypeById(Id id)
-        {
-            return GardenList[id].type;
-        }
+        // /// <summary>
+        // /// Get the item type of a gardening shop item, pass in id
+        // /// </summary>
+        // public string GetTypeById(Id id)
+        // {
+        //     return GardenList[id].type;
+        // }
 
         //test
         public string GetPathById(Id id)
@@ -130,8 +139,7 @@ namespace GrandmaGreen.Shopkeeping
                 DecorationId id = (DecorationId)i;
                 ShopItem itemProps = new ShopItem();
                 itemProps.baseCost = collections.GetItem(id).baseCost;
-                itemProps.type = "Decor";
-                itemProps.quantity = 1;
+                itemProps.type = ItemType.Decor;
                 DecorList.Add(id, itemProps);
             }
             //Garden Exp:
@@ -159,13 +167,13 @@ namespace GrandmaGreen.Shopkeeping
         {
             return collections.GetItem(id).baseCost / 2;
         }
-        /// <summary>
-        /// Get the item type of a decor shop item, pass in id
-        /// </summary>
-        public string GetTypeById(Id id)
-        {
-            return DecorList[id].type;
-        }
+        // /// <summary>
+        // /// Get the item type of a decor shop item, pass in id
+        // /// </summary>
+        // public string GetTypeById(Id id)
+        // {
+        //     return DecorList[id].type;
+        // }
 
     }
 }

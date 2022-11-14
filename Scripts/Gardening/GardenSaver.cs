@@ -11,19 +11,27 @@ namespace GrandmaGreen.Garden
         private readonly int plantKey = 0;
         private readonly int plantValues = 1;
         private readonly int tiles = 2;
-        private readonly int decorKey = 3;
-        private readonly int decorValues = 4;
+        private readonly int decor = 3;
 
+        Dictionary<Vector3Int, int> tileStateLookup;
         public void Initialize()
         {
+            tileStateLookup = new Dictionary<Vector3Int, int>();
+
             if (componentStores.Count == 0)
             {
                 CreateNewStore(typeof(Vector3Int));
                 CreateNewStore(typeof(PlantState));
                 CreateNewStore(typeof(TileState));
-                //CreateNewStore(typeof(Vector3));
-                //CreateNewStore(typeof(DecorationId));
+                CreateNewStore(typeof(DecorState));
+                return;
             }
+
+            for (int i = 0; i < ((ComponentStore<TileState>)componentStores[tiles]).components.Count; i++)
+            {
+                tileStateLookup.Add(((ComponentStore<TileState>)componentStores[tiles]).components[i].cell, i);
+            }
+
         }
 
         public bool ContainsKey(Vector3Int k)
@@ -85,17 +93,16 @@ namespace GrandmaGreen.Garden
 
         public void SetTileState(TileState tileState)
         {
-            if (componentStores.Count <= tiles )
+            if (componentStores.Count <= tiles)
                 CreateNewStore(typeof(TileState));
 
-            if (((ComponentStore<TileState>)componentStores[tiles]).components.Contains(tileState))
-            {
-                int index = ((ComponentStore<TileState>)componentStores[tiles]).components.IndexOf(tileState);
-                ((ComponentStore<TileState>)componentStores[tiles]).components[index] = tileState;
-            }
+            if (tileStateLookup.ContainsKey(tileState.cell))
+                ((ComponentStore<TileState>)componentStores[tiles]).components[tileStateLookup[tileState.cell]] = tileState;
             else
+            {
+                tileStateLookup.Add(tileState.cell, ((ComponentStore<TileState>)componentStores[tiles]).components.Count);
                 ((ComponentStore<TileState>)componentStores[tiles]).components.Add(tileState);
-
+            }
         }
 
         public List<TileState> Tiles()
@@ -105,17 +112,19 @@ namespace GrandmaGreen.Garden
 
         public void AddDecor(DecorationId decorID, Vector3 position)
         {
-            if (((ComponentStore<DecorationId>)componentStores[decorKey]).components.Contains(decorID))
+            DecorState decorState = new DecorState()
             {
+                ID = decorID,
+                position = position
+            };
 
-            }
-            else
-            {
-                ((ComponentStore<DecorationId>)componentStores[decorKey]).components.Add(decorID);
-                ((ComponentStore<DecorationId>)componentStores[decorKey]).components.Add(decorID);
-            }
+            ((ComponentStore<DecorState>)componentStores[decor]).components.Add(decorState);
         }
 
+        public List<DecorState> Decor()
+        {
+            return ((ComponentStore<DecorState>)componentStores[tiles]).components;
+        }
 
     }
 }

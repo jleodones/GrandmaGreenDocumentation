@@ -24,7 +24,7 @@ namespace GrandmaGreen.Garden
 
         public bool toolSelectionActive = false;
         
-        public SeedId equippedSeed;
+        public PlantId equippedSeed;
         public Genotype equippedSeedGenotype;
 
         public void ToggleToolSelection()
@@ -80,7 +80,7 @@ namespace GrandmaGreen.Garden
 
         public void SetEquippedSeed(ushort plantIndex, Genotype genotype)
         {
-            equippedSeed = (SeedId) plantIndex;
+            equippedSeed = (PlantId) plantIndex;
             equippedSeedGenotype = genotype;
         }
 
