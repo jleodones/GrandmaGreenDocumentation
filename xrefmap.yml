@@ -7787,25 +7787,25 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.UI.Collections.TabbedInventoryController.TabbedInventoryController
   nameWithType: TabbedInventoryController.TabbedInventoryController
-- uid: GrandmaGreen.UI.Collections.TabbedInventoryController.onItemEntryClicked
-  name: onItemEntryClicked
-  href: api/GrandmaGreen.UI.Collections.TabbedInventoryController.html#GrandmaGreen_UI_Collections_TabbedInventoryController_onItemEntryClicked
-  commentId: E:GrandmaGreen.UI.Collections.TabbedInventoryController.onItemEntryClicked
-  fullName: GrandmaGreen.UI.Collections.TabbedInventoryController.onItemEntryClicked
-  nameWithType: TabbedInventoryController.onItemEntryClicked
-- uid: GrandmaGreen.UI.Collections.TabbedInventoryController.OnItemEntryClicked(GrandmaGreen.UI.Collections.TabbedInventoryItemController)
-  name: OnItemEntryClicked(TabbedInventoryItemController)
-  href: api/GrandmaGreen.UI.Collections.TabbedInventoryController.html#GrandmaGreen_UI_Collections_TabbedInventoryController_OnItemEntryClicked_GrandmaGreen_UI_Collections_TabbedInventoryItemController_
-  commentId: M:GrandmaGreen.UI.Collections.TabbedInventoryController.OnItemEntryClicked(GrandmaGreen.UI.Collections.TabbedInventoryItemController)
-  fullName: GrandmaGreen.UI.Collections.TabbedInventoryController.OnItemEntryClicked(GrandmaGreen.UI.Collections.TabbedInventoryItemController)
-  nameWithType: TabbedInventoryController.OnItemEntryClicked(TabbedInventoryItemController)
-- uid: GrandmaGreen.UI.Collections.TabbedInventoryController.OnItemEntryClicked*
-  name: OnItemEntryClicked
-  href: api/GrandmaGreen.UI.Collections.TabbedInventoryController.html#GrandmaGreen_UI_Collections_TabbedInventoryController_OnItemEntryClicked_
-  commentId: Overload:GrandmaGreen.UI.Collections.TabbedInventoryController.OnItemEntryClicked
+- uid: GrandmaGreen.UI.Collections.TabbedInventoryController.onItemCreated
+  name: onItemCreated
+  href: api/GrandmaGreen.UI.Collections.TabbedInventoryController.html#GrandmaGreen_UI_Collections_TabbedInventoryController_onItemCreated
+  commentId: E:GrandmaGreen.UI.Collections.TabbedInventoryController.onItemCreated
+  fullName: GrandmaGreen.UI.Collections.TabbedInventoryController.onItemCreated
+  nameWithType: TabbedInventoryController.onItemCreated
+- uid: GrandmaGreen.UI.Collections.TabbedInventoryController.OnItemCreated(GrandmaGreen.UI.Collections.TabbedInventoryItemController)
+  name: OnItemCreated(TabbedInventoryItemController)
+  href: api/GrandmaGreen.UI.Collections.TabbedInventoryController.html#GrandmaGreen_UI_Collections_TabbedInventoryController_OnItemCreated_GrandmaGreen_UI_Collections_TabbedInventoryItemController_
+  commentId: M:GrandmaGreen.UI.Collections.TabbedInventoryController.OnItemCreated(GrandmaGreen.UI.Collections.TabbedInventoryItemController)
+  fullName: GrandmaGreen.UI.Collections.TabbedInventoryController.OnItemCreated(GrandmaGreen.UI.Collections.TabbedInventoryItemController)
+  nameWithType: TabbedInventoryController.OnItemCreated(TabbedInventoryItemController)
+- uid: GrandmaGreen.UI.Collections.TabbedInventoryController.OnItemCreated*
+  name: OnItemCreated
+  href: api/GrandmaGreen.UI.Collections.TabbedInventoryController.html#GrandmaGreen_UI_Collections_TabbedInventoryController_OnItemCreated_
+  commentId: Overload:GrandmaGreen.UI.Collections.TabbedInventoryController.OnItemCreated
   isSpec: "True"
-  fullName: GrandmaGreen.UI.Collections.TabbedInventoryController.OnItemEntryClicked
-  nameWithType: TabbedInventoryController.OnItemEntryClicked
+  fullName: GrandmaGreen.UI.Collections.TabbedInventoryController.OnItemCreated
+  nameWithType: TabbedInventoryController.OnItemCreated
 - uid: GrandmaGreen.UI.Collections.TabbedInventoryController.OnSeedEntryClicked(System.UInt16,Genotype)
   name: OnSeedEntryClicked(UInt16, Genotype)
   href: api/GrandmaGreen.UI.Collections.TabbedInventoryController.html#GrandmaGreen_UI_Collections_TabbedInventoryController_OnSeedEntryClicked_System_UInt16_Genotype_
@@ -7918,12 +7918,12 @@ references:
   commentId: F:GrandmaGreen.UI.Collections.TabbedInventoryItemController.m_button
   fullName: GrandmaGreen.UI.Collections.TabbedInventoryItemController.m_button
   nameWithType: TabbedInventoryItemController.m_button
-- uid: GrandmaGreen.UI.Collections.TabbedInventoryItemController.m_clickCallback
-  name: m_clickCallback
-  href: api/GrandmaGreen.UI.Collections.TabbedInventoryItemController.html#GrandmaGreen_UI_Collections_TabbedInventoryItemController_m_clickCallback
-  commentId: E:GrandmaGreen.UI.Collections.TabbedInventoryItemController.m_clickCallback
-  fullName: GrandmaGreen.UI.Collections.TabbedInventoryItemController.m_clickCallback
-  nameWithType: TabbedInventoryItemController.m_clickCallback
+- uid: GrandmaGreen.UI.Collections.TabbedInventoryItemController.m_createCallback
+  name: m_createCallback
+  href: api/GrandmaGreen.UI.Collections.TabbedInventoryItemController.html#GrandmaGreen_UI_Collections_TabbedInventoryItemController_m_createCallback
+  commentId: E:GrandmaGreen.UI.Collections.TabbedInventoryItemController.m_createCallback
+  fullName: GrandmaGreen.UI.Collections.TabbedInventoryItemController.m_createCallback
+  nameWithType: TabbedInventoryItemController.m_createCallback
 - uid: GrandmaGreen.UI.Collections.TabbedInventoryItemController.m_inventoryItemData
   name: m_inventoryItemData
   href: api/GrandmaGreen.UI.Collections.TabbedInventoryItemController.html#GrandmaGreen_UI_Collections_TabbedInventoryItemController_m_inventoryItemData
