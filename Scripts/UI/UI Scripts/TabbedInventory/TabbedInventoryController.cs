@@ -52,12 +52,13 @@ namespace GrandmaGreen.UI.Collections
         private Length inventoryWidth = (Length)(.45 * Screen.width);
         // Customization variables
         private VisualElement threshold; 
-        private Button m_draggable;
-        private IInventoryItem m_id;
+        private Button draggable;
+        private Vector3 draggableStartPos;
+        private IInventoryItem iventoryItemId;
 
 
 
-        public event System.Action<ushort> onItemEntryClicked;
+        public event System.Action<ushort> onItemCreated;
         /// <summary>
         /// The TabbedInventoryController is attached to the TabbedInventory UI. It registers and controlls tab switching, as well as loading old and new items into the inventory.
         /// </summary>
@@ -234,7 +235,7 @@ namespace GrandmaGreen.UI.Collections
                 }
                 else
                 {
-                    var newListEntryLogic = new TabbedInventoryItemController(newListEntry.Q<Button>(), OnItemEntryClicked);
+                    var newListEntryLogic = new TabbedInventoryItemController(newListEntry.Q<Button>(), OnItemCreated);
                     newListEntry.userData = newListEntryLogic;
                 }
 
@@ -259,7 +260,7 @@ namespace GrandmaGreen.UI.Collections
             };
 
             // Set a fixed item height
-            jar.fixedItemHeight = 100;
+            jar.fixedItemHeight = 300;
         }
 
         // Instantiate a new item for the inventory.
@@ -310,14 +311,12 @@ namespace GrandmaGreen.UI.Collections
             CloseInventory(new ClickEvent());
         }
         
-        public void OnItemEntryClicked(TabbedInventoryItemController itemController)
+        public void OnItemCreated(TabbedInventoryItemController itemController)
         {
-            m_id = itemController.m_inventoryItemData;
-            itemController.m_button.RegisterCallback<PointerDownEvent>(PointerDownHandler);
-            itemController.m_button.RegisterCallback<PointerMoveEvent>(PointerMoveHandler);
-            itemController.m_button.RegisterCallback<PointerUpEvent>(PointerUpHandler);
-
-            // CloseInventory(new ClickEvent());
+            iventoryItemId = itemController.m_inventoryItemData;
+            itemController.m_button.RegisterCallback<PointerDownEvent>(PointerDownHandler, TrickleDown.TrickleDown);
+            itemController.m_button.RegisterCallback<PointerMoveEvent>(PointerMoveHandler, TrickleDown.TrickleDown);
+            itemController.m_button.RegisterCallback<PointerUpEvent>(PointerUpHandler, TrickleDown.TrickleDown);
         }
         private Vector2 targetStartPosition { get; set; }
         private Vector3 pointerStartPosition { get; set; }
@@ -326,39 +325,41 @@ namespace GrandmaGreen.UI.Collections
         private bool handled { get; set; }
         private void PointerDownHandler(PointerDownEvent evt)
         {
-            m_draggable = evt.currentTarget as Button;
-            targetStartPosition = m_draggable.transform.position;
+            draggable = evt.currentTarget as Button;
+            draggableStartPos = draggable.transform.position;
+            targetStartPosition = draggable.transform.position;
             pointerStartPosition = evt.position;
-            m_draggable.CapturePointer(evt.pointerId);
+            draggable.CapturePointer(evt.pointerId);
             enabled = true;
             handled = false;
         }
 
         private void PointerMoveHandler(PointerMoveEvent evt)
         {
-            if (enabled && m_draggable.HasPointerCapture(evt.pointerId))
+            if (enabled && draggable.HasPointerCapture(evt.pointerId))
             {
                 Vector3 pointerDelta = evt.position - pointerStartPosition;
-                m_draggable.transform.position = new Vector2(targetStartPosition.x + pointerDelta.x, targetStartPosition.y + pointerDelta.y);
-            }
+                draggable.transform.position = new Vector2(targetStartPosition.x + pointerDelta.x, targetStartPosition.y + pointerDelta.y);
 
-            // To-Do: Bound Checks
+                // To-Do: Bound Checks
             
-            // Threshold Check
-            if(m_draggable.worldTransform.GetPosition().x <= threshold.worldTransform.GetPosition().x && !handled){
-                CloseInventory(new ClickEvent());
-                m_draggable.style.display = DisplayStyle.None;
-                // UI to GameObject here
-                EventManager.instance.HandleEVENT_CUSTOMIZATION_START(m_id);
-                handled = true;
+                // Threshold Check
+                if(draggable.worldTransform.GetPosition().x <= threshold.worldTransform.GetPosition().x && !handled){
+                    draggable.transform.position = draggableStartPos;
+                    CloseInventory(new ClickEvent());
+                    // UI to GameObject here
+                    EventManager.instance.HandleEVENT_CUSTOMIZATION_START(iventoryItemId);
+                    handled = true;
+                }
             }
         }
 
         private void PointerUpHandler(PointerUpEvent evt)
         {
-            if (enabled && m_draggable.HasPointerCapture(evt.pointerId))
+            if (enabled && draggable.HasPointerCapture(evt.pointerId))
             {
-                m_draggable.ReleasePointer(evt.pointerId);
+                draggable.ReleasePointer(evt.pointerId);
+                draggable.transform.position = draggableStartPos;
             }
         }
 
