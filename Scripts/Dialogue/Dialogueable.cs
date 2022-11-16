@@ -71,7 +71,7 @@ namespace GrandmaGreen.Dialogue
 
         private void Finish(string s)
         {
-            interactionEventScript.OnInteraction?.Invoke(new Vector3());
+            interactionEventScript.OnInteraction?.Invoke(new InteractionEventData());
             m_dialogueRunner.onNodeComplete.RemoveListener(onFinishDialogue);
         }
     }

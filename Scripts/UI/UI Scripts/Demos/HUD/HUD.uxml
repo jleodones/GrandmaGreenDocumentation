@@ -5,14 +5,14 @@
             <ui:GroupBox name="left-content" style="height: 100%; width: 10%; flex-direction: column; justify-content: space-around; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0;">
                 <ui:GroupBox name="currency-group" class="info-content-jar info-content" style="width: 100%;">
                     <ui:VisualElement class="info-border" style="width: 100%;">
-                        <ui:VisualElement class="icon-test general-icon info-icon" style="background-image: url(&apos;project://database/Assets/_GrandmaGreen/Art/UI/Icons/HUD/UI_HUD_Gold%201.png?fileID=2800000&amp;guid=a905f87446937e343bfa7472f3e2bb77&amp;type=3#UI_HUD_Gold 1&apos;);" />
+                        <ui:VisualElement class="icon-test general-icon info-icon" style="background-image: url(&apos;project://database/Assets/_GrandmaGreen/Art/UI/Icons/HUD/UI_HUD_Gold%201.png?fileID=2800000&amp;guid=a905f87446937e343bfa7472f3e2bb77&amp;type=3#UI_HUD_Gold 1&apos;); -unity-background-scale-mode: scale-to-fit; width: 110%; translate: -14px 0;" />
                         <ui:Label tabindex="-1" text="0" display-tooltip-when-elided="true" name="currency-text" class="info-text" />
                     </ui:VisualElement>
                 </ui:GroupBox>
-                <ui:GroupBox name="fertilizer-group" class="info-content-jar info-content">
-                    <ui:VisualElement class="info-border" style="width: 100%;">
-                        <ui:VisualElement class="general-icon info-icon" style="background-color: rgba(56, 56, 56, 0); align-items: center; justify-content: flex-start; background-image: url(&apos;project://database/Assets/_GrandmaGreen/Art/UI/Icons/HUD/UI_HUD_Fertilizer%201.png?fileID=2800000&amp;guid=678c215b08dc99c4ea71e479a214f960&amp;type=3#UI_HUD_Fertilizer 1&apos;);" />
-                        <ui:Label tabindex="-1" text="0" display-tooltip-when-elided="true" name="fertilizer-text" class="info-text" />
+                <ui:GroupBox name="fertilizer-group" class="info-content-jar info-content" style="opacity: 1; height: 33px; justify-content: flex-end; align-items: flex-start; width: 174px;">
+                    <ui:VisualElement class="info-border" style="width: 100%; opacity: 1; position: relative; flex-wrap: nowrap; align-items: center; justify-content: space-between; transform-origin: center;">
+                        <ui:VisualElement class="general-icon info-icon" style="background-color: rgba(56, 56, 56, 0); align-items: center; justify-content: space-around; background-image: url(&apos;project://database/Assets/_GrandmaGreen/Art/UI/Icons/HUD/UI_HUD_Fertilizer%201.png?fileID=2800000&amp;guid=678c215b08dc99c4ea71e479a214f960&amp;type=3#UI_HUD_Fertilizer 1&apos;); -unity-background-scale-mode: scale-to-fit; width: 80px; height: 188px; translate: -10px 0;" />
+                        <ui:Label tabindex="-1" text="0" display-tooltip-when-elided="true" name="fertilizer-text" class="info-text" style="align-items: flex-end;" />
                     </ui:VisualElement>
                 </ui:GroupBox>
             </ui:GroupBox>
@@ -24,7 +24,7 @@
         </ui:VisualElement>
         <ui:VisualElement picking-mode="Ignore" name="screen-bottom" style="height: auto; justify-content: space-between; align-items: stretch; flex-direction: row; padding-bottom: 2.5%; padding-left: 5%; padding-right: 5%; padding-top: 0;">
             <ui:GroupBox picking-mode="Ignore" name="left-content" class="button-content" style="justify-content: flex-start;">
-                <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="vision-button" class="buttons icon-buttons" style="background-image: url(&apos;project://database/Assets/_GrandmaGreen/Art/UI/Icons/HUD/UI_HUD_Cultivision%201.png?fileID=2800000&amp;guid=facedc78c92d8e14b99105b190359540&amp;type=3#UI_HUD_Cultivision 1&apos;);" />
+                <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="vision-button" class="buttons icon-buttons" style="background-image: url(&apos;project://database/Assets/_GrandmaGreen/Art/UI/Icons/HUD/UI_HUD_Cultivision%201.png?fileID=2800000&amp;guid=facedc78c92d8e14b99105b190359540&amp;type=3#UI_HUD_Cultivision 1&apos;); height: 110px; width: 110px;" />
             </ui:GroupBox>
             <ui:GroupBox picking-mode="Ignore" name="right-content" class="button-content" style="flex-direction: row-reverse; align-items: stretch; justify-content: flex-start;">
                 <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="inventory-button" class="buttons icon-buttons" style="background-image: url(&apos;project://database/Assets/_GrandmaGreen/Art/UI/Icons/HUD/UI_HUD_Inventory%201.png?fileID=2800000&amp;guid=77f3be438a6ffa740a1ba736ffed633a&amp;type=3#UI_HUD_Inventory 1&apos;);" />

@@ -14,6 +14,7 @@ namespace GrandmaGreen.Garden
         private readonly int decor = 3;
 
         Dictionary<Vector3Int, int> tileStateLookup;
+
         public void Initialize()
         {
             tileStateLookup = new Dictionary<Vector3Int, int>();
@@ -110,20 +111,19 @@ namespace GrandmaGreen.Garden
             return ((ComponentStore<TileState>)componentStores[tiles]).components;
         }
 
-        public void AddDecor(DecorationId decorID, Vector3 position)
+        public void AddDecorState(DecorState decorState)
         {
-            DecorState decorState = new DecorState()
-            {
-                ID = decorID,
-                position = position
-            };
-
             ((ComponentStore<DecorState>)componentStores[decor]).components.Add(decorState);
+        }
+
+        public void RemoveDecorState(DecorState decorState)
+        {
+            ((ComponentStore<DecorState>)componentStores[decor]).components.Remove(decorState);
         }
 
         public List<DecorState> Decor()
         {
-            return ((ComponentStore<DecorState>)componentStores[tiles]).components;
+            return ((ComponentStore<DecorState>)componentStores[decor]).components;
         }
 
     }

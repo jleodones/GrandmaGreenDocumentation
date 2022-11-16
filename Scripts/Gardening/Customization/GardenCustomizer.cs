@@ -11,8 +11,9 @@ namespace GrandmaGreen.Garden
     public class GardenCustomizer : ScriptableObject
     {
         [Header("References")]
-        [SerializeField] BoxCollider decorItemPrefab;
-        [SerializeField] Sprite debugSprite;
+        [SerializeField] GardenDecorItem decorItemPrefab;
+        [SerializeField] Collections.DecorationId debugDecor;
+        [SerializeField] Collections.CollectionsSO collections;
         [SerializeField] TileStore tileStore;
         [SerializeField] PointerState pointerState;
 
@@ -23,22 +24,24 @@ namespace GrandmaGreen.Garden
         [SerializeField] Color validColor;
         [SerializeField] Color invalidColor;
 
-        public BoxCollider GenerateDecorItem() => GenerateDecorItem(debugSprite);
+        public GardenDecorItem GenerateDecorItem() => GenerateDecorItem(debugDecor);
 
-        public BoxCollider GenerateDecorItem(Sprite decorSprite)
+        public GardenDecorItem GenerateDecorItem(Collections.DecorationId decorID)
         {
-            BoxCollider decorItem = Instantiate(decorItemPrefab);
+            GardenDecorItem decorItem = Instantiate(decorItemPrefab);
+
+            decorItem.decorID = decorID;
+            Sprite decorSprite = collections.GetSprite(decorID);
             decorItem.GetComponentInChildren<SpriteRenderer>().sprite = decorSprite;
 
-            Vector3 colliderSize = decorItem.size;
+            Vector3 colliderSize = decorItem.boundsCollider.size;
             colliderSize.x = decorSprite.bounds.size.x * colliderSizeModifier;
-            decorItem.size = colliderSize;
+            decorItem.boundsCollider.size = colliderSize;
 
             return decorItem;
         }
 
 
-        //public TileBase[] m_tileBlock;
         public bool CheckValidState(BoxCollider decorItem, GardenAreaController decorArea)
         {
             Vector3Int tileBlockOrigin = Vector3Int.zero;
@@ -69,8 +72,8 @@ namespace GrandmaGreen.Garden
         }
 
         Coroutine customizationState;
-        
-        public void EnterCustomizationState(GardenAreaController decorArea, BoxCollider decorItem)
+
+        public void EnterCustomizationState(GardenAreaController decorArea, GardenDecorItem decorItem)
         {
             customizationState = decorArea.StartCoroutine(CustomizationStateHandler(decorArea, decorItem));
         }
@@ -87,16 +90,17 @@ namespace GrandmaGreen.Garden
         /// <param name="decorArea"></param>
         /// <param name="decorItem"></param>
         /// <returns></returns>
-        IEnumerator CustomizationStateHandler(GardenAreaController decorArea, BoxCollider decorItem)
+        IEnumerator CustomizationStateHandler(GardenAreaController decorArea, GardenDecorItem decorItem)
         {
             WaitForSeconds waitForSeconds = new WaitForSeconds(validCheckTime);
-            //Tween moveTween = null;
 
             Vector3 destination = decorArea.lastSelectedPosition;
             destination.z = 0;
 
             decorItem.transform.position = destination;
 
+            decorItem.DisableInteraction();
+            Debug.Log("Customization start");
             bool isValid = false;
             do
             {
@@ -107,25 +111,17 @@ namespace GrandmaGreen.Garden
 
                 Physics.SyncTransforms();
 
-                isValid = CheckValidState(decorItem, decorArea);
+                isValid = CheckValidState(decorItem.boundsCollider, decorArea);
 
-                //if (moveTween.IsActive())moveTween.Complete();     
-                //moveTween = decorItem.transform.DOMove(destination, validCheckTime).SetEase(Ease.Linear);
-
-                //yield return waitForSeconds;
                 yield return null;
+
             } while (decorItem && pointerState.phase != PointerState.Phase.NONE);
 
+            decorItem.EnableInteraction();
 
-            if (isValid)
-            {
-                decorArea.AddDecorItem(decorItem);
-                decorItem.enabled = true;
-            }
-            else
-            {
-                Destroy(decorItem.gameObject);
-            }
+            EventManager.instance.HandleEVENT_CUSTOMIZATION_END(isValid);
+
+            Debug.Log("Customization end");
         }
     }
 }

@@ -118,12 +118,17 @@ namespace GrandmaGreen.Entities
             actionQ += action;
         }
 
+        public virtual void ClearActionQueue()
+        {
+            actionQ = null;
+        }
         public virtual void ExcecuteEntityActions()
         {
             entity.onEntityPathEnd -= ExcecuteEntityActions;
 
             actionQ?.Invoke(this);
-            actionQ = null;
+
+            ClearActionQueue();
         }
     }
 }

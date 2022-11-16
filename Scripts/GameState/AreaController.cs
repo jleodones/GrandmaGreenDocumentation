@@ -5,6 +5,8 @@ using UnityEngine.Tilemaps;
 using Pathfinding;
 using NaughtyAttributes;
 using GrandmaGreen.Entities;
+using Core.Input;
+
 
 namespace GrandmaGreen
 {
@@ -52,21 +54,36 @@ namespace GrandmaGreen
             areaServicer.DesregisterAreaController(this);
         }
 
+        public virtual void ProcessAreaInput(InteractionEventData eventData)
+        {
+            if (eventData.interactionState.phase == PointerState.Phase.DOWN)
+            {
+                AreaSelection(eventData.interactionPoint);
+            }
+            else if (eventData.interactionState.phase == PointerState.Phase.DRAG)
+            {
+                AreaDragged(eventData.interactionPoint);
+            }
+        }
+
+
         public virtual void AreaSelection(Vector3 worldPoint)
         {
             lastSelectedPosition = worldPoint;
             lastSelectedCell = tilemap.WorldToCell(worldPoint);
             lastSelectedTile = tilemap.GetTile(lastSelectedCell);
-            
+            playerController.ClearActionQueue();
 
             onTilemapSelection?.Invoke(lastSelectedCell);
 
             playerController.SetDestination(worldPoint);
+
+            
+
             if (((lastSelectedTile as IGameTile)) != null)
             {
                 playerController.QueueEntityAction(((IGameTile)lastSelectedTile).DoTileAction);
             }
-
         }
 
         public virtual void AreaDragged(Vector3 worldPoint)

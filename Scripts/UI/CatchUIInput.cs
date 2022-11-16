@@ -3,38 +3,63 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 using UnityEngine.Events;
+using Core.Input;
 
 namespace GrandmaGreen
 {
     public class CatchUIInput : MonoBehaviour
     {
+        public TouchInteraction touchInteraction;
         public UIDocument document;
-        public UnityEvent onWorldPointerEvent;
+
         VisualElement root;
 
+        bool m_PointerActive = false;
         void OnEnable()
         {
             root = document.rootVisualElement;
+
             root.RegisterCallback<PointerDownEvent>(OnWorldPointerDown);
             root.RegisterCallback<PointerMoveEvent>(OnWorldPointerMove);
+            root.RegisterCallback<PointerUpEvent>(OnWorldPointerUp);
+            root.RegisterCallback<PointerOutEvent>(OnWorldPointerExit);
         }
 
         void OnDisable()
         {
             root.UnregisterCallback<PointerDownEvent>(OnWorldPointerDown);
-            root.RegisterCallback<PointerMoveEvent>(OnWorldPointerMove);
+            root.UnregisterCallback<PointerMoveEvent>(OnWorldPointerMove);
+            root.UnregisterCallback<PointerUpEvent>(OnWorldPointerUp);
+            root.UnregisterCallback<PointerOutEvent>(OnWorldPointerExit);
         }
 
         void OnWorldPointerDown(PointerDownEvent e)
         {
-            Debug.Log("No UI Detected");
-            onWorldPointerEvent?.Invoke();
+            m_PointerActive = true;
         }
 
         void OnWorldPointerMove(PointerMoveEvent e)
         {
-            //Debug.Log("No UI Detected");
-            //onWorldPointerEvent?.Invoke();
+            m_PointerActive = true;
+        }
+
+        void OnWorldPointerExit(PointerOutEvent e)
+        {
+            m_PointerActive = false;
+        }
+
+        void OnWorldPointerUp(PointerUpEvent e)
+        {
+            m_PointerActive = false;
+        }
+
+        void Update()
+        {
+            if(m_PointerActive && touchInteraction.qRaycast)
+                touchInteraction.RaycastScreen();
+
+
+            touchInteraction.qRaycast = false;
         }
     }
 }

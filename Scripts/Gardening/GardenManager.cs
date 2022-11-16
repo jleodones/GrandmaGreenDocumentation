@@ -33,7 +33,9 @@ namespace GrandmaGreen.Garden
     [System.Serializable]
     public struct DecorState
     {
-        public Vector3 position;
+        public float x;
+        public float y;
+
         public DecorationId ID;
     }
 
@@ -128,12 +130,12 @@ namespace GrandmaGreen.Garden
 
         public Genotype GetGenotype(int areaIndex, Vector3Int cell)
         {
-	        if (!IsEmpty(areaIndex, cell))
+            if (!IsEmpty(areaIndex, cell))
             {
                 return plantLookup[areaIndex][cell].genotype;
             }
             return new Genotype();
-	    }
+        }
 
         public void IncrementGrowthStage(int areaIndex, Vector3Int cell)
         {
@@ -274,7 +276,7 @@ namespace GrandmaGreen.Garden
             else
                 return false;
 
-	    }
+        }
 
         public int NumSeedDrops(int areaIndex, Vector3Int cell)
         {
@@ -299,8 +301,37 @@ namespace GrandmaGreen.Garden
             plantLookup[areaIndex].SetTileState(new TileState()
             {
                 cell = cell,
-                tileIndex=tileIndex
+                tileIndex = tileIndex
             });
+        }
+
+        public void UpdateDecorItem(int areaIndex, DecorationId decorID, Vector3 newPosition, Vector3? oldPosition = null)
+        {
+            if (oldPosition != null)
+            {
+                plantLookup[areaIndex].RemoveDecorState(
+                new DecorState()
+                {
+                    ID = decorID,
+                    x = ((Vector3)oldPosition).x,
+                    y = ((Vector3)oldPosition).y,
+                }
+                );
+            }
+
+            plantLookup[areaIndex].AddDecorState(
+                new DecorState()
+                {
+                    ID = decorID,
+                    x = newPosition.x,
+                    y = newPosition.y,
+                }
+            );
+        }
+
+        public List<DecorState> GetDecor(int areaIndex)
+        {
+            return new List<DecorState>(plantLookup[areaIndex].Decor());
         }
     }
 }

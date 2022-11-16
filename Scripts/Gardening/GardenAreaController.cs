@@ -1,3 +1,4 @@
+using Core.Input;
 using GrandmaGreen.Collections;
 using GrandmaGreen.Entities;
 using System.Collections.Generic;
@@ -41,6 +42,8 @@ namespace GrandmaGreen.Garden
             golemManager.Initialize();
             collection.DEBUGLoadPlantProperties();
             gardenManager.RegisterGarden(areaIndex);
+
+            
         }
 
         void OnEnable()
@@ -55,6 +58,8 @@ namespace GrandmaGreen.Garden
             decorList = new List<Collider>();
             RefreshGarden();
 
+            EventManager.instance.HandleEVENT_INVENTORY_ADD_PLANT_OR_SEED(new GrandmaGreen.Collections.Plant((ushort)DecorationId.Flamingo, null, 0, new List<Genotype>()), new Genotype());
+            
             gardenManager.timer.onTick += DecrementWatering;
         }
 
@@ -68,6 +73,36 @@ namespace GrandmaGreen.Garden
 
             gardenManager.timer.onTick -= DecrementWatering;
         }
+
+        #region Input
+
+        public override void ProcessAreaInput(InteractionEventData eventData)
+        {
+            if (eventData.interactionState.phase == PointerState.Phase.DOWN && !DEBUG_CUSTOMIZATION)
+            {
+                AreaSelection(eventData.interactionPoint);
+            }
+            else if (eventData.interactionState.phase == PointerState.Phase.DRAG)
+            {
+                AreaDragged(eventData.interactionPoint);
+            }
+        }
+
+        //Selects a garden tile in world space
+        //Called through a Unity event as of now
+        public void GardenTileSelected(Vector3Int gridPos)
+        {
+   
+            playerController.QueueEntityAction(DoToolAction);
+            playerTools.SetToolAction(tileStore[lastSelectedTile], lastSelectedCell, this);
+        }
+
+        void DoToolAction(EntityController entityController)
+        {
+            playerTools.DoCurrentToolAction();
+        }
+
+        #endregion
 
         #region Plants
         void PlantUpdate(int areaIndex, Vector3Int cell)
@@ -93,6 +128,15 @@ namespace GrandmaGreen.Garden
             foreach (TileState tileState in tileStates)
             {
                 tilemap.SetTile(tileState.cell, tileStore[tileState.tileIndex].tile);
+            }
+
+            List<DecorState> decorStates = gardenManager.GetDecor(areaIndex);
+            foreach (DecorState decorState in decorStates)
+            {
+                GardenDecorItem decorItem = gardenCustomizer.GenerateDecorItem(decorState.ID);
+                decorItem.transform.position = new Vector3(decorState.x, decorState.y, 0);
+
+                decorItem.onInteraction += EnterCustomizationMode;
             }
         }
 
@@ -356,48 +400,76 @@ namespace GrandmaGreen.Garden
 
         #endregion
 
+        #region  Customziation
 
-        //Selects a garden tile in world space
-        //Called through a Unity event as of now
-        public void GardenTileSelected(Vector3Int gridPos)
-        {
-
-            if (DEBUG_CUSTOMIZATION)
-            {
-                playerController.CancelDestination();
-                return;
-            }
-
-
-            playerController.QueueEntityAction(DoToolAction);
-            playerTools.SetToolAction(tileStore[lastSelectedTile], lastSelectedCell, this);
-        }
-
-        void DoToolAction(EntityController entityController)
-        {
-            playerTools.DoCurrentToolAction();
-        }
-
+        GardenDecorItem m_CurrentDecorItem;
+        bool m_IsGeneratedDecorItem = false;
+        Vector3 m_OriginalPosition;
         public void EnterCustomizationMode(IInventoryItem item)
         {
-            Debug.Log(item.itemID);   
-            DEBUG_CUSTOMIZATION = true;
-            BoxCollider decorItem = gardenCustomizer.GenerateDecorItem(collection.GetSprite((ToolId)item.itemID));
+            GardenDecorItem decorItem = gardenCustomizer.GenerateDecorItem();
 
-            gardenCustomizer.EnterCustomizationState(this, decorItem);
+            m_IsGeneratedDecorItem = true;
+
+            EnterCustomizationMode(decorItem);
+        }
+
+        public void EnterCustomizationMode(GardenDecorItem decorItem)
+        {
+            DEBUG_CUSTOMIZATION = true;
+            m_CurrentDecorItem = decorItem;
+            m_OriginalPosition = m_CurrentDecorItem.transform.position;
+            lastDraggedPosition = m_OriginalPosition;
+
+            gardenCustomizer.EnterCustomizationState(this, m_CurrentDecorItem);
         }
 
         public void ExitCustomizationMode(bool successful)
         {
             DEBUG_CUSTOMIZATION = false;
+
+            if (successful)
+            {
+                if (m_IsGeneratedDecorItem)
+                {
+                    AddGardenDecorItem(m_CurrentDecorItem);
+                }
+                else
+                {
+                    UpdateGardenDecorItem(m_CurrentDecorItem);
+                }
+            }
+            else
+            {
+                if (m_IsGeneratedDecorItem)
+                {
+                    Destroy(m_CurrentDecorItem.gameObject);
+                }
+                else
+                    m_CurrentDecorItem.transform.position = m_OriginalPosition;
+            }
+
+            m_IsGeneratedDecorItem = false;
         }
 
-        public void AddDecorItem(BoxCollider decorItem)
+        public void AddGardenDecorItem(GardenDecorItem decorItem)
         {
-            Debug.Log("Decor item added!");
+            gardenManager.UpdateDecorItem(areaIndex, decorItem.decorID, decorItem.transform.position);
 
-            //Save decor item here
-            //Adjust pathfinding grid here
+            decorItem.onInteraction += EnterCustomizationMode;
         }
+
+        public void UpdateGardenDecorItem(GardenDecorItem decorItem)
+        {
+            gardenManager.UpdateDecorItem(areaIndex, decorItem.decorID, decorItem.transform.position, m_OriginalPosition);
+        }
+
+        //TODO - 
+        public void RemoveDecorItemFromGarden(GardenDecorItem decorItem)
+        {
+            Debug.Log("Decor item removed!");
+        }
+
+        #endregion
     }
 }

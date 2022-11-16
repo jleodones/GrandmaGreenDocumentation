@@ -15,6 +15,7 @@ namespace GrandmaGreen.Garden
         public GameObject iconUIObject;
         public GameObject tileHighlightUIObject;
         public UnityEngine.UI.Image actionIcon;
+        public RectTransform parentRect;
 
         UIDocument uiDoc;
         VisualElement root;
@@ -28,6 +29,10 @@ namespace GrandmaGreen.Garden
             playerController.entity.onEntityPathEnd += EndMoveToAction;
 
             tween = actionIcon.transform.DOBlendableLocalMoveBy(Vector3.up * 50.0f, 0.5f).SetLoops(-1, LoopType.Yoyo).SetEase(Ease.InOutSine);
+
+
+            toolData.EmptySelection();
+
             tween.Pause();
         }
         Vector3 startPos;
@@ -56,7 +61,7 @@ namespace GrandmaGreen.Garden
 
             Vector3 goalPos = areaServices.ActiveArea.tilemap.CellToWorld(areaServices.ActiveArea.lastSelectedCell) + (Vector3)(Vector2.one * 0.5f);
 
-            (iconUIObject.transform as RectTransform).anchoredPosition = Camera.main.WorldToScreenPoint(goalPos);
+            //(iconUIObject.transform as RectTransform).anchoredPosition = Camera.main.WorldToScreenPoint(goalPos);
             tileHighlightUIObject.transform.position = goalPos;
             routine = StartCoroutine(SetUIPosition(goalPos));
         }
@@ -65,7 +70,7 @@ namespace GrandmaGreen.Garden
         {
             while (iconUIObject.activeSelf)
             {
-                (iconUIObject.transform as RectTransform).anchoredPosition = Camera.main.WorldToScreenPoint(goalPos);
+                (iconUIObject.transform as RectTransform).anchoredPosition = WorldToScreenSpace(goalPos, Camera.main, parentRect);
                 yield return null;
             }
         }
@@ -77,5 +82,20 @@ namespace GrandmaGreen.Garden
             iconUIObject.SetActive(false);
             tileHighlightUIObject.SetActive(false);
         }
+
+        public static Vector3 WorldToScreenSpace(Vector3 worldPos, Camera cam, RectTransform area)
+        {
+            Vector3 screenPoint = cam.WorldToScreenPoint(worldPos);
+            screenPoint.z = 0;
+
+            Vector2 screenPos;
+            if (RectTransformUtility.ScreenPointToLocalPointInRectangle(area, screenPoint, cam, out screenPos))
+            {
+                return screenPos;
+            }
+
+            return screenPoint;
+        }
+
     }
 }
