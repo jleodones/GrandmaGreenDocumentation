@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class GardenCustomizer
+    <title>Class GardenDecorItem
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class GardenCustomizer
+    <meta name="title" content="Class GardenDecorItem
    ">
     <meta name="generator" content="docfx 2.59.4.0">
     
@@ -77,185 +77,84 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="GrandmaGreen.Garden.GardenCustomizer">
+            <article class="content wrap" id="_content" data-uid="GrandmaGreen.Garden.GardenDecorItem">
   
   
-  <h1 id="GrandmaGreen_Garden_GardenCustomizer" data-uid="GrandmaGreen.Garden.GardenCustomizer" class="text-break">Class GardenCustomizer
+  <h1 id="GrandmaGreen_Garden_GardenDecorItem" data-uid="GrandmaGreen.Garden.GardenDecorItem" class="text-break">Class GardenDecorItem
   </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Object</a></div>
-    <div class="level1"><span class="xref">GardenCustomizer</span></div>
+    <div class="level1"><span class="xref">GardenDecorItem</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="GrandmaGreen.Garden.html">GrandmaGreen.Garden</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
-  <h5 id="GrandmaGreen_Garden_GardenCustomizer_syntax">Syntax</h5>
+  <h5 id="GrandmaGreen_Garden_GardenDecorItem_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class GardenCustomizer : ScriptableObject</code></pre>
+    <pre><code class="lang-csharp hljs">public class GardenDecorItem : MonoBehaviour</code></pre>
   </div>
-  <h3 id="methods">Methods
+  <h3 id="fields">Fields
   </h3>
   
   
-  <a id="GrandmaGreen_Garden_GardenCustomizer_CheckValidState_" data-uid="GrandmaGreen.Garden.GardenCustomizer.CheckValidState*"></a>
-  <h4 id="GrandmaGreen_Garden_GardenCustomizer_CheckValidState_BoxCollider_GrandmaGreen_Garden_GardenAreaController_" data-uid="GrandmaGreen.Garden.GardenCustomizer.CheckValidState(BoxCollider,GrandmaGreen.Garden.GardenAreaController)">CheckValidState(BoxCollider, GardenAreaController)</h4>
+  <h4 id="GrandmaGreen_Garden_GardenDecorItem_boundsCollider" data-uid="GrandmaGreen.Garden.GardenDecorItem.boundsCollider">boundsCollider</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool CheckValidState(BoxCollider decorItem, GardenAreaController decorArea)</code></pre>
+    <pre><code class="lang-csharp hljs">public BoxCollider boundsCollider</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
+  <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Name</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">BoxCollider</span></td>
-        <td><span class="parametername">decorItem</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="GrandmaGreen.Garden.GardenAreaController.html">GardenAreaController</a></td>
-        <td><span class="parametername">decorArea</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="GrandmaGreen_Garden_GardenCustomizer_EnterCustomizationState_" data-uid="GrandmaGreen.Garden.GardenCustomizer.EnterCustomizationState*"></a>
-  <h4 id="GrandmaGreen_Garden_GardenCustomizer_EnterCustomizationState_GrandmaGreen_Garden_GardenAreaController_GrandmaGreen_Garden_GardenDecorItem_" data-uid="GrandmaGreen.Garden.GardenCustomizer.EnterCustomizationState(GrandmaGreen.Garden.GardenAreaController,GrandmaGreen.Garden.GardenDecorItem)">EnterCustomizationState(GardenAreaController, GardenDecorItem)</h4>
+  <h4 id="GrandmaGreen_Garden_GardenDecorItem_decorID" data-uid="GrandmaGreen.Garden.GardenDecorItem.decorID">decorID</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void EnterCustomizationState(GardenAreaController decorArea, GardenDecorItem decorItem)</code></pre>
+    <pre><code class="lang-csharp hljs">public DecorationId decorID</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
+  <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="GrandmaGreen.Garden.GardenAreaController.html">GardenAreaController</a></td>
-        <td><span class="parametername">decorArea</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="GrandmaGreen.Garden.GardenDecorItem.html">GardenDecorItem</a></td>
-        <td><span class="parametername">decorItem</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="GrandmaGreen_Garden_GardenCustomizer_ForceExitCustomizationState_" data-uid="GrandmaGreen.Garden.GardenCustomizer.ForceExitCustomizationState*"></a>
-  <h4 id="GrandmaGreen_Garden_GardenCustomizer_ForceExitCustomizationState_GrandmaGreen_Garden_GardenAreaController_" data-uid="GrandmaGreen.Garden.GardenCustomizer.ForceExitCustomizationState(GrandmaGreen.Garden.GardenAreaController)">ForceExitCustomizationState(GardenAreaController)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void ForceExitCustomizationState(GardenAreaController decorArea)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="GrandmaGreen.Garden.GardenAreaController.html">GardenAreaController</a></td>
-        <td><span class="parametername">decorArea</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="GrandmaGreen_Garden_GardenCustomizer_GenerateDecorItem_" data-uid="GrandmaGreen.Garden.GardenCustomizer.GenerateDecorItem*"></a>
-  <h4 id="GrandmaGreen_Garden_GardenCustomizer_GenerateDecorItem" data-uid="GrandmaGreen.Garden.GardenCustomizer.GenerateDecorItem">GenerateDecorItem()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public GardenDecorItem GenerateDecorItem()</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="GrandmaGreen.Garden.GardenDecorItem.html">GardenDecorItem</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="GrandmaGreen_Garden_GardenCustomizer_GenerateDecorItem_" data-uid="GrandmaGreen.Garden.GardenCustomizer.GenerateDecorItem*"></a>
-  <h4 id="GrandmaGreen_Garden_GardenCustomizer_GenerateDecorItem_GrandmaGreen_Collections_DecorationId_" data-uid="GrandmaGreen.Garden.GardenCustomizer.GenerateDecorItem(GrandmaGreen.Collections.DecorationId)">GenerateDecorItem(DecorationId)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public GardenDecorItem GenerateDecorItem(DecorationId decorID)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="GrandmaGreen.Collections.DecorationId.html">DecorationId</a></td>
-        <td><span class="parametername">decorID</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h5 class="returns">Returns</h5>
+  
+  
+  <h4 id="GrandmaGreen_Garden_GardenDecorItem_interactable" data-uid="GrandmaGreen.Garden.GardenDecorItem.interactable">interactable</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Collider interactable</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -265,11 +164,67 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="GrandmaGreen.Garden.GardenDecorItem.html">GardenDecorItem</a></td>
+        <td><span class="xref">Collider</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
+  
+  
+  <h4 id="GrandmaGreen_Garden_GardenDecorItem_onInteraction" data-uid="GrandmaGreen.Garden.GardenDecorItem.onInteraction">onInteraction</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Action&lt;GardenDecorItem&gt; onInteraction</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="GrandmaGreen.Garden.GardenDecorItem.html">GardenDecorItem</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="GrandmaGreen_Garden_GardenDecorItem_DisableInteraction_" data-uid="GrandmaGreen.Garden.GardenDecorItem.DisableInteraction*"></a>
+  <h4 id="GrandmaGreen_Garden_GardenDecorItem_DisableInteraction" data-uid="GrandmaGreen.Garden.GardenDecorItem.DisableInteraction">DisableInteraction()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void DisableInteraction()</code></pre>
+  </div>
+  
+  
+  <a id="GrandmaGreen_Garden_GardenDecorItem_EnableInteraction_" data-uid="GrandmaGreen.Garden.GardenDecorItem.EnableInteraction*"></a>
+  <h4 id="GrandmaGreen_Garden_GardenDecorItem_EnableInteraction" data-uid="GrandmaGreen.Garden.GardenDecorItem.EnableInteraction">EnableInteraction()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void EnableInteraction()</code></pre>
+  </div>
+  
+  
+  <a id="GrandmaGreen_Garden_GardenDecorItem_SendInteractionAction_" data-uid="GrandmaGreen.Garden.GardenDecorItem.SendInteractionAction*"></a>
+  <h4 id="GrandmaGreen_Garden_GardenDecorItem_SendInteractionAction" data-uid="GrandmaGreen.Garden.GardenDecorItem.SendInteractionAction">SendInteractionAction()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SendInteractionAction()</code></pre>
+  </div>
 </article>
           </div>
           

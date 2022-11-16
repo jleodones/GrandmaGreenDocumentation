@@ -591,6 +591,19 @@ references:
   commentId: F:GrandmaGreen.AreaController.playerController
   fullName: GrandmaGreen.AreaController.playerController
   nameWithType: AreaController.playerController
+- uid: GrandmaGreen.AreaController.ProcessAreaInput(InteractionEventData)
+  name: ProcessAreaInput(InteractionEventData)
+  href: api/GrandmaGreen.AreaController.html#GrandmaGreen_AreaController_ProcessAreaInput_InteractionEventData_
+  commentId: M:GrandmaGreen.AreaController.ProcessAreaInput(InteractionEventData)
+  fullName: GrandmaGreen.AreaController.ProcessAreaInput(InteractionEventData)
+  nameWithType: AreaController.ProcessAreaInput(InteractionEventData)
+- uid: GrandmaGreen.AreaController.ProcessAreaInput*
+  name: ProcessAreaInput
+  href: api/GrandmaGreen.AreaController.html#GrandmaGreen_AreaController_ProcessAreaInput_
+  commentId: Overload:GrandmaGreen.AreaController.ProcessAreaInput
+  isSpec: "True"
+  fullName: GrandmaGreen.AreaController.ProcessAreaInput
+  nameWithType: AreaController.ProcessAreaInput
 - uid: GrandmaGreen.AreaController.tilemap
   name: tilemap
   href: api/GrandmaGreen.AreaController.html#GrandmaGreen_AreaController_tilemap
@@ -871,12 +884,12 @@ references:
   commentId: F:GrandmaGreen.CatchUIInput.document
   fullName: GrandmaGreen.CatchUIInput.document
   nameWithType: CatchUIInput.document
-- uid: GrandmaGreen.CatchUIInput.onWorldPointerEvent
-  name: onWorldPointerEvent
-  href: api/GrandmaGreen.CatchUIInput.html#GrandmaGreen_CatchUIInput_onWorldPointerEvent
-  commentId: F:GrandmaGreen.CatchUIInput.onWorldPointerEvent
-  fullName: GrandmaGreen.CatchUIInput.onWorldPointerEvent
-  nameWithType: CatchUIInput.onWorldPointerEvent
+- uid: GrandmaGreen.CatchUIInput.touchInteraction
+  name: touchInteraction
+  href: api/GrandmaGreen.CatchUIInput.html#GrandmaGreen_CatchUIInput_touchInteraction
+  commentId: F:GrandmaGreen.CatchUIInput.touchInteraction
+  fullName: GrandmaGreen.CatchUIInput.touchInteraction
+  nameWithType: CatchUIInput.touchInteraction
 - uid: GrandmaGreen.Collections
   name: GrandmaGreen.Collections
   href: api/GrandmaGreen.Collections.html
@@ -3039,6 +3052,19 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Entities.EntityController.CancelDestination
   nameWithType: EntityController.CancelDestination
+- uid: GrandmaGreen.Entities.EntityController.ClearActionQueue
+  name: ClearActionQueue()
+  href: api/GrandmaGreen.Entities.EntityController.html#GrandmaGreen_Entities_EntityController_ClearActionQueue
+  commentId: M:GrandmaGreen.Entities.EntityController.ClearActionQueue
+  fullName: GrandmaGreen.Entities.EntityController.ClearActionQueue()
+  nameWithType: EntityController.ClearActionQueue()
+- uid: GrandmaGreen.Entities.EntityController.ClearActionQueue*
+  name: ClearActionQueue
+  href: api/GrandmaGreen.Entities.EntityController.html#GrandmaGreen_Entities_EntityController_ClearActionQueue_
+  commentId: Overload:GrandmaGreen.Entities.EntityController.ClearActionQueue
+  isSpec: "True"
+  fullName: GrandmaGreen.Entities.EntityController.ClearActionQueue
+  nameWithType: EntityController.ClearActionQueue
 - uid: GrandmaGreen.Entities.EntityController.currentArea
   name: currentArea
   href: api/GrandmaGreen.Entities.EntityController.html#GrandmaGreen_Entities_EntityController_currentArea
@@ -4459,31 +4485,37 @@ references:
   commentId: F:GrandmaGreen.Garden.DecorState.ID
   fullName: GrandmaGreen.Garden.DecorState.ID
   nameWithType: DecorState.ID
-- uid: GrandmaGreen.Garden.DecorState.position
-  name: position
-  href: api/GrandmaGreen.Garden.DecorState.html#GrandmaGreen_Garden_DecorState_position
-  commentId: F:GrandmaGreen.Garden.DecorState.position
-  fullName: GrandmaGreen.Garden.DecorState.position
-  nameWithType: DecorState.position
+- uid: GrandmaGreen.Garden.DecorState.x
+  name: x
+  href: api/GrandmaGreen.Garden.DecorState.html#GrandmaGreen_Garden_DecorState_x
+  commentId: F:GrandmaGreen.Garden.DecorState.x
+  fullName: GrandmaGreen.Garden.DecorState.x
+  nameWithType: DecorState.x
+- uid: GrandmaGreen.Garden.DecorState.y
+  name: y
+  href: api/GrandmaGreen.Garden.DecorState.html#GrandmaGreen_Garden_DecorState_y
+  commentId: F:GrandmaGreen.Garden.DecorState.y
+  fullName: GrandmaGreen.Garden.DecorState.y
+  nameWithType: DecorState.y
 - uid: GrandmaGreen.Garden.GardenAreaController
   name: GardenAreaController
   href: api/GrandmaGreen.Garden.GardenAreaController.html
   commentId: T:GrandmaGreen.Garden.GardenAreaController
   fullName: GrandmaGreen.Garden.GardenAreaController
   nameWithType: GardenAreaController
-- uid: GrandmaGreen.Garden.GardenAreaController.AddDecorItem(BoxCollider)
-  name: AddDecorItem(BoxCollider)
-  href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_AddDecorItem_BoxCollider_
-  commentId: M:GrandmaGreen.Garden.GardenAreaController.AddDecorItem(BoxCollider)
-  fullName: GrandmaGreen.Garden.GardenAreaController.AddDecorItem(BoxCollider)
-  nameWithType: GardenAreaController.AddDecorItem(BoxCollider)
-- uid: GrandmaGreen.Garden.GardenAreaController.AddDecorItem*
-  name: AddDecorItem
-  href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_AddDecorItem_
-  commentId: Overload:GrandmaGreen.Garden.GardenAreaController.AddDecorItem
+- uid: GrandmaGreen.Garden.GardenAreaController.AddGardenDecorItem(GrandmaGreen.Garden.GardenDecorItem)
+  name: AddGardenDecorItem(GardenDecorItem)
+  href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_AddGardenDecorItem_GrandmaGreen_Garden_GardenDecorItem_
+  commentId: M:GrandmaGreen.Garden.GardenAreaController.AddGardenDecorItem(GrandmaGreen.Garden.GardenDecorItem)
+  fullName: GrandmaGreen.Garden.GardenAreaController.AddGardenDecorItem(GrandmaGreen.Garden.GardenDecorItem)
+  nameWithType: GardenAreaController.AddGardenDecorItem(GardenDecorItem)
+- uid: GrandmaGreen.Garden.GardenAreaController.AddGardenDecorItem*
+  name: AddGardenDecorItem
+  href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_AddGardenDecorItem_
+  commentId: Overload:GrandmaGreen.Garden.GardenAreaController.AddGardenDecorItem
   isSpec: "True"
-  fullName: GrandmaGreen.Garden.GardenAreaController.AddDecorItem
-  nameWithType: GardenAreaController.AddDecorItem
+  fullName: GrandmaGreen.Garden.GardenAreaController.AddGardenDecorItem
+  nameWithType: GardenAreaController.AddGardenDecorItem
 - uid: GrandmaGreen.Garden.GardenAreaController.Awake
   name: Awake()
   href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_Awake
@@ -4651,6 +4683,12 @@ references:
   commentId: F:GrandmaGreen.Garden.GardenAreaController.DryingUpBurst
   fullName: GrandmaGreen.Garden.GardenAreaController.DryingUpBurst
   nameWithType: GardenAreaController.DryingUpBurst
+- uid: GrandmaGreen.Garden.GardenAreaController.EnterCustomizationMode(GrandmaGreen.Garden.GardenDecorItem)
+  name: EnterCustomizationMode(GardenDecorItem)
+  href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_EnterCustomizationMode_GrandmaGreen_Garden_GardenDecorItem_
+  commentId: M:GrandmaGreen.Garden.GardenAreaController.EnterCustomizationMode(GrandmaGreen.Garden.GardenDecorItem)
+  fullName: GrandmaGreen.Garden.GardenAreaController.EnterCustomizationMode(GrandmaGreen.Garden.GardenDecorItem)
+  nameWithType: GardenAreaController.EnterCustomizationMode(GardenDecorItem)
 - uid: GrandmaGreen.Garden.GardenAreaController.EnterCustomizationMode(IInventoryItem)
   name: EnterCustomizationMode(IInventoryItem)
   href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_EnterCustomizationMode_IInventoryItem_
@@ -4784,6 +4822,32 @@ references:
   commentId: F:GrandmaGreen.Garden.GardenAreaController.playerTools
   fullName: GrandmaGreen.Garden.GardenAreaController.playerTools
   nameWithType: GardenAreaController.playerTools
+- uid: GrandmaGreen.Garden.GardenAreaController.ProcessAreaInput(InteractionEventData)
+  name: ProcessAreaInput(InteractionEventData)
+  href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_ProcessAreaInput_InteractionEventData_
+  commentId: M:GrandmaGreen.Garden.GardenAreaController.ProcessAreaInput(InteractionEventData)
+  fullName: GrandmaGreen.Garden.GardenAreaController.ProcessAreaInput(InteractionEventData)
+  nameWithType: GardenAreaController.ProcessAreaInput(InteractionEventData)
+- uid: GrandmaGreen.Garden.GardenAreaController.ProcessAreaInput*
+  name: ProcessAreaInput
+  href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_ProcessAreaInput_
+  commentId: Overload:GrandmaGreen.Garden.GardenAreaController.ProcessAreaInput
+  isSpec: "True"
+  fullName: GrandmaGreen.Garden.GardenAreaController.ProcessAreaInput
+  nameWithType: GardenAreaController.ProcessAreaInput
+- uid: GrandmaGreen.Garden.GardenAreaController.RemoveDecorItemFromGarden(GrandmaGreen.Garden.GardenDecorItem)
+  name: RemoveDecorItemFromGarden(GardenDecorItem)
+  href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_RemoveDecorItemFromGarden_GrandmaGreen_Garden_GardenDecorItem_
+  commentId: M:GrandmaGreen.Garden.GardenAreaController.RemoveDecorItemFromGarden(GrandmaGreen.Garden.GardenDecorItem)
+  fullName: GrandmaGreen.Garden.GardenAreaController.RemoveDecorItemFromGarden(GrandmaGreen.Garden.GardenDecorItem)
+  nameWithType: GardenAreaController.RemoveDecorItemFromGarden(GardenDecorItem)
+- uid: GrandmaGreen.Garden.GardenAreaController.RemoveDecorItemFromGarden*
+  name: RemoveDecorItemFromGarden
+  href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_RemoveDecorItemFromGarden_
+  commentId: Overload:GrandmaGreen.Garden.GardenAreaController.RemoveDecorItemFromGarden
+  isSpec: "True"
+  fullName: GrandmaGreen.Garden.GardenAreaController.RemoveDecorItemFromGarden
+  nameWithType: GardenAreaController.RemoveDecorItemFromGarden
 - uid: GrandmaGreen.Garden.GardenAreaController.tileStore
   name: tileStore
   href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_tileStore
@@ -4803,6 +4867,19 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Garden.GardenAreaController.ToggleGrowthTimer
   nameWithType: GardenAreaController.ToggleGrowthTimer
+- uid: GrandmaGreen.Garden.GardenAreaController.UpdateGardenDecorItem(GrandmaGreen.Garden.GardenDecorItem)
+  name: UpdateGardenDecorItem(GardenDecorItem)
+  href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_UpdateGardenDecorItem_GrandmaGreen_Garden_GardenDecorItem_
+  commentId: M:GrandmaGreen.Garden.GardenAreaController.UpdateGardenDecorItem(GrandmaGreen.Garden.GardenDecorItem)
+  fullName: GrandmaGreen.Garden.GardenAreaController.UpdateGardenDecorItem(GrandmaGreen.Garden.GardenDecorItem)
+  nameWithType: GardenAreaController.UpdateGardenDecorItem(GardenDecorItem)
+- uid: GrandmaGreen.Garden.GardenAreaController.UpdateGardenDecorItem*
+  name: UpdateGardenDecorItem
+  href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_UpdateGardenDecorItem_
+  commentId: Overload:GrandmaGreen.Garden.GardenAreaController.UpdateGardenDecorItem
+  isSpec: "True"
+  fullName: GrandmaGreen.Garden.GardenAreaController.UpdateGardenDecorItem
+  nameWithType: GardenAreaController.UpdateGardenDecorItem
 - uid: GrandmaGreen.Garden.GardenAreaController.UpdateSprite(Vector3Int)
   name: UpdateSprite(Vector3Int)
   href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_UpdateSprite_Vector3Int_
@@ -4854,12 +4931,12 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Garden.GardenCustomizer.CheckValidState
   nameWithType: GardenCustomizer.CheckValidState
-- uid: GrandmaGreen.Garden.GardenCustomizer.EnterCustomizationState(GrandmaGreen.Garden.GardenAreaController,BoxCollider)
-  name: EnterCustomizationState(GardenAreaController, BoxCollider)
-  href: api/GrandmaGreen.Garden.GardenCustomizer.html#GrandmaGreen_Garden_GardenCustomizer_EnterCustomizationState_GrandmaGreen_Garden_GardenAreaController_BoxCollider_
-  commentId: M:GrandmaGreen.Garden.GardenCustomizer.EnterCustomizationState(GrandmaGreen.Garden.GardenAreaController,BoxCollider)
-  fullName: GrandmaGreen.Garden.GardenCustomizer.EnterCustomizationState(GrandmaGreen.Garden.GardenAreaController, BoxCollider)
-  nameWithType: GardenCustomizer.EnterCustomizationState(GardenAreaController, BoxCollider)
+- uid: GrandmaGreen.Garden.GardenCustomizer.EnterCustomizationState(GrandmaGreen.Garden.GardenAreaController,GrandmaGreen.Garden.GardenDecorItem)
+  name: EnterCustomizationState(GardenAreaController, GardenDecorItem)
+  href: api/GrandmaGreen.Garden.GardenCustomizer.html#GrandmaGreen_Garden_GardenCustomizer_EnterCustomizationState_GrandmaGreen_Garden_GardenAreaController_GrandmaGreen_Garden_GardenDecorItem_
+  commentId: M:GrandmaGreen.Garden.GardenCustomizer.EnterCustomizationState(GrandmaGreen.Garden.GardenAreaController,GrandmaGreen.Garden.GardenDecorItem)
+  fullName: GrandmaGreen.Garden.GardenCustomizer.EnterCustomizationState(GrandmaGreen.Garden.GardenAreaController, GrandmaGreen.Garden.GardenDecorItem)
+  nameWithType: GardenCustomizer.EnterCustomizationState(GardenAreaController, GardenDecorItem)
 - uid: GrandmaGreen.Garden.GardenCustomizer.EnterCustomizationState*
   name: EnterCustomizationState
   href: api/GrandmaGreen.Garden.GardenCustomizer.html#GrandmaGreen_Garden_GardenCustomizer_EnterCustomizationState_
@@ -4886,12 +4963,12 @@ references:
   commentId: M:GrandmaGreen.Garden.GardenCustomizer.GenerateDecorItem
   fullName: GrandmaGreen.Garden.GardenCustomizer.GenerateDecorItem()
   nameWithType: GardenCustomizer.GenerateDecorItem()
-- uid: GrandmaGreen.Garden.GardenCustomizer.GenerateDecorItem(Sprite)
-  name: GenerateDecorItem(Sprite)
-  href: api/GrandmaGreen.Garden.GardenCustomizer.html#GrandmaGreen_Garden_GardenCustomizer_GenerateDecorItem_Sprite_
-  commentId: M:GrandmaGreen.Garden.GardenCustomizer.GenerateDecorItem(Sprite)
-  fullName: GrandmaGreen.Garden.GardenCustomizer.GenerateDecorItem(Sprite)
-  nameWithType: GardenCustomizer.GenerateDecorItem(Sprite)
+- uid: GrandmaGreen.Garden.GardenCustomizer.GenerateDecorItem(GrandmaGreen.Collections.DecorationId)
+  name: GenerateDecorItem(DecorationId)
+  href: api/GrandmaGreen.Garden.GardenCustomizer.html#GrandmaGreen_Garden_GardenCustomizer_GenerateDecorItem_GrandmaGreen_Collections_DecorationId_
+  commentId: M:GrandmaGreen.Garden.GardenCustomizer.GenerateDecorItem(GrandmaGreen.Collections.DecorationId)
+  fullName: GrandmaGreen.Garden.GardenCustomizer.GenerateDecorItem(GrandmaGreen.Collections.DecorationId)
+  nameWithType: GardenCustomizer.GenerateDecorItem(DecorationId)
 - uid: GrandmaGreen.Garden.GardenCustomizer.GenerateDecorItem*
   name: GenerateDecorItem
   href: api/GrandmaGreen.Garden.GardenCustomizer.html#GrandmaGreen_Garden_GardenCustomizer_GenerateDecorItem_
@@ -4899,6 +4976,75 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Garden.GardenCustomizer.GenerateDecorItem
   nameWithType: GardenCustomizer.GenerateDecorItem
+- uid: GrandmaGreen.Garden.GardenDecorItem
+  name: GardenDecorItem
+  href: api/GrandmaGreen.Garden.GardenDecorItem.html
+  commentId: T:GrandmaGreen.Garden.GardenDecorItem
+  fullName: GrandmaGreen.Garden.GardenDecorItem
+  nameWithType: GardenDecorItem
+- uid: GrandmaGreen.Garden.GardenDecorItem.boundsCollider
+  name: boundsCollider
+  href: api/GrandmaGreen.Garden.GardenDecorItem.html#GrandmaGreen_Garden_GardenDecorItem_boundsCollider
+  commentId: F:GrandmaGreen.Garden.GardenDecorItem.boundsCollider
+  fullName: GrandmaGreen.Garden.GardenDecorItem.boundsCollider
+  nameWithType: GardenDecorItem.boundsCollider
+- uid: GrandmaGreen.Garden.GardenDecorItem.decorID
+  name: decorID
+  href: api/GrandmaGreen.Garden.GardenDecorItem.html#GrandmaGreen_Garden_GardenDecorItem_decorID
+  commentId: F:GrandmaGreen.Garden.GardenDecorItem.decorID
+  fullName: GrandmaGreen.Garden.GardenDecorItem.decorID
+  nameWithType: GardenDecorItem.decorID
+- uid: GrandmaGreen.Garden.GardenDecorItem.DisableInteraction
+  name: DisableInteraction()
+  href: api/GrandmaGreen.Garden.GardenDecorItem.html#GrandmaGreen_Garden_GardenDecorItem_DisableInteraction
+  commentId: M:GrandmaGreen.Garden.GardenDecorItem.DisableInteraction
+  fullName: GrandmaGreen.Garden.GardenDecorItem.DisableInteraction()
+  nameWithType: GardenDecorItem.DisableInteraction()
+- uid: GrandmaGreen.Garden.GardenDecorItem.DisableInteraction*
+  name: DisableInteraction
+  href: api/GrandmaGreen.Garden.GardenDecorItem.html#GrandmaGreen_Garden_GardenDecorItem_DisableInteraction_
+  commentId: Overload:GrandmaGreen.Garden.GardenDecorItem.DisableInteraction
+  isSpec: "True"
+  fullName: GrandmaGreen.Garden.GardenDecorItem.DisableInteraction
+  nameWithType: GardenDecorItem.DisableInteraction
+- uid: GrandmaGreen.Garden.GardenDecorItem.EnableInteraction
+  name: EnableInteraction()
+  href: api/GrandmaGreen.Garden.GardenDecorItem.html#GrandmaGreen_Garden_GardenDecorItem_EnableInteraction
+  commentId: M:GrandmaGreen.Garden.GardenDecorItem.EnableInteraction
+  fullName: GrandmaGreen.Garden.GardenDecorItem.EnableInteraction()
+  nameWithType: GardenDecorItem.EnableInteraction()
+- uid: GrandmaGreen.Garden.GardenDecorItem.EnableInteraction*
+  name: EnableInteraction
+  href: api/GrandmaGreen.Garden.GardenDecorItem.html#GrandmaGreen_Garden_GardenDecorItem_EnableInteraction_
+  commentId: Overload:GrandmaGreen.Garden.GardenDecorItem.EnableInteraction
+  isSpec: "True"
+  fullName: GrandmaGreen.Garden.GardenDecorItem.EnableInteraction
+  nameWithType: GardenDecorItem.EnableInteraction
+- uid: GrandmaGreen.Garden.GardenDecorItem.interactable
+  name: interactable
+  href: api/GrandmaGreen.Garden.GardenDecorItem.html#GrandmaGreen_Garden_GardenDecorItem_interactable
+  commentId: F:GrandmaGreen.Garden.GardenDecorItem.interactable
+  fullName: GrandmaGreen.Garden.GardenDecorItem.interactable
+  nameWithType: GardenDecorItem.interactable
+- uid: GrandmaGreen.Garden.GardenDecorItem.onInteraction
+  name: onInteraction
+  href: api/GrandmaGreen.Garden.GardenDecorItem.html#GrandmaGreen_Garden_GardenDecorItem_onInteraction
+  commentId: F:GrandmaGreen.Garden.GardenDecorItem.onInteraction
+  fullName: GrandmaGreen.Garden.GardenDecorItem.onInteraction
+  nameWithType: GardenDecorItem.onInteraction
+- uid: GrandmaGreen.Garden.GardenDecorItem.SendInteractionAction
+  name: SendInteractionAction()
+  href: api/GrandmaGreen.Garden.GardenDecorItem.html#GrandmaGreen_Garden_GardenDecorItem_SendInteractionAction
+  commentId: M:GrandmaGreen.Garden.GardenDecorItem.SendInteractionAction
+  fullName: GrandmaGreen.Garden.GardenDecorItem.SendInteractionAction()
+  nameWithType: GardenDecorItem.SendInteractionAction()
+- uid: GrandmaGreen.Garden.GardenDecorItem.SendInteractionAction*
+  name: SendInteractionAction
+  href: api/GrandmaGreen.Garden.GardenDecorItem.html#GrandmaGreen_Garden_GardenDecorItem_SendInteractionAction_
+  commentId: Overload:GrandmaGreen.Garden.GardenDecorItem.SendInteractionAction
+  isSpec: "True"
+  fullName: GrandmaGreen.Garden.GardenDecorItem.SendInteractionAction
+  nameWithType: GardenDecorItem.SendInteractionAction
 - uid: GrandmaGreen.Garden.GardenManager
   name: GardenManager
   href: api/GrandmaGreen.Garden.GardenManager.html
@@ -4957,6 +5103,19 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Garden.GardenManager.DestroyPlant
   nameWithType: GardenManager.DestroyPlant
+- uid: GrandmaGreen.Garden.GardenManager.GetDecor(System.Int32)
+  name: GetDecor(Int32)
+  href: api/GrandmaGreen.Garden.GardenManager.html#GrandmaGreen_Garden_GardenManager_GetDecor_System_Int32_
+  commentId: M:GrandmaGreen.Garden.GardenManager.GetDecor(System.Int32)
+  fullName: GrandmaGreen.Garden.GardenManager.GetDecor(System.Int32)
+  nameWithType: GardenManager.GetDecor(Int32)
+- uid: GrandmaGreen.Garden.GardenManager.GetDecor*
+  name: GetDecor
+  href: api/GrandmaGreen.Garden.GardenManager.html#GrandmaGreen_Garden_GardenManager_GetDecor_
+  commentId: Overload:GrandmaGreen.Garden.GardenManager.GetDecor
+  isSpec: "True"
+  fullName: GrandmaGreen.Garden.GardenManager.GetDecor
+  nameWithType: GardenManager.GetDecor
 - uid: GrandmaGreen.Garden.GardenManager.GetGenotype(System.Int32,Vector3Int)
   name: GetGenotype(Int32, Vector3Int)
   href: api/GrandmaGreen.Garden.GardenManager.html#GrandmaGreen_Garden_GardenManager_GetGenotype_System_Int32_Vector3Int_
@@ -5171,6 +5330,22 @@ references:
   commentId: F:GrandmaGreen.Garden.GardenManager.timer
   fullName: GrandmaGreen.Garden.GardenManager.timer
   nameWithType: GardenManager.timer
+- uid: GrandmaGreen.Garden.GardenManager.UpdateDecorItem(System.Int32,DecorationId,Vector3,System.Nullable{Vector3})
+  name: UpdateDecorItem(Int32, DecorationId, Vector3, Nullable<Vector3>)
+  href: api/GrandmaGreen.Garden.GardenManager.html#GrandmaGreen_Garden_GardenManager_UpdateDecorItem_System_Int32_DecorationId_Vector3_System_Nullable_Vector3__
+  commentId: M:GrandmaGreen.Garden.GardenManager.UpdateDecorItem(System.Int32,DecorationId,Vector3,System.Nullable{Vector3})
+  name.vb: UpdateDecorItem(Int32, DecorationId, Vector3, Nullable(Of Vector3))
+  fullName: GrandmaGreen.Garden.GardenManager.UpdateDecorItem(System.Int32, DecorationId, Vector3, System.Nullable<Vector3>)
+  fullName.vb: GrandmaGreen.Garden.GardenManager.UpdateDecorItem(System.Int32, DecorationId, Vector3, System.Nullable(Of Vector3))
+  nameWithType: GardenManager.UpdateDecorItem(Int32, DecorationId, Vector3, Nullable<Vector3>)
+  nameWithType.vb: GardenManager.UpdateDecorItem(Int32, DecorationId, Vector3, Nullable(Of Vector3))
+- uid: GrandmaGreen.Garden.GardenManager.UpdateDecorItem*
+  name: UpdateDecorItem
+  href: api/GrandmaGreen.Garden.GardenManager.html#GrandmaGreen_Garden_GardenManager_UpdateDecorItem_
+  commentId: Overload:GrandmaGreen.Garden.GardenManager.UpdateDecorItem
+  isSpec: "True"
+  fullName: GrandmaGreen.Garden.GardenManager.UpdateDecorItem
+  nameWithType: GardenManager.UpdateDecorItem
 - uid: GrandmaGreen.Garden.GardenManager.UpdateGardenTile(System.Int32,Vector3Int,System.Int32)
   name: UpdateGardenTile(Int32, Vector3Int, Int32)
   href: api/GrandmaGreen.Garden.GardenManager.html#GrandmaGreen_Garden_GardenManager_UpdateGardenTile_System_Int32_Vector3Int_System_Int32_
@@ -5216,19 +5391,19 @@ references:
   commentId: T:GrandmaGreen.Garden.GardenSaver
   fullName: GrandmaGreen.Garden.GardenSaver
   nameWithType: GardenSaver
-- uid: GrandmaGreen.Garden.GardenSaver.AddDecor(DecorationId,Vector3)
-  name: AddDecor(DecorationId, Vector3)
-  href: api/GrandmaGreen.Garden.GardenSaver.html#GrandmaGreen_Garden_GardenSaver_AddDecor_DecorationId_Vector3_
-  commentId: M:GrandmaGreen.Garden.GardenSaver.AddDecor(DecorationId,Vector3)
-  fullName: GrandmaGreen.Garden.GardenSaver.AddDecor(DecorationId, Vector3)
-  nameWithType: GardenSaver.AddDecor(DecorationId, Vector3)
-- uid: GrandmaGreen.Garden.GardenSaver.AddDecor*
-  name: AddDecor
-  href: api/GrandmaGreen.Garden.GardenSaver.html#GrandmaGreen_Garden_GardenSaver_AddDecor_
-  commentId: Overload:GrandmaGreen.Garden.GardenSaver.AddDecor
+- uid: GrandmaGreen.Garden.GardenSaver.AddDecorState(GrandmaGreen.Garden.DecorState)
+  name: AddDecorState(DecorState)
+  href: api/GrandmaGreen.Garden.GardenSaver.html#GrandmaGreen_Garden_GardenSaver_AddDecorState_GrandmaGreen_Garden_DecorState_
+  commentId: M:GrandmaGreen.Garden.GardenSaver.AddDecorState(GrandmaGreen.Garden.DecorState)
+  fullName: GrandmaGreen.Garden.GardenSaver.AddDecorState(GrandmaGreen.Garden.DecorState)
+  nameWithType: GardenSaver.AddDecorState(DecorState)
+- uid: GrandmaGreen.Garden.GardenSaver.AddDecorState*
+  name: AddDecorState
+  href: api/GrandmaGreen.Garden.GardenSaver.html#GrandmaGreen_Garden_GardenSaver_AddDecorState_
+  commentId: Overload:GrandmaGreen.Garden.GardenSaver.AddDecorState
   isSpec: "True"
-  fullName: GrandmaGreen.Garden.GardenSaver.AddDecor
-  nameWithType: GardenSaver.AddDecor
+  fullName: GrandmaGreen.Garden.GardenSaver.AddDecorState
+  nameWithType: GardenSaver.AddDecorState
 - uid: GrandmaGreen.Garden.GardenSaver.Clear
   name: Clear()
   href: api/GrandmaGreen.Garden.GardenSaver.html#GrandmaGreen_Garden_GardenSaver_Clear
@@ -5310,6 +5485,19 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Garden.GardenSaver.Remove
   nameWithType: GardenSaver.Remove
+- uid: GrandmaGreen.Garden.GardenSaver.RemoveDecorState(GrandmaGreen.Garden.DecorState)
+  name: RemoveDecorState(DecorState)
+  href: api/GrandmaGreen.Garden.GardenSaver.html#GrandmaGreen_Garden_GardenSaver_RemoveDecorState_GrandmaGreen_Garden_DecorState_
+  commentId: M:GrandmaGreen.Garden.GardenSaver.RemoveDecorState(GrandmaGreen.Garden.DecorState)
+  fullName: GrandmaGreen.Garden.GardenSaver.RemoveDecorState(GrandmaGreen.Garden.DecorState)
+  nameWithType: GardenSaver.RemoveDecorState(DecorState)
+- uid: GrandmaGreen.Garden.GardenSaver.RemoveDecorState*
+  name: RemoveDecorState
+  href: api/GrandmaGreen.Garden.GardenSaver.html#GrandmaGreen_Garden_GardenSaver_RemoveDecorState_
+  commentId: Overload:GrandmaGreen.Garden.GardenSaver.RemoveDecorState
+  isSpec: "True"
+  fullName: GrandmaGreen.Garden.GardenSaver.RemoveDecorState
+  nameWithType: GardenSaver.RemoveDecorState
 - uid: GrandmaGreen.Garden.GardenSaver.SetTileState(GrandmaGreen.Garden.TileState)
   name: SetTileState(TileState)
   href: api/GrandmaGreen.Garden.GardenSaver.html#GrandmaGreen_Garden_GardenSaver_SetTileState_GrandmaGreen_Garden_TileState_
@@ -5567,6 +5755,12 @@ references:
   commentId: F:GrandmaGreen.Garden.MoveToActionUI.iconUIObject
   fullName: GrandmaGreen.Garden.MoveToActionUI.iconUIObject
   nameWithType: MoveToActionUI.iconUIObject
+- uid: GrandmaGreen.Garden.MoveToActionUI.parentRect
+  name: parentRect
+  href: api/GrandmaGreen.Garden.MoveToActionUI.html#GrandmaGreen_Garden_MoveToActionUI_parentRect
+  commentId: F:GrandmaGreen.Garden.MoveToActionUI.parentRect
+  fullName: GrandmaGreen.Garden.MoveToActionUI.parentRect
+  nameWithType: MoveToActionUI.parentRect
 - uid: GrandmaGreen.Garden.MoveToActionUI.playerController
   name: playerController
   href: api/GrandmaGreen.Garden.MoveToActionUI.html#GrandmaGreen_Garden_MoveToActionUI_playerController
@@ -5585,6 +5779,19 @@ references:
   commentId: F:GrandmaGreen.Garden.MoveToActionUI.toolData
   fullName: GrandmaGreen.Garden.MoveToActionUI.toolData
   nameWithType: MoveToActionUI.toolData
+- uid: GrandmaGreen.Garden.MoveToActionUI.WorldToScreenSpace(Vector3,Camera,RectTransform)
+  name: WorldToScreenSpace(Vector3, Camera, RectTransform)
+  href: api/GrandmaGreen.Garden.MoveToActionUI.html#GrandmaGreen_Garden_MoveToActionUI_WorldToScreenSpace_Vector3_Camera_RectTransform_
+  commentId: M:GrandmaGreen.Garden.MoveToActionUI.WorldToScreenSpace(Vector3,Camera,RectTransform)
+  fullName: GrandmaGreen.Garden.MoveToActionUI.WorldToScreenSpace(Vector3, Camera, RectTransform)
+  nameWithType: MoveToActionUI.WorldToScreenSpace(Vector3, Camera, RectTransform)
+- uid: GrandmaGreen.Garden.MoveToActionUI.WorldToScreenSpace*
+  name: WorldToScreenSpace
+  href: api/GrandmaGreen.Garden.MoveToActionUI.html#GrandmaGreen_Garden_MoveToActionUI_WorldToScreenSpace_
+  commentId: Overload:GrandmaGreen.Garden.MoveToActionUI.WorldToScreenSpace
+  isSpec: "True"
+  fullName: GrandmaGreen.Garden.MoveToActionUI.WorldToScreenSpace
+  nameWithType: MoveToActionUI.WorldToScreenSpace
 - uid: GrandmaGreen.Garden.PlantState
   name: PlantState
   href: api/GrandmaGreen.Garden.PlantState.html

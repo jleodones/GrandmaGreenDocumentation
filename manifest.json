@@ -196,7 +196,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.AreaController.html",
-          "hash": "6Fm2AL0yZZ/XkOwkRWDHLhbVccPVYC2YuG1rkrIaQwc="
+          "hash": "cVQheM0aH/jryrYnu1UTDu9F0jpUm58pY3rc5Ex/Nvo="
         }
       },
       "is_incremental": false,
@@ -292,7 +292,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.CatchUIInput.html",
-          "hash": "la7AzUbePpSferEqsCQkJqym0Tcr0APxOitbb7NC4WI="
+          "hash": "97iQzQNrvqfpqPL1u5k4AT4tljmcr12bwS9yBklgEMU="
         }
       },
       "is_incremental": false,
@@ -664,7 +664,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.Entities.EntityController.html",
-          "hash": "H05zEBrO3Igcwl5P/y+MiPrIeJmXpS7upKKe8aSv/Gs="
+          "hash": "7RUTjQvOyetcr73wnj0UWt+Ik3dVs72P2Jy1Sb/EepA="
         }
       },
       "is_incremental": false,
@@ -772,7 +772,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.Entities.PlayerController.html",
-          "hash": "Fq5HbuDDS9eIL70Xu2bF1cEHM0/LSUoNEcTRKNXtxVo="
+          "hash": "7zN/1V+fWQ/hZ9CDMyMxsQZwfNzqWkdzg+Zr1P22BwE="
         }
       },
       "is_incremental": false,
@@ -868,7 +868,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.Garden.DecorState.html",
-          "hash": "tNmOSXj1mziWTYAiiKm9vUjOStNSpiHg8YS0czZLr0I="
+          "hash": "pjkSbu2TaHtc/BFnFZbcBSeM93v1gDCrRvoO8W1jHHo="
         }
       },
       "is_incremental": false,
@@ -880,7 +880,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.Garden.GardenAreaController.html",
-          "hash": "GXa0vqhcd2YWfn0VYtxMN96xbsAd9I5/G1vu3+ORolU="
+          "hash": "5GupYlzpvTOGUJHmBreSsv17gTq/DKAa4C0OIX6OFMg="
         }
       },
       "is_incremental": false,
@@ -892,7 +892,19 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.Garden.GardenCustomizer.html",
-          "hash": "52PUr6e+4mdGGdrpaC8sZAhYb6IlriIGToxUJDpijk4="
+          "hash": "6a/cX5WFCCPXD2DDZz0GK3CbTm9lNgISeOVXi3GlVrM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GrandmaGreen.Garden.GardenDecorItem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GrandmaGreen.Garden.GardenDecorItem.html",
+          "hash": "1Bxu+sNZoflmcaURMugCKU8RAK+R35mfCY2C7TcAkWI="
         }
       },
       "is_incremental": false,
@@ -904,7 +916,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.Garden.GardenManager.html",
-          "hash": "kqrADlb44YThRn/s7vPG3z/NkixFyNiqc9eCiFKLvMA="
+          "hash": "QGXNLdTlDoIrbpxyXKPbJP0OCYyhbjHNpuaSS9pyBTw="
         }
       },
       "is_incremental": false,
@@ -916,7 +928,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.Garden.GardenSaver.html",
-          "hash": "UmXAbYEcbgf9lg980NDyqEHbKIoNWR51N4B0sJkQ0Wk="
+          "hash": "4Nd7PnSAx/+TEmMxi5ZzetdAPvxltakLf64Azqt/I7Y="
         }
       },
       "is_incremental": false,
@@ -988,7 +1000,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.Garden.MoveToActionUI.html",
-          "hash": "e6zsfaolHSW7vmlzFwSlnwtqrJw9NaOkbIjYD4O+hyU="
+          "hash": "4O4Jfudm/fOIazr+PrB9VuhuqSHAhAezssS/GDLKcuY="
         }
       },
       "is_incremental": false,
@@ -1060,7 +1072,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.Garden.html",
-          "hash": "zUZPNPXcVFVkwq0MAsSOZL3iULT0N+wkBKLR3jp6gFg="
+          "hash": "/FbK9sl5G5NzOqKAXvvgAtfTho45YDIBIj2nxg38waw="
         }
       },
       "is_incremental": false,
@@ -1636,7 +1648,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "qXUJ6mNwCPe/2t2eMDMTd38vJKH0Pyr0Qe5atkOUPX4="
+          "hash": "h0oU4dFrbpPl3AUrhDV5QJXokiricCmcE71zGg+hLB4="
         }
       },
       "is_incremental": false,
@@ -1745,7 +1757,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 134,
+          "total_file_count": 135,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
