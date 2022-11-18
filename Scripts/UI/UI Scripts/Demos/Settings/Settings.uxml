@@ -1,0 +1,86 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/_GrandmaGreen/Scripts/UI/UI%20Scripts/Demos/Settings/SettingsStyles.uss?fileID=7433441132597879392&amp;guid=e2fb0498c386f8a41879620b800ca201&amp;type=3#SettingsStyles" />
+    <ui:VisualElement focusable="true" style="width: 100%; height: 100%;">
+        <ui:VisualElement name="top-bar" style="width: 100%; height: 15%; flex-direction: row; background-color: rgb(105, 73, 48);">
+            <ui:VisualElement name="right-content" style="width: 33%; height: 100%;" />
+            <ui:VisualElement name="mid-content" style="width: 34%; height: 100%; flex-direction: row; align-items: auto; justify-content: center;">
+                <ui:Label tabindex="-1" text="Settings" display-tooltip-when-elided="true" name="title-text" style="margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; width: 100%; height: 100%; -unity-font-style: bold; font-size: 100%; -unity-text-align: middle-center; color: rgb(255, 255, 255);" />
+            </ui:VisualElement>
+            <ui:VisualElement name="left-content" style="width: 33%; height: 100%; flex-direction: row-reverse; padding-left: 3px; padding-right: 2.5%; padding-top: 1.5%; padding-bottom: 5px; margin-left: 4px; margin-right: 4px; margin-top: 6px; margin-bottom: 2px;">
+                <ui:Button tabindex="-1" display-tooltip-when-elided="true" enable-rich-text="false" focusable="false" name="exit-button" class="exit-button" style="border-top-left-radius: 50px; border-bottom-left-radius: 50px; border-top-right-radius: 50px; border-bottom-right-radius: 50px; background-image: url(&apos;project://database/Assets/_GrandmaGreen/Scripts/UI/SampleArt/UI_ExitButton_Temp.png?fileID=2800000&amp;guid=c8b33f7354fc4754694f9a542c34d442&amp;type=3#UI_ExitButton_Temp&apos;);" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="mid-sec" style="width: 100%; height: 45%; flex-direction: row; background-color: rgb(253, 250, 245);">
+            <ui:VisualElement name="sliders" style="padding-left: 8%; padding-right: 1%; padding-top: 2%; padding-bottom: 1%; width: 45%; height: 100%;">
+                <ui:VisualElement name="box" class="section-box" style="min-height: auto; min-width: auto;">
+                    <ui:VisualElement name="bgm" style="width: 100%; height: 50%; min-width: auto; min-height: auto; flex-direction: row; align-items: center;">
+                        <ui:VisualElement name="icon" class="slider-type-icon" />
+                        <ui:VisualElement name="bgm-sliders" style="width: 75%; height: 100%; min-height: auto; min-width: auto; justify-content: center; padding-left: 20px;">
+                            <ui:Label tabindex="-1" text="BGM" display-tooltip-when-elided="true" name="Label" style="width: 100%; height: 30%; font-size: 50%; -unity-font-style: bold; color: rgb(105, 73, 48); padding-bottom: 20px;" />
+                            <ui:Slider picking-mode="Ignore" value="42" high-value="100" name="Slider" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="sfx" style="width: 100%; height: 50%; min-width: auto; min-height: auto; flex-direction: row; align-items: center;">
+                        <ui:VisualElement name="icon" class="slider-type-icon" style="background-image: url(&apos;project://database/Assets/_GrandmaGreen/Scripts/UI/SampleArt/UI_Temp_SFXIcon.png?fileID=2800000&amp;guid=5b654a3ae0f0f54408b3a2de6d1e8be4&amp;type=3#UI_Temp_SFXIcon&apos;);" />
+                        <ui:VisualElement name="sfx-sliders" style="width: 75%; height: 100%; min-height: auto; min-width: auto; justify-content: center; padding-left: 20px;">
+                            <ui:Label tabindex="-1" text="SFX" display-tooltip-when-elided="true" style="width: 100%; height: 30%; font-size: 50%; -unity-font-style: bold; color: rgb(105, 73, 48); padding-bottom: 20px;" />
+                            <ui:Slider picking-mode="Ignore" value="42" high-value="100" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="toggles" style="width: 55%; height: 100%; flex-direction: row; padding-left: 1%; padding-right: 8%; padding-top: 2%; padding-bottom: 1%;">
+                <ui:VisualElement name="box" class="section-box" style="justify-content: space-around; align-items: center; flex-direction: row; min-height: auto; min-width: auto; width: 100%;">
+                    <ui:GroupBox style="margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; width: 100%; height: 100%; min-width: auto; min-height: auto; flex-direction: row; justify-content: space-around;">
+                        <ui:VisualElement style="width: 30%; height: 100%; align-items: center;">
+                            <ui:Label tabindex="-1" text="Colorblind&#10;Mode" display-tooltip-when-elided="true" class="toggle-text" />
+                            <ui:Toggle style="width: 100%; height: 60%; align-items: center; justify-content: center;" />
+                        </ui:VisualElement>
+                        <ui:VisualElement style="width: 30%; height: 100%; align-items: center;">
+                            <ui:Label tabindex="-1" text="Haptic&#10;Feedback" display-tooltip-when-elided="true" class="toggle-text" />
+                            <ui:Toggle style="width: 100%; height: 60%; align-items: center; justify-content: center;" />
+                        </ui:VisualElement>
+                        <ui:VisualElement style="width: 30%; height: 100%; align-items: center;">
+                            <ui:Label tabindex="-1" text="Battery&#10;Saver" display-tooltip-when-elided="true" class="toggle-text" />
+                            <ui:Toggle style="width: 100%; height: 60%; align-items: center; justify-content: center;" />
+                        </ui:VisualElement>
+                    </ui:GroupBox>
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="bot-sec" style="width: 100%; height: 40%; background-color: rgb(253, 250, 245); padding-left: 10%; padding-right: 10%; padding-top: 2%; padding-bottom: 3%;">
+            <ui:GroupBox style="width: 100%; height: 100%; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; min-height: auto; min-width: auto; flex-direction: row;">
+                <ui:VisualElement name="button-group" style="width: 20%; height: 100%; padding-left: 1%; padding-right: 1%; padding-top: 0; padding-bottom: 0; min-height: auto; min-width: auto; align-items: center;">
+                    <ui:VisualElement style="height: 80%; width: 100%; align-items: center; justify-content: flex-end;">
+                        <ui:Button tabindex="-1" display-tooltip-when-elided="true" class="big-button" style="background-image: url(&apos;project://database/Assets/_GrandmaGreen/Scripts/UI/SampleArt/UI_Temp_DeleteIcon.png?fileID=2800000&amp;guid=882bf0378b4100343a9b92c9eef231f2&amp;type=3#UI_Temp_DeleteIcon&apos;); margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; background-color: rgba(169, 194, 89, 0);" />
+                    </ui:VisualElement>
+                    <ui:Label tabindex="-1" text="delete" display-tooltip-when-elided="true" style="height: 20%; width: 100%; font-size: 50%; -unity-text-align: upper-center; color: rgb(105, 73, 48); -unity-font-style: bold;" />
+                </ui:VisualElement>
+                <ui:VisualElement name="button-group" style="width: 20%; height: 100%; padding-left: 1%; padding-right: 1%; padding-top: 0; padding-bottom: 0; min-height: auto; min-width: auto; align-items: center;">
+                    <ui:VisualElement style="height: 80%; width: 100%; align-items: center; justify-content: flex-end;">
+                        <ui:Button tabindex="-1" display-tooltip-when-elided="true" class="big-button" style="background-image: url(&apos;project://database/Assets/_GrandmaGreen/Scripts/UI/SampleArt/UI_Temp_RateIcon.png?fileID=2800000&amp;guid=9b39b8cfe1251e241ae39f92755b22b2&amp;type=3#UI_Temp_RateIcon&apos;); margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; background-color: rgba(169, 194, 89, 0);" />
+                    </ui:VisualElement>
+                    <ui:Label tabindex="-1" text="rate" display-tooltip-when-elided="true" style="height: 20%; width: 100%; font-size: 50%; -unity-text-align: upper-center; color: rgb(105, 73, 48); -unity-font-style: bold;" />
+                </ui:VisualElement>
+                <ui:VisualElement name="button-group" style="width: 20%; height: 100%; padding-left: 1%; padding-right: 1%; padding-top: 0; padding-bottom: 0; min-height: auto; min-width: auto; align-items: center;">
+                    <ui:VisualElement style="height: 80%; width: 100%; align-items: center; justify-content: flex-end;">
+                        <ui:Button tabindex="-1" display-tooltip-when-elided="true" class="big-button" style="background-image: url(&apos;project://database/Assets/_GrandmaGreen/Scripts/UI/SampleArt/UI_Temp_FollowIcon.png?fileID=2800000&amp;guid=d566032ee5eb8d648805453fda5143fd&amp;type=3#UI_Temp_FollowIcon&apos;); margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; background-color: rgba(169, 194, 89, 0);" />
+                    </ui:VisualElement>
+                    <ui:Label tabindex="-1" text="follow" display-tooltip-when-elided="true" style="height: 20%; width: 100%; font-size: 50%; -unity-text-align: upper-center; color: rgb(105, 73, 48); -unity-font-style: bold;" />
+                </ui:VisualElement>
+                <ui:VisualElement name="button-group" style="width: 20%; height: 100%; padding-left: 1%; padding-right: 1%; padding-top: 0; padding-bottom: 0; min-height: auto; min-width: auto; align-items: center;">
+                    <ui:VisualElement style="height: 80%; width: 100%; align-items: center; justify-content: flex-end;">
+                        <ui:Button tabindex="-1" display-tooltip-when-elided="true" class="big-button" style="background-image: url(&apos;project://database/Assets/_GrandmaGreen/Scripts/UI/SampleArt/UI_Temp_TutorialsIcon.png?fileID=2800000&amp;guid=207719d31ae0ed84cabab320f86ea5b5&amp;type=3#UI_Temp_TutorialsIcon&apos;); margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; background-color: rgba(169, 194, 89, 0);" />
+                    </ui:VisualElement>
+                    <ui:Label tabindex="-1" text="tutorials" display-tooltip-when-elided="true" style="height: 20%; width: 100%; font-size: 50%; -unity-text-align: upper-center; color: rgb(105, 73, 48); -unity-font-style: bold;" />
+                </ui:VisualElement>
+                <ui:VisualElement name="button-group" style="width: 20%; height: 100%; padding-left: 1%; padding-right: 1%; padding-top: 0; padding-bottom: 0; min-height: auto; min-width: auto; align-items: center;">
+                    <ui:VisualElement style="height: 80%; width: 100%; align-items: center; justify-content: flex-end;">
+                        <ui:Button tabindex="-1" display-tooltip-when-elided="true" class="big-button" style="background-image: url(&apos;project://database/Assets/_GrandmaGreen/Scripts/UI/SampleArt/UI_Temp_CreditsIcon.png?fileID=2800000&amp;guid=b7b4a0079c512364bae84764036730c7&amp;type=3#UI_Temp_CreditsIcon&apos;); margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; background-color: rgba(169, 194, 89, 0);" />
+                    </ui:VisualElement>
+                    <ui:Label tabindex="-1" text="credits" display-tooltip-when-elided="true" style="height: 20%; width: 100%; font-size: 50%; -unity-text-align: upper-center; color: rgb(105, 73, 48); -unity-font-style: bold;" />
+                </ui:VisualElement>
+            </ui:GroupBox>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

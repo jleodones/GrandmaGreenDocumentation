@@ -3,7 +3,9 @@ guid: d6d764aab7c483c4dbf52b0a31d1ccfe
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - m_shoppingItemTemplate: {instanceID: 0}
+  - collections: {fileID: 11400000, guid: 2fdc2c4978bc54b3698d97a308037eb5, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

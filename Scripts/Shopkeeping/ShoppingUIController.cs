@@ -15,15 +15,9 @@ namespace GrandmaGreen.Shopkeeping
     [Serializable]
     public struct ShopItem
     {
-        public int baseCost;
-
-        public ItemType type;
-        //quantity 3 for seeds, 1 for tools, etc
-        //test
-        public string spritePath;
-        public Sprite sprite;
-        public string itemName;
-        public ushort id;
+        public Id id;
+        //quantity 3 for seeds
+        public int quantity;
     }
 
     /// <summary>
@@ -31,7 +25,7 @@ namespace GrandmaGreen.Shopkeeping
     /// </summary>
     public class GardeningShopUIController
     {
-        Dictionary<Id, ShopItem> GardenList;
+        List<ShopItem> GardenList;
         CollectionsSO collections;
         /// <summary>
         /// Pass in the collections SO. List will need to retrieve base costs of each item from the collections
@@ -39,7 +33,7 @@ namespace GrandmaGreen.Shopkeeping
         public GardeningShopUIController(CollectionsSO collectionsinput)
         {
             collections = collectionsinput;
-            GardenList = new Dictionary<Id, ShopItem>();
+            GardenList = new List<ShopItem>();
             //use CollectionsSO GetItem(Id) to retrieve ItemProperties of each item, set each attribute
             //2001-21 seed ids
             //look at list of seed items in collectionsSO and randomly pick 3 seed types per flower/veggie/fruit
@@ -51,40 +45,19 @@ namespace GrandmaGreen.Shopkeeping
             // flowerSeed1 = rnd.Next(2001,2021);
 
             //Seeds:
-            for (int i = 2001; i <= 2009; i++)
+            for (int i = 1001; i <= 1009; i++)
             {
                 Enum id = (PlantId)i;
                 ShopItem itemProps = new ShopItem();
-                itemProps.baseCost = collections.GetItem(id).baseCost;
-                itemProps.type = ItemType.Seed;
-                itemProps.spritePath = collections.GetItem(id).spritePath;
-                itemProps.sprite = collections.GetSprite(id);
-                itemProps.itemName = collections.GetItem(id).name;
-                itemProps.id = (ushort)i;
-                GardenList.Add(id, itemProps);
-            }
-
-            //Tools:
-            for (int i = 3001; i <= 3006; i++)
-            {
-                if (i != 3003)
-                {
-                    Enum id = (ToolId)i;
-                    ShopItem itemProps = new ShopItem();
-                    itemProps.baseCost = collections.GetItem(id).baseCost;
-                    itemProps.type = ItemType.Tool;
-                    itemProps.spritePath = collections.GetItem(id).spritePath;
-                    itemProps.sprite = collections.GetSprite(id);
-                    itemProps.itemName = collections.GetItem(id).name;
-                    itemProps.id = (ushort)i;
-                    GardenList.Add(id, itemProps);
-                }
+                itemProps.quantity = 3;
+                itemProps.id = id;
+                GardenList.Add(itemProps);
             }
         }
         /// <summary>
-        /// Get Dictionary<Id, ShopItem> containing all items in the gardening shop this cycle
+        /// Get List<ShopItem> containing all items in the gardening shop this cycle
         /// </summary>
-        public Dictionary<Id, ShopItem> GetGardenList()
+        public List<ShopItem> GetGardenList()
         {
             return GardenList;
         }
@@ -93,7 +66,7 @@ namespace GrandmaGreen.Shopkeeping
         /// </summary>
         public int GetBaseCostById(Id id)
         {
-            return GardenList[id].baseCost;
+            return collections.GetItem(id).baseCost;
         }
         /// <summary>
         /// Get the selling price of an item in player's inventory in the gardening shop (for now is just half the base cost)
@@ -102,19 +75,6 @@ namespace GrandmaGreen.Shopkeeping
         {
             return collections.GetItem(id).baseCost / 2;
         }
-        // /// <summary>
-        // /// Get the item type of a gardening shop item, pass in id
-        // /// </summary>
-        // public string GetTypeById(Id id)
-        // {
-        //     return GardenList[id].type;
-        // }
-
-        //test
-        public string GetPathById(Id id)
-        {
-            return GardenList[id].spritePath;
-        }
 
     }
     /// <summary>
@@ -122,25 +82,23 @@ namespace GrandmaGreen.Shopkeeping
     /// </summary>
     public class DecorShopUIController
     {
-        Dictionary<Id, ShopItem> DecorList;
+        List<ShopItem> DecorList;
         CollectionsSO collections;
         /// <summary>
         /// Pass in the collections SO. List will need to retrieve base costs of each item from the collections
         /// </summary>
         public DecorShopUIController(CollectionsSO collections)
         {
-            DecorList = new Dictionary<Id, ShopItem>();
-
-            //use CollectionsSO GetItem(Id) to retrieve ItemProperties of each item, set each attribute
+            DecorList = new List<ShopItem>();
 
             //Decor (non garden expansion):
             for (int i = 4001; i <= 4100; i++)
             {
                 DecorationId id = (DecorationId)i;
                 ShopItem itemProps = new ShopItem();
-                itemProps.baseCost = collections.GetItem(id).baseCost;
-                itemProps.type = ItemType.Decor;
-                DecorList.Add(id, itemProps);
+                itemProps.quantity = 1;
+                itemProps.id = id;
+                DecorList.Add(itemProps);
             }
             //Garden Exp:
             //uhh idk yet
@@ -149,7 +107,7 @@ namespace GrandmaGreen.Shopkeeping
         /// <summary>
         /// Get Dictionary<Id, ShopItem> containing all items in the decor shop this cycle
         /// </summary>
-        public Dictionary<Id, ShopItem> GetDecorList()
+        public List<ShopItem> GetDecorList()
         {
             return DecorList;
         }
@@ -158,7 +116,7 @@ namespace GrandmaGreen.Shopkeeping
         /// </summary>
         public int GetBaseCostById(Id id)
         {
-            return DecorList[id].baseCost;
+            return collections.GetItem(id).baseCost;
         }
         /// <summary>
         /// Get the selling price of an item in player's inventory in the decor shop (for now is just half the base cost)
@@ -167,13 +125,5 @@ namespace GrandmaGreen.Shopkeeping
         {
             return collections.GetItem(id).baseCost / 2;
         }
-        // /// <summary>
-        // /// Get the item type of a decor shop item, pass in id
-        // /// </summary>
-        // public string GetTypeById(Id id)
-        // {
-        //     return DecorList[id].type;
-        // }
-
     }
 }

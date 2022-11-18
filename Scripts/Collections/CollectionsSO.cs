@@ -8,15 +8,14 @@ using System.Linq;
 
 namespace GrandmaGreen.Collections
 {
-    //TODO: start from 0
     public enum ToolId : ushort
     {
-        Trowel = 3001,
-        WateringCan = 3002,
-        SeedPacket = 3003,
-        UpgradedTrowel = 3004,
-        UpgradedWateringCan = 3005,
-        Fertilizer = 3006
+        Trowel = 1,
+        WateringCan = 2,
+        SeedPacket = 3,
+        UpgradedTrowel = 4,
+        UpgradedWateringCan = 5,
+        Fertilizer = 6
     }
 
     public enum PlantId : ushort
@@ -169,16 +168,15 @@ namespace GrandmaGreen.Collections
         Fruit = 3
     }
 
-    //TODO: Needs item type
-    //for anything in inventory
     public struct ItemProperties
     {
         public string name;
         public string description;
         public string spritePath;
+        public string itemType;
+        public int baseCost;
         //decor items
         public string tag;
-        public int baseCost;
     }
 
     public struct CharacterProperties
@@ -193,10 +191,10 @@ namespace GrandmaGreen.Collections
     {
         public string name;
         public string description;
+        public string spriteBasePath;
         public int growthStages;
         public int growthTime;
         public int waterPerStage;
-        public string spriteBasePath;
         public PlantType plantType;
     }
 
@@ -220,7 +218,7 @@ namespace GrandmaGreen.Collections
     ///<summary>
     ///Template to generate the Collections SO, so that it will contain a list of Items
     ///</summary>
-    public class CollectionsSO : ScriptableObject
+    public class CollectionsSO : SerializedScriptableObject
     {
         [SerializeField] TextAsset dataSheet;
         [ShowInInspector]
@@ -319,6 +317,7 @@ namespace GrandmaGreen.Collections
         /// <summary>
         ///// TODO: use string builder for this
         /// TODO: checks for single sprite vs spritesheet
+        /// Only for plant sprites
         /// </summary>
         /// <param name="type"></param>
         /// <param name="genotype"></param>
@@ -327,14 +326,6 @@ namespace GrandmaGreen.Collections
         public Sprite GetSprite(PlantId type, Genotype genotype, int growthStage)
         {
             PlantProperties plant = GetPlant(type);
-
-            Sprite[] plantSpriteSheet = Resources.LoadAll<Sprite>(plant.plantType.ToString() + "s/" + plant.spriteBasePath);
-
-            if (plantSpriteSheet.Length == 0)
-            {
-                Debug.Log("Spritesheet not found");
-                return null;
-            }
 
             string suffix = "";
 
@@ -351,20 +342,51 @@ namespace GrandmaGreen.Collections
                     switch (genotype.trait)
                     {
                         case Genotype.Trait.Recessive:
-                            suffix += "_bb";
+                            suffix = "_Rec";
                             break;
                         case Genotype.Trait.Heterozygous:
-                            suffix += "_Bb";
+                            suffix = "_Het";
                             break;
                         case Genotype.Trait.Dominant:
-                            suffix += "_BB";
+                            suffix = "_Dom";
                             break;
                     }
                     break;
             }
 
             string finalSpritePath = plant.spriteBasePath + suffix;
-            return plantSpriteSheet.Single(s => s.name == finalSpritePath);
+
+            Sprite plantSprite = Resources.Load<Sprite>(plant.plantType.ToString() + "s/" + plant.name + "/" + finalSpritePath);
+            return plantSprite;
+        }
+
+        /// <summary>
+        /// Only for seed packets
+        /// </summary>
+        public Sprite GetSprite(PlantId type, Genotype genotype)
+        {
+            ItemProperties seed = GetItem(type);
+            string finalSpritePath = "SEED_" + seed.name;
+            string suffix = "";
+
+            switch (genotype.trait)
+            {
+                case Genotype.Trait.Recessive:
+                    suffix = "_Rec";
+                    break;
+                case Genotype.Trait.Heterozygous:
+                    suffix = "_Het";
+                    break;
+                case Genotype.Trait.Dominant:
+                    suffix = "_Dom";
+                    break;
+            }
+
+            finalSpritePath += suffix;
+
+            Sprite seedSprite = Resources.Load<Sprite>("Seed Packets/" + finalSpritePath);
+            return seedSprite;
+
         }
 
         // temporary hard-coded plant properties

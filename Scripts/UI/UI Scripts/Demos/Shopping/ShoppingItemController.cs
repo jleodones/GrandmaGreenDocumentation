@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.UIElements;
 using GrandmaGreen.Shopkeeping;
 using Id = System.Enum;
+using static UnityEditor.Progress;
 
 namespace GrandmaGreen.UI.Shopping
 {
@@ -13,6 +14,7 @@ namespace GrandmaGreen.UI.Shopping
         private Button m_button;
         private System.Action<ShopItem> m_clickCallback;
         private ShopItem thisItem;
+        [SerializeField] CollectionsSO collections;
         
         public ShoppingItemController (VisualElement root, Button button, System.Action<ShopItem> clickCallback)
         {
@@ -28,10 +30,10 @@ namespace GrandmaGreen.UI.Shopping
             thisItem = shopItem;
 
             // Set the image on the item.
-            m_button.Q<VisualElement>("IconImage").style.backgroundImage = new StyleBackground(shopItem.sprite);
+            m_button.Q<VisualElement>("IconImage").style.backgroundImage = new StyleBackground(collections.GetSprite(shopItem.id));
             
             // Set the cost of the item.
-            m_root.Q<Label>("Price").text = shopItem.baseCost.ToString();
+            m_root.Q<Label>("Price").text = collections.GetItem(shopItem.id).baseCost.ToString();
         }
 
         private void OnButtonClicked()

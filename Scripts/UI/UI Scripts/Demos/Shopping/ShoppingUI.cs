@@ -16,6 +16,8 @@ namespace GrandmaGreen.UI.Shopping
         private VisualElement m_rootVisualElement;
 
         [SerializeField] private VisualTreeAsset m_shoppingItemTemplate;
+
+        [SerializeField] private CollectionsSO collections;
         
         public List<ShopItem> availableItems;
         
@@ -87,9 +89,9 @@ namespace GrandmaGreen.UI.Shopping
                 }
 
                 m_rootVisualElement.Q<Label>("CurrentAmount").text = m_currentAmount.ToString();
-                
+
                 // Update the price text.
-                m_rootVisualElement.Q<Label>("CurrentPrice").text = (m_currentItem.baseCost * m_currentAmount).ToString();
+                m_rootVisualElement.Q<Label>("CurrentPrice").text = (collections.GetItem(m_currentItem.id).baseCost * m_currentAmount).ToString();
             };
 
             m_rootVisualElement.Q<Button>("AddButton").clicked += () =>
@@ -103,7 +105,7 @@ namespace GrandmaGreen.UI.Shopping
                 m_rootVisualElement.Q<Label>("CurrentAmount").text = m_currentAmount.ToString();
 
                 // Update the price text.
-                m_rootVisualElement.Q<Label>("CurrentPrice").text = (m_currentItem.baseCost * m_currentAmount).ToString();
+                m_rootVisualElement.Q<Label>("CurrentPrice").text = (collections.GetItem(m_currentItem.id).baseCost * m_currentAmount).ToString();
             };
             
             // Register buy button.
@@ -111,30 +113,30 @@ namespace GrandmaGreen.UI.Shopping
             {
                 int currentMoney = EventManager.instance.HandleEVENT_INVENTORY_GET_MONEY();
 
-                if (currentMoney < (m_currentAmount * m_currentItem.baseCost))
+                if (currentMoney < (m_currentAmount * collections.GetItem(m_currentItem.id).baseCost))
                 {
                     return;
                 }
                 
                 // Seed.
-                if (m_currentItem.type == ItemType.Seed)
+                if (collections.GetItem(m_currentItem.id).itemType == "Seed")
                 {
                     for (int i = 0; i < m_currentAmount; i++)
                     {
                         EventManager.instance.HandleEVENT_INVENTORY_ADD_PLANT_OR_SEED(
-                            new Seed(m_currentItem.id, m_currentItem.itemName, new List<Genotype>()), new Genotype());
+                            new Seed((ushort)Convert.ToInt32(m_currentItem.id), collections.GetItem(m_currentItem.id).name, new List<Genotype>()), new Genotype());
                     }
                 }
 
                 // Tool.
-                else if (m_currentItem.type == ItemType.Tool)
+                else if (collections.GetItem(m_currentItem.id).itemType == "Tool")
                 {
-                    EventManager.instance.HandleEVENT_INVENTORY_ADD_TOOL_OR_DECOR(new Tool(m_currentItem.id, m_currentItem.itemName, 1), m_currentAmount);
+                    EventManager.instance.HandleEVENT_INVENTORY_ADD_TOOL_OR_DECOR(new Tool((ushort)Convert.ToInt32(m_currentItem.id), collections.GetItem(m_currentItem.id).name, 1), m_currentAmount);
                 }
                 
-                Debug.Log("Buying for: " + m_currentAmount + " * " + m_currentItem.baseCost);
+                Debug.Log("Buying for: " + m_currentAmount + " * " + collections.GetItem(m_currentItem.id).baseCost);
                 
-                EventManager.instance.HandleEVENT_INVENTORY_REMOVE_MONEY(m_currentAmount * m_currentItem.baseCost);
+                EventManager.instance.HandleEVENT_INVENTORY_REMOVE_MONEY(m_currentAmount * collections.GetItem(m_currentItem.id).baseCost);
                 
                 m_rootVisualElement.Q<Label>("GoldAmount").text =
                     EventManager.instance.HandleEVENT_INVENTORY_GET_MONEY().ToString();
@@ -146,13 +148,13 @@ namespace GrandmaGreen.UI.Shopping
             m_currentItem = item;
             
             // Set the name.
-            m_rootVisualElement.Q<Label>("ItemName").text = item.itemName;
+            m_rootVisualElement.Q<Label>("ItemName").text = collections.GetItem(item.id).name;
             
             // Set the sprite image.
-            m_rootVisualElement.Q("Item").style.backgroundImage = new StyleBackground(item.sprite);
+            m_rootVisualElement.Q("Item").style.backgroundImage = new StyleBackground(collections.GetSprite(item.id));
             
             // Set the starting price.
-            m_rootVisualElement.Q<Label>("CurrentPrice").text = item.baseCost.ToString();
+            m_rootVisualElement.Q<Label>("CurrentPrice").text = collections.GetItem(item.id).baseCost.ToString();
             
             // Open up the popup window.
             m_rootVisualElement.Q("PopUpScreen").style.display = DisplayStyle.Flex;

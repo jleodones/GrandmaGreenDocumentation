@@ -50,40 +50,57 @@ namespace GrandmaGreen.Collections
                 string name = line[2];
                 string description = line[3];
                 string tag = line[4];
-                int baseCost = Int32.Parse(line[5]);
+                //int baseCost = Int32.Parse(line[5]);
+                ushort.TryParse(line[5], out ushort baseCost);
+                string seedDescription = line[6];
+                //int seedBaseCost = 0;
+                ushort.TryParse(line[7], out ushort seedBaseCost);
+                //if (line[7].Length != 0)
+                //{
+                //    seedBaseCost = Int32.Parse(line[7]);
+                //}
+                string plantType = line[8];
                 string spritePath = "";
-                ItemProperties itemProps = new ItemProperties(); ;
+                ItemProperties itemProps = new ItemProperties();
                 itemProps.name = name;
                 itemProps.description = description;
+                itemProps.itemType = entryType;
                 itemProps.baseCost = baseCost;
                 itemProps.spritePath = spritePath;
 
                 switch (entryType)
                 {
+                    //TODO: fill up other plant properties
                     case "Plant":
                         //Plant data
                         PlantProperties plantProps = new PlantProperties();
+
                         plantProps.name = name;
                         plantProps.description = description;
-                        //csv does not provide growth stages
-                        plantProps.spriteBasePath = "PLA_" + name;
-                        spritePath = "PLA_" + name;
+                        plantProps.spriteBasePath = "PLA_" + name.Replace(" ", "_");
+                        spritePath = "PLA_" + name.Replace(" ", "_");
                         itemProps.spritePath = spritePath;
 
-                        //TODO: Create Plant Type entry in csv instead of this
-                        //TODO: fill up other plant properties
+                        //plant stats
+                        ushort.TryParse(line[9], out ushort growthStages);
+                        plantProps.growthStages = growthStages;
+                        ushort.TryParse(line[10], out ushort growthTime);
+                        plantProps.growthTime = growthTime;
+                        ushort.TryParse(line[11], out ushort waterPerStage);
+                        plantProps.waterPerStage = waterPerStage;
+
                         //flower
-                        if (1001 <= csvID && csvID <= 1007)
+                        if (plantType == "Flower")
                         {
                             plantProps.plantType = (PlantType)1;
                         }
                         //veggie
-                        else if (1008 <= csvID && csvID <= 1014)
+                        else if (plantType == "Vegetable")
                         {
                             plantProps.plantType = (PlantType)2;
                         }
                         //fruit
-                        else if (1015 <= csvID && csvID <= 12021)
+                        else if (plantType == "Fruit")
                         {
                             plantProps.plantType = (PlantType)3;
                         }
@@ -92,29 +109,29 @@ namespace GrandmaGreen.Collections
                         collections.ItemLookup.Add(csvID, itemProps);
 
                         //Seed Data
-                        spritePath = "GAR_" + name;
+                        spritePath = "SEED_" + name.Replace(" ", "_");
                         itemProps.spritePath = spritePath;
 
                         collections.ItemLookup.Add((ushort)(csvID + SEED_ID_OFFSET), itemProps);
                         SeedProperties seedProps = new SeedProperties();
                         seedProps.name = name;
-                        seedProps.description = description;
+                        seedProps.description = seedDescription;
                         seedProps.spritePath = spritePath;
-                        seedProps.baseCost = baseCost;
+                        seedProps.baseCost = seedBaseCost;
                         seedProps.plantType = plantProps.plantType;
 
-                        collections.SeedLookup.Add(csvID, seedProps);
+                        collections.SeedLookup.Add((ushort)(csvID + SEED_ID_OFFSET), seedProps);
 
                         break;
 
                     case "Tool":
-                        itemProps.spritePath = "GAR_" + name;
+                        itemProps.spritePath = "GAR_" + name.Replace(" ", "_");
                         itemProps.baseCost = baseCost;
                         collections.ItemLookup.Add(csvID, itemProps);
                         break;
 
                     case "Decor":
-                        itemProps.spritePath = "DEC_" + name;
+                        itemProps.spritePath = "DEC_" + name.Replace(" ", "_");
                         itemProps.baseCost = baseCost;
                         collections.ItemLookup.Add(csvID, itemProps);
                         break;
@@ -124,7 +141,7 @@ namespace GrandmaGreen.Collections
                         characterProps.name = name;
                         characterProps.description = description;
                         characterProps.spritePaths = new List<string>();
-                        spritePath = "CHA_" + name;
+                        spritePath = "CHA_" + name.Replace(" ", "_");
                         characterProps.spritePaths.Add(spritePath);
                         itemProps.spritePath = spritePath;
                         collections.CharacterLookup.Add(csvID, characterProps);

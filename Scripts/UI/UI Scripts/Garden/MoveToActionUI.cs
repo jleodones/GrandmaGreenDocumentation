@@ -59,7 +59,7 @@ namespace GrandmaGreen.Garden
                 iconUIObject.gameObject.SetActive(true);
             }
 
-            Vector3 goalPos = areaServices.ActiveArea.tilemap.CellToWorld(areaServices.ActiveArea.lastSelectedCell) + (Vector3)(Vector2.one * 0.5f);
+            Vector3 goalPos = areaServices.ActiveArea.tilemap.CellToWorld(areaServices.ActiveArea.lastSelectedCell) + (Vector3)(Vector2.one * 0.7f);
 
             //(iconUIObject.transform as RectTransform).anchoredPosition = Camera.main.WorldToScreenPoint(goalPos);
             tileHighlightUIObject.transform.position = goalPos;

@@ -294,7 +294,7 @@ namespace GrandmaGreen.Garden
                     new Seed((ushort)childPlantType, properties.name, new List<Genotype> { childGenotype }), childGenotype);
                 DestroyPlant(cell);
 
-                EventManager.instance.HandleEVENT_GOLEM_SPAWN(0, cell);
+                //EventManager.instance.HandleEVENT_GOLEM_SPAWN(0, cell);
                 return true;
             }
 
