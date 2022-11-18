@@ -340,7 +340,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.Collections.CollectionsSO.html",
-          "hash": "0ThESPSuQuxEND18y1qJ1JbkNG2LlrFAPjuXoG5hDd0="
+          "hash": "UPxqvVw3onolyLz2H/aqnMGTsITCkrn5kRCjcGUBwVY="
         }
       },
       "is_incremental": false,
@@ -388,7 +388,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.Collections.ItemProperties.html",
-          "hash": "oSQrW3u7PVYXzgijMAdQMdOFHHZdgk2QN4gNHRM+UiA="
+          "hash": "20vJKLXXkZs9ecvj8HOSCmRgU5NaLupqHoHLGfK01O8="
         }
       },
       "is_incremental": false,
@@ -1312,7 +1312,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.Shopkeeping.DecorShopUIController.html",
-          "hash": "S7LPhYvrePQPEXoHNriNeTYjdPF1cDQ/kcFIjZ7MxOE="
+          "hash": "OCPS67/fhkDMKj4FKtEJ2QEXfUeqUnnGVbjC4cQaapU="
         }
       },
       "is_incremental": false,
@@ -1324,7 +1324,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.Shopkeeping.GardeningShopUIController.html",
-          "hash": "q0wzISWH2v6yXQDpxV/pEreB/dokY12CE9FjbVsW+7U="
+          "hash": "++uyvBgyyAI014F63kSo8MAAs2FMOR2/SHi9Owqc8yk="
         }
       },
       "is_incremental": false,
@@ -1336,7 +1336,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.Shopkeeping.ShopItem.html",
-          "hash": "2iww4C8vdtwRCsDs7v3/iwhJGyNrpa9VzhF7Q7NA0UU="
+          "hash": "asiL9rPlJvHZ385K+9yoUoQR+yvCYE7MpcdWjBoVpFM="
         }
       },
       "is_incremental": false,
