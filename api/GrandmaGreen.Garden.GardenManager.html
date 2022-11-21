@@ -99,12 +99,12 @@
   </h3>
   
   
-  <h4 id="GrandmaGreen_Garden_GardenManager_timer" data-uid="GrandmaGreen.Garden.GardenManager.timer">timer</h4>
+  <h4 id="GrandmaGreen_Garden_GardenManager_DeathTime" data-uid="GrandmaGreen.Garden.GardenManager.DeathTime">DeathTime</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public TimeLayer timer</code></pre>
+    <pre><code class="lang-csharp hljs">public int DeathTime</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -116,7 +116,55 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="GrandmaGreen.TimeLayer.TimeLayer.html">TimeLayer</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="GrandmaGreen_Garden_GardenManager_timers" data-uid="GrandmaGreen.Garden.GardenManager.timers">timers</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TimeLayer[] timers</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="GrandmaGreen.TimeLayer.TimeLayer.html">TimeLayer</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="GrandmaGreen_Garden_GardenManager_WiltTime" data-uid="GrandmaGreen.Garden.GardenManager.WiltTime">WiltTime</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int WiltTime</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -193,43 +241,6 @@
       <tr>
         <td><span class="xref">Vector3Int</span></td>
         <td><span class="parametername">cell</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="GrandmaGreen_Garden_GardenManager_DecrementWaterTimer_" data-uid="GrandmaGreen.Garden.GardenManager.DecrementWaterTimer*"></a>
-  <h4 id="GrandmaGreen_Garden_GardenManager_DecrementWaterTimer_System_Int32_Vector3Int_System_Int32_" data-uid="GrandmaGreen.Garden.GardenManager.DecrementWaterTimer(System.Int32,Vector3Int,System.Int32)">DecrementWaterTimer(Int32, Vector3Int, Int32)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void DecrementWaterTimer(int areaIndex, Vector3Int cell, int value)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
-        <td><span class="parametername">areaIndex</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">Vector3Int</span></td>
-        <td><span class="parametername">cell</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
-        <td><span class="parametername">value</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -582,13 +593,13 @@
   </table>
   
   
-  <a id="GrandmaGreen_Garden_GardenManager_IncrementGrowthStage_" data-uid="GrandmaGreen.Garden.GardenManager.IncrementGrowthStage*"></a>
-  <h4 id="GrandmaGreen_Garden_GardenManager_IncrementGrowthStage_System_Int32_Vector3Int_" data-uid="GrandmaGreen.Garden.GardenManager.IncrementGrowthStage(System.Int32,Vector3Int)">IncrementGrowthStage(Int32, Vector3Int)</h4>
+  <a id="GrandmaGreen_Garden_GardenManager_IncrementWaterTimer_" data-uid="GrandmaGreen.Garden.GardenManager.IncrementWaterTimer*"></a>
+  <h4 id="GrandmaGreen_Garden_GardenManager_IncrementWaterTimer_System_Int32_Vector3Int_System_Int32_" data-uid="GrandmaGreen.Garden.GardenManager.IncrementWaterTimer(System.Int32,Vector3Int,System.Int32)">IncrementWaterTimer(Int32, Vector3Int, Int32)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void IncrementGrowthStage(int areaIndex, Vector3Int cell)</code></pre>
+    <pre><code class="lang-csharp hljs">public void IncrementWaterTimer(int areaIndex, Vector3Int cell, int value)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -608,6 +619,11 @@
       <tr>
         <td><span class="xref">Vector3Int</span></td>
         <td><span class="parametername">cell</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">value</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -812,13 +828,13 @@
   </table>
   
   
-  <a id="GrandmaGreen_Garden_GardenManager_PlantIsDry_" data-uid="GrandmaGreen.Garden.GardenManager.PlantIsDry*"></a>
-  <h4 id="GrandmaGreen_Garden_GardenManager_PlantIsDry_System_Int32_Vector3Int_" data-uid="GrandmaGreen.Garden.GardenManager.PlantIsDry(System.Int32,Vector3Int)">PlantIsDry(Int32, Vector3Int)</h4>
+  <a id="GrandmaGreen_Garden_GardenManager_PlantIsFullyGrown_" data-uid="GrandmaGreen.Garden.GardenManager.PlantIsFullyGrown*"></a>
+  <h4 id="GrandmaGreen_Garden_GardenManager_PlantIsFullyGrown_System_Int32_Vector3Int_" data-uid="GrandmaGreen.Garden.GardenManager.PlantIsFullyGrown(System.Int32,Vector3Int)">PlantIsFullyGrown(Int32, Vector3Int)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool PlantIsDry(int areaIndex, Vector3Int cell)</code></pre>
+    <pre><code class="lang-csharp hljs">public bool PlantIsFullyGrown(int areaIndex, Vector3Int cell)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -859,13 +875,60 @@
   </table>
   
   
-  <a id="GrandmaGreen_Garden_GardenManager_PlantIsFullyGrown_" data-uid="GrandmaGreen.Garden.GardenManager.PlantIsFullyGrown*"></a>
-  <h4 id="GrandmaGreen_Garden_GardenManager_PlantIsFullyGrown_System_Int32_Vector3Int_" data-uid="GrandmaGreen.Garden.GardenManager.PlantIsFullyGrown(System.Int32,Vector3Int)">PlantIsFullyGrown(Int32, Vector3Int)</h4>
+  <a id="GrandmaGreen_Garden_GardenManager_PlantIsWilted_" data-uid="GrandmaGreen.Garden.GardenManager.PlantIsWilted*"></a>
+  <h4 id="GrandmaGreen_Garden_GardenManager_PlantIsWilted_System_Int32_Vector3Int_" data-uid="GrandmaGreen.Garden.GardenManager.PlantIsWilted(System.Int32,Vector3Int)">PlantIsWilted(Int32, Vector3Int)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool PlantIsFullyGrown(int areaIndex, Vector3Int cell)</code></pre>
+    <pre><code class="lang-csharp hljs">public bool PlantIsWilted(int areaIndex, Vector3Int cell)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">areaIndex</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Vector3Int</span></td>
+        <td><span class="parametername">cell</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="GrandmaGreen_Garden_GardenManager_PlantNeedsWater_" data-uid="GrandmaGreen.Garden.GardenManager.PlantNeedsWater*"></a>
+  <h4 id="GrandmaGreen_Garden_GardenManager_PlantNeedsWater_System_Int32_Vector3Int_" data-uid="GrandmaGreen.Garden.GardenManager.PlantNeedsWater(System.Int32,Vector3Int)">PlantNeedsWater(Int32, Vector3Int)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool PlantNeedsWater(int areaIndex, Vector3Int cell)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1065,7 +1128,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool UpdateGrowthStage(int areaIndex, Vector3Int cell)</code></pre>
+    <pre><code class="lang-csharp hljs">public void UpdateGrowthStage(int areaIndex, Vector3Int cell)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1085,21 +1148,6 @@
       <tr>
         <td><span class="xref">Vector3Int</span></td>
         <td><span class="parametername">cell</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td></td>
       </tr>
     </tbody>

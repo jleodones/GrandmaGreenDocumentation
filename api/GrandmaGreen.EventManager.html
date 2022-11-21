@@ -231,6 +231,33 @@
   </table>
   
   
+  <a id="GrandmaGreen_EventManager_HandleEVENT_INVENTORY_ADD_DECOR_" data-uid="GrandmaGreen.EventManager.HandleEVENT_INVENTORY_ADD_DECOR*"></a>
+  <h4 id="GrandmaGreen_EventManager_HandleEVENT_INVENTORY_ADD_DECOR_System_UInt16_" data-uid="GrandmaGreen.EventManager.HandleEVENT_INVENTORY_ADD_DECOR(System.UInt16)">HandleEVENT_INVENTORY_ADD_DECOR(UInt16)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void HandleEVENT_INVENTORY_ADD_DECOR(ushort id)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">UInt16</a></td>
+        <td><span class="parametername">id</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="GrandmaGreen_EventManager_HandleEVENT_INVENTORY_ADD_MONEY_" data-uid="GrandmaGreen.EventManager.HandleEVENT_INVENTORY_ADD_MONEY*"></a>
   <h4 id="GrandmaGreen_EventManager_HandleEVENT_INVENTORY_ADD_MONEY_System_Int32_" data-uid="GrandmaGreen.EventManager.HandleEVENT_INVENTORY_ADD_MONEY(System.Int32)">HandleEVENT_INVENTORY_ADD_MONEY(Int32)</h4>
   <div class="markdown level1 summary"></div>
@@ -258,13 +285,13 @@
   </table>
   
   
-  <a id="GrandmaGreen_EventManager_HandleEVENT_INVENTORY_ADD_PLANT_OR_SEED_" data-uid="GrandmaGreen.EventManager.HandleEVENT_INVENTORY_ADD_PLANT_OR_SEED*"></a>
-  <h4 id="GrandmaGreen_EventManager_HandleEVENT_INVENTORY_ADD_PLANT_OR_SEED_IInventoryItem_Genotype_" data-uid="GrandmaGreen.EventManager.HandleEVENT_INVENTORY_ADD_PLANT_OR_SEED(IInventoryItem,Genotype)">HandleEVENT_INVENTORY_ADD_PLANT_OR_SEED(IInventoryItem, Genotype)</h4>
+  <a id="GrandmaGreen_EventManager_HandleEVENT_INVENTORY_ADD_PLANT_" data-uid="GrandmaGreen.EventManager.HandleEVENT_INVENTORY_ADD_PLANT*"></a>
+  <h4 id="GrandmaGreen_EventManager_HandleEVENT_INVENTORY_ADD_PLANT_System_UInt16_Genotype_" data-uid="GrandmaGreen.EventManager.HandleEVENT_INVENTORY_ADD_PLANT(System.UInt16,Genotype)">HandleEVENT_INVENTORY_ADD_PLANT(UInt16, Genotype)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void HandleEVENT_INVENTORY_ADD_PLANT_OR_SEED(IInventoryItem item, Genotype genotype)</code></pre>
+    <pre><code class="lang-csharp hljs">public void HandleEVENT_INVENTORY_ADD_PLANT(ushort id, Genotype genotype)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -277,8 +304,8 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IInventoryItem</span></td>
-        <td><span class="parametername">item</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">UInt16</a></td>
+        <td><span class="parametername">id</span></td>
         <td></td>
       </tr>
       <tr>
@@ -290,13 +317,13 @@
   </table>
   
   
-  <a id="GrandmaGreen_EventManager_HandleEVENT_INVENTORY_ADD_TOOL_OR_DECOR_" data-uid="GrandmaGreen.EventManager.HandleEVENT_INVENTORY_ADD_TOOL_OR_DECOR*"></a>
-  <h4 id="GrandmaGreen_EventManager_HandleEVENT_INVENTORY_ADD_TOOL_OR_DECOR_IInventoryItem_System_Int32_" data-uid="GrandmaGreen.EventManager.HandleEVENT_INVENTORY_ADD_TOOL_OR_DECOR(IInventoryItem,System.Int32)">HandleEVENT_INVENTORY_ADD_TOOL_OR_DECOR(IInventoryItem, Int32)</h4>
+  <a id="GrandmaGreen_EventManager_HandleEVENT_INVENTORY_ADD_SEED_" data-uid="GrandmaGreen.EventManager.HandleEVENT_INVENTORY_ADD_SEED*"></a>
+  <h4 id="GrandmaGreen_EventManager_HandleEVENT_INVENTORY_ADD_SEED_System_UInt16_Genotype_" data-uid="GrandmaGreen.EventManager.HandleEVENT_INVENTORY_ADD_SEED(System.UInt16,Genotype)">HandleEVENT_INVENTORY_ADD_SEED(UInt16, Genotype)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void HandleEVENT_INVENTORY_ADD_TOOL_OR_DECOR(IInventoryItem item, int num)</code></pre>
+    <pre><code class="lang-csharp hljs">public void HandleEVENT_INVENTORY_ADD_SEED(ushort id, Genotype genotype)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -309,13 +336,40 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IInventoryItem</span></td>
-        <td><span class="parametername">item</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">UInt16</a></td>
+        <td><span class="parametername">id</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
-        <td><span class="parametername">num</span></td>
+        <td><span class="xref">Genotype</span></td>
+        <td><span class="parametername">genotype</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="GrandmaGreen_EventManager_HandleEVENT_INVENTORY_ADD_TOOL_" data-uid="GrandmaGreen.EventManager.HandleEVENT_INVENTORY_ADD_TOOL*"></a>
+  <h4 id="GrandmaGreen_EventManager_HandleEVENT_INVENTORY_ADD_TOOL_System_UInt16_" data-uid="GrandmaGreen.EventManager.HandleEVENT_INVENTORY_ADD_TOOL(System.UInt16)">HandleEVENT_INVENTORY_ADD_TOOL(UInt16)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void HandleEVENT_INVENTORY_ADD_TOOL(ushort id)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">UInt16</a></td>
+        <td><span class="parametername">id</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -357,6 +411,33 @@
   </div>
   
   
+  <a id="GrandmaGreen_EventManager_HandleEVENT_INVENTORY_REMOVE_DECOR_" data-uid="GrandmaGreen.EventManager.HandleEVENT_INVENTORY_REMOVE_DECOR*"></a>
+  <h4 id="GrandmaGreen_EventManager_HandleEVENT_INVENTORY_REMOVE_DECOR_System_UInt16_" data-uid="GrandmaGreen.EventManager.HandleEVENT_INVENTORY_REMOVE_DECOR(System.UInt16)">HandleEVENT_INVENTORY_REMOVE_DECOR(UInt16)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void HandleEVENT_INVENTORY_REMOVE_DECOR(ushort id)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">UInt16</a></td>
+        <td><span class="parametername">id</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="GrandmaGreen_EventManager_HandleEVENT_INVENTORY_REMOVE_MONEY_" data-uid="GrandmaGreen.EventManager.HandleEVENT_INVENTORY_REMOVE_MONEY*"></a>
   <h4 id="GrandmaGreen_EventManager_HandleEVENT_INVENTORY_REMOVE_MONEY_System_Int32_" data-uid="GrandmaGreen.EventManager.HandleEVENT_INVENTORY_REMOVE_MONEY(System.Int32)">HandleEVENT_INVENTORY_REMOVE_MONEY(Int32)</h4>
   <div class="markdown level1 summary"></div>
@@ -384,13 +465,13 @@
   </table>
   
   
-  <a id="GrandmaGreen_EventManager_HandleEVENT_INVENTORY_REMOVE_PLANT_OR_SEED_" data-uid="GrandmaGreen.EventManager.HandleEVENT_INVENTORY_REMOVE_PLANT_OR_SEED*"></a>
-  <h4 id="GrandmaGreen_EventManager_HandleEVENT_INVENTORY_REMOVE_PLANT_OR_SEED_IInventoryItem_Genotype_" data-uid="GrandmaGreen.EventManager.HandleEVENT_INVENTORY_REMOVE_PLANT_OR_SEED(IInventoryItem,Genotype)">HandleEVENT_INVENTORY_REMOVE_PLANT_OR_SEED(IInventoryItem, Genotype)</h4>
+  <a id="GrandmaGreen_EventManager_HandleEVENT_INVENTORY_REMOVE_PLANT_" data-uid="GrandmaGreen.EventManager.HandleEVENT_INVENTORY_REMOVE_PLANT*"></a>
+  <h4 id="GrandmaGreen_EventManager_HandleEVENT_INVENTORY_REMOVE_PLANT_System_UInt16_Genotype_" data-uid="GrandmaGreen.EventManager.HandleEVENT_INVENTORY_REMOVE_PLANT(System.UInt16,Genotype)">HandleEVENT_INVENTORY_REMOVE_PLANT(UInt16, Genotype)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void HandleEVENT_INVENTORY_REMOVE_PLANT_OR_SEED(IInventoryItem item, Genotype genotype)</code></pre>
+    <pre><code class="lang-csharp hljs">public void HandleEVENT_INVENTORY_REMOVE_PLANT(ushort id, Genotype genotype)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -403,8 +484,8 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IInventoryItem</span></td>
-        <td><span class="parametername">item</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">UInt16</a></td>
+        <td><span class="parametername">id</span></td>
         <td></td>
       </tr>
       <tr>
@@ -416,13 +497,13 @@
   </table>
   
   
-  <a id="GrandmaGreen_EventManager_HandleEVENT_INVENTORY_REMOVE_TOOL_OR_DECOR_" data-uid="GrandmaGreen.EventManager.HandleEVENT_INVENTORY_REMOVE_TOOL_OR_DECOR*"></a>
-  <h4 id="GrandmaGreen_EventManager_HandleEVENT_INVENTORY_REMOVE_TOOL_OR_DECOR_IInventoryItem_System_Int32_" data-uid="GrandmaGreen.EventManager.HandleEVENT_INVENTORY_REMOVE_TOOL_OR_DECOR(IInventoryItem,System.Int32)">HandleEVENT_INVENTORY_REMOVE_TOOL_OR_DECOR(IInventoryItem, Int32)</h4>
+  <a id="GrandmaGreen_EventManager_HandleEVENT_INVENTORY_REMOVE_SEED_" data-uid="GrandmaGreen.EventManager.HandleEVENT_INVENTORY_REMOVE_SEED*"></a>
+  <h4 id="GrandmaGreen_EventManager_HandleEVENT_INVENTORY_REMOVE_SEED_System_UInt16_Genotype_" data-uid="GrandmaGreen.EventManager.HandleEVENT_INVENTORY_REMOVE_SEED(System.UInt16,Genotype)">HandleEVENT_INVENTORY_REMOVE_SEED(UInt16, Genotype)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void HandleEVENT_INVENTORY_REMOVE_TOOL_OR_DECOR(IInventoryItem item, int num)</code></pre>
+    <pre><code class="lang-csharp hljs">public void HandleEVENT_INVENTORY_REMOVE_SEED(ushort id, Genotype genotype)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -435,13 +516,40 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IInventoryItem</span></td>
-        <td><span class="parametername">item</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">UInt16</a></td>
+        <td><span class="parametername">id</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
-        <td><span class="parametername">num</span></td>
+        <td><span class="xref">Genotype</span></td>
+        <td><span class="parametername">genotype</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="GrandmaGreen_EventManager_HandleEVENT_INVENTORY_REMOVE_TOOL_" data-uid="GrandmaGreen.EventManager.HandleEVENT_INVENTORY_REMOVE_TOOL*"></a>
+  <h4 id="GrandmaGreen_EventManager_HandleEVENT_INVENTORY_REMOVE_TOOL_System_UInt16_" data-uid="GrandmaGreen.EventManager.HandleEVENT_INVENTORY_REMOVE_TOOL(System.UInt16)">HandleEVENT_INVENTORY_REMOVE_TOOL(UInt16)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void HandleEVENT_INVENTORY_REMOVE_TOOL(ushort id)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">UInt16</a></td>
+        <td><span class="parametername">id</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -632,6 +740,30 @@
   </table>
   
   
+  <h4 id="GrandmaGreen_EventManager_EVENT_INVENTORY_ADD_DECOR" data-uid="GrandmaGreen.EventManager.EVENT_INVENTORY_ADD_DECOR">EVENT_INVENTORY_ADD_DECOR</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Action&lt;ushort&gt; EVENT_INVENTORY_ADD_DECOR</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Action</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">UInt16</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <h4 id="GrandmaGreen_EventManager_EVENT_INVENTORY_ADD_MONEY" data-uid="GrandmaGreen.EventManager.EVENT_INVENTORY_ADD_MONEY">EVENT_INVENTORY_ADD_MONEY</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
@@ -656,12 +788,12 @@
   </table>
   
   
-  <h4 id="GrandmaGreen_EventManager_EVENT_INVENTORY_ADD_PLANT_OR_SEED" data-uid="GrandmaGreen.EventManager.EVENT_INVENTORY_ADD_PLANT_OR_SEED">EVENT_INVENTORY_ADD_PLANT_OR_SEED</h4>
+  <h4 id="GrandmaGreen_EventManager_EVENT_INVENTORY_ADD_PLANT" data-uid="GrandmaGreen.EventManager.EVENT_INVENTORY_ADD_PLANT">EVENT_INVENTORY_ADD_PLANT</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public event Action&lt;IInventoryItem, Genotype&gt; EVENT_INVENTORY_ADD_PLANT_OR_SEED</code></pre>
+    <pre><code class="lang-csharp hljs">public event Action&lt;ushort, Genotype&gt; EVENT_INVENTORY_ADD_PLANT</code></pre>
   </div>
   <h5 class="eventType">Event Type</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -673,19 +805,19 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Action</span>&lt;<span class="xref">IInventoryItem</span>, <span class="xref">Genotype</span>&gt;</td>
+        <td><span class="xref">Action</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">UInt16</a>, <span class="xref">Genotype</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <h4 id="GrandmaGreen_EventManager_EVENT_INVENTORY_ADD_TOOL_OR_DECOR" data-uid="GrandmaGreen.EventManager.EVENT_INVENTORY_ADD_TOOL_OR_DECOR">EVENT_INVENTORY_ADD_TOOL_OR_DECOR</h4>
+  <h4 id="GrandmaGreen_EventManager_EVENT_INVENTORY_ADD_SEED" data-uid="GrandmaGreen.EventManager.EVENT_INVENTORY_ADD_SEED">EVENT_INVENTORY_ADD_SEED</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public event Action&lt;IInventoryItem, int&gt; EVENT_INVENTORY_ADD_TOOL_OR_DECOR</code></pre>
+    <pre><code class="lang-csharp hljs">public event Action&lt;ushort, Genotype&gt; EVENT_INVENTORY_ADD_SEED</code></pre>
   </div>
   <h5 class="eventType">Event Type</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -697,7 +829,31 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Action</span>&lt;<span class="xref">IInventoryItem</span>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><span class="xref">Action</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">UInt16</a>, <span class="xref">Genotype</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="GrandmaGreen_EventManager_EVENT_INVENTORY_ADD_TOOL" data-uid="GrandmaGreen.EventManager.EVENT_INVENTORY_ADD_TOOL">EVENT_INVENTORY_ADD_TOOL</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Action&lt;ushort&gt; EVENT_INVENTORY_ADD_TOOL</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Action</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">UInt16</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -752,6 +908,30 @@
   </table>
   
   
+  <h4 id="GrandmaGreen_EventManager_EVENT_INVENTORY_REMOVE_DECOR" data-uid="GrandmaGreen.EventManager.EVENT_INVENTORY_REMOVE_DECOR">EVENT_INVENTORY_REMOVE_DECOR</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Action&lt;ushort&gt; EVENT_INVENTORY_REMOVE_DECOR</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Action</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">UInt16</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <h4 id="GrandmaGreen_EventManager_EVENT_INVENTORY_REMOVE_MONEY" data-uid="GrandmaGreen.EventManager.EVENT_INVENTORY_REMOVE_MONEY">EVENT_INVENTORY_REMOVE_MONEY</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
@@ -776,12 +956,12 @@
   </table>
   
   
-  <h4 id="GrandmaGreen_EventManager_EVENT_INVENTORY_REMOVE_PLANT_OR_SEED" data-uid="GrandmaGreen.EventManager.EVENT_INVENTORY_REMOVE_PLANT_OR_SEED">EVENT_INVENTORY_REMOVE_PLANT_OR_SEED</h4>
+  <h4 id="GrandmaGreen_EventManager_EVENT_INVENTORY_REMOVE_PLANT" data-uid="GrandmaGreen.EventManager.EVENT_INVENTORY_REMOVE_PLANT">EVENT_INVENTORY_REMOVE_PLANT</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public event Action&lt;IInventoryItem, Genotype&gt; EVENT_INVENTORY_REMOVE_PLANT_OR_SEED</code></pre>
+    <pre><code class="lang-csharp hljs">public event Action&lt;ushort, Genotype&gt; EVENT_INVENTORY_REMOVE_PLANT</code></pre>
   </div>
   <h5 class="eventType">Event Type</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -793,19 +973,19 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Action</span>&lt;<span class="xref">IInventoryItem</span>, <span class="xref">Genotype</span>&gt;</td>
+        <td><span class="xref">Action</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">UInt16</a>, <span class="xref">Genotype</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <h4 id="GrandmaGreen_EventManager_EVENT_INVENTORY_REMOVE_TOOL_OR_DECOR" data-uid="GrandmaGreen.EventManager.EVENT_INVENTORY_REMOVE_TOOL_OR_DECOR">EVENT_INVENTORY_REMOVE_TOOL_OR_DECOR</h4>
+  <h4 id="GrandmaGreen_EventManager_EVENT_INVENTORY_REMOVE_SEED" data-uid="GrandmaGreen.EventManager.EVENT_INVENTORY_REMOVE_SEED">EVENT_INVENTORY_REMOVE_SEED</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public event Action&lt;IInventoryItem, int&gt; EVENT_INVENTORY_REMOVE_TOOL_OR_DECOR</code></pre>
+    <pre><code class="lang-csharp hljs">public event Action&lt;ushort, Genotype&gt; EVENT_INVENTORY_REMOVE_SEED</code></pre>
   </div>
   <h5 class="eventType">Event Type</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -817,7 +997,31 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Action</span>&lt;<span class="xref">IInventoryItem</span>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><span class="xref">Action</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">UInt16</a>, <span class="xref">Genotype</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="GrandmaGreen_EventManager_EVENT_INVENTORY_REMOVE_TOOL" data-uid="GrandmaGreen.EventManager.EVENT_INVENTORY_REMOVE_TOOL">EVENT_INVENTORY_REMOVE_TOOL</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Action&lt;ushort&gt; EVENT_INVENTORY_REMOVE_TOOL</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Action</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">UInt16</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
