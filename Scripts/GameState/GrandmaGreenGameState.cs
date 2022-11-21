@@ -22,6 +22,7 @@ namespace GrandmaGreen
         [SerializeField] TimeLayerClock timeClock;
         [SerializeField] StorylineDataStore storylineData;
         [SerializeField] SaveSystem.SaveManager saveManager;
+        [SerializeField] UI.UIDisplayTracker UIdisplayRules;
         [SerializeField] SCENES currentScene;
         [ReadOnly] int activeAreaIndex;
         [ReadOnly] bool isPaused;
@@ -67,6 +68,7 @@ namespace GrandmaGreen
 
         void InitalizeState()
         {
+            UIdisplayRules.Initalize();
             collectionsData.LoadCollections();
             areaServicer.StartServices();
             storylineData.Initalize();
@@ -74,6 +76,7 @@ namespace GrandmaGreen
 
         void ReleaseState()
         {
+            UIdisplayRules.Release();
             collectionsData.UnloadCollections();
             timeClock.SaveCurrentDateTime();
             storylineData.Release();
@@ -83,6 +86,7 @@ namespace GrandmaGreen
         void Start()
         {
             timeClock.SetClock();
+            
         }
 
         void Update()
@@ -96,7 +100,7 @@ namespace GrandmaGreen
         }
 
 
-        void SetCurrentScene(SCENES scene) 
+        void SetCurrentScene(SCENES scene)
         {
             LoadGardenScreen(-1);
             currentScene = scene;

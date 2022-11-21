@@ -54,6 +54,15 @@ namespace GrandmaGreen.SaveSystem
         public List<ObjectSaver> toBeSaved = new List<ObjectSaver>();
 
         /// <summary>
+        /// Second initializer, used mainly to support data deletion and usage of the controller that involves
+        /// no data updating.
+        /// </summary>
+        public SaveController()
+        {
+            m_saveLoaders.Add(new JSONSaveLoader(this));
+        }
+
+        /// <summary>
         /// Initializes with a list of object savers, which sets the internal list of object savers.
         /// This list changes itself as the scenes load.
         /// </summary>

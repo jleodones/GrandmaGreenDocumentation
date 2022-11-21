@@ -54,8 +54,8 @@ namespace GrandmaGreen.UI.Collections
         private VisualElement threshold; 
         private Button draggable;
         private Vector3 draggableStartPos;
-        private IInventoryItem iventoryItemId;
-
+        private IInventoryItem m_inventoryItemId;
+        private CollectionsSO m_collections;
 
 
         public event System.Action<ushort> onItemCreated;
@@ -67,7 +67,7 @@ namespace GrandmaGreen.UI.Collections
         /// <param name="inventoryData"></param>
         /// <param name="_listEntryTemplate"></param>
         public TabbedInventoryController(VisualElement _root, PlayerToolData _playerToolData,
-            ObjectSaver inventoryData, VisualTreeAsset _listEntryTemplate, ASoundContainer[] soundContainers)
+            ObjectSaver inventoryData, VisualTreeAsset _listEntryTemplate, ASoundContainer[] soundContainers, CollectionsSO cso)
         {
             // Set member variables.
             root = _root;
@@ -75,6 +75,7 @@ namespace GrandmaGreen.UI.Collections
             listEntryTemplate = _listEntryTemplate;
             m_inventoryData = inventoryData;
             m_soundContainers = soundContainers;
+            m_collections = cso;
 
             // Instantiate the inventory items.
             // First, get all content jars.
@@ -248,14 +249,28 @@ namespace GrandmaGreen.UI.Collections
             // Set up bind function for a specific list entry.
             jar.bindItem = (item, index) =>
             {
+                // Get the item image.
+                Sprite sprite;
+                
                 // Instantiate a controller for the data
                 if (typeof(T) == new Seed().GetType())
                 {
-                    (item.userData as TabbedInventorySeedItemController).SetInventoryData((IInventoryItem)(jar.itemsSource[index]));
+                    Seed s = (Seed)(jar.itemsSource[index]);
+                    sprite = m_collections.GetSprite((PlantId) s.itemID, s.seedGenotype);
+                    
+                    (item.userData as TabbedInventorySeedItemController).SetInventoryData(s, sprite);
+                }
+                else if (typeof(T) == new Plant().GetType())
+                {
+                    Plant p = (Plant)(jar.itemsSource[index]);
+                    sprite = m_collections.GetSprite((PlantId)p.itemID, p.genotypes[0], 2);
+                    (item.userData as TabbedInventoryItemController).SetInventoryData((IInventoryItem)(jar.itemsSource[index]), sprite);
                 }
                 else
                 {
-                    (item.userData as TabbedInventoryItemController).SetInventoryData((IInventoryItem)(jar.itemsSource[index]));
+                    IInventoryItem i = (IInventoryItem)(jar.itemsSource[index]);
+                    sprite = m_collections.GetSprite(i.itemID);
+                    (item.userData as TabbedInventoryItemController).SetInventoryData((IInventoryItem)(jar.itemsSource[index]), sprite);
                 }
             };
 
@@ -313,7 +328,7 @@ namespace GrandmaGreen.UI.Collections
         
         public void OnItemCreated(TabbedInventoryItemController itemController)
         {
-            iventoryItemId = itemController.m_inventoryItemData;
+            m_inventoryItemId = itemController.m_inventoryItemData;
             itemController.m_button.RegisterCallback<PointerDownEvent>(PointerDownHandler, TrickleDown.TrickleDown);
             itemController.m_button.RegisterCallback<PointerMoveEvent>(PointerMoveHandler, TrickleDown.TrickleDown);
             itemController.m_button.RegisterCallback<PointerUpEvent>(PointerUpHandler, TrickleDown.TrickleDown);
@@ -348,7 +363,7 @@ namespace GrandmaGreen.UI.Collections
                     draggable.transform.position = draggableStartPos;
                     CloseInventory(new ClickEvent());
                     // UI to GameObject here
-                    EventManager.instance.HandleEVENT_CUSTOMIZATION_START(iventoryItemId);
+                    EventManager.instance.HandleEVENT_CUSTOMIZATION_START(m_inventoryItemId);
                     handled = true;
                 }
             }

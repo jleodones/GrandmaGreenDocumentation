@@ -15,7 +15,8 @@ namespace GrandmaGreen.Garden
         public float timePlanted;
         public Vector3Int cell;
 
-        // Counters and State Manager for Watering Tool Use
+        // waterStage acts like a bool (0 for unwatered, 1 for watered)
+        // waterTimer keeps track of how long the plant has been "alive"
         public int waterStage;
         public int waterTimer;
 
@@ -49,7 +50,10 @@ namespace GrandmaGreen.Garden
         GardenSaver[] plantLookup;
 
         [SerializeField]
-        public Timer timer;
+        public Timer[] timers;
+
+        public int WiltTime;
+        public int DeathTime;
 
         public void Initialize()
         {
@@ -80,10 +84,9 @@ namespace GrandmaGreen.Garden
                 timePlanted = Time.time,
                 cell = cell,
 
-                // Adding for watering. I think when we create plants it makes the most sense
-                // to set the watering stage and timer here.
-                waterStage = 0, // # of times it has been watered
-                waterTimer = 0,
+                // Adding for watering.
+                waterStage = 0, // Adding a plant makes it unwatered
+                waterTimer = 0, // Start timer at 0 and tick up
                 isFertilized = false
             };
         }
@@ -137,80 +140,70 @@ namespace GrandmaGreen.Garden
             return new Genotype();
         }
 
-        public void IncrementGrowthStage(int areaIndex, Vector3Int cell)
-        {
-            if (!IsEmpty(areaIndex, cell))
-            {
-                PlantState plant = GetPlant(areaIndex, cell);
-                PlantProperties p = collection.GetPlant(plant.type);
-                plantLookup[areaIndex][cell] = new PlantState
-                {
-                    growthStage = plant.growthStage < p.growthStages - 1 ?
-                        plant.growthStage + 1 : p.growthStages - 1,
-                    type = plant.type,
-                    timePlanted = plant.timePlanted,
-                    cell = plant.cell
-                };
-            }
-        }
-
-        public bool UpdateGrowthStage(int areaIndex, Vector3Int cell)
+        public void UpdateGrowthStage(int areaIndex, Vector3Int cell)
         {
             PlantState plant = GetPlant(areaIndex, cell);
             int max = collection.GetPlant(plant.type).growthStages;
 
-            bool canGrow = false;
             if (!IsEmpty(areaIndex, cell) && plant.growthStage < max - 1)
             {
                 PlantState updatedPlant = plant;
                 updatedPlant.growthStage = plant.growthStage + 1;
+                
+                //Reset the waterStage and waterTimers on growth
                 updatedPlant.waterStage = 0;
+                updatedPlant.waterTimer = 0;
 
                 plantLookup[areaIndex][cell] = updatedPlant;
-                canGrow = true;
             }
-
-            return canGrow;
         }
 
 
-        public void DecrementWaterTimer(int areaIndex, Vector3Int cell, int value)
+        public void IncrementWaterTimer(int areaIndex, Vector3Int cell, int value)
         {
             if (!IsEmpty(areaIndex, cell))
             {
                 PlantState plant = GetPlant(areaIndex, cell);
-                plant.waterTimer += value;
-
-                plantLookup[areaIndex][cell] = plant;
+                plant.waterTimer += value;         
+                plantLookup[areaIndex][cell] = plant;              
             }
         }
 
         public bool UpdateWaterStage(int areaIndex, Vector3Int cell)
         {
-            bool plantGrowth = false;
+            bool waterStageUpdated = false;
 
             if (!IsEmpty(areaIndex, cell))
             {
                 PlantState plant = GetPlant(areaIndex, cell);
-                int waterRequirements = collection.GetPlant(plant.type).waterPerStage;
-                int waterTimerReset = collection.GetPlant(plant.type).growthTime;
+                PlantState updatedPlant = plant;
 
-                if (plant.waterStage < waterRequirements && (plant.waterTimer <= 0 && plant.waterTimer >= (-2 * waterTimerReset)))
+                if (!PlantIsWilted(areaIndex, cell))
                 {
-                    PlantState updatedPlant = plant;
-                    updatedPlant.waterStage = plant.waterStage + 1;
-                    updatedPlant.waterTimer = waterTimerReset;
-
-                    if (updatedPlant.waterStage == waterRequirements)
+                    if(PlantIsFullyGrown(areaIndex, cell))
                     {
-                        plantGrowth = true;
+                        updatedPlant.waterTimer = 0;
                     }
+                    else
+                    {
+                        updatedPlant.waterStage = 1;
 
-                    plantLookup[areaIndex][cell] = updatedPlant;
+                        if (updatedPlant.waterTimer >= collection.GetPlant(plant.type).growthTime)
+                        {
+                            waterStageUpdated = true;
+                        }
+                    }
                 }
+                else
+                {
+                    updatedPlant.waterTimer = 0;
+                }
+
+                plantLookup[areaIndex][cell] = updatedPlant;
+
             }
 
-            return plantGrowth;
+            return waterStageUpdated;
         }
 
         public bool SetFertilization(int areaIndex, Vector3Int cell)
@@ -240,14 +233,35 @@ namespace GrandmaGreen.Garden
             return plant.growthStage == properties.growthStages - 1;
         }
 
-        public bool PlantIsDry(int areaIndex, Vector3Int cell)
+        public bool PlantNeedsWater(int areaIndex, Vector3Int cell)
         {
             if (!IsEmpty(areaIndex, cell))
             {
                 PlantState plant = GetPlant(areaIndex, cell);
                 PlantProperties properties = collection.GetPlant(plant.type);
-                return plant.waterTimer <= -1 * properties.growthTime
-                    && plant.waterTimer > -2 * properties.growthTime;
+                return plant.waterTimer >= properties.growthTime
+                    && plant.waterTimer < WiltTime; //240;
+            }
+            else
+                return false;
+        }
+
+        public bool PlantIsWilted(int areaIndex, Vector3Int cell)
+        {
+            if (!IsEmpty(areaIndex, cell))
+            {
+                PlantState plant = GetPlant(areaIndex, cell);
+
+                if(!PlantIsFullyGrown(areaIndex, cell))
+                {
+                    return plant.waterTimer >= WiltTime //240
+                        && plant.waterTimer < DeathTime; //336;
+                }
+                else
+                {
+                    return plant.waterTimer >= WiltTime;
+                }
+
             }
             else
                 return false;
@@ -258,8 +272,10 @@ namespace GrandmaGreen.Garden
             if (!IsEmpty(areaIndex, cell))
             {
                 PlantState plant = GetPlant(areaIndex, cell);
-                PlantProperties properties = collection.GetPlant(plant.type);
-                return plant.waterTimer <= -2 * properties.growthTime;
+
+                return plant.waterTimer >= DeathTime
+                    && !PlantIsFullyGrown(areaIndex, cell); //336;
+
             }
             else
                 return false;
@@ -268,10 +284,9 @@ namespace GrandmaGreen.Garden
 
         public bool PlantIsBreedable(int areaIndex, Vector3Int cell)
         {
-            if (!IsEmpty(areaIndex, cell))
+            if (!IsEmpty(areaIndex, cell) && PlantIsFullyGrown(areaIndex, cell))
             {
-                if (PlantIsFullyGrown(areaIndex, cell)) return true;
-                else return !(PlantIsDry(areaIndex, cell) || PlantIsDead(areaIndex, cell));
+                return !PlantIsWilted(areaIndex, cell);
             }
             else
                 return false;

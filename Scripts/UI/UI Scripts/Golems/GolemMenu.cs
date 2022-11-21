@@ -20,10 +20,15 @@ namespace GrandmaGreen.UI.Golems
         private bool m_isGolemActive = false;
         
         private bool m_isMenuOpen = false;
+        private VisualElement root;
+        public Transform TransformToFollow;
+
+
         void OnEnable()
         {
             // Register dialogue button callback.
             golemMenu.rootVisualElement.Q<Button>("dialogue").RegisterCallback<ClickEvent>(OnDialogueTrigger);
+            root = golemMenu.rootVisualElement.Q("rootElement");
         }
 
         public void HandleGolemInteract()
@@ -44,25 +49,25 @@ namespace GrandmaGreen.UI.Golems
         {
             // Close the HUD.
             EventManager.instance.HandleEVENT_CLOSE_HUD();
-            
+
             // Set menu location.
-            SetLocation(GetComponentInParent<GolemController>().transform.position);
+            SetLocation(TransformToFollow.position);
             GetComponentInParent<GolemController>().onEntityMove += SetLocation;
             
             // Display.
-            golemMenu.rootVisualElement.style.display = DisplayStyle.Flex;
+            root.style.display = DisplayStyle.Flex;
         }
 
         public void GolemMenuClose()
         {
             EventManager.instance.HandleEVENT_OPEN_HUD();
-            golemMenu.rootVisualElement.style.display = DisplayStyle.None;
+            root.style.display = DisplayStyle.None;
         }
 
         private void OnDialogueTrigger(ClickEvent clickEvent)
         {
             // Disable menu.
-            golemMenu.rootVisualElement.style.display = DisplayStyle.None;
+            root.style.display = DisplayStyle.None;
 
             // Find the golem's dialogue script.
             Dialogueable dialogueScript = GetComponentInChildren<Dialogueable>();
@@ -74,8 +79,10 @@ namespace GrandmaGreen.UI.Golems
         
         public void SetLocation(Vector3 worldPosition)
         {
-            golemMenu.rootVisualElement.transform.position =
-                RuntimePanelUtils.CameraTransformWorldToPanel(golemMenu.rootVisualElement.panel, worldPosition, Camera.main);
+            Vector2 newPosition = RuntimePanelUtils.CameraTransformWorldToPanel(
+                root.panel, TransformToFollow.position, Camera.main);
+            root.transform.position = newPosition.WithNewX(newPosition.x -
+                root.layout.width / 2);
         }
     }
 }

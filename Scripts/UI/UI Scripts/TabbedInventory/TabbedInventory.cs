@@ -18,6 +18,9 @@ namespace GrandmaGreen.UI.Collections
 
         // Template for list items.
         public VisualTreeAsset listEntryTemplate;
+        
+        // Collections SO.
+        public CollectionsSO collectionsSO;
 
         // Inventory scriptable object with all inventory data.
         public ObjectSaver inventoryData;
@@ -34,7 +37,7 @@ namespace GrandmaGreen.UI.Collections
             VisualElement root = GetComponent<UIDocument>().rootVisualElement;
 
             // Sets up the controller for the whole inventory. The controller instantiates the inventory on its own upon creation.
-            m_controller = new(root, playerToolData, inventoryData, listEntryTemplate, soundContainers);
+            m_controller = new(root, playerToolData, inventoryData, listEntryTemplate, soundContainers, collectionsSO);
 
             // Hides the inventory without animation
             SetInventoryPosition();
@@ -45,12 +48,19 @@ namespace GrandmaGreen.UI.Collections
             
             // Subscribe to inventory related events.
             EventManager.instance.EVENT_INVENTORY_OPEN += OpenInventory;
-            EventManager.instance.EVENT_INVENTORY_ADD_TOOL_OR_DECOR += InventoryAddToolOrDecor;
-            EventManager.instance.EVENT_INVENTORY_REMOVE_TOOL_OR_DECOR += InventoryRemoveToolOrDecor;
-            
-            EventManager.instance.EVENT_INVENTORY_ADD_PLANT_OR_SEED += InventoryAddPlantOrSeed;
-            EventManager.instance.EVENT_INVENTORY_REMOVE_PLANT_OR_SEED += InventoryRemovePlantOrSeed;
-            
+
+            EventManager.instance.EVENT_INVENTORY_ADD_PLANT += InventoryAddPlant;
+            EventManager.instance.EVENT_INVENTORY_REMOVE_PLANT += InventoryRemovePlant;
+
+            EventManager.instance.EVENT_INVENTORY_ADD_SEED += InventoryAddSeed;
+            EventManager.instance.EVENT_INVENTORY_REMOVE_SEED += InventoryRemoveSeed;
+
+            EventManager.instance.EVENT_INVENTORY_ADD_TOOL += InventoryAddTool;
+            EventManager.instance.EVENT_INVENTORY_REMOVE_TOOL += InventoryRemoveTool;
+
+            EventManager.instance.EVENT_INVENTORY_ADD_DECOR += InventoryAddDecor;
+            EventManager.instance.EVENT_INVENTORY_REMOVE_DECOR += InventoryRemoveDecor;
+
             // Money.
             EventManager.instance.EVENT_INVENTORY_ADD_MONEY += (int money) =>
             {
@@ -63,15 +73,7 @@ namespace GrandmaGreen.UI.Collections
                 }
             };
 
-            EventManager.instance.EVENT_INVENTORY_REMOVE_MONEY += (int money) =>
-            {
-                int currentMoney = money;
-                if (inventoryData.RequestData<int>(0, ref currentMoney))
-                {
-                    currentMoney -= money;
-                    inventoryData.UpdateValue<int>(0, currentMoney);
-                }
-            };
+            EventManager.instance.EVENT_INVENTORY_REMOVE_MONEY += InventoryRemoveMoney;
 
             EventManager.instance.EVENT_INVENTORY_GET_MONEY += () =>
             {
@@ -91,171 +93,148 @@ namespace GrandmaGreen.UI.Collections
             m_controller.OpenInventory();
         }
 
-        private void InventoryAddToolOrDecor(IInventoryItem item, int num)
+        private void InventoryRemoveMoney(int money)
         {
-            switch (item.itemType)
+            int currentMoney = money;
+            if (inventoryData.RequestData<int>(0, ref currentMoney))
             {
-                case ItemType.Tool:
-                    // Update the inventory SO.
-                    Tool t = (Tool)item;
-
-                    if (inventoryData.RequestData<GrandmaGreen.Collections.Tool>(-1, ref t))
-                    {
-                        t.quantity += num;
-                    }
-
-                    inventoryData.UpdateValue<GrandmaGreen.Collections.Tool>(-1, t);
-
-                    // Update the UI system.
-                    m_controller.RebuildJar(t);
-                    break;
-                case ItemType.Decor:
-                    // Update the inventory SO.
-                    Decor d = (Decor)item;
-
-                    if (inventoryData.RequestData<Decor>(-1, ref d))
-                    {
-                        d.quantity += num;
-                    }
-
-                    inventoryData.UpdateValue<Decor>(-1, d);
-
-                    // Update the UI system.
-                    m_controller.RebuildJar(d);
-                    break;
-            }
-        }
-        
-        private void InventoryRemoveToolOrDecor(IInventoryItem item, int num)
-        {
-            switch (item.itemType)
-            {
-                case ItemType.Tool:
-                    // Update the inventory SO.
-                    GrandmaGreen.Collections.Tool t = (GrandmaGreen.Collections.Tool)item;
-
-                    // If it exists, remove the appropriate amount.
-                    if (inventoryData.RequestData<GrandmaGreen.Collections.Tool>(-1, ref t))
-                    {
-                        t.quantity -= num;
-                        if (t.quantity <= 0)
-                        {
-                            inventoryData.RemoveComponent<GrandmaGreen.Collections.Tool>(-1, t);
-                        }
-                        else
-                        {
-                            inventoryData.UpdateValue<GrandmaGreen.Collections.Tool>(-1, t);
-                        }
-
-                        // Then update the UI system.
-                        m_controller.RebuildJar(t);
-                    }
-
-                    break;
-                case ItemType.Decor:
-                    // Update the inventory SO.
-                    Decor d = (Decor)item;
-
-                    // If it exists, remove the appropriate amount.
-                    if (inventoryData.RequestData<Decor>(-1, ref d))
-                    {
-                        d.quantity -= num;
-                        if (d.quantity <= 0)
-                        {
-                            inventoryData.RemoveComponent<Decor>(-1, d);
-                        }
-                        else
-                        {
-                            inventoryData.UpdateValue<Decor>(-1, d);
-                        }
-
-                        // Then update the UI system.
-                        m_controller.RebuildJar(d);
-                    }
-                    break;
+                currentMoney -= money;
+                inventoryData.UpdateValue<int>(0, currentMoney);
             }
         }
 
-        private void InventoryAddPlantOrSeed(IInventoryItem item, Genotype genotype)
+        private void InventoryAddSeed(ushort id, Genotype genotype)
         {
-            switch (item.itemType)
+            Seed s = new Seed(id, collectionsSO.GetItem(id).name, genotype);
+
+            if (inventoryData.RequestData(-1, ref s))
             {
-                case ItemType.Seed :
-                    // Update the inventory SO.
-                    Seed s = (Seed) item;
+                s.quantity += 1;
+            }
+            inventoryData.UpdateValue(-1, s);
                     
-                    if (inventoryData.RequestData<Seed>(-1, ref s))
-                    {
-                        s.genotypes.Add(genotype);
-                    }
+            // Update the UI system.
+            m_controller.RebuildJar(s);
+        }
+
+        private void InventoryRemoveSeed(ushort id, Genotype genotype)
+        {
+            Seed s = new Seed(id, collectionsSO.GetItem(id).name, genotype);
+
+            if (inventoryData.RequestData(-1, ref s))
+            {
+                s.quantity -= 1;
+
+                if (s.quantity <= 0)
+                {
+                    inventoryData.RemoveComponent<Seed>(-1, s);
+                }
+                else
+                {
                     inventoryData.UpdateValue<Seed>(-1, s);
-                    
-                    // Update the UI system.
-                    m_controller.RebuildJar(s);
-                    break;
-                case ItemType.Plant :
-                    // Update the inventory SO.
-                    Plant p = (Plant)item;
+                }
+                        
+                // Then update the UI system.
+                m_controller.RebuildJar(s);
+            }
+        }
+
+        private void InventoryAddPlant(ushort id, Genotype genotype)
+        {
+            Plant p = new Plant(id, collectionsSO.GetItem(id).name, genotype);
+
+            if (inventoryData.RequestData(-1, ref p))
+            {
+                p.genotypes.Add(genotype);
+            }
+            else
+            {
+                inventoryData.UpdateValue(-1, p);
+            }
+            m_controller.RebuildJar(p);
+        }
+        
+        private void InventoryRemovePlant(ushort id, Genotype genotype)
+        {
+            Plant p = new Plant(id, collectionsSO.GetItem(id).name, genotype);
             
-                    if (inventoryData.RequestData<Plant>(-1, ref p))
-                    {
-                        p.genotypes.Add(genotype);
-                    }
+            if (inventoryData.RequestData<Plant>(-1, ref p))
+            {
+                p.genotypes.Remove(genotype);
+                        
+                if (p.quantity <= 0)
+                {
+                    inventoryData.RemoveComponent<Plant>(-1, p);
+                }
+                else
+                {
                     inventoryData.UpdateValue<Plant>(-1, p);
-                    
-                    // Update the UI system.
-                    m_controller.RebuildJar(p);
-                    break;
+                }
+                m_controller.RebuildJar(p);
+            }
+        }
+
+        private void InventoryAddTool(ushort id)
+        {
+            Tool t = new Tool(id, collectionsSO.GetItem(id).name);
+            
+            if (inventoryData.RequestData(-1, ref t))
+            {
+                t.quantity += 1;
+            }
+            inventoryData.UpdateValue(-1, t);
+            m_controller.RebuildJar(t);
+        }
+
+        private void InventoryRemoveTool(ushort id)
+        {
+            Tool t = new Tool(id, collectionsSO.GetItem(id).name);
+
+            if (inventoryData.RequestData(-1, ref t))
+            {
+                t.quantity -= 1;
+                
+                if (t.quantity <= 0)
+                {
+                    inventoryData.RemoveComponent(-1, t);
+                }
+                else
+                {
+                    inventoryData.UpdateValue(-1, t);
+                }
+                m_controller.RebuildJar(t);
             }
         }
         
-        private void InventoryRemovePlantOrSeed(IInventoryItem item, Genotype genotype)
+        private void InventoryAddDecor(ushort id)
         {
-            switch (item.itemType)
+            Decor d = new Decor(id, collectionsSO.GetItem(id).name);
+            
+            if (inventoryData.RequestData(-1, ref d))
             {
-                case ItemType.Seed :
-                    // Update the inventory SO.
-                    Seed s = (Seed)item;
+                d.quantity += 1;
+            }
+            inventoryData.UpdateValue(-1, d);
+            m_controller.RebuildJar(d);
+        }
 
-                    // If it exists, remove the appropriate amount.
-                    if (inventoryData.RequestData<Seed>(-1, ref s))
-                    {
-                        s.genotypes.Remove(genotype);
-                        
-                        if (s.quantity <= 0)
-                        {
-                            inventoryData.RemoveComponent<Seed>(-1, s);
-                        }
-                        else
-                        {
-                            inventoryData.UpdateValue<Seed>(-1, s);
-                        }
-                        
-                        // Then update the UI system.
-                        m_controller.RebuildJar(s);
-                    }
-                    break;
-                case ItemType.Plant :
-                    // Update the inventory SO.
-                    Plant p = (Plant)item;
+        private void InventoryRemoveDecor(ushort id)
+        {
+            Decor d = new Decor(id, collectionsSO.GetItem(id).name);
 
-                    // If it exists, remove the appropriate amount.
-                    if (inventoryData.RequestData<Plant>(-1, ref p))
-                    {
-                        p.genotypes.Remove(genotype);
-                        
-                        if (p.quantity <= 0)
-                        {
-                            inventoryData.RemoveComponent<Plant>(-1, p);
-                        }
-                        else
-                        {
-                            inventoryData.UpdateValue<Plant>(-1, p);
-                        }
-                        // Then update the UI system.
-                        m_controller.RebuildJar(p);
-                    }
-                    break;
+            if (inventoryData.RequestData(-1, ref d))
+            {
+                d.quantity -= 1;
+                
+                if (d.quantity <= 0)
+                {
+                    inventoryData.RemoveComponent(-1, d);
+                }
+                else
+                {
+                    inventoryData.UpdateValue(-1, d);
+                }
+                m_controller.RebuildJar(d);
             }
         }
     }

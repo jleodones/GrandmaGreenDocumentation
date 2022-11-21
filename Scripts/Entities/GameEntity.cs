@@ -135,7 +135,12 @@ namespace GrandmaGreen.Entities
         {
             if (velocity.magnitude != 0)
             {
-                animator.SetInteger("DIRECTION", velocity.x < 0 ? -1 : 1);
+                //animator.SetInteger("DIRECTION", velocity.x < 0 ? -1 : 1);
+                if (velocity.x < 0) {
+                    this.gameObject.transform.localScale = new Vector3(1, 1, 1);
+                } else {
+                    this.gameObject.transform.localScale = new Vector3(-1, 1, 1);
+                }
                 animator.SetInteger("MOVEMENT", (int)Mathf.Ceil(velocity.magnitude));
             }
             else

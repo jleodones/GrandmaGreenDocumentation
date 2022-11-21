@@ -60,7 +60,7 @@ namespace GrandmaGreen.SaveSystem
         [Button(ButtonSizes.Medium)]
         public void TriggerDeleteAllData()
         {
-            m_saveController ??= new SaveController(m_objectSavers);
+            m_saveController ??= new SaveController();
 
             m_saveController.DeleteAllData();
         }

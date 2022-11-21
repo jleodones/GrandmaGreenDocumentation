@@ -56,16 +56,32 @@ namespace GrandmaGreen
 
         // Inventory related events and handlers.
         public event Action EVENT_INVENTORY_OPEN;
+        
+        public event Action<ushort, Genotype> EVENT_INVENTORY_ADD_PLANT;
+        public event Action<ushort, Genotype> EVENT_INVENTORY_REMOVE_PLANT;
+        
+        public event Action<ushort, Genotype> EVENT_INVENTORY_ADD_SEED;
+        public event Action<ushort, Genotype> EVENT_INVENTORY_REMOVE_SEED;
+        
+        public event Action<ushort> EVENT_INVENTORY_ADD_TOOL;
+        public event Action<ushort> EVENT_INVENTORY_REMOVE_TOOL;
+
+        public event Action<ushort> EVENT_INVENTORY_ADD_DECOR;
+        public event Action<ushort> EVENT_INVENTORY_REMOVE_DECOR;
+
+        /*
         public event Action<IInventoryItem, int> EVENT_INVENTORY_ADD_TOOL_OR_DECOR;
         public event Action<IInventoryItem, int> EVENT_INVENTORY_REMOVE_TOOL_OR_DECOR;
 
         public event Action<IInventoryItem, Genotype> EVENT_INVENTORY_ADD_PLANT_OR_SEED;
         public event Action<IInventoryItem, Genotype> EVENT_INVENTORY_REMOVE_PLANT_OR_SEED;
+        */
 
         public event Action<int> EVENT_INVENTORY_ADD_MONEY;
         public event Action<int> EVENT_INVENTORY_REMOVE_MONEY;
         public event Func<int> EVENT_INVENTORY_GET_MONEY;
         
+        // Customization.
         public event Action<IInventoryItem> EVENT_CUSTOMIZATION_START;
         public event Action<bool> EVENT_CUSTOMIZATION_END;
 
@@ -74,24 +90,44 @@ namespace GrandmaGreen
             EVENT_INVENTORY_OPEN?.Invoke();
         }
 
-        public void HandleEVENT_INVENTORY_ADD_TOOL_OR_DECOR(IInventoryItem item, int num)
+        public void HandleEVENT_INVENTORY_ADD_PLANT(ushort id, Genotype genotype)
         {
-            EVENT_INVENTORY_ADD_TOOL_OR_DECOR?.Invoke(item, num);
+            EVENT_INVENTORY_ADD_PLANT?.Invoke(id, genotype);
+        }
+        
+        public void HandleEVENT_INVENTORY_REMOVE_PLANT(ushort id, Genotype genotype)
+        {
+            EVENT_INVENTORY_REMOVE_PLANT?.Invoke(id, genotype);
+        }
+        
+        public void HandleEVENT_INVENTORY_ADD_SEED(ushort id, Genotype genotype)
+        {
+            EVENT_INVENTORY_ADD_SEED?.Invoke(id, genotype);
         }
 
-        public void HandleEVENT_INVENTORY_REMOVE_TOOL_OR_DECOR(IInventoryItem item, int num)
+        public void HandleEVENT_INVENTORY_REMOVE_SEED(ushort id, Genotype genotype)
         {
-            EVENT_INVENTORY_REMOVE_TOOL_OR_DECOR?.Invoke(item, num);
+            EVENT_INVENTORY_REMOVE_SEED?.Invoke(id, genotype);
         }
-
-        public void HandleEVENT_INVENTORY_ADD_PLANT_OR_SEED(IInventoryItem item, Genotype genotype)
+        
+        public void HandleEVENT_INVENTORY_ADD_TOOL(ushort id)
         {
-            EVENT_INVENTORY_ADD_PLANT_OR_SEED?.Invoke(item, genotype);
+            EVENT_INVENTORY_ADD_TOOL?.Invoke(id);
         }
-
-        public void HandleEVENT_INVENTORY_REMOVE_PLANT_OR_SEED(IInventoryItem item, Genotype genotype)
+        
+        public void HandleEVENT_INVENTORY_REMOVE_TOOL(ushort id)
         {
-            EVENT_INVENTORY_REMOVE_PLANT_OR_SEED?.Invoke(item, genotype);
+            EVENT_INVENTORY_REMOVE_TOOL?.Invoke(id);
+        }
+        
+        public void HandleEVENT_INVENTORY_ADD_DECOR(ushort id)
+        {
+            EVENT_INVENTORY_ADD_DECOR?.Invoke(id);
+        }
+        
+        public void HandleEVENT_INVENTORY_REMOVE_DECOR(ushort id)
+        {
+            EVENT_INVENTORY_REMOVE_DECOR?.Invoke(id);
         }
 
         public void HandleEVENT_INVENTORY_ADD_MONEY(int money)

@@ -74,11 +74,11 @@ namespace GrandmaGreen.SaveSystem
             {
                 if (index == -1)
                 {
-                    components.RemoveAt(index);
+                    components.Remove(component);
                 }
                 else
                 {
-                    components.Remove(component);
+                    components.RemoveAt(index);
                 }
             }
             catch (Exception e)

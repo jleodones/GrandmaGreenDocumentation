@@ -1,12 +1,12 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/_GrandmaGreen/Scripts/UI/UI%20Scripts/ToolsMenu/ToolsMenu.uss?fileID=7433441132597879392&amp;guid=8e54a2dd58b5d49d1b413590ef2c9d3e&amp;type=3#ToolsMenu" />
     <ui:VisualElement name="rootVisualElement" focusable="true" style="top: 65%; height: 35%; width: 100%; align-items: center; display: none;">
-        <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="dialogueContainer" style="background-color: rgb(255, 255, 255); width: 90%; height: 100%;">
-            <ui:VisualElement name="nameTextBox" style="background-color: rgb(139, 69, 19); width: 30%; height: 20%; bottom: 0; left: 5%;">
-                <ui:Label tabindex="-1" text="Name" display-tooltip-when-elided="true" name="nameText" style="width: 100%; height: 100%; font-size: 60%; -unity-text-align: middle-left; padding-left: 5%; padding-right: 5%;" />
+        <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="dialogueContainer" style="width: 90%; height: 100%; background-image: url(&apos;project://database/Assets/_GrandmaGreen/Art/UI/General/UI_General_DialogueBox.png?fileID=2800000&amp;guid=53cf6820138374edab2d14f18fbade55&amp;type=3#UI_General_DialogueBox&apos;); background-color: rgba(88, 88, 88, 0); color: rgba(238, 238, 238, 0); border-left-color: rgba(255, 255, 255, 0); border-right-color: rgba(255, 255, 255, 0); border-top-color: rgba(255, 255, 255, 0); border-bottom-color: rgba(255, 255, 255, 0);">
+            <ui:VisualElement name="nameTextBox" style="background-color: rgba(139, 69, 19, 0); width: 40%; height: 40%; left: 0; background-image: url(&apos;project://database/Assets/_GrandmaGreen/Art/UI/General/UI_General_DialogueNameTag.png?fileID=2800000&amp;guid=52a67b401e9704820a0c101f85cde21c&amp;type=3#UI_General_DialogueNameTag&apos;); position: absolute; top: 0; align-items: center;">
+                <ui:Label tabindex="-1" text="Name" display-tooltip-when-elided="true" name="nameText" style="width: 100%; height: 100%; font-size: 60%; -unity-text-align: middle-center; padding-left: 5%; padding-right: 5%; color: rgb(255, 255, 255);" />
             </ui:VisualElement>
-            <ui:VisualElement name="dialogueTextBox" style="padding-left: 7.5%; padding-right: 7.5%; width: 100%; height: 80%; padding-bottom: 2.5%; -unity-text-align: middle-left;">
-                <ui:Label tabindex="-1" text="Sample." display-tooltip-when-elided="true" name="dialogueText" style="width: 100%; height: 100%; padding-left: 0; padding-right: 0; font-size: 60%; color: rgb(0, 0, 0);" />
+            <ui:VisualElement name="dialogueTextBox" style="padding-left: 7.5%; padding-right: 7.5%; width: 100%; height: 80%; padding-bottom: 2.5%; -unity-text-align: middle-left; background-image: none; -unity-background-image-tint-color: rgb(255, 255, 255);">
+                <ui:Label tabindex="-1" text="Sampleaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" display-tooltip-when-elided="true" name="dialogueText" style="width: 80%; height: 80%; padding-left: 0; padding-right: 0; font-size: 60%; color: rgb(0, 0, 0); left: 11%; top: 50%; -unity-text-align: upper-left; white-space: normal;" />
             </ui:VisualElement>
         </ui:Button>
     </ui:VisualElement>

@@ -276,7 +276,7 @@ namespace GrandmaGreen.Collections
         ///<summary>
         ///Get any item by its id
         ///</summary>
-        public ItemProperties GetItem(ID id)
+        public ItemProperties GetItem(ushort id)
         {
             return ItemLookup[(ushort)Convert.ToInt32(id)];
         }
@@ -309,7 +309,7 @@ namespace GrandmaGreen.Collections
         ///Retrieve a sprite by its sprite path (which is just its filename)
         ///</summary>
         ///
-        public Sprite GetSprite(ID id)
+        public Sprite GetSprite(ushort id)
         {
             return Resources.Load(GetItem(id).spritePath, typeof(Sprite)) as Sprite;
         }
@@ -365,8 +365,8 @@ namespace GrandmaGreen.Collections
         /// </summary>
         public Sprite GetSprite(PlantId type, Genotype genotype)
         {
-            ItemProperties seed = GetItem(type);
-            string finalSpritePath = "SEED_" + seed.name;
+            ItemProperties seed = GetItem((ushort)type);
+            string finalSpritePath = "SEED_" + seed.name.Replace(" ", "");
             string suffix = "";
 
             switch (genotype.trait)

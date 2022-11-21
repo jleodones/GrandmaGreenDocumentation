@@ -256,7 +256,7 @@ MonoBehaviour:
       Data: Plant
     - Name: baseCost
       Entry: 3
-      Data: 0
+      Data: 100
     - Name: tag
       Entry: 6
       Data: 
@@ -289,7 +289,7 @@ MonoBehaviour:
       Data: Plant
     - Name: baseCost
       Entry: 3
-      Data: 0
+      Data: 100
     - Name: tag
       Entry: 6
       Data: 
@@ -322,7 +322,7 @@ MonoBehaviour:
       Data: Plant
     - Name: baseCost
       Entry: 3
-      Data: 0
+      Data: 100
     - Name: tag
       Entry: 6
       Data: 
@@ -355,7 +355,7 @@ MonoBehaviour:
       Data: Plant
     - Name: baseCost
       Entry: 3
-      Data: 0
+      Data: 100
     - Name: tag
       Entry: 6
       Data: 
@@ -382,13 +382,13 @@ MonoBehaviour:
       Data: 
     - Name: spritePath
       Entry: 1
-      Data: PLA_Calla_Lily
+      Data: PLA_CallaLily
     - Name: itemType
       Entry: 1
       Data: Plant
     - Name: baseCost
       Entry: 3
-      Data: 0
+      Data: 100
     - Name: tag
       Entry: 6
       Data: 
@@ -415,13 +415,13 @@ MonoBehaviour:
       Data: 
     - Name: spritePath
       Entry: 1
-      Data: SEED_Calla_Lily
+      Data: SEED_CallaLily
     - Name: itemType
       Entry: 1
       Data: Plant
     - Name: baseCost
       Entry: 3
-      Data: 0
+      Data: 100
     - Name: tag
       Entry: 6
       Data: 
@@ -454,7 +454,7 @@ MonoBehaviour:
       Data: Plant
     - Name: baseCost
       Entry: 3
-      Data: 0
+      Data: 100
     - Name: tag
       Entry: 6
       Data: 
@@ -487,7 +487,7 @@ MonoBehaviour:
       Data: Plant
     - Name: baseCost
       Entry: 3
-      Data: 0
+      Data: 100
     - Name: tag
       Entry: 6
       Data: 
@@ -520,7 +520,7 @@ MonoBehaviour:
       Data: Plant
     - Name: baseCost
       Entry: 3
-      Data: 0
+      Data: 100
     - Name: tag
       Entry: 6
       Data: 
@@ -553,7 +553,7 @@ MonoBehaviour:
       Data: Plant
     - Name: baseCost
       Entry: 3
-      Data: 0
+      Data: 100
     - Name: tag
       Entry: 6
       Data: 
@@ -586,7 +586,7 @@ MonoBehaviour:
       Data: Plant
     - Name: baseCost
       Entry: 3
-      Data: 0
+      Data: 100
     - Name: tag
       Entry: 6
       Data: 
@@ -619,7 +619,7 @@ MonoBehaviour:
       Data: Plant
     - Name: baseCost
       Entry: 3
-      Data: 0
+      Data: 100
     - Name: tag
       Entry: 6
       Data: 
@@ -652,7 +652,7 @@ MonoBehaviour:
       Data: Plant
     - Name: baseCost
       Entry: 3
-      Data: 0
+      Data: 100
     - Name: tag
       Entry: 6
       Data: 
@@ -685,7 +685,7 @@ MonoBehaviour:
       Data: Plant
     - Name: baseCost
       Entry: 3
-      Data: 0
+      Data: 100
     - Name: tag
       Entry: 6
       Data: 
@@ -718,7 +718,7 @@ MonoBehaviour:
       Data: Plant
     - Name: baseCost
       Entry: 3
-      Data: 0
+      Data: 100
     - Name: tag
       Entry: 6
       Data: 
@@ -751,7 +751,7 @@ MonoBehaviour:
       Data: Plant
     - Name: baseCost
       Entry: 3
-      Data: 0
+      Data: 100
     - Name: tag
       Entry: 6
       Data: 
@@ -784,7 +784,7 @@ MonoBehaviour:
       Data: Plant
     - Name: baseCost
       Entry: 3
-      Data: 0
+      Data: 100
     - Name: tag
       Entry: 6
       Data: 
@@ -817,7 +817,7 @@ MonoBehaviour:
       Data: Plant
     - Name: baseCost
       Entry: 3
-      Data: 0
+      Data: 100
     - Name: tag
       Entry: 6
       Data: 
@@ -850,7 +850,7 @@ MonoBehaviour:
       Data: Plant
     - Name: baseCost
       Entry: 3
-      Data: 0
+      Data: 100
     - Name: tag
       Entry: 6
       Data: 
@@ -883,7 +883,7 @@ MonoBehaviour:
       Data: Plant
     - Name: baseCost
       Entry: 3
-      Data: 0
+      Data: 100
     - Name: tag
       Entry: 6
       Data: 
@@ -910,13 +910,13 @@ MonoBehaviour:
       Data: 
     - Name: spritePath
       Entry: 1
-      Data: PLA_Sweet_Potato
+      Data: PLA_SweetPotato
     - Name: itemType
       Entry: 1
       Data: Plant
     - Name: baseCost
       Entry: 3
-      Data: 0
+      Data: 100
     - Name: tag
       Entry: 6
       Data: 
@@ -943,13 +943,13 @@ MonoBehaviour:
       Data: 
     - Name: spritePath
       Entry: 1
-      Data: SEED_Sweet_Potato
+      Data: SEED_SweetPotato
     - Name: itemType
       Entry: 1
       Data: Plant
     - Name: baseCost
       Entry: 3
-      Data: 0
+      Data: 100
     - Name: tag
       Entry: 6
       Data: 
@@ -982,7 +982,7 @@ MonoBehaviour:
       Data: Plant
     - Name: baseCost
       Entry: 3
-      Data: 0
+      Data: 100
     - Name: tag
       Entry: 6
       Data: 
@@ -1015,7 +1015,7 @@ MonoBehaviour:
       Data: Plant
     - Name: baseCost
       Entry: 3
-      Data: 0
+      Data: 100
     - Name: tag
       Entry: 6
       Data: 
@@ -1048,7 +1048,7 @@ MonoBehaviour:
       Data: Plant
     - Name: baseCost
       Entry: 3
-      Data: 0
+      Data: 100
     - Name: tag
       Entry: 6
       Data: 
@@ -1081,7 +1081,7 @@ MonoBehaviour:
       Data: Plant
     - Name: baseCost
       Entry: 3
-      Data: 0
+      Data: 100
     - Name: tag
       Entry: 6
       Data: 
@@ -1114,7 +1114,7 @@ MonoBehaviour:
       Data: Plant
     - Name: baseCost
       Entry: 3
-      Data: 0
+      Data: 100
     - Name: tag
       Entry: 6
       Data: 
@@ -1147,7 +1147,7 @@ MonoBehaviour:
       Data: Plant
     - Name: baseCost
       Entry: 3
-      Data: 0
+      Data: 100
     - Name: tag
       Entry: 6
       Data: 
@@ -1180,7 +1180,7 @@ MonoBehaviour:
       Data: Plant
     - Name: baseCost
       Entry: 3
-      Data: 0
+      Data: 100
     - Name: tag
       Entry: 6
       Data: 
@@ -1213,7 +1213,7 @@ MonoBehaviour:
       Data: Plant
     - Name: baseCost
       Entry: 3
-      Data: 0
+      Data: 100
     - Name: tag
       Entry: 6
       Data: 
@@ -1246,7 +1246,7 @@ MonoBehaviour:
       Data: Plant
     - Name: baseCost
       Entry: 3
-      Data: 0
+      Data: 100
     - Name: tag
       Entry: 6
       Data: 
@@ -1279,7 +1279,7 @@ MonoBehaviour:
       Data: Plant
     - Name: baseCost
       Entry: 3
-      Data: 0
+      Data: 100
     - Name: tag
       Entry: 6
       Data: 
@@ -1312,7 +1312,7 @@ MonoBehaviour:
       Data: Plant
     - Name: baseCost
       Entry: 3
-      Data: 0
+      Data: 100
     - Name: tag
       Entry: 6
       Data: 
@@ -1345,7 +1345,7 @@ MonoBehaviour:
       Data: Plant
     - Name: baseCost
       Entry: 3
-      Data: 0
+      Data: 100
     - Name: tag
       Entry: 6
       Data: 
@@ -1378,7 +1378,7 @@ MonoBehaviour:
       Data: Plant
     - Name: baseCost
       Entry: 3
-      Data: 0
+      Data: 100
     - Name: tag
       Entry: 6
       Data: 
@@ -1411,7 +1411,7 @@ MonoBehaviour:
       Data: Plant
     - Name: baseCost
       Entry: 3
-      Data: 0
+      Data: 100
     - Name: tag
       Entry: 6
       Data: 
@@ -1444,7 +1444,7 @@ MonoBehaviour:
       Data: Plant
     - Name: baseCost
       Entry: 3
-      Data: 0
+      Data: 100
     - Name: tag
       Entry: 6
       Data: 
@@ -1477,7 +1477,7 @@ MonoBehaviour:
       Data: Plant
     - Name: baseCost
       Entry: 3
-      Data: 0
+      Data: 100
     - Name: tag
       Entry: 6
       Data: 
@@ -1510,7 +1510,7 @@ MonoBehaviour:
       Data: Plant
     - Name: baseCost
       Entry: 3
-      Data: 0
+      Data: 100
     - Name: tag
       Entry: 6
       Data: 
@@ -1543,7 +1543,7 @@ MonoBehaviour:
       Data: Plant
     - Name: baseCost
       Entry: 3
-      Data: 0
+      Data: 100
     - Name: tag
       Entry: 6
       Data: 
@@ -1576,7 +1576,7 @@ MonoBehaviour:
       Data: Plant
     - Name: baseCost
       Entry: 3
-      Data: 0
+      Data: 100
     - Name: tag
       Entry: 6
       Data: 
@@ -1609,7 +1609,7 @@ MonoBehaviour:
       Data: Plant
     - Name: baseCost
       Entry: 3
-      Data: 0
+      Data: 100
     - Name: tag
       Entry: 6
       Data: 
@@ -5252,13 +5252,13 @@ MonoBehaviour:
       Data: PLA_Rose
     - Name: growthStages
       Entry: 3
-      Data: 3
+      Data: 0
     - Name: growthTime
       Entry: 3
-      Data: 10
+      Data: 0
     - Name: waterPerStage
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: plantType
       Entry: 3
       Data: 1
@@ -5288,13 +5288,13 @@ MonoBehaviour:
       Data: PLA_Tulip
     - Name: growthStages
       Entry: 3
-      Data: 3
+      Data: 0
     - Name: growthTime
       Entry: 3
-      Data: 10
+      Data: 0
     - Name: waterPerStage
       Entry: 3
-      Data: 2
+      Data: 0
     - Name: plantType
       Entry: 3
       Data: 1
@@ -5321,7 +5321,7 @@ MonoBehaviour:
       Data: 
     - Name: spriteBasePath
       Entry: 1
-      Data: PLA_Calla_Lily
+      Data: PLA_CallaLily
     - Name: growthStages
       Entry: 3
       Data: 0
@@ -5609,7 +5609,7 @@ MonoBehaviour:
       Data: 
     - Name: spriteBasePath
       Entry: 1
-      Data: PLA_Sweet_Potato
+      Data: PLA_SweetPotato
     - Name: growthStages
       Entry: 3
       Data: 0
@@ -6421,7 +6421,7 @@ MonoBehaviour:
       Data: 
     - Name: spritePath
       Entry: 1
-      Data: SEED_Calla_Lily
+      Data: SEED_CallaLily
     - Name: baseCost
       Entry: 3
       Data: 100
@@ -6661,7 +6661,7 @@ MonoBehaviour:
       Data: 
     - Name: spritePath
       Entry: 1
-      Data: SEED_Sweet_Potato
+      Data: SEED_SweetPotato
     - Name: baseCost
       Entry: 3
       Data: 100

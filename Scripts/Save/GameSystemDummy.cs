@@ -32,6 +32,7 @@ namespace GrandmaGreen {
             //m_objectSavers[0].AddComponent<Trait>(-1, t);
         }
 
+        /*
         [Button()]
         public void AddToInventory(int type, ushort id, int quantity)
         {
@@ -71,6 +72,7 @@ namespace GrandmaGreen {
                     break;
             }
         }
+        */
         
         public int SampleTest()
         {

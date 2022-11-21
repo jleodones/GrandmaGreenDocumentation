@@ -15,9 +15,12 @@ namespace GrandmaGreen.Shopkeeping
     [Serializable]
     public struct ShopItem
     {
-        public Id id;
-        //quantity 3 for seeds
+        public Sprite sprite;
         public int quantity;
+        public int baseCost;
+        public string name;
+        
+        public IInventoryItem myItem;
     }
 
     /// <summary>
@@ -47,10 +50,22 @@ namespace GrandmaGreen.Shopkeeping
             //Seeds:
             for (int i = 1001; i <= 1009; i++)
             {
-                Enum id = (PlantId)i;
+                ushort id = (ushort) i;
+                ItemProperties thisItem = collectionsinput.GetItem(id);
+                
                 ShopItem itemProps = new ShopItem();
                 itemProps.quantity = 3;
-                itemProps.id = id;
+                itemProps.baseCost = thisItem.baseCost;
+                itemProps.name = thisItem.name;
+                
+                // Get genotype of seed.
+                // TODO: Change this so it "randomly" picks a genotype for the seed packets.
+                // For now this defaults to heterozygous plant.
+                Genotype myGenotype = new Genotype("AaBb");
+                
+                // Get sprite.
+                itemProps.sprite = collectionsinput.GetSprite((PlantId)i, myGenotype);
+                itemProps.myItem = new Seed((ushort)i, thisItem.name, myGenotype);
                 GardenList.Add(itemProps);
             }
         }
@@ -64,14 +79,14 @@ namespace GrandmaGreen.Shopkeeping
         /// <summary>
         /// Get the base cost of an item in the gardening shop, pass in the id
         /// </summary>
-        public int GetBaseCostById(Id id)
+        public int GetBaseCostById(ushort id)
         {
             return collections.GetItem(id).baseCost;
         }
         /// <summary>
         /// Get the selling price of an item in player's inventory in the gardening shop (for now is just half the base cost)
         /// </summary>
-        public int GetSellingPriceById(Id id)
+        public int GetSellingPriceById(ushort id)
         {
             return collections.GetItem(id).baseCost / 2;
         }
@@ -97,7 +112,7 @@ namespace GrandmaGreen.Shopkeeping
                 DecorationId id = (DecorationId)i;
                 ShopItem itemProps = new ShopItem();
                 itemProps.quantity = 1;
-                itemProps.id = id;
+                // itemProps.id = id;
                 DecorList.Add(itemProps);
             }
             //Garden Exp:
@@ -114,14 +129,14 @@ namespace GrandmaGreen.Shopkeeping
         /// <summary>
         /// Get the base cost of an item in the decor shop, pass in the id
         /// </summary>
-        public int GetBaseCostById(Id id)
+        public int GetBaseCostById(ushort id)
         {
             return collections.GetItem(id).baseCost;
         }
         /// <summary>
         /// Get the selling price of an item in player's inventory in the decor shop (for now is just half the base cost)
         /// </summary>
-        public int GetSellingPriceById(Id id)
+        public int GetSellingPriceById(ushort id)
         {
             return collections.GetItem(id).baseCost / 2;
         }

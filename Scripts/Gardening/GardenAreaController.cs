@@ -43,7 +43,8 @@ namespace GrandmaGreen.Garden
             collection.DEBUGLoadPlantProperties();
             gardenManager.RegisterGarden(areaIndex);
 
-            
+
+            gardenManager.timers[areaIndex].Pause();
         }
 
         void OnEnable()
@@ -58,9 +59,11 @@ namespace GrandmaGreen.Garden
             decorList = new List<Collider>();
             RefreshGarden();
 
-            EventManager.instance.HandleEVENT_INVENTORY_ADD_PLANT_OR_SEED(new GrandmaGreen.Collections.Plant((ushort)DecorationId.Flamingo, null, 0, new List<Genotype>()), new Genotype());
-            
-            gardenManager.timer.onTick += DecrementWatering;
+            EventManager.instance.HandleEVENT_INVENTORY_ADD_DECOR((ushort)DecorationId.Flamingo);
+
+            gardenManager.timers[areaIndex].onTick += IncrementTimer;
+            gardenManager.timers[areaIndex].Resume(true);
+
         }
 
         void OnDisable()
@@ -71,7 +74,8 @@ namespace GrandmaGreen.Garden
             EventManager.instance.EVENT_CUSTOMIZATION_START -= EnterCustomizationMode;
             EventManager.instance.EVENT_CUSTOMIZATION_END -= ExitCustomizationMode;
 
-            gardenManager.timer.onTick -= DecrementWatering;
+            gardenManager.timers[areaIndex].Pause();
+            gardenManager.timers[areaIndex].onTick -= IncrementTimer;
         }
 
         #region Input
@@ -92,7 +96,7 @@ namespace GrandmaGreen.Garden
         //Called through a Unity event as of now
         public void GardenTileSelected(Vector3Int gridPos)
         {
-   
+
             playerController.QueueEntityAction(DoToolAction);
             playerTools.SetToolAction(tileStore[lastSelectedTile], lastSelectedCell, this);
         }
@@ -149,14 +153,26 @@ namespace GrandmaGreen.Garden
             Genotype genotype = gardenManager.GetGenotype(areaIndex, cell);
             Sprite sprite = collection.GetSprite(plant.type, genotype, plant.growthStage);
             spriteRenderer.sprite = sprite;
+
+            if (gardenManager.PlantIsWilted(areaIndex, cell))
+            {
+                spriteRenderer.color = new Color(0.71f, 0.4f, 0.11f);
+            }
+            else if (gardenManager.PlantIsDead(areaIndex, cell))
+            {
+                spriteRenderer.color = new Color(0.40f, 0.26f, 0.13f);
+            }
+            else
+            {
+                spriteRenderer.color = new Color(1f, 1f, 1f);
+            }
             // TODO: remove hard coded scaling
             transform.localScale = new Vector3(0.25f, 0.25f, 0.25f);
         }
 
         public void InstantiatePlantPrefab(Vector3Int cell, PlantId type, int growthStage)
         {
-            // TODO: remove hard coded offset
-            Vector3 centerOfCell = tilemap.GetCellCenterWorld(cell) + (0.5f * Vector3.back);
+            Vector3 centerOfCell = tilemap.GetCellCenterWorld(cell);
             plantPrefabLookup[cell] = Instantiate(defaultPlantPrefab, centerOfCell, Quaternion.identity);
             UpdateSprite(cell);
         }
@@ -172,59 +188,72 @@ namespace GrandmaGreen.Garden
 
         public void CreatePlant(PlantId seed, Genotype genotype, Vector3Int cell, int growthStage = 0)
         {
-            PlantId type = seed - CSVtoSO.SEED_ID_OFFSET;
-
             if (!plantPrefabLookup.ContainsKey(cell) || gardenManager.IsEmpty(areaIndex, cell))
             {
-                gardenManager.CreatePlant(type, genotype, growthStage, areaIndex, cell);
+                gardenManager.CreatePlant(seed, genotype, growthStage, areaIndex, cell);
                 InstantiatePlantPrefab(cell, seed, growthStage);
+                // Remove the seed from inventory.
+                EventManager.instance.HandleEVENT_INVENTORY_REMOVE_SEED((ushort)seed, genotype);
             }
         }
 
-        public void DecrementWatering(int value)
+        public void IncrementTimer(int value)
         {
-            List<PlantState> plants = gardenManager.GetPlants(areaIndex);
+            List<PlantState> plantList = gardenManager.GetPlants(areaIndex);
 
-            foreach (PlantState plant in plants)
+            foreach (PlantState plant in plantList)
             {
-                if (gardenManager.GetGrowthStage(areaIndex, plant.cell) != 2)
+                if (plant.waterTimer == collection.GetPlant(plant.type).growthTime)
                 {
-                    int waterTimerReset = collection.GetPlant(plant.type).growthTime;
+                    Debug.Log("Plant is ready for water");
+                }
+                else if (plant.waterTimer == gardenManager.WiltTime) //>= 240)
+                {
+                    // Wilted
+                    // Debug.Log("Plant is wilted");
+                    UpdateSprite(plant.cell);
 
-                    if (plant.waterTimer >= (-2 * waterTimerReset))
+                    Vector3 centerOfCell = tilemap.GetCellCenterWorld(plant.cell);
+                    Quaternion particleQuat = Quaternion.Euler(-110, 0, 0);
+                    ParticleSystem PlayParticle = Instantiate(DryingUpBurst, centerOfCell + new Vector3(0, -1, -2), particleQuat);
+                }
+                else if (!gardenManager.PlantIsFullyGrown(areaIndex, plant.cell))
+                {
+                    if (plant.waterTimer == gardenManager.DeathTime) //>= 336)
                     {
-                        // This section is all Temporary Code until we find a different visual solution
-                        // for showing the state of a plant.
-                        if (plant.waterTimer == (-1 * waterTimerReset))
-                        {
-                            Vector3 centerOfCell = tilemap.GetCellCenterWorld(plant.cell);
-                            Quaternion particleQuat = Quaternion.Euler(-110, 0, 0);
-                            ParticleSystem PlayParticle = Instantiate(DryingUpBurst, centerOfCell + new Vector3(0, -1, -2), particleQuat);
-                        }
-                        else if (plant.waterTimer == (-2 * waterTimerReset))
-                        {
-                            Vector3 centerOfCell = tilemap.GetCellCenterWorld(plant.cell);
-                            Quaternion particleQuat = Quaternion.Euler(-110, 0, 0);
-                            ParticleSystem PlayParticle = Instantiate(DryingUpBurst, centerOfCell + new Vector3(0, -1, -2), particleQuat);
-                        }
+                        // Dead
+                        // Debug.Log("Plant is dead");
+                        UpdateSprite(plant.cell);
 
-                        //Debug.Log(plant.waterTimer);
-                        gardenManager.DecrementWaterTimer(areaIndex, plant.cell, (value * -1));
+                        Vector3 centerOfCell = tilemap.GetCellCenterWorld(plant.cell);
+                        Quaternion particleQuat = Quaternion.Euler(-110, 0, 0);
+                        ParticleSystem PlayParticle = Instantiate(DryingUpBurst, centerOfCell + new Vector3(0, -1, -2), particleQuat);
                     }
+                }
+
+                gardenManager.IncrementWaterTimer(areaIndex, plant.cell, value);
+
+                if (plant.waterStage == 1
+                    && plant.waterTimer >= collection.GetPlant(plant.type).growthTime)
+                {
+                    // Debug.Log("Plant Growth via IncrementWaterTimer");
+                    gardenManager.UpdateGrowthStage(areaIndex, plant.cell);
+
+                    UpdateSprite(plant.cell);
                 }
             }
         }
 
         public void WaterPlant(Vector3Int cell)
         {
-            if (gardenManager.UpdateWaterStage(areaIndex, cell))
+            if (!gardenManager.PlantIsDead(areaIndex, cell))
             {
-                PlantId type = gardenManager.GetPlantType(areaIndex, cell);
-
-                if (gardenManager.UpdateGrowthStage(areaIndex, cell))
+                if (gardenManager.UpdateWaterStage(areaIndex, cell))
                 {
-                    UpdateSprite(cell);
+                    gardenManager.UpdateGrowthStage(areaIndex, cell);
+                    // Debug.Log("Plant Growth via WaterPlant");
                 }
+                UpdateSprite(cell);
             }
 
             // Temporary code to spawn a particle system so we know that a plant has been fertilized
@@ -253,17 +282,19 @@ namespace GrandmaGreen.Garden
             int maxGrowthStages = collection.GetPlant(gardenManager
                 .GetPlantType(areaIndex, cell)).growthStages;
 
-            if (gardenManager.PlantIsFullyGrown(areaIndex, cell))
+            string debug = "Breeding Candidate Debug (Click to Expand)\n";
+
+            if (gardenManager.PlantIsBreedable(areaIndex, cell))
             {
-                Debug.Log("Identifying breeding candidates - ");
+                debug += "Breeding candidates: ";
                 List<Genotype> breedingCandidates = new List<Genotype>();
                 foreach (Vector3Int neighbor in new[] { cell + Vector3Int.up, cell + Vector3Int.down,
                     cell + Vector3Int.left, cell + Vector3Int.right})
                 {
                     if (gardenManager.PlantIsBreedable(areaIndex, neighbor))
                     {
-                        Debug.Log("Plant is breedable " + neighbor);
                         breedingCandidates.Add(gardenManager.GetGenotype(areaIndex, neighbor));
+                        debug += neighbor + " ";
                     }
                 }
 
@@ -276,22 +307,19 @@ namespace GrandmaGreen.Garden
                 {
                     Genotype fatherGenotype = breedingCandidates[Random.Range(0, breedingCandidates.Count)];
                     childGenotype = motherGenotype.Cross(fatherGenotype);
-                    Debug.Log("Breeding occured.");
-                    Debug.Log("Father genotype: " + fatherGenotype);
+                    debug += "\nBreeding occured.";
                 }
                 else
-                    Debug.Log("No breeding occured.");
+                    debug += "\nNo breeding occured.";
 
-                Debug.Log("Mother genotype: " + motherGenotype);
-                Debug.Log("Child genotype: " + childGenotype);
+                Debug.Log(debug);
 
                 int numSeedsDropped = gardenManager.NumSeedDrops(areaIndex, cell);
 
                 PlantProperties properties = collection.GetPlant(childPlantType);
-                EventManager.instance.HandleEVENT_INVENTORY_ADD_PLANT_OR_SEED(
-                    new Plant((ushort)motherPlantType, properties.name, 1, new List<Genotype> { motherGenotype }), motherGenotype);
-                EventManager.instance.HandleEVENT_INVENTORY_ADD_PLANT_OR_SEED(
-                    new Seed((ushort)childPlantType, properties.name, new List<Genotype> { childGenotype }), childGenotype);
+                EventManager.instance.HandleEVENT_INVENTORY_ADD_PLANT((ushort)motherPlantType, motherGenotype);
+                EventManager.instance.HandleEVENT_INVENTORY_ADD_SEED((ushort)childPlantType, childGenotype);
+
                 DestroyPlant(cell);
 
                 //EventManager.instance.HandleEVENT_GOLEM_SPAWN(0, cell);
@@ -328,14 +356,14 @@ namespace GrandmaGreen.Garden
         [ContextMenu("ToggleGrowthTimer")]
         public void ToggleGrowthTimer()
         {
-            if (!gardenManager.timer.paused)
+            if (!gardenManager.timers[areaIndex].paused)
             {
-                gardenManager.timer.Pause();
+                gardenManager.timers[areaIndex].Pause();
                 Debug.Log("Paused Growth Timer");
             }
             else
             {
-                gardenManager.timer.Resume();
+                gardenManager.timers[areaIndex].Resume();
                 Debug.Log("Resumed Growth Timer");
             }
         }
@@ -343,23 +371,7 @@ namespace GrandmaGreen.Garden
         [ContextMenu("CrossBreedTest")]
         public void CrossBreedTest()
         {
-            DestroyPlant(Vector3Int.zero);
-            DestroyPlant(Vector3Int.up);
-            DestroyPlant(Vector3Int.down);
-            DestroyPlant(Vector3Int.left);
-            DestroyPlant(Vector3Int.right);
-            ChangeGardenTileToPlot_Occupied(Vector3Int.zero);
-            ChangeGardenTileToPlot_Occupied(Vector3Int.up);
-            ChangeGardenTileToPlot_Occupied(Vector3Int.down);
-            ChangeGardenTileToPlot_Occupied(Vector3Int.left);
-            ChangeGardenTileToPlot_Occupied(Vector3Int.right);
-            CreatePlant(PlantId.Tulip, new Genotype("AaBb"), Vector3Int.zero, 2);
-            CreatePlant(PlantId.Rose, new Genotype("AABB"), Vector3Int.up, 2);
-            CreatePlant(PlantId.Rose, new Genotype("aabb"), Vector3Int.down, 2);
-            CreatePlant(PlantId.Rose, new Genotype("aAbB"), Vector3Int.left, 2);
-            CreatePlant(PlantId.Rose, new Genotype("AaBb"), Vector3Int.right, 2);
-
-            Vector3Int right = Vector3Int.zero + 5 * Vector3Int.right + 5 * Vector3Int.up;
+            Vector3Int right = Vector3Int.zero + 3 * Vector3Int.up;
             for (int i = 0; i <= 6; i += 2)
             {
                 DestroyPlant(right + i * Vector3Int.down);
@@ -372,6 +384,14 @@ namespace GrandmaGreen.Garden
             CreatePlant(PlantId.Rose, new Genotype("AaBb"), right + 2 * Vector3Int.down + Vector3Int.right, 2);
             CreatePlant(PlantId.Rose, new Genotype("aAbB"), right + 4 * Vector3Int.down + Vector3Int.right, 2);
             CreatePlant(PlantId.Rose, new Genotype("AABB"), right + 6 * Vector3Int.down + Vector3Int.right, 2);
+        }
+
+        [ContextMenu("GenotypeTest")]
+        public void GenotypeTest()
+        {
+            Genotype first = new Genotype("AaBb");
+            Genotype second = new Genotype("AaBb");
+            first.Cross(second);
         }
         #endregion
 
@@ -407,7 +427,7 @@ namespace GrandmaGreen.Garden
         Vector3 m_OriginalPosition;
         public void EnterCustomizationMode(IInventoryItem item)
         {
-            GardenDecorItem decorItem = gardenCustomizer.GenerateDecorItem();
+            GardenDecorItem decorItem = gardenCustomizer.GenerateDecorItem((DecorationId)item.itemID);
 
             m_IsGeneratedDecorItem = true;
 

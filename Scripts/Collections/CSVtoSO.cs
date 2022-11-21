@@ -50,7 +50,7 @@ namespace GrandmaGreen.Collections
                 string name = line[2];
                 string description = line[3];
                 string tag = line[4];
-                //int baseCost = Int32.Parse(line[5]);
+                // int baseCost = Int32.Parse(line[5]);
                 ushort.TryParse(line[5], out ushort baseCost);
                 string seedDescription = line[6];
                 //int seedBaseCost = 0;
@@ -77,9 +77,12 @@ namespace GrandmaGreen.Collections
 
                         plantProps.name = name;
                         plantProps.description = description;
-                        plantProps.spriteBasePath = "PLA_" + name.Replace(" ", "_");
-                        spritePath = "PLA_" + name.Replace(" ", "_");
+                        plantProps.spriteBasePath = "PLA_" + name.Replace(" ", "");
+                        spritePath = "PLA_" + name.Replace(" ", "");
                         itemProps.spritePath = spritePath;
+                        
+                        // TODO: Please fix this later.
+                        itemProps.baseCost = seedBaseCost;
 
                         //plant stats
                         ushort.TryParse(line[9], out ushort growthStages);
@@ -109,7 +112,7 @@ namespace GrandmaGreen.Collections
                         collections.ItemLookup.Add(csvID, itemProps);
 
                         //Seed Data
-                        spritePath = "SEED_" + name.Replace(" ", "_");
+                        spritePath = "SEED_" + name.Replace(" ", "");
                         itemProps.spritePath = spritePath;
 
                         collections.ItemLookup.Add((ushort)(csvID + SEED_ID_OFFSET), itemProps);

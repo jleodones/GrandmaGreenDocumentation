@@ -24,43 +24,10 @@ namespace GrandmaGreen.Collections {
     [Serializable]
     public enum ItemType
     {
-        Tool,
         Plant,
         Seed,
+        Tool,
         Decor
-    }
-
-    [Serializable]
-    public struct Tool : IInventoryItem
-    {
-        // Item ID.
-        public ushort itemID { get; set; }
-
-        // This item type;
-        public ItemType itemType { get; set; }
-
-        // Name of object.
-        public string itemName { get; set; }
-        
-        // Amount of the object present in the inventory.
-        public int quantity;
-
-        public Tool(ushort id, string name, int num)
-        {
-            itemType = ItemType.Tool;
-            
-            itemID = id;
-            itemName = name;
-            quantity = num;
-        }
-
-        public string GetQuantityToString()
-        {
-            return quantity.ToString();
-        }
-
-        public override bool Equals(object obj) =>
-            obj is IInventoryItem other && other != null && other.itemID == itemID && other.itemType == itemType;
     }
     
     [Serializable]
@@ -80,6 +47,15 @@ namespace GrandmaGreen.Collections {
 
         public List<Genotype> genotypes;
 
+        public Plant(ushort id, string name, Genotype genotype)
+        {
+            itemType = ItemType.Plant;
+            
+            itemID = id;
+            itemName = name;
+            genotypes = new List<Genotype>();
+            genotypes.Add(genotype);
+        }
         public Plant(ushort id, string name, int num, List<Genotype> plantGenotypes)
         {
             itemType = ItemType.Plant;
@@ -112,18 +88,19 @@ namespace GrandmaGreen.Collections {
         public string itemName { get; set; }
         
         // Amount of the object present in the inventory.
-        public int quantity => genotypes.Count;
+        public int quantity;
 
         // Array of genotypes.
-        public List<Genotype> genotypes;
-        
-        public Seed(ushort id, string name, List<Genotype> plantGenotypes)
+        public Genotype seedGenotype;
+
+        public Seed(ushort id, string name, Genotype genotype)
         {
             itemType = ItemType.Seed;
             
             itemID = id;
             itemName = name;
-            genotypes = plantGenotypes;
+            quantity = 1;
+            seedGenotype = genotype;
         }
         
         public string GetQuantityToString()
@@ -132,9 +109,55 @@ namespace GrandmaGreen.Collections {
         }
         
         public override bool Equals(object obj) =>
-            obj is IInventoryItem other && other != null && other.itemID == itemID && other.itemType == itemType;
+            obj is Seed other
+            && other.itemID == itemID
+            && other.itemType == itemType
+            && other.seedGenotype.Equals(seedGenotype);
     }
 
+    
+    [Serializable]
+    public struct Tool : IInventoryItem
+    {
+        // Item ID.
+        public ushort itemID { get; set; }
+
+        // This item type;
+        public ItemType itemType { get; set; }
+
+        // Name of object.
+        public string itemName { get; set; }
+        
+        // Amount of the object present in the inventory.
+        public int quantity;
+
+        public Tool(ushort id, string name)
+        {
+            itemType = ItemType.Tool;
+
+            itemID = id;
+            itemName = name;
+            quantity = 1;
+        }
+        
+        public Tool(ushort id, string name, int num)
+        {
+            itemType = ItemType.Tool;
+            
+            itemID = id;
+            itemName = name;
+            quantity = num;
+        }
+
+        public string GetQuantityToString()
+        {
+            return quantity.ToString();
+        }
+
+        public override bool Equals(object obj) =>
+            obj is IInventoryItem other && other != null && other.itemID == itemID && other.itemType == itemType;
+    }
+    
     [Serializable]
     public struct Decor : IInventoryItem
     {
@@ -149,6 +172,15 @@ namespace GrandmaGreen.Collections {
         
         // Amount of the object present in the inventory.
         public int quantity;
+
+        public Decor(ushort id, string name)
+        {
+            itemType = ItemType.Decor;
+
+            itemID = id;
+            itemName = name;
+            quantity = 1;
+        }
         
         public Decor(ushort id, string name, int num)
         {

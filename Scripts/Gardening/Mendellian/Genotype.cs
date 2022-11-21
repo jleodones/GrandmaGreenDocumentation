@@ -1,3 +1,4 @@
+using UnityEngine;
 using Exception = System.Exception;
 using Random = UnityEngine.Random;
 
@@ -36,6 +37,10 @@ namespace GrandmaGreen.Garden
             trait = b1 && b2 ? Trait.Dominant : (b1 || b2 ? Trait.Heterozygous : Trait.Recessive);
         }
 
+        public override bool Equals(object obj) =>
+            obj is Genotype other
+            && other.trait == trait
+            && other.size == size;
         public override string ToString()
         {
             return (a1 ? "A" : "a")
@@ -46,12 +51,38 @@ namespace GrandmaGreen.Garden
 
         public Genotype Cross(Genotype dad)
         {
-            string childGenotype = "";
+            // pre-baked punnett square lookup
+            int[][] punnettSquare = new int[][] {
+                new int[] { 0, 4, 2, 6 }, new int[] { 0, 4, 3, 6 }, new int[] { 1, 4, 2, 6 }, new int[] { 1, 4, 3, 6 },
+                new int[] { 0, 4, 2, 7 }, new int[] { 0, 4, 3, 7 }, new int[] { 1, 4, 2, 7 }, new int[] { 1, 4, 3, 7 },
+                new int[] { 0, 5, 2, 6 }, new int[] { 0, 5, 3, 6 }, new int[] { 1, 5, 2, 6 }, new int[] { 1, 5, 3, 6 },
+                new int[] { 0, 5, 2, 7 }, new int[] { 0, 5, 3, 7 }, new int[] { 1, 5, 2, 7 }, new int[] { 1, 5, 3, 7 }
+            };
+            string cross = this.ToString() + dad.ToString();
+            string child = "";
+            // debug
+            string debug = "CrossBreed Debug (Click to Expand)\n";
+            debug += "Mom: " + this.ToString() + " Dad: " + dad.ToString() + "\n";
+            debug += "Punnett Square: \n";
             for (int i = 0; i < 4; i++)
             {
-                childGenotype += (Random.value > 0.5f) ? dad.ToString()[i] : this.ToString()[i];
+                for (int j = 0; j < 4; j++)
+                {
+                    foreach (int k in punnettSquare[i*4+j])
+                    {
+                        debug += cross[k];
+		            }
+                    debug += " ";
+		        }
+                debug += "\n";
 	        }
-            return new Genotype(childGenotype);
+	        foreach (int i in punnettSquare[(int)(Random.value * punnettSquare.Length)])
+            {
+                child += cross[i];
+	        }
+            debug += "Child: " + child;
+            Debug.Log(debug);
+            return new Genotype(child);
         }
     }
 }

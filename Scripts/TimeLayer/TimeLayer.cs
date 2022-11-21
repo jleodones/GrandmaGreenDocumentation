@@ -54,6 +54,8 @@ namespace GrandmaGreen.TimeLayer
         [ContextMenu("Resume")]
         public void Resume(bool tickAccumulated = false)
         {
+            if (!paused) return;
+
             paused = false;
 
             if (!tickAccumulated) m_tickValue = 0;

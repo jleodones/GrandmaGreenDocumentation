@@ -31,7 +31,7 @@ namespace GrandmaGreen.Garden
             GardenDecorItem decorItem = Instantiate(decorItemPrefab);
 
             decorItem.decorID = decorID;
-            Sprite decorSprite = collections.GetSprite(decorID);
+            Sprite decorSprite = collections.GetSprite((ushort)decorID);
             decorItem.GetComponentInChildren<SpriteRenderer>().sprite = decorSprite;
 
             Vector3 colliderSize = decorItem.boundsCollider.size;

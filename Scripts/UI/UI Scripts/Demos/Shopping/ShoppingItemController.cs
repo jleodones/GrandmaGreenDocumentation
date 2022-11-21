@@ -14,8 +14,6 @@ namespace GrandmaGreen.UI.Shopping
         private Button m_button;
         private System.Action<ShopItem> m_clickCallback;
         private ShopItem thisItem;
-        [SerializeField] CollectionsSO collections;
-        
         public ShoppingItemController (VisualElement root, Button button, System.Action<ShopItem> clickCallback)
         {
             m_root = root;
@@ -30,10 +28,10 @@ namespace GrandmaGreen.UI.Shopping
             thisItem = shopItem;
 
             // Set the image on the item.
-            m_button.Q<VisualElement>("IconImage").style.backgroundImage = new StyleBackground(collections.GetSprite(shopItem.id));
+            m_button.Q<VisualElement>("IconImage").style.backgroundImage = new StyleBackground(thisItem.sprite);
             
             // Set the cost of the item.
-            m_root.Q<Label>("Price").text = collections.GetItem(shopItem.id).baseCost.ToString();
+            m_root.Q<Label>("Price").text = thisItem.baseCost.ToString();
         }
 
         private void OnButtonClicked()
