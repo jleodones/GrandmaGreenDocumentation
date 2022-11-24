@@ -31,7 +31,12 @@ namespace GrandmaGreen.TimeLayer
             m_previousSessionEndDateTime = default;
 
             if (!RequestData<System.DateTime>(0, ref m_previousSessionEndDateTime))
+            {
                 m_previousSessionEndDateTime = m_currentSessionInitalDataTime;
+                CreateNewStore<System.DateTime>();
+                AddComponent<System.DateTime>(0, m_previousSessionEndDateTime);
+            }
+
 
             Debug.Log("Prev Session End Time loaded as:" + m_previousSessionEndDateTime);
 
@@ -48,13 +53,13 @@ namespace GrandmaGreen.TimeLayer
             }
         }
 
-        
+
 
         public void SaveCurrentDateTime()
         {
             m_previousSessionEndDateTime = InternetDateTime();
 
-            if(!UpdateValue<System.DateTime>(0, m_previousSessionEndDateTime))
+            if (!UpdateValue<System.DateTime>(0, m_previousSessionEndDateTime))
                 Debug.Log("Could not save Session End Time");
             else
                 Debug.Log("Session End Time saved as: " + m_previousSessionEndDateTime);

@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.Tilemaps;
 using Core.Input;
 using DG.Tweening;
+using SpookuleleAudio;
 
 namespace GrandmaGreen.Garden
 {
@@ -21,8 +22,15 @@ namespace GrandmaGreen.Garden
         [SerializeField] float colliderSizeModifier = 1.05f;
         [SerializeField] float validCheckTime = 0.05f;
         [SerializeField] LayerMask decorLayerMask;
+
+        [SerializeField] Material activeMaterial;
+        [SerializeField] Material defaultMaterial;
         [SerializeField] Color validColor;
         [SerializeField] Color invalidColor;
+
+
+        public event System.Action onCustomizationStart;
+        public event System.Action onCustomizationEnd;
 
         public GardenDecorItem GenerateDecorItem() => GenerateDecorItem(debugDecor);
 
@@ -42,20 +50,26 @@ namespace GrandmaGreen.Garden
         }
 
 
+        public Vector3Int originInt;
+
         public bool CheckValidState(BoxCollider decorItem, GardenAreaController decorArea)
         {
-            Vector3Int tileBlockOrigin = Vector3Int.zero;
-            tileBlockOrigin.x = (int)(decorItem.bounds.min.x / decorArea.tilemap.cellSize.x);
-            tileBlockOrigin.y = (int)(decorItem.bounds.min.y / decorArea.tilemap.cellSize.y);
 
             Vector3Int tileBlockSize = Vector3Int.one;
-            tileBlockSize.x = (int)(decorItem.bounds.size.x / decorArea.tilemap.cellSize.x);
-            tileBlockSize.y = (int)(decorItem.bounds.size.y / decorArea.tilemap.cellSize.y);
+            tileBlockSize.x = Mathf.CeilToInt(decorItem.bounds.size.x);/// decorArea.tilemap.cellSize.x);
+            tileBlockSize.y = Mathf.CeilToInt(decorItem.bounds.size.y); /// decorArea.tilemap.cellSize.y);
+
+            Vector3Int tileBlockOrigin = Vector3Int.zero;
+            tileBlockOrigin = decorArea.tilemap.WorldToCell(decorItem.transform.position);
+            tileBlockOrigin.x -= tileBlockSize.x / 2;
+            originInt = tileBlockOrigin;
+
+
 
             BoundsInt colliderBounds = new BoundsInt(tileBlockOrigin, tileBlockSize);
 
             TileBase[] m_tileBlock = decorArea.tilemap.GetTilesBlock(colliderBounds);
-
+            Debug.Log(m_tileBlock.Length);
             foreach (TileBase tileBase in m_tileBlock)
             {
                 if (!tileStore[tileBase].pathable || tileStore[tileBase].occupied || tileStore[tileBase].plantable)
@@ -92,15 +106,17 @@ namespace GrandmaGreen.Garden
         /// <returns></returns>
         IEnumerator CustomizationStateHandler(GardenAreaController decorArea, GardenDecorItem decorItem)
         {
+            onCustomizationStart?.Invoke();
+
             WaitForSeconds waitForSeconds = new WaitForSeconds(validCheckTime);
 
             Vector3 destination = decorArea.lastSelectedPosition;
             destination.z = 0;
 
             decorItem.transform.position = destination;
-
+            decorItem.sprite.material = activeMaterial;
             decorItem.DisableInteraction();
-            Debug.Log("Customization start");
+
             bool isValid = false;
             do
             {
@@ -113,15 +129,20 @@ namespace GrandmaGreen.Garden
 
                 isValid = CheckValidState(decorItem.boundsCollider, decorArea);
 
+                decorItem.sprite.color = isValid ? validColor : invalidColor;
+
                 yield return null;
 
             } while (decorItem && pointerState.phase != PointerState.Phase.NONE);
+
+            decorItem.sprite.material = defaultMaterial;
+            decorItem.sprite.color = Color.white;
 
             decorItem.EnableInteraction();
 
             EventManager.instance.HandleEVENT_CUSTOMIZATION_END(isValid);
 
-            Debug.Log("Customization end");
+            onCustomizationEnd?.Invoke();
         }
     }
 }

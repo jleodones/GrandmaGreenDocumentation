@@ -8,6 +8,7 @@ namespace GrandmaGreen.Garden
     public class GridUI : MonoBehaviour
     {
         public PlayerToolData toolData;
+        public GardenCustomizer customizer;
         public Material gridMaterial;
         public float fadeTime = 0.5f;
         public float maxOpacity = 0.1f;
@@ -15,14 +16,21 @@ namespace GrandmaGreen.Garden
         Tween fader;
         void OnEnable()
         {
+            DisableGrid(0);
             toolData.onToolSelected += CheckTool;
+            customizer.onCustomizationStart += EnableGrid;
+            customizer.onCustomizationEnd += DisableGrid;
             CheckTool(toolData.currentTool);
+
+
         }
 
 
         void OnDisable()
         {
             toolData.onToolSelected -= CheckTool;
+            customizer.onCustomizationStart -= EnableGrid;
+            customizer.onCustomizationEnd -= DisableGrid;
             DisableGrid(0);
         }
 
@@ -38,6 +46,17 @@ namespace GrandmaGreen.Garden
             }
         }
 
+        public void EnableGrid()
+        {
+            if (!gridActive)
+                EnableGrid(fadeTime);
+        }
+
+        public void DisableGrid()
+        {
+            if (toolData.currentTool.toolIndex == 0 && gridActive)
+                DisableGrid(fadeTime);
+        }
 
         void EnableGrid(float time)
         {

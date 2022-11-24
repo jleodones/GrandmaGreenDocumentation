@@ -17,6 +17,7 @@ namespace GrandmaGreen
     {
         protected static GrandmaGreenGameState s_Instance;
 
+        [SerializeField] GameSettingsData settingsData;
         [SerializeField] CollectionsSO collectionsData;
         [SerializeField] AreaServices areaServicer;
         [SerializeField] TimeLayerClock timeClock;
@@ -68,6 +69,7 @@ namespace GrandmaGreen
 
         void InitalizeState()
         {
+            settingsData.LoadSettings();
             UIdisplayRules.Initalize();
             collectionsData.LoadCollections();
             areaServicer.StartServices();
@@ -76,6 +78,7 @@ namespace GrandmaGreen
 
         void ReleaseState()
         {
+            settingsData.SaveSettings();
             UIdisplayRules.Release();
             collectionsData.UnloadCollections();
             timeClock.SaveCurrentDateTime();

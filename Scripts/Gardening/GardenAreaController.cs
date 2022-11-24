@@ -21,14 +21,14 @@ namespace GrandmaGreen.Garden
         [Header("Garden Management")]
         public GardenManager gardenManager;
         public GardenCustomizer gardenCustomizer;
+        public Cinemachine.CinemachineVirtualCamera customizationCamera;
         public GameObject defaultPlantPrefab;
         public Dictionary<Vector3Int, GameObject> plantPrefabLookup;
         public List<Collider> decorList;
         public List<PlantState> plantListDebug;
         public TileStore tileStore;
 
-        [Header("Golem Management")]
-        public GolemManager golemManager;
+        bool returnFromPause = true;
 
         [Header("Temporary Effects")]
         public bool DEBUG_CUSTOMIZATION = false;
@@ -39,16 +39,17 @@ namespace GrandmaGreen.Garden
         public override void Awake()
         {
             base.Awake();
-            golemManager.Initialize();
             collection.DEBUGLoadPlantProperties();
             gardenManager.RegisterGarden(areaIndex);
-
 
             gardenManager.timers[areaIndex].Pause();
         }
 
         void OnEnable()
         {
+            gardenManager.timers[areaIndex].Resume(true);
+            gardenManager.timers[areaIndex].onTick += IncrementTimer;
+
             onTilemapSelection += GardenTileSelected;
             EventManager.instance.EVENT_PLANT_UPDATE += PlantUpdate;
 
@@ -60,10 +61,6 @@ namespace GrandmaGreen.Garden
             RefreshGarden();
 
             EventManager.instance.HandleEVENT_INVENTORY_ADD_DECOR((ushort)DecorationId.Flamingo);
-
-            gardenManager.timers[areaIndex].onTick += IncrementTimer;
-            gardenManager.timers[areaIndex].Resume(true);
-
         }
 
         void OnDisable()
@@ -76,6 +73,7 @@ namespace GrandmaGreen.Garden
 
             gardenManager.timers[areaIndex].Pause();
             gardenManager.timers[areaIndex].onTick -= IncrementTimer;
+            returnFromPause = true;
         }
 
         #region Input
@@ -203,11 +201,14 @@ namespace GrandmaGreen.Garden
 
             foreach (PlantState plant in plantList)
             {
+                gardenManager.IncrementWaterTimer(areaIndex, plant.cell, value);
+
                 if (plant.waterTimer == collection.GetPlant(plant.type).growthTime)
                 {
                     Debug.Log("Plant is ready for water");
                 }
-                else if (plant.waterTimer == gardenManager.WiltTime) //>= 240)
+                else if (plant.waterTimer == gardenManager.WiltTime
+                    || (gardenManager.PlantIsWilted(areaIndex, plant.cell) && returnFromPause)) //>= 240)
                 {
                     // Wilted
                     // Debug.Log("Plant is wilted");
@@ -219,7 +220,8 @@ namespace GrandmaGreen.Garden
                 }
                 else if (!gardenManager.PlantIsFullyGrown(areaIndex, plant.cell))
                 {
-                    if (plant.waterTimer == gardenManager.DeathTime) //>= 336)
+                    if (plant.waterTimer == gardenManager.DeathTime
+                        || (gardenManager.PlantIsDead(areaIndex, plant.cell) && returnFromPause)) //>= 336)
                     {
                         // Dead
                         // Debug.Log("Plant is dead");
@@ -231,8 +233,6 @@ namespace GrandmaGreen.Garden
                     }
                 }
 
-                gardenManager.IncrementWaterTimer(areaIndex, plant.cell, value);
-
                 if (plant.waterStage == 1
                     && plant.waterTimer >= collection.GetPlant(plant.type).growthTime)
                 {
@@ -241,7 +241,11 @@ namespace GrandmaGreen.Garden
 
                     UpdateSprite(plant.cell);
                 }
+
+                if (returnFromPause) UpdateSprite(plant.cell);
             }
+
+            if (returnFromPause) returnFromPause = false;
         }
 
         public void WaterPlant(Vector3Int cell)
@@ -441,12 +445,17 @@ namespace GrandmaGreen.Garden
             m_OriginalPosition = m_CurrentDecorItem.transform.position;
             lastDraggedPosition = m_OriginalPosition;
 
+            customizationCamera.gameObject.SetActive(true);
+            playerController.entity.gameObject.SetActive(false);
+
             gardenCustomizer.EnterCustomizationState(this, m_CurrentDecorItem);
         }
 
         public void ExitCustomizationMode(bool successful)
         {
             DEBUG_CUSTOMIZATION = false;
+            customizationCamera.gameObject.SetActive(false);
+            playerController.entity.gameObject.SetActive(true);
 
             if (successful)
             {

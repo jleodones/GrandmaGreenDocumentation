@@ -23,7 +23,7 @@ namespace GrandmaGreen
             }
         }
 
-        // HUD events and handlers.
+        #region  HUD events and handlers.
         public event Action EVENT_OPEN_HUD;
         public event Action EVENT_OPEN_HUD_ANIMATED;
         public event Action EVENT_CLOSE_HUD;
@@ -53,8 +53,9 @@ namespace GrandmaGreen
         {
             EVENT_UPDATE_MONEY_DISPLAY?.Invoke();
         }
+        #endregion
 
-        // Inventory related events and handlers.
+        #region Inventory related events and handlers.
         public event Action EVENT_INVENTORY_OPEN;
         
         public event Action<ushort, Genotype> EVENT_INVENTORY_ADD_PLANT;
@@ -80,8 +81,9 @@ namespace GrandmaGreen
         public event Action<int> EVENT_INVENTORY_ADD_MONEY;
         public event Action<int> EVENT_INVENTORY_REMOVE_MONEY;
         public event Func<int> EVENT_INVENTORY_GET_MONEY;
-        
-        // Customization.
+        #endregion
+
+        #region  Customization.
         public event Action<IInventoryItem> EVENT_CUSTOMIZATION_START;
         public event Action<bool> EVENT_CUSTOMIZATION_END;
 
@@ -146,13 +148,16 @@ namespace GrandmaGreen
         {
             return EVENT_INVENTORY_GET_MONEY();
         }
+        #endregion
 
-        // Golem events and handlers.
-        public event Action<int, Vector3> EVENT_GOLEM_SPAWN;
+        #region  Golem events and handlers.
+        public event Action<ushort, Vector3> EVENT_GOLEM_SPAWN;
 
-        public void HandleEVENT_GOLEM_SPAWN(int id, Vector3 pos) { EVENT_GOLEM_SPAWN?.Invoke(id, pos); }
+        public void HandleEVENT_GOLEM_SPAWN(ushort id, Vector3 pos) { EVENT_GOLEM_SPAWN?.Invoke(id, pos); }
 
-        // Plant growth event.
+        #endregion
+
+        #region Plant growth event.
         public event Action<int, Vector3Int> EVENT_PLANT_UPDATE;
 
         public void HandleEVENT_PLANT_UPDATE(int areaIndex, Vector3Int cell)
@@ -169,6 +174,8 @@ namespace GrandmaGreen
         {
             EVENT_CUSTOMIZATION_END?.Invoke(successful);
         }
+
+        #endregion
     }
 }
 

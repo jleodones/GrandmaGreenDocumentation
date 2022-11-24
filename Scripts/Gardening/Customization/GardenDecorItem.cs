@@ -9,6 +9,7 @@ namespace GrandmaGreen.Garden
     {
         public Collider interactable;
         public BoxCollider boundsCollider;
+        public SpriteRenderer sprite;
         public Collections.DecorationId decorID;
         [SerializeField] GardenCustomizer customizer;
 
@@ -18,5 +19,18 @@ namespace GrandmaGreen.Garden
 
         public void EnableInteraction() => interactable.enabled = true;
         public void DisableInteraction() => interactable.enabled = false;
+
+        
+        void OnEnable()
+        {
+            customizer.onCustomizationStart += DisableInteraction;
+            customizer.onCustomizationEnd += EnableInteraction;
+        }
+
+        void OnDisable()
+        {
+            customizer.onCustomizationStart -= DisableInteraction;
+            customizer.onCustomizationEnd -= EnableInteraction;
+        }
     }
 }
