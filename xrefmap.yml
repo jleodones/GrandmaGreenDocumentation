@@ -1,6 +1,50 @@
 ### YamlMime:XRefMap
 sorted: true
 references:
+- uid: GardenmaGreen.Entities
+  name: GardenmaGreen.Entities
+  href: api/GardenmaGreen.Entities.html
+  commentId: N:GardenmaGreen.Entities
+  fullName: GardenmaGreen.Entities
+  nameWithType: GardenmaGreen.Entities
+- uid: GardenmaGreen.Entities.GolemCrowdController
+  name: GolemCrowdController
+  href: api/GardenmaGreen.Entities.GolemCrowdController.html
+  commentId: T:GardenmaGreen.Entities.GolemCrowdController
+  fullName: GardenmaGreen.Entities.GolemCrowdController
+  nameWithType: GolemCrowdController
+- uid: GardenmaGreen.Entities.GolemCrowdController.Awake
+  name: Awake()
+  href: api/GardenmaGreen.Entities.GolemCrowdController.html#GardenmaGreen_Entities_GolemCrowdController_Awake
+  commentId: M:GardenmaGreen.Entities.GolemCrowdController.Awake
+  fullName: GardenmaGreen.Entities.GolemCrowdController.Awake()
+  nameWithType: GolemCrowdController.Awake()
+- uid: GardenmaGreen.Entities.GolemCrowdController.Awake*
+  name: Awake
+  href: api/GardenmaGreen.Entities.GolemCrowdController.html#GardenmaGreen_Entities_GolemCrowdController_Awake_
+  commentId: Overload:GardenmaGreen.Entities.GolemCrowdController.Awake
+  isSpec: "True"
+  fullName: GardenmaGreen.Entities.GolemCrowdController.Awake
+  nameWithType: GolemCrowdController.Awake
+- uid: GardenmaGreen.Entities.GolemCrowdController.golemManager
+  name: golemManager
+  href: api/GardenmaGreen.Entities.GolemCrowdController.html#GardenmaGreen_Entities_GolemCrowdController_golemManager
+  commentId: F:GardenmaGreen.Entities.GolemCrowdController.golemManager
+  fullName: GardenmaGreen.Entities.GolemCrowdController.golemManager
+  nameWithType: GolemCrowdController.golemManager
+- uid: GardenmaGreen.Entities.GolemCrowdController.spawnAGolem
+  name: spawnAGolem()
+  href: api/GardenmaGreen.Entities.GolemCrowdController.html#GardenmaGreen_Entities_GolemCrowdController_spawnAGolem
+  commentId: M:GardenmaGreen.Entities.GolemCrowdController.spawnAGolem
+  fullName: GardenmaGreen.Entities.GolemCrowdController.spawnAGolem()
+  nameWithType: GolemCrowdController.spawnAGolem()
+- uid: GardenmaGreen.Entities.GolemCrowdController.spawnAGolem*
+  name: spawnAGolem
+  href: api/GardenmaGreen.Entities.GolemCrowdController.html#GardenmaGreen_Entities_GolemCrowdController_spawnAGolem_
+  commentId: Overload:GardenmaGreen.Entities.GolemCrowdController.spawnAGolem
+  isSpec: "True"
+  fullName: GardenmaGreen.Entities.GolemCrowdController.spawnAGolem
+  nameWithType: GolemCrowdController.spawnAGolem
 - uid: Global
   name: Global
   href: api/Global.html
@@ -3864,12 +3908,12 @@ references:
   commentId: T:GrandmaGreen.Entities.GolemManager
   fullName: GrandmaGreen.Entities.GolemManager
   nameWithType: GolemManager
-- uid: GrandmaGreen.Entities.GolemManager.CreateGolem(CharacterId)
-  name: CreateGolem(CharacterId)
-  href: api/GrandmaGreen.Entities.GolemManager.html#GrandmaGreen_Entities_GolemManager_CreateGolem_CharacterId_
-  commentId: M:GrandmaGreen.Entities.GolemManager.CreateGolem(CharacterId)
-  fullName: GrandmaGreen.Entities.GolemManager.CreateGolem(CharacterId)
-  nameWithType: GolemManager.CreateGolem(CharacterId)
+- uid: GrandmaGreen.Entities.GolemManager.CreateGolem(System.UInt16)
+  name: CreateGolem(UInt16)
+  href: api/GrandmaGreen.Entities.GolemManager.html#GrandmaGreen_Entities_GolemManager_CreateGolem_System_UInt16_
+  commentId: M:GrandmaGreen.Entities.GolemManager.CreateGolem(System.UInt16)
+  fullName: GrandmaGreen.Entities.GolemManager.CreateGolem(System.UInt16)
+  nameWithType: GolemManager.CreateGolem(UInt16)
 - uid: GrandmaGreen.Entities.GolemManager.CreateGolem*
   name: CreateGolem
   href: api/GrandmaGreen.Entities.GolemManager.html#GrandmaGreen_Entities_GolemManager_CreateGolem_
@@ -3877,12 +3921,6 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Entities.GolemManager.CreateGolem
   nameWithType: GolemManager.CreateGolem
-- uid: GrandmaGreen.Entities.GolemManager.golemObjectTable
-  name: golemObjectTable
-  href: api/GrandmaGreen.Entities.GolemManager.html#GrandmaGreen_Entities_GolemManager_golemObjectTable
-  commentId: F:GrandmaGreen.Entities.GolemManager.golemObjectTable
-  fullName: GrandmaGreen.Entities.GolemManager.golemObjectTable
-  nameWithType: GolemManager.golemObjectTable
 - uid: GrandmaGreen.Entities.GolemManager.golemPrefabs
   name: golemPrefabs
   href: api/GrandmaGreen.Entities.GolemManager.html#GrandmaGreen_Entities_GolemManager_golemPrefabs
@@ -3921,12 +3959,12 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Entities.GolemManager.OnDestroy
   nameWithType: GolemManager.OnDestroy
-- uid: GrandmaGreen.Entities.GolemManager.OnGolemSpawn(System.Int32,Vector3)
-  name: OnGolemSpawn(Int32, Vector3)
-  href: api/GrandmaGreen.Entities.GolemManager.html#GrandmaGreen_Entities_GolemManager_OnGolemSpawn_System_Int32_Vector3_
-  commentId: M:GrandmaGreen.Entities.GolemManager.OnGolemSpawn(System.Int32,Vector3)
-  fullName: GrandmaGreen.Entities.GolemManager.OnGolemSpawn(System.Int32, Vector3)
-  nameWithType: GolemManager.OnGolemSpawn(Int32, Vector3)
+- uid: GrandmaGreen.Entities.GolemManager.OnGolemSpawn(System.UInt16,Vector3)
+  name: OnGolemSpawn(UInt16, Vector3)
+  href: api/GrandmaGreen.Entities.GolemManager.html#GrandmaGreen_Entities_GolemManager_OnGolemSpawn_System_UInt16_Vector3_
+  commentId: M:GrandmaGreen.Entities.GolemManager.OnGolemSpawn(System.UInt16,Vector3)
+  fullName: GrandmaGreen.Entities.GolemManager.OnGolemSpawn(System.UInt16, Vector3)
+  nameWithType: GolemManager.OnGolemSpawn(UInt16, Vector3)
 - uid: GrandmaGreen.Entities.GolemManager.OnGolemSpawn*
   name: OnGolemSpawn
   href: api/GrandmaGreen.Entities.GolemManager.html#GrandmaGreen_Entities_GolemManager_OnGolemSpawn_
@@ -4191,12 +4229,12 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.EventManager.HandleEVENT_CUSTOMIZATION_START
   nameWithType: EventManager.HandleEVENT_CUSTOMIZATION_START
-- uid: GrandmaGreen.EventManager.HandleEVENT_GOLEM_SPAWN(System.Int32,Vector3)
-  name: HandleEVENT_GOLEM_SPAWN(Int32, Vector3)
-  href: api/GrandmaGreen.EventManager.html#GrandmaGreen_EventManager_HandleEVENT_GOLEM_SPAWN_System_Int32_Vector3_
-  commentId: M:GrandmaGreen.EventManager.HandleEVENT_GOLEM_SPAWN(System.Int32,Vector3)
-  fullName: GrandmaGreen.EventManager.HandleEVENT_GOLEM_SPAWN(System.Int32, Vector3)
-  nameWithType: EventManager.HandleEVENT_GOLEM_SPAWN(Int32, Vector3)
+- uid: GrandmaGreen.EventManager.HandleEVENT_GOLEM_SPAWN(System.UInt16,Vector3)
+  name: HandleEVENT_GOLEM_SPAWN(UInt16, Vector3)
+  href: api/GrandmaGreen.EventManager.html#GrandmaGreen_EventManager_HandleEVENT_GOLEM_SPAWN_System_UInt16_Vector3_
+  commentId: M:GrandmaGreen.EventManager.HandleEVENT_GOLEM_SPAWN(System.UInt16,Vector3)
+  fullName: GrandmaGreen.EventManager.HandleEVENT_GOLEM_SPAWN(System.UInt16, Vector3)
+  nameWithType: EventManager.HandleEVENT_GOLEM_SPAWN(UInt16, Vector3)
 - uid: GrandmaGreen.EventManager.HandleEVENT_GOLEM_SPAWN*
   name: HandleEVENT_GOLEM_SPAWN
   href: api/GrandmaGreen.EventManager.html#GrandmaGreen_EventManager_HandleEVENT_GOLEM_SPAWN_
@@ -4418,12 +4456,6 @@ references:
   commentId: F:GrandmaGreen.EventManager.instance
   fullName: GrandmaGreen.EventManager.instance
   nameWithType: EventManager.instance
-- uid: GrandmaGreen.FlowerController
-  name: FlowerController
-  href: api/GrandmaGreen.FlowerController.html
-  commentId: T:GrandmaGreen.FlowerController
-  fullName: GrandmaGreen.FlowerController
-  nameWithType: FlowerController
 - uid: GrandmaGreen.GamePortalTile
   name: GamePortalTile
   href: api/GrandmaGreen.GamePortalTile.html
@@ -4467,6 +4499,192 @@ references:
   commentId: F:GrandmaGreen.GameScenePortal.toLoad
   fullName: GrandmaGreen.GameScenePortal.toLoad
   nameWithType: GameScenePortal.toLoad
+- uid: GrandmaGreen.GameSettingsData
+  name: GameSettingsData
+  href: api/GrandmaGreen.GameSettingsData.html
+  commentId: T:GrandmaGreen.GameSettingsData
+  fullName: GrandmaGreen.GameSettingsData
+  nameWithType: GameSettingsData
+- uid: GrandmaGreen.GameSettingsData.batterySaverParameter
+  name: batterySaverParameter
+  href: api/GrandmaGreen.GameSettingsData.html#GrandmaGreen_GameSettingsData_batterySaverParameter
+  commentId: F:GrandmaGreen.GameSettingsData.batterySaverParameter
+  fullName: GrandmaGreen.GameSettingsData.batterySaverParameter
+  nameWithType: GameSettingsData.batterySaverParameter
+- uid: GrandmaGreen.GameSettingsData.Current
+  name: Current
+  href: api/GrandmaGreen.GameSettingsData.html#GrandmaGreen_GameSettingsData_Current
+  commentId: P:GrandmaGreen.GameSettingsData.Current
+  fullName: GrandmaGreen.GameSettingsData.Current
+  nameWithType: GameSettingsData.Current
+- uid: GrandmaGreen.GameSettingsData.Current*
+  name: Current
+  href: api/GrandmaGreen.GameSettingsData.html#GrandmaGreen_GameSettingsData_Current_
+  commentId: Overload:GrandmaGreen.GameSettingsData.Current
+  isSpec: "True"
+  fullName: GrandmaGreen.GameSettingsData.Current
+  nameWithType: GameSettingsData.Current
+- uid: GrandmaGreen.GameSettingsData.DisableBatterySaverMode
+  name: DisableBatterySaverMode()
+  href: api/GrandmaGreen.GameSettingsData.html#GrandmaGreen_GameSettingsData_DisableBatterySaverMode
+  commentId: M:GrandmaGreen.GameSettingsData.DisableBatterySaverMode
+  fullName: GrandmaGreen.GameSettingsData.DisableBatterySaverMode()
+  nameWithType: GameSettingsData.DisableBatterySaverMode()
+- uid: GrandmaGreen.GameSettingsData.DisableBatterySaverMode*
+  name: DisableBatterySaverMode
+  href: api/GrandmaGreen.GameSettingsData.html#GrandmaGreen_GameSettingsData_DisableBatterySaverMode_
+  commentId: Overload:GrandmaGreen.GameSettingsData.DisableBatterySaverMode
+  isSpec: "True"
+  fullName: GrandmaGreen.GameSettingsData.DisableBatterySaverMode
+  nameWithType: GameSettingsData.DisableBatterySaverMode
+- uid: GrandmaGreen.GameSettingsData.EnableBatterySaverMode
+  name: EnableBatterySaverMode()
+  href: api/GrandmaGreen.GameSettingsData.html#GrandmaGreen_GameSettingsData_EnableBatterySaverMode
+  commentId: M:GrandmaGreen.GameSettingsData.EnableBatterySaverMode
+  fullName: GrandmaGreen.GameSettingsData.EnableBatterySaverMode()
+  nameWithType: GameSettingsData.EnableBatterySaverMode()
+- uid: GrandmaGreen.GameSettingsData.EnableBatterySaverMode*
+  name: EnableBatterySaverMode
+  href: api/GrandmaGreen.GameSettingsData.html#GrandmaGreen_GameSettingsData_EnableBatterySaverMode_
+  commentId: Overload:GrandmaGreen.GameSettingsData.EnableBatterySaverMode
+  isSpec: "True"
+  fullName: GrandmaGreen.GameSettingsData.EnableBatterySaverMode
+  nameWithType: GameSettingsData.EnableBatterySaverMode
+- uid: GrandmaGreen.GameSettingsData.LoadSettings
+  name: LoadSettings()
+  href: api/GrandmaGreen.GameSettingsData.html#GrandmaGreen_GameSettingsData_LoadSettings
+  commentId: M:GrandmaGreen.GameSettingsData.LoadSettings
+  fullName: GrandmaGreen.GameSettingsData.LoadSettings()
+  nameWithType: GameSettingsData.LoadSettings()
+- uid: GrandmaGreen.GameSettingsData.LoadSettings*
+  name: LoadSettings
+  href: api/GrandmaGreen.GameSettingsData.html#GrandmaGreen_GameSettingsData_LoadSettings_
+  commentId: Overload:GrandmaGreen.GameSettingsData.LoadSettings
+  isSpec: "True"
+  fullName: GrandmaGreen.GameSettingsData.LoadSettings
+  nameWithType: GameSettingsData.LoadSettings
+- uid: GrandmaGreen.GameSettingsData.masterVolumeParameter
+  name: masterVolumeParameter
+  href: api/GrandmaGreen.GameSettingsData.html#GrandmaGreen_GameSettingsData_masterVolumeParameter
+  commentId: F:GrandmaGreen.GameSettingsData.masterVolumeParameter
+  fullName: GrandmaGreen.GameSettingsData.masterVolumeParameter
+  nameWithType: GameSettingsData.masterVolumeParameter
+- uid: GrandmaGreen.GameSettingsData.musicVolumeParameter
+  name: musicVolumeParameter
+  href: api/GrandmaGreen.GameSettingsData.html#GrandmaGreen_GameSettingsData_musicVolumeParameter
+  commentId: F:GrandmaGreen.GameSettingsData.musicVolumeParameter
+  fullName: GrandmaGreen.GameSettingsData.musicVolumeParameter
+  nameWithType: GameSettingsData.musicVolumeParameter
+- uid: GrandmaGreen.GameSettingsData.muted
+  name: muted
+  href: api/GrandmaGreen.GameSettingsData.html#GrandmaGreen_GameSettingsData_muted
+  commentId: P:GrandmaGreen.GameSettingsData.muted
+  fullName: GrandmaGreen.GameSettingsData.muted
+  nameWithType: GameSettingsData.muted
+- uid: GrandmaGreen.GameSettingsData.muted*
+  name: muted
+  href: api/GrandmaGreen.GameSettingsData.html#GrandmaGreen_GameSettingsData_muted_
+  commentId: Overload:GrandmaGreen.GameSettingsData.muted
+  isSpec: "True"
+  fullName: GrandmaGreen.GameSettingsData.muted
+  nameWithType: GameSettingsData.muted
+- uid: GrandmaGreen.GameSettingsData.MuteMasterVolume
+  name: MuteMasterVolume()
+  href: api/GrandmaGreen.GameSettingsData.html#GrandmaGreen_GameSettingsData_MuteMasterVolume
+  commentId: M:GrandmaGreen.GameSettingsData.MuteMasterVolume
+  fullName: GrandmaGreen.GameSettingsData.MuteMasterVolume()
+  nameWithType: GameSettingsData.MuteMasterVolume()
+- uid: GrandmaGreen.GameSettingsData.MuteMasterVolume*
+  name: MuteMasterVolume
+  href: api/GrandmaGreen.GameSettingsData.html#GrandmaGreen_GameSettingsData_MuteMasterVolume_
+  commentId: Overload:GrandmaGreen.GameSettingsData.MuteMasterVolume
+  isSpec: "True"
+  fullName: GrandmaGreen.GameSettingsData.MuteMasterVolume
+  nameWithType: GameSettingsData.MuteMasterVolume
+- uid: GrandmaGreen.GameSettingsData.SaveSettings
+  name: SaveSettings()
+  href: api/GrandmaGreen.GameSettingsData.html#GrandmaGreen_GameSettingsData_SaveSettings
+  commentId: M:GrandmaGreen.GameSettingsData.SaveSettings
+  fullName: GrandmaGreen.GameSettingsData.SaveSettings()
+  nameWithType: GameSettingsData.SaveSettings()
+- uid: GrandmaGreen.GameSettingsData.SaveSettings*
+  name: SaveSettings
+  href: api/GrandmaGreen.GameSettingsData.html#GrandmaGreen_GameSettingsData_SaveSettings_
+  commentId: Overload:GrandmaGreen.GameSettingsData.SaveSettings
+  isSpec: "True"
+  fullName: GrandmaGreen.GameSettingsData.SaveSettings
+  nameWithType: GameSettingsData.SaveSettings
+- uid: GrandmaGreen.GameSettingsData.SetBatterySaverMode(System.Boolean)
+  name: SetBatterySaverMode(Boolean)
+  href: api/GrandmaGreen.GameSettingsData.html#GrandmaGreen_GameSettingsData_SetBatterySaverMode_System_Boolean_
+  commentId: M:GrandmaGreen.GameSettingsData.SetBatterySaverMode(System.Boolean)
+  fullName: GrandmaGreen.GameSettingsData.SetBatterySaverMode(System.Boolean)
+  nameWithType: GameSettingsData.SetBatterySaverMode(Boolean)
+- uid: GrandmaGreen.GameSettingsData.SetBatterySaverMode*
+  name: SetBatterySaverMode
+  href: api/GrandmaGreen.GameSettingsData.html#GrandmaGreen_GameSettingsData_SetBatterySaverMode_
+  commentId: Overload:GrandmaGreen.GameSettingsData.SetBatterySaverMode
+  isSpec: "True"
+  fullName: GrandmaGreen.GameSettingsData.SetBatterySaverMode
+  nameWithType: GameSettingsData.SetBatterySaverMode
+- uid: GrandmaGreen.GameSettingsData.SetMasterVolume(System.Single)
+  name: SetMasterVolume(Single)
+  href: api/GrandmaGreen.GameSettingsData.html#GrandmaGreen_GameSettingsData_SetMasterVolume_System_Single_
+  commentId: M:GrandmaGreen.GameSettingsData.SetMasterVolume(System.Single)
+  fullName: GrandmaGreen.GameSettingsData.SetMasterVolume(System.Single)
+  nameWithType: GameSettingsData.SetMasterVolume(Single)
+- uid: GrandmaGreen.GameSettingsData.SetMasterVolume*
+  name: SetMasterVolume
+  href: api/GrandmaGreen.GameSettingsData.html#GrandmaGreen_GameSettingsData_SetMasterVolume_
+  commentId: Overload:GrandmaGreen.GameSettingsData.SetMasterVolume
+  isSpec: "True"
+  fullName: GrandmaGreen.GameSettingsData.SetMasterVolume
+  nameWithType: GameSettingsData.SetMasterVolume
+- uid: GrandmaGreen.GameSettingsData.SetMusicVolume(System.Single)
+  name: SetMusicVolume(Single)
+  href: api/GrandmaGreen.GameSettingsData.html#GrandmaGreen_GameSettingsData_SetMusicVolume_System_Single_
+  commentId: M:GrandmaGreen.GameSettingsData.SetMusicVolume(System.Single)
+  fullName: GrandmaGreen.GameSettingsData.SetMusicVolume(System.Single)
+  nameWithType: GameSettingsData.SetMusicVolume(Single)
+- uid: GrandmaGreen.GameSettingsData.SetMusicVolume*
+  name: SetMusicVolume
+  href: api/GrandmaGreen.GameSettingsData.html#GrandmaGreen_GameSettingsData_SetMusicVolume_
+  commentId: Overload:GrandmaGreen.GameSettingsData.SetMusicVolume
+  isSpec: "True"
+  fullName: GrandmaGreen.GameSettingsData.SetMusicVolume
+  nameWithType: GameSettingsData.SetMusicVolume
+- uid: GrandmaGreen.GameSettingsData.SetSFXVolume(System.Single)
+  name: SetSFXVolume(Single)
+  href: api/GrandmaGreen.GameSettingsData.html#GrandmaGreen_GameSettingsData_SetSFXVolume_System_Single_
+  commentId: M:GrandmaGreen.GameSettingsData.SetSFXVolume(System.Single)
+  fullName: GrandmaGreen.GameSettingsData.SetSFXVolume(System.Single)
+  nameWithType: GameSettingsData.SetSFXVolume(Single)
+- uid: GrandmaGreen.GameSettingsData.SetSFXVolume*
+  name: SetSFXVolume
+  href: api/GrandmaGreen.GameSettingsData.html#GrandmaGreen_GameSettingsData_SetSFXVolume_
+  commentId: Overload:GrandmaGreen.GameSettingsData.SetSFXVolume
+  isSpec: "True"
+  fullName: GrandmaGreen.GameSettingsData.SetSFXVolume
+  nameWithType: GameSettingsData.SetSFXVolume
+- uid: GrandmaGreen.GameSettingsData.sfxVolumeParameter
+  name: sfxVolumeParameter
+  href: api/GrandmaGreen.GameSettingsData.html#GrandmaGreen_GameSettingsData_sfxVolumeParameter
+  commentId: F:GrandmaGreen.GameSettingsData.sfxVolumeParameter
+  fullName: GrandmaGreen.GameSettingsData.sfxVolumeParameter
+  nameWithType: GameSettingsData.sfxVolumeParameter
+- uid: GrandmaGreen.GameSettingsData.UnmuteMasterVolume
+  name: UnmuteMasterVolume()
+  href: api/GrandmaGreen.GameSettingsData.html#GrandmaGreen_GameSettingsData_UnmuteMasterVolume
+  commentId: M:GrandmaGreen.GameSettingsData.UnmuteMasterVolume
+  fullName: GrandmaGreen.GameSettingsData.UnmuteMasterVolume()
+  nameWithType: GameSettingsData.UnmuteMasterVolume()
+- uid: GrandmaGreen.GameSettingsData.UnmuteMasterVolume*
+  name: UnmuteMasterVolume
+  href: api/GrandmaGreen.GameSettingsData.html#GrandmaGreen_GameSettingsData_UnmuteMasterVolume_
+  commentId: Overload:GrandmaGreen.GameSettingsData.UnmuteMasterVolume
+  isSpec: "True"
+  fullName: GrandmaGreen.GameSettingsData.UnmuteMasterVolume
+  nameWithType: GameSettingsData.UnmuteMasterVolume
 - uid: GrandmaGreen.GameSystemDummy
   name: GameSystemDummy
   href: api/GrandmaGreen.GameSystemDummy.html
@@ -4665,6 +4883,12 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Garden.GardenAreaController.CrossBreedTest
   nameWithType: GardenAreaController.CrossBreedTest
+- uid: GrandmaGreen.Garden.GardenAreaController.customizationCamera
+  name: customizationCamera
+  href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_customizationCamera
+  commentId: F:GrandmaGreen.Garden.GardenAreaController.customizationCamera
+  fullName: GrandmaGreen.Garden.GardenAreaController.customizationCamera
+  nameWithType: GardenAreaController.customizationCamera
 - uid: GrandmaGreen.Garden.GardenAreaController.DEBUG_CUSTOMIZATION
   name: DEBUG_CUSTOMIZATION
   href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_DEBUG_CUSTOMIZATION
@@ -4804,12 +5028,6 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Garden.GardenAreaController.GenotypeTest
   nameWithType: GardenAreaController.GenotypeTest
-- uid: GrandmaGreen.Garden.GardenAreaController.golemManager
-  name: golemManager
-  href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_golemManager
-  commentId: F:GrandmaGreen.Garden.GardenAreaController.golemManager
-  fullName: GrandmaGreen.Garden.GardenAreaController.golemManager
-  nameWithType: GardenAreaController.golemManager
 - uid: GrandmaGreen.Garden.GardenAreaController.HarvestPlant(Vector3Int)
   name: HarvestPlant(Vector3Int)
   href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_HarvestPlant_Vector3Int_
@@ -5034,6 +5252,24 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Garden.GardenCustomizer.GenerateDecorItem
   nameWithType: GardenCustomizer.GenerateDecorItem
+- uid: GrandmaGreen.Garden.GardenCustomizer.onCustomizationEnd
+  name: onCustomizationEnd
+  href: api/GrandmaGreen.Garden.GardenCustomizer.html#GrandmaGreen_Garden_GardenCustomizer_onCustomizationEnd
+  commentId: E:GrandmaGreen.Garden.GardenCustomizer.onCustomizationEnd
+  fullName: GrandmaGreen.Garden.GardenCustomizer.onCustomizationEnd
+  nameWithType: GardenCustomizer.onCustomizationEnd
+- uid: GrandmaGreen.Garden.GardenCustomizer.onCustomizationStart
+  name: onCustomizationStart
+  href: api/GrandmaGreen.Garden.GardenCustomizer.html#GrandmaGreen_Garden_GardenCustomizer_onCustomizationStart
+  commentId: E:GrandmaGreen.Garden.GardenCustomizer.onCustomizationStart
+  fullName: GrandmaGreen.Garden.GardenCustomizer.onCustomizationStart
+  nameWithType: GardenCustomizer.onCustomizationStart
+- uid: GrandmaGreen.Garden.GardenCustomizer.originInt
+  name: originInt
+  href: api/GrandmaGreen.Garden.GardenCustomizer.html#GrandmaGreen_Garden_GardenCustomizer_originInt
+  commentId: F:GrandmaGreen.Garden.GardenCustomizer.originInt
+  fullName: GrandmaGreen.Garden.GardenCustomizer.originInt
+  nameWithType: GardenCustomizer.originInt
 - uid: GrandmaGreen.Garden.GardenDecorItem
   name: GardenDecorItem
   href: api/GrandmaGreen.Garden.GardenDecorItem.html
@@ -5103,6 +5339,12 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Garden.GardenDecorItem.SendInteractionAction
   nameWithType: GardenDecorItem.SendInteractionAction
+- uid: GrandmaGreen.Garden.GardenDecorItem.sprite
+  name: sprite
+  href: api/GrandmaGreen.Garden.GardenDecorItem.html#GrandmaGreen_Garden_GardenDecorItem_sprite
+  commentId: F:GrandmaGreen.Garden.GardenDecorItem.sprite
+  fullName: GrandmaGreen.Garden.GardenDecorItem.sprite
+  nameWithType: GardenDecorItem.sprite
 - uid: GrandmaGreen.Garden.GardenManager
   name: GardenManager
   href: api/GrandmaGreen.Garden.GardenManager.html
@@ -5790,6 +6032,38 @@ references:
   commentId: T:GrandmaGreen.Garden.GridUI
   fullName: GrandmaGreen.Garden.GridUI
   nameWithType: GridUI
+- uid: GrandmaGreen.Garden.GridUI.customizer
+  name: customizer
+  href: api/GrandmaGreen.Garden.GridUI.html#GrandmaGreen_Garden_GridUI_customizer
+  commentId: F:GrandmaGreen.Garden.GridUI.customizer
+  fullName: GrandmaGreen.Garden.GridUI.customizer
+  nameWithType: GridUI.customizer
+- uid: GrandmaGreen.Garden.GridUI.DisableGrid
+  name: DisableGrid()
+  href: api/GrandmaGreen.Garden.GridUI.html#GrandmaGreen_Garden_GridUI_DisableGrid
+  commentId: M:GrandmaGreen.Garden.GridUI.DisableGrid
+  fullName: GrandmaGreen.Garden.GridUI.DisableGrid()
+  nameWithType: GridUI.DisableGrid()
+- uid: GrandmaGreen.Garden.GridUI.DisableGrid*
+  name: DisableGrid
+  href: api/GrandmaGreen.Garden.GridUI.html#GrandmaGreen_Garden_GridUI_DisableGrid_
+  commentId: Overload:GrandmaGreen.Garden.GridUI.DisableGrid
+  isSpec: "True"
+  fullName: GrandmaGreen.Garden.GridUI.DisableGrid
+  nameWithType: GridUI.DisableGrid
+- uid: GrandmaGreen.Garden.GridUI.EnableGrid
+  name: EnableGrid()
+  href: api/GrandmaGreen.Garden.GridUI.html#GrandmaGreen_Garden_GridUI_EnableGrid
+  commentId: M:GrandmaGreen.Garden.GridUI.EnableGrid
+  fullName: GrandmaGreen.Garden.GridUI.EnableGrid()
+  nameWithType: GridUI.EnableGrid()
+- uid: GrandmaGreen.Garden.GridUI.EnableGrid*
+  name: EnableGrid
+  href: api/GrandmaGreen.Garden.GridUI.html#GrandmaGreen_Garden_GridUI_EnableGrid_
+  commentId: Overload:GrandmaGreen.Garden.GridUI.EnableGrid
+  isSpec: "True"
+  fullName: GrandmaGreen.Garden.GridUI.EnableGrid
+  nameWithType: GridUI.EnableGrid
 - uid: GrandmaGreen.Garden.GridUI.fadeTime
   name: fadeTime
   href: api/GrandmaGreen.Garden.GridUI.html#GrandmaGreen_Garden_GridUI_fadeTime
@@ -7265,6 +7539,36 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.SaveSystem.SaveManager.Update
   nameWithType: SaveManager.Update
+- uid: GrandmaGreen.SettingsSet
+  name: SettingsSet
+  href: api/GrandmaGreen.SettingsSet.html
+  commentId: T:GrandmaGreen.SettingsSet
+  fullName: GrandmaGreen.SettingsSet
+  nameWithType: SettingsSet
+- uid: GrandmaGreen.SettingsSet.batterySaver
+  name: batterySaver
+  href: api/GrandmaGreen.SettingsSet.html#GrandmaGreen_SettingsSet_batterySaver
+  commentId: F:GrandmaGreen.SettingsSet.batterySaver
+  fullName: GrandmaGreen.SettingsSet.batterySaver
+  nameWithType: SettingsSet.batterySaver
+- uid: GrandmaGreen.SettingsSet.masterVolume
+  name: masterVolume
+  href: api/GrandmaGreen.SettingsSet.html#GrandmaGreen_SettingsSet_masterVolume
+  commentId: F:GrandmaGreen.SettingsSet.masterVolume
+  fullName: GrandmaGreen.SettingsSet.masterVolume
+  nameWithType: SettingsSet.masterVolume
+- uid: GrandmaGreen.SettingsSet.musicVolume
+  name: musicVolume
+  href: api/GrandmaGreen.SettingsSet.html#GrandmaGreen_SettingsSet_musicVolume
+  commentId: F:GrandmaGreen.SettingsSet.musicVolume
+  fullName: GrandmaGreen.SettingsSet.musicVolume
+  nameWithType: SettingsSet.musicVolume
+- uid: GrandmaGreen.SettingsSet.sfxVolume
+  name: sfxVolume
+  href: api/GrandmaGreen.SettingsSet.html#GrandmaGreen_SettingsSet_sfxVolume
+  commentId: F:GrandmaGreen.SettingsSet.sfxVolume
+  fullName: GrandmaGreen.SettingsSet.sfxVolume
+  nameWithType: SettingsSet.sfxVolume
 - uid: GrandmaGreen.Shopkeeping
   name: GrandmaGreen.Shopkeeping
   href: api/GrandmaGreen.Shopkeeping.html

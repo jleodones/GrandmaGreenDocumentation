@@ -99,30 +99,6 @@
   </h3>
   
   
-  <h4 id="GrandmaGreen_Entities_GolemManager_golemObjectTable" data-uid="GrandmaGreen.Entities.GolemManager.golemObjectTable">golemObjectTable</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Dictionary&lt;int, GameObject&gt; golemObjectTable</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a>, <span class="xref">GameObject</span>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
   <h4 id="GrandmaGreen_Entities_GolemManager_golemPrefabs" data-uid="GrandmaGreen.Entities.GolemManager.golemPrefabs">golemPrefabs</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
@@ -174,12 +150,12 @@
   
   
   <a id="GrandmaGreen_Entities_GolemManager_CreateGolem_" data-uid="GrandmaGreen.Entities.GolemManager.CreateGolem*"></a>
-  <h4 id="GrandmaGreen_Entities_GolemManager_CreateGolem_CharacterId_" data-uid="GrandmaGreen.Entities.GolemManager.CreateGolem(CharacterId)">CreateGolem(CharacterId)</h4>
+  <h4 id="GrandmaGreen_Entities_GolemManager_CreateGolem_System_UInt16_" data-uid="GrandmaGreen.Entities.GolemManager.CreateGolem(System.UInt16)">CreateGolem(UInt16)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public GolemState CreateGolem(CharacterId id)</code></pre>
+    <pre><code class="lang-csharp hljs">public GolemState CreateGolem(ushort id)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -192,7 +168,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">CharacterId</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">UInt16</a></td>
         <td><span class="parametername">id</span></td>
         <td></td>
       </tr>
@@ -236,13 +212,13 @@
   
   
   <a id="GrandmaGreen_Entities_GolemManager_OnGolemSpawn_" data-uid="GrandmaGreen.Entities.GolemManager.OnGolemSpawn*"></a>
-  <h4 id="GrandmaGreen_Entities_GolemManager_OnGolemSpawn_System_Int32_Vector3_" data-uid="GrandmaGreen.Entities.GolemManager.OnGolemSpawn(System.Int32,Vector3)">OnGolemSpawn(Int32, Vector3)</h4>
+  <h4 id="GrandmaGreen_Entities_GolemManager_OnGolemSpawn_System_UInt16_Vector3_" data-uid="GrandmaGreen.Entities.GolemManager.OnGolemSpawn(System.UInt16,Vector3)">OnGolemSpawn(UInt16, Vector3)</h4>
   <div class="markdown level1 summary"><p>Spawn Golem when harvest</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void OnGolemSpawn(int id, Vector3 pos)</code></pre>
+    <pre><code class="lang-csharp hljs">public void OnGolemSpawn(ushort id, Vector3 pos)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -255,7 +231,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">UInt16</a></td>
         <td><span class="parametername">id</span></td>
         <td></td>
       </tr>
