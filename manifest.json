@@ -220,7 +220,19 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.AreaController.html",
-          "hash": "cVQheM0aH/jryrYnu1UTDu9F0jpUm58pY3rc5Ex/Nvo="
+          "hash": "udWo7KFPGGHwwE1Wrz4wJ9qf/KlAv0b0krnlMeUn604="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GrandmaGreen.AreaExitState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GrandmaGreen.AreaExitState.html",
+          "hash": "OCodC97TYnDqRaflNaxVGCtfRkPXcmaM+lRvs89vIpo="
         }
       },
       "is_incremental": false,
@@ -636,6 +648,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/GrandmaGreen.Direction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GrandmaGreen.Direction.html",
+          "hash": "jh0HENAIFMlycW/vvDuj0D0v/x/yi96pYwvC4zH/nLE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/GrandmaGreen.Entities.EntityBehavior.yml",
       "output": {
         ".html": {
@@ -820,7 +844,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.EventManager.html",
-          "hash": "1I7LmUj1Q9Xy7e4HmBKJ8mKjLEsLk+xj0SrbKVMxKAs="
+          "hash": "jSJqvqEkFsqDRBnXM/ty7aqHPMy22/tQWL9vGvWARpM="
         }
       },
       "is_incremental": false,
@@ -832,7 +856,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.GamePortalTile.html",
-          "hash": "n9wJuc9+uN4aI/wNzn7oYyABQ7LW27ycOkclyTdNRzI="
+          "hash": "LtU7FGIrJvCYlEUOJ9SUEg+nOQeiUbirIXY9ufCVSO4="
         }
       },
       "is_incremental": false,
@@ -892,7 +916,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.Garden.GardenAreaController.html",
-          "hash": "bh88jDQistKetOYH9OzBTw/0yIvEV3kAqlxCY2NoVE0="
+          "hash": "+lLpcUWJkD1cIh5PR5Jok/M8qENqZwIu7XtKfNKPMx8="
         }
       },
       "is_incremental": false,
@@ -904,7 +928,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.Garden.GardenCustomizer.html",
-          "hash": "3hKmxEoUGl7oUzSIRTHDwCz9ZQ3+QXPpuOzYtQZKLXc="
+          "hash": "NupQkinrp+PbHnC+pPH3T+CLj5mDFQw7sSrkTCQVwi0="
         }
       },
       "is_incremental": false,
@@ -916,7 +940,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.Garden.GardenDecorItem.html",
-          "hash": "OraLrr7A6eU0WCX58FPgL4k6FIpw5bGD7gqEqZxJut8="
+          "hash": "+j6TmRHBxLNCtsiFVx+5wItEEwxWxSpoeT8xrNOgJpc="
         }
       },
       "is_incremental": false,
@@ -1000,7 +1024,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.Garden.GridUI.html",
-          "hash": "GeaPfOsJhTFmD8teG7mt62Oi57S+a9WBqfokHd8fxh4="
+          "hash": "D8RuViDFRcq3+UAAWQ/lLlTansbDZXHpnhGZwxHf9rw="
         }
       },
       "is_incremental": false,
@@ -1732,7 +1756,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.html",
-          "hash": "V+rf2qtjFCWWtbaoopm5vAxvZLo6Q8RX81Wtm6IRkGI="
+          "hash": "BRkKXroI0v6X6vrbQ3xc/KJj1ciSGFoATduyFzq1Zzg="
         }
       },
       "is_incremental": false,
@@ -1744,7 +1768,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "ft86FT1SJ/mdGgbX6U/bRd7jzf9Zg7UIvZHu6Tqm064="
+          "hash": "MQb3tr+HEJ7enJY5Mdi/GrdeiQZDL0F6xDYp5m0JW4k="
         }
       },
       "is_incremental": false,
@@ -1853,7 +1877,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 143,
+          "total_file_count": 145,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
