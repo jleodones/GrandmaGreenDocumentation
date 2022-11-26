@@ -18,19 +18,16 @@ namespace GrandmaGreen.Garden
         {
             DisableGrid(0);
             toolData.onToolSelected += CheckTool;
-            customizer.onCustomizationStart += EnableGrid;
-            customizer.onCustomizationEnd += DisableGrid;
+            EventManager.instance.EVENT_TOGGLE_CUSTOMIZATION_MODE += ToggleGrid;
             CheckTool(toolData.currentTool);
-
-
         }
 
 
         void OnDisable()
         {
             toolData.onToolSelected -= CheckTool;
-            customizer.onCustomizationStart -= EnableGrid;
-            customizer.onCustomizationEnd -= DisableGrid;
+            EventManager.instance.EVENT_TOGGLE_CUSTOMIZATION_MODE -= ToggleGrid;
+
             DisableGrid(0);
         }
 
@@ -38,24 +35,30 @@ namespace GrandmaGreen.Garden
         {
             if (tool.toolIndex == 0 && gridActive)
             {
-                DisableGrid(fadeTime);
+                DisableGrid();
             }
             else if (tool.toolIndex != 0 && !gridActive)
             {
-                EnableGrid(fadeTime);
+                EnableGrid();
             }
+        }
+
+        public void ToggleGrid()
+        {
+            if (toolData.currentTool.toolIndex == 0 && gridActive)
+                DisableGrid();
+            else if (!gridActive)
+                EnableGrid();
         }
 
         public void EnableGrid()
         {
-            if (!gridActive)
-                EnableGrid(fadeTime);
+            EnableGrid(fadeTime);
         }
 
         public void DisableGrid()
         {
-            if (toolData.currentTool.toolIndex == 0 && gridActive)
-                DisableGrid(fadeTime);
+            DisableGrid(fadeTime);
         }
 
         void EnableGrid(float time)

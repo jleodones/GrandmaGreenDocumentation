@@ -19,6 +19,8 @@ namespace GrandmaGreen
         public Pathfinder pathfinder;
         public Collider areaBounds;
         public EntityController playerController;
+        public AreaExitState exitState;
+        public Transform[] enterencePoints = new Transform[4];
 
         [field: Header("Area Variables")]
         [field: SerializeField] public int areaIndex { get; protected set; } = 0;
@@ -37,10 +39,21 @@ namespace GrandmaGreen
             areaServicer.RegisterAreaController(this);
         }
 
+        public virtual void OnValidate()
+        {
+            if (enterencePoints.Length < 4)
+                enterencePoints = new Transform[4];
+        }
+
         public virtual void Activate()
         {
             pathfinder.LoadGrid();
             onActivation?.Invoke();
+
+            int enterenceIndex = (int)exitState.exitSide + 2;
+            if (enterenceIndex > 3) enterenceIndex -= 4;
+
+            playerController.entity.transform.position = enterencePoints[enterenceIndex].position;
         }
 
         public virtual void Deactivate()
@@ -78,11 +91,12 @@ namespace GrandmaGreen
 
             playerController.SetDestination(worldPoint);
 
-            
+
 
             if (((lastSelectedTile as IGameTile)) != null)
             {
                 playerController.QueueEntityAction(((IGameTile)lastSelectedTile).DoTileAction);
+
             }
         }
 

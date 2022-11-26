@@ -31,7 +31,7 @@ namespace GrandmaGreen.Garden
         bool returnFromPause = true;
 
         [Header("Temporary Effects")]
-        public bool DEBUG_CUSTOMIZATION = false;
+        public bool m_inCustomizationMode = false;
         public ParticleSystem FertilizerParticleBurst;
         public ParticleSystem WateringParticleBurst;
         public ParticleSystem DryingUpBurst;
@@ -53,8 +53,10 @@ namespace GrandmaGreen.Garden
             onTilemapSelection += GardenTileSelected;
             EventManager.instance.EVENT_PLANT_UPDATE += PlantUpdate;
 
-            EventManager.instance.EVENT_CUSTOMIZATION_START += EnterCustomizationMode;
-            EventManager.instance.EVENT_CUSTOMIZATION_END += ExitCustomizationMode;
+            EventManager.instance.EVENT_INVENTORY_CUSTOMIZATION_START += StartDecorCustomization;
+            EventManager.instance.EVENT_CUSTOMIZATION_ATTEMPT += CompleteDecorCustomization;
+
+            EventManager.instance.EVENT_TOGGLE_CUSTOMIZATION_MODE += ToggleCustomizationMode;
 
             plantPrefabLookup = new Dictionary<Vector3Int, GameObject>();
             decorList = new List<Collider>();
@@ -68,8 +70,10 @@ namespace GrandmaGreen.Garden
             onTilemapSelection -= GardenTileSelected;
             EventManager.instance.EVENT_PLANT_UPDATE -= PlantUpdate;
 
-            EventManager.instance.EVENT_CUSTOMIZATION_START -= EnterCustomizationMode;
-            EventManager.instance.EVENT_CUSTOMIZATION_END -= ExitCustomizationMode;
+            EventManager.instance.EVENT_INVENTORY_CUSTOMIZATION_START -= StartDecorCustomization;
+            EventManager.instance.EVENT_CUSTOMIZATION_ATTEMPT -= CompleteDecorCustomization;
+
+            EventManager.instance.EVENT_TOGGLE_CUSTOMIZATION_MODE -= ToggleCustomizationMode;
 
             gardenManager.timers[areaIndex].Pause();
             gardenManager.timers[areaIndex].onTick -= IncrementTimer;
@@ -80,7 +84,7 @@ namespace GrandmaGreen.Garden
 
         public override void ProcessAreaInput(InteractionEventData eventData)
         {
-            if (eventData.interactionState.phase == PointerState.Phase.DOWN && !DEBUG_CUSTOMIZATION)
+            if (eventData.interactionState.phase == PointerState.Phase.DOWN && !m_inCustomizationMode)
             {
                 AreaSelection(eventData.interactionPoint);
             }
@@ -138,7 +142,8 @@ namespace GrandmaGreen.Garden
                 GardenDecorItem decorItem = gardenCustomizer.GenerateDecorItem(decorState.ID);
                 decorItem.transform.position = new Vector3(decorState.x, decorState.y, 0);
 
-                decorItem.onInteraction += EnterCustomizationMode;
+                decorItem.onInteraction += StartDecorCustomization;
+                decorItem.DisableInteraction();
             }
         }
 
@@ -429,34 +434,47 @@ namespace GrandmaGreen.Garden
         GardenDecorItem m_CurrentDecorItem;
         bool m_IsGeneratedDecorItem = false;
         Vector3 m_OriginalPosition;
-        public void EnterCustomizationMode(IInventoryItem item)
+
+        public void ToggleCustomizationMode()
         {
-            GardenDecorItem decorItem = gardenCustomizer.GenerateDecorItem((DecorationId)item.itemID);
-
-            m_IsGeneratedDecorItem = true;
-
-            EnterCustomizationMode(decorItem);
+            if (m_inCustomizationMode) ExitCustomizationMode();
+            else EnterCustomizationMode();
         }
 
-        public void EnterCustomizationMode(GardenDecorItem decorItem)
+        public void EnterCustomizationMode()
         {
-            DEBUG_CUSTOMIZATION = true;
+            m_inCustomizationMode = true;
+            customizationCamera.gameObject.SetActive(true);
+            playerController.entity.gameObject.SetActive(false);
+        }
+
+        public void ExitCustomizationMode()
+        {
+            m_inCustomizationMode = false;
+            customizationCamera.gameObject.SetActive(false);
+            playerController.entity.gameObject.SetActive(true);
+        }
+
+        public void StartDecorCustomization(IInventoryItem item)
+        {
+            GardenDecorItem decorItem = gardenCustomizer.GenerateDecorItem((DecorationId)item.itemID);
+            m_IsGeneratedDecorItem = true;
+
+            if (!m_inCustomizationMode) EventManager.instance.HandleEVENT_TOGGLE_CUSTOMIZATION_MODE();
+
+            StartDecorCustomization(decorItem);
+        }
+
+        public void StartDecorCustomization(GardenDecorItem decorItem)
+        {
             m_CurrentDecorItem = decorItem;
             m_OriginalPosition = m_CurrentDecorItem.transform.position;
             lastDraggedPosition = m_OriginalPosition;
-
-            customizationCamera.gameObject.SetActive(true);
-            playerController.entity.gameObject.SetActive(false);
-
-            gardenCustomizer.EnterCustomizationState(this, m_CurrentDecorItem);
+            gardenCustomizer.EnterDecorCustomizationState(this, m_CurrentDecorItem);
         }
 
-        public void ExitCustomizationMode(bool successful)
+        public void CompleteDecorCustomization(bool successful)
         {
-            DEBUG_CUSTOMIZATION = false;
-            customizationCamera.gameObject.SetActive(false);
-            playerController.entity.gameObject.SetActive(true);
-
             if (successful)
             {
                 if (m_IsGeneratedDecorItem)
@@ -481,11 +499,13 @@ namespace GrandmaGreen.Garden
             m_IsGeneratedDecorItem = false;
         }
 
+
+
         public void AddGardenDecorItem(GardenDecorItem decorItem)
         {
             gardenManager.UpdateDecorItem(areaIndex, decorItem.decorID, decorItem.transform.position);
 
-            decorItem.onInteraction += EnterCustomizationMode;
+            decorItem.onInteraction += StartDecorCustomization;
         }
 
         public void UpdateGardenDecorItem(GardenDecorItem decorItem)

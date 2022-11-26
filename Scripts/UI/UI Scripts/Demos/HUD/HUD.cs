@@ -33,6 +33,11 @@ namespace GrandmaGreen.UI.HUD
                 int currentMoney = EventManager.instance.HandleEVENT_INVENTORY_GET_MONEY();
                 root.Q<Label>("currency-text").text = currentMoney.ToString();
             };
+
+            root.Q<Button>("customization-button").clicked+=()=>
+            {
+                EventManager.instance.HandleEVENT_TOGGLE_CUSTOMIZATION_MODE();
+            };
         }
 
         private void FixedUpdate()

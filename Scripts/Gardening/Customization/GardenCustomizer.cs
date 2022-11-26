@@ -17,6 +17,7 @@ namespace GrandmaGreen.Garden
         [SerializeField] Collections.CollectionsSO collections;
         [SerializeField] TileStore tileStore;
         [SerializeField] PointerState pointerState;
+        [SerializeField] Cinemachine.CinemachineVirtualCamera customizationCamera;
 
         [Header("Settings")]
         [SerializeField] float colliderSizeModifier = 1.05f;
@@ -27,10 +28,6 @@ namespace GrandmaGreen.Garden
         [SerializeField] Material defaultMaterial;
         [SerializeField] Color validColor;
         [SerializeField] Color invalidColor;
-
-
-        public event System.Action onCustomizationStart;
-        public event System.Action onCustomizationEnd;
 
         public GardenDecorItem GenerateDecorItem() => GenerateDecorItem(debugDecor);
 
@@ -49,12 +46,8 @@ namespace GrandmaGreen.Garden
             return decorItem;
         }
 
-
-        public Vector3Int originInt;
-
         public bool CheckValidState(BoxCollider decorItem, GardenAreaController decorArea)
         {
-
             Vector3Int tileBlockSize = Vector3Int.one;
             tileBlockSize.x = Mathf.CeilToInt(decorItem.bounds.size.x);/// decorArea.tilemap.cellSize.x);
             tileBlockSize.y = Mathf.CeilToInt(decorItem.bounds.size.y); /// decorArea.tilemap.cellSize.y);
@@ -62,14 +55,11 @@ namespace GrandmaGreen.Garden
             Vector3Int tileBlockOrigin = Vector3Int.zero;
             tileBlockOrigin = decorArea.tilemap.WorldToCell(decorItem.transform.position);
             tileBlockOrigin.x -= tileBlockSize.x / 2;
-            originInt = tileBlockOrigin;
-
-
 
             BoundsInt colliderBounds = new BoundsInt(tileBlockOrigin, tileBlockSize);
 
             TileBase[] m_tileBlock = decorArea.tilemap.GetTilesBlock(colliderBounds);
-            Debug.Log(m_tileBlock.Length);
+
             foreach (TileBase tileBase in m_tileBlock)
             {
                 if (!tileStore[tileBase].pathable || tileStore[tileBase].occupied || tileStore[tileBase].plantable)
@@ -87,14 +77,9 @@ namespace GrandmaGreen.Garden
 
         Coroutine customizationState;
 
-        public void EnterCustomizationState(GardenAreaController decorArea, GardenDecorItem decorItem)
+        public void EnterDecorCustomizationState(GardenAreaController decorArea, GardenDecorItem decorItem)
         {
-            customizationState = decorArea.StartCoroutine(CustomizationStateHandler(decorArea, decorItem));
-        }
-
-        public void ForceExitCustomizationState(GardenAreaController decorArea)
-        {
-            decorArea.StopCoroutine(customizationState);
+            customizationState = decorArea.StartCoroutine(DecorCustomizationHandler(decorArea, decorItem));
         }
 
         /// <summary>
@@ -104,10 +89,8 @@ namespace GrandmaGreen.Garden
         /// <param name="decorArea"></param>
         /// <param name="decorItem"></param>
         /// <returns></returns>
-        IEnumerator CustomizationStateHandler(GardenAreaController decorArea, GardenDecorItem decorItem)
+        IEnumerator DecorCustomizationHandler(GardenAreaController decorArea, GardenDecorItem decorItem)
         {
-            onCustomizationStart?.Invoke();
-
             WaitForSeconds waitForSeconds = new WaitForSeconds(validCheckTime);
 
             Vector3 destination = decorArea.lastSelectedPosition;
@@ -137,12 +120,8 @@ namespace GrandmaGreen.Garden
 
             decorItem.sprite.material = defaultMaterial;
             decorItem.sprite.color = Color.white;
-
             decorItem.EnableInteraction();
-
-            EventManager.instance.HandleEVENT_CUSTOMIZATION_END(isValid);
-
-            onCustomizationEnd?.Invoke();
+            EventManager.instance.HandleEVENT_CUSTOMIZATION_ATTEMPT(isValid);
         }
     }
 }

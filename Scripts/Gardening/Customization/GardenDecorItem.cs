@@ -19,18 +19,16 @@ namespace GrandmaGreen.Garden
 
         public void EnableInteraction() => interactable.enabled = true;
         public void DisableInteraction() => interactable.enabled = false;
+        public void ToggleInteraction() => interactable.enabled = !interactable.enabled;
 
-        
         void OnEnable()
         {
-            customizer.onCustomizationStart += DisableInteraction;
-            customizer.onCustomizationEnd += EnableInteraction;
+            EventManager.instance.EVENT_TOGGLE_CUSTOMIZATION_MODE += ToggleInteraction;
         }
 
         void OnDisable()
         {
-            customizer.onCustomizationStart -= DisableInteraction;
-            customizer.onCustomizationEnd -= EnableInteraction;
+            EventManager.instance.EVENT_TOGGLE_CUSTOMIZATION_MODE -= ToggleInteraction;
         }
     }
 }

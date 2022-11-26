@@ -363,7 +363,7 @@ namespace GrandmaGreen.UI.Collections
                     draggable.transform.position = draggableStartPos;
                     CloseInventory(new ClickEvent());
                     // UI to GameObject here
-                    EventManager.instance.HandleEVENT_CUSTOMIZATION_START(m_inventoryItemId);
+                    EventManager.instance.HandleEVENT_INVENTORY_CUSTOMIZATION_START(m_inventoryItemId);
                     handled = true;
                 }
             }

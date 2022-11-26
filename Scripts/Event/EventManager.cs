@@ -84,8 +84,9 @@ namespace GrandmaGreen
         #endregion
 
         #region  Customization.
-        public event Action<IInventoryItem> EVENT_CUSTOMIZATION_START;
-        public event Action<bool> EVENT_CUSTOMIZATION_END;
+        public event Action<IInventoryItem> EVENT_INVENTORY_CUSTOMIZATION_START;
+        public event Action EVENT_TOGGLE_CUSTOMIZATION_MODE;
+        public event Action<bool> EVENT_CUSTOMIZATION_ATTEMPT;
 
         public void HandleEVENT_INVENTORY_OPEN()
         {
@@ -165,14 +166,19 @@ namespace GrandmaGreen
             EVENT_PLANT_UPDATE?.Invoke(areaIndex, cell);
         }
 
-        public void HandleEVENT_CUSTOMIZATION_START(IInventoryItem item)
+        public void HandleEVENT_INVENTORY_CUSTOMIZATION_START(IInventoryItem item)
         {
-            EVENT_CUSTOMIZATION_START?.Invoke(item);
+            EVENT_INVENTORY_CUSTOMIZATION_START?.Invoke(item);
         }
 
-        public void HandleEVENT_CUSTOMIZATION_END(bool successful)
+        public void HandleEVENT_TOGGLE_CUSTOMIZATION_MODE()
         {
-            EVENT_CUSTOMIZATION_END?.Invoke(successful);
+            EVENT_TOGGLE_CUSTOMIZATION_MODE?.Invoke();
+        }
+
+        public void HandleEVENT_CUSTOMIZATION_ATTEMPT(bool successful)
+        {
+            EVENT_CUSTOMIZATION_ATTEMPT?.Invoke(successful);
         }
 
         #endregion
