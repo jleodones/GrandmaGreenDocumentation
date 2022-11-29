@@ -19,8 +19,6 @@ namespace GrandmaGreen.UI.Collections
         private const string tabClassName = "tab-button";
         private const string currentlySelectedTabClassName = "active-tab";
         private const string unselectedContentClassName = "inactive-content";
-        private const string exitButton = "exit-button";
-        private const string inventoryElement = "inventory-element";
         private const string contentJar = "content-jar";
 
         // Tab and tab content have the same prefix but different suffix
@@ -46,8 +44,8 @@ namespace GrandmaGreen.UI.Collections
         private ObjectSaver m_inventoryData;
 
         private ASoundContainer[] m_soundContainers;
-        // Invenotry Visual Element
-        private VisualElement inventory;
+        
+        
         // Inventory width varibles for show/hide
         private Length inventoryWidth = (Length)(.45 * Screen.width);
         // Customization variables
@@ -57,15 +55,9 @@ namespace GrandmaGreen.UI.Collections
         private IInventoryItem m_inventoryItemId;
         private CollectionsSO m_collections;
 
-
-        public event System.Action<ushort> onItemCreated;
         /// <summary>
         /// The TabbedInventoryController is attached to the TabbedInventory UI. It registers and controlls tab switching, as well as loading old and new items into the inventory.
         /// </summary>
-        /// <param name="_root">The root of the TabbedInventory UI, which holds the different inventory panels.</param>
-        /// <param name="_toolTestScript">Connects the tools tabs to the inventory UI.</param>
-        /// <param name="inventoryData"></param>
-        /// <param name="_listEntryTemplate"></param>
         public TabbedInventoryController(VisualElement _root, PlayerToolData _playerToolData,
             ObjectSaver inventoryData, VisualTreeAsset _listEntryTemplate, ASoundContainer[] soundContainers, CollectionsSO cso)
         {
@@ -82,27 +74,26 @@ namespace GrandmaGreen.UI.Collections
             m_contentJars = GetAllContentJars().ToList();
 
             // Manually instantiate each jar.
-            InstantiateJar<GrandmaGreen.Collections.Tool>(m_contentJars.Find(jar => jar.name == "tools" + contentNameSuffix));
+            InstantiateJar<Tool>(m_contentJars.Find(jar => jar.name == "tools" + contentNameSuffix));
             InstantiateJar<Seed>(m_contentJars.Find(jar => jar.name == "seeds" + contentNameSuffix));
             InstantiateJar<Decor>(m_contentJars.Find(jar => jar.name == "decor" + contentNameSuffix));
             InstantiateJar<Plant>(m_contentJars.Find(jar => jar.name == "plants" + contentNameSuffix));
 
             _playerToolData.onToolSelected += CheckOpenInventory;
 
-            // Instantiate inventory visual element
-            inventory = root.Q(inventoryElement);
-
             // Instantiate customization drag threshold
             threshold = root.Q("inventory-threshold");
         }
 
+        /*
         // This hides the entire inventory panel on initialize without animations
         public void SetInventoryPosition()
         {
             // Add animation duration
             // inventory.style.translate = new Translate(inventoryWidth,0,0);
-            inventory.style.display = DisplayStyle.None;
+            root.style.display = DisplayStyle.None;
         }
+        */
 
         public void RegisterTabCallbacks()
         {
@@ -110,12 +101,6 @@ namespace GrandmaGreen.UI.Collections
             tabs.ForEach((Button tab) => { tab.RegisterCallback<ClickEvent>(TabOnClick); });
         }
 
-        // Register the hide function to the event: when exit button is clicked
-        public void RegisterExitCallback()
-        {
-            root.Q<Button>(exitButton).RegisterCallback<ClickEvent>(CloseInventory);
-        }
-        
         public void OpenInventory()
         {
             // Disable HUD.
@@ -125,7 +110,7 @@ namespace GrandmaGreen.UI.Collections
             // inventory.style.transitionTimingFunction = new List<EasingFunction> { EasingMode.Ease };
             // inventory.style.transitionDuration = new List<TimeValue>{ new TimeValue(300, TimeUnit.Millisecond) };
             // inventory.style.translate = new Translate(0,0,0);
-            inventory.style.display = DisplayStyle.Flex;
+            root.style.display = DisplayStyle.Flex;
             
             // Play open inventory SFX.
             m_soundContainers[0].Play();
@@ -139,7 +124,7 @@ namespace GrandmaGreen.UI.Collections
             // inventory.style.transitionTimingFunction = new List<EasingFunction> { EasingMode.Ease };
             // inventory.style.transitionDuration = new List<TimeValue>{ new TimeValue(300, TimeUnit.Millisecond) };
             // inventory.style.translate = new Translate(inventoryWidth,0,0);
-            inventory.style.display = DisplayStyle.None;
+            root.style.display = DisplayStyle.None;
 
             // Play the inventory close SFX.
             m_soundContainers[1].Play();
@@ -383,9 +368,9 @@ namespace GrandmaGreen.UI.Collections
             if (selectedTool.toolIndex == 3)
             {
                 // Open inventory with a short delay for tool animation
-                inventory.style.transitionDelay = new List<TimeValue> {new(700, TimeUnit.Millisecond) };
+                root.style.transitionDelay = new List<TimeValue> {new(700, TimeUnit.Millisecond) };
                 OpenInventory(); 
-                inventory.style.transitionDelay = new List<TimeValue> {new(0, TimeUnit.Millisecond) };
+                root.style.transitionDelay = new List<TimeValue> {new(0, TimeUnit.Millisecond) };
                 Button seedsTab = root.Q<Button>("seeds-tab");
                 GetAllTabs().Where(
                     (tab) => tab != seedsTab && TabIsCurrentlySelected(tab)

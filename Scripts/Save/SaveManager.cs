@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Sirenix.OdinInspector;
-using UnityEngine.Windows;
 
 namespace GrandmaGreen.SaveSystem
 {
@@ -27,8 +26,15 @@ namespace GrandmaGreen.SaveSystem
         public void Awake()
         {
             m_saveController = new SaveController(m_objectSavers);
+
+            EventManager.instance.EVENT_DELETE_SAVE += TriggerDeleteAllData;
         }
-        
+
+        public void OnDestroy()
+        {
+            EventManager.instance.EVENT_DELETE_SAVE -= TriggerDeleteAllData;
+        }
+
         /// <summary>
         /// On Update, the save manager performs a check to see if the game must be saved.
         /// The game is auto saved after certain predetermined time intervals.
@@ -61,8 +67,10 @@ namespace GrandmaGreen.SaveSystem
         public void TriggerDeleteAllData()
         {
             m_saveController ??= new SaveController();
-
             m_saveController.DeleteAllData();
+
+            // Refresh.
+            m_saveController = new SaveController(m_objectSavers);
         }
         
         /// <summary>

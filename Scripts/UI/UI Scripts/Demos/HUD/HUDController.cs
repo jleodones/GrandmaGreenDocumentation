@@ -54,6 +54,7 @@ namespace GrandmaGreen.UI.HUD
 
         public void RegisterButtonCallbacks()
         {
+            /*
             // For now, this just registers the inventory callback.
             // TODO: Update this for every functional UI.
             Button inventoryButton = m_root.Q<Button>("inventory-button");
@@ -66,6 +67,7 @@ namespace GrandmaGreen.UI.HUD
             // m_draggable.RegisterCallback<PointerDownEvent>(PointerDownHandler);
             // m_draggable.RegisterCallback<PointerMoveEvent>(PointerMoveHandler);
             // m_draggable.RegisterCallback<PointerUpEvent>(PointerUpHandler);
+            */
         }
 
         private Vector2 targetStartPosition { get; set; }

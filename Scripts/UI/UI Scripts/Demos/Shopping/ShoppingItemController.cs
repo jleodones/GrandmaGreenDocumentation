@@ -1,9 +1,7 @@
-using GrandmaGreen.Collections;
 using UnityEngine;
 using UnityEngine.UIElements;
 using GrandmaGreen.Shopkeeping;
 using Id = System.Enum;
-using static UnityEditor.Progress;
 
 namespace GrandmaGreen.UI.Shopping
 {

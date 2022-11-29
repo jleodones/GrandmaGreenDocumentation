@@ -1,153 +1,155 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/_GrandmaGreen/Scripts/UI/UI%20Scripts/Demos/Collection/CollectionStyles.uss?fileID=7433441132597879392&amp;guid=18a2304118979df468cffa2fbeb84499&amp;type=3#CollectionStyles" />
-    <ui:VisualElement name="dim-bg" style="flex-grow: 1; align-items: stretch; justify-content: center; background-color: rgba(0, 0, 0, 0.36); flex-direction: flex-start; padding-left: 50px; padding-right: 50px; padding-top: 50px; padding-bottom: 50px;">
-        <ui:VisualElement name="exit-area" style="align-items: auto; justify-content: center;">
-            <ui:Button tabindex="-1" display-tooltip-when-elided="true" class="exit-button" style="border-left-color: rgba(0, 0, 0, 0); border-right-color: rgba(0, 0, 0, 0); border-top-color: rgba(0, 0, 0, 0); border-bottom-color: rgba(0, 0, 0, 0);" />
-        </ui:VisualElement>
-        <ui:VisualElement name="main-area" style="width: 100%; height: 90%; flex-direction: row; align-items: center; justify-content: center;">
-            <ui:VisualElement name="scroll-area" style="height: 100%; width: 10%; align-items: center; justify-content: space-around; padding-left: 0; padding-right: 0; padding-top: 5%; padding-bottom: 5%;">
-                <ui:VisualElement name="scroll-icon" class="scroll-icon" style="background-image: url(&apos;project://database/Assets/_GrandmaGreen/Art/Particles/PNG%20(Transparent)/circle_05.png?fileID=2800000&amp;guid=096590fc084e508478db83fdfa895441&amp;type=3#circle_05&apos;);" />
-                <ui:VisualElement name="scroll-icon" class="scroll-icon" style="background-image: url(&apos;project://database/Assets/_GrandmaGreen/Scripts/UI/SampleArt/UI_Bloom_Green.png?fileID=2800000&amp;guid=6101aa3e7af6a4c95b62dd25b25ac41c&amp;type=3#UI_Bloom_Green&apos;);" />
-                <ui:VisualElement name="scroll-icon" class="scroll-icon" style="background-image: url(&apos;project://database/Assets/_GrandmaGreen/Art/Particles/PNG%20(Transparent)/circle_05.png?fileID=2800000&amp;guid=096590fc084e508478db83fdfa895441&amp;type=3#circle_05&apos;);" />
-                <ui:VisualElement name="scroll-icon" class="scroll-icon" style="background-image: url(&apos;project://database/Assets/_GrandmaGreen/Art/Particles/PNG%20(Transparent)/circle_05.png?fileID=2800000&amp;guid=096590fc084e508478db83fdfa895441&amp;type=3#circle_05&apos;);" />
-                <ui:VisualElement name="scroll-icon" class="scroll-icon" style="background-image: url(&apos;project://database/Assets/_GrandmaGreen/Art/Particles/PNG%20(Transparent)/circle_05.png?fileID=2800000&amp;guid=096590fc084e508478db83fdfa895441&amp;type=3#circle_05&apos;);" />
-                <ui:VisualElement name="scroll-icon" class="scroll-icon" style="background-image: url(&apos;project://database/Assets/_GrandmaGreen/Art/Particles/PNG%20(Transparent)/circle_05.png?fileID=2800000&amp;guid=096590fc084e508478db83fdfa895441&amp;type=3#circle_05&apos;);" />
+    <ui:VisualElement name="rootVisualElement" style="width: 100%; height: 100%; display: none;">
+        <ui:VisualElement name="dim-bg" style="flex-grow: 1; align-items: stretch; justify-content: center; background-color: rgba(0, 0, 0, 0.36); flex-direction: flex-start; padding-left: 50px; padding-right: 50px; padding-top: 50px; padding-bottom: 50px;">
+            <ui:VisualElement name="exit-area" style="align-items: auto; justify-content: center;">
+                <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="exitButton" class="exit-button" style="border-left-color: rgba(0, 0, 0, 0); border-right-color: rgba(0, 0, 0, 0); border-top-color: rgba(0, 0, 0, 0); border-bottom-color: rgba(0, 0, 0, 0);" />
             </ui:VisualElement>
-            <ui:VisualElement name="book" style="width: 80%; height: 100%; background-color: rgb(238, 238, 215); justify-content: space-between;">
-                <ui:VisualElement name="collection-view" style="padding-left: 6%; padding-right: 6%; padding-top: 5%; padding-bottom: 2%; width: 100%; height: 100%; min-width: auto; min-height: auto; display: none;">
-                    <ui:VisualElement name="row1" style="width: 100%; height: 33%; flex-direction: row; align-items: center; justify-content: space-between;">
-                        <ui:GroupBox style="align-items: stretch; justify-content: space-between; flex-direction: row; width: 100%; height: 100%;">
-                            <ui:VisualElement name="known-plant" class="item-container">
-                                <ui:VisualElement name="plant-item" class="plant-item" style="background-image: url(&apos;project://database/Assets/_GrandmaGreen/Scripts/UI/SampleArt/UI_RedTulip_Temp.png?fileID=2800000&amp;guid=85fb08d134380b24bb857b50207cb7d2&amp;type=3#UI_RedTulip_Temp&apos;);">
-                                    <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-item-button" class="plant-item-button" />
-                                </ui:VisualElement>
-                                <ui:Label tabindex="-1" text="Tulip" display-tooltip-when-elided="true" class="plant-name" />
-                            </ui:VisualElement>
-                            <ui:VisualElement name="known-plant" class="item-container">
-                                <ui:VisualElement name="plant-item" class="plant-item" style="background-image: url(&apos;project://database/Assets/_GrandmaGreen/Scripts/UI/SampleArt/UI_RedTulip_Temp.png?fileID=2800000&amp;guid=85fb08d134380b24bb857b50207cb7d2&amp;type=3#UI_RedTulip_Temp&apos;);">
-                                    <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-item-button" class="plant-item-button" />
-                                </ui:VisualElement>
-                                <ui:Label tabindex="-1" text="Tulip" display-tooltip-when-elided="true" class="plant-name" />
-                            </ui:VisualElement>
-                            <ui:VisualElement name="unknown-plant" class="item-container">
-                                <ui:VisualElement name="plant-item" class="plant-item" style="background-image: url(&apos;project://database/Assets/_GrandmaGreen/Scripts/UI/SampleArt/UI_RedTulipUnknown_Temp.png?fileID=2800000&amp;guid=dce71ec3aa71d514f986870791b6e271&amp;type=3#UI_RedTulipUnknown_Temp&apos;);">
-                                    <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-item-button" class="plant-item-button" />
-                                </ui:VisualElement>
-                                <ui:Label tabindex="-1" display-tooltip-when-elided="true" class="plant-name" />
-                            </ui:VisualElement>
-                            <ui:VisualElement name="unknown-plant" class="item-container">
-                                <ui:VisualElement name="plant-item" class="plant-item" style="background-image: url(&apos;project://database/Assets/_GrandmaGreen/Scripts/UI/SampleArt/UI_RedTulipUnknown_Temp.png?fileID=2800000&amp;guid=dce71ec3aa71d514f986870791b6e271&amp;type=3#UI_RedTulipUnknown_Temp&apos;);">
-                                    <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-item-button" class="plant-item-button" />
-                                </ui:VisualElement>
-                                <ui:Label tabindex="-1" display-tooltip-when-elided="true" class="plant-name" />
-                            </ui:VisualElement>
-                            <ui:VisualElement name="known-plant" class="item-container">
-                                <ui:VisualElement name="plant-item" class="plant-item" style="background-image: url(&apos;project://database/Assets/_GrandmaGreen/Scripts/UI/SampleArt/UI_RedTulip_Temp.png?fileID=2800000&amp;guid=85fb08d134380b24bb857b50207cb7d2&amp;type=3#UI_RedTulip_Temp&apos;);">
-                                    <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-item-button" class="plant-item-button" />
-                                </ui:VisualElement>
-                                <ui:Label tabindex="-1" text="Tulip" display-tooltip-when-elided="true" class="plant-name" />
-                            </ui:VisualElement>
-                        </ui:GroupBox>
-                    </ui:VisualElement>
-                    <ui:VisualElement name="row2" style="width: 100%; height: 33%; flex-direction: row; align-items: center; justify-content: space-between;">
-                        <ui:GroupBox style="align-items: stretch; justify-content: space-between; flex-direction: row; width: 100%; height: 100%;">
-                            <ui:VisualElement name="unknown-plant" class="item-container">
-                                <ui:VisualElement name="plant-item" class="plant-item" style="background-image: url(&apos;project://database/Assets/_GrandmaGreen/Scripts/UI/SampleArt/UI_RedTulipUnknown_Temp.png?fileID=2800000&amp;guid=dce71ec3aa71d514f986870791b6e271&amp;type=3#UI_RedTulipUnknown_Temp&apos;);">
-                                    <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-item-button" class="plant-item-button" />
-                                </ui:VisualElement>
-                                <ui:Label tabindex="-1" display-tooltip-when-elided="true" class="plant-name" />
-                            </ui:VisualElement>
-                            <ui:VisualElement name="known-plant" class="item-container">
-                                <ui:VisualElement name="plant-item" class="plant-item" style="background-image: url(&apos;project://database/Assets/_GrandmaGreen/Scripts/UI/SampleArt/UI_RedTulip_Temp.png?fileID=2800000&amp;guid=85fb08d134380b24bb857b50207cb7d2&amp;type=3#UI_RedTulip_Temp&apos;);">
-                                    <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-item-button" class="plant-item-button" />
-                                </ui:VisualElement>
-                                <ui:Label tabindex="-1" text="Tulip" display-tooltip-when-elided="true" class="plant-name" />
-                            </ui:VisualElement>
-                            <ui:VisualElement name="known-plant" class="item-container">
-                                <ui:VisualElement name="plant-item" class="plant-item" style="background-image: url(&apos;project://database/Assets/_GrandmaGreen/Scripts/UI/SampleArt/UI_RedTulip_Temp.png?fileID=2800000&amp;guid=85fb08d134380b24bb857b50207cb7d2&amp;type=3#UI_RedTulip_Temp&apos;);">
-                                    <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-item-button" class="plant-item-button" />
-                                </ui:VisualElement>
-                                <ui:Label tabindex="-1" text="Tulip" display-tooltip-when-elided="true" class="plant-name" />
-                            </ui:VisualElement>
-                            <ui:VisualElement name="unknown-plant" class="item-container">
-                                <ui:VisualElement name="plant-item" class="plant-item" style="background-image: url(&apos;project://database/Assets/_GrandmaGreen/Scripts/UI/SampleArt/UI_RedTulipUnknown_Temp.png?fileID=2800000&amp;guid=dce71ec3aa71d514f986870791b6e271&amp;type=3#UI_RedTulipUnknown_Temp&apos;);">
-                                    <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-item-button" class="plant-item-button" />
-                                </ui:VisualElement>
-                                <ui:Label tabindex="-1" display-tooltip-when-elided="true" class="plant-name" />
-                            </ui:VisualElement>
-                            <ui:VisualElement name="known-plant" class="item-container">
-                                <ui:VisualElement name="plant-item" class="plant-item" style="background-image: url(&apos;project://database/Assets/_GrandmaGreen/Scripts/UI/SampleArt/UI_RedTulip_Temp.png?fileID=2800000&amp;guid=85fb08d134380b24bb857b50207cb7d2&amp;type=3#UI_RedTulip_Temp&apos;);">
-                                    <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-item-button" class="plant-item-button" />
-                                </ui:VisualElement>
-                                <ui:Label tabindex="-1" text="Tulip" display-tooltip-when-elided="true" class="plant-name" />
-                            </ui:VisualElement>
-                        </ui:GroupBox>
-                    </ui:VisualElement>
-                    <ui:VisualElement name="row3" style="width: 100%; height: 33%; flex-direction: row; align-items: center; justify-content: space-between;">
-                        <ui:GroupBox style="align-items: stretch; justify-content: space-between; flex-direction: row; width: 100%; height: 100%;">
-                            <ui:VisualElement name="known-plant" class="item-container">
-                                <ui:VisualElement name="plant-item" class="plant-item" style="background-image: url(&apos;project://database/Assets/_GrandmaGreen/Scripts/UI/SampleArt/UI_RedTulip_Temp.png?fileID=2800000&amp;guid=85fb08d134380b24bb857b50207cb7d2&amp;type=3#UI_RedTulip_Temp&apos;);">
-                                    <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-item-button" class="plant-item-button" />
-                                </ui:VisualElement>
-                                <ui:Label tabindex="-1" text="Tulip" display-tooltip-when-elided="true" class="plant-name" />
-                            </ui:VisualElement>
-                            <ui:VisualElement name="unknown-plant" class="item-container">
-                                <ui:VisualElement name="plant-item" class="plant-item" style="background-image: url(&apos;project://database/Assets/_GrandmaGreen/Scripts/UI/SampleArt/UI_RedTulipUnknown_Temp.png?fileID=2800000&amp;guid=dce71ec3aa71d514f986870791b6e271&amp;type=3#UI_RedTulipUnknown_Temp&apos;);">
-                                    <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-item-button" class="plant-item-button" />
-                                </ui:VisualElement>
-                                <ui:Label tabindex="-1" display-tooltip-when-elided="true" class="plant-name" />
-                            </ui:VisualElement>
-                            <ui:VisualElement name="known-plant" class="item-container">
-                                <ui:VisualElement name="plant-item" class="plant-item" style="background-image: url(&apos;project://database/Assets/_GrandmaGreen/Scripts/UI/SampleArt/UI_RedTulip_Temp.png?fileID=2800000&amp;guid=85fb08d134380b24bb857b50207cb7d2&amp;type=3#UI_RedTulip_Temp&apos;);">
-                                    <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-item-button" class="plant-item-button" />
-                                </ui:VisualElement>
-                                <ui:Label tabindex="-1" text="Tulip" display-tooltip-when-elided="true" class="plant-name" />
-                            </ui:VisualElement>
-                            <ui:VisualElement name="unknown-plant" class="item-container">
-                                <ui:VisualElement name="plant-item" class="plant-item" style="background-image: url(&apos;project://database/Assets/_GrandmaGreen/Scripts/UI/SampleArt/UI_RedTulipUnknown_Temp.png?fileID=2800000&amp;guid=dce71ec3aa71d514f986870791b6e271&amp;type=3#UI_RedTulipUnknown_Temp&apos;);">
-                                    <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-item-button" class="plant-item-button" />
-                                </ui:VisualElement>
-                                <ui:Label tabindex="-1" display-tooltip-when-elided="true" class="plant-name" />
-                            </ui:VisualElement>
-                            <ui:VisualElement name="known-plant" class="item-container">
-                                <ui:VisualElement name="plant-item" class="plant-item" style="background-image: url(&apos;project://database/Assets/_GrandmaGreen/Scripts/UI/SampleArt/UI_RedTulip_Temp.png?fileID=2800000&amp;guid=85fb08d134380b24bb857b50207cb7d2&amp;type=3#UI_RedTulip_Temp&apos;);">
-                                    <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-item-button" class="plant-item-button" />
-                                </ui:VisualElement>
-                                <ui:Label tabindex="-1" text="Tulip" display-tooltip-when-elided="true" class="plant-name" />
-                            </ui:VisualElement>
-                        </ui:GroupBox>
-                    </ui:VisualElement>
+            <ui:VisualElement name="main-area" style="width: 100%; height: 90%; flex-direction: row; align-items: center; justify-content: center;">
+                <ui:VisualElement name="scroll-area" style="height: 100%; width: 10%; align-items: center; justify-content: space-around; padding-left: 0; padding-right: 0; padding-top: 5%; padding-bottom: 5%;">
+                    <ui:VisualElement name="scroll-icon" class="scroll-icon" style="background-image: url(&apos;project://database/Assets/_GrandmaGreen/Art/Particles/PNG%20(Transparent)/circle_05.png?fileID=2800000&amp;guid=096590fc084e508478db83fdfa895441&amp;type=3#circle_05&apos;);" />
+                    <ui:VisualElement name="scroll-icon" class="scroll-icon" style="background-image: url(&apos;project://database/Assets/_GrandmaGreen/Scripts/UI/SampleArt/UI_Bloom_Green.png?fileID=2800000&amp;guid=6101aa3e7af6a4c95b62dd25b25ac41c&amp;type=3#UI_Bloom_Green&apos;);" />
+                    <ui:VisualElement name="scroll-icon" class="scroll-icon" style="background-image: url(&apos;project://database/Assets/_GrandmaGreen/Art/Particles/PNG%20(Transparent)/circle_05.png?fileID=2800000&amp;guid=096590fc084e508478db83fdfa895441&amp;type=3#circle_05&apos;);" />
+                    <ui:VisualElement name="scroll-icon" class="scroll-icon" style="background-image: url(&apos;project://database/Assets/_GrandmaGreen/Art/Particles/PNG%20(Transparent)/circle_05.png?fileID=2800000&amp;guid=096590fc084e508478db83fdfa895441&amp;type=3#circle_05&apos;);" />
+                    <ui:VisualElement name="scroll-icon" class="scroll-icon" style="background-image: url(&apos;project://database/Assets/_GrandmaGreen/Art/Particles/PNG%20(Transparent)/circle_05.png?fileID=2800000&amp;guid=096590fc084e508478db83fdfa895441&amp;type=3#circle_05&apos;);" />
+                    <ui:VisualElement name="scroll-icon" class="scroll-icon" style="background-image: url(&apos;project://database/Assets/_GrandmaGreen/Art/Particles/PNG%20(Transparent)/circle_05.png?fileID=2800000&amp;guid=096590fc084e508478db83fdfa895441&amp;type=3#circle_05&apos;);" />
                 </ui:VisualElement>
-                <ui:VisualElement name="entry-view" style="padding-left: 6%; padding-right: 6%; padding-top: 5%; padding-bottom: 2%; width: 100%; height: 100%; min-width: auto; min-height: auto; flex-direction: row; display: flex;">
-                    <ui:VisualElement name="right-content" style="width: 50%; height: 100%; min-width: auto; min-height: auto;">
-                        <ui:VisualElement name="entry-title" style="width: 100%; height: 30%;">
-                            <ui:Label tabindex="-1" text="Tulip" display-tooltip-when-elided="true" style="-unity-font-style: bold; font-size: 100%; -unity-text-align: middle-center; width: 100%; height: 100%; color: rgba(139, 182, 81, 255);" />
+                <ui:VisualElement name="book" style="width: 80%; height: 100%; background-color: rgb(238, 238, 215); justify-content: space-between;">
+                    <ui:VisualElement name="collection-view" style="padding-left: 6%; padding-right: 6%; padding-top: 5%; padding-bottom: 2%; width: 100%; height: 100%; min-width: auto; min-height: auto; display: none;">
+                        <ui:VisualElement name="row1" style="width: 100%; height: 33%; flex-direction: row; align-items: center; justify-content: space-between;">
+                            <ui:GroupBox style="align-items: stretch; justify-content: space-between; flex-direction: row; width: 100%; height: 100%;">
+                                <ui:VisualElement name="known-plant" class="item-container">
+                                    <ui:VisualElement name="plant-item" class="plant-item" style="background-image: url(&apos;project://database/Assets/_GrandmaGreen/Scripts/UI/SampleArt/UI_RedTulip_Temp.png?fileID=2800000&amp;guid=85fb08d134380b24bb857b50207cb7d2&amp;type=3#UI_RedTulip_Temp&apos;);">
+                                        <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-item-button" class="plant-item-button" />
+                                    </ui:VisualElement>
+                                    <ui:Label tabindex="-1" text="Tulip" display-tooltip-when-elided="true" class="plant-name" />
+                                </ui:VisualElement>
+                                <ui:VisualElement name="known-plant" class="item-container">
+                                    <ui:VisualElement name="plant-item" class="plant-item" style="background-image: url(&apos;project://database/Assets/_GrandmaGreen/Scripts/UI/SampleArt/UI_RedTulip_Temp.png?fileID=2800000&amp;guid=85fb08d134380b24bb857b50207cb7d2&amp;type=3#UI_RedTulip_Temp&apos;);">
+                                        <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-item-button" class="plant-item-button" />
+                                    </ui:VisualElement>
+                                    <ui:Label tabindex="-1" text="Tulip" display-tooltip-when-elided="true" class="plant-name" />
+                                </ui:VisualElement>
+                                <ui:VisualElement name="unknown-plant" class="item-container">
+                                    <ui:VisualElement name="plant-item" class="plant-item" style="background-image: url(&apos;project://database/Assets/_GrandmaGreen/Scripts/UI/SampleArt/UI_RedTulipUnknown_Temp.png?fileID=2800000&amp;guid=dce71ec3aa71d514f986870791b6e271&amp;type=3#UI_RedTulipUnknown_Temp&apos;);">
+                                        <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-item-button" class="plant-item-button" />
+                                    </ui:VisualElement>
+                                    <ui:Label tabindex="-1" display-tooltip-when-elided="true" class="plant-name" />
+                                </ui:VisualElement>
+                                <ui:VisualElement name="unknown-plant" class="item-container">
+                                    <ui:VisualElement name="plant-item" class="plant-item" style="background-image: url(&apos;project://database/Assets/_GrandmaGreen/Scripts/UI/SampleArt/UI_RedTulipUnknown_Temp.png?fileID=2800000&amp;guid=dce71ec3aa71d514f986870791b6e271&amp;type=3#UI_RedTulipUnknown_Temp&apos;);">
+                                        <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-item-button" class="plant-item-button" />
+                                    </ui:VisualElement>
+                                    <ui:Label tabindex="-1" display-tooltip-when-elided="true" class="plant-name" />
+                                </ui:VisualElement>
+                                <ui:VisualElement name="known-plant" class="item-container">
+                                    <ui:VisualElement name="plant-item" class="plant-item" style="background-image: url(&apos;project://database/Assets/_GrandmaGreen/Scripts/UI/SampleArt/UI_RedTulip_Temp.png?fileID=2800000&amp;guid=85fb08d134380b24bb857b50207cb7d2&amp;type=3#UI_RedTulip_Temp&apos;);">
+                                        <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-item-button" class="plant-item-button" />
+                                    </ui:VisualElement>
+                                    <ui:Label tabindex="-1" text="Tulip" display-tooltip-when-elided="true" class="plant-name" />
+                                </ui:VisualElement>
+                            </ui:GroupBox>
                         </ui:VisualElement>
-                        <ui:VisualElement name="entry-image" style="height: 70%; width: 100%; background-image: url(&apos;project://database/Assets/_GrandmaGreen/Scripts/UI/SampleArt/UI_RedTulip_Temp.png?fileID=2800000&amp;guid=85fb08d134380b24bb857b50207cb7d2&amp;type=3#UI_RedTulip_Temp&apos;);" />
+                        <ui:VisualElement name="row2" style="width: 100%; height: 33%; flex-direction: row; align-items: center; justify-content: space-between;">
+                            <ui:GroupBox style="align-items: stretch; justify-content: space-between; flex-direction: row; width: 100%; height: 100%;">
+                                <ui:VisualElement name="unknown-plant" class="item-container">
+                                    <ui:VisualElement name="plant-item" class="plant-item" style="background-image: url(&apos;project://database/Assets/_GrandmaGreen/Scripts/UI/SampleArt/UI_RedTulipUnknown_Temp.png?fileID=2800000&amp;guid=dce71ec3aa71d514f986870791b6e271&amp;type=3#UI_RedTulipUnknown_Temp&apos;);">
+                                        <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-item-button" class="plant-item-button" />
+                                    </ui:VisualElement>
+                                    <ui:Label tabindex="-1" display-tooltip-when-elided="true" class="plant-name" />
+                                </ui:VisualElement>
+                                <ui:VisualElement name="known-plant" class="item-container">
+                                    <ui:VisualElement name="plant-item" class="plant-item" style="background-image: url(&apos;project://database/Assets/_GrandmaGreen/Scripts/UI/SampleArt/UI_RedTulip_Temp.png?fileID=2800000&amp;guid=85fb08d134380b24bb857b50207cb7d2&amp;type=3#UI_RedTulip_Temp&apos;);">
+                                        <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-item-button" class="plant-item-button" />
+                                    </ui:VisualElement>
+                                    <ui:Label tabindex="-1" text="Tulip" display-tooltip-when-elided="true" class="plant-name" />
+                                </ui:VisualElement>
+                                <ui:VisualElement name="known-plant" class="item-container">
+                                    <ui:VisualElement name="plant-item" class="plant-item" style="background-image: url(&apos;project://database/Assets/_GrandmaGreen/Scripts/UI/SampleArt/UI_RedTulip_Temp.png?fileID=2800000&amp;guid=85fb08d134380b24bb857b50207cb7d2&amp;type=3#UI_RedTulip_Temp&apos;);">
+                                        <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-item-button" class="plant-item-button" />
+                                    </ui:VisualElement>
+                                    <ui:Label tabindex="-1" text="Tulip" display-tooltip-when-elided="true" class="plant-name" />
+                                </ui:VisualElement>
+                                <ui:VisualElement name="unknown-plant" class="item-container">
+                                    <ui:VisualElement name="plant-item" class="plant-item" style="background-image: url(&apos;project://database/Assets/_GrandmaGreen/Scripts/UI/SampleArt/UI_RedTulipUnknown_Temp.png?fileID=2800000&amp;guid=dce71ec3aa71d514f986870791b6e271&amp;type=3#UI_RedTulipUnknown_Temp&apos;);">
+                                        <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-item-button" class="plant-item-button" />
+                                    </ui:VisualElement>
+                                    <ui:Label tabindex="-1" display-tooltip-when-elided="true" class="plant-name" />
+                                </ui:VisualElement>
+                                <ui:VisualElement name="known-plant" class="item-container">
+                                    <ui:VisualElement name="plant-item" class="plant-item" style="background-image: url(&apos;project://database/Assets/_GrandmaGreen/Scripts/UI/SampleArt/UI_RedTulip_Temp.png?fileID=2800000&amp;guid=85fb08d134380b24bb857b50207cb7d2&amp;type=3#UI_RedTulip_Temp&apos;);">
+                                        <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-item-button" class="plant-item-button" />
+                                    </ui:VisualElement>
+                                    <ui:Label tabindex="-1" text="Tulip" display-tooltip-when-elided="true" class="plant-name" />
+                                </ui:VisualElement>
+                            </ui:GroupBox>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="row3" style="width: 100%; height: 33%; flex-direction: row; align-items: center; justify-content: space-between;">
+                            <ui:GroupBox style="align-items: stretch; justify-content: space-between; flex-direction: row; width: 100%; height: 100%;">
+                                <ui:VisualElement name="known-plant" class="item-container">
+                                    <ui:VisualElement name="plant-item" class="plant-item" style="background-image: url(&apos;project://database/Assets/_GrandmaGreen/Scripts/UI/SampleArt/UI_RedTulip_Temp.png?fileID=2800000&amp;guid=85fb08d134380b24bb857b50207cb7d2&amp;type=3#UI_RedTulip_Temp&apos;);">
+                                        <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-item-button" class="plant-item-button" />
+                                    </ui:VisualElement>
+                                    <ui:Label tabindex="-1" text="Tulip" display-tooltip-when-elided="true" class="plant-name" />
+                                </ui:VisualElement>
+                                <ui:VisualElement name="unknown-plant" class="item-container">
+                                    <ui:VisualElement name="plant-item" class="plant-item" style="background-image: url(&apos;project://database/Assets/_GrandmaGreen/Scripts/UI/SampleArt/UI_RedTulipUnknown_Temp.png?fileID=2800000&amp;guid=dce71ec3aa71d514f986870791b6e271&amp;type=3#UI_RedTulipUnknown_Temp&apos;);">
+                                        <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-item-button" class="plant-item-button" />
+                                    </ui:VisualElement>
+                                    <ui:Label tabindex="-1" display-tooltip-when-elided="true" class="plant-name" />
+                                </ui:VisualElement>
+                                <ui:VisualElement name="known-plant" class="item-container">
+                                    <ui:VisualElement name="plant-item" class="plant-item" style="background-image: url(&apos;project://database/Assets/_GrandmaGreen/Scripts/UI/SampleArt/UI_RedTulip_Temp.png?fileID=2800000&amp;guid=85fb08d134380b24bb857b50207cb7d2&amp;type=3#UI_RedTulip_Temp&apos;);">
+                                        <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-item-button" class="plant-item-button" />
+                                    </ui:VisualElement>
+                                    <ui:Label tabindex="-1" text="Tulip" display-tooltip-when-elided="true" class="plant-name" />
+                                </ui:VisualElement>
+                                <ui:VisualElement name="unknown-plant" class="item-container">
+                                    <ui:VisualElement name="plant-item" class="plant-item" style="background-image: url(&apos;project://database/Assets/_GrandmaGreen/Scripts/UI/SampleArt/UI_RedTulipUnknown_Temp.png?fileID=2800000&amp;guid=dce71ec3aa71d514f986870791b6e271&amp;type=3#UI_RedTulipUnknown_Temp&apos;);">
+                                        <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-item-button" class="plant-item-button" />
+                                    </ui:VisualElement>
+                                    <ui:Label tabindex="-1" display-tooltip-when-elided="true" class="plant-name" />
+                                </ui:VisualElement>
+                                <ui:VisualElement name="known-plant" class="item-container">
+                                    <ui:VisualElement name="plant-item" class="plant-item" style="background-image: url(&apos;project://database/Assets/_GrandmaGreen/Scripts/UI/SampleArt/UI_RedTulip_Temp.png?fileID=2800000&amp;guid=85fb08d134380b24bb857b50207cb7d2&amp;type=3#UI_RedTulip_Temp&apos;);">
+                                        <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-item-button" class="plant-item-button" />
+                                    </ui:VisualElement>
+                                    <ui:Label tabindex="-1" text="Tulip" display-tooltip-when-elided="true" class="plant-name" />
+                                </ui:VisualElement>
+                            </ui:GroupBox>
+                        </ui:VisualElement>
                     </ui:VisualElement>
-                    <ui:VisualElement name="left-content" style="width: 50%; height: 100%; min-width: auto; min-height: auto;">
-                        <ui:GroupBox name="entry-stages" style="width: 100%; height: 30%; min-width: auto; min-height: auto; align-items: stretch; justify-content: space-between; flex-direction: row;">
-                            <ui:VisualElement style="width: 30%; height: 100%; min-width: auto; min-height: auto; background-image: url(&apos;project://database/Assets/_GrandmaGreen/BeautifulCorner_Spring2022/Visual%20Assets/Sprites/Sprite01.PNG?fileID=-412363718210138021&amp;guid=9260c53c1e732ee40a68ef023eec4845&amp;type=3#Flower03&apos;);" />
-                            <ui:VisualElement style="width: 30%; height: 100%; min-width: auto; min-height: auto; background-image: url(&apos;project://database/Assets/_GrandmaGreen/BeautifulCorner_Spring2022/Visual%20Assets/Sprites/Sprite01.PNG?fileID=-1787968034691194203&amp;guid=9260c53c1e732ee40a68ef023eec4845&amp;type=3#Flower01&apos;); -unity-background-scale-mode: stretch-to-fill;" />
-                            <ui:VisualElement style="width: 30%; height: 100%; min-width: auto; min-height: auto; background-image: url(&apos;project://database/Assets/_GrandmaGreen/BeautifulCorner_Spring2022/Visual%20Assets/Sprites/Sprite01.PNG?fileID=2547701268730875829&amp;guid=9260c53c1e732ee40a68ef023eec4845&amp;type=3#Flower02&apos;); -unity-background-scale-mode: stretch-to-fill;" />
-                        </ui:GroupBox>
-                        <ui:VisualElement name="padding" style="height: 10%; width: 100%;" />
-                        <ui:Label tabindex="-1" text="hello im a tulip i am buff and love my grammy a lot" display-tooltip-when-elided="true" name="entry-desc" style="margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 5%; padding-right: 5%; padding-top: 5%; padding-bottom: 5%; width: 100%; height: 60%; color: rgba(139, 182, 81, 255); font-size: 50%; -unity-font-style: bold; white-space: normal;" />
+                    <ui:VisualElement name="entry-view" style="padding-left: 6%; padding-right: 6%; padding-top: 5%; padding-bottom: 2%; width: 100%; height: 100%; min-width: auto; min-height: auto; flex-direction: row; display: flex;">
+                        <ui:VisualElement name="right-content" style="width: 50%; height: 100%; min-width: auto; min-height: auto;">
+                            <ui:VisualElement name="entry-title" style="width: 100%; height: 30%;">
+                                <ui:Label tabindex="-1" text="Tulip" display-tooltip-when-elided="true" style="-unity-font-style: bold; font-size: 100%; -unity-text-align: middle-center; width: 100%; height: 100%; color: rgb(139, 182, 81);" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="entry-image" style="height: 70%; width: 100%; background-image: url(&apos;project://database/Assets/_GrandmaGreen/Scripts/UI/SampleArt/UI_RedTulip_Temp.png?fileID=2800000&amp;guid=85fb08d134380b24bb857b50207cb7d2&amp;type=3#UI_RedTulip_Temp&apos;);" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="left-content" style="width: 50%; height: 100%; min-width: auto; min-height: auto;">
+                            <ui:GroupBox name="entry-stages" style="width: 100%; height: 30%; min-width: auto; min-height: auto; align-items: stretch; justify-content: space-between; flex-direction: row;">
+                                <ui:VisualElement style="width: 30%; height: 100%; min-width: auto; min-height: auto; background-image: url(&apos;project://database/Assets/_GrandmaGreen/BeautifulCorner_Spring2022/Visual%20Assets/Sprites/Sprite01.PNG?fileID=-412363718210138021&amp;guid=9260c53c1e732ee40a68ef023eec4845&amp;type=3#Flower03&apos;);" />
+                                <ui:VisualElement style="width: 30%; height: 100%; min-width: auto; min-height: auto; background-image: url(&apos;project://database/Assets/_GrandmaGreen/BeautifulCorner_Spring2022/Visual%20Assets/Sprites/Sprite01.PNG?fileID=-1787968034691194203&amp;guid=9260c53c1e732ee40a68ef023eec4845&amp;type=3#Flower01&apos;); -unity-background-scale-mode: stretch-to-fill;" />
+                                <ui:VisualElement style="width: 30%; height: 100%; min-width: auto; min-height: auto; background-image: url(&apos;project://database/Assets/_GrandmaGreen/BeautifulCorner_Spring2022/Visual%20Assets/Sprites/Sprite01.PNG?fileID=2547701268730875829&amp;guid=9260c53c1e732ee40a68ef023eec4845&amp;type=3#Flower02&apos;); -unity-background-scale-mode: stretch-to-fill;" />
+                            </ui:GroupBox>
+                            <ui:VisualElement name="padding" style="height: 10%; width: 100%;" />
+                            <ui:Label tabindex="-1" text="hello im a tulip i am buff and love my grammy a lot" display-tooltip-when-elided="true" name="entry-desc" style="margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 5%; padding-right: 5%; padding-top: 5%; padding-bottom: 5%; width: 100%; height: 60%; color: rgb(139, 182, 81); font-size: 50%; -unity-font-style: bold; white-space: normal;" />
+                        </ui:VisualElement>
                     </ui:VisualElement>
                 </ui:VisualElement>
-            </ui:VisualElement>
-            <ui:VisualElement name="tab-area" style="height: 100%; width: 6%; align-items: flex-start; padding-top: 5%; padding-bottom: 5%; justify-content: space-between;">
-                <ui:VisualElement name="tab" class="tab">
-                    <ui:Button tabindex="-1" display-tooltip-when-elided="true" class="tab-button" />
-                </ui:VisualElement>
-                <ui:VisualElement name="tab" class="tab">
-                    <ui:Button tabindex="-1" display-tooltip-when-elided="true" class="tab-button" />
-                </ui:VisualElement>
-                <ui:VisualElement name="tab" class="tab">
-                    <ui:Button tabindex="-1" display-tooltip-when-elided="true" class="tab-button" />
-                </ui:VisualElement>
-                <ui:VisualElement name="tab" class="tab">
-                    <ui:Button tabindex="-1" display-tooltip-when-elided="true" class="tab-button" />
+                <ui:VisualElement name="tab-area" style="height: 100%; width: 6%; align-items: flex-start; padding-top: 5%; padding-bottom: 5%; justify-content: space-between;">
+                    <ui:VisualElement name="tab" class="tab">
+                        <ui:Button tabindex="-1" display-tooltip-when-elided="true" class="tab-button" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="tab" class="tab">
+                        <ui:Button tabindex="-1" display-tooltip-when-elided="true" class="tab-button" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="tab" class="tab">
+                        <ui:Button tabindex="-1" display-tooltip-when-elided="true" class="tab-button" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="tab" class="tab">
+                        <ui:Button tabindex="-1" display-tooltip-when-elided="true" class="tab-button" />
+                    </ui:VisualElement>
                 </ui:VisualElement>
             </ui:VisualElement>
         </ui:VisualElement>

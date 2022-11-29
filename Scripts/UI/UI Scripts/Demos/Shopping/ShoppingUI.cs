@@ -11,7 +11,7 @@ using Sirenix.OdinInspector;
 
 namespace GrandmaGreen.UI.Shopping
 {
-    public class ShoppingUI : MonoBehaviour
+    public class ShoppingUI : UIDisplayBase
     {
         private VisualElement m_rootVisualElement;
 
@@ -27,7 +27,7 @@ namespace GrandmaGreen.UI.Shopping
         public int m_currentAmount = 0;
         private ShopItem m_currentItem;
         
-        void OnEnable()
+        void Start()
         {
             m_rootVisualElement = GetComponent<UIDocument>().rootVisualElement.Q<VisualElement>("rootElement");
             m_rootVisualElement.Q<Button>("exitButton").RegisterCallback<ClickEvent>(RegisterExitButton);
@@ -45,7 +45,7 @@ namespace GrandmaGreen.UI.Shopping
             
             InstantiateJar();
         }
-        public void OpenUI()
+        public override void OpenUI()
         {
             EventManager.instance.HandleEVENT_CLOSE_HUD();
             m_rootVisualElement.style.display = DisplayStyle.Flex;
@@ -73,6 +73,8 @@ namespace GrandmaGreen.UI.Shopping
 
         void RegisterPopupWindow()
         {
+            m_rootVisualElement.Q<Label>("CurrentAmount").text = m_currentAmount.ToString();
+
             // Register exit button.
             m_rootVisualElement.Q<Button>("PopUpExitButton").clicked += () =>
             {

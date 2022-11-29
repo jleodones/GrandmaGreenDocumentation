@@ -22,6 +22,23 @@ namespace GrandmaGreen
                 Destroy(this);
             }
         }
+        
+        #region Save events and handlers.
+
+        public event Action EVENT_MANUAL_SAVE;
+        public event Action EVENT_DELETE_SAVE;
+
+        public void HandleEVENT_MANUAL_SAVE()
+        {
+            EVENT_MANUAL_SAVE?.Invoke();
+        }
+
+        public void HandleEVENT_DELETE_SAVE()
+        {
+            EVENT_DELETE_SAVE?.Invoke();
+        }
+        
+        #endregion
 
         #region  HUD events and handlers.
         public event Action EVENT_OPEN_HUD;
@@ -69,14 +86,6 @@ namespace GrandmaGreen
 
         public event Action<ushort> EVENT_INVENTORY_ADD_DECOR;
         public event Action<ushort> EVENT_INVENTORY_REMOVE_DECOR;
-
-        /*
-        public event Action<IInventoryItem, int> EVENT_INVENTORY_ADD_TOOL_OR_DECOR;
-        public event Action<IInventoryItem, int> EVENT_INVENTORY_REMOVE_TOOL_OR_DECOR;
-
-        public event Action<IInventoryItem, Genotype> EVENT_INVENTORY_ADD_PLANT_OR_SEED;
-        public event Action<IInventoryItem, Genotype> EVENT_INVENTORY_REMOVE_PLANT_OR_SEED;
-        */
 
         public event Action<int> EVENT_INVENTORY_ADD_MONEY;
         public event Action<int> EVENT_INVENTORY_REMOVE_MONEY;

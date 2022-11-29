@@ -400,14 +400,48 @@ namespace GrandmaGreen.Collections
             roseProp.waterPerStage = 1;
 
             PlantLookup[(ushort)PlantId.Rose] = roseProp;
-
-
+            
             PlantProperties tulipProp = PlantLookup[(ushort)PlantId.Tulip];
             tulipProp.growthStages = 3;
             tulipProp.growthTime = 10;
             tulipProp.waterPerStage = 2;
 
             PlantLookup[(ushort)PlantId.Tulip] = tulipProp;
+            
+            PlantProperties callalily = PlantLookup[(ushort)PlantId.CallaLily];
+            callalily.growthStages = 3;
+            callalily.growthTime = 10;
+            callalily.waterPerStage = 1;
+
+            PlantLookup[(ushort)PlantId.CallaLily] = callalily;
+            
+            PlantProperties dahlia = PlantLookup[(ushort)PlantId.Dahlia];
+            dahlia.growthStages = 3;
+            dahlia.growthTime = 10;
+            dahlia.waterPerStage = 1;
+
+            PlantLookup[(ushort)PlantId.Dahlia] = dahlia;
+            
+            PlantProperties hyacinth = PlantLookup[(ushort)PlantId.Hyacinth];
+            hyacinth.growthStages = 3;
+            hyacinth.growthTime = 10;
+            hyacinth.waterPerStage = 1;
+
+            PlantLookup[(ushort)PlantId.Hyacinth] = hyacinth;
+            
+            PlantProperties pansy = PlantLookup[(ushort)PlantId.Pansy];
+            pansy.growthStages = 3;
+            pansy.growthTime = 10;
+            pansy.waterPerStage = 1;
+
+            PlantLookup[(ushort)PlantId.Pansy] = pansy;
+
+            PlantProperties crocus = PlantLookup[(ushort)PlantId.Crocus];
+            crocus.growthStages = 3;
+            crocus.growthTime = 10;
+            crocus.waterPerStage = 1;
+
+            PlantLookup[(ushort)PlantId.Crocus] = crocus;
         }
     }
 }

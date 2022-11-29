@@ -1,6 +1,6 @@
 // This script attaches the tabbed menu logic to the game.
 
-using System.Collections;
+using System.Transactions;
 using UnityEngine;
 using UnityEngine.UIElements;
 using GrandmaGreen.SaveSystem;
@@ -8,10 +8,9 @@ using GrandmaGreen.Collections;
 using GrandmaGreen.Garden;
 using SpookuleleAudio;
 
-//Inherits from class `MonoBehaviour`. This makes it attachable to a game object as a component.
 namespace GrandmaGreen.UI.Collections
 {
-    public class TabbedInventory : MonoBehaviour
+    public class TabbedInventory : UIDisplayBase
     {
 
         public PlayerToolData playerToolData;
@@ -31,23 +30,22 @@ namespace GrandmaGreen.UI.Collections
 
         private Length inventoryWidth = (Length)(.45 * Screen.width);
 
-        void Awake()
+        void Start()
         {
-            // Gets the root of the tabbed inventory, which holds all the tabs in it.
-            VisualElement root = GetComponent<UIDocument>().rootVisualElement;
-
             // Sets up the controller for the whole inventory. The controller instantiates the inventory on its own upon creation.
-            m_controller = new(root, playerToolData, inventoryData, listEntryTemplate, soundContainers, collectionsSO);
+            m_controller = new(m_rootVisualElement, playerToolData, inventoryData, listEntryTemplate, soundContainers, collectionsSO);
 
             // Hides the inventory without animation
-            SetInventoryPosition();
+            // SetInventoryPosition();
 
             // Register player events.
             m_controller.RegisterTabCallbacks();
-            m_controller.RegisterExitCallback();
-            
+        }
+
+        public override void Load()
+        {
             // Subscribe to inventory related events.
-            EventManager.instance.EVENT_INVENTORY_OPEN += OpenInventory;
+            EventManager.instance.EVENT_INVENTORY_OPEN += OpenUI;
 
             EventManager.instance.EVENT_INVENTORY_ADD_PLANT += InventoryAddPlant;
             EventManager.instance.EVENT_INVENTORY_REMOVE_PLANT += InventoryRemovePlant;
@@ -62,45 +60,77 @@ namespace GrandmaGreen.UI.Collections
             EventManager.instance.EVENT_INVENTORY_REMOVE_DECOR += InventoryRemoveDecor;
 
             // Money.
-            EventManager.instance.EVENT_INVENTORY_ADD_MONEY += (int money) =>
-            {
-                // Adds to the singular money component store (int).
-                int currentMoney = money;
-                if (inventoryData.RequestData<int>(0, ref currentMoney))
-                {
-                    currentMoney += money;
-                    inventoryData.UpdateValue<int>(0, currentMoney);
-                }
-            };
-
+            EventManager.instance.EVENT_INVENTORY_ADD_MONEY += InventoryAddMoney;
             EventManager.instance.EVENT_INVENTORY_REMOVE_MONEY += InventoryRemoveMoney;
-
-            EventManager.instance.EVENT_INVENTORY_GET_MONEY += () =>
-            {
-                int currentMoney = 0;
-                inventoryData.RequestData<int>(0, ref currentMoney);
-                return currentMoney;
-            };
+            EventManager.instance.EVENT_INVENTORY_GET_MONEY += InventoryGetMoney;
         }
 
+        public override void Unload()
+        {
+            // Unsubscribe to inventory related events.
+            EventManager.instance.EVENT_INVENTORY_OPEN -= OpenUI;
+
+            EventManager.instance.EVENT_INVENTORY_ADD_PLANT -= InventoryAddPlant;
+            EventManager.instance.EVENT_INVENTORY_REMOVE_PLANT -= InventoryRemovePlant;
+
+            EventManager.instance.EVENT_INVENTORY_ADD_SEED -= InventoryAddSeed;
+            EventManager.instance.EVENT_INVENTORY_REMOVE_SEED -= InventoryRemoveSeed;
+
+            EventManager.instance.EVENT_INVENTORY_ADD_TOOL -= InventoryAddTool;
+            EventManager.instance.EVENT_INVENTORY_REMOVE_TOOL -= InventoryRemoveTool;
+
+            EventManager.instance.EVENT_INVENTORY_ADD_DECOR -= InventoryAddDecor;
+            EventManager.instance.EVENT_INVENTORY_REMOVE_DECOR -= InventoryRemoveDecor;
+
+            // Money.
+            EventManager.instance.EVENT_INVENTORY_ADD_MONEY -= InventoryAddMoney;
+
+            EventManager.instance.EVENT_INVENTORY_REMOVE_MONEY -= InventoryRemoveMoney;
+
+            EventManager.instance.EVENT_INVENTORY_GET_MONEY -= InventoryGetMoney;
+        }
+
+        /*
         public void SetInventoryPosition()
         {
             m_controller.SetInventoryPosition();
-        }
+        }*/
 
         public void OpenInventory()
         {
             m_controller.OpenInventory();
         }
 
+        /// Everything here needs to be moved to the InventoryUIController later.
+        private void InventoryAddMoney(int money)
+        {
+            // Adds to the singular money component store (int).
+            int currentMoney = money;
+            if (inventoryData.RequestData<int>(0, ref currentMoney))
+            {
+                currentMoney += money;
+                inventoryData.UpdateValue<int>(0, currentMoney);
+            }
+        }
         private void InventoryRemoveMoney(int money)
         {
             int currentMoney = money;
             if (inventoryData.RequestData<int>(0, ref currentMoney))
             {
                 currentMoney -= money;
+                if (currentMoney < 0)
+                {
+                    currentMoney = 0;
+                }
                 inventoryData.UpdateValue<int>(0, currentMoney);
             }
+        }
+
+        private int InventoryGetMoney()
+        {
+            int currentMoney = 0;
+            inventoryData.RequestData<int>(0, ref currentMoney);
+            return currentMoney;
         }
 
         private void InventoryAddSeed(ushort id, Genotype genotype)

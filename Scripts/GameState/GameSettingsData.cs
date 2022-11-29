@@ -30,9 +30,10 @@ namespace GrandmaGreen
         [SerializeField] RenderPipelineAsset renderAsset_Default;
         [SerializeField] RenderPipelineAsset renderAsset_BatterySaver;
 
-        SettingsSet m_currentSettings;
+        private SettingsSet m_currentSettings;
 
         public SettingsSet Current => m_currentSettings;
+        
         public bool muted { get; private set; }
 
         public void LoadSettings()
@@ -59,18 +60,21 @@ namespace GrandmaGreen
         {
             m_currentSettings.masterVolume = value;
             masterMixer.SetFloat(masterVolumeParameter, value);
+            SaveSettings();
         }
 
         public void SetMusicVolume(float value)
         {
             m_currentSettings.musicVolume = value;
             masterMixer.SetFloat(musicVolumeParameter, value);
+            SaveSettings();
         }
 
         public void SetSFXVolume(float value)
         {
             m_currentSettings.sfxVolume = value;
             masterMixer.SetFloat(sfxVolumeParameter, value);
+            SaveSettings();
         }
 
         [ContextMenu("Mute")]

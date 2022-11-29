@@ -1,49 +1,78 @@
 // This script attaches the tabbed menu logic to the game.
 
 using System;
+using System.Collections;
+using Core.SceneManagement;
 using GrandmaGreen.UI.Collections;
-using UnityEngine;
+using UnityEngine.PlayerLoop;
+using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
 //Inherits from class `MonoBehaviour`. This makes it attachable to a game object as a component.
 namespace GrandmaGreen.UI.HUD
 {
-    public class HUD : MonoBehaviour
+    public class HUD : UIDisplayBase
     {
-        public TabbedInventory inventory;
+        // Cross references to other UI. Inventory handling is handled globally, as the inventory gets called opened by numerous other systems.
+        // Settings.
+        public SettingsUIDisplay settingsUIDisplay;
+        
+        // Cultivision.
+        public CultivisionUIDisplay cultivisionUIDisplay;
+        
+        // Collection.
+        public CollectionUIDisplay collectionUIDisplay;
+
+        // Inventory.
+        public TabbedInventory inventoryUIDisplay;
+        
         private HUDController m_controller;
 
-        private void OnEnable()
+        public void Start()
         {
-            UIDocument HUD = GetComponent<UIDocument>();
-            VisualElement root = HUD.rootVisualElement;
-
-            m_controller = new(root);
+            m_controller = new(m_rootVisualElement);
 
             m_controller.RegisterButtonCallbacks();
+
+            if (SceneManager.GetActiveScene().name == "SetupTest")
+            {
+                RegisterButtonCallback("customizationButton",
+                    () => { EventManager.instance.HandleEVENT_TOGGLE_CUSTOMIZATION_MODE(); });
+
+                RegisterButtonCallbackWithClose("cultivisionButton", cultivisionUIDisplay.OpenUI);
+                cultivisionUIDisplay.RegisterButtonCallback("exitButton", OpenHUDAnimated);
+            }
+
+            RegisterButtonCallbackWithClose("inventoryButton", inventoryUIDisplay.OpenUI);
+            inventoryUIDisplay.RegisterButtonCallback("exitButton", OpenUI);
+
+            RegisterButtonCallbackWithClose("collectionsButton", collectionUIDisplay.OpenUI);
+            collectionUIDisplay.RegisterButtonCallback("exitButton", OpenHUDAnimated);
             
+            RegisterButtonCallbackWithClose("settingsButton", settingsUIDisplay.OpenUI);
+            settingsUIDisplay.RegisterButtonCallback("exitButton", OpenUI);
+            
+            EventManager.instance.HandleEVENT_UPDATE_MONEY_DISPLAY();
+        }
+
+        public override void Load()
+        {
             // Register global events.
             EventManager.instance.EVENT_OPEN_HUD += OpenHUD;
             EventManager.instance.EVENT_OPEN_HUD_ANIMATED += OpenHUDAnimated;
             EventManager.instance.EVENT_CLOSE_HUD += CloseHUD;
             EventManager.instance.EVENT_CLOSE_HUD_ANIMATED += CloseHUDAnimated;
-
-            EventManager.instance.EVENT_UPDATE_MONEY_DISPLAY += () =>
-            {
-                int currentMoney = EventManager.instance.HandleEVENT_INVENTORY_GET_MONEY();
-                root.Q<Label>("currency-text").text = currentMoney.ToString();
-            };
-
-            root.Q<Button>("customization-button").clicked+=()=>
-            {
-                EventManager.instance.HandleEVENT_TOGGLE_CUSTOMIZATION_MODE();
-            };
+            EventManager.instance.EVENT_UPDATE_MONEY_DISPLAY += UpdateMoneyDisplay;
         }
 
-        private void FixedUpdate()
+        public override void Unload()
         {
-            // Set money count, on awake.
-            EventManager.instance.HandleEVENT_UPDATE_MONEY_DISPLAY();
+            // Register global events.
+            EventManager.instance.EVENT_OPEN_HUD -= OpenHUD;
+            EventManager.instance.EVENT_OPEN_HUD_ANIMATED -= OpenHUDAnimated;
+            EventManager.instance.EVENT_CLOSE_HUD -= CloseHUD;
+            EventManager.instance.EVENT_CLOSE_HUD_ANIMATED -= CloseHUDAnimated;
+            EventManager.instance.EVENT_UPDATE_MONEY_DISPLAY -= UpdateMoneyDisplay;
         }
 
         public void OpenHUD()
@@ -64,6 +93,11 @@ namespace GrandmaGreen.UI.HUD
         {
             m_controller.CloseHUDAnimated();
         }
-        
+
+        private void UpdateMoneyDisplay()
+        {
+            int currentMoney = EventManager.instance.HandleEVENT_INVENTORY_GET_MONEY();
+            m_rootVisualElement.Q<Label>("currency-text").text = currentMoney.ToString();
+        }
     }
 }

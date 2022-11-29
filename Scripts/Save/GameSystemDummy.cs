@@ -32,47 +32,17 @@ namespace GrandmaGreen {
             //m_objectSavers[0].AddComponent<Trait>(-1, t);
         }
 
-        /*
         [Button()]
-        public void AddToInventory(int type, ushort id, int quantity)
+        public void AddSampleSeedToInventory()
         {
-            switch (type)
-            {
-                case 0: // Tool
-                    EventManager.instance.HandleEVENT_INVENTORY_ADD_TOOL_OR_DECOR(new GrandmaGreen.Collections.Tool(id, null, 0), quantity);
-                    break;
-                case 1: // Plant
-                    EventManager.instance.HandleEVENT_INVENTORY_ADD_PLANT_OR_SEED(new GrandmaGreen.Collections.Plant(id, null, 0, new List<Genotype>()), new Genotype());
-                    break;
-                case 2: // Seed
-                    EventManager.instance.HandleEVENT_INVENTORY_ADD_PLANT_OR_SEED(new GrandmaGreen.Collections.Seed(id, null, new List<Genotype>()), new Genotype());
-                    break;
-                case 3: // Decor
-                    EventManager.instance.HandleEVENT_INVENTORY_ADD_TOOL_OR_DECOR(new GrandmaGreen.Collections.Decor(id, null, 0), quantity);
-                    break;
-            }
+            EventManager.instance.HandleEVENT_INVENTORY_ADD_SEED(1001, new Genotype("AaBb"));
         }
 
         [Button()]
-        public void RemoveFromInventory(int type, ushort id, int quantity)
+        public void RemoveSampleSeedFromInventory()
         {
-            switch (type)
-            {
-                case 0: // Tool
-                    EventManager.instance.HandleEVENT_INVENTORY_REMOVE_TOOL_OR_DECOR(new GrandmaGreen.Collections.Tool(id, null, 0), quantity);
-                    break;
-                case 1: // Plant
-                    EventManager.instance.HandleEVENT_INVENTORY_REMOVE_PLANT_OR_SEED(new GrandmaGreen.Collections.Plant(id, null, 0, new List<Genotype>()), new Genotype());
-                    break;
-                case 2: // Seed
-                    EventManager.instance.HandleEVENT_INVENTORY_REMOVE_PLANT_OR_SEED(new GrandmaGreen.Collections.Seed(id, null, new List<Genotype>()), new Genotype());
-                    break;
-                case 3: // Decor
-                    EventManager.instance.HandleEVENT_INVENTORY_REMOVE_TOOL_OR_DECOR(new GrandmaGreen.Collections.Decor(id, null, 0), quantity);
-                    break;
-            }
+            EventManager.instance.HandleEVENT_INVENTORY_REMOVE_SEED(1001, new Genotype("AaBb"));
         }
-        */
         
         public int SampleTest()
         {

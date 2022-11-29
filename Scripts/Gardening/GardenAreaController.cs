@@ -61,8 +61,6 @@ namespace GrandmaGreen.Garden
             plantPrefabLookup = new Dictionary<Vector3Int, GameObject>();
             decorList = new List<Collider>();
             RefreshGarden();
-
-            EventManager.instance.HandleEVENT_INVENTORY_ADD_DECOR((ushort)DecorationId.Flamingo);
         }
 
         void OnDisable()

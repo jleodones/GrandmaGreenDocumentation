@@ -1,9 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
-<engine:UXML
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:engine="UnityEngine.UIElements"
-    xmlns:editor="UnityEditor.UIElements"
-    xsi:noNamespaceSchemaLocation="../../../../../../../UIElementsSchema/UIElements.xsd"
->
-    
-</engine:UXML>
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../../../UIElementsSchema/UIElements.xsd">
+    <ui:VisualElement name="rootVisualElement" style="width: 100%; height: 100%;">
+        <ui:VisualElement name="splashScreen" style="width: 100%; height: 100%; background-image: url(&apos;project://database/Assets/_GrandmaGreen/Art/UI/Splash%20Screen/GG_SplashScreenArt.jpeg?fileID=21300000&amp;guid=f9af74027cdbf49bda0ca9bd3a7a2400&amp;type=3#GG_SplashScreenArt&apos;);" />
+        <ui:Button tabindex="-1" text="START" display-tooltip-when-elided="true" name="startButton" style="position: absolute; width: 20%; height: 8%; font-size: 50%; left: 80%; top: 60%;" />
+        <ui:Button tabindex="-1" text="SETTINGS" display-tooltip-when-elided="true" name="settingsButton" style="position: absolute; width: 20%; height: 8%; font-size: 50%; left: 80%; top: 70%;" />
+    </ui:VisualElement>
+</ui:UXML>
