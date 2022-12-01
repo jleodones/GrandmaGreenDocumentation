@@ -200,55 +200,73 @@ namespace GrandmaGreen.Garden
 
         public void IncrementTimer(int value)
         {
-            List<PlantState> plantList = gardenManager.GetPlants(areaIndex);
-
-            foreach (PlantState plant in plantList)
+            // Get an initial plantList (with their original timers) and increment all waterTimers
+            // in that list
+            List<PlantState> plantsToUpdate = gardenManager.GetPlants(areaIndex);
+            foreach (PlantState plant in plantsToUpdate)
             {
                 gardenManager.IncrementWaterTimer(areaIndex, plant.cell, value);
+            }
 
-                if (plant.waterTimer == collection.GetPlant(plant.type).growthTime)
-                {
-                    Debug.Log("Plant is ready for water");
-                }
-                else if (plant.waterTimer == gardenManager.WiltTime
-                    || (gardenManager.PlantIsWilted(areaIndex, plant.cell) && returnFromPause)) //>= 240)
-                {
-                    // Wilted
-                    // Debug.Log("Plant is wilted");
-                    UpdateSprite(plant.cell);
+            // Due to the nature of GetPlants(), the "plantList" list actually does not return to us
+            // updated waterTimers after an IncrementTimer. As such, I'm temporarily re-grabbing the list
+            // as an updatedPlantList in order to get the newly updated waterTimers.
 
-                    Vector3 centerOfCell = tilemap.GetCellCenterWorld(plant.cell);
-                    Quaternion particleQuat = Quaternion.Euler(-110, 0, 0);
-                    ParticleSystem PlayParticle = Instantiate(DryingUpBurst, centerOfCell + new Vector3(0, -1, -2), particleQuat);
-                }
-                else if (!gardenManager.PlantIsFullyGrown(areaIndex, plant.cell))
+            // This will also fix issues with regards to lag whenever a plant enters wilt/death stage, as
+            // well as issues regarding plants first appearing wilted/dead despite having been watered and
+            // being in a healthy second stage
+            List<PlantState> updatedPlantsList = gardenManager.GetPlants(areaIndex);
+            foreach (PlantState updatedPlant in updatedPlantsList)
+            {
+                if (updatedPlant.waterStage == 1 && updatedPlant.waterTimer >= collection.GetPlant(updatedPlant.type).growthTime)
                 {
-                    if (plant.waterTimer == gardenManager.DeathTime
-                        || (gardenManager.PlantIsDead(areaIndex, plant.cell) && returnFromPause)) //>= 336)
+                    // Debug.Log("Plant Growth via IncrementWaterTimer");
+                    gardenManager.UpdateGrowthStage(areaIndex, updatedPlant.cell);
+
+                    UpdateSprite(updatedPlant.cell);
+                }
+                else
+                {
+                    if (updatedPlant.waterTimer == collection.GetPlant(updatedPlant.type).growthTime)
                     {
-                        // Dead
-                        // Debug.Log("Plant is dead");
-                        UpdateSprite(plant.cell);
+                        Debug.Log("Plant is ready for water");
+                    }
+                    else if (updatedPlant.waterTimer == gardenManager.WiltTime
+                        || (gardenManager.PlantIsWilted(areaIndex, updatedPlant.cell) && returnFromPause)) //>= 240)
+                    {
+                        // Wilted
+                        // Debug.Log("Plant is wilted");
+                        UpdateSprite(updatedPlant.cell);
 
-                        Vector3 centerOfCell = tilemap.GetCellCenterWorld(plant.cell);
+                        Vector3 centerOfCell = tilemap.GetCellCenterWorld(updatedPlant.cell);
                         Quaternion particleQuat = Quaternion.Euler(-110, 0, 0);
-                        ParticleSystem PlayParticle = Instantiate(DryingUpBurst, centerOfCell + new Vector3(0, -1, -2), particleQuat);
+                        Instantiate(DryingUpBurst, centerOfCell + new Vector3(0, -1, -2), particleQuat);
+                    }
+                    else if (!gardenManager.PlantIsFullyGrown(areaIndex, updatedPlant.cell))
+                    {
+                        if (updatedPlant.waterTimer == gardenManager.DeathTime
+                            || (gardenManager.PlantIsDead(areaIndex, updatedPlant.cell) && returnFromPause)) //>= 336)
+                        {
+                            // Dead
+                            // Debug.Log("Plant is dead");
+                            UpdateSprite(updatedPlant.cell);
+
+                            Vector3 centerOfCell = tilemap.GetCellCenterWorld(updatedPlant.cell);
+                            Quaternion particleQuat = Quaternion.Euler(-110, 0, 0);
+                            Instantiate(DryingUpBurst, centerOfCell + new Vector3(0, -1, -2), particleQuat);
+                        }
                     }
                 }
 
-                if (plant.waterStage == 1
-                    && plant.waterTimer >= collection.GetPlant(plant.type).growthTime)
-                {
-                    // Debug.Log("Plant Growth via IncrementWaterTimer");
-                    gardenManager.UpdateGrowthStage(areaIndex, plant.cell);
-
-                    UpdateSprite(plant.cell);
-                }
-
-                if (returnFromPause) UpdateSprite(plant.cell);
+                if (returnFromPause) UpdateSprite(updatedPlant.cell);
             }
 
             if (returnFromPause) returnFromPause = false;
+        }
+
+        public void UpdateWaterAndGrowthState()
+        {
+
         }
 
         public void WaterPlant(Vector3Int cell)
@@ -375,29 +393,64 @@ namespace GrandmaGreen.Garden
             }
         }
 
-        [ContextMenu("CrossBreedTest")]
+        [ContextMenu("GenotypeSpriteTest")]
         public void CrossBreedTest()
         {
             Vector3Int right = Vector3Int.zero + 3 * Vector3Int.up;
-            for (int i = 0; i <= 6; i += 2)
+            for (int i = 0; i <= 8; i += 2)
             {
                 DestroyPlant(right + i * Vector3Int.down);
-                DestroyPlant(right + i * Vector3Int.down + Vector3Int.right);
                 ChangeGardenTileToPlot_Occupied(right + i * Vector3Int.down);
-                ChangeGardenTileToPlot_Occupied(right + i * Vector3Int.down + Vector3Int.right);
-                CreatePlant(PlantId.Tulip, new Genotype("AaBb"), right + i * Vector3Int.down, 2);
             }
-            CreatePlant(PlantId.Rose, new Genotype("aabb"), right + 0 * Vector3Int.down + Vector3Int.right, 2);
-            CreatePlant(PlantId.Rose, new Genotype("AaBb"), right + 2 * Vector3Int.down + Vector3Int.right, 2);
-            CreatePlant(PlantId.Rose, new Genotype("aAbB"), right + 4 * Vector3Int.down + Vector3Int.right, 2);
-            CreatePlant(PlantId.Rose, new Genotype("AABB"), right + 6 * Vector3Int.down + Vector3Int.right, 2);
+            CreatePlant(PlantId.Rose, new Genotype("aabb"), right + 0 * Vector3Int.down, 2);
+            CreatePlant(PlantId.Rose, new Genotype("aaBb"), right + 2 * Vector3Int.down, 2);
+            CreatePlant(PlantId.Rose, new Genotype("aaBB"), right + 4 * Vector3Int.down, 2);
+            // Megas
+            CreatePlant(PlantId.Rose, new Genotype("aabb", Genotype.Generation.F2), right + 6 * Vector3Int.down, 2);
+            CreatePlant(PlantId.Rose, new Genotype("aaBB", Genotype.Generation.F2), right + 8 * Vector3Int.down, 2);
         }
 
-        [ContextMenu("GenotypeTest")]
+        [ContextMenu("CrossBreedTest")]
         public void GenotypeTest()
         {
-            Genotype first = new Genotype("AaBb");
-            Genotype second = new Genotype("AaBb");
+            Genotype first;
+            Genotype second;
+
+            Debug.Log("child is p1");
+            first = new Genotype("aaBb");
+            second = new Genotype("aaBb");
+            first.Cross(second);
+
+            Debug.Log("if both parents are f2, child is f2");
+            first = new Genotype("aaBb", Genotype.Generation.F2);
+            second = new Genotype("aaBb", Genotype.Generation.F2);
+            first.Cross(second);
+
+            Debug.Log("if parents are duplicate homozygous, child is F1");
+            first = new Genotype("aabb");
+            second = new Genotype("aabb");
+            first.Cross(second);
+
+            first = new Genotype("aaBB");
+            second = new Genotype("aaBB");
+            first.Cross(second);
+
+            Debug.Log("if parents are duplicate homozygous and both f1, child is f2");
+            first = new Genotype("aabb", Genotype.Generation.F1);
+            second = new Genotype("aabb", Genotype.Generation.F1);
+            first.Cross(second);
+
+            first = new Genotype("aaBB", Genotype.Generation.F1);
+            second = new Genotype("aaBB", Genotype.Generation.F1);
+            first.Cross(second);
+
+            Debug.Log("if parents are duplicate homozygous and one is f1 and one is f2, child is f2");
+            first = new Genotype("aabb", Genotype.Generation.F2);
+            second = new Genotype("aabb", Genotype.Generation.F1);
+            first.Cross(second);
+
+            first = new Genotype("aaBB", Genotype.Generation.F2);
+            second = new Genotype("aaBB", Genotype.Generation.F1);
             first.Cross(second);
         }
         #endregion

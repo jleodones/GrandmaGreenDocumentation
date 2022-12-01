@@ -354,6 +354,12 @@ namespace GrandmaGreen.Collections
                     break;
             }
 
+            if (genotype.generation == Genotype.Generation.F2
+                && genotype.trait != Genotype.Trait.Heterozygous)
+            {
+                suffix += "_M";
+            }
+
             string finalSpritePath = plant.spriteBasePath + suffix;
 
             Sprite plantSprite = Resources.Load<Sprite>(plant.plantType.ToString() + "s/" + plant.name + "/" + finalSpritePath);

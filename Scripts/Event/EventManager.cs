@@ -90,13 +90,7 @@ namespace GrandmaGreen
         public event Action<int> EVENT_INVENTORY_ADD_MONEY;
         public event Action<int> EVENT_INVENTORY_REMOVE_MONEY;
         public event Func<int> EVENT_INVENTORY_GET_MONEY;
-        #endregion
-
-        #region  Customization.
-        public event Action<IInventoryItem> EVENT_INVENTORY_CUSTOMIZATION_START;
-        public event Action EVENT_TOGGLE_CUSTOMIZATION_MODE;
-        public event Action<bool> EVENT_CUSTOMIZATION_ATTEMPT;
-
+      
         public void HandleEVENT_INVENTORY_OPEN()
         {
             EVENT_INVENTORY_OPEN?.Invoke();
@@ -162,9 +156,16 @@ namespace GrandmaGreen
 
         #region  Golem events and handlers.
         public event Action<ushort, Vector3> EVENT_GOLEM_SPAWN;
+        public event Action<ushort, int> EVENT_GOLEM_HAPPINESS_UPDATE;
+        public event Action<ushort> EVENT_GOLEM_EVOLVE;
 
         public void HandleEVENT_GOLEM_SPAWN(ushort id, Vector3 pos) { EVENT_GOLEM_SPAWN?.Invoke(id, pos); }
-
+        public void HandleEVENT_GOLEM_EVOLVE(ushort id) { EVENT_GOLEM_EVOLVE?.Invoke(id); }
+        
+        public void HandleEVENT_GOLEM_HAPPINESS_UPDATE(ushort id, int val) 
+        {
+            EVENT_GOLEM_HAPPINESS_UPDATE?.Invoke(id, val);
+        }
         #endregion
 
         #region Plant growth event.
@@ -174,6 +175,12 @@ namespace GrandmaGreen
         {
             EVENT_PLANT_UPDATE?.Invoke(areaIndex, cell);
         }
+        #endregion
+       
+        #region  Customization.
+        public event Action<IInventoryItem> EVENT_INVENTORY_CUSTOMIZATION_START;
+        public event Action EVENT_TOGGLE_CUSTOMIZATION_MODE;
+        public event Action<bool> EVENT_CUSTOMIZATION_ATTEMPT;
 
         public void HandleEVENT_INVENTORY_CUSTOMIZATION_START(IInventoryItem item)
         {
@@ -189,8 +196,8 @@ namespace GrandmaGreen
         {
             EVENT_CUSTOMIZATION_ATTEMPT?.Invoke(successful);
         }
-
         #endregion
+
     }
 }
 

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Core.Input;
 using GrandmaGreen.UI.Golems;
+using GrandmaGreen.Collections;
 using UnityEngine;
 using Pathfinding;
 using Unity.Mathematics;
@@ -31,6 +32,7 @@ namespace GrandmaGreen.Entities
         const string BK_WANDER_POSITION = "wanderPosition";
 
         [field: Header("Entity Variables")]
+        public CharacterId id;
         public bool isMature = false;
         public Vector3 velocity;
         public int range = 300;
@@ -61,7 +63,10 @@ namespace GrandmaGreen.Entities
         void Start()
         {
             prevPosition = transform.position;
-            
+
+            //Subscribe
+            EventManager.instance.EVENT_GOLEM_EVOLVE += OnGolemEvolve;
+
             // create our behaviour tree and get it's blackboard
             behaviorTree = CreateBehaviourTree();
             blackboard = behaviorTree.Blackboard;
@@ -75,12 +80,13 @@ namespace GrandmaGreen.Entities
                 debugger.BehaviorTree = behaviorTree;
             #endif
 
-                // start the behaviour tree
-                behaviorTree.Start();
+            // start the behaviour tree
+            behaviorTree.Start();
         }
 
         private void OnDestroy() {
             // onEntityInteract -= UpdateInteractState;
+            EventManager.instance.EVENT_GOLEM_EVOLVE -= OnGolemEvolve;
             StopBehaviorTree();
         }
 
@@ -187,7 +193,15 @@ namespace GrandmaGreen.Entities
             behaviorTree.Blackboard.Set("isInteract", m_isInteracting);
         }
 
-        #region Golem Look Changes
+        #region Golem Evolution
+        //Golem event handler
+        public void OnGolemEvolve(ushort golemID) {
+            if (id == (CharacterId)golemID) {
+                Debug.Log(id.ToString() + " EVOLVE!");
+                UpdateMatureState(true);
+            }
+        }
+
         //Golem sprite change
         public void UpdateMatureState(bool isGrowUp) {
             if (this.isMature == true) return;
@@ -206,7 +220,6 @@ namespace GrandmaGreen.Entities
         {
             UpdateMatureState(true);
         }
-
         #endregion
 
         //traverse

@@ -19,6 +19,7 @@ namespace GrandmaGreen.Entities
         {
             //Subscribe
             EventManager.instance.EVENT_GOLEM_SPAWN += OnGolemSpawn;
+            EventManager.instance.EVENT_GOLEM_HAPPINESS_UPDATE += OnGolemHappinessChanged;
             golemStateTable = new GolemState[10];
         }
 
@@ -38,8 +39,8 @@ namespace GrandmaGreen.Entities
         public void OnGolemSpawn(ushort id, Vector3 pos) {
             
             // if golem existed, not spawn
-            int tableIndex = (int)id - 5000;
-            if (tableIndex >= golemStateTable.Length || 
+            int tableIndex = offsetId(id);
+            if (!isIdValid(tableIndex) || 
                 golemStateTable[tableIndex].golemID == (CharacterId)id)
             {
                 Debug.Log("Golem Existed or wrong id");
@@ -66,11 +67,39 @@ namespace GrandmaGreen.Entities
             golemStateTable[tableIndex] = CreateGolem(id);
         }
 
+        public void OnGolemHappinessChanged(ushort id, int val) {
+            int index = offsetId(id);
+            if (!isIdValid(index)) {
+                Debug.LogError("Golem id wrong");
+                return;
+            }
+
+            Debug.Log("Golem Happiness Changed " + val);
+            int happiness = golemStateTable[index].happiness;
+            happiness += val;
+            happiness = happiness < 0? 0 : happiness;
+
+            // check evolve
+            if (happiness >= 100 && !golemStateTable[index].isMature) {
+                EventManager.instance.HandleEVENT_GOLEM_EVOLVE(id);
+                golemStateTable[index].isMature = true;
+                happiness = 50;
+            }
+
+            golemStateTable[index].happiness = happiness;
+        }
+
         public void OnDestroy() {
             //Unsubscribe
             EventManager.instance.EVENT_GOLEM_SPAWN -= OnGolemSpawn;
+            EventManager.instance.EVENT_GOLEM_HAPPINESS_UPDATE -= OnGolemHappinessChanged;
         }
 
+        #region Utility
         private int offsetId(ushort id) {return (int)id - 5000;}
+        private bool isIdValid(int index) { 
+            return index < golemStateTable.Length && index >= 0;
+        }
+        #endregion
     }
 }
