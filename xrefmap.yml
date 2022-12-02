@@ -4304,6 +4304,12 @@ references:
   commentId: E:GrandmaGreen.EventManager.EVENT_INVENTORY_GET_MONEY
   fullName: GrandmaGreen.EventManager.EVENT_INVENTORY_GET_MONEY
   nameWithType: EventManager.EVENT_INVENTORY_GET_MONEY
+- uid: GrandmaGreen.EventManager.EVENT_INVENTORY_GET_SEED_COUNT
+  name: EVENT_INVENTORY_GET_SEED_COUNT
+  href: api/GrandmaGreen.EventManager.html#GrandmaGreen_EventManager_EVENT_INVENTORY_GET_SEED_COUNT
+  commentId: E:GrandmaGreen.EventManager.EVENT_INVENTORY_GET_SEED_COUNT
+  fullName: GrandmaGreen.EventManager.EVENT_INVENTORY_GET_SEED_COUNT
+  nameWithType: EventManager.EVENT_INVENTORY_GET_SEED_COUNT
 - uid: GrandmaGreen.EventManager.EVENT_INVENTORY_OPEN
   name: EVENT_INVENTORY_OPEN
   href: api/GrandmaGreen.EventManager.html#GrandmaGreen_EventManager_EVENT_INVENTORY_OPEN
@@ -4558,6 +4564,19 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.EventManager.HandleEVENT_INVENTORY_GET_MONEY
   nameWithType: EventManager.HandleEVENT_INVENTORY_GET_MONEY
+- uid: GrandmaGreen.EventManager.HandleEVENT_INVENTORY_GET_SEED_COUNT(System.UInt16,Genotype)
+  name: HandleEVENT_INVENTORY_GET_SEED_COUNT(UInt16, Genotype)
+  href: api/GrandmaGreen.EventManager.html#GrandmaGreen_EventManager_HandleEVENT_INVENTORY_GET_SEED_COUNT_System_UInt16_Genotype_
+  commentId: M:GrandmaGreen.EventManager.HandleEVENT_INVENTORY_GET_SEED_COUNT(System.UInt16,Genotype)
+  fullName: GrandmaGreen.EventManager.HandleEVENT_INVENTORY_GET_SEED_COUNT(System.UInt16, Genotype)
+  nameWithType: EventManager.HandleEVENT_INVENTORY_GET_SEED_COUNT(UInt16, Genotype)
+- uid: GrandmaGreen.EventManager.HandleEVENT_INVENTORY_GET_SEED_COUNT*
+  name: HandleEVENT_INVENTORY_GET_SEED_COUNT
+  href: api/GrandmaGreen.EventManager.html#GrandmaGreen_EventManager_HandleEVENT_INVENTORY_GET_SEED_COUNT_
+  commentId: Overload:GrandmaGreen.EventManager.HandleEVENT_INVENTORY_GET_SEED_COUNT
+  isSpec: "True"
+  fullName: GrandmaGreen.EventManager.HandleEVENT_INVENTORY_GET_SEED_COUNT
+  nameWithType: EventManager.HandleEVENT_INVENTORY_GET_SEED_COUNT
 - uid: GrandmaGreen.EventManager.HandleEVENT_INVENTORY_OPEN
   name: HandleEVENT_INVENTORY_OPEN()
   href: api/GrandmaGreen.EventManager.html#GrandmaGreen_EventManager_HandleEVENT_INVENTORY_OPEN
@@ -4967,6 +4986,19 @@ references:
   commentId: T:GrandmaGreen.GameSystemDummy
   fullName: GrandmaGreen.GameSystemDummy
   nameWithType: GameSystemDummy
+- uid: GrandmaGreen.GameSystemDummy.AddDecorItem
+  name: AddDecorItem()
+  href: api/GrandmaGreen.GameSystemDummy.html#GrandmaGreen_GameSystemDummy_AddDecorItem
+  commentId: M:GrandmaGreen.GameSystemDummy.AddDecorItem
+  fullName: GrandmaGreen.GameSystemDummy.AddDecorItem()
+  nameWithType: GameSystemDummy.AddDecorItem()
+- uid: GrandmaGreen.GameSystemDummy.AddDecorItem*
+  name: AddDecorItem
+  href: api/GrandmaGreen.GameSystemDummy.html#GrandmaGreen_GameSystemDummy_AddDecorItem_
+  commentId: Overload:GrandmaGreen.GameSystemDummy.AddDecorItem
+  isSpec: "True"
+  fullName: GrandmaGreen.GameSystemDummy.AddDecorItem
+  nameWithType: GameSystemDummy.AddDecorItem
 - uid: GrandmaGreen.GameSystemDummy.AddSampleSeedToInventory
   name: AddSampleSeedToInventory()
   href: api/GrandmaGreen.GameSystemDummy.html#GrandmaGreen_GameSystemDummy_AddSampleSeedToInventory
@@ -5331,6 +5363,32 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Garden.GardenAreaController.GenotypeTest
   nameWithType: GardenAreaController.GenotypeTest
+- uid: GrandmaGreen.Garden.GardenAreaController.GetBreedingCandidates(Vector3Int)
+  name: GetBreedingCandidates(Vector3Int)
+  href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_GetBreedingCandidates_Vector3Int_
+  commentId: M:GrandmaGreen.Garden.GardenAreaController.GetBreedingCandidates(Vector3Int)
+  fullName: GrandmaGreen.Garden.GardenAreaController.GetBreedingCandidates(Vector3Int)
+  nameWithType: GardenAreaController.GetBreedingCandidates(Vector3Int)
+- uid: GrandmaGreen.Garden.GardenAreaController.GetBreedingCandidates*
+  name: GetBreedingCandidates
+  href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_GetBreedingCandidates_
+  commentId: Overload:GrandmaGreen.Garden.GardenAreaController.GetBreedingCandidates
+  isSpec: "True"
+  fullName: GrandmaGreen.Garden.GardenAreaController.GetBreedingCandidates
+  nameWithType: GardenAreaController.GetBreedingCandidates
+- uid: GrandmaGreen.Garden.GardenAreaController.GetNeighbors(Vector3Int)
+  name: GetNeighbors(Vector3Int)
+  href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_GetNeighbors_Vector3Int_
+  commentId: M:GrandmaGreen.Garden.GardenAreaController.GetNeighbors(Vector3Int)
+  fullName: GrandmaGreen.Garden.GardenAreaController.GetNeighbors(Vector3Int)
+  nameWithType: GardenAreaController.GetNeighbors(Vector3Int)
+- uid: GrandmaGreen.Garden.GardenAreaController.GetNeighbors*
+  name: GetNeighbors
+  href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_GetNeighbors_
+  commentId: Overload:GrandmaGreen.Garden.GardenAreaController.GetNeighbors
+  isSpec: "True"
+  fullName: GrandmaGreen.Garden.GardenAreaController.GetNeighbors
+  nameWithType: GardenAreaController.GetNeighbors
 - uid: GrandmaGreen.Garden.GardenAreaController.HarvestPlant(Vector3Int)
   name: HarvestPlant(Vector3Int)
   href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_HarvestPlant_Vector3Int_
@@ -5732,6 +5790,19 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Garden.GardenManager.DestroyPlant
   nameWithType: GardenManager.DestroyPlant
+- uid: GrandmaGreen.Garden.GardenManager.GetBreedingCandidates(System.Int32,Vector3Int)
+  name: GetBreedingCandidates(Int32, Vector3Int)
+  href: api/GrandmaGreen.Garden.GardenManager.html#GrandmaGreen_Garden_GardenManager_GetBreedingCandidates_System_Int32_Vector3Int_
+  commentId: M:GrandmaGreen.Garden.GardenManager.GetBreedingCandidates(System.Int32,Vector3Int)
+  fullName: GrandmaGreen.Garden.GardenManager.GetBreedingCandidates(System.Int32, Vector3Int)
+  nameWithType: GardenManager.GetBreedingCandidates(Int32, Vector3Int)
+- uid: GrandmaGreen.Garden.GardenManager.GetBreedingCandidates*
+  name: GetBreedingCandidates
+  href: api/GrandmaGreen.Garden.GardenManager.html#GrandmaGreen_Garden_GardenManager_GetBreedingCandidates_
+  commentId: Overload:GrandmaGreen.Garden.GardenManager.GetBreedingCandidates
+  isSpec: "True"
+  fullName: GrandmaGreen.Garden.GardenManager.GetBreedingCandidates
+  nameWithType: GardenManager.GetBreedingCandidates
 - uid: GrandmaGreen.Garden.GardenManager.GetDecor(System.Int32)
   name: GetDecor(Int32)
   href: api/GrandmaGreen.Garden.GardenManager.html#GrandmaGreen_Garden_GardenManager_GetDecor_System_Int32_
@@ -5771,6 +5842,19 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Garden.GardenManager.GetGrowthStage
   nameWithType: GardenManager.GetGrowthStage
+- uid: GrandmaGreen.Garden.GardenManager.GetNeighbors(System.Int32,Vector3Int)
+  name: GetNeighbors(Int32, Vector3Int)
+  href: api/GrandmaGreen.Garden.GardenManager.html#GrandmaGreen_Garden_GardenManager_GetNeighbors_System_Int32_Vector3Int_
+  commentId: M:GrandmaGreen.Garden.GardenManager.GetNeighbors(System.Int32,Vector3Int)
+  fullName: GrandmaGreen.Garden.GardenManager.GetNeighbors(System.Int32, Vector3Int)
+  nameWithType: GardenManager.GetNeighbors(Int32, Vector3Int)
+- uid: GrandmaGreen.Garden.GardenManager.GetNeighbors*
+  name: GetNeighbors
+  href: api/GrandmaGreen.Garden.GardenManager.html#GrandmaGreen_Garden_GardenManager_GetNeighbors_
+  commentId: Overload:GrandmaGreen.Garden.GardenManager.GetNeighbors
+  isSpec: "True"
+  fullName: GrandmaGreen.Garden.GardenManager.GetNeighbors
+  nameWithType: GardenManager.GetNeighbors
 - uid: GrandmaGreen.Garden.GardenManager.GetPlant(System.Int32,Vector3Int)
   name: GetPlant(Int32, Vector3Int)
   href: api/GrandmaGreen.Garden.GardenManager.html#GrandmaGreen_Garden_GardenManager_GetPlant_System_Int32_Vector3Int_
