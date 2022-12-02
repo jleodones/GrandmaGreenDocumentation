@@ -52,6 +52,7 @@ namespace GrandmaGreen.UI.Collections
 
             EventManager.instance.EVENT_INVENTORY_ADD_SEED += InventoryAddSeed;
             EventManager.instance.EVENT_INVENTORY_REMOVE_SEED += InventoryRemoveSeed;
+            EventManager.instance.EVENT_INVENTORY_GET_SEED_COUNT += InventoryGetSeedCount;
 
             EventManager.instance.EVENT_INVENTORY_ADD_TOOL += InventoryAddTool;
             EventManager.instance.EVENT_INVENTORY_REMOVE_TOOL += InventoryRemoveTool;
@@ -75,6 +76,7 @@ namespace GrandmaGreen.UI.Collections
 
             EventManager.instance.EVENT_INVENTORY_ADD_SEED -= InventoryAddSeed;
             EventManager.instance.EVENT_INVENTORY_REMOVE_SEED -= InventoryRemoveSeed;
+            EventManager.instance.EVENT_INVENTORY_GET_SEED_COUNT -= InventoryGetSeedCount;
 
             EventManager.instance.EVENT_INVENTORY_ADD_TOOL -= InventoryAddTool;
             EventManager.instance.EVENT_INVENTORY_REMOVE_TOOL -= InventoryRemoveTool;
@@ -167,6 +169,17 @@ namespace GrandmaGreen.UI.Collections
                 // Then update the UI system.
                 m_controller.RebuildJar(s);
             }
+        }
+
+        private int InventoryGetSeedCount(ushort id, Genotype genotype)
+        {
+            Seed s = new Seed(id, collectionsSO.GetItem(id).name, genotype);
+
+            if (inventoryData.RequestData(-1, ref s))
+            {
+                return s.quantity;
+            }
+            else return 0;
         }
 
         private void InventoryAddPlant(ushort id, Genotype genotype)

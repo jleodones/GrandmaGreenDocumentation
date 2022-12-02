@@ -53,7 +53,6 @@ namespace GrandmaGreen.Garden
                 playerController.CancelDestination();
 
             toolSelectionActive = false;
-            onToolSelectionEnd?.Invoke();
         }
 
         public void EmptySelection()

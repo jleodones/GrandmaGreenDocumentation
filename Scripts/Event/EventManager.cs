@@ -80,6 +80,7 @@ namespace GrandmaGreen
         
         public event Action<ushort, Genotype> EVENT_INVENTORY_ADD_SEED;
         public event Action<ushort, Genotype> EVENT_INVENTORY_REMOVE_SEED;
+        public event Func<ushort, Genotype, int> EVENT_INVENTORY_GET_SEED_COUNT;
         
         public event Action<ushort> EVENT_INVENTORY_ADD_TOOL;
         public event Action<ushort> EVENT_INVENTORY_REMOVE_TOOL;
@@ -114,6 +115,11 @@ namespace GrandmaGreen
         public void HandleEVENT_INVENTORY_REMOVE_SEED(ushort id, Genotype genotype)
         {
             EVENT_INVENTORY_REMOVE_SEED?.Invoke(id, genotype);
+        }
+
+        public int? HandleEVENT_INVENTORY_GET_SEED_COUNT(ushort id, Genotype genotype)
+        { 
+            return EVENT_INVENTORY_GET_SEED_COUNT?.Invoke(id, genotype);
         }
         
         public void HandleEVENT_INVENTORY_ADD_TOOL(ushort id)

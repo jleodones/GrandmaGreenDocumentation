@@ -55,11 +55,14 @@ namespace GrandmaGreen
 
         void Update()
         {
-            if(m_PointerActive && touchInteraction.qRaycast)
+            if (m_PointerActive && touchInteraction.qPointerEvent != null)
+            {
                 touchInteraction.RaycastScreen();
+            }
 
 
-            touchInteraction.qRaycast = false;
+
+            touchInteraction.qPointerEvent = null;
         }
     }
 }

@@ -120,6 +120,15 @@ namespace GrandmaGreen.Garden
             }
         }
 
+        PlantState GetPlant(Vector3Int cell)
+        {
+            if (!gardenManager.IsEmpty(areaIndex, cell))
+            {
+                return gardenManager.GetPlant(areaIndex, cell);
+            }
+            return new PlantState();
+        }
+
         void RefreshGarden()
         {
             List<PlantState> plants = gardenManager.GetPlants(areaIndex);
@@ -300,27 +309,33 @@ namespace GrandmaGreen.Garden
             }
         }
 
+        public List<PlantState> GetNeighbors(Vector3Int cell)
+        {
+            return gardenManager.GetNeighbors(areaIndex, cell);
+        }
+
+        public List<PlantState> GetBreedingCandidates(Vector3Int cell)
+        {
+            return gardenManager.GetBreedingCandidates(areaIndex, cell);
+        }
+
         public bool HarvestPlant(Vector3Int cell)
         {
             if (gardenManager.IsEmpty(areaIndex, cell)) return false;
 
-            int maxGrowthStages = collection.GetPlant(gardenManager
-                .GetPlantType(areaIndex, cell)).growthStages;
+            int maxGrowthStages = collection.GetPlant(
+		        gardenManager.GetPlantType(areaIndex, cell))
+		        .growthStages;
 
             string debug = "Breeding Candidate Debug (Click to Expand)\n";
 
             if (gardenManager.PlantIsBreedable(areaIndex, cell))
             {
                 debug += "Breeding candidates: ";
-                List<Genotype> breedingCandidates = new List<Genotype>();
-                foreach (Vector3Int neighbor in new[] { cell + Vector3Int.up, cell + Vector3Int.down,
-                    cell + Vector3Int.left, cell + Vector3Int.right})
+                List<PlantState> breedingCandidates = GetBreedingCandidates(cell);
+                foreach (PlantState neighbor in breedingCandidates)
                 {
-                    if (gardenManager.PlantIsBreedable(areaIndex, neighbor))
-                    {
-                        breedingCandidates.Add(gardenManager.GetGenotype(areaIndex, neighbor));
-                        debug += neighbor + " ";
-                    }
+                    debug += neighbor.genotype + " ";
                 }
 
                 PlantId motherPlantType = gardenManager.GetPlantType(areaIndex, cell);
@@ -330,7 +345,7 @@ namespace GrandmaGreen.Garden
 
                 if (breedingCandidates.Count != 0)
                 {
-                    Genotype fatherGenotype = breedingCandidates[Random.Range(0, breedingCandidates.Count)];
+                    Genotype fatherGenotype = breedingCandidates[Random.Range(0, breedingCandidates.Count)].genotype;
                     childGenotype = motherGenotype.Cross(fatherGenotype);
                     debug += "\nBreeding occured.";
                 }

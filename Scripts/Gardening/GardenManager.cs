@@ -140,6 +140,37 @@ namespace GrandmaGreen.Garden
             return new Genotype();
         }
 
+        public List<PlantState> GetNeighbors(int areaIndex, Vector3Int cell)
+        {
+            List<PlantState> neighbors = new List<PlantState>();
+            foreach (Vector3Int neighbor in new[] {
+                cell + Vector3Int.up,
+                cell + Vector3Int.down,
+                cell + Vector3Int.left,
+                cell + Vector3Int.right})
+            {
+                neighbors.Add(GetPlant(areaIndex, neighbor));
+            }
+            return neighbors;
+        }
+
+        public List<PlantState> GetBreedingCandidates(int areaIndex, Vector3Int cell)
+        {
+            List<PlantState> candidates = new List<PlantState>();
+            foreach (Vector3Int neighbor in new[] {
+                cell + Vector3Int.up,
+                cell + Vector3Int.down,
+                cell + Vector3Int.left,
+                cell + Vector3Int.right})
+            {
+                if (PlantIsBreedable(areaIndex, neighbor))
+                {
+                    candidates.Add(GetPlant(areaIndex, neighbor));
+                }
+            }
+            return candidates;
+        }
+
         public void UpdateGrowthStage(int areaIndex, Vector3Int cell)
         {
             PlantState plant = GetPlant(areaIndex, cell);
@@ -152,12 +183,19 @@ namespace GrandmaGreen.Garden
                 
                 //Reset the waterStage and waterTimers on growth
                 updatedPlant.waterStage = 0;
-                updatedPlant.waterTimer = 0;
+                int supposedTimer = updatedPlant.waterTimer - collection.GetPlant(plant.type).growthTime;
+                Debug.Log(supposedTimer);
+                if(supposedTimer < 0)
+                {
+                    updatedPlant.waterTimer = 0;
+                } else 
+                {
+                    updatedPlant.waterTimer = supposedTimer;
+                }
 
                 plantLookup[areaIndex][cell] = updatedPlant;
             }
         }
-
 
         public void IncrementWaterTimer(int areaIndex, Vector3Int cell, int value)
         {

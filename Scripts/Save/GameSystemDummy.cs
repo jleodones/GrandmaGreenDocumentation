@@ -8,9 +8,6 @@ using GrandmaGreen.Garden;
 namespace GrandmaGreen {
     public class GameSystemDummy : MonoBehaviour
     {
-        [SerializeField]
-        private List<ObjectSaver> m_objectSavers = new List<ObjectSaver>();
-
         [Button(ButtonSizes.Medium)]
         public void ResourcesLoadTest()
         {
@@ -42,6 +39,13 @@ namespace GrandmaGreen {
         public void RemoveSampleSeedFromInventory()
         {
             EventManager.instance.HandleEVENT_INVENTORY_REMOVE_SEED(1001, new Genotype("AaBb"));
+        }
+
+        [Button()]
+        public void AddDecorItem()
+        {
+            // Adds bird bath.
+            EventManager.instance.HandleEVENT_INVENTORY_ADD_DECOR(4044);
         }
         
         public int SampleTest()

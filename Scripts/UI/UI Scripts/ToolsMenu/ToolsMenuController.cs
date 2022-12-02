@@ -34,7 +34,6 @@ public class ToolsMenuController
         });
 
         toolData.onToolSelectionStart += ShowToolsMenu;
-        toolData.onToolSelectionEnd += HideToolsMenu;
         root.style.display = DisplayStyle.None;
     }
 
