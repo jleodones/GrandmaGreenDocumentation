@@ -59,7 +59,7 @@ namespace GrandmaGreen.Entities
             
             // Instantiate at position and zero rotation.
             GameObject newGolem = Instantiate(golemPrefabs[0], pos, Quaternion.identity);
-            //newGolem.transform.rotation = Quaternion.Euler(-45,0,0);
+            newGolem.transform.rotation = Quaternion.Euler(-45,0,0);
             newGolem.transform.SetParent(newGolemParent.transform);
             newGolem.GetComponent<SplineFollow>().target = newGolemParent.GetComponent<SplineContainer>();
 

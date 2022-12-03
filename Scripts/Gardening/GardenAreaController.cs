@@ -362,7 +362,8 @@ namespace GrandmaGreen.Garden
 
                 DestroyPlant(cell);
 
-                //EventManager.instance.HandleEVENT_GOLEM_SPAWN(0, cell);
+                CharacterId golemType = CharacterId.TulipGolem;
+                EventManager.instance.HandleEVENT_GOLEM_SPAWN((ushort)golemType, cell);
                 return true;
             }
 
