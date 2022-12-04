@@ -26,8 +26,10 @@ namespace GrandmaGreen.UI.Golems
 
         void OnEnable()
         {
-            // Register dialogue button callback.
+            // Register button callback.
             golemMenu.rootVisualElement.Q<Button>("dialogue").RegisterCallback<ClickEvent>(OnDialogueTrigger);
+            golemMenu.rootVisualElement.Q<Button>("gift").RegisterCallback<ClickEvent>(OnGiftTrigger);
+
             root = golemMenu.rootVisualElement.Q("rootElement");
         }
 
@@ -75,6 +77,15 @@ namespace GrandmaGreen.UI.Golems
             // TODO: Check if grandma is within a certain distance. If so, play dialogue. If not, ignore.
             // Call the dialogue trigger.
             dialogueScript.TriggerDialogue();
+        }
+
+        private void OnGiftTrigger(ClickEvent clickEvent)
+        {
+            GameObject parent = gameObject.transform.parent.gameObject;
+            GolemController golemController = parent.GetComponent<GolemController>();
+            ushort gid = golemController.getGolemID();
+
+            EventManager.instance.HandleEVENT_GOLEM_HAPPINESS_UPDATE(gid, 30);
         }
         
         public void SetLocation(Vector3 worldPosition)

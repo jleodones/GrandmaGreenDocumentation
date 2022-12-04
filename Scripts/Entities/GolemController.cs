@@ -222,6 +222,12 @@ namespace GrandmaGreen.Entities
         }
         #endregion
 
+        #region  apis
+        public ushort getGolemID() {
+            return (ushort)id;
+        }
+        #endregion
+        
         //traverse
         public virtual void SetDestination(Vector3 worldPos)
         {

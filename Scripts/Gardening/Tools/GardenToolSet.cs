@@ -90,9 +90,13 @@ namespace GrandmaGreen.Garden
             // Placing the Plant Prefab on a tile and setting the Tile to "Occupied Plot Tile"
             if (action.tile.plantable && action.seedType != 0)
             {
-                action.area.CreatePlant(action.seedType, action.seedGenotype, action.gridcell); 
-                action.area.ChangeGardenTileToPlot_Occupied(action.gridcell);
-                action.tool.toolSFX[0].Play();
+                if(EventManager.instance.HandleEVENT_INVENTORY_GET_SEED_COUNT((ushort)action.seedType, action.seedGenotype) != 0)
+                {
+                    action.area.CreatePlant(action.seedType, action.seedGenotype, action.gridcell);
+                    action.area.ChangeGardenTileToPlot_Occupied(action.gridcell);
+                    action.tool.toolSFX[0].Play();
+                }
+
             }
         }
 

@@ -273,11 +273,6 @@ namespace GrandmaGreen.Garden
             if (returnFromPause) returnFromPause = false;
         }
 
-        public void UpdateWaterAndGrowthState()
-        {
-
-        }
-
         public void WaterPlant(Vector3Int cell)
         {
             if (!gardenManager.PlantIsDead(areaIndex, cell))
