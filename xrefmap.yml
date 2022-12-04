@@ -3789,6 +3789,19 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Entities.GolemController.FollowPath
   nameWithType: GolemController.FollowPath
+- uid: GrandmaGreen.Entities.GolemController.getGolemID
+  name: getGolemID()
+  href: api/GrandmaGreen.Entities.GolemController.html#GrandmaGreen_Entities_GolemController_getGolemID
+  commentId: M:GrandmaGreen.Entities.GolemController.getGolemID
+  fullName: GrandmaGreen.Entities.GolemController.getGolemID()
+  nameWithType: GolemController.getGolemID()
+- uid: GrandmaGreen.Entities.GolemController.getGolemID*
+  name: getGolemID
+  href: api/GrandmaGreen.Entities.GolemController.html#GrandmaGreen_Entities_GolemController_getGolemID_
+  commentId: Overload:GrandmaGreen.Entities.GolemController.getGolemID
+  isSpec: "True"
+  fullName: GrandmaGreen.Entities.GolemController.getGolemID
+  nameWithType: GolemController.getGolemID
 - uid: GrandmaGreen.Entities.GolemController.id
   name: id
   href: api/GrandmaGreen.Entities.GolemController.html#GrandmaGreen_Entities_GolemController_id
@@ -5568,19 +5581,6 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Garden.GardenAreaController.UpdateSprite
   nameWithType: GardenAreaController.UpdateSprite
-- uid: GrandmaGreen.Garden.GardenAreaController.UpdateWaterAndGrowthState
-  name: UpdateWaterAndGrowthState()
-  href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_UpdateWaterAndGrowthState
-  commentId: M:GrandmaGreen.Garden.GardenAreaController.UpdateWaterAndGrowthState
-  fullName: GrandmaGreen.Garden.GardenAreaController.UpdateWaterAndGrowthState()
-  nameWithType: GardenAreaController.UpdateWaterAndGrowthState()
-- uid: GrandmaGreen.Garden.GardenAreaController.UpdateWaterAndGrowthState*
-  name: UpdateWaterAndGrowthState
-  href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_UpdateWaterAndGrowthState_
-  commentId: Overload:GrandmaGreen.Garden.GardenAreaController.UpdateWaterAndGrowthState
-  isSpec: "True"
-  fullName: GrandmaGreen.Garden.GardenAreaController.UpdateWaterAndGrowthState
-  nameWithType: GardenAreaController.UpdateWaterAndGrowthState
 - uid: GrandmaGreen.Garden.GardenAreaController.WateringParticleBurst
   name: WateringParticleBurst
   href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_WateringParticleBurst
