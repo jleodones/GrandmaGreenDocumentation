@@ -5363,19 +5363,19 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Garden.GardenAreaController.GardenTileSelected
   nameWithType: GardenAreaController.GardenTileSelected
-- uid: GrandmaGreen.Garden.GardenAreaController.GenotypeTest
-  name: GenotypeTest()
-  href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_GenotypeTest
-  commentId: M:GrandmaGreen.Garden.GardenAreaController.GenotypeTest
-  fullName: GrandmaGreen.Garden.GardenAreaController.GenotypeTest()
-  nameWithType: GardenAreaController.GenotypeTest()
-- uid: GrandmaGreen.Garden.GardenAreaController.GenotypeTest*
-  name: GenotypeTest
-  href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_GenotypeTest_
-  commentId: Overload:GrandmaGreen.Garden.GardenAreaController.GenotypeTest
+- uid: GrandmaGreen.Garden.GardenAreaController.GenotypeSpriteTest
+  name: GenotypeSpriteTest()
+  href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_GenotypeSpriteTest
+  commentId: M:GrandmaGreen.Garden.GardenAreaController.GenotypeSpriteTest
+  fullName: GrandmaGreen.Garden.GardenAreaController.GenotypeSpriteTest()
+  nameWithType: GardenAreaController.GenotypeSpriteTest()
+- uid: GrandmaGreen.Garden.GardenAreaController.GenotypeSpriteTest*
+  name: GenotypeSpriteTest
+  href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_GenotypeSpriteTest_
+  commentId: Overload:GrandmaGreen.Garden.GardenAreaController.GenotypeSpriteTest
   isSpec: "True"
-  fullName: GrandmaGreen.Garden.GardenAreaController.GenotypeTest
-  nameWithType: GardenAreaController.GenotypeTest
+  fullName: GrandmaGreen.Garden.GardenAreaController.GenotypeSpriteTest
+  nameWithType: GardenAreaController.GenotypeSpriteTest
 - uid: GrandmaGreen.Garden.GardenAreaController.GetBreedingCandidates(Vector3Int)
   name: GetBreedingCandidates(Vector3Int)
   href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_GetBreedingCandidates_Vector3Int_
@@ -6464,6 +6464,19 @@ references:
   commentId: F:GrandmaGreen.Garden.Genotype.Size.Small
   fullName: GrandmaGreen.Garden.Genotype.Size.Small
   nameWithType: Genotype.Size.Small
+- uid: GrandmaGreen.Garden.Genotype.SpriteSize
+  name: SpriteSize()
+  href: api/GrandmaGreen.Garden.Genotype.html#GrandmaGreen_Garden_Genotype_SpriteSize
+  commentId: M:GrandmaGreen.Garden.Genotype.SpriteSize
+  fullName: GrandmaGreen.Garden.Genotype.SpriteSize()
+  nameWithType: Genotype.SpriteSize()
+- uid: GrandmaGreen.Garden.Genotype.SpriteSize*
+  name: SpriteSize
+  href: api/GrandmaGreen.Garden.Genotype.html#GrandmaGreen_Garden_Genotype_SpriteSize_
+  commentId: Overload:GrandmaGreen.Garden.Genotype.SpriteSize
+  isSpec: "True"
+  fullName: GrandmaGreen.Garden.Genotype.SpriteSize
+  nameWithType: Genotype.SpriteSize
 - uid: GrandmaGreen.Garden.Genotype.ToString
   name: ToString()
   href: api/GrandmaGreen.Garden.Genotype.html#GrandmaGreen_Garden_Genotype_ToString
