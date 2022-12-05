@@ -53,6 +53,17 @@ namespace GrandmaGreen.Garden
             f2 = gen == Generation.F2;
         }
 
+        public float SpriteSize()
+        {
+            return size switch
+            {
+                Size.Small => 0.75f,
+                Size.Medium => 1.0f,
+                Size.Big => 1.25f,
+                _ => 1.0f,
+            };
+        }
+
         public override bool Equals(object obj) =>
             obj is Genotype other
             && other.size == size

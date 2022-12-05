@@ -113,7 +113,7 @@
     justify-content: center;
     align-items: center;
     -unity-text-align: middle-center;
-    color: rgb(0, 0, 0);
+    color: rgb(114, 67, 37);
     -unity-font-style: bold;
     padding-left: 3%;
     padding-right: 0;
@@ -125,8 +125,9 @@
     margin-bottom: 0;
     font-size: 250%;
     white-space: normal;
-    -unity-font: url('project://database/Assets/TextMesh%20Pro/Fonts/LiberationSans.ttf?fileID=12800000&guid=e3265ab4bf004d28a9537516768c1c75&type=3#LiberationSans');
+    -unity-font: url('project://database/Assets/_GrandmaGreen/Art/UI/Fonts/Brevia/Brevia-Regular.otf?fileID=12800000&guid=5a1bfd81ed39ecd418c1c034114fcc3c&type=3#Brevia-Regular');
     height: 100%;
+    -unity-font-definition: none;
 }
 
 .info-border {

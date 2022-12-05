@@ -1,15 +1,15 @@
-#root:hover {
-    background-color: rgba(0, 0, 0, 0.27);
-    transition-property: background-color;
-    transition-duration: 0.5s;
-    transition-timing-function: ease-in;
-}
-
-.price-text {
-    -unity-text-align: middle-center;
-    white-space: nowrap;
-    -unity-font-style: bold;
+.button {
+    width: 20%;
+    height: 8%;
+    font-size: 50%;
     -unity-font: url('project://database/Assets/_GrandmaGreen/Art/UI/Fonts/Brevia/Brevia-Regular.otf?fileID=12800000&guid=5a1bfd81ed39ecd418c1c034114fcc3c&type=3#Brevia-Regular');
     -unity-font-definition: url('project://database/Assets/_GrandmaGreen/Art/UI/Fonts/Brevia/Brevia-Regular%20SDF.asset?fileID=11400000&guid=b087b45a4ecf25d45a8614016e1dd393&type=2#Brevia-Regular SDF');
+    -unity-font-style: bold;
     color: rgba(114, 67, 37, 255);
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    -unity-text-align: middle-center;
+    white-space: nowrap;
 }

@@ -13,10 +13,6 @@ namespace GrandmaGreen.UI.Shopping
 {
     public class ShoppingUI : UIDisplayBase
     {
-        private VisualElement m_rootVisualElement;
-
-        [SerializeField] private VisualTreeAsset m_shoppingItemTemplate;
-
         [SerializeField] private CollectionsSO collections;
         
         public List<ShopItem> availableItems;
@@ -24,14 +20,11 @@ namespace GrandmaGreen.UI.Shopping
         private GardeningShopUIController m_controller;
         
         // Stuff for the shopping amount. This should theoretically get sent to the ShoppingUIController, but will be handled here for now.
-        public int m_currentAmount = 0;
+        public int m_currentAmount = 1;
         private ShopItem m_currentItem;
         
         void Start()
         {
-            m_rootVisualElement = GetComponent<UIDocument>().rootVisualElement.Q<VisualElement>("rootElement");
-            m_rootVisualElement.Q<Button>("exitButton").RegisterCallback<ClickEvent>(RegisterExitButton);
-            
             // Setting money.
             m_rootVisualElement.Q<Label>("GoldAmount").text =
                 EventManager.instance.HandleEVENT_INVENTORY_GET_MONEY().ToString();
@@ -45,18 +38,13 @@ namespace GrandmaGreen.UI.Shopping
             
             InstantiateJar();
         }
+
         public override void OpenUI()
         {
             EventManager.instance.HandleEVENT_CLOSE_HUD();
             m_rootVisualElement.style.display = DisplayStyle.Flex;
         }
 
-        private void RegisterExitButton(ClickEvent cvt)
-        {
-            m_rootVisualElement.style.display = DisplayStyle.None;
-            EventManager.instance.HandleEVENT_OPEN_HUD();
-        }
-        
         void InstantiateJar()
         {
             // ScrollView contentJar = m_rootVisualElement.Q<ScrollView>("contentJar");
@@ -73,8 +61,6 @@ namespace GrandmaGreen.UI.Shopping
 
         void RegisterPopupWindow()
         {
-            m_rootVisualElement.Q<Label>("CurrentAmount").text = m_currentAmount.ToString();
-
             // Register exit button.
             m_rootVisualElement.Q<Button>("PopUpExitButton").clicked += () =>
             {
@@ -127,13 +113,15 @@ namespace GrandmaGreen.UI.Shopping
                 {
                     EventManager.instance.HandleEVENT_INVENTORY_ADD_SEED(s.itemID, s.seedGenotype);
                 }
-
-                Debug.Log("Buying for: " + m_currentAmount + " * " + m_currentItem.baseCost);
                 
                 EventManager.instance.HandleEVENT_INVENTORY_REMOVE_MONEY(m_currentAmount * m_currentItem.baseCost);
                 
                 m_rootVisualElement.Q<Label>("GoldAmount").text =
                     EventManager.instance.HandleEVENT_INVENTORY_GET_MONEY().ToString();
+                
+                // Close the window.
+                m_rootVisualElement.Q("PopUpScreen").style.display = DisplayStyle.None;
+                m_currentAmount = 1;
             };
         }
         
@@ -147,6 +135,9 @@ namespace GrandmaGreen.UI.Shopping
             // Set the sprite image.
             m_rootVisualElement.Q("Item").style.backgroundImage = new StyleBackground(m_currentItem.sprite);
             
+            // Set the current amount.
+            m_rootVisualElement.Q<Label>("CurrentAmount").text = m_currentAmount.ToString();
+
             // Set the starting price.
             m_rootVisualElement.Q<Label>("CurrentPrice").text = m_currentItem.baseCost.ToString();
             

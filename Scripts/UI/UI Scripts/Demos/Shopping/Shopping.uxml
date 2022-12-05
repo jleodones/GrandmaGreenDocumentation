@@ -1,7 +1,7 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/_GrandmaGreen/Scripts/UI/UI%20Scripts/Demos/Shopping/ShoppingStyleSheet.uss?fileID=7433441132597879392&amp;guid=6a55077afe7955246b57f87820f29149&amp;type=3#ShoppingStyleSheet" />
-    <ui:VisualElement name="rootElement" style="flex-grow: 1; display: none; background-color: rgb(134, 168, 126);">
-        <ui:VisualElement name="ShopScreen">
+    <ui:VisualElement name="rootVisualElement" style="flex-grow: 1; display: none; background-color: rgb(134, 168, 126);">
+        <ui:VisualElement name="ShopScreen" style="display: flex;">
             <ui:VisualElement name="Header" style="height: 20%; width: 100%; flex-direction: row; flex-grow: 0;">
                 <ui:GroupBox name="Currencies" style="height: 100%; width: 30%; flex-direction: row; padding-top: 1.5%; padding-right: 2%; padding-left: 2.5%; padding-bottom: 2%; align-items: flex-start; justify-content: flex-start;">
                     <ui:VisualElement name="Coin" class="currency_box currency-box" style="flex-direction: row;">
@@ -16,7 +16,7 @@
                 </ui:GroupBox>
                 <ui:GroupBox name="ShopBanner" style="height: 100%; width: 40%; align-items: center; justify-content: flex-end;">
                     <ui:VisualElement name="ShopTitle" class="title-box">
-                        <ui:Label tabindex="-1" text="plant shop" display-tooltip-when-elided="true" name="ShopName" style="height: 100%; width: 100%; -unity-text-align: middle-center; font-size: 100%; color: rgb(60, 87, 62); -unity-font-style: bold;" />
+                        <ui:Label tabindex="-1" text="plant shop" display-tooltip-when-elided="true" name="ShopName" style="height: 100%; width: 100%; -unity-text-align: middle-center; font-size: 100%; color: rgb(60, 87, 62); -unity-font-style: bold; -unity-font: url(&apos;project://database/Assets/_GrandmaGreen/Art/UI/Fonts/Brevia/Brevia-Regular.otf?fileID=12800000&amp;guid=5a1bfd81ed39ecd418c1c034114fcc3c&amp;type=3#Brevia-Regular&apos;); -unity-font-definition: url(&apos;project://database/Assets/_GrandmaGreen/Art/UI/Fonts/Brevia/Brevia-Regular%20SDF.asset?fileID=11400000&amp;guid=b087b45a4ecf25d45a8614016e1dd393&amp;type=2#Brevia-Regular SDF&apos;);" />
                     </ui:VisualElement>
                 </ui:GroupBox>
                 <ui:GroupBox name="Exit" style="height: 100%; width: 30%; flex-direction: row-reverse; padding-right: 2.5%; padding-top: 1.5%;">

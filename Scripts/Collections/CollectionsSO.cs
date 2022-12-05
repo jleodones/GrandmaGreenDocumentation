@@ -327,6 +327,7 @@ namespace GrandmaGreen.Collections
         {
             PlantProperties plant = GetPlant(type);
 
+            bool isMega = genotype.generation == Genotype.Generation.F2;
             string suffix = "";
 
             switch (growthStage)
@@ -342,22 +343,16 @@ namespace GrandmaGreen.Collections
                     switch (genotype.trait)
                     {
                         case Genotype.Trait.Recessive:
-                            suffix = "_Rec";
+                            suffix = isMega ? "_Rec_M" : "_Rec";
                             break;
                         case Genotype.Trait.Heterozygous:
                             suffix = "_Het";
                             break;
                         case Genotype.Trait.Dominant:
-                            suffix = "_Dom";
+                            suffix = isMega ? "_Dom_M" : "_Dom";
                             break;
                     }
                     break;
-            }
-
-            if (genotype.generation == Genotype.Generation.F2
-                && genotype.trait != Genotype.Trait.Heterozygous)
-            {
-                suffix += "_M";
             }
 
             string finalSpritePath = plant.spriteBasePath + suffix;
@@ -373,18 +368,19 @@ namespace GrandmaGreen.Collections
         {
             ItemProperties seed = GetItem((ushort)type);
             string finalSpritePath = "SEED_" + seed.name.Replace(" ", "");
+            bool isMega = genotype.generation == Genotype.Generation.F2;
             string suffix = "";
 
             switch (genotype.trait)
             {
                 case Genotype.Trait.Recessive:
-                    suffix = "_Rec";
+                    suffix = isMega ? "_Rec_M" : "_Rec";
                     break;
                 case Genotype.Trait.Heterozygous:
                     suffix = "_Het";
                     break;
                 case Genotype.Trait.Dominant:
-                    suffix = "_Dom";
+                    suffix = isMega ? "_Dom_M" : "_Dom";
                     break;
             }
 

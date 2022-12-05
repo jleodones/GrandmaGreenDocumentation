@@ -44,9 +44,11 @@
     width: 80%;
     height: 40%;
     font-size: 250%;
-    color: rgb(105, 73, 48);
+    color: rgb(114, 67, 37);
     -unity-text-align: middle-center;
     -unity-font-style: bold;
+    -unity-font: url('project://database/Assets/_GrandmaGreen/Art/UI/Fonts/Brevia/Brevia-Regular.otf?fileID=12800000&guid=5a1bfd81ed39ecd418c1c034114fcc3c&type=3#Brevia-Regular');
+    -unity-font-definition: url('project://database/Assets/_GrandmaGreen/Art/UI/Fonts/Brevia/Brevia-Regular%20SDF.asset?fileID=11400000&guid=b087b45a4ecf25d45a8614016e1dd393&type=2#Brevia-Regular SDF');
 }
 
 .slider-type-icon {
@@ -72,10 +74,10 @@
     border-right-width: 10px;
     border-top-width: 10px;
     border-bottom-width: 10px;
-    border-left-color: rgba(240, 201, 72, 255);
-    border-right-color: rgba(255, 196, 0, 255);
-    border-top-color: rgba(240, 201, 72, 255);
-    border-bottom-color: rgba(240, 201, 72, 255);
+    border-left-color: rgb(240, 201, 72);
+    border-right-color: rgb(255, 196, 0);
+    border-top-color: rgb(240, 201, 72);
+    border-bottom-color: rgb(240, 201, 72);
 }
 
 .unity-base-slider__dragger {
@@ -118,7 +120,7 @@
 
 .unity-toggle__checkmark {
     background-image: none;
-    background-color: rgba(255, 255, 255, 255);
+    background-color: rgb(255, 255, 255);
     min-width: 100px;
     min-height: 100px;
     border-left-width: 10px;
@@ -129,8 +131,26 @@
     border-bottom-left-radius: 20px;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
-    border-left-color: rgba(105, 73, 48, 255);
-    border-right-color: rgba(105, 73, 48, 255);
-    border-top-color: rgba(105, 73, 48, 255);
-    border-bottom-color: rgba(105, 73, 48, 255);
+    border-left-color: rgb(105, 73, 48);
+    border-right-color: rgb(105, 73, 48);
+    border-top-color: rgb(105, 73, 48);
+    border-bottom-color: rgb(105, 73, 48);
+}
+
+.slider-text {
+    font-size: 50%;
+    -unity-font: url('project://database/Assets/_GrandmaGreen/Art/UI/Fonts/Brevia/Brevia-Regular.otf?fileID=12800000&guid=5a1bfd81ed39ecd418c1c034114fcc3c&type=3#Brevia-Regular');
+    -unity-font-definition: url('project://database/Assets/_GrandmaGreen/Art/UI/Fonts/Brevia/Brevia-Regular%20SDF.asset?fileID=11400000&guid=b087b45a4ecf25d45a8614016e1dd393&type=2#Brevia-Regular SDF');
+    color: rgba(114, 67, 37, 255);
+    -unity-font-style: bold;
+    white-space: nowrap;
+}
+
+.button-text {
+    -unity-font: url('project://database/Assets/_GrandmaGreen/Art/UI/Fonts/Brevia/Brevia-Regular.otf?fileID=12800000&guid=5a1bfd81ed39ecd418c1c034114fcc3c&type=3#Brevia-Regular');
+    -unity-font-definition: url('project://database/Assets/_GrandmaGreen/Art/UI/Fonts/Brevia/Brevia-Regular%20SDF.asset?fileID=11400000&guid=b087b45a4ecf25d45a8614016e1dd393&type=2#Brevia-Regular SDF');
+    -unity-font-style: bold;
+    color: rgba(114, 67, 37, 255);
+    -unity-text-align: upper-center;
+    white-space: normal;
 }

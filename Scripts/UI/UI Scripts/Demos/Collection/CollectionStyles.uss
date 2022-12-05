@@ -49,6 +49,7 @@
     -unity-text-outline-color: rgba(0, 0, 0, 0);
     padding-top: 3%;
     white-space: normal;
+    -unity-font-definition: url('project://database/Assets/_GrandmaGreen/Art/UI/Fonts/Brevia/Brevia-Regular%20SDF.asset?fileID=11400000&guid=b087b45a4ecf25d45a8614016e1dd393&type=2#Brevia-Regular SDF');
 }
 
 .exit-button {

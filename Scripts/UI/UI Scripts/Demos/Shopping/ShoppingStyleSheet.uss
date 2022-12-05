@@ -1,4 +1,4 @@
-de d.title-box {
+de .title-box {
     background-color: rgb(232, 241, 228);
     height: 150px;
     min-width: auto;
@@ -69,6 +69,8 @@ de d.title-box {
     width: 60%;
     height: 100%;
     -unity-font-style: bold;
+    -unity-font: url('project://database/Assets/_GrandmaGreen/Art/UI/Fonts/Brevia/Brevia-Regular.otf?fileID=12800000&guid=5a1bfd81ed39ecd418c1c034114fcc3c&type=3#Brevia-Regular');
+    -unity-font-definition: url('project://database/Assets/_GrandmaGreen/Art/UI/Fonts/Brevia/Brevia-Regular%20SDF.asset?fileID=11400000&guid=b087b45a4ecf25d45a8614016e1dd393&type=2#Brevia-Regular SDF');
 }
 
 .price-icon {
@@ -102,6 +104,7 @@ de d.title-box {
     color: rgb(91, 163, 167);
     -unity-text-align: middle-right;
     -unity-font-style: bold;
+    -unity-font: url('project://database/Assets/_GrandmaGreen/Art/UI/Fonts/Brevia/Brevia-Regular.otf?fileID=12800000&guid=5a1bfd81ed39ecd418c1c034114fcc3c&type=3#Brevia-Regular');
 }
 
 .buy-button {
@@ -116,6 +119,8 @@ de d.title-box {
     color: rgb(255, 255, 255);
     -unity-text-align: middle-center;
     font-size: 500%;
+    -unity-font: url('project://database/Assets/_GrandmaGreen/Art/UI/Fonts/Brevia/Brevia-Regular.otf?fileID=12800000&guid=5a1bfd81ed39ecd418c1c034114fcc3c&type=3#Brevia-Regular');
+    -unity-font-definition: url('project://database/Assets/_GrandmaGreen/Art/UI/Fonts/Brevia/Brevia-Regular%20SDF.asset?fileID=11400000&guid=b087b45a4ecf25d45a8614016e1dd393&type=2#Brevia-Regular SDF');
 }
 
 .popup-element {
@@ -129,6 +134,8 @@ de d.title-box {
 }
 
 .name-element {
+    -unity-font: url('project://database/Assets/_GrandmaGreen/Art/UI/Fonts/Brevia/Brevia-Regular.otf?fileID=12800000&guid=5a1bfd81ed39ecd418c1c034114fcc3c&type=3#Brevia-Regular');
+    -unity-font-definition: url('project://database/Assets/_GrandmaGreen/Art/UI/Fonts/Brevia/Brevia-Regular%20SDF.asset?fileID=11400000&guid=b087b45a4ecf25d45a8614016e1dd393&type=2#Brevia-Regular SDF');
 }
 
 .amount-element {

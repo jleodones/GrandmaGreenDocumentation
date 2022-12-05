@@ -176,8 +176,8 @@ namespace GrandmaGreen.Garden
             {
                 spriteRenderer.color = new Color(1f, 1f, 1f);
             }
-            // TODO: remove hard coded scaling
-            transform.localScale = new Vector3(0.25f, 0.25f, 0.25f);
+            // TODO: remove hard-coded base scaling
+            transform.localScale = new Vector3(0.25f, 0.25f, 0.25f) * plant.genotype.SpriteSize();
         }
 
         public void InstantiatePlantPrefab(Vector3Int cell, PlantId type, int growthStage)
@@ -405,7 +405,7 @@ namespace GrandmaGreen.Garden
         }
 
         [ContextMenu("GenotypeSpriteTest")]
-        public void CrossBreedTest()
+        public void GenotypeSpriteTest()
         {
             Vector3Int right = Vector3Int.zero + 3 * Vector3Int.up;
             for (int i = 0; i <= 8; i += 2)
@@ -414,15 +414,15 @@ namespace GrandmaGreen.Garden
                 ChangeGardenTileToPlot_Occupied(right + i * Vector3Int.down);
             }
             CreatePlant(PlantId.Rose, new Genotype("aabb"), right + 0 * Vector3Int.down, 2);
-            CreatePlant(PlantId.Rose, new Genotype("aaBb"), right + 2 * Vector3Int.down, 2);
-            CreatePlant(PlantId.Rose, new Genotype("aaBB"), right + 4 * Vector3Int.down, 2);
+            CreatePlant(PlantId.Rose, new Genotype("AaBb"), right + 2 * Vector3Int.down, 2);
+            CreatePlant(PlantId.Rose, new Genotype("AABB"), right + 4 * Vector3Int.down, 2);
             // Megas
-            CreatePlant(PlantId.Rose, new Genotype("aabb", Genotype.Generation.F2), right + 6 * Vector3Int.down, 2);
-            CreatePlant(PlantId.Rose, new Genotype("aaBB", Genotype.Generation.F2), right + 8 * Vector3Int.down, 2);
+            CreatePlant(PlantId.Rose, new Genotype("Aabb", Genotype.Generation.F2), right + 6 * Vector3Int.down, 2);
+            CreatePlant(PlantId.Rose, new Genotype("AaBB", Genotype.Generation.F2), right + 8 * Vector3Int.down, 2);
         }
 
         [ContextMenu("CrossBreedTest")]
-        public void GenotypeTest()
+        public void CrossBreedTest()
         {
             Genotype first;
             Genotype second;

@@ -88,7 +88,7 @@ public class ToolsMenuController
 
         toolData.playerController.entity.onEntityMove += SetToolMenuPosition;
 
-        zoom.ZoomCameraRequest(4.2f, 0.5f);
+        zoom.ZoomCameraRequest(3.85f, 0.5f);
     }
 
     // HideToolsMenu: hides the root visual element
