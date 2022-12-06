@@ -18,12 +18,6 @@
     padding-bottom: 10%;
 }
 
-.tab {
-    background-color: rgb(127, 158, 200);
-    width: 100%;
-    height: 20%;
-}
-
 .plant-item-button {
     width: 100%;
     height: 100%;
@@ -36,6 +30,7 @@
     border-right-color: rgba(0, 0, 0, 0);
     border-top-color: rgba(0, 0, 0, 0);
     border-bottom-color: rgba(0, 0, 0, 0);
+    -unity-background-scale-mode: scale-to-fit;
 }
 
 .plant-name {
@@ -84,10 +79,20 @@
 
 .tab-button {
     width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0);
+    height: 20%;
+    background-color: rgb(225, 244, 198);
     border-left-color: rgba(0, 0, 0, 0);
     border-right-color: rgba(0, 0, 0, 0);
     border-top-color: rgba(0, 0, 0, 0);
     border-bottom-color: rgba(0, 0, 0, 0);
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.friend-item-button {
+    -unity-background-scale-mode: scale-and-crop;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }

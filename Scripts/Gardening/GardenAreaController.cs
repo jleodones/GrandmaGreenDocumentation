@@ -170,7 +170,10 @@ namespace GrandmaGreen.Garden
             }
             else if (gardenManager.PlantIsDead(areaIndex, cell))
             {
-                spriteRenderer.color = new Color(0.40f, 0.26f, 0.13f);
+                spriteRenderer.color = new Color(1f, 1f, 1f);
+                Sprite deadSprite = Resources.Load<Sprite>("GAR_DeadPlant");
+                spriteRenderer.sprite = deadSprite;
+                //spriteRenderer.color = new Color(0.40f, 0.26f, 0.13f);
             }
             else
             {
