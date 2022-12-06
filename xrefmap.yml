@@ -8272,6 +8272,49 @@ references:
   commentId: F:GrandmaGreen.Shopkeeping.ShopItem.sprite
   fullName: GrandmaGreen.Shopkeeping.ShopItem.sprite
   nameWithType: ShopItem.sprite
+- uid: GrandmaGreen.SiblingRuleTile
+  name: SiblingRuleTile
+  href: api/GrandmaGreen.SiblingRuleTile.html
+  commentId: T:GrandmaGreen.SiblingRuleTile
+  fullName: GrandmaGreen.SiblingRuleTile
+  nameWithType: SiblingRuleTile
+- uid: GrandmaGreen.SiblingRuleTile.RuleMatch(System.Int32,TileBase)
+  name: RuleMatch(Int32, TileBase)
+  href: api/GrandmaGreen.SiblingRuleTile.html#GrandmaGreen_SiblingRuleTile_RuleMatch_System_Int32_TileBase_
+  commentId: M:GrandmaGreen.SiblingRuleTile.RuleMatch(System.Int32,TileBase)
+  fullName: GrandmaGreen.SiblingRuleTile.RuleMatch(System.Int32, TileBase)
+  nameWithType: SiblingRuleTile.RuleMatch(Int32, TileBase)
+- uid: GrandmaGreen.SiblingRuleTile.RuleMatch*
+  name: RuleMatch
+  href: api/GrandmaGreen.SiblingRuleTile.html#GrandmaGreen_SiblingRuleTile_RuleMatch_
+  commentId: Overload:GrandmaGreen.SiblingRuleTile.RuleMatch
+  isSpec: "True"
+  fullName: GrandmaGreen.SiblingRuleTile.RuleMatch
+  nameWithType: SiblingRuleTile.RuleMatch
+- uid: GrandmaGreen.SiblingRuleTile.sibingGroup
+  name: sibingGroup
+  href: api/GrandmaGreen.SiblingRuleTile.html#GrandmaGreen_SiblingRuleTile_sibingGroup
+  commentId: F:GrandmaGreen.SiblingRuleTile.sibingGroup
+  fullName: GrandmaGreen.SiblingRuleTile.sibingGroup
+  nameWithType: SiblingRuleTile.sibingGroup
+- uid: GrandmaGreen.SiblingRuleTile.SibingGroup
+  name: SiblingRuleTile.SibingGroup
+  href: api/GrandmaGreen.SiblingRuleTile.SibingGroup.html
+  commentId: T:GrandmaGreen.SiblingRuleTile.SibingGroup
+  fullName: GrandmaGreen.SiblingRuleTile.SibingGroup
+  nameWithType: SiblingRuleTile.SibingGroup
+- uid: GrandmaGreen.SiblingRuleTile.SibingGroup.Blend
+  name: Blend
+  href: api/GrandmaGreen.SiblingRuleTile.SibingGroup.html#GrandmaGreen_SiblingRuleTile_SibingGroup_Blend
+  commentId: F:GrandmaGreen.SiblingRuleTile.SibingGroup.Blend
+  fullName: GrandmaGreen.SiblingRuleTile.SibingGroup.Blend
+  nameWithType: SiblingRuleTile.SibingGroup.Blend
+- uid: GrandmaGreen.SiblingRuleTile.SibingGroup.Regular
+  name: Regular
+  href: api/GrandmaGreen.SiblingRuleTile.SibingGroup.html#GrandmaGreen_SiblingRuleTile_SibingGroup_Regular
+  commentId: F:GrandmaGreen.SiblingRuleTile.SibingGroup.Regular
+  fullName: GrandmaGreen.SiblingRuleTile.SibingGroup.Regular
+  nameWithType: SiblingRuleTile.SibingGroup.Regular
 - uid: GrandmaGreen.StartScreenUIDisplay
   name: StartScreenUIDisplay
   href: api/GrandmaGreen.StartScreenUIDisplay.html

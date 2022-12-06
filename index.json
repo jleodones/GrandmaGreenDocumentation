@@ -477,7 +477,7 @@
   "api/GrandmaGreen.html": {
     "href": "api/GrandmaGreen.html",
     "title": "Namespace GrandmaGreen",
-    "keywords": "Namespace GrandmaGreen Classes AreaController AreaExitState AreaServices BulletinBoardUIDisplay CameraZoom CatchUIInput CollectionUIDisplay CommonSFX CultivisionUIDisplay EventManager GamePortalTile GameScenePortal GameSettingsData GameSystemDummy GeneralExtensions GrandmaGreenGameState PlantType PlantTypeDictionary PlayAudioOnEnable SettingsUIDisplay StartScreenUIDisplay Storyline StorylineDataStore StoryRequirement TileType ToolTest2 UIDisplayBase Structs SettingsSet Interfaces IGameTile IPathAgent IPathfinderServicer IServicer<T> IServiceUser<U, T> Enums Direction StoryState"
+    "keywords": "Namespace GrandmaGreen Classes AreaController AreaExitState AreaServices BulletinBoardUIDisplay CameraZoom CatchUIInput CollectionUIDisplay CommonSFX CultivisionUIDisplay EventManager GamePortalTile GameScenePortal GameSettingsData GameSystemDummy GeneralExtensions GrandmaGreenGameState PlantType PlantTypeDictionary PlayAudioOnEnable SettingsUIDisplay SiblingRuleTile StartScreenUIDisplay Storyline StorylineDataStore StoryRequirement TileType ToolTest2 UIDisplayBase Structs SettingsSet Interfaces IGameTile IPathAgent IPathfinderServicer IServicer<T> IServiceUser<U, T> Enums Direction SiblingRuleTile.SibingGroup StoryState"
   },
   "api/GrandmaGreen.IGameTile.html": {
     "href": "api/GrandmaGreen.IGameTile.html",
@@ -593,6 +593,16 @@
     "href": "api/GrandmaGreen.Shopkeeping.ShopItem.html",
     "title": "Struct ShopItem",
     "keywords": "Struct ShopItem Inherited Members ValueType.Equals(Object) ValueType.GetHashCode() ValueType.ToString() Object.Equals(Object, Object) Object.ReferenceEquals(Object, Object) Object.GetType() Namespace : GrandmaGreen.Shopkeeping Assembly : cs.temp.dll.dll Syntax public struct ShopItem Fields baseCost Declaration public int baseCost Field Value Type Description Int32 myItem Declaration public IInventoryItem myItem Field Value Type Description IInventoryItem name Declaration public string name Field Value Type Description String quantity Declaration public int quantity Field Value Type Description Int32 sprite Declaration public Sprite sprite Field Value Type Description Sprite"
+  },
+  "api/GrandmaGreen.SiblingRuleTile.html": {
+    "href": "api/GrandmaGreen.SiblingRuleTile.html",
+    "title": "Class SiblingRuleTile",
+    "keywords": "Class SiblingRuleTile Inheritance Object SiblingRuleTile Namespace : GrandmaGreen Assembly : cs.temp.dll.dll Syntax public class SiblingRuleTile : RuleTile Fields sibingGroup Declaration public SiblingRuleTile.SibingGroup sibingGroup Field Value Type Description SiblingRuleTile.SibingGroup Methods RuleMatch(Int32, TileBase) Declaration public override bool RuleMatch(int neighbor, TileBase other) Parameters Type Name Description Int32 neighbor TileBase other Returns Type Description Boolean"
+  },
+  "api/GrandmaGreen.SiblingRuleTile.SibingGroup.html": {
+    "href": "api/GrandmaGreen.SiblingRuleTile.SibingGroup.html",
+    "title": "Enum SiblingRuleTile.SibingGroup",
+    "keywords": "Enum SiblingRuleTile.SibingGroup Namespace : GrandmaGreen Assembly : cs.temp.dll.dll Syntax public enum SibingGroup Fields Name Description Blend Regular"
   },
   "api/GrandmaGreen.StartScreenUIDisplay.html": {
     "href": "api/GrandmaGreen.StartScreenUIDisplay.html",
