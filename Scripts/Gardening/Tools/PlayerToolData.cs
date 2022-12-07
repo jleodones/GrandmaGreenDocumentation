@@ -5,6 +5,7 @@ using GrandmaGreen.Entities;
 using GrandmaGreen.Collections;
 using NaughtyAttributes;
 using UnityEngine.Tilemaps;
+using SpookuleleAudio;
 
 namespace GrandmaGreen.Garden
 {
@@ -15,6 +16,9 @@ namespace GrandmaGreen.Garden
         public GardenToolSet toolSet;
         public ToolData currentTool;
         public CollectionsSO collection;
+
+        public ASoundContainer toolSelectionStartSFX;
+        public ASoundContainer toolSelectionEndSFX;
 
         public event System.Action onToolSelectionStart;
         public event System.Action onToolSelectionEnd;
@@ -37,6 +41,8 @@ namespace GrandmaGreen.Garden
 
         public void StartToolSelection()
         {
+            toolSelectionStartSFX?.Play();
+
             if (playerController.entity.isPathing)
                 playerController.CancelDestination();
 
@@ -48,6 +54,8 @@ namespace GrandmaGreen.Garden
         {
             if (!toolSelectionActive)
                 return;
+
+            toolSelectionEndSFX?.Play();
 
             if (playerController.entity.isPathing)
                 playerController.CancelDestination();
@@ -68,6 +76,8 @@ namespace GrandmaGreen.Garden
 
         public void ToolSelection(ToolData tool)
         {
+            tool.selectedSFX?.Play();
+
             currentTool = tool;
             onToolSelected?.Invoke(currentTool);
             if (currentTool.toolIndex != 3)

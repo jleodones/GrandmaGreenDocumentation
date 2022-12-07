@@ -184,7 +184,7 @@ namespace GrandmaGreen.Garden
                 //Reset the waterStage and waterTimers on growth
                 updatedPlant.waterStage = 0;
                 int supposedTimer = updatedPlant.waterTimer - collection.GetPlant(plant.type).growthTime;
-                Debug.Log(supposedTimer);
+                //Debug.Log(supposedTimer);
                 if(supposedTimer < 0)
                 {
                     updatedPlant.waterTimer = 0;
@@ -329,19 +329,6 @@ namespace GrandmaGreen.Garden
             else
                 return false;
 
-        }
-
-        public int NumSeedDrops(int areaIndex, Vector3Int cell)
-        {
-            PlantState plant = GetPlant(areaIndex, cell);
-            int seedDrop = 1;
-
-            if (plant.isFertilized)
-            {
-                seedDrop = 2;
-            }
-
-            return seedDrop;
         }
 
         public List<TileState> GetTiles(int areaIndex)

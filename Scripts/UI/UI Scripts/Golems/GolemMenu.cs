@@ -21,8 +21,7 @@ namespace GrandmaGreen.UI.Golems
         
         private bool m_isMenuOpen = false;
         private VisualElement root;
-        public Transform TransformToFollow;
-
+        private GolemController golemController;
 
         void OnEnable()
         {
@@ -31,6 +30,7 @@ namespace GrandmaGreen.UI.Golems
             golemMenu.rootVisualElement.Q<Button>("gift").RegisterCallback<ClickEvent>(OnGiftTrigger);
 
             root = golemMenu.rootVisualElement.Q("rootElement");
+            golemController =  GetComponentInParent<GolemController>();
         }
 
         public void HandleGolemInteract()
@@ -52,8 +52,11 @@ namespace GrandmaGreen.UI.Golems
             // Close the HUD.
             EventManager.instance.HandleEVENT_CLOSE_HUD();
 
-            // Set menu location.
-            SetLocation(TransformToFollow.position);
+            // Get Collider bounding box
+            Bounds box = golemController.GetGolemBox();
+
+            // Set menu location based box size
+            SetLocation(box.center + new Vector3(0, box.extents.y + 1.2f, 0));
             GetComponentInParent<GolemController>().onEntityMove += SetLocation;
             
             // Display.
@@ -81,19 +84,21 @@ namespace GrandmaGreen.UI.Golems
 
         private void OnGiftTrigger(ClickEvent clickEvent)
         {
-            GameObject parent = gameObject.transform.parent.gameObject;
-            GolemController golemController = parent.GetComponent<GolemController>();
-            ushort gid = golemController.getGolemID();
+            ushort gid = golemController.GetGolemID();
 
             EventManager.instance.HandleEVENT_GOLEM_HAPPINESS_UPDATE(gid, 30);
         }
         
         public void SetLocation(Vector3 worldPosition)
         {
-            Vector2 newPosition = RuntimePanelUtils.CameraTransformWorldToPanel(
-                root.panel, TransformToFollow.position, Camera.main);
-            root.transform.position = newPosition.WithNewX(newPosition.x -
-                root.layout.width / 2);
+            if (m_isMenuOpen) {
+                Bounds box = golemController.GetGolemBox();
+                Vector3 UIpos = box.center + new Vector3(0, box.extents.y + 1.2f, 0);
+                Vector2 newPosition = RuntimePanelUtils.CameraTransformWorldToPanel(
+                    root.panel, UIpos, Camera.main);
+                root.transform.position = newPosition.WithNewX(newPosition.x -
+                    root.layout.width / 2);
+            }
         }
     }
 }

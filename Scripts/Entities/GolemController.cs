@@ -82,6 +82,7 @@ namespace GrandmaGreen.Entities
 
             // start the behaviour tree
             behaviorTree.Start();
+
         }
 
         private void OnDestroy() {
@@ -223,8 +224,16 @@ namespace GrandmaGreen.Entities
         #endregion
 
         #region  apis
-        public ushort getGolemID() {
+        public ushort GetGolemID() {
             return (ushort)id;
+        }
+
+        public Bounds GetGolemBox() {
+            if (isMature) {
+                return MatureRig.GetComponentInChildren<Collider>().bounds;
+            } else {
+                return BabyRig.GetComponentInChildren<Collider>().bounds;
+            }
         }
         #endregion
         

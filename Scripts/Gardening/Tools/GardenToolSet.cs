@@ -72,6 +72,8 @@ namespace GrandmaGreen.Garden
             {
                 if (action.area.HarvestPlant(action.gridcell))
                     action.tool.toolSFX[2].Play();
+                else
+                    action.tool.toolSFX[3].Play();
 
                 action.area.ChangeGardenTileToPlot_Empty(action.gridcell);
             }
@@ -82,6 +84,7 @@ namespace GrandmaGreen.Garden
             if(action.tile.occupied)
             {
                 action.area.FertilizePlant(action.gridcell);
+                action.tool.toolSFX[0].Play();
             }
         }
 
@@ -107,6 +110,8 @@ namespace GrandmaGreen.Garden
             {
                 action.area.WaterPlant(action.gridcell);
             }
+
+            action.tool.toolSFX[0].Play();
         }
 
     }

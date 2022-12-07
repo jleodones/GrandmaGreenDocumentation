@@ -11,6 +11,7 @@ namespace GrandmaGreen.Garden
         public int toolIndex;
         public string toolName;
         public Sprite icon;
+        public ASoundContainer selectedSFX;
         public ASoundContainer[] toolSFX;
     }
 }

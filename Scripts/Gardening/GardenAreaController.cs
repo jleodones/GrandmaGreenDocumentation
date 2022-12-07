@@ -35,6 +35,8 @@ namespace GrandmaGreen.Garden
         public ParticleSystem FertilizerParticleBurst;
         public ParticleSystem WateringParticleBurst;
         public ParticleSystem DryingUpBurst;
+        public float DropRate = 100;
+        public float FertilizationBonus = 10;
 
         public override void Awake()
         {
@@ -171,9 +173,8 @@ namespace GrandmaGreen.Garden
             else if (gardenManager.PlantIsDead(areaIndex, cell))
             {
                 spriteRenderer.color = new Color(1f, 1f, 1f);
-                Sprite deadSprite = Resources.Load<Sprite>("GAR_DeadPlant");
+                Sprite deadSprite = Resources.Load<Sprite>("Flowers/DeadPlant/PLA_DeadPlant");
                 spriteRenderer.sprite = deadSprite;
-                //spriteRenderer.color = new Color(0.40f, 0.26f, 0.13f);
             }
             else
             {
@@ -288,11 +289,11 @@ namespace GrandmaGreen.Garden
                 UpdateSprite(cell);
             }
 
-            // Temporary code to spawn a particle system so we know that a plant has been fertilized
+            // Temporary code to spawn a particle system so we know that a plant has been watered
             // This should be replaced by some sort of animation/constant effect
             Vector3 centerOfCell = tilemap.GetCellCenterWorld(cell);
             Quaternion particleQuat = Quaternion.Euler(-110, 0, 0);
-            ParticleSystem PlayParticle = Instantiate(WateringParticleBurst, centerOfCell + new Vector3(0, 0, -2), particleQuat);
+            Instantiate(WateringParticleBurst, centerOfCell + new Vector3(0, 0, -2), particleQuat);
         }
 
         public void FertilizePlant(Vector3Int cell)
@@ -303,7 +304,7 @@ namespace GrandmaGreen.Garden
                 // This should be replaced by some sort of animation/constant effect
                 Vector3 centerOfCell = tilemap.GetCellCenterWorld(cell);
                 Quaternion particleQuat = Quaternion.Euler(-110, 0, 0);
-                ParticleSystem PlayParticle = Instantiate(FertilizerParticleBurst, centerOfCell + new Vector3(0, 0, -2), particleQuat);
+                Instantiate(FertilizerParticleBurst, centerOfCell + new Vector3(0, 0, -2), particleQuat);
             }
         }
 
@@ -352,11 +353,15 @@ namespace GrandmaGreen.Garden
 
                 Debug.Log(debug);
 
-                int numSeedsDropped = gardenManager.NumSeedDrops(areaIndex, cell);
-
                 PlantProperties properties = collection.GetPlant(childPlantType);
                 EventManager.instance.HandleEVENT_INVENTORY_ADD_PLANT((ushort)motherPlantType, motherGenotype);
-                EventManager.instance.HandleEVENT_INVENTORY_ADD_SEED((ushort)childPlantType, childGenotype);
+
+                float trueDropRate = DropRate;
+                if (GetPlant(cell).isFertilized) trueDropRate += FertilizationBonus;
+                if (Random.Range(0f, 1f) <= trueDropRate/100)
+                {
+                    EventManager.instance.HandleEVENT_INVENTORY_ADD_SEED((ushort)childPlantType, childGenotype);
+                }
 
                 DestroyPlant(cell);
 
