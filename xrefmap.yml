@@ -3789,19 +3789,32 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Entities.GolemController.FollowPath
   nameWithType: GolemController.FollowPath
-- uid: GrandmaGreen.Entities.GolemController.getGolemID
-  name: getGolemID()
-  href: api/GrandmaGreen.Entities.GolemController.html#GrandmaGreen_Entities_GolemController_getGolemID
-  commentId: M:GrandmaGreen.Entities.GolemController.getGolemID
-  fullName: GrandmaGreen.Entities.GolemController.getGolemID()
-  nameWithType: GolemController.getGolemID()
-- uid: GrandmaGreen.Entities.GolemController.getGolemID*
-  name: getGolemID
-  href: api/GrandmaGreen.Entities.GolemController.html#GrandmaGreen_Entities_GolemController_getGolemID_
-  commentId: Overload:GrandmaGreen.Entities.GolemController.getGolemID
+- uid: GrandmaGreen.Entities.GolemController.GetGolemBox
+  name: GetGolemBox()
+  href: api/GrandmaGreen.Entities.GolemController.html#GrandmaGreen_Entities_GolemController_GetGolemBox
+  commentId: M:GrandmaGreen.Entities.GolemController.GetGolemBox
+  fullName: GrandmaGreen.Entities.GolemController.GetGolemBox()
+  nameWithType: GolemController.GetGolemBox()
+- uid: GrandmaGreen.Entities.GolemController.GetGolemBox*
+  name: GetGolemBox
+  href: api/GrandmaGreen.Entities.GolemController.html#GrandmaGreen_Entities_GolemController_GetGolemBox_
+  commentId: Overload:GrandmaGreen.Entities.GolemController.GetGolemBox
   isSpec: "True"
-  fullName: GrandmaGreen.Entities.GolemController.getGolemID
-  nameWithType: GolemController.getGolemID
+  fullName: GrandmaGreen.Entities.GolemController.GetGolemBox
+  nameWithType: GolemController.GetGolemBox
+- uid: GrandmaGreen.Entities.GolemController.GetGolemID
+  name: GetGolemID()
+  href: api/GrandmaGreen.Entities.GolemController.html#GrandmaGreen_Entities_GolemController_GetGolemID
+  commentId: M:GrandmaGreen.Entities.GolemController.GetGolemID
+  fullName: GrandmaGreen.Entities.GolemController.GetGolemID()
+  nameWithType: GolemController.GetGolemID()
+- uid: GrandmaGreen.Entities.GolemController.GetGolemID*
+  name: GetGolemID
+  href: api/GrandmaGreen.Entities.GolemController.html#GrandmaGreen_Entities_GolemController_GetGolemID_
+  commentId: Overload:GrandmaGreen.Entities.GolemController.GetGolemID
+  isSpec: "True"
+  fullName: GrandmaGreen.Entities.GolemController.GetGolemID
+  nameWithType: GolemController.GetGolemID
 - uid: GrandmaGreen.Entities.GolemController.id
   name: id
   href: api/GrandmaGreen.Entities.GolemController.html#GrandmaGreen_Entities_GolemController_id
@@ -5287,6 +5300,12 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Garden.GardenAreaController.DestroyPlantPrefab
   nameWithType: GardenAreaController.DestroyPlantPrefab
+- uid: GrandmaGreen.Garden.GardenAreaController.DropRate
+  name: DropRate
+  href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_DropRate
+  commentId: F:GrandmaGreen.Garden.GardenAreaController.DropRate
+  fullName: GrandmaGreen.Garden.GardenAreaController.DropRate
+  nameWithType: GardenAreaController.DropRate
 - uid: GrandmaGreen.Garden.GardenAreaController.DryingUpBurst
   name: DryingUpBurst
   href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_DryingUpBurst
@@ -5319,6 +5338,12 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Garden.GardenAreaController.ExitCustomizationMode
   nameWithType: GardenAreaController.ExitCustomizationMode
+- uid: GrandmaGreen.Garden.GardenAreaController.FertilizationBonus
+  name: FertilizationBonus
+  href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_FertilizationBonus
+  commentId: F:GrandmaGreen.Garden.GardenAreaController.FertilizationBonus
+  fullName: GrandmaGreen.Garden.GardenAreaController.FertilizationBonus
+  nameWithType: GardenAreaController.FertilizationBonus
 - uid: GrandmaGreen.Garden.GardenAreaController.FertilizePlant(Vector3Int)
   name: FertilizePlant(Vector3Int)
   href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_FertilizePlant_Vector3Int_
@@ -5946,19 +5971,6 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Garden.GardenManager.IsEmpty
   nameWithType: GardenManager.IsEmpty
-- uid: GrandmaGreen.Garden.GardenManager.NumSeedDrops(System.Int32,Vector3Int)
-  name: NumSeedDrops(Int32, Vector3Int)
-  href: api/GrandmaGreen.Garden.GardenManager.html#GrandmaGreen_Garden_GardenManager_NumSeedDrops_System_Int32_Vector3Int_
-  commentId: M:GrandmaGreen.Garden.GardenManager.NumSeedDrops(System.Int32,Vector3Int)
-  fullName: GrandmaGreen.Garden.GardenManager.NumSeedDrops(System.Int32, Vector3Int)
-  nameWithType: GardenManager.NumSeedDrops(Int32, Vector3Int)
-- uid: GrandmaGreen.Garden.GardenManager.NumSeedDrops*
-  name: NumSeedDrops
-  href: api/GrandmaGreen.Garden.GardenManager.html#GrandmaGreen_Garden_GardenManager_NumSeedDrops_
-  commentId: Overload:GrandmaGreen.Garden.GardenManager.NumSeedDrops
-  isSpec: "True"
-  fullName: GrandmaGreen.Garden.GardenManager.NumSeedDrops
-  nameWithType: GardenManager.NumSeedDrops
 - uid: GrandmaGreen.Garden.GardenManager.PlantIsBreedable(System.Int32,Vector3Int)
   name: PlantIsBreedable(Int32, Vector3Int)
   href: api/GrandmaGreen.Garden.GardenManager.html#GrandmaGreen_Garden_GardenManager_PlantIsBreedable_System_Int32_Vector3Int_
@@ -6886,6 +6898,18 @@ references:
   commentId: F:GrandmaGreen.Garden.PlayerToolData.toolSelectionActive
   fullName: GrandmaGreen.Garden.PlayerToolData.toolSelectionActive
   nameWithType: PlayerToolData.toolSelectionActive
+- uid: GrandmaGreen.Garden.PlayerToolData.toolSelectionEndSFX
+  name: toolSelectionEndSFX
+  href: api/GrandmaGreen.Garden.PlayerToolData.html#GrandmaGreen_Garden_PlayerToolData_toolSelectionEndSFX
+  commentId: F:GrandmaGreen.Garden.PlayerToolData.toolSelectionEndSFX
+  fullName: GrandmaGreen.Garden.PlayerToolData.toolSelectionEndSFX
+  nameWithType: PlayerToolData.toolSelectionEndSFX
+- uid: GrandmaGreen.Garden.PlayerToolData.toolSelectionStartSFX
+  name: toolSelectionStartSFX
+  href: api/GrandmaGreen.Garden.PlayerToolData.html#GrandmaGreen_Garden_PlayerToolData_toolSelectionStartSFX
+  commentId: F:GrandmaGreen.Garden.PlayerToolData.toolSelectionStartSFX
+  fullName: GrandmaGreen.Garden.PlayerToolData.toolSelectionStartSFX
+  nameWithType: PlayerToolData.toolSelectionStartSFX
 - uid: GrandmaGreen.Garden.PlayerToolData.toolSet
   name: toolSet
   href: api/GrandmaGreen.Garden.PlayerToolData.html#GrandmaGreen_Garden_PlayerToolData_toolSet
@@ -6964,6 +6988,12 @@ references:
   commentId: F:GrandmaGreen.Garden.ToolData.icon
   fullName: GrandmaGreen.Garden.ToolData.icon
   nameWithType: ToolData.icon
+- uid: GrandmaGreen.Garden.ToolData.selectedSFX
+  name: selectedSFX
+  href: api/GrandmaGreen.Garden.ToolData.html#GrandmaGreen_Garden_ToolData_selectedSFX
+  commentId: F:GrandmaGreen.Garden.ToolData.selectedSFX
+  fullName: GrandmaGreen.Garden.ToolData.selectedSFX
+  nameWithType: ToolData.selectedSFX
 - uid: GrandmaGreen.Garden.ToolData.toolIndex
   name: toolIndex
   href: api/GrandmaGreen.Garden.ToolData.html#GrandmaGreen_Garden_ToolData_toolIndex
@@ -6982,6 +7012,36 @@ references:
   commentId: F:GrandmaGreen.Garden.ToolData.toolSFX
   fullName: GrandmaGreen.Garden.ToolData.toolSFX
   nameWithType: ToolData.toolSFX
+- uid: GrandmaGreen.Garden.ToolEquip
+  name: ToolEquip
+  href: api/GrandmaGreen.Garden.ToolEquip.html
+  commentId: T:GrandmaGreen.Garden.ToolEquip
+  fullName: GrandmaGreen.Garden.ToolEquip
+  nameWithType: ToolEquip
+- uid: GrandmaGreen.Garden.ToolEquip.collections
+  name: collections
+  href: api/GrandmaGreen.Garden.ToolEquip.html#GrandmaGreen_Garden_ToolEquip_collections
+  commentId: F:GrandmaGreen.Garden.ToolEquip.collections
+  fullName: GrandmaGreen.Garden.ToolEquip.collections
+  nameWithType: ToolEquip.collections
+- uid: GrandmaGreen.Garden.ToolEquip.playerTools
+  name: playerTools
+  href: api/GrandmaGreen.Garden.ToolEquip.html#GrandmaGreen_Garden_ToolEquip_playerTools
+  commentId: F:GrandmaGreen.Garden.ToolEquip.playerTools
+  fullName: GrandmaGreen.Garden.ToolEquip.playerTools
+  nameWithType: ToolEquip.playerTools
+- uid: GrandmaGreen.Garden.ToolEquip.spriteRenderer
+  name: spriteRenderer
+  href: api/GrandmaGreen.Garden.ToolEquip.html#GrandmaGreen_Garden_ToolEquip_spriteRenderer
+  commentId: F:GrandmaGreen.Garden.ToolEquip.spriteRenderer
+  fullName: GrandmaGreen.Garden.ToolEquip.spriteRenderer
+  nameWithType: ToolEquip.spriteRenderer
+- uid: GrandmaGreen.Garden.ToolEquip.toolSpriteResolver
+  name: toolSpriteResolver
+  href: api/GrandmaGreen.Garden.ToolEquip.html#GrandmaGreen_Garden_ToolEquip_toolSpriteResolver
+  commentId: F:GrandmaGreen.Garden.ToolEquip.toolSpriteResolver
+  fullName: GrandmaGreen.Garden.ToolEquip.toolSpriteResolver
+  nameWithType: ToolEquip.toolSpriteResolver
 - uid: GrandmaGreen.GeneralExtensions
   name: GeneralExtensions
   href: api/GrandmaGreen.GeneralExtensions.html
@@ -9511,12 +9571,6 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.UI.Golems.GolemMenu.SetLocation
   nameWithType: GolemMenu.SetLocation
-- uid: GrandmaGreen.UI.Golems.GolemMenu.TransformToFollow
-  name: TransformToFollow
-  href: api/GrandmaGreen.UI.Golems.GolemMenu.html#GrandmaGreen_UI_Golems_GolemMenu_TransformToFollow
-  commentId: F:GrandmaGreen.UI.Golems.GolemMenu.TransformToFollow
-  fullName: GrandmaGreen.UI.Golems.GolemMenu.TransformToFollow
-  nameWithType: GolemMenu.TransformToFollow
 - uid: GrandmaGreen.UI.HUD
   name: GrandmaGreen.UI.HUD
   href: api/GrandmaGreen.UI.HUD.html

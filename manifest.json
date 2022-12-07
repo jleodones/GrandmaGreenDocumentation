@@ -760,7 +760,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.Entities.GolemController.html",
-          "hash": "KEUf+ArT9Z1SgZz5WQoy+4vutVmbPol1t4j3NFLSsw4="
+          "hash": "3CVp6Q7MVEwV6Owh2eDUaW7ldHjPtvnHjpFhaP3ONrY="
         }
       },
       "is_incremental": false,
@@ -928,7 +928,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.Garden.GardenAreaController.html",
-          "hash": "rZfcCztcyksPjhJ2gG1oFDtdR+TKgD75TQiv4JPy4gI="
+          "hash": "AceXvApsjiRBhvcSUdJvdVYh7r1UxSgPQYzJj6htmt4="
         }
       },
       "is_incremental": false,
@@ -964,7 +964,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.Garden.GardenManager.html",
-          "hash": "Dj5oYV2rByhXY//+amEJoq8Kn8AYdTrxC4ymQ5AgdTc="
+          "hash": "lwe+0B9NOg6esxu0LzzS370Jp//+Z67lawyEyi7Q55A="
         }
       },
       "is_incremental": false,
@@ -1084,7 +1084,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.Garden.PlayerToolData.html",
-          "hash": "2+puvJHULP1Wvj/jZiZWrzOGVsLOZuWhOSf18/36WKc="
+          "hash": "yI08mVl6yArZinNprDE6nK7XMyiVyozEPb9t5hiy7ec="
         }
       },
       "is_incremental": false,
@@ -1120,7 +1120,19 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.Garden.ToolData.html",
-          "hash": "9X8EzkmFTwylU/FTYffY9OWjWGf0JVt0hA7MmWU63YE="
+          "hash": "+HB1ME6ysOxLVe65AXfPKRknCLGoTBxINW/kOLSc9ag="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GrandmaGreen.Garden.ToolEquip.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GrandmaGreen.Garden.ToolEquip.html",
+          "hash": "hJv0h5/veQiIpOYlvQDZ6RVeHM5kxl5YgTIkOhrGup4="
         }
       },
       "is_incremental": false,
@@ -1132,7 +1144,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.Garden.html",
-          "hash": "bXVuLxYKwZ4RWyVG+ZNQ7yYlfCCXuZfDgZBAmNYocs8="
+          "hash": "jVzdZ/WCUIC8bZL0G2skvdc1RKbJtFR8nBrp2CNTSYE="
         }
       },
       "is_incremental": false,
@@ -1684,7 +1696,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.UI.Golems.GolemMenu.html",
-          "hash": "eXgoOVI79Vhwe6CzBMfEYx9YS+6BOEr1/amQDblxDXo="
+          "hash": "YMWo6oAFmJFHr66S6Qb1t9mtX1s1h5CPblxl2Ia2lJ0="
         }
       },
       "is_incremental": false,
@@ -1852,7 +1864,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "VFjEVK6I60j+p+pAib0Kuyze69n3GOQgbMijzFHbMos="
+          "hash": "j4+7YVMn8RGzA3YtZ+UJ9jAxg1YDUYXCkuTJMDCro8k="
         }
       },
       "is_incremental": false,
@@ -1961,7 +1973,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 152,
+          "total_file_count": 153,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
