@@ -9,28 +9,35 @@ namespace GrandmaGreen.UI.Collections
         public IInventoryItem m_inventoryItemData;
         
         public Button m_button;
-        
-        public event System.Action<TabbedInventoryItemController> m_createCallback;
 
-        public TabbedInventoryItemController(Button button, System.Action<TabbedInventoryItemController> createCallback)
+        public TabbedInventoryItemController(Button button)
         {
             m_button = button;
-            m_createCallback = createCallback;
-        } 
+        }
+
+        public void SetButtonCallback(System.Action<TabbedInventoryItemController> buttonClickCallback)
+        {
+            m_button.clicked += () =>
+            {
+                buttonClickCallback?.Invoke(this);
+            };
+        }
 
         //This function receives the character whose name this list 
         //element is supposed to display. Since the elements list 
         //in a `ListView` are pooled and reused, it's necessary to 
         //have a `Set` function to change which character's data to display.
-        
         public void SetInventoryData(IInventoryItem inventoryItem, Sprite sprite)
         {
             m_button.Q<VisualElement>("item-image").style.backgroundImage = new StyleBackground(sprite);
             m_button.Q<Label>("quantity").text = inventoryItem.GetQuantityToString();
             m_button.Q<Label>("item-name").text = inventoryItem.itemName;
             m_inventoryItemData = inventoryItem;
-            
-            m_createCallback?.Invoke(this);
+        }
+
+        public void SetFavorite(Sprite sprite)
+        {
+            m_button.Q<VisualElement>("list-entry").style.backgroundImage = new StyleBackground(sprite);
         }
     }
 }

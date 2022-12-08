@@ -34,6 +34,7 @@ public class ToolsMenuController
         });
 
         toolData.onToolSelectionStart += ShowToolsMenu;
+        toolData.onToolSelectionEnd += HideToolsMenu;
         root.style.display = DisplayStyle.None;
     }
 
@@ -74,7 +75,7 @@ public class ToolsMenuController
 
     private void OnUnbloom(TransitionEndEvent evt)
     {
-        HideToolsMenu();
+        toolData.EndToolSelection();
         bloomStart.UnregisterCallback<TransitionEndEvent>(OnUnbloom);
     }
 

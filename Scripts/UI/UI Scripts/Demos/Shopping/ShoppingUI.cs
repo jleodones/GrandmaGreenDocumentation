@@ -42,7 +42,13 @@ namespace GrandmaGreen.UI.Shopping
         public override void OpenUI()
         {
             EventManager.instance.HandleEVENT_CLOSE_HUD();
-            m_rootVisualElement.style.display = DisplayStyle.Flex;
+            base.OpenUI();
+        }
+
+        public override void CloseUI()
+        {
+            EventManager.instance.HandleEVENT_OPEN_HUD();
+            base.CloseUI();
         }
 
         void InstantiateJar()

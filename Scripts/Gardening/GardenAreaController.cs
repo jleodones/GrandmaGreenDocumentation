@@ -122,7 +122,7 @@ namespace GrandmaGreen.Garden
             }
         }
 
-        PlantState GetPlant(Vector3Int cell)
+        public PlantState GetPlant(Vector3Int cell)
         {
             if (!gardenManager.IsEmpty(areaIndex, cell))
             {

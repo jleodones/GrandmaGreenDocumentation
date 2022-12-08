@@ -18,6 +18,11 @@ namespace GrandmaGreen.UI.Collections
         // Template for list items.
         public VisualTreeAsset listEntryTemplate;
         
+        // Template for favorited items.
+        public Sprite favoritedBackground;
+        
+        // Template for list items.
+        public VisualTreeAsset infoListEntryTemplate;
         // Collections SO.
         public CollectionsSO collectionsSO;
 
@@ -33,7 +38,8 @@ namespace GrandmaGreen.UI.Collections
         void Start()
         {
             // Sets up the controller for the whole inventory. The controller instantiates the inventory on its own upon creation.
-            m_controller = new(m_rootVisualElement, playerToolData, inventoryData, listEntryTemplate, soundContainers, collectionsSO);
+            m_controller = new(m_rootVisualElement, playerToolData, inventoryData, listEntryTemplate, favoritedBackground,
+            infoListEntryTemplate, soundContainers, collectionsSO);
 
             // Hides the inventory without animation
             // SetInventoryPosition();
@@ -182,29 +188,30 @@ namespace GrandmaGreen.UI.Collections
             else return 0;
         }
 
-        private void InventoryAddPlant(ushort id, Genotype genotype)
+        private void InventoryAddPlant(ushort id, Genotype genotype, bool isFavorited)
         {
-            Plant p = new Plant(id, collectionsSO.GetItem(id).name, genotype);
-
-            if (inventoryData.RequestData(-1, ref p))
+            Plant p = new Plant(id, collectionsSO.GetItem(id).name, genotype, isFavorited);
+            
+            if (!isFavorited && inventoryData.RequestData(-1, ref p))
             {
                 p.genotypes.Add(genotype);
             }
             else
             {
-                inventoryData.UpdateValue(-1, p);
+                inventoryData.AddComponent(-1, p);
             }
+            
             m_controller.RebuildJar(p);
         }
         
-        private void InventoryRemovePlant(ushort id, Genotype genotype)
+        private void InventoryRemovePlant(ushort id, Genotype genotype, bool isFavorited)
         {
-            Plant p = new Plant(id, collectionsSO.GetItem(id).name, genotype);
+            Plant p = new Plant(id, collectionsSO.GetItem(id).name, genotype, isFavorited);
             
             if (inventoryData.RequestData<Plant>(-1, ref p))
             {
                 p.genotypes.Remove(genotype);
-                        
+
                 if (p.quantity <= 0)
                 {
                     inventoryData.RemoveComponent<Plant>(-1, p);

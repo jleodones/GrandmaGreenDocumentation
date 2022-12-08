@@ -44,8 +44,9 @@ namespace GrandmaGreen {
         [Button()]
         public void AddDecorItem()
         {
-            // Adds bird bath.
-            EventManager.instance.HandleEVENT_INVENTORY_ADD_DECOR(4044);
+            // Adds some decor items (fountain and flamingo ?)
+            EventManager.instance.HandleEVENT_INVENTORY_ADD_DECOR(4048);
+            EventManager.instance.HandleEVENT_INVENTORY_ADD_DECOR(4029);
         }
         
         public int SampleTest()

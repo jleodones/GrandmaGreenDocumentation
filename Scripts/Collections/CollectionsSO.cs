@@ -311,6 +311,7 @@ namespace GrandmaGreen.Collections
         ///
         public Sprite GetSprite(ushort id)
         {
+            ItemProperties item = GetItem(id);
             return Resources.Load(GetItem(id).spritePath, typeof(Sprite)) as Sprite;
         }
 

@@ -16,16 +16,16 @@ namespace GrandmaGreen.UI.HUD
         // Cross references to other UI. Inventory handling is handled globally, as the inventory gets called opened by numerous other systems.
         // Settings.
         public SettingsUIDisplay settingsUIDisplay;
-        
+
         // Cultivision.
         public CultivisionUIDisplay cultivisionUIDisplay;
-        
+
         // Collection.
         public CollectionUIDisplay collectionUIDisplay;
 
         // Inventory.
         public TabbedInventory inventoryUIDisplay;
-        
+
         private HUDController m_controller;
 
         public void Start()
@@ -34,13 +34,25 @@ namespace GrandmaGreen.UI.HUD
 
             m_controller.RegisterButtonCallbacks();
 
+
+
             if (SceneManager.GetActiveScene().name == "SetupTest")
             {
-                RegisterButtonCallback("customizationButton",
-                    () => { EventManager.instance.HandleEVENT_TOGGLE_CUSTOMIZATION_MODE(); });
-
                 RegisterButtonCallbackWithClose("cultivisionButton", cultivisionUIDisplay.OpenUI);
                 cultivisionUIDisplay.RegisterButtonCallback("exitButton", OpenHUDAnimated);
+
+                RegisterButtonCallback("customizationButton", () =>
+                {
+                    EventManager.instance.HandleEVENT_TOGGLE_CUSTOMIZATION_MODE();
+                });
+            }
+            else
+            {
+                m_rootVisualElement.Q<Button>("cultivisionButton").visible = false;
+                m_rootVisualElement.Q<Button>("customizationButton").visible = false;
+
+                m_rootVisualElement.Q<Button>("cultivisionButton").pickingMode = PickingMode.Ignore;
+                m_rootVisualElement.Q<Button>("customizationButton").pickingMode = PickingMode.Ignore;
             }
 
             RegisterButtonCallbackWithClose("inventoryButton", inventoryUIDisplay.OpenUI);
@@ -48,10 +60,10 @@ namespace GrandmaGreen.UI.HUD
 
             RegisterButtonCallbackWithClose("collectionsButton", collectionUIDisplay.OpenUI);
             collectionUIDisplay.RegisterButtonCallback("exitButton", OpenHUDAnimated);
-            
+
             RegisterButtonCallbackWithClose("settingsButton", settingsUIDisplay.OpenUI);
             settingsUIDisplay.RegisterButtonCallback("exitButton", OpenUI);
-            
+
             EventManager.instance.HandleEVENT_UPDATE_MONEY_DISPLAY();
         }
 
@@ -63,6 +75,7 @@ namespace GrandmaGreen.UI.HUD
             EventManager.instance.EVENT_CLOSE_HUD += CloseHUD;
             EventManager.instance.EVENT_CLOSE_HUD_ANIMATED += CloseHUDAnimated;
             EventManager.instance.EVENT_UPDATE_MONEY_DISPLAY += UpdateMoneyDisplay;
+            EventManager.instance.EVENT_TOGGLE_CUSTOMIZATION_MODE += ToggleCustomizationMode;
         }
 
         public override void Unload()
@@ -73,6 +86,16 @@ namespace GrandmaGreen.UI.HUD
             EventManager.instance.EVENT_CLOSE_HUD -= CloseHUD;
             EventManager.instance.EVENT_CLOSE_HUD_ANIMATED -= CloseHUDAnimated;
             EventManager.instance.EVENT_UPDATE_MONEY_DISPLAY -= UpdateMoneyDisplay;
+            EventManager.instance.EVENT_TOGGLE_CUSTOMIZATION_MODE -= ToggleCustomizationMode;
+        }
+
+        void ToggleCustomizationMode()
+        {
+            m_rootVisualElement.Q<Button>("cultivisionButton").visible = !m_rootVisualElement.Q<Button>("cultivisionButton").visible;
+            m_rootVisualElement.Q<Button>("collectionsButton").visible = !m_rootVisualElement.Q<Button>("collectionsButton").visible;
+
+            m_rootVisualElement.Q<Button>("cultivisionButton").pickingMode = (PickingMode)(m_rootVisualElement.Q<Button>("collectionsButton").pickingMode == 0 ? 1 : 0);
+            m_rootVisualElement.Q<Button>("collectionsButton").pickingMode = (PickingMode)(m_rootVisualElement.Q<Button>("collectionsButton").pickingMode == 0 ? 1 : 0);
         }
 
         public void OpenHUD()

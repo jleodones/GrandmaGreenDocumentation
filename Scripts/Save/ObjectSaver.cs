@@ -86,6 +86,24 @@ namespace GrandmaGreen.SaveSystem
         {
             componentStores.Add(new ComponentStore<T>());
         }
+        
+        /// <summary>
+        /// Returns a component store of a given type, if it exists.
+        /// </summary>
+        public IComponentStore GetComponentStore<T>() where T : struct
+        {
+            // Iterates through component stores to find component store of appropriate type.
+            foreach (IComponentStore componentStore in componentStores)
+            {
+                if (componentStore.GetType() == typeof(T))
+                {
+                    // Once found, return the component store.
+                    return componentStore;
+                }
+            }
+            return null;
+        }
+        
 
         /// <summary>
         /// Adds a component to the appropriate ComponentStore. Stored internally, marked for update, then saved by the SaveController.

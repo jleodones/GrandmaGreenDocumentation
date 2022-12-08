@@ -10,7 +10,7 @@
             </ui:GroupBox>
             <ui:GroupBox name="right-content" class="button-content" style="flex-direction: row-reverse; width: 30%; justify-content: space-around;">
                 <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="settingsButton" class="icon-buttons" style="background-image: url(&apos;project://database/Assets/_GrandmaGreen/Art/UI/Icons/HUD/UI_HUD_Settings%201.png?fileID=2800000&amp;guid=f1a00506bf51d00488a089d6c0c971eb&amp;type=3#UI_HUD_Settings 1&apos;);" />
-                <ui:Button tabindex="-1" text="&#10;" display-tooltip-when-elided="true" name="collectionsButton" class="icon-buttons" style="background-image: url(&apos;project://database/Assets/_GrandmaGreen/Art/UI/Icons/HUD/UI_HUD_Collection%201.png?fileID=2800000&amp;guid=278efe2f2e7b83543b3d3500a624c941&amp;type=3#UI_HUD_Collection 1&apos;);" />
+                <ui:Button tabindex="-1" text="&#10;" display-tooltip-when-elided="true" name="collectionsButton" class="icon-buttons" style="background-image: url(&apos;project://database/Assets/_GrandmaGreen/Art/UI/Icons/HUD/UI_HUD_Collection%201.png?fileID=2800000&amp;guid=278efe2f2e7b83543b3d3500a624c941&amp;type=3#UI_HUD_Collection 1&apos;); display: flex;" />
                 <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="customizationButton" class="icon-buttons" style="background-image: url(&apos;project://database/Assets/_GrandmaGreen/Art/UI/Icons/HUD/UI_HUD_Customization%201.png?fileID=2800000&amp;guid=1d38a2d3152088c40a01d548a706553f&amp;type=3#UI_HUD_Customization 1&apos;);" />
             </ui:GroupBox>
         </ui:VisualElement>

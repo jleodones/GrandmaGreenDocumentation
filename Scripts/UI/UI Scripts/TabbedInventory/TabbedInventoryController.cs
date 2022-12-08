@@ -1,13 +1,9 @@
 // This script defines the tab selection logic.
 using UnityEngine;
-using System;
 using System.Collections.Generic;
-using GrandmaGreen;
 using UnityEngine.UIElements;
 using GrandmaGreen.SaveSystem;
 using GrandmaGreen.Collections;
-using Sirenix.OdinInspector;
-using GrandmaGreen.UI.HUD;
 using GrandmaGreen.Garden;
 using SpookuleleAudio;
 
@@ -37,6 +33,11 @@ namespace GrandmaGreen.UI.Collections
         // Entry template used to spawn inventory items.
         private VisualTreeAsset listEntryTemplate;
 
+        private Sprite favoritedBackground;
+        
+        // Entry template used to spawn info list items.
+        private VisualTreeAsset infoListEntryTemplate;
+
         // Holds all content jars.
         private List<ListView> m_contentJars;
 
@@ -59,12 +60,14 @@ namespace GrandmaGreen.UI.Collections
         /// The TabbedInventoryController is attached to the TabbedInventory UI. It registers and controlls tab switching, as well as loading old and new items into the inventory.
         /// </summary>
         public TabbedInventoryController(VisualElement _root, PlayerToolData _playerToolData,
-            ObjectSaver inventoryData, VisualTreeAsset _listEntryTemplate, ASoundContainer[] soundContainers, CollectionsSO cso)
+            ObjectSaver inventoryData, VisualTreeAsset _listEntryTemplate, Sprite _favoritedBackground, VisualTreeAsset _infoListEntryTemplate, ASoundContainer[] soundContainers, CollectionsSO cso)
         {
             // Set member variables.
             root = _root;
             playerToolData = _playerToolData;
             listEntryTemplate = _listEntryTemplate;
+            favoritedBackground = _favoritedBackground;
+            infoListEntryTemplate = _infoListEntryTemplate;
             m_inventoryData = inventoryData;
             m_soundContainers = soundContainers;
             m_collections = cso;
@@ -128,6 +131,8 @@ namespace GrandmaGreen.UI.Collections
 
             // Play the inventory close SFX.
             m_soundContainers[1].Play();
+            
+            root.Q<VisualElement>("infoWindowContainer").style.display = DisplayStyle.None;
 
             // Open the HUD.
             EventManager.instance.HandleEVENT_OPEN_HUD_ANIMATED();
@@ -206,6 +211,8 @@ namespace GrandmaGreen.UI.Collections
         // Sets up the item binding for the inventory UI.
         private void InstantiateJar<T>(ListView jar) where T : struct
         {
+            SetItemSource<T>(ref jar);
+
             // Set up a make item function for a list entry.
             jar.makeItem = () =>
             {
@@ -216,51 +223,63 @@ namespace GrandmaGreen.UI.Collections
                 if (typeof(T) == new Seed().GetType())
                 {
                     var newListEntryLogic =
-                        new TabbedInventorySeedItemController(newListEntry.Q<Button>(), OnSeedEntryClicked);
+                        new TabbedInventoryItemController(newListEntry.Q<Button>());
+                    newListEntryLogic.SetButtonCallback(OnSeedEntryClicked);
+                    newListEntry.userData = newListEntryLogic;
+                }
+                else if (typeof(T) == new Plant().GetType())
+                {
+                    var newListEntryLogic =
+                        new TabbedInventoryItemController(newListEntry.Q<Button>());
+                    newListEntryLogic.SetButtonCallback(OpenInformationPopup);
                     newListEntry.userData = newListEntryLogic;
                 }
                 else
                 {
-                    var newListEntryLogic = new TabbedInventoryItemController(newListEntry.Q<Button>(), OnItemCreated);
+                    var newListEntryLogic = new TabbedInventoryItemController(newListEntry.Q<Button>());
+                    newListEntryLogic.SetButtonCallback(OnDecorItemClicked);
                     newListEntry.userData = newListEntryLogic;
                 }
 
                 // Return the root of the instantiated visual tree
                 return newListEntry;
             };
-
-            SetItemSource<T>(ref jar);
-
+            
             // Set up bind function for a specific list entry.
             jar.bindItem = (item, index) =>
             {
                 // Get the item image.
                 Sprite sprite;
-                
+
                 // Instantiate a controller for the data
                 if (typeof(T) == new Seed().GetType())
                 {
                     Seed s = (Seed)(jar.itemsSource[index]);
-                    sprite = m_collections.GetSprite((PlantId) s.itemID, s.seedGenotype);
-                    
-                    (item.userData as TabbedInventorySeedItemController).SetInventoryData(s, sprite);
+                    sprite = m_collections.GetSprite((PlantId)s.itemID, s.seedGenotype);
+
+                    (item.userData as TabbedInventoryItemController).SetInventoryData(s, sprite);
                 }
                 else if (typeof(T) == new Plant().GetType())
                 {
                     Plant p = (Plant)(jar.itemsSource[index]);
                     sprite = m_collections.GetSprite((PlantId)p.itemID, p.genotypes[0], 2);
-                    (item.userData as TabbedInventoryItemController).SetInventoryData((IInventoryItem)(jar.itemsSource[index]), sprite);
+                    (item.userData as TabbedInventoryItemController).SetInventoryData(
+                        (IInventoryItem)(jar.itemsSource[index]), sprite);
+
+                    if (p.isFavorited)
+                    {
+                        (item.userData as TabbedInventoryItemController).SetFavorite(favoritedBackground);
+                    }
                 }
                 else
                 {
                     IInventoryItem i = (IInventoryItem)(jar.itemsSource[index]);
                     sprite = m_collections.GetSprite(i.itemID);
-                    (item.userData as TabbedInventoryItemController).SetInventoryData((IInventoryItem)(jar.itemsSource[index]), sprite);
+                    (item.userData as TabbedInventoryItemController).SetInventoryData(
+                        (IInventoryItem)(jar.itemsSource[index]), sprite);
+                    OnItemCreated(item.userData as TabbedInventoryItemController);
                 }
             };
-
-            // Set a fixed item height
-            jar.fixedItemHeight = 300;
         }
 
         // Instantiate a new item for the inventory.
@@ -289,7 +308,14 @@ namespace GrandmaGreen.UI.Collections
 
             if (jar != null)
             {
-                jar.Rebuild();
+                if (jar.visible)
+                {
+                    jar.RefreshItems();
+                }
+                else
+                {
+                    jar.Rebuild();
+                }
             }
         }
 
@@ -301,19 +327,29 @@ namespace GrandmaGreen.UI.Collections
                 if (componentStore.GetType() == typeof(T))
                 {
                     jar.itemsSource = ((ComponentStore<T>) componentStore).components;
+                    break;
                 }
             }
         }
 
-        public void OnSeedEntryClicked(ushort itemID, Genotype genotype)
+        public void OnSeedEntryClicked(TabbedInventoryItemController itemController)
         {
-            playerToolData.SetEquippedSeed(itemID, genotype);
+            Seed s = (Seed) itemController.m_inventoryItemData;
+
+            playerToolData.SetEquippedSeed(s.itemID, s.seedGenotype);
             CloseInventory(new ClickEvent());
         }
-        
-        public void OnItemCreated(TabbedInventoryItemController itemController)
+
+        // TODO: Need to rework the customization system. Currently it sets the m_inventoryItemID to the last item created.
+        // OnDecorItemClicked is a stopgap measure put in place to prevent it, but needs to be reworked.
+        public void OnDecorItemClicked(TabbedInventoryItemController itemController)
         {
             m_inventoryItemId = itemController.m_inventoryItemData;
+        }
+
+        public void OnItemCreated(TabbedInventoryItemController itemController)
+        {
+            // m_inventoryItemId = itemController.m_inventoryItemData;
             itemController.m_button.RegisterCallback<PointerDownEvent>(PointerDownHandler, TrickleDown.TrickleDown);
             itemController.m_button.RegisterCallback<PointerMoveEvent>(PointerMoveHandler, TrickleDown.TrickleDown);
             itemController.m_button.RegisterCallback<PointerUpEvent>(PointerUpHandler, TrickleDown.TrickleDown);
@@ -342,13 +378,15 @@ namespace GrandmaGreen.UI.Collections
                 draggable.transform.position = new Vector2(targetStartPosition.x + pointerDelta.x, targetStartPosition.y + pointerDelta.y);
 
                 // To-Do: Bound Checks
-            
                 // Threshold Check
                 if(draggable.worldTransform.GetPosition().x <= threshold.worldTransform.GetPosition().x && !handled){
                     draggable.transform.position = draggableStartPos;
                     CloseInventory(new ClickEvent());
                     // UI to GameObject here
-                    EventManager.instance.HandleEVENT_INVENTORY_CUSTOMIZATION_START(m_inventoryItemId);
+
+                    VisualElement ve = ((Button) evt.currentTarget).parent;
+                    IInventoryItem item = (ve.userData as TabbedInventoryItemController).m_inventoryItemData;
+                    EventManager.instance.HandleEVENT_INVENTORY_CUSTOMIZATION_START(item);
                     handled = true;
                 }
             }
@@ -359,7 +397,7 @@ namespace GrandmaGreen.UI.Collections
             if (enabled && draggable.HasPointerCapture(evt.pointerId))
             {
                 draggable.ReleasePointer(evt.pointerId);
-                draggable.transform.position = draggableStartPos;
+                draggable.transform.position = targetStartPosition;
             }
         }
 
@@ -377,6 +415,65 @@ namespace GrandmaGreen.UI.Collections
                 ).ForEach(UnselectTab);
                 SelectTab(seedsTab);
             }
+        }
+
+        // Specifically for plants.
+        void OpenInformationPopup(TabbedInventoryItemController itemController)
+        {
+            // Get the plant item.
+            Plant p = (Plant) itemController.m_inventoryItemData;
+            
+            // SETTING UP THE INFORMATION POPUP LIST VIEW.
+            // Find the information popup list view.
+            ListView infoJar = root.Q<ListView>("infoWindowListView");
+
+            // Set up a make item function for a list entry.
+            infoJar.makeItem = () =>
+            {
+                // Instantiate the UXML template for the entry
+                var newListEntry = infoListEntryTemplate.Instantiate();
+
+                // Return the root of the instantiated visual tree
+                return newListEntry;
+            };
+            
+            // Set up bind function for a specific list entry.
+            infoJar.bindItem = (item, index) =>
+            {
+                // Get this particular plant.
+                Genotype genotype = (Genotype) infoJar.itemsSource[index];
+                
+                // Get and set the item image.
+                Sprite sprite = m_collections.GetSprite((PlantId) p.itemID, genotype, 2);
+                item.Q<VisualElement>("plantImage").style.backgroundImage = new StyleBackground(sprite);
+                
+                // Get the button and set the callback.
+                item.Q<Button>("plantFavoriteButton").clicked += () =>
+                {
+                    if (!p.isFavorited)
+                    {
+                        // Remove it from this list.
+                        EventManager.instance.HandleEVENT_INVENTORY_REMOVE_PLANT(p.itemID, genotype);
+
+                        // Add it back in as a favorited item.
+                        EventManager.instance.HandleEVENT_INVENTORY_ADD_PLANT(p.itemID, genotype, true);
+
+                        infoJar.RefreshItems();
+                    }
+                };
+            };
+
+            infoJar.itemsSource = p.genotypes;
+            
+            infoJar.Rebuild();
+            
+            // CLOSE CALLBACK.
+            root.Q<Button>("infoWindowExitButton").clicked += () =>
+            {
+                root.Q<VisualElement>("infoWindowContainer").style.display = DisplayStyle.None;
+            };
+
+            root.Q<VisualElement>("infoWindowContainer").style.display = DisplayStyle.Flex;
         }
     }
 }

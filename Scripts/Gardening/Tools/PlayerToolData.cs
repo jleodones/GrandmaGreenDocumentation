@@ -61,6 +61,7 @@ namespace GrandmaGreen.Garden
                 playerController.CancelDestination();
 
             toolSelectionActive = false;
+            onToolSelectionEnd?.Invoke();
         }
 
         public void EmptySelection()
@@ -84,7 +85,7 @@ namespace GrandmaGreen.Garden
             {
                 equippedSeed = 0;
             }
-            EndToolSelection();
+
         }
 
         public void SetEquippedSeed(ushort plantIndex, Genotype genotype)

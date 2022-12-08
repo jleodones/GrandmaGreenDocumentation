@@ -33,6 +33,10 @@ namespace GrandmaGreen.Collections {
     [Serializable]
     public struct Plant : IInventoryItem
     {
+        // Checks whether this plant(s) is favorited or not.
+        [ShowInInspector]
+        public bool isFavorited { get; set; }
+        
         // Item ID.
         public ushort itemID { get; set; }
         
@@ -47,22 +51,16 @@ namespace GrandmaGreen.Collections {
 
         public List<Genotype> genotypes;
 
-        public Plant(ushort id, string name, Genotype genotype)
+        public Plant(ushort id, string name, Genotype genotype, bool isIncomingFavorited = false)
         {
             itemType = ItemType.Plant;
             
             itemID = id;
             itemName = name;
             genotypes = new List<Genotype>();
-            genotypes.Add(genotype);
-        }
-        public Plant(ushort id, string name, int num, List<Genotype> plantGenotypes)
-        {
-            itemType = ItemType.Plant;
+            isFavorited = isIncomingFavorited;
             
-            itemID = id;
-            itemName = name;
-            genotypes = plantGenotypes;
+            genotypes.Add(genotype);
         }
         
         public string GetQuantityToString()
@@ -70,7 +68,11 @@ namespace GrandmaGreen.Collections {
             return quantity.ToString();
         }
         public override bool Equals(object obj) =>
-            obj is IInventoryItem other && other != null && other.itemID == itemID && other.itemType == itemType;
+            obj is Plant other && other.itemID == itemID
+                               && other.itemType == itemType
+                               
+                               // Verifying that both plants are related.
+                               && isFavorited == other.isFavorited;
     }
 
     [Serializable]
@@ -89,8 +91,7 @@ namespace GrandmaGreen.Collections {
         
         // Amount of the object present in the inventory.
         public int quantity;
-
-        // Array of genotypes.
+        
         public Genotype seedGenotype;
 
         public Seed(ushort id, string name, Genotype genotype)
