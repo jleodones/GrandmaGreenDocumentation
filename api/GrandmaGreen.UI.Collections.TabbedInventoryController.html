@@ -124,13 +124,13 @@
   
   
   <a id="GrandmaGreen_UI_Collections_TabbedInventoryController__ctor_" data-uid="GrandmaGreen.UI.Collections.TabbedInventoryController.#ctor*"></a>
-  <h4 id="GrandmaGreen_UI_Collections_TabbedInventoryController__ctor_VisualElement_PlayerToolData_ObjectSaver_VisualTreeAsset_ASoundContainer___CollectionsSO_" data-uid="GrandmaGreen.UI.Collections.TabbedInventoryController.#ctor(VisualElement,PlayerToolData,ObjectSaver,VisualTreeAsset,ASoundContainer[],CollectionsSO)">TabbedInventoryController(VisualElement, PlayerToolData, ObjectSaver, VisualTreeAsset, ASoundContainer[], CollectionsSO)</h4>
+  <h4 id="GrandmaGreen_UI_Collections_TabbedInventoryController__ctor_VisualElement_PlayerToolData_ObjectSaver_VisualTreeAsset_Sprite_VisualTreeAsset_ASoundContainer___CollectionsSO_" data-uid="GrandmaGreen.UI.Collections.TabbedInventoryController.#ctor(VisualElement,PlayerToolData,ObjectSaver,VisualTreeAsset,Sprite,VisualTreeAsset,ASoundContainer[],CollectionsSO)">TabbedInventoryController(VisualElement, PlayerToolData, ObjectSaver, VisualTreeAsset, Sprite, VisualTreeAsset, ASoundContainer[], CollectionsSO)</h4>
   <div class="markdown level1 summary"><p>The TabbedInventoryController is attached to the TabbedInventory UI. It registers and controlls tab switching, as well as loading old and new items into the inventory.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public TabbedInventoryController(VisualElement _root, PlayerToolData _playerToolData, ObjectSaver inventoryData, VisualTreeAsset _listEntryTemplate, ASoundContainer[] soundContainers, CollectionsSO cso)</code></pre>
+    <pre><code class="lang-csharp hljs">public TabbedInventoryController(VisualElement _root, PlayerToolData _playerToolData, ObjectSaver inventoryData, VisualTreeAsset _listEntryTemplate, Sprite _favoritedBackground, VisualTreeAsset _infoListEntryTemplate, ASoundContainer[] soundContainers, CollectionsSO cso)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -160,6 +160,16 @@
       <tr>
         <td><span class="xref">VisualTreeAsset</span></td>
         <td><span class="parametername">_listEntryTemplate</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Sprite</span></td>
+        <td><span class="parametername">_favoritedBackground</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">VisualTreeAsset</span></td>
+        <td><span class="parametername">_infoListEntryTemplate</span></td>
         <td></td>
       </tr>
       <tr>
@@ -204,6 +214,33 @@
   </h3>
   
   
+  <a id="GrandmaGreen_UI_Collections_TabbedInventoryController_OnDecorItemClicked_" data-uid="GrandmaGreen.UI.Collections.TabbedInventoryController.OnDecorItemClicked*"></a>
+  <h4 id="GrandmaGreen_UI_Collections_TabbedInventoryController_OnDecorItemClicked_GrandmaGreen_UI_Collections_TabbedInventoryItemController_" data-uid="GrandmaGreen.UI.Collections.TabbedInventoryController.OnDecorItemClicked(GrandmaGreen.UI.Collections.TabbedInventoryItemController)">OnDecorItemClicked(TabbedInventoryItemController)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void OnDecorItemClicked(TabbedInventoryItemController itemController)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="GrandmaGreen.UI.Collections.TabbedInventoryItemController.html">TabbedInventoryItemController</a></td>
+        <td><span class="parametername">itemController</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="GrandmaGreen_UI_Collections_TabbedInventoryController_OnItemCreated_" data-uid="GrandmaGreen.UI.Collections.TabbedInventoryController.OnItemCreated*"></a>
   <h4 id="GrandmaGreen_UI_Collections_TabbedInventoryController_OnItemCreated_GrandmaGreen_UI_Collections_TabbedInventoryItemController_" data-uid="GrandmaGreen.UI.Collections.TabbedInventoryController.OnItemCreated(GrandmaGreen.UI.Collections.TabbedInventoryItemController)">OnItemCreated(TabbedInventoryItemController)</h4>
   <div class="markdown level1 summary"></div>
@@ -232,12 +269,12 @@
   
   
   <a id="GrandmaGreen_UI_Collections_TabbedInventoryController_OnSeedEntryClicked_" data-uid="GrandmaGreen.UI.Collections.TabbedInventoryController.OnSeedEntryClicked*"></a>
-  <h4 id="GrandmaGreen_UI_Collections_TabbedInventoryController_OnSeedEntryClicked_System_UInt16_Genotype_" data-uid="GrandmaGreen.UI.Collections.TabbedInventoryController.OnSeedEntryClicked(System.UInt16,Genotype)">OnSeedEntryClicked(UInt16, Genotype)</h4>
+  <h4 id="GrandmaGreen_UI_Collections_TabbedInventoryController_OnSeedEntryClicked_GrandmaGreen_UI_Collections_TabbedInventoryItemController_" data-uid="GrandmaGreen.UI.Collections.TabbedInventoryController.OnSeedEntryClicked(GrandmaGreen.UI.Collections.TabbedInventoryItemController)">OnSeedEntryClicked(TabbedInventoryItemController)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void OnSeedEntryClicked(ushort itemID, Genotype genotype)</code></pre>
+    <pre><code class="lang-csharp hljs">public void OnSeedEntryClicked(TabbedInventoryItemController itemController)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -250,13 +287,8 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">UInt16</a></td>
-        <td><span class="parametername">itemID</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">Genotype</span></td>
-        <td><span class="parametername">genotype</span></td>
+        <td><a class="xref" href="GrandmaGreen.UI.Collections.TabbedInventoryItemController.html">TabbedInventoryItemController</a></td>
+        <td><span class="parametername">itemController</span></td>
         <td></td>
       </tr>
     </tbody>

@@ -124,12 +124,12 @@
   
   
   <a id="GrandmaGreen_UI_Collections_TabbedInventoryItemController__ctor_" data-uid="GrandmaGreen.UI.Collections.TabbedInventoryItemController.#ctor*"></a>
-  <h4 id="GrandmaGreen_UI_Collections_TabbedInventoryItemController__ctor_Button_System_Action_GrandmaGreen_UI_Collections_TabbedInventoryItemController__" data-uid="GrandmaGreen.UI.Collections.TabbedInventoryItemController.#ctor(Button,System.Action{GrandmaGreen.UI.Collections.TabbedInventoryItemController})">TabbedInventoryItemController(Button, Action&lt;TabbedInventoryItemController&gt;)</h4>
+  <h4 id="GrandmaGreen_UI_Collections_TabbedInventoryItemController__ctor_Button_" data-uid="GrandmaGreen.UI.Collections.TabbedInventoryItemController.#ctor(Button)">TabbedInventoryItemController(Button)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public TabbedInventoryItemController(Button button, Action&lt;TabbedInventoryItemController&gt; createCallback)</code></pre>
+    <pre><code class="lang-csharp hljs">public TabbedInventoryItemController(Button button)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -144,11 +144,6 @@
       <tr>
         <td><span class="xref">Button</span></td>
         <td><span class="parametername">button</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="GrandmaGreen.UI.Collections.TabbedInventoryItemController.html">TabbedInventoryItemController</a>&gt;</td>
-        <td><span class="parametername">createCallback</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -207,6 +202,60 @@
   </h3>
   
   
+  <a id="GrandmaGreen_UI_Collections_TabbedInventoryItemController_SetButtonCallback_" data-uid="GrandmaGreen.UI.Collections.TabbedInventoryItemController.SetButtonCallback*"></a>
+  <h4 id="GrandmaGreen_UI_Collections_TabbedInventoryItemController_SetButtonCallback_System_Action_GrandmaGreen_UI_Collections_TabbedInventoryItemController__" data-uid="GrandmaGreen.UI.Collections.TabbedInventoryItemController.SetButtonCallback(System.Action{GrandmaGreen.UI.Collections.TabbedInventoryItemController})">SetButtonCallback(Action&lt;TabbedInventoryItemController&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetButtonCallback(Action&lt;TabbedInventoryItemController&gt; buttonClickCallback)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="GrandmaGreen.UI.Collections.TabbedInventoryItemController.html">TabbedInventoryItemController</a>&gt;</td>
+        <td><span class="parametername">buttonClickCallback</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="GrandmaGreen_UI_Collections_TabbedInventoryItemController_SetFavorite_" data-uid="GrandmaGreen.UI.Collections.TabbedInventoryItemController.SetFavorite*"></a>
+  <h4 id="GrandmaGreen_UI_Collections_TabbedInventoryItemController_SetFavorite_Sprite_" data-uid="GrandmaGreen.UI.Collections.TabbedInventoryItemController.SetFavorite(Sprite)">SetFavorite(Sprite)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetFavorite(Sprite sprite)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Sprite</span></td>
+        <td><span class="parametername">sprite</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="GrandmaGreen_UI_Collections_TabbedInventoryItemController_SetInventoryData_" data-uid="GrandmaGreen.UI.Collections.TabbedInventoryItemController.SetInventoryData*"></a>
   <h4 id="GrandmaGreen_UI_Collections_TabbedInventoryItemController_SetInventoryData_IInventoryItem_Sprite_" data-uid="GrandmaGreen.UI.Collections.TabbedInventoryItemController.SetInventoryData(IInventoryItem,Sprite)">SetInventoryData(IInventoryItem, Sprite)</h4>
   <div class="markdown level1 summary"></div>
@@ -233,32 +282,6 @@
       <tr>
         <td><span class="xref">Sprite</span></td>
         <td><span class="parametername">sprite</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="events">Events
-  </h3>
-  
-  
-  <h4 id="GrandmaGreen_UI_Collections_TabbedInventoryItemController_m_createCallback" data-uid="GrandmaGreen.UI.Collections.TabbedInventoryItemController.m_createCallback">m_createCallback</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public event Action&lt;TabbedInventoryItemController&gt; m_createCallback</code></pre>
-  </div>
-  <h5 class="eventType">Event Type</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="GrandmaGreen.UI.Collections.TabbedInventoryItemController.html">TabbedInventoryItemController</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
