@@ -44,6 +44,16 @@ namespace GrandmaGreen
             saveManager.enabled = true;
             InitalizeState();
         }
+        void Start()
+        {
+
+
+        }
+
+        void Update()
+        {
+            timeClock.TickClock(Time.deltaTime);
+        }
 
         void OnEnable()
         {
@@ -67,6 +77,20 @@ namespace GrandmaGreen
             s_Instance = null;
         }
 
+        void OnApplicationFocus(bool focusStatus)
+        {
+            if (focusStatus)
+            {
+                Debug.Log("App Gained focus!");
+                timeClock.SetClock();
+            }
+            else
+            {
+                Debug.Log("App Lost focus!");
+                timeClock.SaveCurrentDateTime();
+            }
+        }
+
         void InitalizeState()
         {
             settingsData.LoadSettings();
@@ -84,17 +108,6 @@ namespace GrandmaGreen
             timeClock.SaveCurrentDateTime();
             storylineData.Release();
             saveManager.TriggerSave();
-        }
-
-        void Start()
-        {
-            timeClock.SetClock();
-            
-        }
-
-        void Update()
-        {
-            timeClock.TickClock(Time.deltaTime);
         }
 
         public void LoadGardenScreen(int gardenIndex)
