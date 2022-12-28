@@ -1010,6 +1010,12 @@ references:
   commentId: F:GrandmaGreen.CatchUIInput.document
   fullName: GrandmaGreen.CatchUIInput.document
   nameWithType: CatchUIInput.document
+- uid: GrandmaGreen.CatchUIInput.m_PointerActive
+  name: m_PointerActive
+  href: api/GrandmaGreen.CatchUIInput.html#GrandmaGreen_CatchUIInput_m_PointerActive
+  commentId: F:GrandmaGreen.CatchUIInput.m_PointerActive
+  fullName: GrandmaGreen.CatchUIInput.m_PointerActive
+  nameWithType: CatchUIInput.m_PointerActive
 - uid: GrandmaGreen.CatchUIInput.touchInteraction
   name: touchInteraction
   href: api/GrandmaGreen.CatchUIInput.html#GrandmaGreen_CatchUIInput_touchInteraction

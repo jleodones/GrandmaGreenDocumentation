@@ -122,7 +122,7 @@
   "api/GrandmaGreen.CatchUIInput.html": {
     "href": "api/GrandmaGreen.CatchUIInput.html",
     "title": "Class CatchUIInput",
-    "keywords": "Class CatchUIInput Inheritance Object CatchUIInput Namespace : GrandmaGreen Assembly : cs.temp.dll.dll Syntax public class CatchUIInput : MonoBehaviour Fields document Declaration public UIDocument document Field Value Type Description UIDocument touchInteraction Declaration public TouchInteraction touchInteraction Field Value Type Description TouchInteraction"
+    "keywords": "Class CatchUIInput Inheritance Object CatchUIInput Namespace : GrandmaGreen Assembly : cs.temp.dll.dll Syntax public class CatchUIInput : MonoBehaviour Fields document Declaration public UIDocument document Field Value Type Description UIDocument m_PointerActive Declaration public bool m_PointerActive Field Value Type Description Boolean touchInteraction Declaration public TouchInteraction touchInteraction Field Value Type Description TouchInteraction"
   },
   "api/GrandmaGreen.Collections.CharacterId.html": {
     "href": "api/GrandmaGreen.Collections.CharacterId.html",
