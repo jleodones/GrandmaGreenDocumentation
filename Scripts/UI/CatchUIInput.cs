@@ -14,7 +14,7 @@ namespace GrandmaGreen
 
         VisualElement root;
 
-        bool m_PointerActive = false;
+        public bool m_PointerActive = false;
         void OnEnable()
         {
             root = document.rootVisualElement;
@@ -23,6 +23,7 @@ namespace GrandmaGreen
             root.RegisterCallback<PointerMoveEvent>(OnWorldPointerMove);
             root.RegisterCallback<PointerUpEvent>(OnWorldPointerUp);
             root.RegisterCallback<PointerOutEvent>(OnWorldPointerExit);
+            root.RegisterCallback<PointerEnterEvent>(OnWorldPointerEnter);
         }
 
         void OnDisable()
@@ -31,6 +32,7 @@ namespace GrandmaGreen
             root.UnregisterCallback<PointerMoveEvent>(OnWorldPointerMove);
             root.UnregisterCallback<PointerUpEvent>(OnWorldPointerUp);
             root.UnregisterCallback<PointerOutEvent>(OnWorldPointerExit);
+            root.UnregisterCallback<PointerEnterEvent>(OnWorldPointerEnter);
         }
 
         void OnWorldPointerDown(PointerDownEvent e)
@@ -39,6 +41,11 @@ namespace GrandmaGreen
         }
 
         void OnWorldPointerMove(PointerMoveEvent e)
+        {
+            m_PointerActive = true;
+        }
+
+        void OnWorldPointerEnter(PointerEnterEvent e)
         {
             m_PointerActive = true;
         }
