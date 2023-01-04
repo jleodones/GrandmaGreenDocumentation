@@ -186,29 +186,29 @@ namespace GrandmaGreen.Collections
         public List<string> spritePaths;
     }
 
-    //TODO: expand with all stats for plants (based on plant data sheet)
     public struct PlantProperties
     {
         public string name;
         public string description;
         public string spriteBasePath;
-        public int growthStages;
+        public int growthStages; //always going to be 3
         public int growthTime;
-        public int waterPerStage;
+        public int waterPerStage; //always going to be 200
+        public float baseGoldPerTimeUnit;
         public PlantType plantType;
     }
 
-    //for shop
-    public struct SeedProperties
-    {
-        public string name;
-        public string description;
-        public string spritePath;
-        public int baseCost;
+    //for shop - likely will not need this
+    //public struct SeedProperties
+    //{
+    //    public string name;
+    //    public string description;
+    //    public string spritePath;
+    //    public int baseCost;
 
-        //in this context, plantType is flower, veggie, or fruit
-        public PlantType plantType;
-    }
+    //    //in this context, plantType is flower, veggie, or fruit
+    //    public PlantType plantType;
+    //}
 }
 
 namespace GrandmaGreen.Collections
@@ -223,9 +223,10 @@ namespace GrandmaGreen.Collections
         [SerializeField] TextAsset dataSheet;
         [ShowInInspector]
         public Dictionary<ushort, ItemProperties> ItemLookup;
+        public List<Seed> PlantGenotypeMasterList;
         public Dictionary<ushort, PlantProperties> PlantLookup;
-        public Dictionary<ushort, CharacterProperties> CharacterLookup;
-        public Dictionary<ushort, SeedProperties> SeedLookup;
+        //public Dictionary<ushort, CharacterProperties> CharacterLookup;
+        //public Dictionary<ushort, SeedProperties> SeedLookup;
 
         static CollectionsSO s_Instance;
         public CollectionsSO LoadedInstance => s_Instance;
@@ -292,10 +293,10 @@ namespace GrandmaGreen.Collections
         ///<summary>
         ///Get any plant by its id
         ///</summary>
-        public SeedProperties GetSeed(PlantId id)
-        {
-            return SeedLookup[(ushort)((ushort)id + CSVtoSO.SEED_ID_OFFSET)];
-        }
+        //public SeedProperties GetSeed(PlantId id)
+        //{
+        //    return SeedLookup[(ushort)((ushort)id + CSVtoSO.SEED_ID_OFFSET)];
+        //}
 
         ///<summary>
         ///Retrieve a sprite by its sprite path (which is just its filename)

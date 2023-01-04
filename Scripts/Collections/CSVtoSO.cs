@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using GrandmaGreen.SaveSystem;
 using Sirenix.OdinInspector;
 using System.Globalization;
+using GrandmaGreen.Garden;
 
 //#if (UNITY_EDITOR)
 
@@ -18,7 +19,6 @@ namespace GrandmaGreen.Collections
 {
     using Id = System.Enum;
 
-    //TODO: Expoand csv for plant entries to include seeds + extra stats
     public class CSVtoSO
     {
         private static readonly string inventoryCSVPath = "/_GrandmaGreen/Scripts/Collections/CollectionsDatabase.csv";
@@ -33,9 +33,12 @@ namespace GrandmaGreen.Collections
 
             collections.ItemLookup = new Dictionary<ushort, ItemProperties>();
             collections.PlantLookup = new Dictionary<ushort, PlantProperties>();
-            collections.CharacterLookup = new Dictionary<ushort, CharacterProperties>();
-            collections.SeedLookup = new Dictionary<ushort, SeedProperties>();
+            collections.PlantGenotypeMasterList = new List<Seed>();
+            //collections.CharacterLookup = new Dictionary<ushort, CharacterProperties>();
+            //collections.SeedLookup = new Dictionary<ushort, SeedProperties>();
 
+
+            //read the CSV
             for (int i = 2; i < allLines.Length; i++)
             {
                 //current line in file
@@ -51,15 +54,9 @@ namespace GrandmaGreen.Collections
                 string description = line[3];
                 string tag = line[4];
                 // int baseCost = Int32.Parse(line[5]);
-                ushort.TryParse(line[5], out ushort baseCost);
+                ushort.TryParse(line[5], out ushort baseCost); //this will be seed base cost for plants
                 string seedDescription = line[6];
-                //int seedBaseCost = 0;
-                ushort.TryParse(line[7], out ushort seedBaseCost);
-                //if (line[7].Length != 0)
-                //{
-                //    seedBaseCost = Int32.Parse(line[7]);
-                //}
-                string plantType = line[8];
+                string plantType = line[7];
                 string spritePath = "";
                 ItemProperties itemProps = new ItemProperties();
                 itemProps.name = name;
@@ -81,49 +78,305 @@ namespace GrandmaGreen.Collections
                         spritePath = "PLA_" + name.Replace(" ", "");
                         itemProps.spritePath = spritePath;
                         
-                        // TODO: Please fix this later.
-                        itemProps.baseCost = seedBaseCost;
+                        //the base cost for plants is actually the base cost for seeds
+                        itemProps.baseCost = baseCost;
 
                         //plant stats
-                        ushort.TryParse(line[9], out ushort growthStages);
-                        plantProps.growthStages = growthStages;
-                        ushort.TryParse(line[10], out ushort growthTime);
+                        plantProps.growthStages = 3;
+                        ushort.TryParse(line[8], out ushort growthTime);
                         plantProps.growthTime = growthTime;
-                        ushort.TryParse(line[11], out ushort waterPerStage);
-                        plantProps.waterPerStage = waterPerStage;
+                        plantProps.waterPerStage = 200;
 
+                        float.TryParse(line[9], out float baseGoldPerTimeUnit);
+                        plantProps.baseGoldPerTimeUnit = baseGoldPerTimeUnit;
+
+                        List<string> genotypeList = new List<string>{ "AABB", "AABb", "AAbb", "AaBB", "AaBb", "Aabb", "aaBB", "aaBb", "aabb" };
+
+                        
                         //flower
                         if (plantType == "Flower")
                         {
                             plantProps.plantType = (PlantType)1;
+
+                            //populate plant genotype master list -- plants of same type but diff genotype have the same id
+                            for(int g=0; g<9; g++)
+                            {
+                                Seed seed = new Seed();
+                                string genoString = genotypeList[g];
+                                Genotype geno = new Genotype(genoString);
+                                seed.seedGenotype = geno;
+                                seed.itemID = csvID;
+                                string seedName = "";
+
+                                //color
+                                switch (genoString[2])
+                                {
+                                    case 'B':
+                                        switch (genoString[3])
+                                        {
+                                            case 'B':
+                                                switch(name)
+                                                {
+                                                    case "Rose":
+                                                        seedName = "Red";
+                                                        break;
+                                                    case "Tulip":
+                                                        seedName = "Red";
+                                                        break;
+                                                    case "Calla Lily":
+                                                        seedName = "White";
+                                                        break;
+                                                    case "Dahlia":
+                                                        seedName = "Red+Yellow";
+                                                        break;
+                                                    case "Hyacinth":
+                                                        seedName = "Pink";
+                                                        break;
+                                                    case "Pansy":
+                                                        seedName = "Blue";
+                                                        break;
+                                                    case "Crocus":
+                                                        seedName = "Blue Lavender";
+                                                        break;
+                                                }
+                                                break;
+                                            case 'b':
+                                                switch (name)
+                                                {
+                                                    case "Rose":
+                                                        seedName = "Pink";
+                                                        break;
+                                                    case "Tulip":
+                                                        seedName = "Orange";
+                                                        break;
+                                                    case "Calla Lily":
+                                                        seedName = "Yellow";
+                                                        break;
+                                                    case "Dahlia":
+                                                        seedName = "Pink";
+                                                        break;
+                                                    case "Hyacinth":
+                                                        seedName = "Blue";
+                                                        break;
+                                                    case "Pansy":
+                                                        seedName = "Yellow+Orange";
+                                                        break;
+                                                    case "Crocus":
+                                                        seedName = "White";
+                                                        break;
+                                                }
+                                                break;
+                                        }
+                                        break;
+                                    case 'b':
+                                        if (genoString[3] == 'b')
+                                        {
+                                            switch (name)
+                                            {
+                                                case "Rose":
+                                                    seedName = "White";
+                                                    break;
+                                                case "Tulip":
+                                                    seedName = "Yellow";
+                                                    break;
+                                                case "Calla Lily":
+                                                    seedName = "Pink";
+                                                    break;
+                                                case "Dahlia":
+                                                    seedName = "White";
+                                                    break;
+                                                case "Hyacinth":
+                                                    seedName = "White";
+                                                    break;
+                                                case "Pansy":
+                                                    seedName = "Yellow+Violet+White";
+                                                    break;
+                                                case "Crocus":
+                                                    seedName = "Yellow";
+                                                    break;
+                                            }
+                                        }
+                                        break;
+                                }
+
+
+                                seedName += " " + name;
+                                seed.itemName = seedName;
+                                collections.PlantGenotypeMasterList.Add(seed);
+
+                            }
                         }
                         //veggie
                         else if (plantType == "Vegetable")
                         {
                             plantProps.plantType = (PlantType)2;
+
+                            //populate plant genotype master list
+                            for (int g = 0; g < 9; g++)
+                            {
+                                Seed seed = new Seed();
+                                string genoString = genotypeList[g];
+                                Genotype geno = new Genotype(genotypeList[g]);
+                                seed.seedGenotype = geno;
+                                seed.itemID = csvID;
+                                string seedName = "";
+
+                                //shape
+                                switch (genoString[2])
+                                {
+                                    case 'B':
+                                        switch (genoString[3])
+                                        {
+                                            case 'B':
+                                                seedName = "Long";
+                                                break;
+                                            case 'b':
+                                                seedName = "Average";
+                                                break;
+                                        }
+                                        break;
+                                    case 'b':
+                                        if (genoString[3] == 'b')
+                                        {
+                                            seedName = "Short";
+                                        }
+                                        break;
+
+                                }
+                                seedName += " " + name;
+
+                                seed.itemName = seedName;
+                                collections.PlantGenotypeMasterList.Add(seed);
+                            }
                         }
                         //fruit
                         else if (plantType == "Fruit")
                         {
                             plantProps.plantType = (PlantType)3;
+
+                            //populate plant genotype master list
+                            for (int g = 0; g < 9; g++)
+                            {
+                                Seed seed = new Seed();
+                                string genoString = genotypeList[g];
+                                Genotype geno = new Genotype(genotypeList[g]);
+                                seed.seedGenotype = geno;
+                                seed.itemID = csvID;
+                                string seedName = "";
+
+                                //variety
+                                switch (genoString[2])
+                                {
+                                    case 'B':
+                                        switch (genoString[3])
+                                        {
+                                            case 'B':
+                                                switch (name)
+                                                {
+                                                    case "Apple":
+                                                        seedName = "Red Delicious";
+                                                        break;
+                                                    case "Pear":
+                                                        seedName = "Anjou";
+                                                        break;
+                                                    case "Watermelon":
+                                                        seedName = "Crimson Sweet";
+                                                        break;
+                                                    case "Cherry":
+                                                        seedName = "Bing";
+                                                        break;
+                                                    case "Plum":
+                                                        seedName = "Danson";
+                                                        break;
+                                                    case "Peach":
+                                                        seedName = "White";
+                                                        break;
+                                                    case "Blueberry":
+                                                        seedName = "Legacy";
+                                                        break;
+                                                }
+                                                break;
+                                            case 'b':
+                                                switch (name)
+                                                {
+                                                    case "Apple":
+                                                        seedName = "Fuji";
+                                                        break;
+                                                    case "Pear":
+                                                        seedName = "Asian";
+                                                        break;
+                                                    case "Watermelon":
+                                                        seedName = "Moon and Stars";
+                                                        break;
+                                                    case "Cherry":
+                                                        seedName = "Montmorency";
+                                                        break;
+                                                    case "Plum":
+                                                        seedName = "Victoria";
+                                                        break;
+                                                    case "Peach":
+                                                        seedName = "Nectarine";
+                                                        break;
+                                                    case "Blueberry":
+                                                        seedName = "Pink Popcorn";
+                                                        break;
+                                                }
+                                                break;
+                                        }
+                                        break;
+                                    case 'b':
+                                        if (genoString[3] == 'b')
+                                        {
+                                            switch (name)
+                                            {
+                                                case "Apple":
+                                                    seedName = "Granny Smith";
+                                                    break;
+                                                case "Pear":
+                                                    seedName = "Bartlett";
+                                                    break;
+                                                case "Watermelon":
+                                                    seedName = "Tender Gold";
+                                                    break;
+                                                case "Cherry":
+                                                    seedName = "Early Robin";
+                                                    break;
+                                                case "Plum":
+                                                    seedName = "Mirabelle";
+                                                    break;
+                                                case "Peach":
+                                                    seedName = "Donut";
+                                                    break;
+                                                case "Blueberry":
+                                                    seedName = "Sunshine";
+                                                    break;
+                                            }
+                                        }
+                                        break;
+                                }
+                                seedName += " " + name;
+                                seed.itemName = seedName;
+                                collections.PlantGenotypeMasterList.Add(seed);
+                            }
                         }
 
                         collections.PlantLookup.Add(csvID, plantProps);
                         collections.ItemLookup.Add(csvID, itemProps);
 
-                        //Seed Data
+                        //Seed Data -- might not need seed lookup
                         spritePath = "SEED_" + name.Replace(" ", "");
                         itemProps.spritePath = spritePath;
 
-                        collections.ItemLookup.Add((ushort)(csvID + SEED_ID_OFFSET), itemProps);
-                        SeedProperties seedProps = new SeedProperties();
-                        seedProps.name = name;
-                        seedProps.description = seedDescription;
-                        seedProps.spritePath = spritePath;
-                        seedProps.baseCost = seedBaseCost;
-                        seedProps.plantType = plantProps.plantType;
+                        //collections.ItemLookup.Add((ushort)(csvID + SEED_ID_OFFSET), itemProps);
 
-                        collections.SeedLookup.Add((ushort)(csvID + SEED_ID_OFFSET), seedProps);
+                        //SeedProperties seedProps = new SeedProperties();
+                        //seedProps.name = name;
+                        //seedProps.description = seedDescription;
+                        //seedProps.spritePath = spritePath;
+                        //seedProps.baseCost = baseCost;
+                        //seedProps.plantType = plantProps.plantType;
+
+                        //collections.SeedLookup.Add((ushort)(csvID + SEED_ID_OFFSET), seedProps);
 
                         break;
 
@@ -147,7 +400,7 @@ namespace GrandmaGreen.Collections
                         spritePath = "CHA_" + name.Replace(" ", "_");
                         characterProps.spritePaths.Add(spritePath);
                         itemProps.spritePath = spritePath;
-                        collections.CharacterLookup.Add(csvID, characterProps);
+                        //collections.CharacterLookup.Add(csvID, characterProps);
                         collections.ItemLookup.Add(csvID, itemProps);
                         break;
 

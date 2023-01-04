@@ -34,7 +34,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 12
-      Data: 157
+      Data: 136
     - Name: 
       Entry: 7
       Data: 
@@ -256,40 +256,7 @@ MonoBehaviour:
       Data: Plant
     - Name: baseCost
       Entry: 3
-      Data: 100
-    - Name: tag
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 2001
-    - Name: $v
-      Entry: 7
-      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
-    - Name: name
-      Entry: 1
-      Data: Rose
-    - Name: description
-      Entry: 1
-      Data: 
-    - Name: spritePath
-      Entry: 1
-      Data: SEED_Rose
-    - Name: itemType
-      Entry: 1
-      Data: Plant
-    - Name: baseCost
-      Entry: 3
-      Data: 100
+      Data: 6
     - Name: tag
       Entry: 6
       Data: 
@@ -322,40 +289,7 @@ MonoBehaviour:
       Data: Plant
     - Name: baseCost
       Entry: 3
-      Data: 100
-    - Name: tag
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 2002
-    - Name: $v
-      Entry: 7
-      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
-    - Name: name
-      Entry: 1
-      Data: Tulip
-    - Name: description
-      Entry: 1
-      Data: 
-    - Name: spritePath
-      Entry: 1
-      Data: SEED_Tulip
-    - Name: itemType
-      Entry: 1
-      Data: Plant
-    - Name: baseCost
-      Entry: 3
-      Data: 100
+      Data: 1
     - Name: tag
       Entry: 6
       Data: 
@@ -388,40 +322,7 @@ MonoBehaviour:
       Data: Plant
     - Name: baseCost
       Entry: 3
-      Data: 100
-    - Name: tag
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 2003
-    - Name: $v
-      Entry: 7
-      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
-    - Name: name
-      Entry: 1
-      Data: Calla Lily
-    - Name: description
-      Entry: 1
-      Data: 
-    - Name: spritePath
-      Entry: 1
-      Data: SEED_CallaLily
-    - Name: itemType
-      Entry: 1
-      Data: Plant
-    - Name: baseCost
-      Entry: 3
-      Data: 100
+      Data: 8
     - Name: tag
       Entry: 6
       Data: 
@@ -454,40 +355,7 @@ MonoBehaviour:
       Data: Plant
     - Name: baseCost
       Entry: 3
-      Data: 100
-    - Name: tag
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 2004
-    - Name: $v
-      Entry: 7
-      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
-    - Name: name
-      Entry: 1
-      Data: Dahlia
-    - Name: description
-      Entry: 1
-      Data: 
-    - Name: spritePath
-      Entry: 1
-      Data: SEED_Dahlia
-    - Name: itemType
-      Entry: 1
-      Data: Plant
-    - Name: baseCost
-      Entry: 3
-      Data: 100
+      Data: 10
     - Name: tag
       Entry: 6
       Data: 
@@ -520,40 +388,7 @@ MonoBehaviour:
       Data: Plant
     - Name: baseCost
       Entry: 3
-      Data: 100
-    - Name: tag
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 2005
-    - Name: $v
-      Entry: 7
-      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
-    - Name: name
-      Entry: 1
-      Data: Hyacinth
-    - Name: description
-      Entry: 1
-      Data: 
-    - Name: spritePath
-      Entry: 1
-      Data: SEED_Hyacinth
-    - Name: itemType
-      Entry: 1
-      Data: Plant
-    - Name: baseCost
-      Entry: 3
-      Data: 100
+      Data: 2
     - Name: tag
       Entry: 6
       Data: 
@@ -586,40 +421,7 @@ MonoBehaviour:
       Data: Plant
     - Name: baseCost
       Entry: 3
-      Data: 100
-    - Name: tag
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 2006
-    - Name: $v
-      Entry: 7
-      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
-    - Name: name
-      Entry: 1
-      Data: Pansy
-    - Name: description
-      Entry: 1
-      Data: 
-    - Name: spritePath
-      Entry: 1
-      Data: SEED_Pansy
-    - Name: itemType
-      Entry: 1
-      Data: Plant
-    - Name: baseCost
-      Entry: 3
-      Data: 100
+      Data: 7
     - Name: tag
       Entry: 6
       Data: 
@@ -652,40 +454,7 @@ MonoBehaviour:
       Data: Plant
     - Name: baseCost
       Entry: 3
-      Data: 100
-    - Name: tag
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 2007
-    - Name: $v
-      Entry: 7
-      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
-    - Name: name
-      Entry: 1
-      Data: Crocus
-    - Name: description
-      Entry: 1
-      Data: 
-    - Name: spritePath
-      Entry: 1
-      Data: SEED_Crocus
-    - Name: itemType
-      Entry: 1
-      Data: Plant
-    - Name: baseCost
-      Entry: 3
-      Data: 100
+      Data: 5
     - Name: tag
       Entry: 6
       Data: 
@@ -718,40 +487,7 @@ MonoBehaviour:
       Data: Plant
     - Name: baseCost
       Entry: 3
-      Data: 100
-    - Name: tag
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 2008
-    - Name: $v
-      Entry: 7
-      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
-    - Name: name
-      Entry: 1
-      Data: Cucumber
-    - Name: description
-      Entry: 1
-      Data: 
-    - Name: spritePath
-      Entry: 1
-      Data: SEED_Cucumber
-    - Name: itemType
-      Entry: 1
-      Data: Plant
-    - Name: baseCost
-      Entry: 3
-      Data: 100
+      Data: 1
     - Name: tag
       Entry: 6
       Data: 
@@ -784,40 +520,7 @@ MonoBehaviour:
       Data: Plant
     - Name: baseCost
       Entry: 3
-      Data: 100
-    - Name: tag
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 2009
-    - Name: $v
-      Entry: 7
-      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
-    - Name: name
-      Entry: 1
-      Data: Tomato
-    - Name: description
-      Entry: 1
-      Data: 
-    - Name: spritePath
-      Entry: 1
-      Data: SEED_Tomato
-    - Name: itemType
-      Entry: 1
-      Data: Plant
-    - Name: baseCost
-      Entry: 3
-      Data: 100
+      Data: 2
     - Name: tag
       Entry: 6
       Data: 
@@ -850,40 +553,7 @@ MonoBehaviour:
       Data: Plant
     - Name: baseCost
       Entry: 3
-      Data: 100
-    - Name: tag
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 2010
-    - Name: $v
-      Entry: 7
-      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
-    - Name: name
-      Entry: 1
-      Data: Pepper
-    - Name: description
-      Entry: 1
-      Data: 
-    - Name: spritePath
-      Entry: 1
-      Data: SEED_Pepper
-    - Name: itemType
-      Entry: 1
-      Data: Plant
-    - Name: baseCost
-      Entry: 3
-      Data: 100
+      Data: 12
     - Name: tag
       Entry: 6
       Data: 
@@ -916,40 +586,7 @@ MonoBehaviour:
       Data: Plant
     - Name: baseCost
       Entry: 3
-      Data: 100
-    - Name: tag
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 2011
-    - Name: $v
-      Entry: 7
-      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
-    - Name: name
-      Entry: 1
-      Data: Sweet Potato
-    - Name: description
-      Entry: 1
-      Data: 
-    - Name: spritePath
-      Entry: 1
-      Data: SEED_SweetPotato
-    - Name: itemType
-      Entry: 1
-      Data: Plant
-    - Name: baseCost
-      Entry: 3
-      Data: 100
+      Data: 6
     - Name: tag
       Entry: 6
       Data: 
@@ -982,40 +619,7 @@ MonoBehaviour:
       Data: Plant
     - Name: baseCost
       Entry: 3
-      Data: 100
-    - Name: tag
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 2012
-    - Name: $v
-      Entry: 7
-      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
-    - Name: name
-      Entry: 1
-      Data: Corn
-    - Name: description
-      Entry: 1
-      Data: 
-    - Name: spritePath
-      Entry: 1
-      Data: SEED_Corn
-    - Name: itemType
-      Entry: 1
-      Data: Plant
-    - Name: baseCost
-      Entry: 3
-      Data: 100
+      Data: 7
     - Name: tag
       Entry: 6
       Data: 
@@ -1048,40 +652,7 @@ MonoBehaviour:
       Data: Plant
     - Name: baseCost
       Entry: 3
-      Data: 100
-    - Name: tag
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 2013
-    - Name: $v
-      Entry: 7
-      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
-    - Name: name
-      Entry: 1
-      Data: Radish
-    - Name: description
-      Entry: 1
-      Data: 
-    - Name: spritePath
-      Entry: 1
-      Data: SEED_Radish
-    - Name: itemType
-      Entry: 1
-      Data: Plant
-    - Name: baseCost
-      Entry: 3
-      Data: 100
+      Data: 8
     - Name: tag
       Entry: 6
       Data: 
@@ -1114,40 +685,7 @@ MonoBehaviour:
       Data: Plant
     - Name: baseCost
       Entry: 3
-      Data: 100
-    - Name: tag
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 2014
-    - Name: $v
-      Entry: 7
-      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
-    - Name: name
-      Entry: 1
-      Data: Pumpkin
-    - Name: description
-      Entry: 1
-      Data: 
-    - Name: spritePath
-      Entry: 1
-      Data: SEED_Pumpkin
-    - Name: itemType
-      Entry: 1
-      Data: Plant
-    - Name: baseCost
-      Entry: 3
-      Data: 100
+      Data: 10
     - Name: tag
       Entry: 6
       Data: 
@@ -1180,40 +718,7 @@ MonoBehaviour:
       Data: Plant
     - Name: baseCost
       Entry: 3
-      Data: 100
-    - Name: tag
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 2015
-    - Name: $v
-      Entry: 7
-      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
-    - Name: name
-      Entry: 1
-      Data: Apple
-    - Name: description
-      Entry: 1
-      Data: 
-    - Name: spritePath
-      Entry: 1
-      Data: SEED_Apple
-    - Name: itemType
-      Entry: 1
-      Data: Plant
-    - Name: baseCost
-      Entry: 3
-      Data: 100
+      Data: 5
     - Name: tag
       Entry: 6
       Data: 
@@ -1246,40 +751,7 @@ MonoBehaviour:
       Data: Plant
     - Name: baseCost
       Entry: 3
-      Data: 100
-    - Name: tag
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 2016
-    - Name: $v
-      Entry: 7
-      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
-    - Name: name
-      Entry: 1
-      Data: Pear
-    - Name: description
-      Entry: 1
-      Data: 
-    - Name: spritePath
-      Entry: 1
-      Data: SEED_Pear
-    - Name: itemType
-      Entry: 1
-      Data: Plant
-    - Name: baseCost
-      Entry: 3
-      Data: 100
+      Data: 6
     - Name: tag
       Entry: 6
       Data: 
@@ -1312,40 +784,7 @@ MonoBehaviour:
       Data: Plant
     - Name: baseCost
       Entry: 3
-      Data: 100
-    - Name: tag
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 2017
-    - Name: $v
-      Entry: 7
-      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
-    - Name: name
-      Entry: 1
-      Data: Watermelon
-    - Name: description
-      Entry: 1
-      Data: 
-    - Name: spritePath
-      Entry: 1
-      Data: SEED_Watermelon
-    - Name: itemType
-      Entry: 1
-      Data: Plant
-    - Name: baseCost
-      Entry: 3
-      Data: 100
+      Data: 10
     - Name: tag
       Entry: 6
       Data: 
@@ -1378,40 +817,7 @@ MonoBehaviour:
       Data: Plant
     - Name: baseCost
       Entry: 3
-      Data: 100
-    - Name: tag
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 2018
-    - Name: $v
-      Entry: 7
-      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
-    - Name: name
-      Entry: 1
-      Data: Cherry
-    - Name: description
-      Entry: 1
-      Data: 
-    - Name: spritePath
-      Entry: 1
-      Data: SEED_Cherry
-    - Name: itemType
-      Entry: 1
-      Data: Plant
-    - Name: baseCost
-      Entry: 3
-      Data: 100
+      Data: 2
     - Name: tag
       Entry: 6
       Data: 
@@ -1444,40 +850,7 @@ MonoBehaviour:
       Data: Plant
     - Name: baseCost
       Entry: 3
-      Data: 100
-    - Name: tag
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 2019
-    - Name: $v
-      Entry: 7
-      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
-    - Name: name
-      Entry: 1
-      Data: Plum
-    - Name: description
-      Entry: 1
-      Data: 
-    - Name: spritePath
-      Entry: 1
-      Data: SEED_Plum
-    - Name: itemType
-      Entry: 1
-      Data: Plant
-    - Name: baseCost
-      Entry: 3
-      Data: 100
+      Data: 7
     - Name: tag
       Entry: 6
       Data: 
@@ -1510,40 +883,7 @@ MonoBehaviour:
       Data: Plant
     - Name: baseCost
       Entry: 3
-      Data: 100
-    - Name: tag
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 2020
-    - Name: $v
-      Entry: 7
-      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
-    - Name: name
-      Entry: 1
-      Data: Peach
-    - Name: description
-      Entry: 1
-      Data: 
-    - Name: spritePath
-      Entry: 1
-      Data: SEED_Peach
-    - Name: itemType
-      Entry: 1
-      Data: Plant
-    - Name: baseCost
-      Entry: 3
-      Data: 100
+      Data: 8
     - Name: tag
       Entry: 6
       Data: 
@@ -1576,40 +916,7 @@ MonoBehaviour:
       Data: Plant
     - Name: baseCost
       Entry: 3
-      Data: 100
-    - Name: tag
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 2021
-    - Name: $v
-      Entry: 7
-      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
-    - Name: name
-      Entry: 1
-      Data: Blueberry
-    - Name: description
-      Entry: 1
-      Data: 
-    - Name: spritePath
-      Entry: 1
-      Data: SEED_Blueberry
-    - Name: itemType
-      Entry: 1
-      Data: Plant
-    - Name: baseCost
-      Entry: 3
-      Data: 100
+      Data: 1
     - Name: tag
       Entry: 6
       Data: 
@@ -5252,13 +4559,16 @@ MonoBehaviour:
       Data: PLA_Rose
     - Name: growthStages
       Entry: 3
-      Data: 0
+      Data: 3
     - Name: growthTime
       Entry: 3
-      Data: 0
+      Data: 10
     - Name: waterPerStage
       Entry: 3
-      Data: 0
+      Data: 1
+    - Name: baseGoldPerTimeUnit
+      Entry: 4
+      Data: 1.2
     - Name: plantType
       Entry: 3
       Data: 1
@@ -5288,13 +4598,16 @@ MonoBehaviour:
       Data: PLA_Tulip
     - Name: growthStages
       Entry: 3
-      Data: 0
+      Data: 3
     - Name: growthTime
       Entry: 3
-      Data: 0
+      Data: 10
     - Name: waterPerStage
       Entry: 3
-      Data: 0
+      Data: 2
+    - Name: baseGoldPerTimeUnit
+      Entry: 4
+      Data: 0.5
     - Name: plantType
       Entry: 3
       Data: 1
@@ -5324,13 +4637,16 @@ MonoBehaviour:
       Data: PLA_CallaLily
     - Name: growthStages
       Entry: 3
-      Data: 0
+      Data: 3
     - Name: growthTime
       Entry: 3
-      Data: 0
+      Data: 10
     - Name: waterPerStage
       Entry: 3
-      Data: 0
+      Data: 1
+    - Name: baseGoldPerTimeUnit
+      Entry: 4
+      Data: 1.6
     - Name: plantType
       Entry: 3
       Data: 1
@@ -5360,13 +4676,16 @@ MonoBehaviour:
       Data: PLA_Dahlia
     - Name: growthStages
       Entry: 3
-      Data: 0
+      Data: 3
     - Name: growthTime
       Entry: 3
-      Data: 0
+      Data: 10
     - Name: waterPerStage
       Entry: 3
-      Data: 0
+      Data: 1
+    - Name: baseGoldPerTimeUnit
+      Entry: 4
+      Data: 2
     - Name: plantType
       Entry: 3
       Data: 1
@@ -5396,13 +4715,16 @@ MonoBehaviour:
       Data: PLA_Hyacinth
     - Name: growthStages
       Entry: 3
-      Data: 0
+      Data: 3
     - Name: growthTime
       Entry: 3
-      Data: 0
+      Data: 10
     - Name: waterPerStage
       Entry: 3
-      Data: 0
+      Data: 1
+    - Name: baseGoldPerTimeUnit
+      Entry: 4
+      Data: 0.8
     - Name: plantType
       Entry: 3
       Data: 1
@@ -5432,13 +4754,16 @@ MonoBehaviour:
       Data: PLA_Pansy
     - Name: growthStages
       Entry: 3
-      Data: 0
+      Data: 3
     - Name: growthTime
       Entry: 3
-      Data: 0
+      Data: 10
     - Name: waterPerStage
       Entry: 3
-      Data: 0
+      Data: 1
+    - Name: baseGoldPerTimeUnit
+      Entry: 4
+      Data: 1.8
     - Name: plantType
       Entry: 3
       Data: 1
@@ -5468,13 +4793,16 @@ MonoBehaviour:
       Data: PLA_Crocus
     - Name: growthStages
       Entry: 3
-      Data: 0
+      Data: 3
     - Name: growthTime
       Entry: 3
-      Data: 0
+      Data: 10
     - Name: waterPerStage
       Entry: 3
-      Data: 0
+      Data: 1
+    - Name: baseGoldPerTimeUnit
+      Entry: 4
+      Data: 1.6
     - Name: plantType
       Entry: 3
       Data: 1
@@ -5504,13 +4832,16 @@ MonoBehaviour:
       Data: PLA_Cucumber
     - Name: growthStages
       Entry: 3
-      Data: 0
+      Data: 3
     - Name: growthTime
       Entry: 3
-      Data: 0
+      Data: 8
     - Name: waterPerStage
       Entry: 3
-      Data: 0
+      Data: 200
+    - Name: baseGoldPerTimeUnit
+      Entry: 4
+      Data: 0.8
     - Name: plantType
       Entry: 3
       Data: 2
@@ -5540,13 +4871,16 @@ MonoBehaviour:
       Data: PLA_Tomato
     - Name: growthStages
       Entry: 3
-      Data: 0
+      Data: 3
     - Name: growthTime
       Entry: 3
-      Data: 0
+      Data: 8
     - Name: waterPerStage
       Entry: 3
-      Data: 0
+      Data: 200
+    - Name: baseGoldPerTimeUnit
+      Entry: 4
+      Data: 0.8
     - Name: plantType
       Entry: 3
       Data: 2
@@ -5576,13 +4910,16 @@ MonoBehaviour:
       Data: PLA_Pepper
     - Name: growthStages
       Entry: 3
-      Data: 0
+      Data: 3
     - Name: growthTime
       Entry: 3
-      Data: 0
+      Data: 8
     - Name: waterPerStage
       Entry: 3
-      Data: 0
+      Data: 200
+    - Name: baseGoldPerTimeUnit
+      Entry: 4
+      Data: 2
     - Name: plantType
       Entry: 3
       Data: 2
@@ -5612,13 +4949,16 @@ MonoBehaviour:
       Data: PLA_SweetPotato
     - Name: growthStages
       Entry: 3
-      Data: 0
+      Data: 3
     - Name: growthTime
       Entry: 3
-      Data: 0
+      Data: 12
     - Name: waterPerStage
       Entry: 3
-      Data: 0
+      Data: 200
+    - Name: baseGoldPerTimeUnit
+      Entry: 4
+      Data: 1.6
     - Name: plantType
       Entry: 3
       Data: 2
@@ -5648,13 +4988,16 @@ MonoBehaviour:
       Data: PLA_Corn
     - Name: growthStages
       Entry: 3
-      Data: 0
+      Data: 3
     - Name: growthTime
       Entry: 3
-      Data: 0
+      Data: 6
     - Name: waterPerStage
       Entry: 3
-      Data: 0
+      Data: 200
+    - Name: baseGoldPerTimeUnit
+      Entry: 4
+      Data: 1.8
     - Name: plantType
       Entry: 3
       Data: 2
@@ -5684,13 +5027,16 @@ MonoBehaviour:
       Data: PLA_Radish
     - Name: growthStages
       Entry: 3
-      Data: 0
+      Data: 3
     - Name: growthTime
       Entry: 3
-      Data: 0
+      Data: 6
     - Name: waterPerStage
       Entry: 3
-      Data: 0
+      Data: 200
+    - Name: baseGoldPerTimeUnit
+      Entry: 4
+      Data: 2.5
     - Name: plantType
       Entry: 3
       Data: 2
@@ -5720,13 +5066,16 @@ MonoBehaviour:
       Data: PLA_Pumpkin
     - Name: growthStages
       Entry: 3
-      Data: 0
+      Data: 3
     - Name: growthTime
       Entry: 3
-      Data: 0
+      Data: 12
     - Name: waterPerStage
       Entry: 3
-      Data: 0
+      Data: 200
+    - Name: baseGoldPerTimeUnit
+      Entry: 4
+      Data: 1.6
     - Name: plantType
       Entry: 3
       Data: 2
@@ -5756,13 +5105,16 @@ MonoBehaviour:
       Data: PLA_Apple
     - Name: growthStages
       Entry: 3
-      Data: 0
+      Data: 3
     - Name: growthTime
       Entry: 3
-      Data: 0
+      Data: 18
     - Name: waterPerStage
       Entry: 3
-      Data: 0
+      Data: 200
+    - Name: baseGoldPerTimeUnit
+      Entry: 4
+      Data: 1.2
     - Name: plantType
       Entry: 3
       Data: 3
@@ -5792,13 +5144,16 @@ MonoBehaviour:
       Data: PLA_Pear
     - Name: growthStages
       Entry: 3
-      Data: 0
+      Data: 3
     - Name: growthTime
       Entry: 3
-      Data: 0
+      Data: 18
     - Name: waterPerStage
       Entry: 3
-      Data: 0
+      Data: 200
+    - Name: baseGoldPerTimeUnit
+      Entry: 4
+      Data: 1.6
     - Name: plantType
       Entry: 3
       Data: 3
@@ -5828,13 +5183,16 @@ MonoBehaviour:
       Data: PLA_Watermelon
     - Name: growthStages
       Entry: 3
-      Data: 0
+      Data: 3
     - Name: growthTime
       Entry: 3
-      Data: 0
+      Data: 24
     - Name: waterPerStage
       Entry: 3
-      Data: 0
+      Data: 200
+    - Name: baseGoldPerTimeUnit
+      Entry: 4
+      Data: 2.5
     - Name: plantType
       Entry: 3
       Data: 3
@@ -5864,13 +5222,16 @@ MonoBehaviour:
       Data: PLA_Cherry
     - Name: growthStages
       Entry: 3
-      Data: 0
+      Data: 3
     - Name: growthTime
       Entry: 3
-      Data: 0
+      Data: 15
     - Name: waterPerStage
       Entry: 3
-      Data: 0
+      Data: 200
+    - Name: baseGoldPerTimeUnit
+      Entry: 4
+      Data: 0.8
     - Name: plantType
       Entry: 3
       Data: 3
@@ -5900,13 +5261,16 @@ MonoBehaviour:
       Data: PLA_Plum
     - Name: growthStages
       Entry: 3
-      Data: 0
+      Data: 3
     - Name: growthTime
       Entry: 3
-      Data: 0
+      Data: 20
     - Name: waterPerStage
       Entry: 3
-      Data: 0
+      Data: 200
+    - Name: baseGoldPerTimeUnit
+      Entry: 4
+      Data: 1.8
     - Name: plantType
       Entry: 3
       Data: 3
@@ -5936,13 +5300,16 @@ MonoBehaviour:
       Data: PLA_Peach
     - Name: growthStages
       Entry: 3
-      Data: 0
+      Data: 3
     - Name: growthTime
       Entry: 3
-      Data: 0
+      Data: 22
     - Name: waterPerStage
       Entry: 3
-      Data: 0
+      Data: 200
+    - Name: baseGoldPerTimeUnit
+      Entry: 4
+      Data: 2
     - Name: plantType
       Entry: 3
       Data: 3
@@ -5972,999 +5339,16 @@ MonoBehaviour:
       Data: PLA_Blueberry
     - Name: growthStages
       Entry: 3
-      Data: 0
+      Data: 3
     - Name: growthTime
       Entry: 3
-      Data: 0
+      Data: 15
     - Name: waterPerStage
       Entry: 3
-      Data: 0
-    - Name: plantType
-      Entry: 3
-      Data: 3
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: CharacterLookup
-      Entry: 7
-      Data: 3|System.Collections.Generic.Dictionary`2[[System.UInt16, mscorlib],[GrandmaGreen.Collections.CharacterProperties,
-        GrandmaGreen]], mscorlib
-    - Name: comparer
-      Entry: 9
-      Data: 1
-    - Name: 
-      Entry: 12
-      Data: 9
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 5001
-    - Name: $v
-      Entry: 7
-      Data: GrandmaGreen.Collections.CharacterProperties, GrandmaGreen
-    - Name: name
-      Entry: 1
-      Data: Grandma
-    - Name: description
-      Entry: 1
-      Data: 
-    - Name: spritePaths
-      Entry: 7
-      Data: 4|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 1
-      Data: CHA_Grandma
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 5002
-    - Name: $v
-      Entry: 7
-      Data: GrandmaGreen.Collections.CharacterProperties, GrandmaGreen
-    - Name: name
-      Entry: 1
-      Data: Gardening Shopkeeper
-    - Name: description
-      Entry: 1
-      Data: 
-    - Name: spritePaths
-      Entry: 7
-      Data: 5|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 1
-      Data: CHA_Gardening_Shopkeeper
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 5003
-    - Name: $v
-      Entry: 7
-      Data: GrandmaGreen.Collections.CharacterProperties, GrandmaGreen
-    - Name: name
-      Entry: 1
-      Data: Decor Shopkeeper
-    - Name: description
-      Entry: 1
-      Data: 
-    - Name: spritePaths
-      Entry: 7
-      Data: 6|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 1
-      Data: CHA_Decor_Shopkeeper
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 5004
-    - Name: $v
-      Entry: 7
-      Data: GrandmaGreen.Collections.CharacterProperties, GrandmaGreen
-    - Name: name
-      Entry: 1
-      Data: Tulip Golem
-    - Name: description
-      Entry: 1
-      Data: 
-    - Name: spritePaths
-      Entry: 7
-      Data: 7|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 1
-      Data: CHA_Tulip_Golem
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 5005
-    - Name: $v
-      Entry: 7
-      Data: GrandmaGreen.Collections.CharacterProperties, GrandmaGreen
-    - Name: name
-      Entry: 1
-      Data: Apple Golem
-    - Name: description
-      Entry: 1
-      Data: 
-    - Name: spritePaths
-      Entry: 7
-      Data: 8|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 1
-      Data: CHA_Apple_Golem
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 5006
-    - Name: $v
-      Entry: 7
-      Data: GrandmaGreen.Collections.CharacterProperties, GrandmaGreen
-    - Name: name
-      Entry: 1
-      Data: Cotton Golem
-    - Name: description
-      Entry: 1
-      Data: 
-    - Name: spritePaths
-      Entry: 7
-      Data: 9|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 1
-      Data: CHA_Cotton_Golem
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 5007
-    - Name: $v
-      Entry: 7
-      Data: GrandmaGreen.Collections.CharacterProperties, GrandmaGreen
-    - Name: name
-      Entry: 1
-      Data: Crocus Golem
-    - Name: description
-      Entry: 1
-      Data: 
-    - Name: spritePaths
-      Entry: 7
-      Data: 10|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 1
-      Data: CHA_Crocus_Golem
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 5008
-    - Name: $v
-      Entry: 7
-      Data: GrandmaGreen.Collections.CharacterProperties, GrandmaGreen
-    - Name: name
-      Entry: 1
-      Data: Pumpkin Golem
-    - Name: description
-      Entry: 1
-      Data: 
-    - Name: spritePaths
-      Entry: 7
-      Data: 11|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 1
-      Data: CHA_Pumpkin_Golem
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 5009
-    - Name: $v
-      Entry: 7
-      Data: GrandmaGreen.Collections.CharacterProperties, GrandmaGreen
-    - Name: name
-      Entry: 1
-      Data: Radish Golem
-    - Name: description
-      Entry: 1
-      Data: 
-    - Name: spritePaths
-      Entry: 7
-      Data: 12|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 1
-      Data: CHA_Radish_Golem
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: SeedLookup
-      Entry: 7
-      Data: 13|System.Collections.Generic.Dictionary`2[[System.UInt16, mscorlib],[GrandmaGreen.Collections.SeedProperties,
-        GrandmaGreen]], mscorlib
-    - Name: comparer
-      Entry: 9
-      Data: 1
-    - Name: 
-      Entry: 12
-      Data: 21
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 2001
-    - Name: $v
-      Entry: 7
-      Data: GrandmaGreen.Collections.SeedProperties, GrandmaGreen
-    - Name: name
-      Entry: 1
-      Data: Rose
-    - Name: description
-      Entry: 1
-      Data: 
-    - Name: spritePath
-      Entry: 1
-      Data: SEED_Rose
-    - Name: baseCost
-      Entry: 3
-      Data: 100
-    - Name: plantType
-      Entry: 3
-      Data: 1
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 2002
-    - Name: $v
-      Entry: 7
-      Data: GrandmaGreen.Collections.SeedProperties, GrandmaGreen
-    - Name: name
-      Entry: 1
-      Data: Tulip
-    - Name: description
-      Entry: 1
-      Data: 
-    - Name: spritePath
-      Entry: 1
-      Data: SEED_Tulip
-    - Name: baseCost
-      Entry: 3
-      Data: 100
-    - Name: plantType
-      Entry: 3
-      Data: 1
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 2003
-    - Name: $v
-      Entry: 7
-      Data: GrandmaGreen.Collections.SeedProperties, GrandmaGreen
-    - Name: name
-      Entry: 1
-      Data: Calla Lily
-    - Name: description
-      Entry: 1
-      Data: 
-    - Name: spritePath
-      Entry: 1
-      Data: SEED_CallaLily
-    - Name: baseCost
-      Entry: 3
-      Data: 100
-    - Name: plantType
-      Entry: 3
-      Data: 1
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 2004
-    - Name: $v
-      Entry: 7
-      Data: GrandmaGreen.Collections.SeedProperties, GrandmaGreen
-    - Name: name
-      Entry: 1
-      Data: Dahlia
-    - Name: description
-      Entry: 1
-      Data: 
-    - Name: spritePath
-      Entry: 1
-      Data: SEED_Dahlia
-    - Name: baseCost
-      Entry: 3
-      Data: 100
-    - Name: plantType
-      Entry: 3
-      Data: 1
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 2005
-    - Name: $v
-      Entry: 7
-      Data: GrandmaGreen.Collections.SeedProperties, GrandmaGreen
-    - Name: name
-      Entry: 1
-      Data: Hyacinth
-    - Name: description
-      Entry: 1
-      Data: 
-    - Name: spritePath
-      Entry: 1
-      Data: SEED_Hyacinth
-    - Name: baseCost
-      Entry: 3
-      Data: 100
-    - Name: plantType
-      Entry: 3
-      Data: 1
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 2006
-    - Name: $v
-      Entry: 7
-      Data: GrandmaGreen.Collections.SeedProperties, GrandmaGreen
-    - Name: name
-      Entry: 1
-      Data: Pansy
-    - Name: description
-      Entry: 1
-      Data: 
-    - Name: spritePath
-      Entry: 1
-      Data: SEED_Pansy
-    - Name: baseCost
-      Entry: 3
-      Data: 100
-    - Name: plantType
-      Entry: 3
-      Data: 1
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 2007
-    - Name: $v
-      Entry: 7
-      Data: GrandmaGreen.Collections.SeedProperties, GrandmaGreen
-    - Name: name
-      Entry: 1
-      Data: Crocus
-    - Name: description
-      Entry: 1
-      Data: 
-    - Name: spritePath
-      Entry: 1
-      Data: SEED_Crocus
-    - Name: baseCost
-      Entry: 3
-      Data: 100
-    - Name: plantType
-      Entry: 3
-      Data: 1
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 2008
-    - Name: $v
-      Entry: 7
-      Data: GrandmaGreen.Collections.SeedProperties, GrandmaGreen
-    - Name: name
-      Entry: 1
-      Data: Cucumber
-    - Name: description
-      Entry: 1
-      Data: 
-    - Name: spritePath
-      Entry: 1
-      Data: SEED_Cucumber
-    - Name: baseCost
-      Entry: 3
-      Data: 100
-    - Name: plantType
-      Entry: 3
-      Data: 2
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 2009
-    - Name: $v
-      Entry: 7
-      Data: GrandmaGreen.Collections.SeedProperties, GrandmaGreen
-    - Name: name
-      Entry: 1
-      Data: Tomato
-    - Name: description
-      Entry: 1
-      Data: 
-    - Name: spritePath
-      Entry: 1
-      Data: SEED_Tomato
-    - Name: baseCost
-      Entry: 3
-      Data: 100
-    - Name: plantType
-      Entry: 3
-      Data: 2
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 2010
-    - Name: $v
-      Entry: 7
-      Data: GrandmaGreen.Collections.SeedProperties, GrandmaGreen
-    - Name: name
-      Entry: 1
-      Data: Pepper
-    - Name: description
-      Entry: 1
-      Data: 
-    - Name: spritePath
-      Entry: 1
-      Data: SEED_Pepper
-    - Name: baseCost
-      Entry: 3
-      Data: 100
-    - Name: plantType
-      Entry: 3
-      Data: 2
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 2011
-    - Name: $v
-      Entry: 7
-      Data: GrandmaGreen.Collections.SeedProperties, GrandmaGreen
-    - Name: name
-      Entry: 1
-      Data: Sweet Potato
-    - Name: description
-      Entry: 1
-      Data: 
-    - Name: spritePath
-      Entry: 1
-      Data: SEED_SweetPotato
-    - Name: baseCost
-      Entry: 3
-      Data: 100
-    - Name: plantType
-      Entry: 3
-      Data: 2
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 2012
-    - Name: $v
-      Entry: 7
-      Data: GrandmaGreen.Collections.SeedProperties, GrandmaGreen
-    - Name: name
-      Entry: 1
-      Data: Corn
-    - Name: description
-      Entry: 1
-      Data: 
-    - Name: spritePath
-      Entry: 1
-      Data: SEED_Corn
-    - Name: baseCost
-      Entry: 3
-      Data: 100
-    - Name: plantType
-      Entry: 3
-      Data: 2
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 2013
-    - Name: $v
-      Entry: 7
-      Data: GrandmaGreen.Collections.SeedProperties, GrandmaGreen
-    - Name: name
-      Entry: 1
-      Data: Radish
-    - Name: description
-      Entry: 1
-      Data: 
-    - Name: spritePath
-      Entry: 1
-      Data: SEED_Radish
-    - Name: baseCost
-      Entry: 3
-      Data: 100
-    - Name: plantType
-      Entry: 3
-      Data: 2
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 2014
-    - Name: $v
-      Entry: 7
-      Data: GrandmaGreen.Collections.SeedProperties, GrandmaGreen
-    - Name: name
-      Entry: 1
-      Data: Pumpkin
-    - Name: description
-      Entry: 1
-      Data: 
-    - Name: spritePath
-      Entry: 1
-      Data: SEED_Pumpkin
-    - Name: baseCost
-      Entry: 3
-      Data: 100
-    - Name: plantType
-      Entry: 3
-      Data: 2
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 2015
-    - Name: $v
-      Entry: 7
-      Data: GrandmaGreen.Collections.SeedProperties, GrandmaGreen
-    - Name: name
-      Entry: 1
-      Data: Apple
-    - Name: description
-      Entry: 1
-      Data: 
-    - Name: spritePath
-      Entry: 1
-      Data: SEED_Apple
-    - Name: baseCost
-      Entry: 3
-      Data: 100
-    - Name: plantType
-      Entry: 3
-      Data: 3
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 2016
-    - Name: $v
-      Entry: 7
-      Data: GrandmaGreen.Collections.SeedProperties, GrandmaGreen
-    - Name: name
-      Entry: 1
-      Data: Pear
-    - Name: description
-      Entry: 1
-      Data: 
-    - Name: spritePath
-      Entry: 1
-      Data: SEED_Pear
-    - Name: baseCost
-      Entry: 3
-      Data: 100
-    - Name: plantType
-      Entry: 3
-      Data: 3
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 2017
-    - Name: $v
-      Entry: 7
-      Data: GrandmaGreen.Collections.SeedProperties, GrandmaGreen
-    - Name: name
-      Entry: 1
-      Data: Watermelon
-    - Name: description
-      Entry: 1
-      Data: 
-    - Name: spritePath
-      Entry: 1
-      Data: SEED_Watermelon
-    - Name: baseCost
-      Entry: 3
-      Data: 100
-    - Name: plantType
-      Entry: 3
-      Data: 3
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 2018
-    - Name: $v
-      Entry: 7
-      Data: GrandmaGreen.Collections.SeedProperties, GrandmaGreen
-    - Name: name
-      Entry: 1
-      Data: Cherry
-    - Name: description
-      Entry: 1
-      Data: 
-    - Name: spritePath
-      Entry: 1
-      Data: SEED_Cherry
-    - Name: baseCost
-      Entry: 3
-      Data: 100
-    - Name: plantType
-      Entry: 3
-      Data: 3
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 2019
-    - Name: $v
-      Entry: 7
-      Data: GrandmaGreen.Collections.SeedProperties, GrandmaGreen
-    - Name: name
-      Entry: 1
-      Data: Plum
-    - Name: description
-      Entry: 1
-      Data: 
-    - Name: spritePath
-      Entry: 1
-      Data: SEED_Plum
-    - Name: baseCost
-      Entry: 3
-      Data: 100
-    - Name: plantType
-      Entry: 3
-      Data: 3
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 2020
-    - Name: $v
-      Entry: 7
-      Data: GrandmaGreen.Collections.SeedProperties, GrandmaGreen
-    - Name: name
-      Entry: 1
-      Data: Peach
-    - Name: description
-      Entry: 1
-      Data: 
-    - Name: spritePath
-      Entry: 1
-      Data: SEED_Peach
-    - Name: baseCost
-      Entry: 3
-      Data: 100
-    - Name: plantType
-      Entry: 3
-      Data: 3
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 2021
-    - Name: $v
-      Entry: 7
-      Data: GrandmaGreen.Collections.SeedProperties, GrandmaGreen
-    - Name: name
-      Entry: 1
-      Data: Blueberry
-    - Name: description
-      Entry: 1
-      Data: 
-    - Name: spritePath
-      Entry: 1
-      Data: SEED_Blueberry
-    - Name: baseCost
-      Entry: 3
-      Data: 100
+      Data: 200
+    - Name: baseGoldPerTimeUnit
+      Entry: 4
+      Data: 0.5
     - Name: plantType
       Entry: 3
       Data: 3
@@ -6981,3 +5365,2176 @@ MonoBehaviour:
       Entry: 8
       Data: 
   dataSheet: {fileID: 4900000, guid: e4679a0928809465cb693a3e5dc5ecfa, type: 3}
+  PlantGenotypeMasterList:
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 1
+      b1: 1
+      b2: 1
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 0
+      trait: 0
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 1
+      b1: 1
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 0
+      trait: 1
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 1
+      b1: 0
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 0
+      trait: 2
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 0
+      b1: 1
+      b2: 1
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 1
+      trait: 0
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 0
+      b1: 1
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 1
+      trait: 1
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 0
+      b1: 0
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 1
+      trait: 2
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 0
+      a2: 0
+      b1: 1
+      b2: 1
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 2
+      trait: 0
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 0
+      a2: 0
+      b1: 1
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 2
+      trait: 1
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 0
+      a2: 0
+      b1: 0
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 2
+      trait: 2
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 1
+      b1: 1
+      b2: 1
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 0
+      trait: 0
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 1
+      b1: 1
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 0
+      trait: 1
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 0
+      b1: 1
+      b2: 1
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 1
+      trait: 0
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 0
+      b1: 1
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 1
+      trait: 1
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 0
+      b1: 0
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 1
+      trait: 2
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 0
+      a2: 0
+      b1: 1
+      b2: 1
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 2
+      trait: 0
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 0
+      a2: 0
+      b1: 1
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 2
+      trait: 1
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 0
+      a2: 0
+      b1: 0
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 2
+      trait: 2
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 1
+      b1: 1
+      b2: 1
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 0
+      trait: 0
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 1
+      b1: 1
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 0
+      trait: 1
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 1
+      b1: 0
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 0
+      trait: 2
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 0
+      b1: 1
+      b2: 1
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 1
+      trait: 0
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 0
+      b1: 1
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 1
+      trait: 1
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 0
+      b1: 0
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 1
+      trait: 2
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 0
+      a2: 0
+      b1: 1
+      b2: 1
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 2
+      trait: 0
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 0
+      a2: 0
+      b1: 1
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 2
+      trait: 1
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 0
+      a2: 0
+      b1: 0
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 2
+      trait: 2
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 1
+      b1: 1
+      b2: 1
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 0
+      trait: 0
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 1
+      b1: 1
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 0
+      trait: 1
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 1
+      b1: 0
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 0
+      trait: 2
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 0
+      b1: 1
+      b2: 1
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 1
+      trait: 0
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 0
+      b1: 1
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 1
+      trait: 1
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 0
+      b1: 0
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 1
+      trait: 2
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 0
+      a2: 0
+      b1: 1
+      b2: 1
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 2
+      trait: 0
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 0
+      a2: 0
+      b1: 1
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 2
+      trait: 1
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 0
+      a2: 0
+      b1: 0
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 2
+      trait: 2
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 1
+      b1: 1
+      b2: 1
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 0
+      trait: 0
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 1
+      b1: 1
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 0
+      trait: 1
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 1
+      b1: 0
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 0
+      trait: 2
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 0
+      b1: 1
+      b2: 1
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 1
+      trait: 0
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 0
+      b1: 1
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 1
+      trait: 1
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 0
+      b1: 0
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 1
+      trait: 2
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 0
+      a2: 0
+      b1: 1
+      b2: 1
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 2
+      trait: 0
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 0
+      a2: 0
+      b1: 1
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 2
+      trait: 1
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 0
+      a2: 0
+      b1: 0
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 2
+      trait: 2
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 1
+      b1: 1
+      b2: 1
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 0
+      trait: 0
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 1
+      b1: 1
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 0
+      trait: 1
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 1
+      b1: 0
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 0
+      trait: 2
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 0
+      b1: 1
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 1
+      trait: 1
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 0
+      b1: 0
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 1
+      trait: 2
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 0
+      a2: 0
+      b1: 1
+      b2: 1
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 2
+      trait: 0
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 0
+      a2: 0
+      b1: 1
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 2
+      trait: 1
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 0
+      a2: 0
+      b1: 0
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 2
+      trait: 2
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 1
+      b1: 1
+      b2: 1
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 0
+      trait: 0
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 1
+      b1: 0
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 0
+      trait: 2
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 0
+      b1: 1
+      b2: 1
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 1
+      trait: 0
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 0
+      b1: 1
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 1
+      trait: 1
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 0
+      b1: 0
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 1
+      trait: 2
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 0
+      a2: 0
+      b1: 1
+      b2: 1
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 2
+      trait: 0
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 0
+      a2: 0
+      b1: 1
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 2
+      trait: 1
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 0
+      a2: 0
+      b1: 0
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 2
+      trait: 2
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 1
+      b1: 1
+      b2: 1
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 0
+      trait: 0
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 1
+      b1: 1
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 0
+      trait: 1
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 1
+      b1: 0
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 0
+      trait: 2
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 0
+      b1: 1
+      b2: 1
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 1
+      trait: 0
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 0
+      b1: 1
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 1
+      trait: 1
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 0
+      b1: 0
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 1
+      trait: 2
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 0
+      a2: 0
+      b1: 1
+      b2: 1
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 2
+      trait: 0
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 0
+      a2: 0
+      b1: 1
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 2
+      trait: 1
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 0
+      a2: 0
+      b1: 0
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 2
+      trait: 2
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 1
+      b1: 1
+      b2: 1
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 0
+      trait: 0
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 1
+      b1: 1
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 0
+      trait: 1
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 1
+      b1: 0
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 0
+      trait: 2
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 0
+      b1: 1
+      b2: 1
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 1
+      trait: 0
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 0
+      b1: 1
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 1
+      trait: 1
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 0
+      b1: 0
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 1
+      trait: 2
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 0
+      a2: 0
+      b1: 1
+      b2: 1
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 2
+      trait: 0
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 0
+      a2: 0
+      b1: 1
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 2
+      trait: 1
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 0
+      a2: 0
+      b1: 0
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 2
+      trait: 2
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 1
+      b1: 1
+      b2: 1
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 0
+      trait: 0
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 1
+      b1: 1
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 0
+      trait: 1
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 1
+      b1: 0
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 0
+      trait: 2
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 0
+      b1: 1
+      b2: 1
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 1
+      trait: 0
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 0
+      b1: 1
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 1
+      trait: 1
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 0
+      b1: 0
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 1
+      trait: 2
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 0
+      a2: 0
+      b1: 1
+      b2: 1
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 2
+      trait: 0
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 0
+      a2: 0
+      b1: 0
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 2
+      trait: 2
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 1
+      b1: 1
+      b2: 1
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 0
+      trait: 0
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 1
+      b1: 1
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 0
+      trait: 1
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 1
+      b1: 0
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 0
+      trait: 2
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 0
+      b1: 1
+      b2: 1
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 1
+      trait: 0
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 0
+      b1: 1
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 1
+      trait: 1
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 0
+      b1: 0
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 1
+      trait: 2
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 0
+      a2: 0
+      b1: 1
+      b2: 1
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 2
+      trait: 0
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 0
+      a2: 0
+      b1: 1
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 2
+      trait: 1
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 0
+      a2: 0
+      b1: 0
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 2
+      trait: 2
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 1
+      b1: 1
+      b2: 1
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 0
+      trait: 0
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 1
+      b1: 1
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 0
+      trait: 1
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 1
+      b1: 0
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 0
+      trait: 2
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 0
+      b1: 1
+      b2: 1
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 1
+      trait: 0
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 0
+      b1: 1
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 1
+      trait: 1
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 0
+      b1: 0
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 1
+      trait: 2
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 0
+      a2: 0
+      b1: 1
+      b2: 1
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 2
+      trait: 0
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 0
+      a2: 0
+      b1: 0
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 2
+      trait: 2
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 1
+      b1: 1
+      b2: 1
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 0
+      trait: 0
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 1
+      b1: 1
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 0
+      trait: 1
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 1
+      b1: 0
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 0
+      trait: 2
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 0
+      b1: 1
+      b2: 1
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 1
+      trait: 0
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 0
+      b1: 1
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 1
+      trait: 1
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 0
+      b1: 0
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 1
+      trait: 2
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 0
+      a2: 0
+      b1: 1
+      b2: 1
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 2
+      trait: 0
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 0
+      a2: 0
+      b1: 1
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 2
+      trait: 1
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 0
+      a2: 0
+      b1: 0
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 2
+      trait: 2
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 1
+      b1: 1
+      b2: 1
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 0
+      trait: 0
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 1
+      b1: 1
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 0
+      trait: 1
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 0
+      b1: 1
+      b2: 1
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 1
+      trait: 0
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 0
+      b1: 1
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 1
+      trait: 1
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 0
+      b1: 0
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 1
+      trait: 2
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 0
+      a2: 0
+      b1: 1
+      b2: 1
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 2
+      trait: 0
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 0
+      a2: 0
+      b1: 1
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 2
+      trait: 1
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 0
+      a2: 0
+      b1: 0
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 2
+      trait: 2
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 1
+      b1: 1
+      b2: 1
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 0
+      trait: 0
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 1
+      b1: 1
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 0
+      trait: 1
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 1
+      b1: 0
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 0
+      trait: 2
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 0
+      b1: 1
+      b2: 1
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 1
+      trait: 0
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 0
+      b1: 1
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 1
+      trait: 1
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 0
+      b1: 0
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 1
+      trait: 2
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 0
+      a2: 0
+      b1: 1
+      b2: 1
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 2
+      trait: 0
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 0
+      a2: 0
+      b1: 1
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 2
+      trait: 1
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 0
+      a2: 0
+      b1: 0
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 2
+      trait: 2
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 1
+      b1: 1
+      b2: 1
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 0
+      trait: 0
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 1
+      b1: 1
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 0
+      trait: 1
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 1
+      b1: 0
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 0
+      trait: 2
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 0
+      b1: 1
+      b2: 1
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 1
+      trait: 0
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 0
+      b1: 0
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 1
+      trait: 2
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 0
+      a2: 0
+      b1: 1
+      b2: 1
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 2
+      trait: 0
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 0
+      a2: 0
+      b1: 1
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 2
+      trait: 1
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 0
+      a2: 0
+      b1: 0
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 2
+      trait: 2
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 1
+      b1: 1
+      b2: 1
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 0
+      trait: 0
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 1
+      b1: 1
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 0
+      trait: 1
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 1
+      b1: 0
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 0
+      trait: 2
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 0
+      b1: 1
+      b2: 1
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 1
+      trait: 0
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 0
+      b1: 1
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 1
+      trait: 1
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 0
+      b1: 0
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 1
+      trait: 2
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 0
+      a2: 0
+      b1: 1
+      b2: 1
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 2
+      trait: 0
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 0
+      a2: 0
+      b1: 1
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 2
+      trait: 1
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 0
+      a2: 0
+      b1: 0
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 2
+      trait: 2
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 1
+      b1: 1
+      b2: 1
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 0
+      trait: 0
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 1
+      b1: 1
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 0
+      trait: 1
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 1
+      b1: 0
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 0
+      trait: 2
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 0
+      b1: 1
+      b2: 1
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 1
+      trait: 0
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 0
+      b1: 1
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 1
+      trait: 1
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 0
+      b1: 0
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 1
+      trait: 2
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 0
+      a2: 0
+      b1: 1
+      b2: 1
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 2
+      trait: 0
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 0
+      a2: 0
+      b1: 1
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 2
+      trait: 1
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 0
+      a2: 0
+      b1: 0
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 2
+      trait: 2
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 1
+      b1: 1
+      b2: 1
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 0
+      trait: 0
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 1
+      b1: 1
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 0
+      trait: 1
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 1
+      b1: 0
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 0
+      trait: 2
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 0
+      b1: 1
+      b2: 1
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 1
+      trait: 0
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 0
+      b1: 1
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 1
+      trait: 1
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 0
+      b1: 0
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 1
+      trait: 2
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 0
+      a2: 0
+      b1: 1
+      b2: 1
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 2
+      trait: 0
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 0
+      a2: 0
+      b1: 1
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 2
+      trait: 1
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 0
+      a2: 0
+      b1: 0
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 2
+      trait: 2
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 1
+      b1: 1
+      b2: 1
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 0
+      trait: 0
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 1
+      b1: 1
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 0
+      trait: 1
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 1
+      b1: 0
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 0
+      trait: 2
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 0
+      b1: 1
+      b2: 1
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 1
+      trait: 0
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 0
+      b1: 1
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 1
+      trait: 1
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 0
+      a2: 0
+      b1: 1
+      b2: 1
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 2
+      trait: 0
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 0
+      a2: 0
+      b1: 1
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 2
+      trait: 1
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 0
+      a2: 0
+      b1: 0
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 2
+      trait: 2
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 1
+      b1: 1
+      b2: 1
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 0
+      trait: 0
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 1
+      b1: 1
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 0
+      trait: 1
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 1
+      b1: 0
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 0
+      trait: 2
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 0
+      b1: 1
+      b2: 1
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 1
+      trait: 0
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 0
+      b1: 1
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 1
+      trait: 1
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 1
+      a2: 0
+      b1: 0
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 1
+      trait: 2
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 0
+      a2: 0
+      b1: 1
+      b2: 1
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 2
+      trait: 0
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 0
+      a2: 0
+      b1: 1
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 2
+      trait: 1
+      generation: 0
+  - quantity: 0
+    seedGenotype:
+      a1: 0
+      a2: 0
+      b1: 0
+      b2: 0
+      p1: 1
+      f1: 0
+      f2: 0
+      size: 2
+      trait: 2
+      generation: 0
