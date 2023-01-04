@@ -1118,12 +1118,6 @@ references:
   commentId: T:GrandmaGreen.Collections.CollectionsSO
   fullName: GrandmaGreen.Collections.CollectionsSO
   nameWithType: CollectionsSO
-- uid: GrandmaGreen.Collections.CollectionsSO.CharacterLookup
-  name: CharacterLookup
-  href: api/GrandmaGreen.Collections.CollectionsSO.html#GrandmaGreen_Collections_CollectionsSO_CharacterLookup
-  commentId: F:GrandmaGreen.Collections.CollectionsSO.CharacterLookup
-  fullName: GrandmaGreen.Collections.CollectionsSO.CharacterLookup
-  nameWithType: CollectionsSO.CharacterLookup
 - uid: GrandmaGreen.Collections.CollectionsSO.DEBUGLoadPlantProperties
   name: DEBUGLoadPlantProperties()
   href: api/GrandmaGreen.Collections.CollectionsSO.html#GrandmaGreen_Collections_CollectionsSO_DEBUGLoadPlantProperties
@@ -1176,19 +1170,6 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Collections.CollectionsSO.GetPlant
   nameWithType: CollectionsSO.GetPlant
-- uid: GrandmaGreen.Collections.CollectionsSO.GetSeed(GrandmaGreen.Collections.PlantId)
-  name: GetSeed(PlantId)
-  href: api/GrandmaGreen.Collections.CollectionsSO.html#GrandmaGreen_Collections_CollectionsSO_GetSeed_GrandmaGreen_Collections_PlantId_
-  commentId: M:GrandmaGreen.Collections.CollectionsSO.GetSeed(GrandmaGreen.Collections.PlantId)
-  fullName: GrandmaGreen.Collections.CollectionsSO.GetSeed(GrandmaGreen.Collections.PlantId)
-  nameWithType: CollectionsSO.GetSeed(PlantId)
-- uid: GrandmaGreen.Collections.CollectionsSO.GetSeed*
-  name: GetSeed
-  href: api/GrandmaGreen.Collections.CollectionsSO.html#GrandmaGreen_Collections_CollectionsSO_GetSeed_
-  commentId: Overload:GrandmaGreen.Collections.CollectionsSO.GetSeed
-  isSpec: "True"
-  fullName: GrandmaGreen.Collections.CollectionsSO.GetSeed
-  nameWithType: CollectionsSO.GetSeed
 - uid: GrandmaGreen.Collections.CollectionsSO.GetSprite(GrandmaGreen.Collections.PlantId,Genotype)
   name: GetSprite(PlantId, Genotype)
   href: api/GrandmaGreen.Collections.CollectionsSO.html#GrandmaGreen_Collections_CollectionsSO_GetSprite_GrandmaGreen_Collections_PlantId_Genotype_
@@ -1252,6 +1233,12 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Collections.CollectionsSO.LoadedInstance
   nameWithType: CollectionsSO.LoadedInstance
+- uid: GrandmaGreen.Collections.CollectionsSO.PlantGenotypeMasterList
+  name: PlantGenotypeMasterList
+  href: api/GrandmaGreen.Collections.CollectionsSO.html#GrandmaGreen_Collections_CollectionsSO_PlantGenotypeMasterList
+  commentId: F:GrandmaGreen.Collections.CollectionsSO.PlantGenotypeMasterList
+  fullName: GrandmaGreen.Collections.CollectionsSO.PlantGenotypeMasterList
+  nameWithType: CollectionsSO.PlantGenotypeMasterList
 - uid: GrandmaGreen.Collections.CollectionsSO.PlantLookup
   name: PlantLookup
   href: api/GrandmaGreen.Collections.CollectionsSO.html#GrandmaGreen_Collections_CollectionsSO_PlantLookup
@@ -1274,12 +1261,6 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Collections.CollectionsSO.PlantToGolem
   nameWithType: CollectionsSO.PlantToGolem
-- uid: GrandmaGreen.Collections.CollectionsSO.SeedLookup
-  name: SeedLookup
-  href: api/GrandmaGreen.Collections.CollectionsSO.html#GrandmaGreen_Collections_CollectionsSO_SeedLookup
-  commentId: F:GrandmaGreen.Collections.CollectionsSO.SeedLookup
-  fullName: GrandmaGreen.Collections.CollectionsSO.SeedLookup
-  nameWithType: CollectionsSO.SeedLookup
 - uid: GrandmaGreen.Collections.CollectionsSO.UnloadCollections
   name: UnloadCollections()
   href: api/GrandmaGreen.Collections.CollectionsSO.html#GrandmaGreen_Collections_CollectionsSO_UnloadCollections
@@ -2422,6 +2403,12 @@ references:
   commentId: T:GrandmaGreen.Collections.PlantProperties
   fullName: GrandmaGreen.Collections.PlantProperties
   nameWithType: PlantProperties
+- uid: GrandmaGreen.Collections.PlantProperties.baseGoldPerTimeUnit
+  name: baseGoldPerTimeUnit
+  href: api/GrandmaGreen.Collections.PlantProperties.html#GrandmaGreen_Collections_PlantProperties_baseGoldPerTimeUnit
+  commentId: F:GrandmaGreen.Collections.PlantProperties.baseGoldPerTimeUnit
+  fullName: GrandmaGreen.Collections.PlantProperties.baseGoldPerTimeUnit
+  nameWithType: PlantProperties.baseGoldPerTimeUnit
 - uid: GrandmaGreen.Collections.PlantProperties.description
   name: description
   href: api/GrandmaGreen.Collections.PlantProperties.html#GrandmaGreen_Collections_PlantProperties_description
@@ -2584,42 +2571,6 @@ references:
   commentId: F:GrandmaGreen.Collections.Seed.seedGenotype
   fullName: GrandmaGreen.Collections.Seed.seedGenotype
   nameWithType: Seed.seedGenotype
-- uid: GrandmaGreen.Collections.SeedProperties
-  name: SeedProperties
-  href: api/GrandmaGreen.Collections.SeedProperties.html
-  commentId: T:GrandmaGreen.Collections.SeedProperties
-  fullName: GrandmaGreen.Collections.SeedProperties
-  nameWithType: SeedProperties
-- uid: GrandmaGreen.Collections.SeedProperties.baseCost
-  name: baseCost
-  href: api/GrandmaGreen.Collections.SeedProperties.html#GrandmaGreen_Collections_SeedProperties_baseCost
-  commentId: F:GrandmaGreen.Collections.SeedProperties.baseCost
-  fullName: GrandmaGreen.Collections.SeedProperties.baseCost
-  nameWithType: SeedProperties.baseCost
-- uid: GrandmaGreen.Collections.SeedProperties.description
-  name: description
-  href: api/GrandmaGreen.Collections.SeedProperties.html#GrandmaGreen_Collections_SeedProperties_description
-  commentId: F:GrandmaGreen.Collections.SeedProperties.description
-  fullName: GrandmaGreen.Collections.SeedProperties.description
-  nameWithType: SeedProperties.description
-- uid: GrandmaGreen.Collections.SeedProperties.name
-  name: name
-  href: api/GrandmaGreen.Collections.SeedProperties.html#GrandmaGreen_Collections_SeedProperties_name
-  commentId: F:GrandmaGreen.Collections.SeedProperties.name
-  fullName: GrandmaGreen.Collections.SeedProperties.name
-  nameWithType: SeedProperties.name
-- uid: GrandmaGreen.Collections.SeedProperties.plantType
-  name: plantType
-  href: api/GrandmaGreen.Collections.SeedProperties.html#GrandmaGreen_Collections_SeedProperties_plantType
-  commentId: F:GrandmaGreen.Collections.SeedProperties.plantType
-  fullName: GrandmaGreen.Collections.SeedProperties.plantType
-  nameWithType: SeedProperties.plantType
-- uid: GrandmaGreen.Collections.SeedProperties.spritePath
-  name: spritePath
-  href: api/GrandmaGreen.Collections.SeedProperties.html#GrandmaGreen_Collections_SeedProperties_spritePath
-  commentId: F:GrandmaGreen.Collections.SeedProperties.spritePath
-  fullName: GrandmaGreen.Collections.SeedProperties.spritePath
-  nameWithType: SeedProperties.spritePath
 - uid: GrandmaGreen.Collections.Tool
   name: Tool
   href: api/GrandmaGreen.Collections.Tool.html
@@ -8379,19 +8330,6 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Shopkeeping.GardeningShopUIController.GardeningShopUIController
   nameWithType: GardeningShopUIController.GardeningShopUIController
-- uid: GrandmaGreen.Shopkeeping.GardeningShopUIController.GetBaseCostById(System.UInt16)
-  name: GetBaseCostById(UInt16)
-  href: api/GrandmaGreen.Shopkeeping.GardeningShopUIController.html#GrandmaGreen_Shopkeeping_GardeningShopUIController_GetBaseCostById_System_UInt16_
-  commentId: M:GrandmaGreen.Shopkeeping.GardeningShopUIController.GetBaseCostById(System.UInt16)
-  fullName: GrandmaGreen.Shopkeeping.GardeningShopUIController.GetBaseCostById(System.UInt16)
-  nameWithType: GardeningShopUIController.GetBaseCostById(UInt16)
-- uid: GrandmaGreen.Shopkeeping.GardeningShopUIController.GetBaseCostById*
-  name: GetBaseCostById
-  href: api/GrandmaGreen.Shopkeeping.GardeningShopUIController.html#GrandmaGreen_Shopkeeping_GardeningShopUIController_GetBaseCostById_
-  commentId: Overload:GrandmaGreen.Shopkeeping.GardeningShopUIController.GetBaseCostById
-  isSpec: "True"
-  fullName: GrandmaGreen.Shopkeeping.GardeningShopUIController.GetBaseCostById
-  nameWithType: GardeningShopUIController.GetBaseCostById
 - uid: GrandmaGreen.Shopkeeping.GardeningShopUIController.GetGardenList
   name: GetGardenList()
   href: api/GrandmaGreen.Shopkeeping.GardeningShopUIController.html#GrandmaGreen_Shopkeeping_GardeningShopUIController_GetGardenList
@@ -8405,12 +8343,12 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Shopkeeping.GardeningShopUIController.GetGardenList
   nameWithType: GardeningShopUIController.GetGardenList
-- uid: GrandmaGreen.Shopkeeping.GardeningShopUIController.GetSellingPriceById(System.UInt16)
-  name: GetSellingPriceById(UInt16)
-  href: api/GrandmaGreen.Shopkeeping.GardeningShopUIController.html#GrandmaGreen_Shopkeeping_GardeningShopUIController_GetSellingPriceById_System_UInt16_
-  commentId: M:GrandmaGreen.Shopkeeping.GardeningShopUIController.GetSellingPriceById(System.UInt16)
-  fullName: GrandmaGreen.Shopkeeping.GardeningShopUIController.GetSellingPriceById(System.UInt16)
-  nameWithType: GardeningShopUIController.GetSellingPriceById(UInt16)
+- uid: GrandmaGreen.Shopkeeping.GardeningShopUIController.GetSellingPriceById(IInventoryItem)
+  name: GetSellingPriceById(IInventoryItem)
+  href: api/GrandmaGreen.Shopkeeping.GardeningShopUIController.html#GrandmaGreen_Shopkeeping_GardeningShopUIController_GetSellingPriceById_IInventoryItem_
+  commentId: M:GrandmaGreen.Shopkeeping.GardeningShopUIController.GetSellingPriceById(IInventoryItem)
+  fullName: GrandmaGreen.Shopkeeping.GardeningShopUIController.GetSellingPriceById(IInventoryItem)
+  nameWithType: GardeningShopUIController.GetSellingPriceById(IInventoryItem)
 - uid: GrandmaGreen.Shopkeeping.GardeningShopUIController.GetSellingPriceById*
   name: GetSellingPriceById
   href: api/GrandmaGreen.Shopkeeping.GardeningShopUIController.html#GrandmaGreen_Shopkeeping_GardeningShopUIController_GetSellingPriceById_
@@ -8418,6 +8356,19 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Shopkeeping.GardeningShopUIController.GetSellingPriceById
   nameWithType: GardeningShopUIController.GetSellingPriceById
+- uid: GrandmaGreen.Shopkeeping.GardeningShopUIController.UpdateCycle
+  name: UpdateCycle()
+  href: api/GrandmaGreen.Shopkeeping.GardeningShopUIController.html#GrandmaGreen_Shopkeeping_GardeningShopUIController_UpdateCycle
+  commentId: M:GrandmaGreen.Shopkeeping.GardeningShopUIController.UpdateCycle
+  fullName: GrandmaGreen.Shopkeeping.GardeningShopUIController.UpdateCycle()
+  nameWithType: GardeningShopUIController.UpdateCycle()
+- uid: GrandmaGreen.Shopkeeping.GardeningShopUIController.UpdateCycle*
+  name: UpdateCycle
+  href: api/GrandmaGreen.Shopkeeping.GardeningShopUIController.html#GrandmaGreen_Shopkeeping_GardeningShopUIController_UpdateCycle_
+  commentId: Overload:GrandmaGreen.Shopkeeping.GardeningShopUIController.UpdateCycle
+  isSpec: "True"
+  fullName: GrandmaGreen.Shopkeeping.GardeningShopUIController.UpdateCycle
+  nameWithType: GardeningShopUIController.UpdateCycle
 - uid: GrandmaGreen.Shopkeeping.ShopItem
   name: ShopItem
   href: api/GrandmaGreen.Shopkeeping.ShopItem.html
