@@ -3266,6 +3266,45 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Entities.EntityController.FindRandomDestination
   nameWithType: EntityController.FindRandomDestination
+- uid: GrandmaGreen.Entities.EntityController.GetEntityPos
+  name: GetEntityPos()
+  href: api/GrandmaGreen.Entities.EntityController.html#GrandmaGreen_Entities_EntityController_GetEntityPos
+  commentId: M:GrandmaGreen.Entities.EntityController.GetEntityPos
+  fullName: GrandmaGreen.Entities.EntityController.GetEntityPos()
+  nameWithType: EntityController.GetEntityPos()
+- uid: GrandmaGreen.Entities.EntityController.GetEntityPos*
+  name: GetEntityPos
+  href: api/GrandmaGreen.Entities.EntityController.html#GrandmaGreen_Entities_EntityController_GetEntityPos_
+  commentId: Overload:GrandmaGreen.Entities.EntityController.GetEntityPos
+  isSpec: "True"
+  fullName: GrandmaGreen.Entities.EntityController.GetEntityPos
+  nameWithType: EntityController.GetEntityPos
+- uid: GrandmaGreen.Entities.EntityController.OnDestroy
+  name: OnDestroy()
+  href: api/GrandmaGreen.Entities.EntityController.html#GrandmaGreen_Entities_EntityController_OnDestroy
+  commentId: M:GrandmaGreen.Entities.EntityController.OnDestroy
+  fullName: GrandmaGreen.Entities.EntityController.OnDestroy()
+  nameWithType: EntityController.OnDestroy()
+- uid: GrandmaGreen.Entities.EntityController.OnDestroy*
+  name: OnDestroy
+  href: api/GrandmaGreen.Entities.EntityController.html#GrandmaGreen_Entities_EntityController_OnDestroy_
+  commentId: Overload:GrandmaGreen.Entities.EntityController.OnDestroy
+  isSpec: "True"
+  fullName: GrandmaGreen.Entities.EntityController.OnDestroy
+  nameWithType: EntityController.OnDestroy
+- uid: GrandmaGreen.Entities.EntityController.OnGrandmaMoveToGolem(Vector3)
+  name: OnGrandmaMoveToGolem(Vector3)
+  href: api/GrandmaGreen.Entities.EntityController.html#GrandmaGreen_Entities_EntityController_OnGrandmaMoveToGolem_Vector3_
+  commentId: M:GrandmaGreen.Entities.EntityController.OnGrandmaMoveToGolem(Vector3)
+  fullName: GrandmaGreen.Entities.EntityController.OnGrandmaMoveToGolem(Vector3)
+  nameWithType: EntityController.OnGrandmaMoveToGolem(Vector3)
+- uid: GrandmaGreen.Entities.EntityController.OnGrandmaMoveToGolem*
+  name: OnGrandmaMoveToGolem
+  href: api/GrandmaGreen.Entities.EntityController.html#GrandmaGreen_Entities_EntityController_OnGrandmaMoveToGolem_
+  commentId: Overload:GrandmaGreen.Entities.EntityController.OnGrandmaMoveToGolem
+  isSpec: "True"
+  fullName: GrandmaGreen.Entities.EntityController.OnGrandmaMoveToGolem
+  nameWithType: EntityController.OnGrandmaMoveToGolem
 - uid: GrandmaGreen.Entities.EntityController.PauseBehaviour
   name: PauseBehaviour()
   href: api/GrandmaGreen.Entities.EntityController.html#GrandmaGreen_Entities_EntityController_PauseBehaviour
@@ -3859,6 +3898,12 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Entities.GolemController.GetGolemID
   nameWithType: GolemController.GetGolemID
+- uid: GrandmaGreen.Entities.GolemController.golemManager
+  name: golemManager
+  href: api/GrandmaGreen.Entities.GolemController.html#GrandmaGreen_Entities_GolemController_golemManager
+  commentId: F:GrandmaGreen.Entities.GolemController.golemManager
+  fullName: GrandmaGreen.Entities.GolemController.golemManager
+  nameWithType: GolemController.golemManager
 - uid: GrandmaGreen.Entities.GolemController.id
   name: id
   href: api/GrandmaGreen.Entities.GolemController.html#GrandmaGreen_Entities_GolemController_id
@@ -3921,6 +3966,19 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Entities.GolemController.OnGolemEvolve
   nameWithType: GolemController.OnGolemEvolve
+- uid: GrandmaGreen.Entities.GolemController.OnGolemSelectRelease
+  name: OnGolemSelectRelease()
+  href: api/GrandmaGreen.Entities.GolemController.html#GrandmaGreen_Entities_GolemController_OnGolemSelectRelease
+  commentId: M:GrandmaGreen.Entities.GolemController.OnGolemSelectRelease
+  fullName: GrandmaGreen.Entities.GolemController.OnGolemSelectRelease()
+  nameWithType: GolemController.OnGolemSelectRelease()
+- uid: GrandmaGreen.Entities.GolemController.OnGolemSelectRelease*
+  name: OnGolemSelectRelease
+  href: api/GrandmaGreen.Entities.GolemController.html#GrandmaGreen_Entities_GolemController_OnGolemSelectRelease_
+  commentId: Overload:GrandmaGreen.Entities.GolemController.OnGolemSelectRelease
+  isSpec: "True"
+  fullName: GrandmaGreen.Entities.GolemController.OnGolemSelectRelease
+  nameWithType: GolemController.OnGolemSelectRelease
 - uid: GrandmaGreen.Entities.GolemController.pathfinderServicer
   name: pathfinderServicer
   href: api/GrandmaGreen.Entities.GolemController.html#GrandmaGreen_Entities_GolemController_pathfinderServicer
@@ -3946,6 +4004,19 @@ references:
   commentId: F:GrandmaGreen.Entities.GolemController.range
   fullName: GrandmaGreen.Entities.GolemController.range
   nameWithType: GolemController.range
+- uid: GrandmaGreen.Entities.GolemController.RegisterManager(GrandmaGreen.Entities.GolemManager)
+  name: RegisterManager(GolemManager)
+  href: api/GrandmaGreen.Entities.GolemController.html#GrandmaGreen_Entities_GolemController_RegisterManager_GrandmaGreen_Entities_GolemManager_
+  commentId: M:GrandmaGreen.Entities.GolemController.RegisterManager(GrandmaGreen.Entities.GolemManager)
+  fullName: GrandmaGreen.Entities.GolemController.RegisterManager(GrandmaGreen.Entities.GolemManager)
+  nameWithType: GolemController.RegisterManager(GolemManager)
+- uid: GrandmaGreen.Entities.GolemController.RegisterManager*
+  name: RegisterManager
+  href: api/GrandmaGreen.Entities.GolemController.html#GrandmaGreen_Entities_GolemController_RegisterManager_
+  commentId: Overload:GrandmaGreen.Entities.GolemController.RegisterManager
+  isSpec: "True"
+  fullName: GrandmaGreen.Entities.GolemController.RegisterManager
+  nameWithType: GolemController.RegisterManager
 - uid: GrandmaGreen.Entities.GolemController.SetDestination(Vector3)
   name: SetDestination(Vector3)
   href: api/GrandmaGreen.Entities.GolemController.html#GrandmaGreen_Entities_GolemController_SetDestination_Vector3_
@@ -4147,6 +4218,19 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Entities.GolemManager.CreateGolem
   nameWithType: GolemManager.CreateGolem
+- uid: GrandmaGreen.Entities.GolemManager.GetPlayerPos
+  name: GetPlayerPos()
+  href: api/GrandmaGreen.Entities.GolemManager.html#GrandmaGreen_Entities_GolemManager_GetPlayerPos
+  commentId: M:GrandmaGreen.Entities.GolemManager.GetPlayerPos
+  fullName: GrandmaGreen.Entities.GolemManager.GetPlayerPos()
+  nameWithType: GolemManager.GetPlayerPos()
+- uid: GrandmaGreen.Entities.GolemManager.GetPlayerPos*
+  name: GetPlayerPos
+  href: api/GrandmaGreen.Entities.GolemManager.html#GrandmaGreen_Entities_GolemManager_GetPlayerPos_
+  commentId: Overload:GrandmaGreen.Entities.GolemManager.GetPlayerPos
+  isSpec: "True"
+  fullName: GrandmaGreen.Entities.GolemManager.GetPlayerPos
+  nameWithType: GolemManager.GetPlayerPos
 - uid: GrandmaGreen.Entities.GolemManager.golemPrefabs
   name: golemPrefabs
   href: api/GrandmaGreen.Entities.GolemManager.html#GrandmaGreen_Entities_GolemManager_golemPrefabs
@@ -4211,6 +4295,12 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Entities.GolemManager.OnGolemSpawn
   nameWithType: GolemManager.OnGolemSpawn
+- uid: GrandmaGreen.Entities.GolemManager.playerController
+  name: playerController
+  href: api/GrandmaGreen.Entities.GolemManager.html#GrandmaGreen_Entities_GolemManager_playerController
+  commentId: F:GrandmaGreen.Entities.GolemManager.playerController
+  fullName: GrandmaGreen.Entities.GolemManager.playerController
+  nameWithType: GolemManager.playerController
 - uid: GrandmaGreen.Entities.GolemState
   name: GolemState
   href: api/GrandmaGreen.Entities.GolemState.html
@@ -4320,12 +4410,24 @@ references:
   commentId: E:GrandmaGreen.EventManager.EVENT_GOLEM_EVOLVE
   fullName: GrandmaGreen.EventManager.EVENT_GOLEM_EVOLVE
   nameWithType: EventManager.EVENT_GOLEM_EVOLVE
+- uid: GrandmaGreen.EventManager.EVENT_GOLEM_GRANDMA_MOVE_TO
+  name: EVENT_GOLEM_GRANDMA_MOVE_TO
+  href: api/GrandmaGreen.EventManager.html#GrandmaGreen_EventManager_EVENT_GOLEM_GRANDMA_MOVE_TO
+  commentId: E:GrandmaGreen.EventManager.EVENT_GOLEM_GRANDMA_MOVE_TO
+  fullName: GrandmaGreen.EventManager.EVENT_GOLEM_GRANDMA_MOVE_TO
+  nameWithType: EventManager.EVENT_GOLEM_GRANDMA_MOVE_TO
 - uid: GrandmaGreen.EventManager.EVENT_GOLEM_HAPPINESS_UPDATE
   name: EVENT_GOLEM_HAPPINESS_UPDATE
   href: api/GrandmaGreen.EventManager.html#GrandmaGreen_EventManager_EVENT_GOLEM_HAPPINESS_UPDATE
   commentId: E:GrandmaGreen.EventManager.EVENT_GOLEM_HAPPINESS_UPDATE
   fullName: GrandmaGreen.EventManager.EVENT_GOLEM_HAPPINESS_UPDATE
   nameWithType: EventManager.EVENT_GOLEM_HAPPINESS_UPDATE
+- uid: GrandmaGreen.EventManager.EVENT_GOLEM_RELEASE_SELECTED
+  name: EVENT_GOLEM_RELEASE_SELECTED
+  href: api/GrandmaGreen.EventManager.html#GrandmaGreen_EventManager_EVENT_GOLEM_RELEASE_SELECTED
+  commentId: E:GrandmaGreen.EventManager.EVENT_GOLEM_RELEASE_SELECTED
+  fullName: GrandmaGreen.EventManager.EVENT_GOLEM_RELEASE_SELECTED
+  nameWithType: EventManager.EVENT_GOLEM_RELEASE_SELECTED
 - uid: GrandmaGreen.EventManager.EVENT_GOLEM_SPAWN
   name: EVENT_GOLEM_SPAWN
   href: api/GrandmaGreen.EventManager.html#GrandmaGreen_EventManager_EVENT_GOLEM_SPAWN
@@ -4517,6 +4619,19 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.EventManager.HandleEVENT_GOLEM_EVOLVE
   nameWithType: EventManager.HandleEVENT_GOLEM_EVOLVE
+- uid: GrandmaGreen.EventManager.HandleEVENT_GOLEM_GRANDMA_MOVE_TO(Vector3)
+  name: HandleEVENT_GOLEM_GRANDMA_MOVE_TO(Vector3)
+  href: api/GrandmaGreen.EventManager.html#GrandmaGreen_EventManager_HandleEVENT_GOLEM_GRANDMA_MOVE_TO_Vector3_
+  commentId: M:GrandmaGreen.EventManager.HandleEVENT_GOLEM_GRANDMA_MOVE_TO(Vector3)
+  fullName: GrandmaGreen.EventManager.HandleEVENT_GOLEM_GRANDMA_MOVE_TO(Vector3)
+  nameWithType: EventManager.HandleEVENT_GOLEM_GRANDMA_MOVE_TO(Vector3)
+- uid: GrandmaGreen.EventManager.HandleEVENT_GOLEM_GRANDMA_MOVE_TO*
+  name: HandleEVENT_GOLEM_GRANDMA_MOVE_TO
+  href: api/GrandmaGreen.EventManager.html#GrandmaGreen_EventManager_HandleEVENT_GOLEM_GRANDMA_MOVE_TO_
+  commentId: Overload:GrandmaGreen.EventManager.HandleEVENT_GOLEM_GRANDMA_MOVE_TO
+  isSpec: "True"
+  fullName: GrandmaGreen.EventManager.HandleEVENT_GOLEM_GRANDMA_MOVE_TO
+  nameWithType: EventManager.HandleEVENT_GOLEM_GRANDMA_MOVE_TO
 - uid: GrandmaGreen.EventManager.HandleEVENT_GOLEM_HAPPINESS_UPDATE(System.UInt16,System.Int32)
   name: HandleEVENT_GOLEM_HAPPINESS_UPDATE(UInt16, Int32)
   href: api/GrandmaGreen.EventManager.html#GrandmaGreen_EventManager_HandleEVENT_GOLEM_HAPPINESS_UPDATE_System_UInt16_System_Int32_
@@ -4530,6 +4645,19 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.EventManager.HandleEVENT_GOLEM_HAPPINESS_UPDATE
   nameWithType: EventManager.HandleEVENT_GOLEM_HAPPINESS_UPDATE
+- uid: GrandmaGreen.EventManager.HandleEVENT_GOLEM_RELEASE_SELECTED
+  name: HandleEVENT_GOLEM_RELEASE_SELECTED()
+  href: api/GrandmaGreen.EventManager.html#GrandmaGreen_EventManager_HandleEVENT_GOLEM_RELEASE_SELECTED
+  commentId: M:GrandmaGreen.EventManager.HandleEVENT_GOLEM_RELEASE_SELECTED
+  fullName: GrandmaGreen.EventManager.HandleEVENT_GOLEM_RELEASE_SELECTED()
+  nameWithType: EventManager.HandleEVENT_GOLEM_RELEASE_SELECTED()
+- uid: GrandmaGreen.EventManager.HandleEVENT_GOLEM_RELEASE_SELECTED*
+  name: HandleEVENT_GOLEM_RELEASE_SELECTED
+  href: api/GrandmaGreen.EventManager.html#GrandmaGreen_EventManager_HandleEVENT_GOLEM_RELEASE_SELECTED_
+  commentId: Overload:GrandmaGreen.EventManager.HandleEVENT_GOLEM_RELEASE_SELECTED
+  isSpec: "True"
+  fullName: GrandmaGreen.EventManager.HandleEVENT_GOLEM_RELEASE_SELECTED
+  nameWithType: EventManager.HandleEVENT_GOLEM_RELEASE_SELECTED
 - uid: GrandmaGreen.EventManager.HandleEVENT_GOLEM_SPAWN(System.UInt16,Vector3)
   name: HandleEVENT_GOLEM_SPAWN(UInt16, Vector3)
   href: api/GrandmaGreen.EventManager.html#GrandmaGreen_EventManager_HandleEVENT_GOLEM_SPAWN_System_UInt16_Vector3_
@@ -9634,19 +9762,6 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.UI.Golems.GolemMenu.GolemMenuOpen
   nameWithType: GolemMenu.GolemMenuOpen
-- uid: GrandmaGreen.UI.Golems.GolemMenu.HandleGolemInteract
-  name: HandleGolemInteract()
-  href: api/GrandmaGreen.UI.Golems.GolemMenu.html#GrandmaGreen_UI_Golems_GolemMenu_HandleGolemInteract
-  commentId: M:GrandmaGreen.UI.Golems.GolemMenu.HandleGolemInteract
-  fullName: GrandmaGreen.UI.Golems.GolemMenu.HandleGolemInteract()
-  nameWithType: GolemMenu.HandleGolemInteract()
-- uid: GrandmaGreen.UI.Golems.GolemMenu.HandleGolemInteract*
-  name: HandleGolemInteract
-  href: api/GrandmaGreen.UI.Golems.GolemMenu.html#GrandmaGreen_UI_Golems_GolemMenu_HandleGolemInteract_
-  commentId: Overload:GrandmaGreen.UI.Golems.GolemMenu.HandleGolemInteract
-  isSpec: "True"
-  fullName: GrandmaGreen.UI.Golems.GolemMenu.HandleGolemInteract
-  nameWithType: GolemMenu.HandleGolemInteract
 - uid: GrandmaGreen.UI.Golems.GolemMenu.SetLocation(Vector3)
   name: SetLocation(Vector3)
   href: api/GrandmaGreen.UI.Golems.GolemMenu.html#GrandmaGreen_UI_Golems_GolemMenu_SetLocation_Vector3_
@@ -9660,6 +9775,19 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.UI.Golems.GolemMenu.SetLocation
   nameWithType: GolemMenu.SetLocation
+- uid: GrandmaGreen.UI.Golems.GolemMenu.ToggleMenu(System.Boolean)
+  name: ToggleMenu(Boolean)
+  href: api/GrandmaGreen.UI.Golems.GolemMenu.html#GrandmaGreen_UI_Golems_GolemMenu_ToggleMenu_System_Boolean_
+  commentId: M:GrandmaGreen.UI.Golems.GolemMenu.ToggleMenu(System.Boolean)
+  fullName: GrandmaGreen.UI.Golems.GolemMenu.ToggleMenu(System.Boolean)
+  nameWithType: GolemMenu.ToggleMenu(Boolean)
+- uid: GrandmaGreen.UI.Golems.GolemMenu.ToggleMenu*
+  name: ToggleMenu
+  href: api/GrandmaGreen.UI.Golems.GolemMenu.html#GrandmaGreen_UI_Golems_GolemMenu_ToggleMenu_
+  commentId: Overload:GrandmaGreen.UI.Golems.GolemMenu.ToggleMenu
+  isSpec: "True"
+  fullName: GrandmaGreen.UI.Golems.GolemMenu.ToggleMenu
+  nameWithType: GolemMenu.ToggleMenu
 - uid: GrandmaGreen.UI.HUD
   name: GrandmaGreen.UI.HUD
   href: api/GrandmaGreen.UI.HUD.html
