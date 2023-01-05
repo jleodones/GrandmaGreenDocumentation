@@ -32,6 +32,7 @@ namespace GrandmaGreen.Entities
         const string BK_WANDER_POSITION = "wanderPosition";
 
         [field: Header("Entity Variables")]
+        public GolemManager golemManager;
         public CharacterId id;
         public bool isMature = false;
         public Vector3 velocity;
@@ -66,6 +67,7 @@ namespace GrandmaGreen.Entities
 
             //Subscribe
             EventManager.instance.EVENT_GOLEM_EVOLVE += OnGolemEvolve;
+            EventManager.instance.EVENT_GOLEM_RELEASE_SELECTED += OnGolemSelectRelease;
 
             // create our behaviour tree and get it's blackboard
             behaviorTree = CreateBehaviourTree();
@@ -105,6 +107,23 @@ namespace GrandmaGreen.Entities
 
             prevPosition = transform.position;
             onEntityMove?.Invoke(prevPosition);
+
+            if (m_isInteracting)
+            {
+                // facing to grandma
+                Vector3 playerPos = golemManager.GetPlayerPos();
+                if (playerPos.x < transform.position.x) {
+                    this.gameObject.transform.localScale = new Vector3(1, 1, 1);
+                } else {
+                    this.gameObject.transform.localScale = new Vector3(-1, 1, 1);
+                }
+
+                if ((playerPos - transform.position).sqrMagnitude <= 3.0f) {
+                    GetComponentInChildren<GolemMenu>().ToggleMenu(true);
+                } else {
+                    GetComponentInChildren<GolemMenu>().ToggleMenu(false);
+                }
+            } 
         }
 
         private void InitializeBT() {
@@ -192,6 +211,22 @@ namespace GrandmaGreen.Entities
             Debug.Log("Interacting.");
             m_isInteracting = !m_isInteracting;
             behaviorTree.Blackboard.Set("isInteract", m_isInteracting);
+            if (m_isInteracting) {
+                EventManager.instance.HandleEVENT_GOLEM_GRANDMA_MOVE_TO(transform.position);
+            }
+
+        }
+
+        public void RegisterManager(GolemManager mgmr)
+        {
+            this.golemManager = mgmr;
+        }
+
+        public void OnGolemSelectRelease()
+        {
+            m_isInteracting = false;
+            behaviorTree.Blackboard.Set("isInteract", m_isInteracting);
+            GetComponentInChildren<GolemMenu>().ToggleMenu(false);
         }
 
         #region Golem Evolution

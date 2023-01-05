@@ -46,7 +46,37 @@ namespace GrandmaGreen.Entities
         public virtual void RegisterEntity(GameEntity entity)
         {
             this.entity = entity;
+            EventManager.instance.EVENT_GOLEM_GRANDMA_MOVE_TO += OnGrandmaMoveToGolem;
         }
+
+        public void OnDestroy() 
+        {
+            EventManager.instance.EVENT_GOLEM_GRANDMA_MOVE_TO -= OnGrandmaMoveToGolem;
+        }
+
+        # region player-specific
+        public void OnGrandmaMoveToGolem(Vector3 pos) 
+        {
+            Debug.Log("Grandma Move To Golem");
+            Vector3 grandmaPos = entity.CurrentPos();
+
+            if ((grandmaPos - pos).sqrMagnitude <= 1.0f)
+            {
+                return;
+            }
+
+            if (grandmaPos.x < pos.x) {
+                SetDestination(pos - new Vector3(1.5f, 0, 0));
+            } else {
+                SetDestination(pos + new Vector3(1.5f, 0, 0));
+            }
+        }
+
+        public Vector3 GetEntityPos()
+        {
+            return this.entity.CurrentPos();
+        }
+        #endregion
 
         public virtual void StartController()
         {

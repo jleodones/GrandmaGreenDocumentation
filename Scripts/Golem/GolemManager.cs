@@ -14,6 +14,7 @@ namespace GrandmaGreen.Entities
         public List<GameObject> golemPrefabs;
         //public Dictionary<ushort, GameObject> golemObjectTable; //active golems
         public GolemState[] golemStateTable;
+        public EntityController playerController;
 
         public void Initialize()
         {
@@ -63,6 +64,9 @@ namespace GrandmaGreen.Entities
             newGolem.transform.SetParent(newGolemParent.transform);
             newGolem.GetComponent<SplineFollow>().target = newGolemParent.GetComponent<SplineContainer>();
 
+            // Register Manager
+            newGolem.GetComponent<GolemController>().RegisterManager(this);
+
             // Add golem to the table
             golemStateTable[tableIndex] = CreateGolem(id);
         }
@@ -87,6 +91,11 @@ namespace GrandmaGreen.Entities
             }
 
             golemStateTable[index].happiness = happiness;
+        }
+
+        public Vector3 GetPlayerPos()
+        {
+            return playerController.GetEntityPos();
         }
 
         public void OnDestroy() {

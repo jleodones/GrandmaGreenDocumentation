@@ -164,13 +164,21 @@ namespace GrandmaGreen
         public event Action<ushort, Vector3> EVENT_GOLEM_SPAWN;
         public event Action<ushort, int> EVENT_GOLEM_HAPPINESS_UPDATE;
         public event Action<ushort> EVENT_GOLEM_EVOLVE;
+        public event Action<Vector3> EVENT_GOLEM_GRANDMA_MOVE_TO; 
+        public event Action EVENT_GOLEM_RELEASE_SELECTED;
 
+        public void HandleEVENT_GOLEM_RELEASE_SELECTED() {EVENT_GOLEM_RELEASE_SELECTED?.Invoke();}
         public void HandleEVENT_GOLEM_SPAWN(ushort id, Vector3 pos) { EVENT_GOLEM_SPAWN?.Invoke(id, pos); }
         public void HandleEVENT_GOLEM_EVOLVE(ushort id) { EVENT_GOLEM_EVOLVE?.Invoke(id); }
         
         public void HandleEVENT_GOLEM_HAPPINESS_UPDATE(ushort id, int val) 
         {
             EVENT_GOLEM_HAPPINESS_UPDATE?.Invoke(id, val);
+        }
+
+        public void HandleEVENT_GOLEM_GRANDMA_MOVE_TO(Vector3 pos)
+        {
+            EVENT_GOLEM_GRANDMA_MOVE_TO?.Invoke(pos);
         }
         #endregion
 

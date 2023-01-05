@@ -90,7 +90,8 @@ namespace GrandmaGreen
             onTilemapSelection?.Invoke(lastSelectedCell);
 
             playerController.SetDestination(worldPoint);
-
+            // Release golem selected
+            EventManager.instance.HandleEVENT_GOLEM_RELEASE_SELECTED();
 
 
             if (((lastSelectedTile as IGameTile)) != null)

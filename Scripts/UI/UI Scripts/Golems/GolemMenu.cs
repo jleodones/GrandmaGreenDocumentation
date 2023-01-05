@@ -33,9 +33,10 @@ namespace GrandmaGreen.UI.Golems
             golemController =  GetComponentInParent<GolemController>();
         }
 
-        public void HandleGolemInteract()
+        public void ToggleMenu(bool isOpen)
         {
-            m_isMenuOpen = !m_isMenuOpen;
+            if (m_isMenuOpen == isOpen) return;
+            m_isMenuOpen = isOpen;
 
             if (m_isMenuOpen)
             {
