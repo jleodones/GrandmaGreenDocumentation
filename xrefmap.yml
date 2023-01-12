@@ -4074,6 +4074,19 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Entities.GolemController.Update
   nameWithType: GolemController.Update
+- uid: GrandmaGreen.Entities.GolemController.UpdateDraggingState
+  name: UpdateDraggingState()
+  href: api/GrandmaGreen.Entities.GolemController.html#GrandmaGreen_Entities_GolemController_UpdateDraggingState
+  commentId: M:GrandmaGreen.Entities.GolemController.UpdateDraggingState
+  fullName: GrandmaGreen.Entities.GolemController.UpdateDraggingState()
+  nameWithType: GolemController.UpdateDraggingState()
+- uid: GrandmaGreen.Entities.GolemController.UpdateDraggingState*
+  name: UpdateDraggingState
+  href: api/GrandmaGreen.Entities.GolemController.html#GrandmaGreen_Entities_GolemController_UpdateDraggingState_
+  commentId: Overload:GrandmaGreen.Entities.GolemController.UpdateDraggingState
+  isSpec: "True"
+  fullName: GrandmaGreen.Entities.GolemController.UpdateDraggingState
+  nameWithType: GolemController.UpdateDraggingState
 - uid: GrandmaGreen.Entities.GolemController.UpdateInteractState
   name: UpdateInteractState()
   href: api/GrandmaGreen.Entities.GolemController.html#GrandmaGreen_Entities_GolemController_UpdateInteractState
@@ -4100,6 +4113,19 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Entities.GolemController.UpdateMatureState
   nameWithType: GolemController.UpdateMatureState
+- uid: GrandmaGreen.Entities.GolemController.UpdateTaskState
+  name: UpdateTaskState()
+  href: api/GrandmaGreen.Entities.GolemController.html#GrandmaGreen_Entities_GolemController_UpdateTaskState
+  commentId: M:GrandmaGreen.Entities.GolemController.UpdateTaskState
+  fullName: GrandmaGreen.Entities.GolemController.UpdateTaskState()
+  nameWithType: GolemController.UpdateTaskState()
+- uid: GrandmaGreen.Entities.GolemController.UpdateTaskState*
+  name: UpdateTaskState
+  href: api/GrandmaGreen.Entities.GolemController.html#GrandmaGreen_Entities_GolemController_UpdateTaskState_
+  commentId: Overload:GrandmaGreen.Entities.GolemController.UpdateTaskState
+  isSpec: "True"
+  fullName: GrandmaGreen.Entities.GolemController.UpdateTaskState
+  nameWithType: GolemController.UpdateTaskState
 - uid: GrandmaGreen.Entities.GolemController.velocity
   name: velocity
   href: api/GrandmaGreen.Entities.GolemController.html#GrandmaGreen_Entities_GolemController_velocity
@@ -4112,6 +4138,19 @@ references:
   commentId: T:GrandmaGreen.Entities.GolemCrowdController
   fullName: GrandmaGreen.Entities.GolemCrowdController
   nameWithType: GolemCrowdController
+- uid: GrandmaGreen.Entities.GolemCrowdController.AssignGolemAction(System.UInt16)
+  name: AssignGolemAction(UInt16)
+  href: api/GrandmaGreen.Entities.GolemCrowdController.html#GrandmaGreen_Entities_GolemCrowdController_AssignGolemAction_System_UInt16_
+  commentId: M:GrandmaGreen.Entities.GolemCrowdController.AssignGolemAction(System.UInt16)
+  fullName: GrandmaGreen.Entities.GolemCrowdController.AssignGolemAction(System.UInt16)
+  nameWithType: GolemCrowdController.AssignGolemAction(UInt16)
+- uid: GrandmaGreen.Entities.GolemCrowdController.AssignGolemAction*
+  name: AssignGolemAction
+  href: api/GrandmaGreen.Entities.GolemCrowdController.html#GrandmaGreen_Entities_GolemCrowdController_AssignGolemAction_
+  commentId: Overload:GrandmaGreen.Entities.GolemCrowdController.AssignGolemAction
+  isSpec: "True"
+  fullName: GrandmaGreen.Entities.GolemCrowdController.AssignGolemAction
+  nameWithType: GolemCrowdController.AssignGolemAction
 - uid: GrandmaGreen.Entities.GolemCrowdController.Awake
   name: Awake()
   href: api/GrandmaGreen.Entities.GolemCrowdController.html#GrandmaGreen_Entities_GolemCrowdController_Awake
@@ -4125,6 +4164,25 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Entities.GolemCrowdController.Awake
   nameWithType: GolemCrowdController.Awake
+- uid: GrandmaGreen.Entities.GolemCrowdController.gardenArea
+  name: gardenArea
+  href: api/GrandmaGreen.Entities.GolemCrowdController.html#GrandmaGreen_Entities_GolemCrowdController_gardenArea
+  commentId: F:GrandmaGreen.Entities.GolemCrowdController.gardenArea
+  fullName: GrandmaGreen.Entities.GolemCrowdController.gardenArea
+  nameWithType: GolemCrowdController.gardenArea
+- uid: GrandmaGreen.Entities.GolemCrowdController.GolemDoAction
+  name: GolemDoAction()
+  href: api/GrandmaGreen.Entities.GolemCrowdController.html#GrandmaGreen_Entities_GolemCrowdController_GolemDoAction
+  commentId: M:GrandmaGreen.Entities.GolemCrowdController.GolemDoAction
+  fullName: GrandmaGreen.Entities.GolemCrowdController.GolemDoAction()
+  nameWithType: GolemCrowdController.GolemDoAction()
+- uid: GrandmaGreen.Entities.GolemCrowdController.GolemDoAction*
+  name: GolemDoAction
+  href: api/GrandmaGreen.Entities.GolemCrowdController.html#GrandmaGreen_Entities_GolemCrowdController_GolemDoAction_
+  commentId: Overload:GrandmaGreen.Entities.GolemCrowdController.GolemDoAction
+  isSpec: "True"
+  fullName: GrandmaGreen.Entities.GolemCrowdController.GolemDoAction
+  nameWithType: GolemCrowdController.GolemDoAction
 - uid: GrandmaGreen.Entities.GolemCrowdController.golemManager
   name: golemManager
   href: api/GrandmaGreen.Entities.GolemCrowdController.html#GrandmaGreen_Entities_GolemCrowdController_golemManager
@@ -4169,6 +4227,19 @@ references:
   commentId: F:GrandmaGreen.Entities.GolemCrowdController.value
   fullName: GrandmaGreen.Entities.GolemCrowdController.value
   nameWithType: GolemCrowdController.value
+- uid: GrandmaGreen.Entities.GolemCrowdController.WaterGolem
+  name: WaterGolem()
+  href: api/GrandmaGreen.Entities.GolemCrowdController.html#GrandmaGreen_Entities_GolemCrowdController_WaterGolem
+  commentId: M:GrandmaGreen.Entities.GolemCrowdController.WaterGolem
+  fullName: GrandmaGreen.Entities.GolemCrowdController.WaterGolem()
+  nameWithType: GolemCrowdController.WaterGolem()
+- uid: GrandmaGreen.Entities.GolemCrowdController.WaterGolem*
+  name: WaterGolem
+  href: api/GrandmaGreen.Entities.GolemCrowdController.html#GrandmaGreen_Entities_GolemCrowdController_WaterGolem_
+  commentId: Overload:GrandmaGreen.Entities.GolemCrowdController.WaterGolem
+  isSpec: "True"
+  fullName: GrandmaGreen.Entities.GolemCrowdController.WaterGolem
+  nameWithType: GolemCrowdController.WaterGolem
 - uid: GrandmaGreen.Entities.GolemData
   name: GolemData
   href: api/GrandmaGreen.Entities.GolemData.html
@@ -4301,12 +4372,37 @@ references:
   commentId: F:GrandmaGreen.Entities.GolemManager.playerController
   fullName: GrandmaGreen.Entities.GolemManager.playerController
   nameWithType: GolemManager.playerController
+- uid: GrandmaGreen.Entities.GolemManager.UpdateGolemTask(System.UInt16,Vector3Int)
+  name: UpdateGolemTask(UInt16, Vector3Int)
+  href: api/GrandmaGreen.Entities.GolemManager.html#GrandmaGreen_Entities_GolemManager_UpdateGolemTask_System_UInt16_Vector3Int_
+  commentId: M:GrandmaGreen.Entities.GolemManager.UpdateGolemTask(System.UInt16,Vector3Int)
+  fullName: GrandmaGreen.Entities.GolemManager.UpdateGolemTask(System.UInt16, Vector3Int)
+  nameWithType: GolemManager.UpdateGolemTask(UInt16, Vector3Int)
+- uid: GrandmaGreen.Entities.GolemManager.UpdateGolemTask*
+  name: UpdateGolemTask
+  href: api/GrandmaGreen.Entities.GolemManager.html#GrandmaGreen_Entities_GolemManager_UpdateGolemTask_
+  commentId: Overload:GrandmaGreen.Entities.GolemManager.UpdateGolemTask
+  isSpec: "True"
+  fullName: GrandmaGreen.Entities.GolemManager.UpdateGolemTask
+  nameWithType: GolemManager.UpdateGolemTask
 - uid: GrandmaGreen.Entities.GolemState
   name: GolemState
   href: api/GrandmaGreen.Entities.GolemState.html
   commentId: T:GrandmaGreen.Entities.GolemState
   fullName: GrandmaGreen.Entities.GolemState
   nameWithType: GolemState
+- uid: GrandmaGreen.Entities.GolemState.assignedCell
+  name: assignedCell
+  href: api/GrandmaGreen.Entities.GolemState.html#GrandmaGreen_Entities_GolemState_assignedCell
+  commentId: F:GrandmaGreen.Entities.GolemState.assignedCell
+  fullName: GrandmaGreen.Entities.GolemState.assignedCell
+  nameWithType: GolemState.assignedCell
+- uid: GrandmaGreen.Entities.GolemState.assignedWatering
+  name: assignedWatering
+  href: api/GrandmaGreen.Entities.GolemState.html#GrandmaGreen_Entities_GolemState_assignedWatering
+  commentId: F:GrandmaGreen.Entities.GolemState.assignedWatering
+  fullName: GrandmaGreen.Entities.GolemState.assignedWatering
+  nameWithType: GolemState.assignedWatering
 - uid: GrandmaGreen.Entities.GolemState.golemID
   name: golemID
   href: api/GrandmaGreen.Entities.GolemState.html#GrandmaGreen_Entities_GolemState_golemID
@@ -4380,6 +4476,12 @@ references:
   commentId: T:GrandmaGreen.EventManager
   fullName: GrandmaGreen.EventManager
   nameWithType: EventManager
+- uid: GrandmaGreen.EventManager.EVENT_ASSIGN_TASK
+  name: EVENT_ASSIGN_TASK
+  href: api/GrandmaGreen.EventManager.html#GrandmaGreen_EventManager_EVENT_ASSIGN_TASK
+  commentId: E:GrandmaGreen.EventManager.EVENT_ASSIGN_TASK
+  fullName: GrandmaGreen.EventManager.EVENT_ASSIGN_TASK
+  nameWithType: EventManager.EVENT_ASSIGN_TASK
 - uid: GrandmaGreen.EventManager.EVENT_CLOSE_HUD
   name: EVENT_CLOSE_HUD
   href: api/GrandmaGreen.EventManager.html#GrandmaGreen_EventManager_EVENT_CLOSE_HUD
@@ -4404,6 +4506,12 @@ references:
   commentId: E:GrandmaGreen.EventManager.EVENT_DELETE_SAVE
   fullName: GrandmaGreen.EventManager.EVENT_DELETE_SAVE
   nameWithType: EventManager.EVENT_DELETE_SAVE
+- uid: GrandmaGreen.EventManager.EVENT_GOLEM_DO_TASK
+  name: EVENT_GOLEM_DO_TASK
+  href: api/GrandmaGreen.EventManager.html#GrandmaGreen_EventManager_EVENT_GOLEM_DO_TASK
+  commentId: E:GrandmaGreen.EventManager.EVENT_GOLEM_DO_TASK
+  fullName: GrandmaGreen.EventManager.EVENT_GOLEM_DO_TASK
+  nameWithType: EventManager.EVENT_GOLEM_DO_TASK
 - uid: GrandmaGreen.EventManager.EVENT_GOLEM_EVOLVE
   name: EVENT_GOLEM_EVOLVE
   href: api/GrandmaGreen.EventManager.html#GrandmaGreen_EventManager_EVENT_GOLEM_EVOLVE
@@ -4554,6 +4662,12 @@ references:
   commentId: E:GrandmaGreen.EventManager.EVENT_UPDATE_MONEY_DISPLAY
   fullName: GrandmaGreen.EventManager.EVENT_UPDATE_MONEY_DISPLAY
   nameWithType: EventManager.EVENT_UPDATE_MONEY_DISPLAY
+- uid: GrandmaGreen.EventManager.EVENT_WATER_PLANT
+  name: EVENT_WATER_PLANT
+  href: api/GrandmaGreen.EventManager.html#GrandmaGreen_EventManager_EVENT_WATER_PLANT
+  commentId: E:GrandmaGreen.EventManager.EVENT_WATER_PLANT
+  fullName: GrandmaGreen.EventManager.EVENT_WATER_PLANT
+  nameWithType: EventManager.EVENT_WATER_PLANT
 - uid: GrandmaGreen.EventManager.HandleEVENT_CLOSE_HUD
   name: HandleEVENT_CLOSE_HUD()
   href: api/GrandmaGreen.EventManager.html#GrandmaGreen_EventManager_HandleEVENT_CLOSE_HUD
@@ -4606,6 +4720,32 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.EventManager.HandleEVENT_DELETE_SAVE
   nameWithType: EventManager.HandleEVENT_DELETE_SAVE
+- uid: GrandmaGreen.EventManager.HandleEVENT_GOLEM_ASSIGN_TASK(System.UInt16)
+  name: HandleEVENT_GOLEM_ASSIGN_TASK(UInt16)
+  href: api/GrandmaGreen.EventManager.html#GrandmaGreen_EventManager_HandleEVENT_GOLEM_ASSIGN_TASK_System_UInt16_
+  commentId: M:GrandmaGreen.EventManager.HandleEVENT_GOLEM_ASSIGN_TASK(System.UInt16)
+  fullName: GrandmaGreen.EventManager.HandleEVENT_GOLEM_ASSIGN_TASK(System.UInt16)
+  nameWithType: EventManager.HandleEVENT_GOLEM_ASSIGN_TASK(UInt16)
+- uid: GrandmaGreen.EventManager.HandleEVENT_GOLEM_ASSIGN_TASK*
+  name: HandleEVENT_GOLEM_ASSIGN_TASK
+  href: api/GrandmaGreen.EventManager.html#GrandmaGreen_EventManager_HandleEVENT_GOLEM_ASSIGN_TASK_
+  commentId: Overload:GrandmaGreen.EventManager.HandleEVENT_GOLEM_ASSIGN_TASK
+  isSpec: "True"
+  fullName: GrandmaGreen.EventManager.HandleEVENT_GOLEM_ASSIGN_TASK
+  nameWithType: EventManager.HandleEVENT_GOLEM_ASSIGN_TASK
+- uid: GrandmaGreen.EventManager.HandleEVENT_GOLEM_DO_TASK
+  name: HandleEVENT_GOLEM_DO_TASK()
+  href: api/GrandmaGreen.EventManager.html#GrandmaGreen_EventManager_HandleEVENT_GOLEM_DO_TASK
+  commentId: M:GrandmaGreen.EventManager.HandleEVENT_GOLEM_DO_TASK
+  fullName: GrandmaGreen.EventManager.HandleEVENT_GOLEM_DO_TASK()
+  nameWithType: EventManager.HandleEVENT_GOLEM_DO_TASK()
+- uid: GrandmaGreen.EventManager.HandleEVENT_GOLEM_DO_TASK*
+  name: HandleEVENT_GOLEM_DO_TASK
+  href: api/GrandmaGreen.EventManager.html#GrandmaGreen_EventManager_HandleEVENT_GOLEM_DO_TASK_
+  commentId: Overload:GrandmaGreen.EventManager.HandleEVENT_GOLEM_DO_TASK
+  isSpec: "True"
+  fullName: GrandmaGreen.EventManager.HandleEVENT_GOLEM_DO_TASK
+  nameWithType: EventManager.HandleEVENT_GOLEM_DO_TASK
 - uid: GrandmaGreen.EventManager.HandleEVENT_GOLEM_EVOLVE(System.UInt16)
   name: HandleEVENT_GOLEM_EVOLVE(UInt16)
   href: api/GrandmaGreen.EventManager.html#GrandmaGreen_EventManager_HandleEVENT_GOLEM_EVOLVE_System_UInt16_
@@ -4931,6 +5071,19 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.EventManager.HandleEVENT_UPDATE_MONEY_DISPLAY
   nameWithType: EventManager.HandleEVENT_UPDATE_MONEY_DISPLAY
+- uid: GrandmaGreen.EventManager.HandleEVENT_WATER_PLANT(Vector3Int)
+  name: HandleEVENT_WATER_PLANT(Vector3Int)
+  href: api/GrandmaGreen.EventManager.html#GrandmaGreen_EventManager_HandleEVENT_WATER_PLANT_Vector3Int_
+  commentId: M:GrandmaGreen.EventManager.HandleEVENT_WATER_PLANT(Vector3Int)
+  fullName: GrandmaGreen.EventManager.HandleEVENT_WATER_PLANT(Vector3Int)
+  nameWithType: EventManager.HandleEVENT_WATER_PLANT(Vector3Int)
+- uid: GrandmaGreen.EventManager.HandleEVENT_WATER_PLANT*
+  name: HandleEVENT_WATER_PLANT
+  href: api/GrandmaGreen.EventManager.html#GrandmaGreen_EventManager_HandleEVENT_WATER_PLANT_
+  commentId: Overload:GrandmaGreen.EventManager.HandleEVENT_WATER_PLANT
+  isSpec: "True"
+  fullName: GrandmaGreen.EventManager.HandleEVENT_WATER_PLANT
+  nameWithType: EventManager.HandleEVENT_WATER_PLANT
 - uid: GrandmaGreen.EventManager.instance
   name: instance
   href: api/GrandmaGreen.EventManager.html#GrandmaGreen_EventManager_instance
@@ -5478,12 +5631,6 @@ references:
   commentId: F:GrandmaGreen.Garden.GardenAreaController.DropRate
   fullName: GrandmaGreen.Garden.GardenAreaController.DropRate
   nameWithType: GardenAreaController.DropRate
-- uid: GrandmaGreen.Garden.GardenAreaController.DryingUpBurst
-  name: DryingUpBurst
-  href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_DryingUpBurst
-  commentId: F:GrandmaGreen.Garden.GardenAreaController.DryingUpBurst
-  fullName: GrandmaGreen.Garden.GardenAreaController.DryingUpBurst
-  nameWithType: GardenAreaController.DryingUpBurst
 - uid: GrandmaGreen.Garden.GardenAreaController.EnterCustomizationMode
   name: EnterCustomizationMode()
   href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_EnterCustomizationMode
@@ -5529,12 +5676,6 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Garden.GardenAreaController.FertilizePlant
   nameWithType: GardenAreaController.FertilizePlant
-- uid: GrandmaGreen.Garden.GardenAreaController.FertilizerParticleBurst
-  name: FertilizerParticleBurst
-  href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_FertilizerParticleBurst
-  commentId: F:GrandmaGreen.Garden.GardenAreaController.FertilizerParticleBurst
-  fullName: GrandmaGreen.Garden.GardenAreaController.FertilizerParticleBurst
-  nameWithType: GardenAreaController.FertilizerParticleBurst
 - uid: GrandmaGreen.Garden.GardenAreaController.gardenCustomizer
   name: gardenCustomizer
   href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_gardenCustomizer
@@ -5560,6 +5701,12 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Garden.GardenAreaController.GardenTileSelected
   nameWithType: GardenAreaController.GardenTileSelected
+- uid: GrandmaGreen.Garden.GardenAreaController.gardenVFX
+  name: gardenVFX
+  href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_gardenVFX
+  commentId: F:GrandmaGreen.Garden.GardenAreaController.gardenVFX
+  fullName: GrandmaGreen.Garden.GardenAreaController.gardenVFX
+  nameWithType: GardenAreaController.gardenVFX
 - uid: GrandmaGreen.Garden.GardenAreaController.GenotypeSpriteTest
   name: GenotypeSpriteTest()
   href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_GenotypeSpriteTest
@@ -5791,12 +5938,6 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Garden.GardenAreaController.UpdateSprite
   nameWithType: GardenAreaController.UpdateSprite
-- uid: GrandmaGreen.Garden.GardenAreaController.WateringParticleBurst
-  name: WateringParticleBurst
-  href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_WateringParticleBurst
-  commentId: F:GrandmaGreen.Garden.GardenAreaController.WateringParticleBurst
-  fullName: GrandmaGreen.Garden.GardenAreaController.WateringParticleBurst
-  nameWithType: GardenAreaController.WateringParticleBurst
 - uid: GrandmaGreen.Garden.GardenAreaController.WaterPlant(Vector3Int)
   name: WaterPlant(Vector3Int)
   href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_WaterPlant_Vector3Int_
@@ -6501,6 +6642,69 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Garden.GardenToolSet.ToolAction
   nameWithType: GardenToolSet.ToolAction
+- uid: GrandmaGreen.Garden.GardenVFX
+  name: GardenVFX
+  href: api/GrandmaGreen.Garden.GardenVFX.html
+  commentId: T:GrandmaGreen.Garden.GardenVFX
+  fullName: GrandmaGreen.Garden.GardenVFX
+  nameWithType: GardenVFX
+- uid: GrandmaGreen.Garden.GardenVFX.DryingUpBurst
+  name: DryingUpBurst
+  href: api/GrandmaGreen.Garden.GardenVFX.html#GrandmaGreen_Garden_GardenVFX_DryingUpBurst
+  commentId: F:GrandmaGreen.Garden.GardenVFX.DryingUpBurst
+  fullName: GrandmaGreen.Garden.GardenVFX.DryingUpBurst
+  nameWithType: GardenVFX.DryingUpBurst
+- uid: GrandmaGreen.Garden.GardenVFX.FertilizerParticleBurst
+  name: FertilizerParticleBurst
+  href: api/GrandmaGreen.Garden.GardenVFX.html#GrandmaGreen_Garden_GardenVFX_FertilizerParticleBurst
+  commentId: F:GrandmaGreen.Garden.GardenVFX.FertilizerParticleBurst
+  fullName: GrandmaGreen.Garden.GardenVFX.FertilizerParticleBurst
+  nameWithType: GardenVFX.FertilizerParticleBurst
+- uid: GrandmaGreen.Garden.GardenVFX.PlayDryParticle(Vector3)
+  name: PlayDryParticle(Vector3)
+  href: api/GrandmaGreen.Garden.GardenVFX.html#GrandmaGreen_Garden_GardenVFX_PlayDryParticle_Vector3_
+  commentId: M:GrandmaGreen.Garden.GardenVFX.PlayDryParticle(Vector3)
+  fullName: GrandmaGreen.Garden.GardenVFX.PlayDryParticle(Vector3)
+  nameWithType: GardenVFX.PlayDryParticle(Vector3)
+- uid: GrandmaGreen.Garden.GardenVFX.PlayDryParticle*
+  name: PlayDryParticle
+  href: api/GrandmaGreen.Garden.GardenVFX.html#GrandmaGreen_Garden_GardenVFX_PlayDryParticle_
+  commentId: Overload:GrandmaGreen.Garden.GardenVFX.PlayDryParticle
+  isSpec: "True"
+  fullName: GrandmaGreen.Garden.GardenVFX.PlayDryParticle
+  nameWithType: GardenVFX.PlayDryParticle
+- uid: GrandmaGreen.Garden.GardenVFX.PlayFertilizerParticle(Vector3)
+  name: PlayFertilizerParticle(Vector3)
+  href: api/GrandmaGreen.Garden.GardenVFX.html#GrandmaGreen_Garden_GardenVFX_PlayFertilizerParticle_Vector3_
+  commentId: M:GrandmaGreen.Garden.GardenVFX.PlayFertilizerParticle(Vector3)
+  fullName: GrandmaGreen.Garden.GardenVFX.PlayFertilizerParticle(Vector3)
+  nameWithType: GardenVFX.PlayFertilizerParticle(Vector3)
+- uid: GrandmaGreen.Garden.GardenVFX.PlayFertilizerParticle*
+  name: PlayFertilizerParticle
+  href: api/GrandmaGreen.Garden.GardenVFX.html#GrandmaGreen_Garden_GardenVFX_PlayFertilizerParticle_
+  commentId: Overload:GrandmaGreen.Garden.GardenVFX.PlayFertilizerParticle
+  isSpec: "True"
+  fullName: GrandmaGreen.Garden.GardenVFX.PlayFertilizerParticle
+  nameWithType: GardenVFX.PlayFertilizerParticle
+- uid: GrandmaGreen.Garden.GardenVFX.PlayWaterParticle(Vector3)
+  name: PlayWaterParticle(Vector3)
+  href: api/GrandmaGreen.Garden.GardenVFX.html#GrandmaGreen_Garden_GardenVFX_PlayWaterParticle_Vector3_
+  commentId: M:GrandmaGreen.Garden.GardenVFX.PlayWaterParticle(Vector3)
+  fullName: GrandmaGreen.Garden.GardenVFX.PlayWaterParticle(Vector3)
+  nameWithType: GardenVFX.PlayWaterParticle(Vector3)
+- uid: GrandmaGreen.Garden.GardenVFX.PlayWaterParticle*
+  name: PlayWaterParticle
+  href: api/GrandmaGreen.Garden.GardenVFX.html#GrandmaGreen_Garden_GardenVFX_PlayWaterParticle_
+  commentId: Overload:GrandmaGreen.Garden.GardenVFX.PlayWaterParticle
+  isSpec: "True"
+  fullName: GrandmaGreen.Garden.GardenVFX.PlayWaterParticle
+  nameWithType: GardenVFX.PlayWaterParticle
+- uid: GrandmaGreen.Garden.GardenVFX.WateringParticleBurst
+  name: WateringParticleBurst
+  href: api/GrandmaGreen.Garden.GardenVFX.html#GrandmaGreen_Garden_GardenVFX_WateringParticleBurst
+  commentId: F:GrandmaGreen.Garden.GardenVFX.WateringParticleBurst
+  fullName: GrandmaGreen.Garden.GardenVFX.WateringParticleBurst
+  nameWithType: GardenVFX.WateringParticleBurst
 - uid: GrandmaGreen.Garden.Genotype
   name: Genotype
   href: api/GrandmaGreen.Garden.Genotype.html

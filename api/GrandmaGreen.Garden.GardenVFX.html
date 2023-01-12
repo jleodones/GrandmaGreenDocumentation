@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class GolemManager
+    <title>Class GardenVFX
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class GolemManager
+    <meta name="title" content="Class GardenVFX
    ">
     <meta name="generator" content="docfx 2.59.4.0">
     
@@ -77,34 +77,34 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="GrandmaGreen.Entities.GolemManager">
+            <article class="content wrap" id="_content" data-uid="GrandmaGreen.Garden.GardenVFX">
   
   
-  <h1 id="GrandmaGreen_Entities_GolemManager" data-uid="GrandmaGreen.Entities.GolemManager" class="text-break">Class GolemManager
+  <h1 id="GrandmaGreen_Garden_GardenVFX" data-uid="GrandmaGreen.Garden.GardenVFX" class="text-break">Class GardenVFX
   </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Object</a></div>
-    <div class="level1"><span class="xref">GolemManager</span></div>
+    <div class="level1"><span class="xref">GardenVFX</span></div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="GrandmaGreen.Entities.html">GrandmaGreen.Entities</a></h6>
+  <h6><strong>Namespace</strong>: <a class="xref" href="GrandmaGreen.Garden.html">GrandmaGreen.Garden</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
-  <h5 id="GrandmaGreen_Entities_GolemManager_syntax">Syntax</h5>
+  <h5 id="GrandmaGreen_Garden_GardenVFX_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class GolemManager : ScriptableObject</code></pre>
+    <pre><code class="lang-csharp hljs">public class GardenVFX : ScriptableObject</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   
   
-  <h4 id="GrandmaGreen_Entities_GolemManager_golemPrefabs" data-uid="GrandmaGreen.Entities.GolemManager.golemPrefabs">golemPrefabs</h4>
+  <h4 id="GrandmaGreen_Garden_GardenVFX_DryingUpBurst" data-uid="GrandmaGreen.Garden.GardenVFX.DryingUpBurst">DryingUpBurst</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public List&lt;GameObject&gt; golemPrefabs</code></pre>
+    <pre><code class="lang-csharp hljs">public ParticleSystem DryingUpBurst</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -116,19 +116,19 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<span class="xref">GameObject</span>&gt;</td>
+        <td><span class="xref">ParticleSystem</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <h4 id="GrandmaGreen_Entities_GolemManager_golemStateTable" data-uid="GrandmaGreen.Entities.GolemManager.golemStateTable">golemStateTable</h4>
+  <h4 id="GrandmaGreen_Garden_GardenVFX_FertilizerParticleBurst" data-uid="GrandmaGreen.Garden.GardenVFX.FertilizerParticleBurst">FertilizerParticleBurst</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public GolemState[] golemStateTable</code></pre>
+    <pre><code class="lang-csharp hljs">public ParticleSystem FertilizerParticleBurst</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -140,19 +140,19 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="GrandmaGreen.Entities.GolemState.html">GolemState</a>[]</td>
+        <td><span class="xref">ParticleSystem</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <h4 id="GrandmaGreen_Entities_GolemManager_playerController" data-uid="GrandmaGreen.Entities.GolemManager.playerController">playerController</h4>
+  <h4 id="GrandmaGreen_Garden_GardenVFX_WateringParticleBurst" data-uid="GrandmaGreen.Garden.GardenVFX.WateringParticleBurst">WateringParticleBurst</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public EntityController playerController</code></pre>
+    <pre><code class="lang-csharp hljs">public ParticleSystem WateringParticleBurst</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -164,7 +164,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="GrandmaGreen.Entities.EntityController.html">EntityController</a></td>
+        <td><span class="xref">ParticleSystem</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -173,13 +173,13 @@
   </h3>
   
   
-  <a id="GrandmaGreen_Entities_GolemManager_CreateGolem_" data-uid="GrandmaGreen.Entities.GolemManager.CreateGolem*"></a>
-  <h4 id="GrandmaGreen_Entities_GolemManager_CreateGolem_System_UInt16_" data-uid="GrandmaGreen.Entities.GolemManager.CreateGolem(System.UInt16)">CreateGolem(UInt16)</h4>
+  <a id="GrandmaGreen_Garden_GardenVFX_PlayDryParticle_" data-uid="GrandmaGreen.Garden.GardenVFX.PlayDryParticle*"></a>
+  <h4 id="GrandmaGreen_Garden_GardenVFX_PlayDryParticle_Vector3_" data-uid="GrandmaGreen.Garden.GardenVFX.PlayDryParticle(Vector3)">PlayDryParticle(Vector3)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public GolemState CreateGolem(ushort id)</code></pre>
+    <pre><code class="lang-csharp hljs">public void PlayDryParticle(Vector3 position)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -187,86 +187,26 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">UInt16</a></td>
-        <td><span class="parametername">id</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="GrandmaGreen.Entities.GolemState.html">GolemState</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="GrandmaGreen_Entities_GolemManager_GetPlayerPos_" data-uid="GrandmaGreen.Entities.GolemManager.GetPlayerPos*"></a>
-  <h4 id="GrandmaGreen_Entities_GolemManager_GetPlayerPos" data-uid="GrandmaGreen.Entities.GolemManager.GetPlayerPos">GetPlayerPos()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Vector3 GetPlayerPos()</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">Vector3</span></td>
+        <td><span class="parametername">position</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="GrandmaGreen_Entities_GolemManager_Initialize_" data-uid="GrandmaGreen.Entities.GolemManager.Initialize*"></a>
-  <h4 id="GrandmaGreen_Entities_GolemManager_Initialize" data-uid="GrandmaGreen.Entities.GolemManager.Initialize">Initialize()</h4>
+  <a id="GrandmaGreen_Garden_GardenVFX_PlayFertilizerParticle_" data-uid="GrandmaGreen.Garden.GardenVFX.PlayFertilizerParticle*"></a>
+  <h4 id="GrandmaGreen_Garden_GardenVFX_PlayFertilizerParticle_Vector3_" data-uid="GrandmaGreen.Garden.GardenVFX.PlayFertilizerParticle(Vector3)">PlayFertilizerParticle(Vector3)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Initialize()</code></pre>
-  </div>
-  
-  
-  <a id="GrandmaGreen_Entities_GolemManager_OnDestroy_" data-uid="GrandmaGreen.Entities.GolemManager.OnDestroy*"></a>
-  <h4 id="GrandmaGreen_Entities_GolemManager_OnDestroy" data-uid="GrandmaGreen.Entities.GolemManager.OnDestroy">OnDestroy()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void OnDestroy()</code></pre>
-  </div>
-  
-  
-  <a id="GrandmaGreen_Entities_GolemManager_OnGolemHappinessChanged_" data-uid="GrandmaGreen.Entities.GolemManager.OnGolemHappinessChanged*"></a>
-  <h4 id="GrandmaGreen_Entities_GolemManager_OnGolemHappinessChanged_System_UInt16_System_Int32_" data-uid="GrandmaGreen.Entities.GolemManager.OnGolemHappinessChanged(System.UInt16,System.Int32)">OnGolemHappinessChanged(UInt16, Int32)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void OnGolemHappinessChanged(ushort id, int val)</code></pre>
+    <pre><code class="lang-csharp hljs">public void PlayFertilizerParticle(Vector3 position)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -278,60 +218,22 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">UInt16</a></td>
-        <td><span class="parametername">id</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
-        <td><span class="parametername">val</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="GrandmaGreen_Entities_GolemManager_OnGolemSpawn_" data-uid="GrandmaGreen.Entities.GolemManager.OnGolemSpawn*"></a>
-  <h4 id="GrandmaGreen_Entities_GolemManager_OnGolemSpawn_System_UInt16_Vector3_" data-uid="GrandmaGreen.Entities.GolemManager.OnGolemSpawn(System.UInt16,Vector3)">OnGolemSpawn(UInt16, Vector3)</h4>
-  <div class="markdown level1 summary"><p>Spawn Golem when harvest</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void OnGolemSpawn(ushort id, Vector3 pos)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">UInt16</a></td>
-        <td><span class="parametername">id</span></td>
-        <td></td>
-      </tr>
       <tr>
         <td><span class="xref">Vector3</span></td>
-        <td><span class="parametername">pos</span></td>
+        <td><span class="parametername">position</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="GrandmaGreen_Entities_GolemManager_UpdateGolemTask_" data-uid="GrandmaGreen.Entities.GolemManager.UpdateGolemTask*"></a>
-  <h4 id="GrandmaGreen_Entities_GolemManager_UpdateGolemTask_System_UInt16_Vector3Int_" data-uid="GrandmaGreen.Entities.GolemManager.UpdateGolemTask(System.UInt16,Vector3Int)">UpdateGolemTask(UInt16, Vector3Int)</h4>
+  <a id="GrandmaGreen_Garden_GardenVFX_PlayWaterParticle_" data-uid="GrandmaGreen.Garden.GardenVFX.PlayWaterParticle*"></a>
+  <h4 id="GrandmaGreen_Garden_GardenVFX_PlayWaterParticle_Vector3_" data-uid="GrandmaGreen.Garden.GardenVFX.PlayWaterParticle(Vector3)">PlayWaterParticle(Vector3)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void UpdateGolemTask(ushort id, Vector3Int cell)</code></pre>
+    <pre><code class="lang-csharp hljs">public void PlayWaterParticle(Vector3 position)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -344,13 +246,8 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">UInt16</a></td>
-        <td><span class="parametername">id</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">Vector3Int</span></td>
-        <td><span class="parametername">cell</span></td>
+        <td><span class="xref">Vector3</span></td>
+        <td><span class="parametername">position</span></td>
         <td></td>
       </tr>
     </tbody>
