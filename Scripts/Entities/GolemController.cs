@@ -52,6 +52,7 @@ namespace GrandmaGreen.Entities
         SoundPlayer footstepsPlayer;
 
         private bool m_isInteracting = false;
+        private bool m_isDoingTask = false;
         #endregion
 
         #region events
@@ -68,6 +69,7 @@ namespace GrandmaGreen.Entities
             //Subscribe
             EventManager.instance.EVENT_GOLEM_EVOLVE += OnGolemEvolve;
             EventManager.instance.EVENT_GOLEM_RELEASE_SELECTED += OnGolemSelectRelease;
+            EventManager.instance.EVENT_GOLEM_DO_TASK += UpdateTaskState;
 
             // create our behaviour tree and get it's blackboard
             behaviorTree = CreateBehaviourTree();
@@ -88,8 +90,9 @@ namespace GrandmaGreen.Entities
         }
 
         private void OnDestroy() {
-            // onEntityInteract -= UpdateInteractState;
             EventManager.instance.EVENT_GOLEM_EVOLVE -= OnGolemEvolve;
+            EventManager.instance.EVENT_GOLEM_RELEASE_SELECTED -= OnGolemSelectRelease;
+            EventManager.instance.EVENT_GOLEM_DO_TASK -= UpdateTaskState;
             StopBehaviorTree();
         }
 
@@ -118,7 +121,7 @@ namespace GrandmaGreen.Entities
                     this.gameObject.transform.localScale = new Vector3(-1, 1, 1);
                 }
 
-                if ((playerPos - transform.position).sqrMagnitude <= 3.0f) {
+                if ((playerPos - transform.position).sqrMagnitude <= 5.0f) {
                     GetComponentInChildren<GolemMenu>().ToggleMenu(true);
                 } else {
                     GetComponentInChildren<GolemMenu>().ToggleMenu(false);
@@ -129,6 +132,7 @@ namespace GrandmaGreen.Entities
         private void InitializeBT() {
             behaviorTree.Blackboard.Set(BK_PREV_POSITION, transform.position);
             behaviorTree.Blackboard.Set("isInteract", m_isInteracting);
+            behaviorTree.Blackboard.Set("isDoingTask", m_isDoingTask);
         }
 
         private Root CreateBehaviourTree()
@@ -141,8 +145,8 @@ namespace GrandmaGreen.Entities
                             new Sequence(
                                 new Action(() => {
                                     CancelPath();
-                                }) {Label = "Change movement."},
-                                
+                                }) { Label = "Change movement." },
+
                                 // new Action(() =>
                                 // {
                                 //     GetComponentInChildren<GolemMenu>().TriggerMenu();
@@ -152,14 +156,53 @@ namespace GrandmaGreen.Entities
                             )
                         ),
 
-                        //2. wandering behaviour
+                        //2. Watering behavior
+                        new BlackboardCondition("isDoingTask", Operator.IS_EQUAL, true, Stops.IMMEDIATE_RESTART,
+                            new Sequence(
+                                // Set Position to move to
+                                new Cooldown(delay, new Action(() =>
+                                {
+                                    Vector3Int taskPos = golemManager.golemStateTable[(int)id - 5000].assignedCell;
+                                    Debug.Log(taskPos);
+                                    behaviorTree.Blackboard.Set(BK_WANDER_POSITION, (Vector3)taskPos);
+                                })) { Label = "Change Destination"},
+
+                                // Move to new pos until arrival, and then water
+                                new Action((bool inBound) =>
+                                {
+                                    if (!inBound)
+                                    {
+                                        Vector3 pos = blackboard.Get<Vector3>(BK_WANDER_POSITION);
+                                        SetDestination(pos);
+                                        if ((pos - transform.position).magnitude < 0.5f)
+                                        {
+                                            return Action.Result.SUCCESS;
+                                        }
+                                        return Action.Result.PROGRESS;
+                                    }
+                                    else
+                                    {
+                                        return Action.Result.FAILED;
+                                    }
+                                }) { Label = "Travel To Destination" },
+
+                                new Action(() =>
+                                {
+                                    UpdateTaskState();
+                                }) { Label = "Water Cell"},
+
+                                new WaitUntilStopped()
+                            )
+                        ),
+
+                        //3. wandering behaviour
                         new Sequence(
                             // set wander pos
                             new Cooldown(delay, new Action(() => {
-                                    Vector3 randPos = FindRandomDestination(range);
-                                    behaviorTree.Blackboard.Set(BK_WANDER_POSITION,randPos); 
+                                Vector3 randPos = FindRandomDestination(range);
+                                behaviorTree.Blackboard.Set(BK_WANDER_POSITION, randPos);
                             })),
-                            
+
                             // move to new pos until arrival
                             new Action((bool _shouldCancel) =>
                             {
@@ -167,7 +210,7 @@ namespace GrandmaGreen.Entities
                                 {
                                     Vector3 pos = blackboard.Get<Vector3>(BK_WANDER_POSITION);
                                     SetDestination(pos);
-                                    if ((pos-transform.position).magnitude < 0.1f) {
+                                    if ((pos - transform.position).magnitude < 0.1f) {
                                         return Action.Result.SUCCESS;
                                     }
                                     return Action.Result.PROGRESS;
@@ -213,8 +256,31 @@ namespace GrandmaGreen.Entities
             behaviorTree.Blackboard.Set("isInteract", m_isInteracting);
             if (m_isInteracting) {
                 EventManager.instance.HandleEVENT_GOLEM_GRANDMA_MOVE_TO(transform.position);
+            } else {
+                GetComponentInChildren<GolemMenu>().ToggleMenu(false);
             }
+        }
 
+        public void UpdateDraggingState()
+        {
+            Debug.Log("Dragging.");
+            m_isInteracting = !m_isInteracting;
+            behaviorTree.Blackboard.Set("isInteract", m_isInteracting);
+        }
+
+        public void UpdateTaskState()
+        {
+            if(golemManager.golemStateTable[(int)id - 5000].assignedWatering)
+            {
+                Debug.Log("Task Assigned, now watering");
+                m_isDoingTask = !m_isDoingTask;
+                behaviorTree.Blackboard.Set("isDoingTask", m_isDoingTask);
+                if(!m_isDoingTask) EventManager.instance.HandleEVENT_WATER_PLANT(golemManager.golemStateTable[(int)id - 5000].assignedCell);
+                Debug.Log(m_isDoingTask);
+            } else
+            {
+                Debug.Log("No Task Assigned");
+            }
         }
 
         public void RegisterManager(GolemManager mgmr)

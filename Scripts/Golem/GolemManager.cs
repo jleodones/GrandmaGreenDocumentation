@@ -5,6 +5,7 @@ using UnityEngine.Splines;
 using Pathfinding;
 using Core.RNG;
 using GrandmaGreen.Collections;
+using GrandmaGreen.Garden;
 
 namespace GrandmaGreen.Entities 
 {
@@ -31,6 +32,7 @@ namespace GrandmaGreen.Entities
                 isSpawned = true,
                 isMature = false,
                 isTravelling = false,
+                assignedWatering = false,
             };
         }
 
@@ -96,6 +98,19 @@ namespace GrandmaGreen.Entities
         public Vector3 GetPlayerPos()
         {
             return playerController.GetEntityPos();
+        }
+
+        public void UpdateGolemTask(ushort id, Vector3Int cell)
+        {
+            int index = offsetId(id);
+            if (!isIdValid(index))
+            {
+                Debug.LogError("Golem id wrong");
+                return;
+            }
+
+            golemStateTable[index].assignedCell = cell;
+            golemStateTable[index].assignedWatering = true;
         }
 
         public void OnDestroy() {

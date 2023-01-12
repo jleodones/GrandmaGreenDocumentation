@@ -28,6 +28,7 @@ namespace GrandmaGreen.UI.Golems
             // Register button callback.
             golemMenu.rootVisualElement.Q<Button>("dialogue").RegisterCallback<ClickEvent>(OnDialogueTrigger);
             golemMenu.rootVisualElement.Q<Button>("gift").RegisterCallback<ClickEvent>(OnGiftTrigger);
+            golemMenu.rootVisualElement.Q<Button>("task").RegisterCallback<ClickEvent>(OnTaskTrigger);
 
             root = golemMenu.rootVisualElement.Q("rootElement");
             golemController =  GetComponentInParent<GolemController>();
@@ -88,6 +89,13 @@ namespace GrandmaGreen.UI.Golems
             ushort gid = golemController.GetGolemID();
 
             EventManager.instance.HandleEVENT_GOLEM_HAPPINESS_UPDATE(gid, 30);
+        }
+
+        private void OnTaskTrigger(ClickEvent clickEvent)
+        {
+            ushort gid = golemController.GetGolemID();
+
+            EventManager.instance.HandleEVENT_GOLEM_ASSIGN_TASK(gid);
         }
         
         public void SetLocation(Vector3 worldPosition)

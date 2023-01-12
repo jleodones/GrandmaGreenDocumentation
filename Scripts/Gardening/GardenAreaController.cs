@@ -21,6 +21,7 @@ namespace GrandmaGreen.Garden
         [Header("Garden Management")]
         public GardenManager gardenManager;
         public GardenCustomizer gardenCustomizer;
+        public GardenVFX gardenVFX;
         public Cinemachine.CinemachineVirtualCamera customizationCamera;
         public GameObject defaultPlantPrefab;
         public Dictionary<Vector3Int, GameObject> plantPrefabLookup;
@@ -32,9 +33,6 @@ namespace GrandmaGreen.Garden
 
         [Header("Temporary Effects")]
         public bool m_inCustomizationMode = false;
-        public ParticleSystem FertilizerParticleBurst;
-        public ParticleSystem WateringParticleBurst;
-        public ParticleSystem DryingUpBurst;
         public float DropRate = 100;
         public float FertilizationBonus = 10;
 
@@ -54,6 +52,7 @@ namespace GrandmaGreen.Garden
 
             onTilemapSelection += GardenTileSelected;
             EventManager.instance.EVENT_PLANT_UPDATE += PlantUpdate;
+            EventManager.instance.EVENT_WATER_PLANT += WaterPlant;
 
             EventManager.instance.EVENT_INVENTORY_CUSTOMIZATION_START += StartDecorCustomization;
             EventManager.instance.EVENT_CUSTOMIZATION_ATTEMPT += CompleteDecorCustomization;
@@ -69,6 +68,7 @@ namespace GrandmaGreen.Garden
         {
             onTilemapSelection -= GardenTileSelected;
             EventManager.instance.EVENT_PLANT_UPDATE -= PlantUpdate;
+            EventManager.instance.EVENT_WATER_PLANT -= WaterPlant;
 
             EventManager.instance.EVENT_INVENTORY_CUSTOMIZATION_START -= StartDecorCustomization;
             EventManager.instance.EVENT_CUSTOMIZATION_ATTEMPT -= CompleteDecorCustomization;
@@ -251,9 +251,7 @@ namespace GrandmaGreen.Garden
                         // Debug.Log("Plant is wilted");
                         UpdateSprite(updatedPlant.cell);
 
-                        Vector3 centerOfCell = tilemap.GetCellCenterWorld(updatedPlant.cell);
-                        Quaternion particleQuat = Quaternion.Euler(-110, 0, 0);
-                        Instantiate(DryingUpBurst, centerOfCell + new Vector3(0, -1, -2), particleQuat);
+                        gardenVFX.PlayDryParticle(tilemap.GetCellCenterWorld(updatedPlant.cell));
                     }
                     else if (!gardenManager.PlantIsFullyGrown(areaIndex, updatedPlant.cell))
                     {
@@ -264,9 +262,7 @@ namespace GrandmaGreen.Garden
                             // Debug.Log("Plant is dead");
                             UpdateSprite(updatedPlant.cell);
 
-                            Vector3 centerOfCell = tilemap.GetCellCenterWorld(updatedPlant.cell);
-                            Quaternion particleQuat = Quaternion.Euler(-110, 0, 0);
-                            Instantiate(DryingUpBurst, centerOfCell + new Vector3(0, -1, -2), particleQuat);
+                            gardenVFX.PlayDryParticle(tilemap.GetCellCenterWorld(updatedPlant.cell));
                         }
                     }
                 }
@@ -289,22 +285,16 @@ namespace GrandmaGreen.Garden
                 UpdateSprite(cell);
             }
 
-            // Temporary code to spawn a particle system so we know that a plant has been watered
-            // This should be replaced by some sort of animation/constant effect
-            Vector3 centerOfCell = tilemap.GetCellCenterWorld(cell);
-            Quaternion particleQuat = Quaternion.Euler(-110, 0, 0);
-            Instantiate(WateringParticleBurst, centerOfCell + new Vector3(0, 0, -2), particleQuat);
+            // Spawn a particle system so we know that a plant has been watered
+            gardenVFX.PlayWaterParticle(tilemap.GetCellCenterWorld(cell));
         }
 
         public void FertilizePlant(Vector3Int cell)
         {
             if (gardenManager.SetFertilization(areaIndex, cell))
             {
-                // Temporary code to spawn a particle system so we know that a plant has been fertilized
-                // This should be replaced by some sort of animation/constant effect
-                Vector3 centerOfCell = tilemap.GetCellCenterWorld(cell);
-                Quaternion particleQuat = Quaternion.Euler(-110, 0, 0);
-                Instantiate(FertilizerParticleBurst, centerOfCell + new Vector3(0, 0, -2), particleQuat);
+                //Spawn a particle system so we know that a plant has been fertilized
+                gardenVFX.PlayFertilizerParticle(tilemap.GetCellCenterWorld(cell));
             }
         }
 

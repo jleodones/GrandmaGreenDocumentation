@@ -166,6 +166,8 @@ namespace GrandmaGreen
         public event Action<ushort> EVENT_GOLEM_EVOLVE;
         public event Action<Vector3> EVENT_GOLEM_GRANDMA_MOVE_TO; 
         public event Action EVENT_GOLEM_RELEASE_SELECTED;
+        public event Action<ushort> EVENT_ASSIGN_TASK;
+        public event Action EVENT_GOLEM_DO_TASK;
 
         public void HandleEVENT_GOLEM_RELEASE_SELECTED() {EVENT_GOLEM_RELEASE_SELECTED?.Invoke();}
         public void HandleEVENT_GOLEM_SPAWN(ushort id, Vector3 pos) { EVENT_GOLEM_SPAWN?.Invoke(id, pos); }
@@ -180,14 +182,24 @@ namespace GrandmaGreen
         {
             EVENT_GOLEM_GRANDMA_MOVE_TO?.Invoke(pos);
         }
+
+        public void HandleEVENT_GOLEM_ASSIGN_TASK(ushort id) { EVENT_ASSIGN_TASK?.Invoke(id); }
+
+        public void HandleEVENT_GOLEM_DO_TASK() { EVENT_GOLEM_DO_TASK?.Invoke(); }
         #endregion
 
         #region Plant growth event.
         public event Action<int, Vector3Int> EVENT_PLANT_UPDATE;
+        public event Action<Vector3Int> EVENT_WATER_PLANT;
 
         public void HandleEVENT_PLANT_UPDATE(int areaIndex, Vector3Int cell)
         {
             EVENT_PLANT_UPDATE?.Invoke(areaIndex, cell);
+        }
+
+        public void HandleEVENT_WATER_PLANT(Vector3Int cell)
+        {
+            EVENT_WATER_PLANT?.Invoke(cell);
         }
         #endregion
        

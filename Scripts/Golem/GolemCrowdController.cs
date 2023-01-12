@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using GrandmaGreen.Collections;
 using UnityEngine;
 using Sirenix.OdinInspector;
+using GrandmaGreen.Garden;
 
 namespace GrandmaGreen.Entities
 {
@@ -10,10 +11,14 @@ namespace GrandmaGreen.Entities
     {
         [Header("Golem Management")]
         public GolemManager golemManager;
-        
+
+        [Header("Golem References")]
+        public GardenAreaController gardenArea;
+
         public void Awake()
         {
             golemManager.Initialize();
+            EventManager.instance.EVENT_ASSIGN_TASK += AssignGolemAction;
         }
 
         [Header("Debug Options")]
@@ -34,5 +39,34 @@ namespace GrandmaGreen.Entities
             golemManager.OnGolemSpawn(id, pos);
         }
 
+        public void AssignGolemAction(ushort id)
+        {
+            Debug.Log("Task Assigned");
+            List<PlantState> plants = gardenArea.gardenManager.GetPlants(gardenArea.areaIndex);
+            if(plants.Count != 0)
+            {
+                int randIndex = Random.Range(0, plants.Count - 1);
+                Debug.Log(plants[randIndex].cell);
+                golemManager.UpdateGolemTask(id, plants[randIndex].cell);
+            }
+
+        }
+
+        public void GolemDoAction()
+        {
+            foreach(GolemState golem in golemManager.golemStateTable)
+            {
+                if (golem.assignedWatering)
+                {
+                    EventManager.instance.HandleEVENT_GOLEM_DO_TASK();
+                }
+            }
+        }
+
+        [Button(ButtonSizes.Medium)]
+        public void WaterGolem()
+        {
+            GolemDoAction();
+        }
     }
 }

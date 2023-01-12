@@ -9,8 +9,10 @@ namespace GrandmaGreen.Entities
     {
         public CharacterId golemID;
         public int happiness;
+        public Vector3Int assignedCell;
         public bool isSpawned;
         public bool isMature;
         public bool isTravelling;
+        public bool assignedWatering;
     }
 }
