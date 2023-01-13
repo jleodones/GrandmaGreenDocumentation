@@ -2001,6 +2001,102 @@ references:
   commentId: F:GrandmaGreen.Collections.DecorationId.WoodPath
   fullName: GrandmaGreen.Collections.DecorationId.WoodPath
   nameWithType: DecorationId.WoodPath
+- uid: GrandmaGreen.Collections.FlowerId
+  name: FlowerId
+  href: api/GrandmaGreen.Collections.FlowerId.html
+  commentId: T:GrandmaGreen.Collections.FlowerId
+  fullName: GrandmaGreen.Collections.FlowerId
+  nameWithType: FlowerId
+- uid: GrandmaGreen.Collections.FlowerId.CallaLily
+  name: CallaLily
+  href: api/GrandmaGreen.Collections.FlowerId.html#GrandmaGreen_Collections_FlowerId_CallaLily
+  commentId: F:GrandmaGreen.Collections.FlowerId.CallaLily
+  fullName: GrandmaGreen.Collections.FlowerId.CallaLily
+  nameWithType: FlowerId.CallaLily
+- uid: GrandmaGreen.Collections.FlowerId.Crocus
+  name: Crocus
+  href: api/GrandmaGreen.Collections.FlowerId.html#GrandmaGreen_Collections_FlowerId_Crocus
+  commentId: F:GrandmaGreen.Collections.FlowerId.Crocus
+  fullName: GrandmaGreen.Collections.FlowerId.Crocus
+  nameWithType: FlowerId.Crocus
+- uid: GrandmaGreen.Collections.FlowerId.Dahlia
+  name: Dahlia
+  href: api/GrandmaGreen.Collections.FlowerId.html#GrandmaGreen_Collections_FlowerId_Dahlia
+  commentId: F:GrandmaGreen.Collections.FlowerId.Dahlia
+  fullName: GrandmaGreen.Collections.FlowerId.Dahlia
+  nameWithType: FlowerId.Dahlia
+- uid: GrandmaGreen.Collections.FlowerId.Hyacinth
+  name: Hyacinth
+  href: api/GrandmaGreen.Collections.FlowerId.html#GrandmaGreen_Collections_FlowerId_Hyacinth
+  commentId: F:GrandmaGreen.Collections.FlowerId.Hyacinth
+  fullName: GrandmaGreen.Collections.FlowerId.Hyacinth
+  nameWithType: FlowerId.Hyacinth
+- uid: GrandmaGreen.Collections.FlowerId.Pansy
+  name: Pansy
+  href: api/GrandmaGreen.Collections.FlowerId.html#GrandmaGreen_Collections_FlowerId_Pansy
+  commentId: F:GrandmaGreen.Collections.FlowerId.Pansy
+  fullName: GrandmaGreen.Collections.FlowerId.Pansy
+  nameWithType: FlowerId.Pansy
+- uid: GrandmaGreen.Collections.FlowerId.Rose
+  name: Rose
+  href: api/GrandmaGreen.Collections.FlowerId.html#GrandmaGreen_Collections_FlowerId_Rose
+  commentId: F:GrandmaGreen.Collections.FlowerId.Rose
+  fullName: GrandmaGreen.Collections.FlowerId.Rose
+  nameWithType: FlowerId.Rose
+- uid: GrandmaGreen.Collections.FlowerId.Tulip
+  name: Tulip
+  href: api/GrandmaGreen.Collections.FlowerId.html#GrandmaGreen_Collections_FlowerId_Tulip
+  commentId: F:GrandmaGreen.Collections.FlowerId.Tulip
+  fullName: GrandmaGreen.Collections.FlowerId.Tulip
+  nameWithType: FlowerId.Tulip
+- uid: GrandmaGreen.Collections.FruitId
+  name: FruitId
+  href: api/GrandmaGreen.Collections.FruitId.html
+  commentId: T:GrandmaGreen.Collections.FruitId
+  fullName: GrandmaGreen.Collections.FruitId
+  nameWithType: FruitId
+- uid: GrandmaGreen.Collections.FruitId.Apple
+  name: Apple
+  href: api/GrandmaGreen.Collections.FruitId.html#GrandmaGreen_Collections_FruitId_Apple
+  commentId: F:GrandmaGreen.Collections.FruitId.Apple
+  fullName: GrandmaGreen.Collections.FruitId.Apple
+  nameWithType: FruitId.Apple
+- uid: GrandmaGreen.Collections.FruitId.Blueberry
+  name: Blueberry
+  href: api/GrandmaGreen.Collections.FruitId.html#GrandmaGreen_Collections_FruitId_Blueberry
+  commentId: F:GrandmaGreen.Collections.FruitId.Blueberry
+  fullName: GrandmaGreen.Collections.FruitId.Blueberry
+  nameWithType: FruitId.Blueberry
+- uid: GrandmaGreen.Collections.FruitId.Cherry
+  name: Cherry
+  href: api/GrandmaGreen.Collections.FruitId.html#GrandmaGreen_Collections_FruitId_Cherry
+  commentId: F:GrandmaGreen.Collections.FruitId.Cherry
+  fullName: GrandmaGreen.Collections.FruitId.Cherry
+  nameWithType: FruitId.Cherry
+- uid: GrandmaGreen.Collections.FruitId.Peach
+  name: Peach
+  href: api/GrandmaGreen.Collections.FruitId.html#GrandmaGreen_Collections_FruitId_Peach
+  commentId: F:GrandmaGreen.Collections.FruitId.Peach
+  fullName: GrandmaGreen.Collections.FruitId.Peach
+  nameWithType: FruitId.Peach
+- uid: GrandmaGreen.Collections.FruitId.Pear
+  name: Pear
+  href: api/GrandmaGreen.Collections.FruitId.html#GrandmaGreen_Collections_FruitId_Pear
+  commentId: F:GrandmaGreen.Collections.FruitId.Pear
+  fullName: GrandmaGreen.Collections.FruitId.Pear
+  nameWithType: FruitId.Pear
+- uid: GrandmaGreen.Collections.FruitId.Plum
+  name: Plum
+  href: api/GrandmaGreen.Collections.FruitId.html#GrandmaGreen_Collections_FruitId_Plum
+  commentId: F:GrandmaGreen.Collections.FruitId.Plum
+  fullName: GrandmaGreen.Collections.FruitId.Plum
+  nameWithType: FruitId.Plum
+- uid: GrandmaGreen.Collections.FruitId.Watermelon
+  name: Watermelon
+  href: api/GrandmaGreen.Collections.FruitId.html#GrandmaGreen_Collections_FruitId_Watermelon
+  commentId: F:GrandmaGreen.Collections.FruitId.Watermelon
+  fullName: GrandmaGreen.Collections.FruitId.Watermelon
+  nameWithType: FruitId.Watermelon
 - uid: GrandmaGreen.Collections.IInventoryItem
   name: IInventoryItem
   href: api/GrandmaGreen.Collections.IInventoryItem.html
@@ -2709,6 +2805,54 @@ references:
   commentId: F:GrandmaGreen.Collections.ToolId.WateringCan
   fullName: GrandmaGreen.Collections.ToolId.WateringCan
   nameWithType: ToolId.WateringCan
+- uid: GrandmaGreen.Collections.VegetableId
+  name: VegetableId
+  href: api/GrandmaGreen.Collections.VegetableId.html
+  commentId: T:GrandmaGreen.Collections.VegetableId
+  fullName: GrandmaGreen.Collections.VegetableId
+  nameWithType: VegetableId
+- uid: GrandmaGreen.Collections.VegetableId.Corn
+  name: Corn
+  href: api/GrandmaGreen.Collections.VegetableId.html#GrandmaGreen_Collections_VegetableId_Corn
+  commentId: F:GrandmaGreen.Collections.VegetableId.Corn
+  fullName: GrandmaGreen.Collections.VegetableId.Corn
+  nameWithType: VegetableId.Corn
+- uid: GrandmaGreen.Collections.VegetableId.Cucumber
+  name: Cucumber
+  href: api/GrandmaGreen.Collections.VegetableId.html#GrandmaGreen_Collections_VegetableId_Cucumber
+  commentId: F:GrandmaGreen.Collections.VegetableId.Cucumber
+  fullName: GrandmaGreen.Collections.VegetableId.Cucumber
+  nameWithType: VegetableId.Cucumber
+- uid: GrandmaGreen.Collections.VegetableId.Pepper
+  name: Pepper
+  href: api/GrandmaGreen.Collections.VegetableId.html#GrandmaGreen_Collections_VegetableId_Pepper
+  commentId: F:GrandmaGreen.Collections.VegetableId.Pepper
+  fullName: GrandmaGreen.Collections.VegetableId.Pepper
+  nameWithType: VegetableId.Pepper
+- uid: GrandmaGreen.Collections.VegetableId.Pumpkin
+  name: Pumpkin
+  href: api/GrandmaGreen.Collections.VegetableId.html#GrandmaGreen_Collections_VegetableId_Pumpkin
+  commentId: F:GrandmaGreen.Collections.VegetableId.Pumpkin
+  fullName: GrandmaGreen.Collections.VegetableId.Pumpkin
+  nameWithType: VegetableId.Pumpkin
+- uid: GrandmaGreen.Collections.VegetableId.Radish
+  name: Radish
+  href: api/GrandmaGreen.Collections.VegetableId.html#GrandmaGreen_Collections_VegetableId_Radish
+  commentId: F:GrandmaGreen.Collections.VegetableId.Radish
+  fullName: GrandmaGreen.Collections.VegetableId.Radish
+  nameWithType: VegetableId.Radish
+- uid: GrandmaGreen.Collections.VegetableId.SweetPotato
+  name: SweetPotato
+  href: api/GrandmaGreen.Collections.VegetableId.html#GrandmaGreen_Collections_VegetableId_SweetPotato
+  commentId: F:GrandmaGreen.Collections.VegetableId.SweetPotato
+  fullName: GrandmaGreen.Collections.VegetableId.SweetPotato
+  nameWithType: VegetableId.SweetPotato
+- uid: GrandmaGreen.Collections.VegetableId.Tomato
+  name: Tomato
+  href: api/GrandmaGreen.Collections.VegetableId.html#GrandmaGreen_Collections_VegetableId_Tomato
+  commentId: F:GrandmaGreen.Collections.VegetableId.Tomato
+  fullName: GrandmaGreen.Collections.VegetableId.Tomato
+  nameWithType: VegetableId.Tomato
 - uid: GrandmaGreen.CollectionUIDisplay
   name: CollectionUIDisplay
   href: api/GrandmaGreen.CollectionUIDisplay.html
@@ -5676,6 +5820,19 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Garden.GardenAreaController.FertilizePlant
   nameWithType: GardenAreaController.FertilizePlant
+- uid: GrandmaGreen.Garden.GardenAreaController.FlowerTest
+  name: FlowerTest()
+  href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_FlowerTest
+  commentId: M:GrandmaGreen.Garden.GardenAreaController.FlowerTest
+  fullName: GrandmaGreen.Garden.GardenAreaController.FlowerTest()
+  nameWithType: GardenAreaController.FlowerTest()
+- uid: GrandmaGreen.Garden.GardenAreaController.FlowerTest*
+  name: FlowerTest
+  href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_FlowerTest_
+  commentId: Overload:GrandmaGreen.Garden.GardenAreaController.FlowerTest
+  isSpec: "True"
+  fullName: GrandmaGreen.Garden.GardenAreaController.FlowerTest
+  nameWithType: GardenAreaController.FlowerTest
 - uid: GrandmaGreen.Garden.GardenAreaController.gardenCustomizer
   name: gardenCustomizer
   href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_gardenCustomizer
@@ -5861,6 +6018,19 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Garden.GardenAreaController.RemoveDecorItemFromGarden
   nameWithType: GardenAreaController.RemoveDecorItemFromGarden
+- uid: GrandmaGreen.Garden.GardenAreaController.ResetGarden
+  name: ResetGarden()
+  href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_ResetGarden
+  commentId: M:GrandmaGreen.Garden.GardenAreaController.ResetGarden
+  fullName: GrandmaGreen.Garden.GardenAreaController.ResetGarden()
+  nameWithType: GardenAreaController.ResetGarden()
+- uid: GrandmaGreen.Garden.GardenAreaController.ResetGarden*
+  name: ResetGarden
+  href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_ResetGarden_
+  commentId: Overload:GrandmaGreen.Garden.GardenAreaController.ResetGarden
+  isSpec: "True"
+  fullName: GrandmaGreen.Garden.GardenAreaController.ResetGarden
+  nameWithType: GardenAreaController.ResetGarden
 - uid: GrandmaGreen.Garden.GardenAreaController.StartDecorCustomization(GrandmaGreen.Garden.GardenDecorItem)
   name: StartDecorCustomization(GardenDecorItem)
   href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_StartDecorCustomization_GrandmaGreen_Garden_GardenDecorItem_
@@ -6724,30 +6894,6 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Garden.Genotype.Genotype
   nameWithType: Genotype.Genotype
-- uid: GrandmaGreen.Garden.Genotype.a1
-  name: a1
-  href: api/GrandmaGreen.Garden.Genotype.html#GrandmaGreen_Garden_Genotype_a1
-  commentId: F:GrandmaGreen.Garden.Genotype.a1
-  fullName: GrandmaGreen.Garden.Genotype.a1
-  nameWithType: Genotype.a1
-- uid: GrandmaGreen.Garden.Genotype.a2
-  name: a2
-  href: api/GrandmaGreen.Garden.Genotype.html#GrandmaGreen_Garden_Genotype_a2
-  commentId: F:GrandmaGreen.Garden.Genotype.a2
-  fullName: GrandmaGreen.Garden.Genotype.a2
-  nameWithType: Genotype.a2
-- uid: GrandmaGreen.Garden.Genotype.b1
-  name: b1
-  href: api/GrandmaGreen.Garden.Genotype.html#GrandmaGreen_Garden_Genotype_b1
-  commentId: F:GrandmaGreen.Garden.Genotype.b1
-  fullName: GrandmaGreen.Garden.Genotype.b1
-  nameWithType: Genotype.b1
-- uid: GrandmaGreen.Garden.Genotype.b2
-  name: b2
-  href: api/GrandmaGreen.Garden.Genotype.html#GrandmaGreen_Garden_Genotype_b2
-  commentId: F:GrandmaGreen.Garden.Genotype.b2
-  fullName: GrandmaGreen.Garden.Genotype.b2
-  nameWithType: Genotype.b2
 - uid: GrandmaGreen.Garden.Genotype.Cross(GrandmaGreen.Garden.Genotype)
   name: Cross(Genotype)
   href: api/GrandmaGreen.Garden.Genotype.html#GrandmaGreen_Garden_Genotype_Cross_GrandmaGreen_Garden_Genotype_
@@ -6774,18 +6920,6 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Garden.Genotype.Equals
   nameWithType: Genotype.Equals
-- uid: GrandmaGreen.Garden.Genotype.f1
-  name: f1
-  href: api/GrandmaGreen.Garden.Genotype.html#GrandmaGreen_Garden_Genotype_f1
-  commentId: F:GrandmaGreen.Garden.Genotype.f1
-  fullName: GrandmaGreen.Garden.Genotype.f1
-  nameWithType: Genotype.f1
-- uid: GrandmaGreen.Garden.Genotype.f2
-  name: f2
-  href: api/GrandmaGreen.Garden.Genotype.html#GrandmaGreen_Garden_Genotype_f2
-  commentId: F:GrandmaGreen.Garden.Genotype.f2
-  fullName: GrandmaGreen.Garden.Genotype.f2
-  nameWithType: Genotype.f2
 - uid: GrandmaGreen.Garden.Genotype.generation
   name: generation
   href: api/GrandmaGreen.Garden.Genotype.html#GrandmaGreen_Garden_Genotype_generation
@@ -6829,12 +6963,6 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Garden.Genotype.GetHashCode
   nameWithType: Genotype.GetHashCode
-- uid: GrandmaGreen.Garden.Genotype.p1
-  name: p1
-  href: api/GrandmaGreen.Garden.Genotype.html#GrandmaGreen_Garden_Genotype_p1
-  commentId: F:GrandmaGreen.Garden.Genotype.p1
-  fullName: GrandmaGreen.Garden.Genotype.p1
-  nameWithType: Genotype.p1
 - uid: GrandmaGreen.Garden.Genotype.size
   name: size
   href: api/GrandmaGreen.Garden.Genotype.html#GrandmaGreen_Garden_Genotype_size
@@ -6865,6 +6993,18 @@ references:
   commentId: F:GrandmaGreen.Garden.Genotype.Size.Small
   fullName: GrandmaGreen.Garden.Genotype.Size.Small
   nameWithType: Genotype.Size.Small
+- uid: GrandmaGreen.Garden.Genotype.Size.VeryBig
+  name: VeryBig
+  href: api/GrandmaGreen.Garden.Genotype.Size.html#GrandmaGreen_Garden_Genotype_Size_VeryBig
+  commentId: F:GrandmaGreen.Garden.Genotype.Size.VeryBig
+  fullName: GrandmaGreen.Garden.Genotype.Size.VeryBig
+  nameWithType: Genotype.Size.VeryBig
+- uid: GrandmaGreen.Garden.Genotype.Size.VerySmall
+  name: VerySmall
+  href: api/GrandmaGreen.Garden.Genotype.Size.html#GrandmaGreen_Garden_Genotype_Size_VerySmall
+  commentId: F:GrandmaGreen.Garden.Genotype.Size.VerySmall
+  fullName: GrandmaGreen.Garden.Genotype.Size.VerySmall
+  nameWithType: Genotype.Size.VerySmall
 - uid: GrandmaGreen.Garden.Genotype.SpriteSize
   name: SpriteSize()
   href: api/GrandmaGreen.Garden.Genotype.html#GrandmaGreen_Garden_Genotype_SpriteSize
