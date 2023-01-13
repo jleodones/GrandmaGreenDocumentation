@@ -1,7 +1,7 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/_GrandmaGreen/Scripts/UI/UI%20Scripts/Demos/Shopping/ShoppingStyleSheet.uss?fileID=7433441132597879392&amp;guid=6a55077afe7955246b57f87820f29149&amp;type=3#ShoppingStyleSheet" />
     <ui:VisualElement name="rootVisualElement" style="flex-grow: 1; display: none; background-color: rgb(134, 168, 126);">
-        <ui:VisualElement name="ShopScreen" style="display: flex;">
+        <ui:VisualElement name="ShopScreen" style="display: flex; justify-content: space-between; height: 100%; width: 100%;">
             <ui:VisualElement name="Header" style="height: 20%; width: 100%; flex-direction: row; flex-grow: 0;">
                 <ui:GroupBox name="Currencies" style="height: 100%; width: 30%; flex-direction: row; padding-top: 1.5%; padding-right: 2%; padding-left: 2.5%; padding-bottom: 2%; align-items: flex-start; justify-content: flex-start;">
                     <ui:VisualElement name="Coin" class="currency_box currency-box" style="flex-direction: row;">
@@ -24,76 +24,84 @@
                 </ui:GroupBox>
             </ui:VisualElement>
             <ui:VisualElement name="Content" style="height: 80%; width: 100%; flex-grow: 0;">
-                <ui:VisualElement name="Row1" style="height: 50%; width: 100%; flex-direction: row; padding-top: 2%; padding-left: 20%; padding-right: 20%; padding-bottom: 1%;">
-                    <ui:GroupBox name="content-1" style="width: 25%; height: 100%; align-items: center; justify-content: space-between;">
+                <ui:VisualElement name="Row1" style="height: 50%; width: 100%; flex-direction: row; padding-top: 2%; padding-left: 15%; padding-right: 15%; padding-bottom: 1%;">
+                    <ui:GroupBox name="content-1" style="width: 25%; height: 100%; align-items: center; justify-content: flex-start;">
                         <ui:Button tabindex="-1" text="Button" display-tooltip-when-elided="true" name="IconButton" class="item-button">
                             <ui:VisualElement name="IconImage" style="width: 100%; height: 100%; background-image: url(&apos;project://database/Assets/_GrandmaGreen/Scripts/UI/SampleArt/UI_Fertilizer_Temp.png?fileID=2800000&amp;guid=a643cdf8e0a09b74b95650865ea63f19&amp;type=3#UI_Fertilizer_Temp&apos;);" />
                         </ui:Button>
+                        <ui:VisualElement style="height: 10px;" />
                         <ui:VisualElement name="PriceBox" class="price-box" style="flex-direction: row;">
                             <ui:VisualElement name="CurrencyIcon" class="price-icon" style="background-image: url(&apos;project://database/Assets/_GrandmaGreen/Scripts/UI/SampleArt/UI_Coin_Temp.png?fileID=2800000&amp;guid=e4923dea1285f8143b63e5b54a0e2aa8&amp;type=3#UI_Coin_Temp&apos;);" />
                             <ui:Label tabindex="-1" text="100" display-tooltip-when-elided="true" name="Price" class="price-text" />
                         </ui:VisualElement>
                     </ui:GroupBox>
-                    <ui:GroupBox name="content-2" style="width: 25%; height: 100%; align-items: center; justify-content: space-between;">
+                    <ui:GroupBox name="content-2" style="width: 25%; height: 100%; align-items: center; justify-content: flex-start;">
                         <ui:Button tabindex="-1" text="Button" display-tooltip-when-elided="true" name="IconButton" class="item-button">
                             <ui:VisualElement name="IconImage" style="width: 100%; height: 100%; background-image: url(&apos;project://database/Assets/_GrandmaGreen/Scripts/UI/SampleArt/UI_Fertilizer_Temp.png?fileID=2800000&amp;guid=a643cdf8e0a09b74b95650865ea63f19&amp;type=3#UI_Fertilizer_Temp&apos;);" />
                         </ui:Button>
+                        <ui:VisualElement style="height: 10px;" />
                         <ui:VisualElement name="PriceBox" class="price-box" style="flex-direction: row;">
                             <ui:VisualElement name="CurrencyIcon" class="price-icon" style="background-image: url(&apos;project://database/Assets/_GrandmaGreen/Scripts/UI/SampleArt/UI_Coin_Temp.png?fileID=2800000&amp;guid=e4923dea1285f8143b63e5b54a0e2aa8&amp;type=3#UI_Coin_Temp&apos;);" />
                             <ui:Label tabindex="-1" text="100" display-tooltip-when-elided="true" name="Price" class="price-text" />
                         </ui:VisualElement>
                     </ui:GroupBox>
-                    <ui:GroupBox name="content-3" style="width: 25%; height: 100%; align-items: center; justify-content: space-between;">
+                    <ui:GroupBox name="content-3" style="width: 25%; height: 100%; align-items: center; justify-content: flex-start;">
                         <ui:Button tabindex="-1" text="Button" display-tooltip-when-elided="true" name="IconButton" class="item-button">
                             <ui:VisualElement name="IconImage" style="width: 100%; height: 100%; background-image: url(&apos;project://database/Assets/_GrandmaGreen/Scripts/UI/SampleArt/UI_Fertilizer_Temp.png?fileID=2800000&amp;guid=a643cdf8e0a09b74b95650865ea63f19&amp;type=3#UI_Fertilizer_Temp&apos;);" />
                         </ui:Button>
+                        <ui:VisualElement style="height: 10px;" />
                         <ui:VisualElement name="PriceBox" class="price-box" style="flex-direction: row;">
                             <ui:VisualElement name="CurrencyIcon" class="price-icon" style="background-image: url(&apos;project://database/Assets/_GrandmaGreen/Scripts/UI/SampleArt/UI_Coin_Temp.png?fileID=2800000&amp;guid=e4923dea1285f8143b63e5b54a0e2aa8&amp;type=3#UI_Coin_Temp&apos;);" />
                             <ui:Label tabindex="-1" text="100" display-tooltip-when-elided="true" name="Price" class="price-text" />
                         </ui:VisualElement>
                     </ui:GroupBox>
-                    <ui:GroupBox name="content-4" style="width: 25%; height: 100%; align-items: center; justify-content: space-between;">
+                    <ui:GroupBox name="content-4" style="width: 25%; height: 100%; align-items: center; justify-content: flex-start;">
                         <ui:Button tabindex="-1" text="Button" display-tooltip-when-elided="true" name="IconButton" class="item-button">
                             <ui:VisualElement name="IconImage" style="width: 100%; height: 100%; background-image: url(&apos;project://database/Assets/_GrandmaGreen/Scripts/UI/SampleArt/UI_Fertilizer_Temp.png?fileID=2800000&amp;guid=a643cdf8e0a09b74b95650865ea63f19&amp;type=3#UI_Fertilizer_Temp&apos;);" />
                         </ui:Button>
+                        <ui:VisualElement style="height: 10px;" />
                         <ui:VisualElement name="PriceBox" class="price-box" style="flex-direction: row;">
                             <ui:VisualElement name="CurrencyIcon" class="price-icon" style="background-image: url(&apos;project://database/Assets/_GrandmaGreen/Scripts/UI/SampleArt/UI_Coin_Temp.png?fileID=2800000&amp;guid=e4923dea1285f8143b63e5b54a0e2aa8&amp;type=3#UI_Coin_Temp&apos;);" />
                             <ui:Label tabindex="-1" text="100" display-tooltip-when-elided="true" name="Price" class="price-text" />
                         </ui:VisualElement>
                     </ui:GroupBox>
                 </ui:VisualElement>
-                <ui:VisualElement name="Row2" style="height: 50%; width: 100%; flex-direction: row; padding-bottom: 2%; padding-left: 20%; padding-right: 20%; padding-top: 1%;">
-                    <ui:GroupBox name="content-5" style="width: 25%; height: 100%; align-items: center; justify-content: space-between;">
+                <ui:VisualElement name="Row2" style="height: 50%; width: 100%; flex-direction: row; padding-bottom: 2%; padding-left: 15%; padding-right: 15%; padding-top: 1%;">
+                    <ui:GroupBox name="content-5" style="width: 25%; height: 100%; align-items: center; justify-content: flex-start;">
                         <ui:Button tabindex="-1" text="Button" display-tooltip-when-elided="true" name="IconButton" class="item-button">
                             <ui:VisualElement name="IconImage" style="width: 100%; height: 100%; background-image: url(&apos;project://database/Assets/_GrandmaGreen/Scripts/UI/SampleArt/UI_Fertilizer_Temp.png?fileID=2800000&amp;guid=a643cdf8e0a09b74b95650865ea63f19&amp;type=3#UI_Fertilizer_Temp&apos;);" />
                         </ui:Button>
+                        <ui:VisualElement style="height: 10px;" />
                         <ui:VisualElement name="PriceBox" class="price-box" style="flex-direction: row;">
                             <ui:VisualElement name="CurrencyIcon" class="price-icon" style="background-image: url(&apos;project://database/Assets/_GrandmaGreen/Scripts/UI/SampleArt/UI_Coin_Temp.png?fileID=2800000&amp;guid=e4923dea1285f8143b63e5b54a0e2aa8&amp;type=3#UI_Coin_Temp&apos;);" />
                             <ui:Label tabindex="-1" text="100" display-tooltip-when-elided="true" name="Price" class="price-text" />
                         </ui:VisualElement>
                     </ui:GroupBox>
-                    <ui:GroupBox name="content-6" style="width: 25%; height: 100%; align-items: center; justify-content: space-between;">
+                    <ui:GroupBox name="content-6" style="width: 25%; height: 100%; align-items: center; justify-content: flex-start;">
                         <ui:Button tabindex="-1" text="Button" display-tooltip-when-elided="true" name="IconButton" class="item-button">
                             <ui:VisualElement name="IconImage" style="width: 100%; height: 100%; background-image: url(&apos;project://database/Assets/_GrandmaGreen/Scripts/UI/SampleArt/UI_Fertilizer_Temp.png?fileID=2800000&amp;guid=a643cdf8e0a09b74b95650865ea63f19&amp;type=3#UI_Fertilizer_Temp&apos;);" />
                         </ui:Button>
+                        <ui:VisualElement style="height: 10px;" />
                         <ui:VisualElement name="PriceBox" class="price-box" style="flex-direction: row;">
                             <ui:VisualElement name="CurrencyIcon" class="price-icon" style="background-image: url(&apos;project://database/Assets/_GrandmaGreen/Scripts/UI/SampleArt/UI_Coin_Temp.png?fileID=2800000&amp;guid=e4923dea1285f8143b63e5b54a0e2aa8&amp;type=3#UI_Coin_Temp&apos;);" />
                             <ui:Label tabindex="-1" text="100" display-tooltip-when-elided="true" name="Price" class="price-text" />
                         </ui:VisualElement>
                     </ui:GroupBox>
-                    <ui:GroupBox name="content-7" style="width: 25%; height: 100%; align-items: center; justify-content: space-between;">
+                    <ui:GroupBox name="content-7" style="width: 25%; height: 100%; align-items: center; justify-content: flex-start;">
                         <ui:Button tabindex="-1" text="Button" display-tooltip-when-elided="true" name="IconButton" class="item-button">
                             <ui:VisualElement name="IconImage" style="width: 100%; height: 100%; background-image: url(&apos;project://database/Assets/_GrandmaGreen/Scripts/UI/SampleArt/UI_Fertilizer_Temp.png?fileID=2800000&amp;guid=a643cdf8e0a09b74b95650865ea63f19&amp;type=3#UI_Fertilizer_Temp&apos;);" />
                         </ui:Button>
+                        <ui:VisualElement style="height: 10px;" />
                         <ui:VisualElement name="PriceBox" class="price-box" style="flex-direction: row;">
                             <ui:VisualElement name="CurrencyIcon" class="price-icon" style="background-image: url(&apos;project://database/Assets/_GrandmaGreen/Scripts/UI/SampleArt/UI_Coin_Temp.png?fileID=2800000&amp;guid=e4923dea1285f8143b63e5b54a0e2aa8&amp;type=3#UI_Coin_Temp&apos;);" />
                             <ui:Label tabindex="-1" text="100" display-tooltip-when-elided="true" name="Price" class="price-text" />
                         </ui:VisualElement>
                     </ui:GroupBox>
-                    <ui:GroupBox name="content-8" style="width: 25%; height: 100%; align-items: center; justify-content: space-between;">
+                    <ui:GroupBox name="content-8" style="width: 25%; height: 100%; align-items: center; justify-content: flex-start;">
                         <ui:Button tabindex="-1" text="Button" display-tooltip-when-elided="true" name="IconButton" class="item-button">
                             <ui:VisualElement name="IconImage" style="width: 100%; height: 100%; background-image: url(&apos;project://database/Assets/_GrandmaGreen/Scripts/UI/SampleArt/UI_Fertilizer_Temp.png?fileID=2800000&amp;guid=a643cdf8e0a09b74b95650865ea63f19&amp;type=3#UI_Fertilizer_Temp&apos;);" />
                         </ui:Button>
+                        <ui:VisualElement style="height: 10px;" />
                         <ui:VisualElement name="PriceBox" class="price-box" style="flex-direction: row;">
                             <ui:VisualElement name="CurrencyIcon" class="price-icon" style="background-image: url(&apos;project://database/Assets/_GrandmaGreen/Scripts/UI/SampleArt/UI_Coin_Temp.png?fileID=2800000&amp;guid=e4923dea1285f8143b63e5b54a0e2aa8&amp;type=3#UI_Coin_Temp&apos;);" />
                             <ui:Label tabindex="-1" text="100" display-tooltip-when-elided="true" name="Price" class="price-text" />
@@ -102,7 +110,7 @@
                 </ui:VisualElement>
             </ui:VisualElement>
         </ui:VisualElement>
-        <ui:VisualElement usage-hints="None" name="PopUpScreen" class="popup-Element popup-element" style="flex-grow: 1; align-items: center; justify-content: center; position: absolute; left: 0; top: 0; right: 0; bottom: 0; background-color: rgba(173, 173, 173, 0.65); flex-direction: column; display: none;">
+        <ui:VisualElement usage-hints="None" name="PopUpScreen" class="popup-Element popup-element" style="flex-grow: 1; align-items: center; justify-content: center; position: absolute; left: 0; top: 0; right: 0; bottom: 0; background-color: rgba(173, 173, 173, 0.65); flex-direction: row; display: none;">
             <ui:VisualElement name="BuyPopUp" class="popup_box popup-box" style="justify-content: space-between; align-items: center;">
                 <ui:VisualElement name="Header" style="height: 20%; width: auto; align-items: center; justify-content: space-around; flex-direction: row;">
                     <ui:Label tabindex="-1" text="rose seed" display-tooltip-when-elided="true" name="ItemName" class="name-element" style="font-size: 80%; -unity-font-style: bold; -unity-text-align: middle-left; color: rgb(255, 255, 255);" />
@@ -127,7 +135,7 @@
                 <ui:VisualElement name="Footer">
                     <ui:Button tabindex="-1" text="Buy" display-tooltip-when-elided="true" name="BuyButton" class="buy_button buy-button" />
                 </ui:VisualElement>
-                <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="PopUpExitButton" style="background-image: url(&apos;project://database/Assets/_GrandmaGreen/Scripts/UI/SampleArt/UI_ExitButton_Temp.png?fileID=2800000&amp;guid=c8b33f7354fc4754694f9a542c34d442&amp;type=3#UI_ExitButton_Temp&apos;); position: absolute; left: 90%; top: -10%; width: 15%; height: 25%; background-color: rgba(88, 88, 88, 0); border-left-color: rgba(255, 255, 255, 0); border-right-color: rgba(255, 255, 255, 0); border-top-color: rgba(255, 255, 255, 0); border-bottom-color: rgba(255, 255, 255, 0);" />
+                <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="PopUpExitButton" style="background-image: url(&apos;project://database/Assets/_GrandmaGreen/Scripts/UI/SampleArt/UI_ExitButton_Temp.png?fileID=2800000&amp;guid=c8b33f7354fc4754694f9a542c34d442&amp;type=3#UI_ExitButton_Temp&apos;); position: absolute; left: auto; top: -50px; width: 100px; height: 100px; background-color: rgba(88, 88, 88, 0); border-left-color: rgba(255, 255, 255, 0); border-right-color: rgba(255, 255, 255, 0); border-top-color: rgba(255, 255, 255, 0); border-bottom-color: rgba(255, 255, 255, 0); right: -50px;" />
             </ui:VisualElement>
         </ui:VisualElement>
     </ui:VisualElement>

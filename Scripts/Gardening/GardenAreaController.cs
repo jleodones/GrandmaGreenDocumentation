@@ -98,7 +98,6 @@ namespace GrandmaGreen.Garden
         //Called through a Unity event as of now
         public void GardenTileSelected(Vector3Int gridPos)
         {
-
             playerController.QueueEntityAction(DoToolAction);
             playerTools.SetToolAction(tileStore[lastSelectedTile], lastSelectedCell, this);
         }
@@ -180,8 +179,7 @@ namespace GrandmaGreen.Garden
             {
                 spriteRenderer.color = new Color(1f, 1f, 1f);
             }
-            // TODO: remove hard-coded base scaling
-            transform.localScale = new Vector3(0.25f, 0.25f, 0.25f) * plant.genotype.SpriteSize();
+            transform.localScale = new Vector3(1.0f, 1.0f, 1.0f) * plant.genotype.SpriteSize();
         }
 
         public void InstantiatePlantPrefab(Vector3Int cell, PlantId type, int growthStage)
@@ -381,6 +379,21 @@ namespace GrandmaGreen.Garden
             gardenManager.ClearGarden(areaIndex);
         }
 
+        [ContextMenu("ResetGarden")]
+        public void ResetGarden()
+        {
+            Vector3Int playableTopLeft = new Vector3Int(-8, 4, 0);
+            Vector3Int playableBottomRight = new Vector3Int(6, -5, 0);
+            for (int x = -8; x <= 6; x++)
+            {
+		        for (int y = -5; y <= 4; y++)
+                {
+                    ChangeGardenTileToGrass(new Vector3Int(x, y, 0)); 
+		        }
+	        }
+            ClearPlants();
+	    }
+
         [ContextMenu("InspectPlants")]
         public void InspectPlants()
         {
@@ -402,9 +415,37 @@ namespace GrandmaGreen.Garden
             }
         }
 
+        [ContextMenu("FlowerTest")]
+        public void FlowerTest()
+        {
+            ResetGarden();
+            Vector3Int topLeft = Vector3Int.zero + 3 * Vector3Int.up + 7 * Vector3Int.left;
+            int row = 0;
+            //for (int id = 1001; id <= 1007; id++)
+            foreach (Collections.FlowerId flowerId in System.Enum.GetValues(typeof(Collections.FlowerId)))
+            {
+                Vector3Int leftTile = topLeft + row * Vector3Int.down;
+                Vector3Int right = Vector3Int.right;
+                for (int j = 0; j < 7; j++) {
+                    ChangeGardenTileToPlot_Occupied(leftTile + j * right);
+	            }
+                Collections.PlantId plantId = (Collections.PlantId)flowerId;
+                Genotype.Generation mega = Genotype.Generation.F2;
+                CreatePlant(plantId, new Genotype("AaBb"), leftTile + right * 0, 0);
+                CreatePlant(plantId, new Genotype("AaBb"), leftTile + right * 1, 1);
+                CreatePlant(plantId, new Genotype("Aabb"), leftTile + right * 2, 2);
+                CreatePlant(plantId, new Genotype("AaBb"), leftTile + right * 3, 2);
+                CreatePlant(plantId, new Genotype("AaBB"), leftTile + right * 4, 2);
+                CreatePlant(plantId, new Genotype("Aabb", mega), leftTile + right * 5, 2);
+                CreatePlant(plantId, new Genotype("AaBB", mega), leftTile + right * 6, 2);
+                row++;
+	        }
+        }
+
         [ContextMenu("GenotypeSpriteTest")]
         public void GenotypeSpriteTest()
         {
+            ResetGarden();
             Vector3Int right = Vector3Int.zero + 3 * Vector3Int.up;
             for (int i = 0; i <= 8; i += 2)
             {

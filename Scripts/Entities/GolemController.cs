@@ -147,11 +147,6 @@ namespace GrandmaGreen.Entities
                                     CancelPath();
                                 }) { Label = "Change movement." },
 
-                                // new Action(() =>
-                                // {
-                                //     GetComponentInChildren<GolemMenu>().TriggerMenu();
-                                // }) {Label = "Trigger menu."},
-
                                 new WaitUntilStopped()
                             )
                         ),
@@ -159,22 +154,15 @@ namespace GrandmaGreen.Entities
                         //2. Watering behavior
                         new BlackboardCondition("isDoingTask", Operator.IS_EQUAL, true, Stops.IMMEDIATE_RESTART,
                             new Sequence(
-                                // Set Position to move to
-                                new Cooldown(delay, new Action(() =>
-                                {
-                                    Vector3Int taskPos = golemManager.golemStateTable[(int)id - 5000].assignedCell;
-                                    Debug.Log(taskPos);
-                                    behaviorTree.Blackboard.Set(BK_WANDER_POSITION, (Vector3)taskPos);
-                                })) { Label = "Change Destination"},
 
                                 // Move to new pos until arrival, and then water
                                 new Action((bool inBound) =>
                                 {
                                     if (!inBound)
                                     {
-                                        Vector3 pos = blackboard.Get<Vector3>(BK_WANDER_POSITION);
+                                        Vector3 pos = golemManager.golemStateTable[(int)id - 5000].assignedCell;
                                         SetDestination(pos);
-                                        if ((pos - transform.position).magnitude < 0.5f)
+                                        if ((pos - transform.position).magnitude < 1f)
                                         {
                                             return Action.Result.SUCCESS;
                                         }

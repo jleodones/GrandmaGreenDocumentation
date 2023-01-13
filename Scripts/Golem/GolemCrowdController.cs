@@ -59,6 +59,7 @@ namespace GrandmaGreen.Entities
                 if (golem.assignedWatering)
                 {
                     EventManager.instance.HandleEVENT_GOLEM_DO_TASK();
+                    break;
                 }
             }
         }

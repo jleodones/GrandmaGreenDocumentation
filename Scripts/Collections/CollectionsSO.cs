@@ -18,6 +18,39 @@ namespace GrandmaGreen.Collections
         Fertilizer = 6
     }
 
+    public enum FlowerId : ushort
+    {
+        Rose = 1001,
+        Tulip = 1002,
+        CallaLily = 1003,
+        Dahlia = 1004,
+        Hyacinth = 1005,
+        Pansy = 1006,
+        Crocus = 1007
+    }
+
+    public enum VegetableId : ushort
+    {
+        Cucumber = 1008,
+        Tomato = 1009,
+        Pepper = 1010,
+        SweetPotato = 1011,
+        Corn = 1012,
+        Radish = 1013,
+        Pumpkin = 1014
+    }
+
+    public enum FruitId : ushort
+    {
+        Apple = 1015,
+        Pear = 1016,
+        Watermelon = 1017,
+        Cherry = 1018,
+        Plum = 1019,
+        Peach = 1020,
+        Blueberry = 1021
+    }
+
     public enum PlantId : ushort
     {
         Rose = 1001,

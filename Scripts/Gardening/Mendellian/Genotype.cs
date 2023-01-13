@@ -7,22 +7,22 @@ namespace GrandmaGreen.Garden
     [System.Serializable]
     public struct Genotype
     {
-        public enum Size { Big, Medium, Small };
+        public enum Size { VeryBig, Big, Medium, Small, VerySmall };
         public enum Trait { Dominant, Heterozygous, Recessive };
         public enum Generation { P1, F1, F2 };
-
-        public bool a1;
-        public bool a2;
-        public bool b1;
-        public bool b2;
-
-        public bool p1;
-        public bool f1;
-        public bool f2;
 
         public Size size;
         public Trait trait;
         public Generation generation;
+
+        private bool a1;
+        private bool a2;
+        private bool b1;
+        private bool b2;
+
+        private bool p1;
+        private bool f1;
+        private bool f2;
 
         public Genotype(string genotype, Generation gen=Generation.P1)
         {
@@ -86,7 +86,7 @@ namespace GrandmaGreen.Garden
         {
             // build child genotype from punnett lookup
             int[][] punnettSquare = new int[][] {
-            new int[] { 0, 4, 2, 6 }, new int[] { 0, 4, 3, 6 }, new int[] { 1, 4, 2, 6 }, new int[] { 1, 4, 3, 6 },
+                new int[] { 0, 4, 2, 6 }, new int[] { 0, 4, 3, 6 }, new int[] { 1, 4, 2, 6 }, new int[] { 1, 4, 3, 6 },
                 new int[] { 0, 4, 2, 7 }, new int[] { 0, 4, 3, 7 }, new int[] { 1, 4, 2, 7 }, new int[] { 1, 4, 3, 7 },
                 new int[] { 0, 5, 2, 6 }, new int[] { 0, 5, 3, 6 }, new int[] { 1, 5, 2, 6 }, new int[] { 1, 5, 3, 6 },
                 new int[] { 0, 5, 2, 7 }, new int[] { 0, 5, 3, 7 }, new int[] { 1, 5, 2, 7 }, new int[] { 1, 5, 3, 7 }
