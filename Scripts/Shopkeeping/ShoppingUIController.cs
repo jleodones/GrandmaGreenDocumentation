@@ -11,6 +11,7 @@ using Codice.CM.Common.Merge;
 
 namespace GrandmaGreen.Shopkeeping
 {
+    using static UnityEditor.Progress;
     using Id = System.Enum;
     using Random = System.Random;
 
@@ -33,7 +34,7 @@ namespace GrandmaGreen.Shopkeeping
         CollectionsSO collections;
         List<Seed> AllSeedsList; //copy of the plant genotype master list
 
-        int currCycle; //after the 4th cycle, reset the gardening controller. increment each cycle.
+        int currCycle; //after the 4th cycle, reset allseedslist. increment each cycle.
 
         //ratio of flowers/veggies/fruits to rotate each cycle
         int numFlowers;
@@ -79,53 +80,18 @@ namespace GrandmaGreen.Shopkeeping
         public GardeningShopUIController(CollectionsSO collectionsinput)
         {
             collections = collectionsinput;
-            AllSeedsList = collections.PlantGenotypeMasterList;
+            AllSeedsList = new List<Seed>(collections.PlantGenotypeMasterList);
 
             currCycle = 1;
             //initial ratios
             numFlowers = 3;
             numVeggies = 3;
             numFruits = 2;
-
-            //GardenList = new List<ShopItem>();
-            //use CollectionsSO GetItem(Id) to retrieve ItemProperties of each item, set each attribute
-            //2001-21 seed ids
-            //look at list of seed items in collectionsSO and randomly pick 3 seed types per flower/veggie/fruit
-            //int flowerSeed1, flowerSeed2, flowerSeed3;
-            //int veggieSeed1, veggieSeed2, veggieSeed3;
-            //int fruitSeed1, fruitSeed2, fruitSeed3;
-
-            //Seeds:
-            //for (int i = 1001; i <= 1009; i++)
-            //{
-            //    ushort id = (ushort) i;
-            //    ItemProperties thisItem = collectionsinput.GetItem(id); //essentially getting the plant
-
-            //    ShopItem itemProps = new ShopItem();
-            //    itemProps.quantity = 3;
-            //    itemProps.name = thisItem.name;
-
-            //    // Get genotype of seed.
-            //    // TODO: Change this so it "randomly" picks a genotype for the seed packets.
-            //    // For now this defaults to heterozygous plant.
-            //    Genotype myGenotype = new Genotype("AaBb");
-
-            //    //Determine the mega value based on genotype
-            //    string genoString = myGenotype.ToString();
-
-            //    itemProps.megaValue = GetMegaValue(genoString);
-
-            //    itemProps.baseCost = thisItem.baseCost * itemProps.megaValue;
-
-            //    // Get sprite.
-            //    itemProps.sprite = collectionsinput.GetSprite((PlantId)i, myGenotype);
-            //    itemProps.myItem = new Seed((ushort)i, thisItem.name, myGenotype);
-            //    GardenList.Add(itemProps);
-            //}
         }
 
         /// <summary>
         /// Each new cycle, call this function to update the gardening shopkeeping system's cycle count
+        /// If exceeds 
         /// </summary>
         public void UpdateCycle()
         {
@@ -148,6 +114,12 @@ namespace GrandmaGreen.Shopkeeping
                     numVeggies = 3;
                     numFruits = 2;
                     break;
+            }
+            //reset every 4 cycles
+            if(currCycle > 4)
+            {
+                currCycle = 1;
+                AllSeedsList = new List<Seed>(collections.PlantGenotypeMasterList);
             }
         }
 
@@ -276,7 +248,6 @@ namespace GrandmaGreen.Shopkeeping
 
                 return (int)(plantProps.baseGoldPerTimeUnit * megaValue * plantProps.growthTime * 2);
             }
-            //else return collections.GetItem(item.itemID).baseCost / 2;
 
             //can only sell plants and seeds in the garden shop
             else return 0;
@@ -289,29 +260,49 @@ namespace GrandmaGreen.Shopkeeping
     /// </summary>
     public class DecorShopUIController
     {
-        List<ShopItem> DecorList;
+        List<ShopItem> DecorList; //all items that will show up in decor shop this cycle
         CollectionsSO collections;
+        List<Decor> AllDecorList;
+        List<Decor> AllFixturesList;
+        int currCycleDecor; //after the 2nd cycle, reset the all decor items list. increment each cycle.
+        int currCycleFixture; //after the 4th cycle, reset the all fixture decor items list. increment each cycle.
+        int currGardenExpansion; //the new garden expansion the player has get to unlock (default to 1, which means player only has a base garden and wants expansion 1)
 
         /// <summary>
         /// Pass in the collections SO. List will need to retrieve base costs of each item from the collections
         /// </summary>
         /// <param name="collections"></param>
-        public DecorShopUIController(CollectionsSO collections)
+        public DecorShopUIController(CollectionsSO collectionsinput)
         {
+            collections = collectionsinput;
+            AllDecorList = new List<Decor>(collections.DecorList);
+            AllFixturesList = new List<Decor>(collections.FixtureList);
+
             DecorList = new List<ShopItem>();
 
-            //Decor (non garden expansion):
-            for (int i = 4001; i <= 4100; i++)
-            {
-                DecorationId id = (DecorationId)i;
-                ShopItem itemProps = new ShopItem();
-                itemProps.quantity = 1;
-                // itemProps.id = id;
-                DecorList.Add(itemProps);
-            }
-            //Garden Exp:
-            //uhh idk yet
+            currCycleDecor = 1;
+            currCycleFixture = 1;
 
+            currGardenExpansion = 1;
+        }
+
+        /// <summary>
+        /// Each new cycle, call this function to update the decor shopkeeping system's cycle count
+        /// </summary>
+        public void UpdateCycle()
+        {
+            currCycleDecor++;
+            currCycleFixture++;
+            if(currCycleDecor > 2)
+            {
+                currCycleDecor = 1;
+                AllDecorList = new List<Decor>(collections.DecorList);
+            }
+            if(currCycleFixture > 4)
+            {
+                currCycleFixture = 1;
+                AllFixturesList = new List<Decor>(collections.FixtureList);
+            }
         }
 
         /// <summary>
@@ -320,27 +311,121 @@ namespace GrandmaGreen.Shopkeeping
         /// <returns></returns>
         public List<ShopItem> GetDecorList()
         {
+            /*
+             * randomly pick 6 decor items but making sure not to have duplicate decor types,
+             * pop from the master list, and have some way to track which garden expansion
+             * the player has unlocked, and then the other slot is fixture
+             */
+            List<Decor> tempDecorList = new List<Decor>();
+            //regular decor items:
+            for (int i = 0; i < 6; i++)
+            {
+                bool validIndexFound = false;
+                while (!validIndexFound)
+                {
+                    Random rnd = new Random();
+                    int ind = rnd.Next(AllDecorList.Count);
+                    Decor currDecor = AllDecorList[ind];
+                    if (!tempDecorList.Contains(currDecor) && collections.ItemLookup[currDecor.itemID].decorType != "Fixture") //make sure item is not already in our list
+                    {
+                        //make sure decor type does not already exist in our list
+                        bool typeAlreadyExists = false;
+                        foreach (Decor item in tempDecorList)
+                        {
+                            if (collections.ItemLookup[currDecor.itemID].decorType == collections.ItemLookup[item.itemID].decorType)
+                            {
+                                typeAlreadyExists = true;
+                            }
+                        }
+                        if (!typeAlreadyExists)
+                        {
+                            tempDecorList.Add(currDecor);
+                            AllDecorList.RemoveAt(ind);
+                            validIndexFound = true;
+                        }
+                    }
+                }
+            }
+            //fixture:
+            int fixtureSize = 1;
+            if(currGardenExpansion > 3)
+            {
+                fixtureSize = 2;
+            }
+            for (int i = 0; i < fixtureSize; i++)
+            {
+                bool validIndexFound = false;
+                while (!validIndexFound)
+                {
+                    Random rnd = new Random();
+                    int ind = rnd.Next(AllFixturesList.Count);
+                    Decor currFixture = AllFixturesList[ind];
+                    if (!tempDecorList.Contains(currFixture)) //make sure item is not already in our list
+                    {
+                        tempDecorList.Add(currFixture);
+                        AllFixturesList.RemoveAt(ind);
+                        validIndexFound = true;
+                    }
+                }
+            }
+
+            DecorList = new List<ShopItem>();
+
+            //garden expansion:
+            if (currGardenExpansion <= 3)
+            {
+                //add garden expansion to list
+                ShopItem gardenExp = new ShopItem();
+                gardenExp.sprite = null; //there is no sprite associated with garden expansion -- just display name "garden expansion"
+                gardenExp.quantity = 1;
+                gardenExp.name = "Garden Expansion";
+                gardenExp.baseCost = 100; //TODO: manually update here once design team figures out prices
+                //TODO: ok to leave id and inventoryitem entries null?
+                DecorList.Add(gardenExp);
+            }
+
+            //generate decor list -- convert tempdecorlist to decorlist -- for each item, set values and add to decorlist
+            for (int i = 0; i < tempDecorList.Count; i++)
+            {
+                Decor decor = tempDecorList[i];
+                ShopItem item = new ShopItem();
+                item.sprite = collections.GetSprite(decor.itemID);
+                item.quantity = 1;
+                item.name = decor.itemName;
+                item.baseCost = collections.GetItem(decor.itemID).baseCost; //change when design team figures out costs
+                item.myItem = new Decor((ushort)decor.itemID, decor.itemName);
+                DecorList.Add(item);
+            }
+
             return DecorList;
         }
 
         /// <summary>
-        /// Get the base cost of an item in the decor shop, pass in the id
+        /// Call this function whenever the player buys a garden expansion. Updates so that the next cycle will have the next garden expansion,
+        /// or if all expansions have been unlocked the slot will be replaced by a fixture.
         /// </summary>
-        /// <param name="id"></param>
-        /// <returns></returns>
-        public int GetBaseCostById(ushort id)
+        /// <param name="item"></param>
+        public void UnlockGardenExpansion()
         {
-            return collections.GetItem(id).baseCost;
+            currGardenExpansion++;
+            //TODO: is there anywhere to update player's info for garden expansion?
         }
 
         /// <summary>
-        /// Get the selling price of an item in player's inventory in the decor shop (for now is just half the base cost)
+        /// Get the selling price of an item in player's inventory in the decor shop
         /// </summary>
-        /// <param name="id"></param>
         /// <returns></returns>
-        public int GetSellingPriceById(ushort id)
+        public int GetSellingPriceById(IInventoryItem item)
         {
-            return collections.GetItem(id).baseCost / 2;
+            if (item.itemID >= 4000 && item.itemID <= 4100)
+            {
+                ItemProperties itemProps = collections.GetItem((ushort)item.itemID);
+                //TODO: update selling price once the design team figures it out
+
+                return (int)(itemProps.baseCost / 2);
+            }
+            //can only sell decor in the decor shop
+            else return 0;
         }
     }
 }

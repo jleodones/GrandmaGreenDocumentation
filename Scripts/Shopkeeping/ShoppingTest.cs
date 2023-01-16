@@ -21,6 +21,8 @@ namespace GrandmaGreen.Shopkeeping
         [Button()]
         public void TestShop()
         {
+            //test the garden shop:
+
             GardeningShopUIController gc = new GardeningShopUIController(collection);
             //PlantId id = (PlantId)1002;
             //ToolId idt = (ToolId)1;
@@ -42,6 +44,23 @@ namespace GrandmaGreen.Shopkeeping
             gc.UpdateCycle();
 
             List<ShopItem> list2 = gc.GetGardenList();
+
+            //test the decor shop:
+
+            DecorShopUIController dc = new DecorShopUIController(collection);
+            //test the getdecorlist function
+            List<ShopItem> list3 = dc.GetDecorList();
+            //test the updatecycle function (should increment both cycle counters and reset respective master lists accordingly)
+            dc.UpdateCycle();
+            dc.UpdateCycle(); //now the cycle for regular decor should be set back to 1 and decor master list should be re copied
+            dc.UpdateCycle();
+            dc.UpdateCycle(); //now the cycle for fixtures should be set back to 1 and fixtures master list should be re copied
+            //test the unlockgardenexpansion function (should just increment the garden expansion, and maybe later u can test if it updates the proper player info
+            dc.UnlockGardenExpansion();
+            //test getsellingpricebyid (for now its just half the base cost) -- should return 0 if non decor item is inputted
+            Decor decor = new Decor((ushort)4001, "Torch");
+            int d = dc.GetSellingPriceById(decor); //should return 50
+            int s2 = dc.GetSellingPriceById(seed); //should return 0
         }
     }
 }

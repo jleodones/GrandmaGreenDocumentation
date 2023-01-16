@@ -5,6 +5,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using System.Text;
 
 namespace GrandmaGreen.Collections
 {
@@ -210,6 +211,7 @@ namespace GrandmaGreen.Collections
         public int baseCost;
         //decor items
         public string tag;
+        public string decorType;
     }
 
     public struct CharacterProperties
@@ -231,17 +233,6 @@ namespace GrandmaGreen.Collections
         public PlantType plantType;
     }
 
-    //for shop - likely will not need this
-    //public struct SeedProperties
-    //{
-    //    public string name;
-    //    public string description;
-    //    public string spritePath;
-    //    public int baseCost;
-
-    //    //in this context, plantType is flower, veggie, or fruit
-    //    public PlantType plantType;
-    //}
 }
 
 namespace GrandmaGreen.Collections
@@ -257,9 +248,9 @@ namespace GrandmaGreen.Collections
         [ShowInInspector]
         public Dictionary<ushort, ItemProperties> ItemLookup;
         public List<Seed> PlantGenotypeMasterList;
+        public List<Decor> DecorList;
+        public List<Decor> FixtureList; //for cycle tracking purposes
         public Dictionary<ushort, PlantProperties> PlantLookup;
-        //public Dictionary<ushort, CharacterProperties> CharacterLookup;
-        //public Dictionary<ushort, SeedProperties> SeedLookup;
 
         static CollectionsSO s_Instance;
         public CollectionsSO LoadedInstance => s_Instance;
@@ -324,14 +315,6 @@ namespace GrandmaGreen.Collections
         }
 
         ///<summary>
-        ///Get any plant by its id
-        ///</summary>
-        //public SeedProperties GetSeed(PlantId id)
-        //{
-        //    return SeedLookup[(ushort)((ushort)id + CSVtoSO.SEED_ID_OFFSET)];
-        //}
-
-        ///<summary>
         ///Retrieve a sprite by its sprite path (which is just its filename)
         ///</summary>
         public Sprite GetSprite(string spritePath)
@@ -350,7 +333,6 @@ namespace GrandmaGreen.Collections
         }
 
         /// <summary>
-        ///// TODO: use string builder for this
         /// TODO: checks for single sprite vs spritesheet
         /// Only for plant sprites
         /// </summary>
@@ -390,9 +372,10 @@ namespace GrandmaGreen.Collections
                     break;
             }
 
-            string finalSpritePath = plant.spriteBasePath + suffix;
+            StringBuilder finalSpritePath = new StringBuilder(plant.plantType.ToString(), 100);
+            finalSpritePath.Append("s/" + plant.name + "/" + plant.spriteBasePath + suffix);
 
-            Sprite plantSprite = Resources.Load<Sprite>(plant.plantType.ToString() + "s/" + plant.name + "/" + finalSpritePath);
+            Sprite plantSprite = Resources.Load<Sprite>(finalSpritePath.ToString());
             return plantSprite;
         }
 

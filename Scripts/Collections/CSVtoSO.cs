@@ -34,6 +34,8 @@ namespace GrandmaGreen.Collections
             collections.ItemLookup = new Dictionary<ushort, ItemProperties>();
             collections.PlantLookup = new Dictionary<ushort, PlantProperties>();
             collections.PlantGenotypeMasterList = new List<Seed>();
+            collections.DecorList = new List<Decor>();
+            collections.FixtureList = new List<Decor>();
             //collections.CharacterLookup = new Dictionary<ushort, CharacterProperties>();
             //collections.SeedLookup = new Dictionary<ushort, SeedProperties>();
 
@@ -56,7 +58,7 @@ namespace GrandmaGreen.Collections
                 // int baseCost = Int32.Parse(line[5]);
                 ushort.TryParse(line[5], out ushort baseCost); //this will be seed base cost for plants
                 string seedDescription = line[6];
-                string plantType = line[7];
+                string plantDecorType = line[7];
                 string spritePath = "";
                 ItemProperties itemProps = new ItemProperties();
                 itemProps.name = name;
@@ -64,6 +66,8 @@ namespace GrandmaGreen.Collections
                 itemProps.itemType = entryType;
                 itemProps.baseCost = baseCost;
                 itemProps.spritePath = spritePath;
+                itemProps.tag = tag;
+                itemProps.decorType = plantDecorType;
 
                 switch (entryType)
                 {
@@ -94,7 +98,7 @@ namespace GrandmaGreen.Collections
 
                         
                         //flower
-                        if (plantType == "Flower")
+                        if (plantDecorType == "Flower")
                         {
                             plantProps.plantType = (PlantType)1;
 
@@ -207,7 +211,7 @@ namespace GrandmaGreen.Collections
                             }
                         }
                         //veggie
-                        else if (plantType == "Vegetable")
+                        else if (plantDecorType == "Vegetable")
                         {
                             plantProps.plantType = (PlantType)2;
 
@@ -250,7 +254,7 @@ namespace GrandmaGreen.Collections
                             }
                         }
                         //fruit
-                        else if (plantType == "Fruit")
+                        else if (plantDecorType == "Fruit")
                         {
                             plantProps.plantType = (PlantType)3;
 
@@ -363,21 +367,6 @@ namespace GrandmaGreen.Collections
                         collections.PlantLookup.Add(csvID, plantProps);
                         collections.ItemLookup.Add(csvID, itemProps);
 
-                        //Seed Data -- might not need seed lookup
-                        spritePath = "SEED_" + name.Replace(" ", "");
-                        itemProps.spritePath = spritePath;
-
-                        //collections.ItemLookup.Add((ushort)(csvID + SEED_ID_OFFSET), itemProps);
-
-                        //SeedProperties seedProps = new SeedProperties();
-                        //seedProps.name = name;
-                        //seedProps.description = seedDescription;
-                        //seedProps.spritePath = spritePath;
-                        //seedProps.baseCost = baseCost;
-                        //seedProps.plantType = plantProps.plantType;
-
-                        //collections.SeedLookup.Add((ushort)(csvID + SEED_ID_OFFSET), seedProps);
-
                         break;
 
                     case "Tool":
@@ -390,6 +379,12 @@ namespace GrandmaGreen.Collections
                         itemProps.spritePath = "DEC_" + name.Replace(" ", "_");
                         itemProps.baseCost = baseCost;
                         collections.ItemLookup.Add(csvID, itemProps);
+                        Decor decor = new Decor(csvID, name);
+                        if (itemProps.decorType == "Fixture")
+                        {
+                            collections.FixtureList.Add(decor);
+                        }
+                        collections.DecorList.Add(decor);
                         break;
 
                     case "Character":
