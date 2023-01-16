@@ -1131,6 +1131,18 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Collections.CollectionsSO.DEBUGLoadPlantProperties
   nameWithType: CollectionsSO.DEBUGLoadPlantProperties
+- uid: GrandmaGreen.Collections.CollectionsSO.DecorList
+  name: DecorList
+  href: api/GrandmaGreen.Collections.CollectionsSO.html#GrandmaGreen_Collections_CollectionsSO_DecorList
+  commentId: F:GrandmaGreen.Collections.CollectionsSO.DecorList
+  fullName: GrandmaGreen.Collections.CollectionsSO.DecorList
+  nameWithType: CollectionsSO.DecorList
+- uid: GrandmaGreen.Collections.CollectionsSO.FixtureList
+  name: FixtureList
+  href: api/GrandmaGreen.Collections.CollectionsSO.html#GrandmaGreen_Collections_CollectionsSO_FixtureList
+  commentId: F:GrandmaGreen.Collections.CollectionsSO.FixtureList
+  fullName: GrandmaGreen.Collections.CollectionsSO.FixtureList
+  nameWithType: CollectionsSO.FixtureList
 - uid: GrandmaGreen.Collections.CollectionsSO.GenerateCollections
   name: GenerateCollections()
   href: api/GrandmaGreen.Collections.CollectionsSO.html#GrandmaGreen_Collections_CollectionsSO_GenerateCollections
@@ -2167,6 +2179,12 @@ references:
   commentId: F:GrandmaGreen.Collections.ItemProperties.baseCost
   fullName: GrandmaGreen.Collections.ItemProperties.baseCost
   nameWithType: ItemProperties.baseCost
+- uid: GrandmaGreen.Collections.ItemProperties.decorType
+  name: decorType
+  href: api/GrandmaGreen.Collections.ItemProperties.html#GrandmaGreen_Collections_ItemProperties_decorType
+  commentId: F:GrandmaGreen.Collections.ItemProperties.decorType
+  fullName: GrandmaGreen.Collections.ItemProperties.decorType
+  nameWithType: ItemProperties.decorType
 - uid: GrandmaGreen.Collections.ItemProperties.description
   name: description
   href: api/GrandmaGreen.Collections.ItemProperties.html#GrandmaGreen_Collections_ItemProperties_description
@@ -8744,19 +8762,6 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Shopkeeping.DecorShopUIController.DecorShopUIController
   nameWithType: DecorShopUIController.DecorShopUIController
-- uid: GrandmaGreen.Shopkeeping.DecorShopUIController.GetBaseCostById(System.UInt16)
-  name: GetBaseCostById(UInt16)
-  href: api/GrandmaGreen.Shopkeeping.DecorShopUIController.html#GrandmaGreen_Shopkeeping_DecorShopUIController_GetBaseCostById_System_UInt16_
-  commentId: M:GrandmaGreen.Shopkeeping.DecorShopUIController.GetBaseCostById(System.UInt16)
-  fullName: GrandmaGreen.Shopkeeping.DecorShopUIController.GetBaseCostById(System.UInt16)
-  nameWithType: DecorShopUIController.GetBaseCostById(UInt16)
-- uid: GrandmaGreen.Shopkeeping.DecorShopUIController.GetBaseCostById*
-  name: GetBaseCostById
-  href: api/GrandmaGreen.Shopkeeping.DecorShopUIController.html#GrandmaGreen_Shopkeeping_DecorShopUIController_GetBaseCostById_
-  commentId: Overload:GrandmaGreen.Shopkeeping.DecorShopUIController.GetBaseCostById
-  isSpec: "True"
-  fullName: GrandmaGreen.Shopkeeping.DecorShopUIController.GetBaseCostById
-  nameWithType: DecorShopUIController.GetBaseCostById
 - uid: GrandmaGreen.Shopkeeping.DecorShopUIController.GetDecorList
   name: GetDecorList()
   href: api/GrandmaGreen.Shopkeeping.DecorShopUIController.html#GrandmaGreen_Shopkeeping_DecorShopUIController_GetDecorList
@@ -8770,12 +8775,12 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Shopkeeping.DecorShopUIController.GetDecorList
   nameWithType: DecorShopUIController.GetDecorList
-- uid: GrandmaGreen.Shopkeeping.DecorShopUIController.GetSellingPriceById(System.UInt16)
-  name: GetSellingPriceById(UInt16)
-  href: api/GrandmaGreen.Shopkeeping.DecorShopUIController.html#GrandmaGreen_Shopkeeping_DecorShopUIController_GetSellingPriceById_System_UInt16_
-  commentId: M:GrandmaGreen.Shopkeeping.DecorShopUIController.GetSellingPriceById(System.UInt16)
-  fullName: GrandmaGreen.Shopkeeping.DecorShopUIController.GetSellingPriceById(System.UInt16)
-  nameWithType: DecorShopUIController.GetSellingPriceById(UInt16)
+- uid: GrandmaGreen.Shopkeeping.DecorShopUIController.GetSellingPriceById(IInventoryItem)
+  name: GetSellingPriceById(IInventoryItem)
+  href: api/GrandmaGreen.Shopkeeping.DecorShopUIController.html#GrandmaGreen_Shopkeeping_DecorShopUIController_GetSellingPriceById_IInventoryItem_
+  commentId: M:GrandmaGreen.Shopkeeping.DecorShopUIController.GetSellingPriceById(IInventoryItem)
+  fullName: GrandmaGreen.Shopkeeping.DecorShopUIController.GetSellingPriceById(IInventoryItem)
+  nameWithType: DecorShopUIController.GetSellingPriceById(IInventoryItem)
 - uid: GrandmaGreen.Shopkeeping.DecorShopUIController.GetSellingPriceById*
   name: GetSellingPriceById
   href: api/GrandmaGreen.Shopkeeping.DecorShopUIController.html#GrandmaGreen_Shopkeeping_DecorShopUIController_GetSellingPriceById_
@@ -8783,6 +8788,32 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Shopkeeping.DecorShopUIController.GetSellingPriceById
   nameWithType: DecorShopUIController.GetSellingPriceById
+- uid: GrandmaGreen.Shopkeeping.DecorShopUIController.UnlockGardenExpansion
+  name: UnlockGardenExpansion()
+  href: api/GrandmaGreen.Shopkeeping.DecorShopUIController.html#GrandmaGreen_Shopkeeping_DecorShopUIController_UnlockGardenExpansion
+  commentId: M:GrandmaGreen.Shopkeeping.DecorShopUIController.UnlockGardenExpansion
+  fullName: GrandmaGreen.Shopkeeping.DecorShopUIController.UnlockGardenExpansion()
+  nameWithType: DecorShopUIController.UnlockGardenExpansion()
+- uid: GrandmaGreen.Shopkeeping.DecorShopUIController.UnlockGardenExpansion*
+  name: UnlockGardenExpansion
+  href: api/GrandmaGreen.Shopkeeping.DecorShopUIController.html#GrandmaGreen_Shopkeeping_DecorShopUIController_UnlockGardenExpansion_
+  commentId: Overload:GrandmaGreen.Shopkeeping.DecorShopUIController.UnlockGardenExpansion
+  isSpec: "True"
+  fullName: GrandmaGreen.Shopkeeping.DecorShopUIController.UnlockGardenExpansion
+  nameWithType: DecorShopUIController.UnlockGardenExpansion
+- uid: GrandmaGreen.Shopkeeping.DecorShopUIController.UpdateCycle
+  name: UpdateCycle()
+  href: api/GrandmaGreen.Shopkeeping.DecorShopUIController.html#GrandmaGreen_Shopkeeping_DecorShopUIController_UpdateCycle
+  commentId: M:GrandmaGreen.Shopkeeping.DecorShopUIController.UpdateCycle
+  fullName: GrandmaGreen.Shopkeeping.DecorShopUIController.UpdateCycle()
+  nameWithType: DecorShopUIController.UpdateCycle()
+- uid: GrandmaGreen.Shopkeeping.DecorShopUIController.UpdateCycle*
+  name: UpdateCycle
+  href: api/GrandmaGreen.Shopkeeping.DecorShopUIController.html#GrandmaGreen_Shopkeeping_DecorShopUIController_UpdateCycle_
+  commentId: Overload:GrandmaGreen.Shopkeeping.DecorShopUIController.UpdateCycle
+  isSpec: "True"
+  fullName: GrandmaGreen.Shopkeeping.DecorShopUIController.UpdateCycle
+  nameWithType: DecorShopUIController.UpdateCycle
 - uid: GrandmaGreen.Shopkeeping.GardeningShopUIController
   name: GardeningShopUIController
   href: api/GrandmaGreen.Shopkeeping.GardeningShopUIController.html
