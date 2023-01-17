@@ -23,7 +23,9 @@ namespace GrandmaGreen.Garden
         public GardenCustomizer gardenCustomizer;
         public GardenVFX gardenVFX;
         public Cinemachine.CinemachineVirtualCamera customizationCamera;
-        public GameObject defaultPlantPrefab;
+        public GameObject defaultFlowerPrefab;
+        public GameObject defaultVegetablePrefab;
+        public GameObject defaultFruitPrefab;
         public Dictionary<Vector3Int, GameObject> plantPrefabLookup;
         public List<Collider> decorList;
         public List<PlantState> plantListDebug;
@@ -155,15 +157,15 @@ namespace GrandmaGreen.Garden
             }
         }
 
-        public void UpdateSprite(Vector3Int cell)
+        public void UpdateFlowerSprite(Vector3Int cell)
         {
-            Transform transform = plantPrefabLookup[cell].transform;
-            SpriteRenderer spriteRenderer = (SpriteRenderer)transform.Find("Sprite3D")
-                .GetComponent(typeof(SpriteRenderer));
+            SpriteRenderer spriteRenderer = plantPrefabLookup[cell]
+                .transform.Find("Sprite3D")
+                .GetComponent<SpriteRenderer>();
             PlantState plant = gardenManager.GetPlant(areaIndex, cell);
             Genotype genotype = gardenManager.GetGenotype(areaIndex, cell);
-            Sprite sprite = collection.GetSprite(plant.type, genotype, plant.growthStage);
-            spriteRenderer.sprite = sprite;
+            spriteRenderer.sprite = collection.GetSprite(plant.type, genotype, plant.growthStage);
+            transform.localScale = new Vector3(1.0f, 1.0f, 1.0f) * plant.genotype.SpriteSize();
 
             if (gardenManager.PlantIsWilted(areaIndex, cell))
             {
@@ -179,13 +181,95 @@ namespace GrandmaGreen.Garden
             {
                 spriteRenderer.color = new Color(1f, 1f, 1f);
             }
+        }
+
+        public void UpdateVegetableSprite(Vector3Int cell)
+        {
+            SpriteRenderer stalk = plantPrefabLookup[cell]
+                .transform.Find("Stalk")
+                .GetComponent<SpriteRenderer>();
+            SpriteRenderer head = plantPrefabLookup[cell]
+                .transform.Find("Head")
+                .GetComponent<SpriteRenderer>();
+            PlantState plant = gardenManager.GetPlant(areaIndex, cell);
+            Genotype genotype = gardenManager.GetGenotype(areaIndex, cell);
+            stalk.sprite = collection.GetSprite(plant.type, genotype, plant.growthStage);
+            head.sprite = collection.GetVegetableHead(plant.type, genotype, plant.growthStage);
+            transform.localScale = new Vector3(1.0f, 1.0f, 1.0f) * plant.genotype.SpriteSize();
+
+            if (gardenManager.PlantIsWilted(areaIndex, cell))
+            {
+                stalk.color = new Color(0.71f, 0.4f, 0.11f);
+                head.color = new Color(0.71f, 0.4f, 0.11f);
+            }
+            else if (gardenManager.PlantIsDead(areaIndex, cell))
+            {
+                stalk.color = new Color(1f, 1f, 1f);
+                Sprite deadSprite = Resources.Load<Sprite>("Flowers/DeadPlant/PLA_DeadPlant");
+                stalk.sprite = deadSprite;
+            }
+            else
+            {
+                stalk.color = new Color(1f, 1f, 1f);
+                head.color = new Color(1f, 1f, 1f);
+            }
+        }
+
+        public void UpdateFruitSprite(Vector3Int cell)
+        {
+            SpriteRenderer tree = plantPrefabLookup[cell]
+                .transform.Find("Tree")
+                .GetComponent<SpriteRenderer>();
+            SpriteRenderer fruit1 = plantPrefabLookup[cell]
+                .transform.Find("Fruit1")
+                .GetComponent<SpriteRenderer>();
+            SpriteRenderer fruit2 = plantPrefabLookup[cell]
+                .transform.Find("Fruit2")
+                .GetComponent<SpriteRenderer>();
+            SpriteRenderer fruit3 = plantPrefabLookup[cell]
+                .transform.Find("Fruit3")
+                .GetComponent<SpriteRenderer>();
+            PlantState plant = gardenManager.GetPlant(areaIndex, cell);
+            Genotype genotype = gardenManager.GetGenotype(areaIndex, cell);
+            tree.sprite = collection.GetFruitTree(plant.type, genotype, plant.growthStage);
+            fruit1.sprite = collection.GetFruitFruit(plant.type, genotype, plant.growthStage);
+            fruit2.sprite = collection.GetFruitFruit(plant.type, genotype, plant.growthStage);
+            fruit3.sprite = collection.GetFruitFruit(plant.type, genotype, plant.growthStage);
             transform.localScale = new Vector3(1.0f, 1.0f, 1.0f) * plant.genotype.SpriteSize();
         }
 
-        public void InstantiatePlantPrefab(Vector3Int cell, PlantId type, int growthStage)
+        public void UpdateSprite(Vector3Int cell)
+        {
+            PlantId id = gardenManager.GetPlantType(areaIndex, cell);
+            if (collection.IsFlower(id))
+            {
+                UpdateFlowerSprite(cell);
+            }
+            else if (collection.IsVegetable(id))
+            {
+                UpdateVegetableSprite(cell);
+            }
+            else if (collection.IsFruit(id))
+            {
+                UpdateFruitSprite(cell);
+            }
+        }
+
+        public void InstantiatePlantPrefab(Vector3Int cell, PlantId id, int growthStage)
         {
             Vector3 centerOfCell = tilemap.GetCellCenterWorld(cell);
-            plantPrefabLookup[cell] = Instantiate(defaultPlantPrefab, centerOfCell, Quaternion.identity);
+            if (collection.IsFlower(id))
+            {
+                plantPrefabLookup[cell] = Instantiate(defaultFlowerPrefab, centerOfCell, Quaternion.identity);
+            }
+            else if (collection.IsVegetable(id))
+            {
+                plantPrefabLookup[cell] = Instantiate(defaultVegetablePrefab, centerOfCell, Quaternion.identity);
+            }
+            else if (collection.IsFruit(id))
+            {
+                plantPrefabLookup[cell] = Instantiate(defaultFruitPrefab, centerOfCell, Quaternion.identity);
+            }
             UpdateSprite(cell);
         }
 
@@ -421,15 +505,14 @@ namespace GrandmaGreen.Garden
             ResetGarden();
             Vector3Int topLeft = Vector3Int.zero + 3 * Vector3Int.up + 7 * Vector3Int.left;
             int row = 0;
-            //for (int id = 1001; id <= 1007; id++)
-            foreach (Collections.FlowerId flowerId in System.Enum.GetValues(typeof(Collections.FlowerId)))
+            foreach (FlowerId flowerId in System.Enum.GetValues(typeof(FlowerId)))
             {
                 Vector3Int leftTile = topLeft + row * Vector3Int.down;
                 Vector3Int right = Vector3Int.right;
                 for (int j = 0; j < 7; j++) {
                     ChangeGardenTileToPlot_Occupied(leftTile + j * right);
 	            }
-                Collections.PlantId plantId = (Collections.PlantId)flowerId;
+                PlantId plantId = (PlantId)flowerId;
                 Genotype.Generation mega = Genotype.Generation.F2;
                 CreatePlant(plantId, new Genotype("AaBb"), leftTile + right * 0, 0);
                 CreatePlant(plantId, new Genotype("AaBb"), leftTile + right * 1, 1);
@@ -440,6 +523,60 @@ namespace GrandmaGreen.Garden
                 CreatePlant(plantId, new Genotype("AaBB", mega), leftTile + right * 6, 2);
                 row++;
 	        }
+        }
+
+        [ContextMenu("VegetableTest")]
+        public void VegetableTest()
+        {
+            ResetGarden();
+            Vector3Int topLeft = Vector3Int.zero + 3 * Vector3Int.up + 7 * Vector3Int.left;
+            int row = 0;
+            foreach (VegetableId vegId in System.Enum.GetValues(typeof(VegetableId)))
+            {
+                Vector3Int leftTile = topLeft + row * Vector3Int.down;
+                Vector3Int right = Vector3Int.right;
+                for (int j = 0; j < 7; j++)
+                {
+                    ChangeGardenTileToPlot_Occupied(leftTile + j * right);
+                }
+                PlantId plantId = (PlantId)vegId;
+                Genotype.Generation mega = Genotype.Generation.F2;
+                CreatePlant(plantId, new Genotype("AaBb"), leftTile + right * 0, 0);
+                CreatePlant(plantId, new Genotype("AaBb"), leftTile + right * 1, 1);
+                CreatePlant(plantId, new Genotype("Aabb"), leftTile + right * 2, 2);
+                CreatePlant(plantId, new Genotype("AaBb"), leftTile + right * 3, 2);
+                CreatePlant(plantId, new Genotype("AaBB"), leftTile + right * 4, 2);
+                CreatePlant(plantId, new Genotype("Aabb", mega), leftTile + right * 5, 2);
+                CreatePlant(plantId, new Genotype("AaBB", mega), leftTile + right * 6, 2);
+                row++;
+            }
+        }
+
+        [ContextMenu("FruitTest")]
+        public void FruitTest()
+        {
+            ResetGarden();
+            Vector3Int topLeft = Vector3Int.zero + 3 * Vector3Int.up + 7 * Vector3Int.left;
+            int row = 0;
+            foreach (FruitId fruitId in System.Enum.GetValues(typeof(FruitId)))
+            {
+                Vector3Int leftTile = topLeft + row * Vector3Int.down;
+                Vector3Int right = Vector3Int.right;
+                for (int j = 0; j < 7; j++)
+                {
+                    ChangeGardenTileToPlot_Occupied(leftTile + j * right);
+                }
+                PlantId plantId = (PlantId)fruitId;
+                Genotype.Generation mega = Genotype.Generation.F2;
+                CreatePlant(plantId, new Genotype("AaBb"), leftTile + right * 0, 0);
+                CreatePlant(plantId, new Genotype("AaBb"), leftTile + right * 1, 1);
+                CreatePlant(plantId, new Genotype("Aabb"), leftTile + right * 2, 2);
+                CreatePlant(plantId, new Genotype("AaBb"), leftTile + right * 3, 2);
+                CreatePlant(plantId, new Genotype("AaBB"), leftTile + right * 4, 2);
+                CreatePlant(plantId, new Genotype("Aabb", mega), leftTile + right * 5, 2);
+                CreatePlant(plantId, new Genotype("AaBB", mega), leftTile + right * 6, 2);
+                row++;
+            }
         }
 
         [ContextMenu("GenotypeSpriteTest")]
@@ -502,6 +639,17 @@ namespace GrandmaGreen.Garden
             first = new Genotype("aaBB", Genotype.Generation.F2);
             second = new Genotype("aaBB", Genotype.Generation.F1);
             first.Cross(second);
+        }
+
+        [ContextMenu("IdTypeTest")]
+        public void IdTypeTest()
+        {
+            Debug.Log("1001 is flower " + collection.IsFlower((PlantId)1001));
+            Debug.Log("1018 is flower " + collection.IsFlower((PlantId)1018));
+            Debug.Log("1008 is vegetable " + collection.IsVegetable((PlantId)1008));
+            Debug.Log("1001 is vegetable " + collection.IsVegetable((PlantId)1001));
+            Debug.Log("1015 is fruit " + collection.IsFruit((PlantId)1015));
+            Debug.Log("1008 is fruit " + collection.IsFruit((PlantId)1008));
         }
         #endregion
 

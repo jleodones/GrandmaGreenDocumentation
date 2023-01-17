@@ -37,7 +37,7 @@ namespace GrandmaGreen.Collections
         Pepper = 1010,
         SweetPotato = 1011,
         Corn = 1012,
-        Radish = 1013,
+        Turnip = 1013,
         Pumpkin = 1014
     }
 
@@ -66,7 +66,7 @@ namespace GrandmaGreen.Collections
         Pepper = 1010,
         SweetPotato = 1011,
         Corn = 1012,
-        Radish = 1013,
+        Turnip = 1013,
         Pumpkin = 1014,
         Apple = 1015,
         Pear = 1016,
@@ -88,7 +88,7 @@ namespace GrandmaGreen.Collections
         CottonGolem = 5006,
         CrocusGolem = 5007,
         PumpkinGolem = 5008,
-        RadishGolem = 5009
+        TurnipGolem = 5009
     }
 
     public enum DecorationId : ushort
@@ -97,7 +97,7 @@ namespace GrandmaGreen.Collections
         TulipGolemMemento = 4002,
         AppleGolemMemento = 4003,
         CrocusGolemMemento = 4004,
-        RadishGolemMemento = 4005,
+        TurnipGolemMemento = 4005,
         PumpkinGolemMemento = 4006,
         CottonGolemMemento = 4007,
         CampingLantern = 4008,
@@ -198,7 +198,7 @@ namespace GrandmaGreen.Collections
     public enum PlantType : ushort
     {
         Flower = 1,
-        Veggie = 2,
+        Vegetable = 2,
         Fruit = 3
     }
 
@@ -271,6 +271,21 @@ namespace GrandmaGreen.Collections
             CSVtoSO.GenerateCollectionsSO(this, dataSheet);
         }
 
+        public bool IsFlower(PlantId id)
+        {
+            return Array.Exists<PlantId>((PlantId[])Enum.GetValues(typeof(FlowerId)), element => element == id);    
+        }
+
+        public bool IsVegetable(PlantId id)
+        {
+            return Array.Exists<PlantId>((PlantId[])Enum.GetValues(typeof(VegetableId)), element => element == id);
+        }
+
+        public bool IsFruit(PlantId id)
+        {
+            return Array.Exists<PlantId>((PlantId[])Enum.GetValues(typeof(FruitId)), element => element == id);
+        }
+
         public bool PlantToGolem(PlantId id, out CharacterId golemID)
         {
             golemID = default;
@@ -289,8 +304,8 @@ namespace GrandmaGreen.Collections
                 case PlantId.Apple:
                     golemID = CharacterId.AppleGolem;
                     return true;
-                case PlantId.Radish:
-                    golemID = CharacterId.RadishGolem;
+                case PlantId.Turnip:
+                    golemID = CharacterId.TurnipGolem;
                     return true;
                 default:
                     return false;
@@ -343,7 +358,6 @@ namespace GrandmaGreen.Collections
         public Sprite GetSprite(PlantId type, Genotype genotype, int growthStage)
         {
             PlantProperties plant = GetPlant(type);
-
             bool isMega = genotype.generation == Genotype.Generation.F2;
             string suffix = "";
 
@@ -357,26 +371,63 @@ namespace GrandmaGreen.Collections
                     break;
                 case 2:
                     suffix = "_Mature";
-                    switch (genotype.trait)
+                    if (IsFlower(type))
                     {
-                        case Genotype.Trait.Recessive:
-                            suffix = isMega ? "_Rec_M" : "_Rec";
-                            break;
-                        case Genotype.Trait.Heterozygous:
-                            suffix = "_Het";
-                            break;
-                        case Genotype.Trait.Dominant:
-                            suffix = isMega ? "_Dom_M" : "_Dom";
-                            break;
+                        switch (genotype.trait)
+                        {
+                            case Genotype.Trait.Recessive:
+                                suffix = isMega ? "_Rec_M" : "_Rec";
+                                break;
+                            case Genotype.Trait.Heterozygous:
+                                suffix = "_Het";
+                                break;
+                            case Genotype.Trait.Dominant:
+                                suffix = isMega ? "_Dom_M" : "_Dom";
+                                break;
+                        }
                     }
                     break;
             }
 
             StringBuilder finalSpritePath = new StringBuilder(plant.plantType.ToString(), 100);
             finalSpritePath.Append("s/" + plant.name + "/" + plant.spriteBasePath + suffix);
+            return Resources.Load<Sprite>(finalSpritePath.ToString());
+        }
 
-            Sprite plantSprite = Resources.Load<Sprite>(finalSpritePath.ToString());
-            return plantSprite;
+        /// <summary>
+        /// Get child sprite for fruits and vegetables.
+        /// </summary>
+        /// <param name="type"></param>
+        /// <param name="genotype"></param>
+        /// <returns>Fruit or vegetable.</returns>
+        public Sprite GetVegetableHead(PlantId type, Genotype genotype, int growthStage)
+        {
+            if (growthStage < 2) return null;
+            PlantProperties plant = GetPlant(type);
+            StringBuilder finalSpritePath = new StringBuilder(plant.plantType.ToString(), 100);
+            finalSpritePath.Append("s/" + plant.name + "/" + plant.spriteBasePath + "_HeadLarge");
+            return Resources.Load<Sprite>(finalSpritePath.ToString());
+        }
+
+        public Sprite GetFruitTree(PlantId type, Genotype genotype, int growthStage)
+        {
+            PlantProperties plant = GetPlant(type);
+            Sprite[] sheet = Resources.LoadAll<Sprite>(plant.plantType.ToString() + "s/" + plant.name + "/" + plant.spriteBasePath);
+            if (growthStage == 0) return sheet[5];
+            else if (growthStage == 1) return sheet[1];
+            else if (growthStage == 2) return sheet[3];
+            return null;
+        }
+
+        public Sprite GetFruitFruit(PlantId type, Genotype genotype, int growthStage)
+        {
+            if (growthStage < 2) return null;
+            PlantProperties plant = GetPlant(type);
+            Sprite[] sheet = Resources.LoadAll<Sprite>(plant.plantType.ToString() + "s/" + plant.name + "/" + plant.spriteBasePath);
+            if (genotype.trait == Genotype.Trait.Dominant) return sheet[0];
+            else if (genotype.trait == Genotype.Trait.Heterozygous) return sheet[2];
+            else if (genotype.trait == Genotype.Trait.Recessive) return sheet[4];
+            return null;
         }
 
         /// <summary>
