@@ -1076,18 +1076,18 @@ references:
   commentId: F:GrandmaGreen.Collections.CharacterId.PumpkinGolem
   fullName: GrandmaGreen.Collections.CharacterId.PumpkinGolem
   nameWithType: CharacterId.PumpkinGolem
-- uid: GrandmaGreen.Collections.CharacterId.RadishGolem
-  name: RadishGolem
-  href: api/GrandmaGreen.Collections.CharacterId.html#GrandmaGreen_Collections_CharacterId_RadishGolem
-  commentId: F:GrandmaGreen.Collections.CharacterId.RadishGolem
-  fullName: GrandmaGreen.Collections.CharacterId.RadishGolem
-  nameWithType: CharacterId.RadishGolem
 - uid: GrandmaGreen.Collections.CharacterId.TulipGolem
   name: TulipGolem
   href: api/GrandmaGreen.Collections.CharacterId.html#GrandmaGreen_Collections_CharacterId_TulipGolem
   commentId: F:GrandmaGreen.Collections.CharacterId.TulipGolem
   fullName: GrandmaGreen.Collections.CharacterId.TulipGolem
   nameWithType: CharacterId.TulipGolem
+- uid: GrandmaGreen.Collections.CharacterId.TurnipGolem
+  name: TurnipGolem
+  href: api/GrandmaGreen.Collections.CharacterId.html#GrandmaGreen_Collections_CharacterId_TurnipGolem
+  commentId: F:GrandmaGreen.Collections.CharacterId.TurnipGolem
+  fullName: GrandmaGreen.Collections.CharacterId.TurnipGolem
+  nameWithType: CharacterId.TurnipGolem
 - uid: GrandmaGreen.Collections.CharacterProperties
   name: CharacterProperties
   href: api/GrandmaGreen.Collections.CharacterProperties.html
@@ -1156,6 +1156,32 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Collections.CollectionsSO.GenerateCollections
   nameWithType: CollectionsSO.GenerateCollections
+- uid: GrandmaGreen.Collections.CollectionsSO.GetFruitFruit(GrandmaGreen.Collections.PlantId,Genotype,System.Int32)
+  name: GetFruitFruit(PlantId, Genotype, Int32)
+  href: api/GrandmaGreen.Collections.CollectionsSO.html#GrandmaGreen_Collections_CollectionsSO_GetFruitFruit_GrandmaGreen_Collections_PlantId_Genotype_System_Int32_
+  commentId: M:GrandmaGreen.Collections.CollectionsSO.GetFruitFruit(GrandmaGreen.Collections.PlantId,Genotype,System.Int32)
+  fullName: GrandmaGreen.Collections.CollectionsSO.GetFruitFruit(GrandmaGreen.Collections.PlantId, Genotype, System.Int32)
+  nameWithType: CollectionsSO.GetFruitFruit(PlantId, Genotype, Int32)
+- uid: GrandmaGreen.Collections.CollectionsSO.GetFruitFruit*
+  name: GetFruitFruit
+  href: api/GrandmaGreen.Collections.CollectionsSO.html#GrandmaGreen_Collections_CollectionsSO_GetFruitFruit_
+  commentId: Overload:GrandmaGreen.Collections.CollectionsSO.GetFruitFruit
+  isSpec: "True"
+  fullName: GrandmaGreen.Collections.CollectionsSO.GetFruitFruit
+  nameWithType: CollectionsSO.GetFruitFruit
+- uid: GrandmaGreen.Collections.CollectionsSO.GetFruitTree(GrandmaGreen.Collections.PlantId,Genotype,System.Int32)
+  name: GetFruitTree(PlantId, Genotype, Int32)
+  href: api/GrandmaGreen.Collections.CollectionsSO.html#GrandmaGreen_Collections_CollectionsSO_GetFruitTree_GrandmaGreen_Collections_PlantId_Genotype_System_Int32_
+  commentId: M:GrandmaGreen.Collections.CollectionsSO.GetFruitTree(GrandmaGreen.Collections.PlantId,Genotype,System.Int32)
+  fullName: GrandmaGreen.Collections.CollectionsSO.GetFruitTree(GrandmaGreen.Collections.PlantId, Genotype, System.Int32)
+  nameWithType: CollectionsSO.GetFruitTree(PlantId, Genotype, Int32)
+- uid: GrandmaGreen.Collections.CollectionsSO.GetFruitTree*
+  name: GetFruitTree
+  href: api/GrandmaGreen.Collections.CollectionsSO.html#GrandmaGreen_Collections_CollectionsSO_GetFruitTree_
+  commentId: Overload:GrandmaGreen.Collections.CollectionsSO.GetFruitTree
+  isSpec: "True"
+  fullName: GrandmaGreen.Collections.CollectionsSO.GetFruitTree
+  nameWithType: CollectionsSO.GetFruitTree
 - uid: GrandmaGreen.Collections.CollectionsSO.GetItem(System.UInt16)
   name: GetItem(UInt16)
   href: api/GrandmaGreen.Collections.CollectionsSO.html#GrandmaGreen_Collections_CollectionsSO_GetItem_System_UInt16_
@@ -1213,6 +1239,58 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Collections.CollectionsSO.GetSprite
   nameWithType: CollectionsSO.GetSprite
+- uid: GrandmaGreen.Collections.CollectionsSO.GetVegetableHead(GrandmaGreen.Collections.PlantId,Genotype,System.Int32)
+  name: GetVegetableHead(PlantId, Genotype, Int32)
+  href: api/GrandmaGreen.Collections.CollectionsSO.html#GrandmaGreen_Collections_CollectionsSO_GetVegetableHead_GrandmaGreen_Collections_PlantId_Genotype_System_Int32_
+  commentId: M:GrandmaGreen.Collections.CollectionsSO.GetVegetableHead(GrandmaGreen.Collections.PlantId,Genotype,System.Int32)
+  fullName: GrandmaGreen.Collections.CollectionsSO.GetVegetableHead(GrandmaGreen.Collections.PlantId, Genotype, System.Int32)
+  nameWithType: CollectionsSO.GetVegetableHead(PlantId, Genotype, Int32)
+- uid: GrandmaGreen.Collections.CollectionsSO.GetVegetableHead*
+  name: GetVegetableHead
+  href: api/GrandmaGreen.Collections.CollectionsSO.html#GrandmaGreen_Collections_CollectionsSO_GetVegetableHead_
+  commentId: Overload:GrandmaGreen.Collections.CollectionsSO.GetVegetableHead
+  isSpec: "True"
+  fullName: GrandmaGreen.Collections.CollectionsSO.GetVegetableHead
+  nameWithType: CollectionsSO.GetVegetableHead
+- uid: GrandmaGreen.Collections.CollectionsSO.IsFlower(GrandmaGreen.Collections.PlantId)
+  name: IsFlower(PlantId)
+  href: api/GrandmaGreen.Collections.CollectionsSO.html#GrandmaGreen_Collections_CollectionsSO_IsFlower_GrandmaGreen_Collections_PlantId_
+  commentId: M:GrandmaGreen.Collections.CollectionsSO.IsFlower(GrandmaGreen.Collections.PlantId)
+  fullName: GrandmaGreen.Collections.CollectionsSO.IsFlower(GrandmaGreen.Collections.PlantId)
+  nameWithType: CollectionsSO.IsFlower(PlantId)
+- uid: GrandmaGreen.Collections.CollectionsSO.IsFlower*
+  name: IsFlower
+  href: api/GrandmaGreen.Collections.CollectionsSO.html#GrandmaGreen_Collections_CollectionsSO_IsFlower_
+  commentId: Overload:GrandmaGreen.Collections.CollectionsSO.IsFlower
+  isSpec: "True"
+  fullName: GrandmaGreen.Collections.CollectionsSO.IsFlower
+  nameWithType: CollectionsSO.IsFlower
+- uid: GrandmaGreen.Collections.CollectionsSO.IsFruit(GrandmaGreen.Collections.PlantId)
+  name: IsFruit(PlantId)
+  href: api/GrandmaGreen.Collections.CollectionsSO.html#GrandmaGreen_Collections_CollectionsSO_IsFruit_GrandmaGreen_Collections_PlantId_
+  commentId: M:GrandmaGreen.Collections.CollectionsSO.IsFruit(GrandmaGreen.Collections.PlantId)
+  fullName: GrandmaGreen.Collections.CollectionsSO.IsFruit(GrandmaGreen.Collections.PlantId)
+  nameWithType: CollectionsSO.IsFruit(PlantId)
+- uid: GrandmaGreen.Collections.CollectionsSO.IsFruit*
+  name: IsFruit
+  href: api/GrandmaGreen.Collections.CollectionsSO.html#GrandmaGreen_Collections_CollectionsSO_IsFruit_
+  commentId: Overload:GrandmaGreen.Collections.CollectionsSO.IsFruit
+  isSpec: "True"
+  fullName: GrandmaGreen.Collections.CollectionsSO.IsFruit
+  nameWithType: CollectionsSO.IsFruit
+- uid: GrandmaGreen.Collections.CollectionsSO.IsVegetable(GrandmaGreen.Collections.PlantId)
+  name: IsVegetable(PlantId)
+  href: api/GrandmaGreen.Collections.CollectionsSO.html#GrandmaGreen_Collections_CollectionsSO_IsVegetable_GrandmaGreen_Collections_PlantId_
+  commentId: M:GrandmaGreen.Collections.CollectionsSO.IsVegetable(GrandmaGreen.Collections.PlantId)
+  fullName: GrandmaGreen.Collections.CollectionsSO.IsVegetable(GrandmaGreen.Collections.PlantId)
+  nameWithType: CollectionsSO.IsVegetable(PlantId)
+- uid: GrandmaGreen.Collections.CollectionsSO.IsVegetable*
+  name: IsVegetable
+  href: api/GrandmaGreen.Collections.CollectionsSO.html#GrandmaGreen_Collections_CollectionsSO_IsVegetable_
+  commentId: Overload:GrandmaGreen.Collections.CollectionsSO.IsVegetable
+  isSpec: "True"
+  fullName: GrandmaGreen.Collections.CollectionsSO.IsVegetable
+  nameWithType: CollectionsSO.IsVegetable
 - uid: GrandmaGreen.Collections.CollectionsSO.ItemLookup
   name: ItemLookup
   href: api/GrandmaGreen.Collections.CollectionsSO.html#GrandmaGreen_Collections_CollectionsSO_ItemLookup
@@ -1863,12 +1941,6 @@ references:
   commentId: F:GrandmaGreen.Collections.DecorationId.PumpkinGolemMemento
   fullName: GrandmaGreen.Collections.DecorationId.PumpkinGolemMemento
   nameWithType: DecorationId.PumpkinGolemMemento
-- uid: GrandmaGreen.Collections.DecorationId.RadishGolemMemento
-  name: RadishGolemMemento
-  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_RadishGolemMemento
-  commentId: F:GrandmaGreen.Collections.DecorationId.RadishGolemMemento
-  fullName: GrandmaGreen.Collections.DecorationId.RadishGolemMemento
-  nameWithType: DecorationId.RadishGolemMemento
 - uid: GrandmaGreen.Collections.DecorationId.RockingChair
   name: RockingChair
   href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_RockingChair
@@ -1965,6 +2037,12 @@ references:
   commentId: F:GrandmaGreen.Collections.DecorationId.TulipGolemMemento
   fullName: GrandmaGreen.Collections.DecorationId.TulipGolemMemento
   nameWithType: DecorationId.TulipGolemMemento
+- uid: GrandmaGreen.Collections.DecorationId.TurnipGolemMemento
+  name: TurnipGolemMemento
+  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_TurnipGolemMemento
+  commentId: F:GrandmaGreen.Collections.DecorationId.TurnipGolemMemento
+  fullName: GrandmaGreen.Collections.DecorationId.TurnipGolemMemento
+  nameWithType: DecorationId.TurnipGolemMemento
 - uid: GrandmaGreen.Collections.DecorationId.Umbrella
   name: Umbrella
   href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_Umbrella
@@ -2475,12 +2553,6 @@ references:
   commentId: F:GrandmaGreen.Collections.PlantId.Pumpkin
   fullName: GrandmaGreen.Collections.PlantId.Pumpkin
   nameWithType: PlantId.Pumpkin
-- uid: GrandmaGreen.Collections.PlantId.Radish
-  name: Radish
-  href: api/GrandmaGreen.Collections.PlantId.html#GrandmaGreen_Collections_PlantId_Radish
-  commentId: F:GrandmaGreen.Collections.PlantId.Radish
-  fullName: GrandmaGreen.Collections.PlantId.Radish
-  nameWithType: PlantId.Radish
 - uid: GrandmaGreen.Collections.PlantId.Rose
   name: Rose
   href: api/GrandmaGreen.Collections.PlantId.html#GrandmaGreen_Collections_PlantId_Rose
@@ -2505,6 +2577,12 @@ references:
   commentId: F:GrandmaGreen.Collections.PlantId.Tulip
   fullName: GrandmaGreen.Collections.PlantId.Tulip
   nameWithType: PlantId.Tulip
+- uid: GrandmaGreen.Collections.PlantId.Turnip
+  name: Turnip
+  href: api/GrandmaGreen.Collections.PlantId.html#GrandmaGreen_Collections_PlantId_Turnip
+  commentId: F:GrandmaGreen.Collections.PlantId.Turnip
+  fullName: GrandmaGreen.Collections.PlantId.Turnip
+  nameWithType: PlantId.Turnip
 - uid: GrandmaGreen.Collections.PlantId.Watermelon
   name: Watermelon
   href: api/GrandmaGreen.Collections.PlantId.html#GrandmaGreen_Collections_PlantId_Watermelon
@@ -2583,12 +2661,12 @@ references:
   commentId: F:GrandmaGreen.Collections.PlantType.Fruit
   fullName: GrandmaGreen.Collections.PlantType.Fruit
   nameWithType: PlantType.Fruit
-- uid: GrandmaGreen.Collections.PlantType.Veggie
-  name: Veggie
-  href: api/GrandmaGreen.Collections.PlantType.html#GrandmaGreen_Collections_PlantType_Veggie
-  commentId: F:GrandmaGreen.Collections.PlantType.Veggie
-  fullName: GrandmaGreen.Collections.PlantType.Veggie
-  nameWithType: PlantType.Veggie
+- uid: GrandmaGreen.Collections.PlantType.Vegetable
+  name: Vegetable
+  href: api/GrandmaGreen.Collections.PlantType.html#GrandmaGreen_Collections_PlantType_Vegetable
+  commentId: F:GrandmaGreen.Collections.PlantType.Vegetable
+  fullName: GrandmaGreen.Collections.PlantType.Vegetable
+  nameWithType: PlantType.Vegetable
 - uid: GrandmaGreen.Collections.Seed
   name: Seed
   href: api/GrandmaGreen.Collections.Seed.html
@@ -2853,12 +2931,6 @@ references:
   commentId: F:GrandmaGreen.Collections.VegetableId.Pumpkin
   fullName: GrandmaGreen.Collections.VegetableId.Pumpkin
   nameWithType: VegetableId.Pumpkin
-- uid: GrandmaGreen.Collections.VegetableId.Radish
-  name: Radish
-  href: api/GrandmaGreen.Collections.VegetableId.html#GrandmaGreen_Collections_VegetableId_Radish
-  commentId: F:GrandmaGreen.Collections.VegetableId.Radish
-  fullName: GrandmaGreen.Collections.VegetableId.Radish
-  nameWithType: VegetableId.Radish
 - uid: GrandmaGreen.Collections.VegetableId.SweetPotato
   name: SweetPotato
   href: api/GrandmaGreen.Collections.VegetableId.html#GrandmaGreen_Collections_VegetableId_SweetPotato
@@ -2871,6 +2943,12 @@ references:
   commentId: F:GrandmaGreen.Collections.VegetableId.Tomato
   fullName: GrandmaGreen.Collections.VegetableId.Tomato
   nameWithType: VegetableId.Tomato
+- uid: GrandmaGreen.Collections.VegetableId.Turnip
+  name: Turnip
+  href: api/GrandmaGreen.Collections.VegetableId.html#GrandmaGreen_Collections_VegetableId_Turnip
+  commentId: F:GrandmaGreen.Collections.VegetableId.Turnip
+  fullName: GrandmaGreen.Collections.VegetableId.Turnip
+  nameWithType: VegetableId.Turnip
 - uid: GrandmaGreen.CollectionUIDisplay
   name: CollectionUIDisplay
   href: api/GrandmaGreen.CollectionUIDisplay.html
@@ -5755,12 +5833,24 @@ references:
   commentId: F:GrandmaGreen.Garden.GardenAreaController.decorList
   fullName: GrandmaGreen.Garden.GardenAreaController.decorList
   nameWithType: GardenAreaController.decorList
-- uid: GrandmaGreen.Garden.GardenAreaController.defaultPlantPrefab
-  name: defaultPlantPrefab
-  href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_defaultPlantPrefab
-  commentId: F:GrandmaGreen.Garden.GardenAreaController.defaultPlantPrefab
-  fullName: GrandmaGreen.Garden.GardenAreaController.defaultPlantPrefab
-  nameWithType: GardenAreaController.defaultPlantPrefab
+- uid: GrandmaGreen.Garden.GardenAreaController.defaultFlowerPrefab
+  name: defaultFlowerPrefab
+  href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_defaultFlowerPrefab
+  commentId: F:GrandmaGreen.Garden.GardenAreaController.defaultFlowerPrefab
+  fullName: GrandmaGreen.Garden.GardenAreaController.defaultFlowerPrefab
+  nameWithType: GardenAreaController.defaultFlowerPrefab
+- uid: GrandmaGreen.Garden.GardenAreaController.defaultFruitPrefab
+  name: defaultFruitPrefab
+  href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_defaultFruitPrefab
+  commentId: F:GrandmaGreen.Garden.GardenAreaController.defaultFruitPrefab
+  fullName: GrandmaGreen.Garden.GardenAreaController.defaultFruitPrefab
+  nameWithType: GardenAreaController.defaultFruitPrefab
+- uid: GrandmaGreen.Garden.GardenAreaController.defaultVegetablePrefab
+  name: defaultVegetablePrefab
+  href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_defaultVegetablePrefab
+  commentId: F:GrandmaGreen.Garden.GardenAreaController.defaultVegetablePrefab
+  fullName: GrandmaGreen.Garden.GardenAreaController.defaultVegetablePrefab
+  nameWithType: GardenAreaController.defaultVegetablePrefab
 - uid: GrandmaGreen.Garden.GardenAreaController.DestroyPlant(Vector3Int)
   name: DestroyPlant(Vector3Int)
   href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_DestroyPlant_Vector3Int_
@@ -5851,6 +5941,19 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Garden.GardenAreaController.FlowerTest
   nameWithType: GardenAreaController.FlowerTest
+- uid: GrandmaGreen.Garden.GardenAreaController.FruitTest
+  name: FruitTest()
+  href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_FruitTest
+  commentId: M:GrandmaGreen.Garden.GardenAreaController.FruitTest
+  fullName: GrandmaGreen.Garden.GardenAreaController.FruitTest()
+  nameWithType: GardenAreaController.FruitTest()
+- uid: GrandmaGreen.Garden.GardenAreaController.FruitTest*
+  name: FruitTest
+  href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_FruitTest_
+  commentId: Overload:GrandmaGreen.Garden.GardenAreaController.FruitTest
+  isSpec: "True"
+  fullName: GrandmaGreen.Garden.GardenAreaController.FruitTest
+  nameWithType: GardenAreaController.FruitTest
 - uid: GrandmaGreen.Garden.GardenAreaController.gardenCustomizer
   name: gardenCustomizer
   href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_gardenCustomizer
@@ -5947,6 +6050,19 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Garden.GardenAreaController.HarvestPlant
   nameWithType: GardenAreaController.HarvestPlant
+- uid: GrandmaGreen.Garden.GardenAreaController.IdTypeTest
+  name: IdTypeTest()
+  href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_IdTypeTest
+  commentId: M:GrandmaGreen.Garden.GardenAreaController.IdTypeTest
+  fullName: GrandmaGreen.Garden.GardenAreaController.IdTypeTest()
+  nameWithType: GardenAreaController.IdTypeTest()
+- uid: GrandmaGreen.Garden.GardenAreaController.IdTypeTest*
+  name: IdTypeTest
+  href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_IdTypeTest_
+  commentId: Overload:GrandmaGreen.Garden.GardenAreaController.IdTypeTest
+  isSpec: "True"
+  fullName: GrandmaGreen.Garden.GardenAreaController.IdTypeTest
+  nameWithType: GardenAreaController.IdTypeTest
 - uid: GrandmaGreen.Garden.GardenAreaController.IncrementTimer(System.Int32)
   name: IncrementTimer(Int32)
   href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_IncrementTimer_System_Int32_
@@ -6100,6 +6216,32 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Garden.GardenAreaController.ToggleGrowthTimer
   nameWithType: GardenAreaController.ToggleGrowthTimer
+- uid: GrandmaGreen.Garden.GardenAreaController.UpdateFlowerSprite(Vector3Int)
+  name: UpdateFlowerSprite(Vector3Int)
+  href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_UpdateFlowerSprite_Vector3Int_
+  commentId: M:GrandmaGreen.Garden.GardenAreaController.UpdateFlowerSprite(Vector3Int)
+  fullName: GrandmaGreen.Garden.GardenAreaController.UpdateFlowerSprite(Vector3Int)
+  nameWithType: GardenAreaController.UpdateFlowerSprite(Vector3Int)
+- uid: GrandmaGreen.Garden.GardenAreaController.UpdateFlowerSprite*
+  name: UpdateFlowerSprite
+  href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_UpdateFlowerSprite_
+  commentId: Overload:GrandmaGreen.Garden.GardenAreaController.UpdateFlowerSprite
+  isSpec: "True"
+  fullName: GrandmaGreen.Garden.GardenAreaController.UpdateFlowerSprite
+  nameWithType: GardenAreaController.UpdateFlowerSprite
+- uid: GrandmaGreen.Garden.GardenAreaController.UpdateFruitSprite(Vector3Int)
+  name: UpdateFruitSprite(Vector3Int)
+  href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_UpdateFruitSprite_Vector3Int_
+  commentId: M:GrandmaGreen.Garden.GardenAreaController.UpdateFruitSprite(Vector3Int)
+  fullName: GrandmaGreen.Garden.GardenAreaController.UpdateFruitSprite(Vector3Int)
+  nameWithType: GardenAreaController.UpdateFruitSprite(Vector3Int)
+- uid: GrandmaGreen.Garden.GardenAreaController.UpdateFruitSprite*
+  name: UpdateFruitSprite
+  href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_UpdateFruitSprite_
+  commentId: Overload:GrandmaGreen.Garden.GardenAreaController.UpdateFruitSprite
+  isSpec: "True"
+  fullName: GrandmaGreen.Garden.GardenAreaController.UpdateFruitSprite
+  nameWithType: GardenAreaController.UpdateFruitSprite
 - uid: GrandmaGreen.Garden.GardenAreaController.UpdateGardenDecorItem(GrandmaGreen.Garden.GardenDecorItem)
   name: UpdateGardenDecorItem(GardenDecorItem)
   href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_UpdateGardenDecorItem_GrandmaGreen_Garden_GardenDecorItem_
@@ -6126,6 +6268,32 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Garden.GardenAreaController.UpdateSprite
   nameWithType: GardenAreaController.UpdateSprite
+- uid: GrandmaGreen.Garden.GardenAreaController.UpdateVegetableSprite(Vector3Int)
+  name: UpdateVegetableSprite(Vector3Int)
+  href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_UpdateVegetableSprite_Vector3Int_
+  commentId: M:GrandmaGreen.Garden.GardenAreaController.UpdateVegetableSprite(Vector3Int)
+  fullName: GrandmaGreen.Garden.GardenAreaController.UpdateVegetableSprite(Vector3Int)
+  nameWithType: GardenAreaController.UpdateVegetableSprite(Vector3Int)
+- uid: GrandmaGreen.Garden.GardenAreaController.UpdateVegetableSprite*
+  name: UpdateVegetableSprite
+  href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_UpdateVegetableSprite_
+  commentId: Overload:GrandmaGreen.Garden.GardenAreaController.UpdateVegetableSprite
+  isSpec: "True"
+  fullName: GrandmaGreen.Garden.GardenAreaController.UpdateVegetableSprite
+  nameWithType: GardenAreaController.UpdateVegetableSprite
+- uid: GrandmaGreen.Garden.GardenAreaController.VegetableTest
+  name: VegetableTest()
+  href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_VegetableTest
+  commentId: M:GrandmaGreen.Garden.GardenAreaController.VegetableTest
+  fullName: GrandmaGreen.Garden.GardenAreaController.VegetableTest()
+  nameWithType: GardenAreaController.VegetableTest()
+- uid: GrandmaGreen.Garden.GardenAreaController.VegetableTest*
+  name: VegetableTest
+  href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_VegetableTest_
+  commentId: Overload:GrandmaGreen.Garden.GardenAreaController.VegetableTest
+  isSpec: "True"
+  fullName: GrandmaGreen.Garden.GardenAreaController.VegetableTest
+  nameWithType: GardenAreaController.VegetableTest
 - uid: GrandmaGreen.Garden.GardenAreaController.WaterPlant(Vector3Int)
   name: WaterPlant(Vector3Int)
   href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_WaterPlant_Vector3Int_

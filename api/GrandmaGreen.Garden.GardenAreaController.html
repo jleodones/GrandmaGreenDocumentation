@@ -218,12 +218,60 @@
   </table>
   
   
-  <h4 id="GrandmaGreen_Garden_GardenAreaController_defaultPlantPrefab" data-uid="GrandmaGreen.Garden.GardenAreaController.defaultPlantPrefab">defaultPlantPrefab</h4>
+  <h4 id="GrandmaGreen_Garden_GardenAreaController_defaultFlowerPrefab" data-uid="GrandmaGreen.Garden.GardenAreaController.defaultFlowerPrefab">defaultFlowerPrefab</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public GameObject defaultPlantPrefab</code></pre>
+    <pre><code class="lang-csharp hljs">public GameObject defaultFlowerPrefab</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">GameObject</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="GrandmaGreen_Garden_GardenAreaController_defaultFruitPrefab" data-uid="GrandmaGreen.Garden.GardenAreaController.defaultFruitPrefab">defaultFruitPrefab</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GameObject defaultFruitPrefab</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">GameObject</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="GrandmaGreen_Garden_GardenAreaController_defaultVegetablePrefab" data-uid="GrandmaGreen.Garden.GardenAreaController.defaultVegetablePrefab">defaultVegetablePrefab</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GameObject defaultVegetablePrefab</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -836,6 +884,16 @@
   </div>
   
   
+  <a id="GrandmaGreen_Garden_GardenAreaController_FruitTest_" data-uid="GrandmaGreen.Garden.GardenAreaController.FruitTest*"></a>
+  <h4 id="GrandmaGreen_Garden_GardenAreaController_FruitTest" data-uid="GrandmaGreen.Garden.GardenAreaController.FruitTest">FruitTest()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void FruitTest()</code></pre>
+  </div>
+  
+  
   <a id="GrandmaGreen_Garden_GardenAreaController_GardenTileSelected_" data-uid="GrandmaGreen.Garden.GardenAreaController.GardenTileSelected*"></a>
   <h4 id="GrandmaGreen_Garden_GardenAreaController_GardenTileSelected_Vector3Int_" data-uid="GrandmaGreen.Garden.GardenAreaController.GardenTileSelected(Vector3Int)">GardenTileSelected(Vector3Int)</h4>
   <div class="markdown level1 summary"></div>
@@ -1041,6 +1099,16 @@
   </table>
   
   
+  <a id="GrandmaGreen_Garden_GardenAreaController_IdTypeTest_" data-uid="GrandmaGreen.Garden.GardenAreaController.IdTypeTest*"></a>
+  <h4 id="GrandmaGreen_Garden_GardenAreaController_IdTypeTest" data-uid="GrandmaGreen.Garden.GardenAreaController.IdTypeTest">IdTypeTest()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void IdTypeTest()</code></pre>
+  </div>
+  
+  
   <a id="GrandmaGreen_Garden_GardenAreaController_IncrementTimer_" data-uid="GrandmaGreen.Garden.GardenAreaController.IncrementTimer*"></a>
   <h4 id="GrandmaGreen_Garden_GardenAreaController_IncrementTimer_System_Int32_" data-uid="GrandmaGreen.Garden.GardenAreaController.IncrementTimer(System.Int32)">IncrementTimer(Int32)</h4>
   <div class="markdown level1 summary"></div>
@@ -1084,7 +1152,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void InstantiatePlantPrefab(Vector3Int cell, PlantId type, int growthStage)</code></pre>
+    <pre><code class="lang-csharp hljs">public void InstantiatePlantPrefab(Vector3Int cell, PlantId id, int growthStage)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1103,7 +1171,7 @@
       </tr>
       <tr>
         <td><span class="xref">PlantId</span></td>
-        <td><span class="parametername">type</span></td>
+        <td><span class="parametername">id</span></td>
         <td></td>
       </tr>
       <tr>
@@ -1255,6 +1323,60 @@
   </div>
   
   
+  <a id="GrandmaGreen_Garden_GardenAreaController_UpdateFlowerSprite_" data-uid="GrandmaGreen.Garden.GardenAreaController.UpdateFlowerSprite*"></a>
+  <h4 id="GrandmaGreen_Garden_GardenAreaController_UpdateFlowerSprite_Vector3Int_" data-uid="GrandmaGreen.Garden.GardenAreaController.UpdateFlowerSprite(Vector3Int)">UpdateFlowerSprite(Vector3Int)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void UpdateFlowerSprite(Vector3Int cell)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3Int</span></td>
+        <td><span class="parametername">cell</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="GrandmaGreen_Garden_GardenAreaController_UpdateFruitSprite_" data-uid="GrandmaGreen.Garden.GardenAreaController.UpdateFruitSprite*"></a>
+  <h4 id="GrandmaGreen_Garden_GardenAreaController_UpdateFruitSprite_Vector3Int_" data-uid="GrandmaGreen.Garden.GardenAreaController.UpdateFruitSprite(Vector3Int)">UpdateFruitSprite(Vector3Int)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void UpdateFruitSprite(Vector3Int cell)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3Int</span></td>
+        <td><span class="parametername">cell</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="GrandmaGreen_Garden_GardenAreaController_UpdateGardenDecorItem_" data-uid="GrandmaGreen.Garden.GardenAreaController.UpdateGardenDecorItem*"></a>
   <h4 id="GrandmaGreen_Garden_GardenAreaController_UpdateGardenDecorItem_GrandmaGreen_Garden_GardenDecorItem_" data-uid="GrandmaGreen.Garden.GardenAreaController.UpdateGardenDecorItem(GrandmaGreen.Garden.GardenDecorItem)">UpdateGardenDecorItem(GardenDecorItem)</h4>
   <div class="markdown level1 summary"></div>
@@ -1307,6 +1429,43 @@
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="GrandmaGreen_Garden_GardenAreaController_UpdateVegetableSprite_" data-uid="GrandmaGreen.Garden.GardenAreaController.UpdateVegetableSprite*"></a>
+  <h4 id="GrandmaGreen_Garden_GardenAreaController_UpdateVegetableSprite_Vector3Int_" data-uid="GrandmaGreen.Garden.GardenAreaController.UpdateVegetableSprite(Vector3Int)">UpdateVegetableSprite(Vector3Int)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void UpdateVegetableSprite(Vector3Int cell)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3Int</span></td>
+        <td><span class="parametername">cell</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="GrandmaGreen_Garden_GardenAreaController_VegetableTest_" data-uid="GrandmaGreen.Garden.GardenAreaController.VegetableTest*"></a>
+  <h4 id="GrandmaGreen_Garden_GardenAreaController_VegetableTest" data-uid="GrandmaGreen.Garden.GardenAreaController.VegetableTest">VegetableTest()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void VegetableTest()</code></pre>
+  </div>
   
   
   <a id="GrandmaGreen_Garden_GardenAreaController_WaterPlant_" data-uid="GrandmaGreen.Garden.GardenAreaController.WaterPlant*"></a>
