@@ -4612,12 +4612,12 @@ references:
   commentId: F:GrandmaGreen.Entities.GolemManager.playerController
   fullName: GrandmaGreen.Entities.GolemManager.playerController
   nameWithType: GolemManager.playerController
-- uid: GrandmaGreen.Entities.GolemManager.UpdateGolemTask(System.UInt16,Vector3Int)
-  name: UpdateGolemTask(UInt16, Vector3Int)
-  href: api/GrandmaGreen.Entities.GolemManager.html#GrandmaGreen_Entities_GolemManager_UpdateGolemTask_System_UInt16_Vector3Int_
-  commentId: M:GrandmaGreen.Entities.GolemManager.UpdateGolemTask(System.UInt16,Vector3Int)
-  fullName: GrandmaGreen.Entities.GolemManager.UpdateGolemTask(System.UInt16, Vector3Int)
-  nameWithType: GolemManager.UpdateGolemTask(UInt16, Vector3Int)
+- uid: GrandmaGreen.Entities.GolemManager.UpdateGolemTask(System.UInt16)
+  name: UpdateGolemTask(UInt16)
+  href: api/GrandmaGreen.Entities.GolemManager.html#GrandmaGreen_Entities_GolemManager_UpdateGolemTask_System_UInt16_
+  commentId: M:GrandmaGreen.Entities.GolemManager.UpdateGolemTask(System.UInt16)
+  fullName: GrandmaGreen.Entities.GolemManager.UpdateGolemTask(System.UInt16)
+  nameWithType: GolemManager.UpdateGolemTask(UInt16)
 - uid: GrandmaGreen.Entities.GolemManager.UpdateGolemTask*
   name: UpdateGolemTask
   href: api/GrandmaGreen.Entities.GolemManager.html#GrandmaGreen_Entities_GolemManager_UpdateGolemTask_
@@ -4625,6 +4625,19 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Entities.GolemManager.UpdateGolemTask
   nameWithType: GolemManager.UpdateGolemTask
+- uid: GrandmaGreen.Entities.GolemManager.UpdateTaskCell(System.UInt16,Vector3Int)
+  name: UpdateTaskCell(UInt16, Vector3Int)
+  href: api/GrandmaGreen.Entities.GolemManager.html#GrandmaGreen_Entities_GolemManager_UpdateTaskCell_System_UInt16_Vector3Int_
+  commentId: M:GrandmaGreen.Entities.GolemManager.UpdateTaskCell(System.UInt16,Vector3Int)
+  fullName: GrandmaGreen.Entities.GolemManager.UpdateTaskCell(System.UInt16, Vector3Int)
+  nameWithType: GolemManager.UpdateTaskCell(UInt16, Vector3Int)
+- uid: GrandmaGreen.Entities.GolemManager.UpdateTaskCell*
+  name: UpdateTaskCell
+  href: api/GrandmaGreen.Entities.GolemManager.html#GrandmaGreen_Entities_GolemManager_UpdateTaskCell_
+  commentId: Overload:GrandmaGreen.Entities.GolemManager.UpdateTaskCell
+  isSpec: "True"
+  fullName: GrandmaGreen.Entities.GolemManager.UpdateTaskCell
+  nameWithType: GolemManager.UpdateTaskCell
 - uid: GrandmaGreen.Entities.GolemState
   name: GolemState
   href: api/GrandmaGreen.Entities.GolemState.html
@@ -6307,6 +6320,12 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Garden.GardenAreaController.WaterPlant
   nameWithType: GardenAreaController.WaterPlant
+- uid: GrandmaGreen.Garden.GardenAreaController.wiltedPlantList
+  name: wiltedPlantList
+  href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_wiltedPlantList
+  commentId: F:GrandmaGreen.Garden.GardenAreaController.wiltedPlantList
+  fullName: GrandmaGreen.Garden.GardenAreaController.wiltedPlantList
+  nameWithType: GardenAreaController.wiltedPlantList
 - uid: GrandmaGreen.Garden.GardenCustomizer
   name: GardenCustomizer
   href: api/GrandmaGreen.Garden.GardenCustomizer.html
