@@ -41,27 +41,36 @@ namespace GrandmaGreen.Entities
 
         public void AssignGolemAction(ushort id)
         {
-            Debug.Log("Task Assigned");
-            List<PlantState> plants = gardenArea.gardenManager.GetPlants(gardenArea.areaIndex);
+            List<PlantState> plants = gardenArea.wiltedPlantList;//gardenManager.GetPlants(gardenArea.areaIndex);
             if(plants.Count != 0)
             {
-                int randIndex = Random.Range(0, plants.Count - 1);
-                Debug.Log(plants[randIndex].cell);
-                golemManager.UpdateGolemTask(id, plants[randIndex].cell);
+                //Debug.Log("Watering Task");
+                //int randIndex = Random.Range(0, plants.Count - 1);
+                //Debug.Log(plants[randIndex].cell);
+                golemManager.UpdateGolemTask(id);
             }
 
         }
 
         public void GolemDoAction()
         {
+            List<PlantState> plants = gardenArea.wiltedPlantList;
             foreach(GolemState golem in golemManager.golemStateTable)
             {
                 if (golem.assignedWatering)
                 {
-                    EventManager.instance.HandleEVENT_GOLEM_DO_TASK();
-                    break;
+                    int randIndex = Random.Range(0, plants.Count - 1);
+                    int randIndex2 = randIndex + 1;
+                    Debug.Log("Assigned Cell: " + plants[randIndex].cell);
+                    //Debug.Log((ushort)golem.golemID);
+                    //golemManager.UpdateTaskCell((ushort)golem.golemID, plants[randIndex].cell);
+                    golemManager.UpdateTaskCell((ushort)CharacterId.PumpkinGolem, plants[randIndex].cell);
+                    if(!(randIndex2 >= plants.Count)) golemManager.UpdateTaskCell((ushort)CharacterId.TulipGolem, plants[randIndex2].cell);
+                    else golemManager.UpdateTaskCell((ushort)CharacterId.TulipGolem, plants[randIndex].cell);
                 }
             }
+
+            EventManager.instance.HandleEVENT_GOLEM_DO_TASK();
         }
 
         [Button(ButtonSizes.Medium)]

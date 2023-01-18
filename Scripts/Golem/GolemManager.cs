@@ -100,7 +100,19 @@ namespace GrandmaGreen.Entities
             return playerController.GetEntityPos();
         }
 
-        public void UpdateGolemTask(ushort id, Vector3Int cell)
+        public void UpdateGolemTask(ushort id)
+        {
+            int index = offsetId(id);
+            if (!isIdValid(index))
+            {
+                Debug.LogError("Golem id wrong");
+                return;
+            }
+
+            golemStateTable[index].assignedWatering = !golemStateTable[index].assignedWatering;
+        }
+
+        public void UpdateTaskCell(ushort id, Vector3Int cell)
         {
             int index = offsetId(id);
             if (!isIdValid(index))
@@ -110,7 +122,6 @@ namespace GrandmaGreen.Entities
             }
 
             golemStateTable[index].assignedCell = cell;
-            golemStateTable[index].assignedWatering = true;
         }
 
         public void OnDestroy() {

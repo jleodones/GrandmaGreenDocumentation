@@ -29,6 +29,7 @@ namespace GrandmaGreen.Garden
         public Dictionary<Vector3Int, GameObject> plantPrefabLookup;
         public List<Collider> decorList;
         public List<PlantState> plantListDebug;
+        public List<PlantState> wiltedPlantList;
         public TileStore tileStore;
 
         bool returnFromPause = true;
@@ -330,7 +331,7 @@ namespace GrandmaGreen.Garden
                         || (gardenManager.PlantIsWilted(areaIndex, updatedPlant.cell) && returnFromPause)) //>= 240)
                     {
                         // Wilted
-                        // Debug.Log("Plant is wilted");
+                        wiltedPlantList.Add(updatedPlant);
                         UpdateSprite(updatedPlant.cell);
 
                         gardenVFX.PlayDryParticle(tilemap.GetCellCenterWorld(updatedPlant.cell));
@@ -341,7 +342,6 @@ namespace GrandmaGreen.Garden
                             || (gardenManager.PlantIsDead(areaIndex, updatedPlant.cell) && returnFromPause)) //>= 336)
                         {
                             // Dead
-                            // Debug.Log("Plant is dead");
                             UpdateSprite(updatedPlant.cell);
 
                             gardenVFX.PlayDryParticle(tilemap.GetCellCenterWorld(updatedPlant.cell));
@@ -363,6 +363,14 @@ namespace GrandmaGreen.Garden
                 {
                     gardenManager.UpdateGrowthStage(areaIndex, cell);
                     // Debug.Log("Plant Growth via WaterPlant");
+                }
+                
+                foreach(PlantState plantToRemove in wiltedPlantList)
+                {
+                    if(plantToRemove.cell == cell) {
+                        wiltedPlantList.Remove(plantToRemove);
+                        break;
+                    }
                 }
                 UpdateSprite(cell);
             }
