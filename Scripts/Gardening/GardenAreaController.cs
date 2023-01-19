@@ -160,13 +160,12 @@ namespace GrandmaGreen.Garden
 
         public void UpdateFlowerSprite(Vector3Int cell)
         {
-            SpriteRenderer spriteRenderer = plantPrefabLookup[cell]
-                .transform.Find("Sprite3D")
-                .GetComponent<SpriteRenderer>();
+            Transform flowerTransform = plantPrefabLookup[cell].transform;
+            SpriteRenderer spriteRenderer = flowerTransform.Find("Sprite3D").GetComponent<SpriteRenderer>();
             PlantState plant = gardenManager.GetPlant(areaIndex, cell);
             Genotype genotype = gardenManager.GetGenotype(areaIndex, cell);
             spriteRenderer.sprite = collection.GetSprite(plant.type, genotype, plant.growthStage);
-            transform.localScale = new Vector3(1.0f, 1.0f, 1.0f) * plant.genotype.SpriteSize();
+            flowerTransform.localScale = new Vector3(1.0f, 1.0f, 1.0f) * plant.genotype.SpriteSize();
 
             if (gardenManager.PlantIsWilted(areaIndex, cell))
             {
@@ -186,17 +185,14 @@ namespace GrandmaGreen.Garden
 
         public void UpdateVegetableSprite(Vector3Int cell)
         {
-            SpriteRenderer stalk = plantPrefabLookup[cell]
-                .transform.Find("Stalk")
-                .GetComponent<SpriteRenderer>();
-            SpriteRenderer head = plantPrefabLookup[cell]
-                .transform.Find("Head")
-                .GetComponent<SpriteRenderer>();
+            Transform vegetableTransform = plantPrefabLookup[cell].transform;
+            SpriteRenderer stalk = vegetableTransform.Find("Stalk").GetComponent<SpriteRenderer>();
+            SpriteRenderer head = vegetableTransform.Find("Head").GetComponent<SpriteRenderer>();
             PlantState plant = gardenManager.GetPlant(areaIndex, cell);
             Genotype genotype = gardenManager.GetGenotype(areaIndex, cell);
             stalk.sprite = collection.GetSprite(plant.type, genotype, plant.growthStage);
             head.sprite = collection.GetVegetableHead(plant.type, genotype, plant.growthStage);
-            transform.localScale = new Vector3(1.0f, 1.0f, 1.0f) * plant.genotype.SpriteSize();
+            vegetableTransform.localScale = new Vector3(1.0f, 1.0f, 1.0f) * plant.genotype.SpriteSize();
 
             if (gardenManager.PlantIsWilted(areaIndex, cell))
             {
@@ -218,25 +214,21 @@ namespace GrandmaGreen.Garden
 
         public void UpdateFruitSprite(Vector3Int cell)
         {
-            SpriteRenderer tree = plantPrefabLookup[cell]
-                .transform.Find("Tree")
-                .GetComponent<SpriteRenderer>();
-            SpriteRenderer fruit1 = plantPrefabLookup[cell]
-                .transform.Find("Fruit1")
-                .GetComponent<SpriteRenderer>();
-            SpriteRenderer fruit2 = plantPrefabLookup[cell]
-                .transform.Find("Fruit2")
-                .GetComponent<SpriteRenderer>();
-            SpriteRenderer fruit3 = plantPrefabLookup[cell]
-                .transform.Find("Fruit3")
-                .GetComponent<SpriteRenderer>();
+            Transform fruitTransform = plantPrefabLookup[cell].transform;
+            SpriteRenderer tree = fruitTransform.Find("Tree").GetComponent<SpriteRenderer>();
+            SpriteRenderer fruit1 = fruitTransform.Find("Fruit1").GetComponent<SpriteRenderer>();
+            SpriteRenderer fruit2 = fruitTransform.Find("Fruit2").GetComponent<SpriteRenderer>();
+            SpriteRenderer fruit3 = fruitTransform.Find("Fruit3").GetComponent<SpriteRenderer>();
+
             PlantState plant = gardenManager.GetPlant(areaIndex, cell);
             Genotype genotype = gardenManager.GetGenotype(areaIndex, cell);
+
             tree.sprite = collection.GetFruitTree(plant.type, genotype, plant.growthStage);
             fruit1.sprite = collection.GetFruitFruit(plant.type, genotype, plant.growthStage);
             fruit2.sprite = collection.GetFruitFruit(plant.type, genotype, plant.growthStage);
             fruit3.sprite = collection.GetFruitFruit(plant.type, genotype, plant.growthStage);
-            transform.localScale = new Vector3(1.0f, 1.0f, 1.0f) * plant.genotype.SpriteSize();
+
+            fruitTransform.localScale = new Vector3(1.0f, 1.0f, 1.0f) * plant.genotype.SpriteSize();
         }
 
         public void UpdateSprite(Vector3Int cell)
@@ -524,11 +516,11 @@ namespace GrandmaGreen.Garden
                 Genotype.Generation mega = Genotype.Generation.F2;
                 CreatePlant(plantId, new Genotype("AaBb"), leftTile + right * 0, 0);
                 CreatePlant(plantId, new Genotype("AaBb"), leftTile + right * 1, 1);
-                CreatePlant(plantId, new Genotype("Aabb"), leftTile + right * 2, 2);
+                CreatePlant(plantId, new Genotype("aabb"), leftTile + right * 2, 2);
                 CreatePlant(plantId, new Genotype("AaBb"), leftTile + right * 3, 2);
-                CreatePlant(plantId, new Genotype("AaBB"), leftTile + right * 4, 2);
-                CreatePlant(plantId, new Genotype("Aabb", mega), leftTile + right * 5, 2);
-                CreatePlant(plantId, new Genotype("AaBB", mega), leftTile + right * 6, 2);
+                CreatePlant(plantId, new Genotype("AABB"), leftTile + right * 4, 2);
+                CreatePlant(plantId, new Genotype("aabb", mega), leftTile + right * 5, 2);
+                CreatePlant(plantId, new Genotype("AABB", mega), leftTile + right * 6, 2);
                 row++;
 	        }
         }
@@ -551,11 +543,11 @@ namespace GrandmaGreen.Garden
                 Genotype.Generation mega = Genotype.Generation.F2;
                 CreatePlant(plantId, new Genotype("AaBb"), leftTile + right * 0, 0);
                 CreatePlant(plantId, new Genotype("AaBb"), leftTile + right * 1, 1);
-                CreatePlant(plantId, new Genotype("Aabb"), leftTile + right * 2, 2);
+                CreatePlant(plantId, new Genotype("aabb"), leftTile + right * 2, 2);
                 CreatePlant(plantId, new Genotype("AaBb"), leftTile + right * 3, 2);
-                CreatePlant(plantId, new Genotype("AaBB"), leftTile + right * 4, 2);
-                CreatePlant(plantId, new Genotype("Aabb", mega), leftTile + right * 5, 2);
-                CreatePlant(plantId, new Genotype("AaBB", mega), leftTile + right * 6, 2);
+                CreatePlant(plantId, new Genotype("AABB"), leftTile + right * 4, 2);
+                CreatePlant(plantId, new Genotype("aabb", mega), leftTile + right * 5, 2);
+                CreatePlant(plantId, new Genotype("AABB", mega), leftTile + right * 6, 2);
                 row++;
             }
         }
@@ -578,11 +570,11 @@ namespace GrandmaGreen.Garden
                 Genotype.Generation mega = Genotype.Generation.F2;
                 CreatePlant(plantId, new Genotype("AaBb"), leftTile + right * 0, 0);
                 CreatePlant(plantId, new Genotype("AaBb"), leftTile + right * 1, 1);
-                CreatePlant(plantId, new Genotype("Aabb"), leftTile + right * 2, 2);
+                CreatePlant(plantId, new Genotype("aabb"), leftTile + right * 2, 2);
                 CreatePlant(plantId, new Genotype("AaBb"), leftTile + right * 3, 2);
-                CreatePlant(plantId, new Genotype("AaBB"), leftTile + right * 4, 2);
-                CreatePlant(plantId, new Genotype("Aabb", mega), leftTile + right * 5, 2);
-                CreatePlant(plantId, new Genotype("AaBB", mega), leftTile + right * 6, 2);
+                CreatePlant(plantId, new Genotype("AABB"), leftTile + right * 4, 2);
+                CreatePlant(plantId, new Genotype("aabb", mega), leftTile + right * 5, 2);
+                CreatePlant(plantId, new Genotype("AABB", mega), leftTile + right * 6, 2);
                 row++;
             }
         }
