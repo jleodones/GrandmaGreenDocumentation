@@ -1,23 +1,29 @@
+using System;
 using GrandmaGreen.Collections;
+using GrandmaGreen.Garden;
 using UnityEngine;
 using UnityEngine.UIElements;
 
 namespace GrandmaGreen.UI.Collections
 {
-    public class TabbedInventoryItemController
+    public class TabbedInventoryItemController : IDraggable
     {
         public IInventoryItem m_inventoryItemData;
         
-        public Button m_button;
+        // This button.
+        public Button button { get; set; }
+        
+        // Draggable item's starting position.
+        public Vector3 startingPosition { get; set; }
 
-        public TabbedInventoryItemController(Button button)
+        public TabbedInventoryItemController(Button _button)
         {
-            m_button = button;
+            button = _button;
         }
 
         public void SetButtonCallback(System.Action<TabbedInventoryItemController> buttonClickCallback)
         {
-            m_button.clicked += () =>
+            button.clicked += () =>
             {
                 buttonClickCallback?.Invoke(this);
             };
@@ -29,15 +35,41 @@ namespace GrandmaGreen.UI.Collections
         //have a `Set` function to change which character's data to display.
         public void SetInventoryData(IInventoryItem inventoryItem, Sprite sprite)
         {
-            m_button.Q<VisualElement>("item-image").style.backgroundImage = new StyleBackground(sprite);
-            m_button.Q<Label>("quantity").text = inventoryItem.GetQuantityToString();
-            m_button.Q<Label>("item-name").text = inventoryItem.itemName;
+            button.Q<VisualElement>("item-image").style.backgroundImage = new StyleBackground(sprite);
+            button.Q<Label>("quantity").text = inventoryItem.GetQuantityToString();
+            button.Q<Label>("item-name").text = inventoryItem.itemName;
+            
             m_inventoryItemData = inventoryItem;
         }
 
-        public void SetFavorite(Sprite sprite)
+        public void SetSizeBadge(Genotype genotype)
         {
-            m_button.Q<VisualElement>("list-entry").style.backgroundImage = new StyleBackground(sprite);
+            Sprite sprite;
+            // Set size badge.
+            String str = "UI_Inventory_Badge_";
+            switch (genotype.size)
+            {
+                case Genotype.Size.VerySmall:
+                    str += "XS";
+                    break;
+                case Genotype.Size.Small:
+                    str += "S";
+                    break;
+                case Genotype.Size.Medium:
+                    str += "M";
+                    break;
+                case Genotype.Size.Big:
+                    str += "L";
+                    break;
+                case Genotype.Size.VeryBig:
+                    str += "XL";
+                    break;
+            }
+
+            sprite = Resources.Load<Sprite>(str);
+            
+            button.Q<VisualElement>("size").style.backgroundImage = new StyleBackground(sprite);
+            button.Q<VisualElement>("size").style.display = DisplayStyle.Flex;
         }
     }
 }

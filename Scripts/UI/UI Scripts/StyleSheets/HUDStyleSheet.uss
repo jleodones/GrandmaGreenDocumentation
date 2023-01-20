@@ -22,13 +22,13 @@
 
 .tab-button {
     height: 22%;
-    width: 93%;
+    width: 85%;
     border-top-left-radius: 15%;
     border-bottom-left-radius: 15%;
-    border-left-width: 6px;
+    border-left-width: 0;
     border-right-width: 0;
-    border-top-width: 5px;
-    border-bottom-width: 5px;
+    border-top-width: 0;
+    border-bottom-width: 0;
     border-left-color: rgb(0, 0, 0);
     border-right-color: rgb(0, 0, 0);
     border-top-color: rgb(0, 0, 0);
@@ -42,14 +42,8 @@
 }
 
 .tab-icon {
-    width: 80px;
-    height: 80px;
-}
-
-.tab-icon:hover {
-    width: 90px;
-    height: 90px;
-    transition-duration: 0.3s;
+    width: 40px;
+    height: 60px;
 }
 
 .inactive-content {
@@ -58,6 +52,7 @@
 
 .active-tab {
     background-color: rgb(154, 154, 154);
+    width: 100%;
 }
 
 .small-button {
@@ -89,15 +84,13 @@
 .content-jar {
     width: 100%;
     height: 100%;
-}
-
-.info-content {
     flex-direction: row;
-    width: 100%;
-    height: auto;
-    justify-content: flex-start;
-    align-items: center;
-    padding-right: 0;
+    flex-wrap: wrap;
+    background-color: rgb(255, 250, 244);
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 20px;
+    padding-bottom: 50px;
 }
 
 .button-content {
@@ -146,4 +139,11 @@
     width: 40%;
     height: 110%;
     padding-top: 22.5%;
+}
+
+.inventory-content {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
 }

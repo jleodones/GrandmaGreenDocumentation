@@ -394,6 +394,49 @@ namespace GrandmaGreen.Collections
             return Resources.Load<Sprite>(finalSpritePath.ToString());
         }
 
+        public Sprite GetInventorySprite(PlantId type, Genotype genotype)
+        {
+            PlantProperties plant = GetPlant(type);
+            bool isMega = genotype.generation == Genotype.Generation.F2;
+            string suffix = "";
+
+            if (IsFlower(type))
+            {
+                switch (genotype.trait)
+                {
+                    case Genotype.Trait.Recessive:
+                        suffix = isMega ? "_Rec_M" : "_Rec";
+                        break;
+                    case Genotype.Trait.Heterozygous:
+                        suffix = "_Het";
+                        break;
+                    case Genotype.Trait.Dominant:
+                        suffix = isMega ? "_Dom_M" : "_Dom";
+                        break;
+                }
+
+                suffix += "_Inventory";
+            }
+            else if (IsFruit(type))
+            {
+                switch (genotype.trait)
+                {
+                    case Genotype.Trait.Recessive:
+                        suffix = "_Rec";
+                        break;
+                    case Genotype.Trait.Heterozygous:
+                        suffix = "_Het";
+                        break;
+                    case Genotype.Trait.Dominant:
+                        suffix = "_Dom";
+                        break;
+                }
+            }
+            Sprite[] sheet = Resources.LoadAll<Sprite>(plant.plantType.ToString() + "s/" + plant.name + "/" + plant.spriteBasePath);
+            Sprite seedSprite = sheet.Single(s => s.name == plant.spriteBasePath + suffix);
+            return seedSprite;
+        }
+
         /// <summary>
         /// Get child sprite for fruits and vegetables.
         /// </summary>
@@ -436,7 +479,7 @@ namespace GrandmaGreen.Collections
         public Sprite GetSprite(PlantId type, Genotype genotype)
         {
             ItemProperties seed = GetItem((ushort)type);
-            string finalSpritePath = "SEED_" + seed.name.Replace(" ", "");
+            string baseSpritePath = "SEED_" + seed.name.Replace(" ", "");
             bool isMega = genotype.generation == Genotype.Generation.F2;
             string suffix = "";
 
@@ -452,12 +495,11 @@ namespace GrandmaGreen.Collections
                     suffix = isMega ? "_Dom_M" : "_Dom";
                     break;
             }
+            
+            Sprite[] sheet = Resources.LoadAll<Sprite>("Seed Packets/" + baseSpritePath);
 
-            finalSpritePath += suffix;
-
-            Sprite seedSprite = Resources.Load<Sprite>("Seed Packets/" + finalSpritePath);
+            Sprite seedSprite = sheet.Single(s => s.name == baseSpritePath + suffix);
             return seedSprite;
-
         }
 
         // temporary hard-coded plant properties

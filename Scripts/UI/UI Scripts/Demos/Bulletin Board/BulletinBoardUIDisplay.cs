@@ -1,10 +1,8 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using GrandmaGreen.Collections;
 using GrandmaGreen.SaveSystem;
+using Sirenix.OdinInspector;
 using UnityEngine;
-using UnityEngine.Assertions.Must;
 using UnityEngine.UIElements;
 
 namespace GrandmaGreen
@@ -18,8 +16,14 @@ namespace GrandmaGreen
         
         public CollectionsSO collectionsSO;
 
+        [ShowInInspector]
+        public BulletinBoardUIController controller;
+        
         public void Start()
         {
+            // Instantiate controller.
+            controller = new BulletinBoardUIController(this);
+            
             // For daily, announcement, and competition buttons, if clicked open the submission box.
             RegisterButtonCallback("daily", () =>
             {
@@ -76,7 +80,7 @@ namespace GrandmaGreen
                 Plant plant = (Plant) submissionJar.itemsSource[index];
                 
                 // Get and set the item image.
-                Sprite sprite = collectionsSO.GetSprite((PlantId) plant.itemID, plant.genotypes[0], 2);
+                Sprite sprite = collectionsSO.GetSprite((PlantId) plant.itemID, plant.plantGenotype, 2);
                 item.Q<VisualElement>("plantImage").style.backgroundImage = new StyleBackground(sprite);
                 
                 // Get the button and set the callback.
@@ -100,13 +104,14 @@ namespace GrandmaGreen
 
                     // Remove plant from inventory.
                     Plant p = (Plant)submissionJar.selectedItem;
-                    EventManager.instance.HandleEVENT_INVENTORY_REMOVE_PLANT(p.itemID, p.genotypes[0], true);
+                    EventManager.instance.HandleEVENT_INVENTORY_REMOVE_PLANT(p.itemID, p.plantGenotype);
 
                     SetItemSource();
                 }
             });
         }
         
+        // TODO: Everything here needs to be more generalized, so that it can work with any contest.
         public void SetItemSource()
         {
             // Get the list view.
@@ -115,18 +120,18 @@ namespace GrandmaGreen
             // Get the correct component store from the object saver.
             ComponentStore<Plant> plantStore = (ComponentStore<Plant>) inventoryObjectSaver.GetComponentStore<Plant>();
             
-            // Retrieve the list of FAVORITED plants only.
-            List<Plant> favoritedPlants = new List<Plant>();
+            // Retrieve the list of APPLICABLE plants only.
+            List<Plant> applicablePlants = new List<Plant>();
             
             foreach (Plant p in plantStore.components)
             {
-                if (p.isFavorited)
+                if (p.itemID == controller.currentBigContest.targetPlant.itemID)
                 {
-                    favoritedPlants.Add(p);
+                    applicablePlants.Add(p);
                 }
             }
 
-            submissionJar.itemsSource = favoritedPlants;
+            submissionJar.itemsSource = applicablePlants;
 
             if (submissionJar.visible)
             {

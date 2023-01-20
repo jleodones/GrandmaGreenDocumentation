@@ -75,8 +75,8 @@ namespace GrandmaGreen
         #region Inventory related events and handlers.
         public event Action EVENT_INVENTORY_OPEN;
         
-        public event Action<ushort, Genotype, bool> EVENT_INVENTORY_ADD_PLANT;
-        public event Action<ushort, Genotype, bool> EVENT_INVENTORY_REMOVE_PLANT;
+        public event Action<ushort, Genotype> EVENT_INVENTORY_ADD_PLANT;
+        public event Action<ushort, Genotype> EVENT_INVENTORY_REMOVE_PLANT;
         
         public event Action<ushort, Genotype> EVENT_INVENTORY_ADD_SEED;
         public event Action<ushort, Genotype> EVENT_INVENTORY_REMOVE_SEED;
@@ -97,14 +97,14 @@ namespace GrandmaGreen
             EVENT_INVENTORY_OPEN?.Invoke();
         }
 
-        public void HandleEVENT_INVENTORY_ADD_PLANT(ushort id, Genotype genotype, bool isFavorited = false)
+        public void HandleEVENT_INVENTORY_ADD_PLANT(ushort id, Genotype genotype)
         {
-            EVENT_INVENTORY_ADD_PLANT?.Invoke(id, genotype, isFavorited);
+            EVENT_INVENTORY_ADD_PLANT?.Invoke(id, genotype);
         }
         
-        public void HandleEVENT_INVENTORY_REMOVE_PLANT(ushort id, Genotype genotype, bool isFavorited = false)
+        public void HandleEVENT_INVENTORY_REMOVE_PLANT(ushort id, Genotype genotype)
         {
-            EVENT_INVENTORY_REMOVE_PLANT?.Invoke(id, genotype, isFavorited);
+            EVENT_INVENTORY_REMOVE_PLANT?.Invoke(id, genotype);
         }
         
         public void HandleEVENT_INVENTORY_ADD_SEED(ushort id, Genotype genotype)

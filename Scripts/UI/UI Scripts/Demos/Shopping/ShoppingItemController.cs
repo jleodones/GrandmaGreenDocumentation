@@ -1,3 +1,6 @@
+using System;
+using GrandmaGreen.Collections;
+using GrandmaGreen.Garden;
 using UnityEngine;
 using UnityEngine.UIElements;
 using GrandmaGreen.Shopkeeping;
@@ -30,6 +33,38 @@ namespace GrandmaGreen.UI.Shopping
             
             // Set the cost of the item.
             m_root.Q<Label>("Price").text = thisItem.baseCost.ToString();
+        }
+
+        public void SetSizeBadge()
+        {
+            Genotype genotype = ((Seed)thisItem.myItem).seedGenotype;
+            
+            Sprite sprite;
+            // Set size badge.
+            String str = "UI_Inventory_Badge_";
+            switch (genotype.size)
+            {
+                case Genotype.Size.VerySmall:
+                    str += "XS";
+                    break;
+                case Genotype.Size.Small:
+                    str += "S";
+                    break;
+                case Genotype.Size.Medium:
+                    str += "M";
+                    break;
+                case Genotype.Size.Big:
+                    str += "L";
+                    break;
+                case Genotype.Size.VeryBig:
+                    str += "XL";
+                    break;
+            }
+
+            sprite = Resources.Load<Sprite>(str);
+            
+            m_button.Q<VisualElement>("SizeIcon").style.backgroundImage = new StyleBackground(sprite);
+            m_button.Q<VisualElement>("SizeIcon").style.display = DisplayStyle.Flex;
         }
 
         private void OnButtonClicked()

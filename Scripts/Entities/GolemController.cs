@@ -102,15 +102,15 @@ namespace GrandmaGreen.Entities
             {
                 SetAnimatorParameters();
             }
-        }
 
-        public void FixedUpdate()
-        {
             velocity = transform.position - prevPosition;
 
             prevPosition = transform.position;
             onEntityMove?.Invoke(prevPosition);
+        }
 
+        public void FixedUpdate()
+        {
             if (m_isInteracting)
             {
                 // facing to grandma

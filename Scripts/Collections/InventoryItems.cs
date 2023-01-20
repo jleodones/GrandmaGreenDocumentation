@@ -33,10 +33,6 @@ namespace GrandmaGreen.Collections {
     [Serializable]
     public struct Plant : IInventoryItem
     {
-        // Checks whether this plant(s) is favorited or not.
-        [ShowInInspector]
-        public bool isFavorited { get; set; }
-        
         // Item ID.
         public ushort itemID { get; set; }
         
@@ -47,32 +43,30 @@ namespace GrandmaGreen.Collections {
         public string itemName { get; set; }
         
         // Amount of the object present in the inventory.
-        public int quantity => genotypes.Count;
+        public int quantity;
 
-        public List<Genotype> genotypes;
+        public Genotype plantGenotype;
 
-        public Plant(ushort id, string name, Genotype genotype, bool isIncomingFavorited = false)
+        public Plant(ushort id, string name, Genotype genotype)
         {
             itemType = ItemType.Plant;
             
             itemID = id;
             itemName = name;
-            genotypes = new List<Genotype>();
-            isFavorited = isIncomingFavorited;
-            
-            genotypes.Add(genotype);
+            quantity = 1;
+            plantGenotype = genotype;
         }
         
         public string GetQuantityToString()
         {
             return quantity.ToString();
         }
+
         public override bool Equals(object obj) =>
-            obj is Plant other && other.itemID == itemID
-                               && other.itemType == itemType
-                               
-                               // Verifying that both plants are related.
-                               && isFavorited == other.isFavorited;
+            obj is Plant other
+            && other.itemID == itemID
+            && other.itemType == itemType
+            && other.plantGenotype.Equals(plantGenotype);
     }
 
     [Serializable]

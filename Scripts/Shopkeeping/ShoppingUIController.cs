@@ -7,11 +7,9 @@ using System.Collections.Generic;
 using GrandmaGreen.Collections;
 using GrandmaGreen.Garden;
 using Sirenix.OdinInspector;
-using Codice.CM.Common.Merge;
 
 namespace GrandmaGreen.Shopkeeping
 {
-    using static UnityEditor.Progress;
     using Id = System.Enum;
     using Random = System.Random;
 
@@ -236,7 +234,7 @@ namespace GrandmaGreen.Shopkeeping
                 {
                     Plant plant = (Plant)item;
                     //set the genotype
-                    genotype = plant.genotypes[0];
+                    genotype = plant.plantGenotype;
                     megaValue = GetMegaValue(genotype.ToString());
                 }
                 else if (item.itemType == ItemType.Seed)
@@ -251,6 +249,21 @@ namespace GrandmaGreen.Shopkeeping
 
             //can only sell plants and seeds in the garden shop
             else return 0;
+        }
+
+        /// <summary>
+        /// Returns if the given item is sellable or not. If seed or plant, returns true. otherwise false.
+        /// </summary>
+        /// <param name="item"></param>
+        /// <returns></returns>
+        public bool IsSellable(IInventoryItem item)
+        {
+            //can only sell seeds and plants
+            if(item.itemType == ItemType.Seed || item.itemType == ItemType.Plant)
+            {
+                return true;
+            }
+            else return false;
         }
 
     }
@@ -380,7 +393,6 @@ namespace GrandmaGreen.Shopkeeping
                 gardenExp.quantity = 1;
                 gardenExp.name = "Garden Expansion";
                 gardenExp.baseCost = 100; //TODO: manually update here once design team figures out prices
-                //TODO: ok to leave id and inventoryitem entries null?
                 DecorList.Add(gardenExp);
             }
 
@@ -426,6 +438,21 @@ namespace GrandmaGreen.Shopkeeping
             }
             //can only sell decor in the decor shop
             else return 0;
+        }
+
+        /// <summary>
+        /// Returns true if item is a decor item, otherwise returns false
+        /// </summary>
+        /// <param name="item"></param>
+        /// <returns></returns>
+        public bool IsSellable(IInventoryItem item)
+        {
+            //can only sell decor items
+            if (item.itemType == ItemType.Decor)
+            {
+                return true;
+            }
+            else return false;
         }
     }
 }

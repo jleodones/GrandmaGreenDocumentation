@@ -53,14 +53,13 @@ namespace GrandmaGreen.UI.Shopping
 
         void InstantiateJar()
         {
-            // ScrollView contentJar = m_rootVisualElement.Q<ScrollView>("contentJar");
-            
             // For each element in the shopping item list, attach it to the content jar.
             for (int i = 1; i <= 8; i++)
             {
                 VisualElement ve = m_rootVisualElement.Q<VisualElement>("content-" + i.ToString());
                 var controller = new ShoppingItemController(ve, ve.Q<Button>("IconButton"), OnShoppingItemClicked);
                 controller.SetData(availableItems[i - 1]);
+                controller.SetSizeBadge();
                 ve.userData = controller;
             }
         }
