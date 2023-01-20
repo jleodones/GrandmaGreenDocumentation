@@ -90,16 +90,14 @@
     <div class="level1"><a class="xref" href="GrandmaGreen.UIDisplayBase.html">UIDisplayBase</a></div>
     <div class="level2"><span class="xref">TabbedInventory</span></div>
   </div>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="GrandmaGreen.IDraggableContainer.html">IDraggableContainer</a></div>
+  </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
       <a class="xref" href="GrandmaGreen.UIDisplayBase.html#GrandmaGreen_UIDisplayBase_m_rootVisualElement">UIDisplayBase.m_rootVisualElement</a>
-    </div>
-    <div>
-      <a class="xref" href="GrandmaGreen.UIDisplayBase.html#GrandmaGreen_UIDisplayBase_OpenUI">UIDisplayBase.OpenUI()</a>
-    </div>
-    <div>
-      <a class="xref" href="GrandmaGreen.UIDisplayBase.html#GrandmaGreen_UIDisplayBase_CloseUI">UIDisplayBase.CloseUI()</a>
     </div>
     <div>
       <a class="xref" href="GrandmaGreen.UIDisplayBase.html#GrandmaGreen_UIDisplayBase_RegisterButtonCallback_System_String_Action_">UIDisplayBase.RegisterButtonCallback(String, Action)</a>
@@ -112,7 +110,7 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="GrandmaGreen_UI_Collections_TabbedInventory_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class TabbedInventory : UIDisplayBase</code></pre>
+    <pre><code class="lang-csharp hljs">public class TabbedInventory : UIDisplayBase, IDraggableContainer</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
@@ -142,12 +140,12 @@
   </table>
   
   
-  <h4 id="GrandmaGreen_UI_Collections_TabbedInventory_favoritedBackground" data-uid="GrandmaGreen.UI.Collections.TabbedInventory.favoritedBackground">favoritedBackground</h4>
+  <h4 id="GrandmaGreen_UI_Collections_TabbedInventory_contentContainerNameSuffix" data-uid="GrandmaGreen.UI.Collections.TabbedInventory.contentContainerNameSuffix">contentContainerNameSuffix</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Sprite favoritedBackground</code></pre>
+    <pre><code class="lang-csharp hljs">public const string contentContainerNameSuffix = &quot;ContentContainer&quot;</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -159,7 +157,31 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Sprite</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="GrandmaGreen_UI_Collections_TabbedInventory_contentNameSuffix" data-uid="GrandmaGreen.UI.Collections.TabbedInventory.contentNameSuffix">contentNameSuffix</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string contentNameSuffix = &quot;Content&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -284,8 +306,147 @@
       </tr>
     </tbody>
   </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="GrandmaGreen_UI_Collections_TabbedInventory_draggable_" data-uid="GrandmaGreen.UI.Collections.TabbedInventory.draggable*"></a>
+  <h4 id="GrandmaGreen_UI_Collections_TabbedInventory_draggable" data-uid="GrandmaGreen.UI.Collections.TabbedInventory.draggable">draggable</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IDraggable draggable { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="GrandmaGreen.IDraggable.html">IDraggable</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="GrandmaGreen_UI_Collections_TabbedInventory_enabled_" data-uid="GrandmaGreen.UI.Collections.TabbedInventory.enabled*"></a>
+  <h4 id="GrandmaGreen_UI_Collections_TabbedInventory_enabled" data-uid="GrandmaGreen.UI.Collections.TabbedInventory.enabled">enabled</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool enabled { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="GrandmaGreen_UI_Collections_TabbedInventory_handled_" data-uid="GrandmaGreen.UI.Collections.TabbedInventory.handled*"></a>
+  <h4 id="GrandmaGreen_UI_Collections_TabbedInventory_handled" data-uid="GrandmaGreen.UI.Collections.TabbedInventory.handled">handled</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool handled { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="GrandmaGreen_UI_Collections_TabbedInventory_pointerStartPosition_" data-uid="GrandmaGreen.UI.Collections.TabbedInventory.pointerStartPosition*"></a>
+  <h4 id="GrandmaGreen_UI_Collections_TabbedInventory_pointerStartPosition" data-uid="GrandmaGreen.UI.Collections.TabbedInventory.pointerStartPosition">pointerStartPosition</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector3 pointerStartPosition { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="GrandmaGreen_UI_Collections_TabbedInventory_threshold_" data-uid="GrandmaGreen.UI.Collections.TabbedInventory.threshold*"></a>
+  <h4 id="GrandmaGreen_UI_Collections_TabbedInventory_threshold" data-uid="GrandmaGreen.UI.Collections.TabbedInventory.threshold">threshold</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public VisualElement threshold { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">VisualElement</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
   </h3>
+  
+  
+  <a id="GrandmaGreen_UI_Collections_TabbedInventory_CloseUI_" data-uid="GrandmaGreen.UI.Collections.TabbedInventory.CloseUI*"></a>
+  <h4 id="GrandmaGreen_UI_Collections_TabbedInventory_CloseUI" data-uid="GrandmaGreen.UI.Collections.TabbedInventory.CloseUI">CloseUI()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void CloseUI()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="GrandmaGreen.UIDisplayBase.html#GrandmaGreen_UIDisplayBase_CloseUI">UIDisplayBase.CloseUI()</a></div>
   
   
   <a id="GrandmaGreen_UI_Collections_TabbedInventory_Load_" data-uid="GrandmaGreen.UI.Collections.TabbedInventory.Load*"></a>
@@ -300,14 +461,178 @@
   <div><a class="xref" href="GrandmaGreen.UIDisplayBase.html#GrandmaGreen_UIDisplayBase_Load">UIDisplayBase.Load()</a></div>
   
   
-  <a id="GrandmaGreen_UI_Collections_TabbedInventory_OpenInventory_" data-uid="GrandmaGreen.UI.Collections.TabbedInventory.OpenInventory*"></a>
-  <h4 id="GrandmaGreen_UI_Collections_TabbedInventory_OpenInventory" data-uid="GrandmaGreen.UI.Collections.TabbedInventory.OpenInventory">OpenInventory()</h4>
+  <a id="GrandmaGreen_UI_Collections_TabbedInventory_OnItemCreated_" data-uid="GrandmaGreen.UI.Collections.TabbedInventory.OnItemCreated*"></a>
+  <h4 id="GrandmaGreen_UI_Collections_TabbedInventory_OnItemCreated_GrandmaGreen_UI_Collections_TabbedInventoryItemController_" data-uid="GrandmaGreen.UI.Collections.TabbedInventory.OnItemCreated(GrandmaGreen.UI.Collections.TabbedInventoryItemController)">OnItemCreated(TabbedInventoryItemController)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void OpenInventory()</code></pre>
+    <pre><code class="lang-csharp hljs">public void OnItemCreated(TabbedInventoryItemController itemController)</code></pre>
   </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="GrandmaGreen.UI.Collections.TabbedInventoryItemController.html">TabbedInventoryItemController</a></td>
+        <td><span class="parametername">itemController</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="GrandmaGreen_UI_Collections_TabbedInventory_OnSeedEntryClicked_" data-uid="GrandmaGreen.UI.Collections.TabbedInventory.OnSeedEntryClicked*"></a>
+  <h4 id="GrandmaGreen_UI_Collections_TabbedInventory_OnSeedEntryClicked_GrandmaGreen_UI_Collections_TabbedInventoryItemController_" data-uid="GrandmaGreen.UI.Collections.TabbedInventory.OnSeedEntryClicked(GrandmaGreen.UI.Collections.TabbedInventoryItemController)">OnSeedEntryClicked(TabbedInventoryItemController)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void OnSeedEntryClicked(TabbedInventoryItemController itemController)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="GrandmaGreen.UI.Collections.TabbedInventoryItemController.html">TabbedInventoryItemController</a></td>
+        <td><span class="parametername">itemController</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="GrandmaGreen_UI_Collections_TabbedInventory_OpenUI_" data-uid="GrandmaGreen.UI.Collections.TabbedInventory.OpenUI*"></a>
+  <h4 id="GrandmaGreen_UI_Collections_TabbedInventory_OpenUI" data-uid="GrandmaGreen.UI.Collections.TabbedInventory.OpenUI">OpenUI()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void OpenUI()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="GrandmaGreen.UIDisplayBase.html#GrandmaGreen_UIDisplayBase_OpenUI">UIDisplayBase.OpenUI()</a></div>
+  
+  
+  <a id="GrandmaGreen_UI_Collections_TabbedInventory_PointerDownHandler_" data-uid="GrandmaGreen.UI.Collections.TabbedInventory.PointerDownHandler*"></a>
+  <h4 id="GrandmaGreen_UI_Collections_TabbedInventory_PointerDownHandler_PointerDownEvent_" data-uid="GrandmaGreen.UI.Collections.TabbedInventory.PointerDownHandler(PointerDownEvent)">PointerDownHandler(PointerDownEvent)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void PointerDownHandler(PointerDownEvent evt)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">PointerDownEvent</span></td>
+        <td><span class="parametername">evt</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="GrandmaGreen_UI_Collections_TabbedInventory_PointerMoveHandler_" data-uid="GrandmaGreen.UI.Collections.TabbedInventory.PointerMoveHandler*"></a>
+  <h4 id="GrandmaGreen_UI_Collections_TabbedInventory_PointerMoveHandler_PointerMoveEvent_" data-uid="GrandmaGreen.UI.Collections.TabbedInventory.PointerMoveHandler(PointerMoveEvent)">PointerMoveHandler(PointerMoveEvent)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void PointerMoveHandler(PointerMoveEvent evt)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">PointerMoveEvent</span></td>
+        <td><span class="parametername">evt</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="GrandmaGreen_UI_Collections_TabbedInventory_PointerUpHandler_" data-uid="GrandmaGreen.UI.Collections.TabbedInventory.PointerUpHandler*"></a>
+  <h4 id="GrandmaGreen_UI_Collections_TabbedInventory_PointerUpHandler_PointerUpEvent_" data-uid="GrandmaGreen.UI.Collections.TabbedInventory.PointerUpHandler(PointerUpEvent)">PointerUpHandler(PointerUpEvent)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void PointerUpHandler(PointerUpEvent evt)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">PointerUpEvent</span></td>
+        <td><span class="parametername">evt</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="GrandmaGreen_UI_Collections_TabbedInventory_RebuildJar_" data-uid="GrandmaGreen.UI.Collections.TabbedInventory.RebuildJar*"></a>
+  <h4 id="GrandmaGreen_UI_Collections_TabbedInventory_RebuildJar_IInventoryItem_" data-uid="GrandmaGreen.UI.Collections.TabbedInventory.RebuildJar(IInventoryItem)">RebuildJar(IInventoryItem)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RebuildJar(IInventoryItem item)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IInventoryItem</span></td>
+        <td><span class="parametername">item</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="GrandmaGreen_UI_Collections_TabbedInventory_Unload_" data-uid="GrandmaGreen.UI.Collections.TabbedInventory.Unload*"></a>
@@ -320,6 +645,10 @@
   </div>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="GrandmaGreen.UIDisplayBase.html#GrandmaGreen_UIDisplayBase_Unload">UIDisplayBase.Unload()</a></div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="GrandmaGreen.IDraggableContainer.html">IDraggableContainer</a>
+  </div>
 </article>
           </div>
           

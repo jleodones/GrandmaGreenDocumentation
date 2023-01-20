@@ -288,11 +288,23 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/GrandmaGreen.BulletinBoardUIController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GrandmaGreen.BulletinBoardUIController.html",
+          "hash": "4ZBM/93KFICbltKbPS3Msp4Kk0W5TOsQ/f/Slk4euPw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/GrandmaGreen.BulletinBoardUIDisplay.yml",
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.BulletinBoardUIDisplay.html",
-          "hash": "zdfPtPKQGEGbJ/1mRij9mPrTVwmOJgm44RecQZCAWRk="
+          "hash": "UW0lBiSBrTgezkZNwUEl6YYW+oziTLdBSDDB6B4Gq14="
         }
       },
       "is_incremental": false,
@@ -376,7 +388,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.Collections.CollectionsSO.html",
-          "hash": "iUpmDSO3x4g6tkCU16qdnxtAaCaH/ABoU2hsB9ifKl0="
+          "hash": "uyTunIJ7BADPKdKT0d/YZDhBTspDU+OfzsMcUZMu3Tk="
         }
       },
       "is_incremental": false,
@@ -484,7 +496,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.Collections.Plant.html",
-          "hash": "r4wzRiTWCj+yZKLI715UCSeUehZfRNnXwlMywOvtcC8="
+          "hash": "EdKMbnSAeQg3/cezEEvy1KPoyJ7sIP06RhfFs45rKeI="
         }
       },
       "is_incremental": false,
@@ -593,6 +605,18 @@
         ".html": {
           "relative_path": "api/GrandmaGreen.CommonSFX.html",
           "hash": "rBDQqfKKG1aiGyAYQ8fvbxnsuwxJh1dosFkX1k5uGaY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GrandmaGreen.Contest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GrandmaGreen.Contest.html",
+          "hash": "gEB77HqCaryRr8cG834IB8zQWVh5G23nOZFrfUayxIo="
         }
       },
       "is_incremental": false,
@@ -880,7 +904,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.EventManager.html",
-          "hash": "1Nbfm1k5RW7WJk5/7AIErhC/RTKdFNaPxamVXEN1gvo="
+          "hash": "2dDVcZWEJJwI7f0MjocWhwZbFjWMxBDEtcfgDi2KfLg="
         }
       },
       "is_incremental": false,
@@ -1212,6 +1236,30 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/GrandmaGreen.IDraggable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GrandmaGreen.IDraggable.html",
+          "hash": "SatW5IjepPAA4UqQNdFQ/mYCMjqLjfpL1dQWDt/TNII="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GrandmaGreen.IDraggableContainer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GrandmaGreen.IDraggableContainer.html",
+          "hash": "oIh/ArTZCivnJZ6Gj6f7WnREvuSpyHLYUCSFq5Jd9Go="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/GrandmaGreen.IGameTile.yml",
       "output": {
         ".html": {
@@ -1444,7 +1492,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.Shopkeeping.DecorShopUIController.html",
-          "hash": "Y3DEsohj6pFYiyalRQ46JPOdxm5Ofig2P96PD7jAo9k="
+          "hash": "hEpFbZhjNMnb1dMRRlgFEOAJZ4sfCxcq2PC17QcDsqk="
         }
       },
       "is_incremental": false,
@@ -1456,7 +1504,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.Shopkeeping.GardeningShopUIController.html",
-          "hash": "0hmeBxwyZI7gnkaW+aVPIsmQEMPwAZjy1Qw+h5vUtNw="
+          "hash": "ftAIFC3NmTvfj1I8AFSkFh4eSeiNMvC7IVxcq1k59kY="
         }
       },
       "is_incremental": false,
@@ -1572,18 +1620,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/GrandmaGreen.TabbedInventoryPlantItemController.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/GrandmaGreen.TabbedInventoryPlantItemController.html",
-          "hash": "PDyIcf6n1u6edEIWy2B9xJN+A5gv6j9ZFtkmEg2k6aY="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/GrandmaGreen.TileType.yml",
       "output": {
         ".html": {
@@ -1684,7 +1720,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.UI.Collections.TabbedInventory.html",
-          "hash": "FavgE3dm7Kvvno3Rtz+tuVbOCQPQuQu/eYgCB9BBXRY="
+          "hash": "7MaRWM1goLzn8J3zqs8UJmqdOoSUNZhd/HNeH+Rojqo="
         }
       },
       "is_incremental": false,
@@ -1696,7 +1732,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.UI.Collections.TabbedInventoryController.html",
-          "hash": "SyYUefc24pQ9Bs8yGW0EsCAEzCxkSoJ6zZzkWOMWd2Y="
+          "hash": "L2BnCD9ZGYuDp6HoO/1lPco8X91jSGF09DQ0JIV5Kts="
         }
       },
       "is_incremental": false,
@@ -1708,7 +1744,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.UI.Collections.TabbedInventoryItemController.html",
-          "hash": "p7krslSIHGynWS/LxBi91BzRG4fxetMRkaSgHcKS5Bk="
+          "hash": "dI+CGgc90oXdGrcDIBQS0II4mgiHbZMw+LsVBERBrJs="
         }
       },
       "is_incremental": false,
@@ -1792,7 +1828,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.UI.Shopping.ShoppingItemController.html",
-          "hash": "xz5TU17aggZAlHzXSUpnEos/yw1RG5yr4870WafbLPU="
+          "hash": "g0nnPadQThmTUVFBO1Hcfuq1ngyTNcOJqmEnrkYTJpQ="
         }
       },
       "is_incremental": false,
@@ -1888,7 +1924,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.html",
-          "hash": "s5We/LlMujISfOD0XpJgck1NZX7kLWAoNz7thaRCQz8="
+          "hash": "X2/VK3OLISTVERZEixcZa+pcfCknzOTeIgmnuD3khGI="
         }
       },
       "is_incremental": false,
@@ -1900,7 +1936,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "YKgklMKuMG6raPQZSvfKA22FSbFsvdjqRZ1XimEI7qo="
+          "hash": "OQVP0ix7m8rHz85JZdnHR0dwnuXxsyk9S9vhhgj/FR0="
         }
       },
       "is_incremental": false,
@@ -2009,7 +2045,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 156,
+          "total_file_count": 159,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
