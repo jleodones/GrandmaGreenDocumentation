@@ -1560,6 +1560,30 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/GrandmaGreen.SlideData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GrandmaGreen.SlideData.html",
+          "hash": "RQWzOiRV+i33Tb8uiz7DJarN2gUFMvqkdoFrNdUrD68="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GrandmaGreen.SlideshowData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GrandmaGreen.SlideshowData.html",
+          "hash": "/wQi959lxdKgEjnzRmQlabdzm+5tOlRE/jrJNeuHxFM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/GrandmaGreen.StartScreenUIDisplay.yml",
       "output": {
         ".html": {
@@ -1924,7 +1948,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.html",
-          "hash": "X2/VK3OLISTVERZEixcZa+pcfCknzOTeIgmnuD3khGI="
+          "hash": "ozKin4V5O1WHNXpPGAVKpfgnz6aAcksgX5H4ycXgbmY="
         }
       },
       "is_incremental": false,
@@ -1936,7 +1960,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "OQVP0ix7m8rHz85JZdnHR0dwnuXxsyk9S9vhhgj/FR0="
+          "hash": "y4dtTqlv1GSNPqu2I+YVZDbdaXNzjs7XB6PKT1u7R04="
         }
       },
       "is_incremental": false,
@@ -2045,7 +2069,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 159,
+          "total_file_count": 161,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

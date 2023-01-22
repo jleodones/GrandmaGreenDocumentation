@@ -507,7 +507,7 @@
   "api/GrandmaGreen.html": {
     "href": "api/GrandmaGreen.html",
     "title": "Namespace GrandmaGreen",
-    "keywords": "Namespace GrandmaGreen Classes AreaController AreaExitState AreaServices BulletinBoardUIController BulletinBoardUIDisplay CameraZoom CatchUIInput CollectionUIDisplay CommonSFX CultivisionUIDisplay EventManager GamePortalTile GameScenePortal GameSettingsData GameSystemDummy GeneralExtensions GrandmaGreenGameState PlantType PlantTypeDictionary PlayAudioOnEnable SettingsUIDisplay SiblingRuleTile StartScreenUIDisplay Storyline StorylineDataStore StoryRequirement TileType ToolTest2 UIDisplayBase Structs Contest Basic contest struct. All it does is store a plant and the assumed prize money. SettingsSet Interfaces IDraggable IDraggableContainer IGameTile IPathAgent IPathfinderServicer IServicer<T> IServiceUser<U, T> Enums Direction SiblingRuleTile.SibingGroup StoryState"
+    "keywords": "Namespace GrandmaGreen Classes AreaController AreaExitState AreaServices BulletinBoardUIController BulletinBoardUIDisplay CameraZoom CatchUIInput CollectionUIDisplay CommonSFX CultivisionUIDisplay EventManager GamePortalTile GameScenePortal GameSettingsData GameSystemDummy GeneralExtensions GrandmaGreenGameState PlantType PlantTypeDictionary PlayAudioOnEnable SettingsUIDisplay SiblingRuleTile SlideshowData StartScreenUIDisplay Storyline StorylineDataStore StoryRequirement TileType ToolTest2 UIDisplayBase Structs Contest Basic contest struct. All it does is store a plant and the assumed prize money. SettingsSet SlideData Interfaces IDraggable IDraggableContainer IGameTile IPathAgent IPathfinderServicer IServicer<T> IServiceUser<U, T> Enums Direction SiblingRuleTile.SibingGroup StoryState"
   },
   "api/GrandmaGreen.IDraggable.html": {
     "href": "api/GrandmaGreen.IDraggable.html",
@@ -643,6 +643,16 @@
     "href": "api/GrandmaGreen.SiblingRuleTile.SibingGroup.html",
     "title": "Enum SiblingRuleTile.SibingGroup",
     "keywords": "Enum SiblingRuleTile.SibingGroup Namespace : GrandmaGreen Assembly : cs.temp.dll.dll Syntax public enum SibingGroup Fields Name Description Blend Regular"
+  },
+  "api/GrandmaGreen.SlideData.html": {
+    "href": "api/GrandmaGreen.SlideData.html",
+    "title": "Struct SlideData",
+    "keywords": "Struct SlideData Inherited Members ValueType.Equals(Object) ValueType.GetHashCode() ValueType.ToString() Object.Equals(Object, Object) Object.ReferenceEquals(Object, Object) Object.GetType() Namespace : GrandmaGreen Assembly : cs.temp.dll.dll Syntax [Serializable] public struct SlideData Fields caption Declaration public string caption Field Value Type Description String image Declaration public Sprite image Field Value Type Description Sprite"
+  },
+  "api/GrandmaGreen.SlideshowData.html": {
+    "href": "api/GrandmaGreen.SlideshowData.html",
+    "title": "Class SlideshowData",
+    "keywords": "Class SlideshowData Inheritance Object SlideshowData Namespace : GrandmaGreen Assembly : cs.temp.dll.dll Syntax public class SlideshowData : ScriptableObject Fields slides Declaration public List<SlideData> slides Field Value Type Description List < SlideData > title Declaration public string title Field Value Type Description String"
   },
   "api/GrandmaGreen.StartScreenUIDisplay.html": {
     "href": "api/GrandmaGreen.StartScreenUIDisplay.html",

@@ -9322,6 +9322,42 @@ references:
   commentId: F:GrandmaGreen.SiblingRuleTile.SibingGroup.Regular
   fullName: GrandmaGreen.SiblingRuleTile.SibingGroup.Regular
   nameWithType: SiblingRuleTile.SibingGroup.Regular
+- uid: GrandmaGreen.SlideData
+  name: SlideData
+  href: api/GrandmaGreen.SlideData.html
+  commentId: T:GrandmaGreen.SlideData
+  fullName: GrandmaGreen.SlideData
+  nameWithType: SlideData
+- uid: GrandmaGreen.SlideData.caption
+  name: caption
+  href: api/GrandmaGreen.SlideData.html#GrandmaGreen_SlideData_caption
+  commentId: F:GrandmaGreen.SlideData.caption
+  fullName: GrandmaGreen.SlideData.caption
+  nameWithType: SlideData.caption
+- uid: GrandmaGreen.SlideData.image
+  name: image
+  href: api/GrandmaGreen.SlideData.html#GrandmaGreen_SlideData_image
+  commentId: F:GrandmaGreen.SlideData.image
+  fullName: GrandmaGreen.SlideData.image
+  nameWithType: SlideData.image
+- uid: GrandmaGreen.SlideshowData
+  name: SlideshowData
+  href: api/GrandmaGreen.SlideshowData.html
+  commentId: T:GrandmaGreen.SlideshowData
+  fullName: GrandmaGreen.SlideshowData
+  nameWithType: SlideshowData
+- uid: GrandmaGreen.SlideshowData.slides
+  name: slides
+  href: api/GrandmaGreen.SlideshowData.html#GrandmaGreen_SlideshowData_slides
+  commentId: F:GrandmaGreen.SlideshowData.slides
+  fullName: GrandmaGreen.SlideshowData.slides
+  nameWithType: SlideshowData.slides
+- uid: GrandmaGreen.SlideshowData.title
+  name: title
+  href: api/GrandmaGreen.SlideshowData.html#GrandmaGreen_SlideshowData_title
+  commentId: F:GrandmaGreen.SlideshowData.title
+  fullName: GrandmaGreen.SlideshowData.title
+  nameWithType: SlideshowData.title
 - uid: GrandmaGreen.StartScreenUIDisplay
   name: StartScreenUIDisplay
   href: api/GrandmaGreen.StartScreenUIDisplay.html
