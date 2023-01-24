@@ -170,12 +170,6 @@
     background-image: url('project://database/Assets/_GrandmaGreen/Art/UI/Collection/UI_Collection_Friend_Home_Sticker.PNG?fileID=-475181428&guid=4b7dc45d53c9ad540b7aef7f86c639c0&type=3#UI_Collection_Friend_Home_Sticker_0');
 }
 
-.happiness-bar {
-    width: 300px;
-    height: 25px;
-    background-image: url('project://database/Assets/_GrandmaGreen/Art/UI/Settings/UI_Settings_BGM_Slider_Progress.png?fileID=2800000&guid=6bace062d1ebcf54aaef98611877f11e&type=3#UI_Settings_BGM_Slider_Progress');
-}
-
 .achieve-stamp {
     width: 120px;
     height: 120px;
@@ -208,4 +202,27 @@
     border-right-color: rgba(0, 0, 0, 0);
     border-top-color: rgba(0, 0, 0, 0);
     border-bottom-color: rgba(0, 0, 0, 0);
+}
+
+.unity-progress-bar__container {
+    max-width: none;
+    min-width: auto;
+    width: 300px;
+    height: 30px;
+}
+
+.unity-progress-bar__background {
+    background-image: url('project://database/Assets/_GrandmaGreen/Art/UI/Settings/UI_Settings_BGM_Slider_Progress.png?fileID=2800000&guid=6bace062d1ebcf54aaef98611877f11e&type=3#UI_Settings_BGM_Slider_Progress');
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    border-left-color: rgba(0, 0, 0, 0);
+    border-right-color: rgba(0, 0, 0, 0);
+    border-top-color: rgba(0, 0, 0, 0);
+    border-bottom-color: rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.unity-progress-bar__progress {
 }

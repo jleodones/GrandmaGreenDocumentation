@@ -17,8 +17,15 @@ namespace GrandmaGreen.Entities
 
         public void Awake()
         {
-            golemManager.Initialize();
             EventManager.instance.EVENT_ASSIGN_TASK += AssignGolemAction;
+        }
+
+        void OnEnable() {
+            golemManager.LoadGolemData();
+        }
+
+        void OnDisable() {
+            golemManager.SaveGolemData();
         }
 
         [Header("Debug Options")]

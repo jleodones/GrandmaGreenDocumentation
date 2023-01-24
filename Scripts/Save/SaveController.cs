@@ -96,6 +96,7 @@ namespace GrandmaGreen.SaveSystem
         /// </summary>
         public void AutoSave()
         {
+            EventManager.instance.HandleEVENT_SYNC_AUTOSAVE();
             foreach(ISaveLoader saveLoader in m_saveLoaders)
             {
                 saveLoader.SaveAllData();

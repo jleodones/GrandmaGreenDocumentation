@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,23 +7,38 @@ using Pathfinding;
 using Core.RNG;
 using GrandmaGreen.Collections;
 using GrandmaGreen.Garden;
+using GrandmaGreen.SaveSystem;
+using Newtonsoft.Json;
 
 namespace GrandmaGreen.Entities 
 {
     [CreateAssetMenu(menuName = "GrandmaGreen/Entities/GolemManager")]
-    public class GolemManager : ScriptableObject
+    public class GolemManager : ObjectSaver
     {
+        
+        [JsonIgnore]
         public List<GameObject> golemPrefabs;
         //public Dictionary<ushort, GameObject> golemObjectTable; //active golems
-        public GolemState[] golemStateTable;
+        [JsonIgnore]
+        public int GolemNum = 10;
+
+        [JsonIgnore]
         public EntityController playerController;
+
+        [JsonIgnore]
+        public GolemState[] golemStateTable;
 
         public void Initialize()
         {
             //Subscribe
             EventManager.instance.EVENT_GOLEM_SPAWN += OnGolemSpawn;
             EventManager.instance.EVENT_GOLEM_HAPPINESS_UPDATE += OnGolemHappinessChanged;
-            golemStateTable = new GolemState[10];
+            EventManager.instance.EVENT_SYNC_AUTOSAVE += SaveGolemData;
+
+            if (componentStores.Count == 0)
+            {
+                CreateNewStore(typeof(GolemState));
+            }
         }
 
         public GolemState CreateGolem(ushort id) {
@@ -37,10 +53,30 @@ namespace GrandmaGreen.Entities
         }
 
         /// <summary>
+        /// Load Golem from save file
+        /// </summary>
+        public void LoadGolemToScene(int tableIndex, GolemState state, Vector3 pos)
+        {
+            GameObject newGolemParent = new GameObject("GolemParent_"+state.golemID);
+            newGolemParent.AddComponent<SplineContainer>();
+            
+            // Instantiate at position and zero rotation.
+            GameObject newGolem = Instantiate(golemPrefabs[tableIndex], pos, Quaternion.identity);
+            newGolem.transform.rotation = Quaternion.Euler(-45,0,0);
+            newGolem.transform.SetParent(newGolemParent.transform);
+            newGolem.GetComponent<SplineFollow>().target = newGolemParent.GetComponent<SplineContainer>();
+
+            // Register Manager
+            newGolem.GetComponent<GolemController>().RegisterManager(this);
+
+            if (state.isMature) newGolem.GetComponent<GolemController>().UpdateMatureState(true);
+        }
+
+        /// <summary>
         /// Spawn Golem when harvest
         /// </summary>
         public void OnGolemSpawn(ushort id, Vector3 pos) {
-            
+        
             // if golem existed, not spawn
             int tableIndex = offsetId(id);
             if (!isIdValid(tableIndex) || 
@@ -50,27 +86,18 @@ namespace GrandmaGreen.Entities
                 return;
             }
 
-            if (golemPrefabs.Count < 1) 
+            if (golemPrefabs.Count < tableIndex) 
             {
                 Debug.Log("Golem Manager: no prefebs availalbe");
                 return;
             }
 
             Debug.Log("A Golem is spawned" + pos.ToString());
-            GameObject newGolemParent = new GameObject("GolemParent_"+id);
-            newGolemParent.AddComponent<SplineContainer>();
             
-            // Instantiate at position and zero rotation.
-            GameObject newGolem = Instantiate(golemPrefabs[0], pos, Quaternion.identity);
-            newGolem.transform.rotation = Quaternion.Euler(-45,0,0);
-            newGolem.transform.SetParent(newGolemParent.transform);
-            newGolem.GetComponent<SplineFollow>().target = newGolemParent.GetComponent<SplineContainer>();
-
-            // Register Manager
-            newGolem.GetComponent<GolemController>().RegisterManager(this);
-
             // Add golem to the table
             golemStateTable[tableIndex] = CreateGolem(id);
+
+            LoadGolemToScene(tableIndex,golemStateTable[tableIndex], pos);
         }
 
         public void OnGolemHappinessChanged(ushort id, int val) {
@@ -128,7 +155,55 @@ namespace GrandmaGreen.Entities
             //Unsubscribe
             EventManager.instance.EVENT_GOLEM_SPAWN -= OnGolemSpawn;
             EventManager.instance.EVENT_GOLEM_HAPPINESS_UPDATE -= OnGolemHappinessChanged;
+            EventManager.instance.EVENT_SYNC_AUTOSAVE -= SaveGolemData;
         }
+
+        #region Saving
+        public void LoadGolemData()
+        {
+            if (golemStateTable.Length == 0)
+                golemStateTable = new GolemState[10];
+                
+            GolemState newState = new GolemState();
+            bool IsSpawnDemoGolem = true;
+
+            for (int index = 0; index < golemStateTable.Length; index++)
+            {
+                //int index = Array.IndexOf(golemStateTable, golem);
+                Debug.LogWarning("requesting golem data" + index);
+                if(RequestData<GolemState>(index,ref newState))
+                {
+                    golemStateTable[index] = newState;
+                }
+                else
+                {
+                    Debug.Log("adding golem data" + index);
+                    AddComponent<GolemState>(index, new GolemState());
+                }
+
+                if(golemStateTable[index].isSpawned == true)
+                {
+                    Debug.Log("Golem " + index + " loaded");
+                    LoadGolemToScene(index, golemStateTable[index], new Vector3(0,0,0));
+                    IsSpawnDemoGolem = false;
+                } 
+            }
+
+            // Hardcode for demo purpose
+            if (IsSpawnDemoGolem) 
+                EventManager.instance.HandleEVENT_GOLEM_SPAWN((ushort)CharacterId.PumpkinGolem, new Vector3Int(0,0,0));
+        }
+
+        public void SaveGolemData()
+        {
+            for (int index = 0; index < golemStateTable.Length; index++)
+            {
+                if (!UpdateValue<GolemState>(index, golemStateTable[index]))
+                    Debug.Log("Could not save Golem Data!");
+            }
+                Debug.Log("Golem Data Saved");
+        }
+        #endregion
 
         #region Utility
         private int offsetId(ushort id) {return (int)id - 5000;}

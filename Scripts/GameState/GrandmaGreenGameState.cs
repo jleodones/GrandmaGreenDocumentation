@@ -23,6 +23,7 @@ namespace GrandmaGreen
         [SerializeField] TimeLayerClock timeClock;
         [SerializeField] StorylineDataStore storylineData;
         [SerializeField] SaveSystem.SaveManager saveManager;
+        [SerializeField] Entities.GolemManager golemManager;
         [SerializeField] UI.UIDisplayTracker UIdisplayRules;
         [SerializeField] SCENES currentScene;
         [ReadOnly] int activeAreaIndex;
@@ -98,6 +99,7 @@ namespace GrandmaGreen
             collectionsData.LoadCollections();
             areaServicer.StartServices();
             storylineData.Initalize();
+            golemManager.Initialize();
         }
 
         void ReleaseState()
@@ -107,6 +109,7 @@ namespace GrandmaGreen
             collectionsData.UnloadCollections();
             timeClock.SaveCurrentDateTime();
             storylineData.Release();
+            golemManager.SaveGolemData();
             saveManager.TriggerSave();
         }
 

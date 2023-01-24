@@ -27,6 +27,7 @@ namespace GrandmaGreen
 
         public event Action EVENT_MANUAL_SAVE;
         public event Action EVENT_DELETE_SAVE;
+        public event Action EVENT_SYNC_AUTOSAVE;
 
         public void HandleEVENT_MANUAL_SAVE()
         {
@@ -36,6 +37,11 @@ namespace GrandmaGreen
         public void HandleEVENT_DELETE_SAVE()
         {
             EVENT_DELETE_SAVE?.Invoke();
+        }
+
+        public void HandleEVENT_SYNC_AUTOSAVE()
+        {
+            EVENT_SYNC_AUTOSAVE?.Invoke();
         }
         
         #endregion

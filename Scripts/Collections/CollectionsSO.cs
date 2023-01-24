@@ -297,16 +297,16 @@ namespace GrandmaGreen.Collections
                     return true;
                 case PlantId.Crocus:
                     golemID = CharacterId.CrocusGolem;
-                    return true;
+                    return false;
                 case PlantId.Pumpkin:
                     golemID = CharacterId.PumpkinGolem;
                     return true;
                 case PlantId.Apple:
                     golemID = CharacterId.AppleGolem;
-                    return true;
+                    return false;
                 case PlantId.Turnip:
                     golemID = CharacterId.TurnipGolem;
-                    return true;
+                    return false;
                 default:
                     return false;
             }
