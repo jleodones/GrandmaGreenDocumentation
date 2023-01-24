@@ -4584,6 +4584,12 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Entities.GolemManager.GetPlayerPos
   nameWithType: GolemManager.GetPlayerPos
+- uid: GrandmaGreen.Entities.GolemManager.GolemNum
+  name: GolemNum
+  href: api/GrandmaGreen.Entities.GolemManager.html#GrandmaGreen_Entities_GolemManager_GolemNum
+  commentId: F:GrandmaGreen.Entities.GolemManager.GolemNum
+  fullName: GrandmaGreen.Entities.GolemManager.GolemNum
+  nameWithType: GolemManager.GolemNum
 - uid: GrandmaGreen.Entities.GolemManager.golemPrefabs
   name: golemPrefabs
   href: api/GrandmaGreen.Entities.GolemManager.html#GrandmaGreen_Entities_GolemManager_golemPrefabs
@@ -4609,6 +4615,32 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Entities.GolemManager.Initialize
   nameWithType: GolemManager.Initialize
+- uid: GrandmaGreen.Entities.GolemManager.LoadGolemData
+  name: LoadGolemData()
+  href: api/GrandmaGreen.Entities.GolemManager.html#GrandmaGreen_Entities_GolemManager_LoadGolemData
+  commentId: M:GrandmaGreen.Entities.GolemManager.LoadGolemData
+  fullName: GrandmaGreen.Entities.GolemManager.LoadGolemData()
+  nameWithType: GolemManager.LoadGolemData()
+- uid: GrandmaGreen.Entities.GolemManager.LoadGolemData*
+  name: LoadGolemData
+  href: api/GrandmaGreen.Entities.GolemManager.html#GrandmaGreen_Entities_GolemManager_LoadGolemData_
+  commentId: Overload:GrandmaGreen.Entities.GolemManager.LoadGolemData
+  isSpec: "True"
+  fullName: GrandmaGreen.Entities.GolemManager.LoadGolemData
+  nameWithType: GolemManager.LoadGolemData
+- uid: GrandmaGreen.Entities.GolemManager.LoadGolemToScene(System.Int32,GrandmaGreen.Entities.GolemState,Vector3)
+  name: LoadGolemToScene(Int32, GolemState, Vector3)
+  href: api/GrandmaGreen.Entities.GolemManager.html#GrandmaGreen_Entities_GolemManager_LoadGolemToScene_System_Int32_GrandmaGreen_Entities_GolemState_Vector3_
+  commentId: M:GrandmaGreen.Entities.GolemManager.LoadGolemToScene(System.Int32,GrandmaGreen.Entities.GolemState,Vector3)
+  fullName: GrandmaGreen.Entities.GolemManager.LoadGolemToScene(System.Int32, GrandmaGreen.Entities.GolemState, Vector3)
+  nameWithType: GolemManager.LoadGolemToScene(Int32, GolemState, Vector3)
+- uid: GrandmaGreen.Entities.GolemManager.LoadGolemToScene*
+  name: LoadGolemToScene
+  href: api/GrandmaGreen.Entities.GolemManager.html#GrandmaGreen_Entities_GolemManager_LoadGolemToScene_
+  commentId: Overload:GrandmaGreen.Entities.GolemManager.LoadGolemToScene
+  isSpec: "True"
+  fullName: GrandmaGreen.Entities.GolemManager.LoadGolemToScene
+  nameWithType: GolemManager.LoadGolemToScene
 - uid: GrandmaGreen.Entities.GolemManager.OnDestroy
   name: OnDestroy()
   href: api/GrandmaGreen.Entities.GolemManager.html#GrandmaGreen_Entities_GolemManager_OnDestroy
@@ -4654,6 +4686,19 @@ references:
   commentId: F:GrandmaGreen.Entities.GolemManager.playerController
   fullName: GrandmaGreen.Entities.GolemManager.playerController
   nameWithType: GolemManager.playerController
+- uid: GrandmaGreen.Entities.GolemManager.SaveGolemData
+  name: SaveGolemData()
+  href: api/GrandmaGreen.Entities.GolemManager.html#GrandmaGreen_Entities_GolemManager_SaveGolemData
+  commentId: M:GrandmaGreen.Entities.GolemManager.SaveGolemData
+  fullName: GrandmaGreen.Entities.GolemManager.SaveGolemData()
+  nameWithType: GolemManager.SaveGolemData()
+- uid: GrandmaGreen.Entities.GolemManager.SaveGolemData*
+  name: SaveGolemData
+  href: api/GrandmaGreen.Entities.GolemManager.html#GrandmaGreen_Entities_GolemManager_SaveGolemData_
+  commentId: Overload:GrandmaGreen.Entities.GolemManager.SaveGolemData
+  isSpec: "True"
+  fullName: GrandmaGreen.Entities.GolemManager.SaveGolemData
+  nameWithType: GolemManager.SaveGolemData
 - uid: GrandmaGreen.Entities.GolemManager.UpdateGolemTask(System.UInt16)
   name: UpdateGolemTask(UInt16)
   href: api/GrandmaGreen.Entities.GolemManager.html#GrandmaGreen_Entities_GolemManager_UpdateGolemTask_System_UInt16_
@@ -4945,6 +4990,12 @@ references:
   commentId: E:GrandmaGreen.EventManager.EVENT_PLANT_UPDATE
   fullName: GrandmaGreen.EventManager.EVENT_PLANT_UPDATE
   nameWithType: EventManager.EVENT_PLANT_UPDATE
+- uid: GrandmaGreen.EventManager.EVENT_SYNC_AUTOSAVE
+  name: EVENT_SYNC_AUTOSAVE
+  href: api/GrandmaGreen.EventManager.html#GrandmaGreen_EventManager_EVENT_SYNC_AUTOSAVE
+  commentId: E:GrandmaGreen.EventManager.EVENT_SYNC_AUTOSAVE
+  fullName: GrandmaGreen.EventManager.EVENT_SYNC_AUTOSAVE
+  nameWithType: EventManager.EVENT_SYNC_AUTOSAVE
 - uid: GrandmaGreen.EventManager.EVENT_TOGGLE_CUSTOMIZATION_MODE
   name: EVENT_TOGGLE_CUSTOMIZATION_MODE
   href: api/GrandmaGreen.EventManager.html#GrandmaGreen_EventManager_EVENT_TOGGLE_CUSTOMIZATION_MODE
@@ -5340,6 +5391,19 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.EventManager.HandleEVENT_PLANT_UPDATE
   nameWithType: EventManager.HandleEVENT_PLANT_UPDATE
+- uid: GrandmaGreen.EventManager.HandleEVENT_SYNC_AUTOSAVE
+  name: HandleEVENT_SYNC_AUTOSAVE()
+  href: api/GrandmaGreen.EventManager.html#GrandmaGreen_EventManager_HandleEVENT_SYNC_AUTOSAVE
+  commentId: M:GrandmaGreen.EventManager.HandleEVENT_SYNC_AUTOSAVE
+  fullName: GrandmaGreen.EventManager.HandleEVENT_SYNC_AUTOSAVE()
+  nameWithType: EventManager.HandleEVENT_SYNC_AUTOSAVE()
+- uid: GrandmaGreen.EventManager.HandleEVENT_SYNC_AUTOSAVE*
+  name: HandleEVENT_SYNC_AUTOSAVE
+  href: api/GrandmaGreen.EventManager.html#GrandmaGreen_EventManager_HandleEVENT_SYNC_AUTOSAVE_
+  commentId: Overload:GrandmaGreen.EventManager.HandleEVENT_SYNC_AUTOSAVE
+  isSpec: "True"
+  fullName: GrandmaGreen.EventManager.HandleEVENT_SYNC_AUTOSAVE
+  nameWithType: EventManager.HandleEVENT_SYNC_AUTOSAVE
 - uid: GrandmaGreen.EventManager.HandleEVENT_TOGGLE_CUSTOMIZATION_MODE
   name: HandleEVENT_TOGGLE_CUSTOMIZATION_MODE()
   href: api/GrandmaGreen.EventManager.html#GrandmaGreen_EventManager_HandleEVENT_TOGGLE_CUSTOMIZATION_MODE

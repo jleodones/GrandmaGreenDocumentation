@@ -93,10 +93,34 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="GrandmaGreen_Entities_GolemManager_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class GolemManager : ScriptableObject</code></pre>
+    <pre><code class="lang-csharp hljs">public class GolemManager : ObjectSaver</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
+  
+  
+  <h4 id="GrandmaGreen_Entities_GolemManager_GolemNum" data-uid="GrandmaGreen.Entities.GolemManager.GolemNum">GolemNum</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int GolemNum</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <h4 id="GrandmaGreen_Entities_GolemManager_golemPrefabs" data-uid="GrandmaGreen.Entities.GolemManager.golemPrefabs">golemPrefabs</h4>
@@ -250,6 +274,54 @@
   </div>
   
   
+  <a id="GrandmaGreen_Entities_GolemManager_LoadGolemData_" data-uid="GrandmaGreen.Entities.GolemManager.LoadGolemData*"></a>
+  <h4 id="GrandmaGreen_Entities_GolemManager_LoadGolemData" data-uid="GrandmaGreen.Entities.GolemManager.LoadGolemData">LoadGolemData()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void LoadGolemData()</code></pre>
+  </div>
+  
+  
+  <a id="GrandmaGreen_Entities_GolemManager_LoadGolemToScene_" data-uid="GrandmaGreen.Entities.GolemManager.LoadGolemToScene*"></a>
+  <h4 id="GrandmaGreen_Entities_GolemManager_LoadGolemToScene_System_Int32_GrandmaGreen_Entities_GolemState_Vector3_" data-uid="GrandmaGreen.Entities.GolemManager.LoadGolemToScene(System.Int32,GrandmaGreen.Entities.GolemState,Vector3)">LoadGolemToScene(Int32, GolemState, Vector3)</h4>
+  <div class="markdown level1 summary"><p>Load Golem from save file</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void LoadGolemToScene(int tableIndex, GolemState state, Vector3 pos)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">tableIndex</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="GrandmaGreen.Entities.GolemState.html">GolemState</a></td>
+        <td><span class="parametername">state</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td><span class="parametername">pos</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="GrandmaGreen_Entities_GolemManager_OnDestroy_" data-uid="GrandmaGreen.Entities.GolemManager.OnDestroy*"></a>
   <h4 id="GrandmaGreen_Entities_GolemManager_OnDestroy" data-uid="GrandmaGreen.Entities.GolemManager.OnDestroy">OnDestroy()</h4>
   <div class="markdown level1 summary"></div>
@@ -323,6 +395,16 @@
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="GrandmaGreen_Entities_GolemManager_SaveGolemData_" data-uid="GrandmaGreen.Entities.GolemManager.SaveGolemData*"></a>
+  <h4 id="GrandmaGreen_Entities_GolemManager_SaveGolemData" data-uid="GrandmaGreen.Entities.GolemManager.SaveGolemData">SaveGolemData()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SaveGolemData()</code></pre>
+  </div>
   
   
   <a id="GrandmaGreen_Entities_GolemManager_UpdateGolemTask_" data-uid="GrandmaGreen.Entities.GolemManager.UpdateGolemTask*"></a>
