@@ -6622,6 +6622,12 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Garden.GardenManager.DestroyPlant
   nameWithType: GardenManager.DestroyPlant
+- uid: GrandmaGreen.Garden.GardenManager.dryTileTintColor
+  name: dryTileTintColor
+  href: api/GrandmaGreen.Garden.GardenManager.html#GrandmaGreen_Garden_GardenManager_dryTileTintColor
+  commentId: F:GrandmaGreen.Garden.GardenManager.dryTileTintColor
+  fullName: GrandmaGreen.Garden.GardenManager.dryTileTintColor
+  nameWithType: GardenManager.dryTileTintColor
 - uid: GrandmaGreen.Garden.GardenManager.GetBreedingCandidates(System.Int32,Vector3Int)
   name: GetBreedingCandidates(Int32, Vector3Int)
   href: api/GrandmaGreen.Garden.GardenManager.html#GrandmaGreen_Garden_GardenManager_GetBreedingCandidates_System_Int32_Vector3Int_
@@ -6930,6 +6936,12 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Garden.GardenManager.UpdateWaterStage
   nameWithType: GardenManager.UpdateWaterStage
+- uid: GrandmaGreen.Garden.GardenManager.wateredTileTintColor
+  name: wateredTileTintColor
+  href: api/GrandmaGreen.Garden.GardenManager.html#GrandmaGreen_Garden_GardenManager_wateredTileTintColor
+  commentId: F:GrandmaGreen.Garden.GardenManager.wateredTileTintColor
+  fullName: GrandmaGreen.Garden.GardenManager.wateredTileTintColor
+  nameWithType: GardenManager.wateredTileTintColor
 - uid: GrandmaGreen.Garden.GardenManager.WiltTime
   name: WiltTime
   href: api/GrandmaGreen.Garden.GardenManager.html#GrandmaGreen_Garden_GardenManager_WiltTime
@@ -8341,6 +8353,12 @@ references:
   fullName.vb: GrandmaGreen.IServiceUser(Of U, T).SetServicer
   nameWithType: IServiceUser<U, T>.SetServicer
   nameWithType.vb: IServiceUser(Of U, T).SetServicer
+- uid: GrandmaGreen.NewItemUI
+  name: NewItemUI
+  href: api/GrandmaGreen.NewItemUI.html
+  commentId: T:GrandmaGreen.NewItemUI
+  fullName: GrandmaGreen.NewItemUI
+  nameWithType: NewItemUI
 - uid: GrandmaGreen.PlantType
   name: PlantType
   href: api/GrandmaGreen.PlantType.html
