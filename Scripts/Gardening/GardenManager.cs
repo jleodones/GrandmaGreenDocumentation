@@ -55,6 +55,9 @@ namespace GrandmaGreen.Garden
         public int WiltTime;
         public int DeathTime;
 
+        public Color dryTileTintColor = Color.white;
+        public Color wateredTileTintColor;
+
         public void Initialize()
         {
         }
@@ -180,15 +183,16 @@ namespace GrandmaGreen.Garden
             {
                 PlantState updatedPlant = plant;
                 updatedPlant.growthStage = plant.growthStage + 1;
-                
+
                 //Reset the waterStage and waterTimers on growth
                 updatedPlant.waterStage = 0;
                 int supposedTimer = updatedPlant.waterTimer - collection.GetPlant(plant.type).growthTime;
                 //Debug.Log(supposedTimer);
-                if(supposedTimer < 0)
+                if (supposedTimer < 0)
                 {
                     updatedPlant.waterTimer = 0;
-                } else 
+                }
+                else
                 {
                     updatedPlant.waterTimer = supposedTimer;
                 }
@@ -202,8 +206,8 @@ namespace GrandmaGreen.Garden
             if (!IsEmpty(areaIndex, cell))
             {
                 PlantState plant = GetPlant(areaIndex, cell);
-                plant.waterTimer += value;         
-                plantLookup[areaIndex][cell] = plant;              
+                plant.waterTimer += value;
+                plantLookup[areaIndex][cell] = plant;
             }
         }
 
@@ -218,7 +222,7 @@ namespace GrandmaGreen.Garden
 
                 if (!PlantIsWilted(areaIndex, cell))
                 {
-                    if(PlantIsFullyGrown(areaIndex, cell))
+                    if (PlantIsFullyGrown(areaIndex, cell))
                     {
                         updatedPlant.waterTimer = 0;
                     }
@@ -273,15 +277,18 @@ namespace GrandmaGreen.Garden
 
         public bool PlantNeedsWater(int areaIndex, Vector3Int cell)
         {
-            if (!IsEmpty(areaIndex, cell))
-            {
-                PlantState plant = GetPlant(areaIndex, cell);
-                PlantProperties properties = collection.GetPlant(plant.type);
-                return plant.waterTimer >= properties.growthTime
-                    && plant.waterTimer < WiltTime; //240;
-            }
-            else
+            if (IsEmpty(areaIndex, cell))
                 return false;
+
+
+            PlantState plant = GetPlant(areaIndex, cell);
+            PlantProperties properties = collection.GetPlant(plant.type);
+
+            if (PlantIsFullyGrown(areaIndex, cell))
+                return plant.waterTimer > 0;
+            else
+                return plant.waterStage == 0;
+
         }
 
         public bool PlantIsWilted(int areaIndex, Vector3Int cell)
@@ -290,7 +297,7 @@ namespace GrandmaGreen.Garden
             {
                 PlantState plant = GetPlant(areaIndex, cell);
 
-                if(!PlantIsFullyGrown(areaIndex, cell))
+                if (!PlantIsFullyGrown(areaIndex, cell))
                 {
                     return plant.waterTimer >= WiltTime //240
                         && plant.waterTimer < DeathTime; //336;

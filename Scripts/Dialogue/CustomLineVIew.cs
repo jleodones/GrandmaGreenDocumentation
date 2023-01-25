@@ -28,17 +28,17 @@ namespace GrandmaGreen.Dialogue
         /// Used to determine if the dialogue should use the typewriter effect.
         /// </summary>
         public bool useTypewriterEffect = false;
-        
+
         /// <summary>
         /// The number of characters per second that should appear during the typewriter effect.
         /// </summary>
         public float typewriterEffectSpeed = 5.0f;
-        
+
         /// <summary>
         /// Action that occurs when character is typed.
         /// </summary>
         public Action<int> onCharacterTyped;
-        
+
         /// <summary>
         /// Grabs the name text from the dialogue UI for displaying the name of the speaker.
         /// </summary>
@@ -64,7 +64,7 @@ namespace GrandmaGreen.Dialogue
             // Grab the name UI and the current line text UI.
             m_nameTextUI = dialogueUI.rootVisualElement.Q<Label>("nameText");
             m_currentLineTextUI = dialogueUI.rootVisualElement.Q<Label>("dialogueText");
-            
+
             // Set the dialogue SFX callback.
             onCharacterTyped += dialogueSFX.PlayIndex;
 
@@ -79,7 +79,7 @@ namespace GrandmaGreen.Dialogue
         {
             // Clear any leftover text.
             m_currentLineTextUI.text = "";
-            
+
             // Display.
             dialogueUI.rootVisualElement.Q<VisualElement>("rootVisualElement").style.display = DisplayStyle.Flex;
         }
@@ -119,7 +119,7 @@ namespace GrandmaGreen.Dialogue
         public override void RunLine(LocalizedLine dialogueLine, Action onDialogueLineFinished)
         {
             StopAllCoroutines();
-            
+
             // Start RunLine coroutine.
             StartCoroutine(RunLineInternal(dialogueLine, onDialogueLineFinished));
         }
@@ -131,7 +131,7 @@ namespace GrandmaGreen.Dialogue
             {
                 // Set the character name.
                 m_nameTextUI.text = dialogueLine.CharacterName;
-                
+
                 // If using typewriter effect, start the typewriter coroutine.
                 if (useTypewriterEffect)
                 {
@@ -159,7 +159,7 @@ namespace GrandmaGreen.Dialogue
             }
 
             m_currentLine = dialogueLine;
-            
+
             // Call to present the line.
             yield return StartCoroutine(PresentLine());
 
@@ -174,16 +174,16 @@ namespace GrandmaGreen.Dialogue
             // Presentation complete; call the completion handler.
             onDialogueLineFinished();
         }
-        
+
         /// <summary>
         /// Called by the DialogueRunner to signal that a line has been interrupted, and that the Dialogue View should finish presenting its line as quickly as possible.
         /// </summary>
         public override void InterruptLine(LocalizedLine dialogueLine, Action onInterruptLineFinished)
         {
             StopAllCoroutines();
-            
+
             m_currentLine = dialogueLine;
-            
+
             m_nameTextUI.text = dialogueLine.CharacterName;
             m_currentLineTextUI.text = dialogueLine.TextWithoutCharacterName.Text;
 

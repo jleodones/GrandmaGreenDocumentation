@@ -233,6 +233,11 @@ namespace GrandmaGreen.Garden
 
         public void UpdateSprite(Vector3Int cell)
         {
+            if(gardenManager.PlantNeedsWater(areaIndex,cell))
+                tilemap.SetColor(cell, gardenManager.dryTileTintColor);
+            else
+                tilemap.SetColor(cell, gardenManager.wateredTileTintColor);
+
             PlantId id = gardenManager.GetPlantType(areaIndex, cell);
             if (collection.IsFlower(id))
             {
@@ -272,6 +277,8 @@ namespace GrandmaGreen.Garden
             {
                 Destroy(plantPrefabLookup[cell]);
                 plantPrefabLookup.Remove(cell);
+
+                tilemap.SetColor(cell, gardenManager.dryTileTintColor);
             }
         }
 
@@ -356,10 +363,11 @@ namespace GrandmaGreen.Garden
                     gardenManager.UpdateGrowthStage(areaIndex, cell);
                     // Debug.Log("Plant Growth via WaterPlant");
                 }
-                
-                foreach(PlantState plantToRemove in wiltedPlantList)
+
+                foreach (PlantState plantToRemove in wiltedPlantList)
                 {
-                    if(plantToRemove.cell == cell) {
+                    if (plantToRemove.cell == cell)
+                    {
                         wiltedPlantList.Remove(plantToRemove);
                         break;
                     }
@@ -395,8 +403,8 @@ namespace GrandmaGreen.Garden
             if (gardenManager.IsEmpty(areaIndex, cell)) return false;
 
             int maxGrowthStages = collection.GetPlant(
-		        gardenManager.GetPlantType(areaIndex, cell))
-		        .growthStages;
+                gardenManager.GetPlantType(areaIndex, cell))
+                .growthStages;
 
             string debug = "Breeding Candidate Debug (Click to Expand)\n";
 
@@ -430,7 +438,7 @@ namespace GrandmaGreen.Garden
 
                 float trueDropRate = DropRate;
                 if (GetPlant(cell).isFertilized) trueDropRate += FertilizationBonus;
-                if (Random.Range(0f, 1f) <= trueDropRate/100)
+                if (Random.Range(0f, 1f) <= trueDropRate / 100)
                 {
                     EventManager.instance.HandleEVENT_INVENTORY_ADD_SEED((ushort)childPlantType, childGenotype);
                 }
@@ -471,13 +479,13 @@ namespace GrandmaGreen.Garden
             Vector3Int playableBottomRight = new Vector3Int(6, -5, 0);
             for (int x = -8; x <= 6; x++)
             {
-		        for (int y = -5; y <= 4; y++)
+                for (int y = -5; y <= 4; y++)
                 {
-                    ChangeGardenTileToGrass(new Vector3Int(x, y, 0)); 
-		        }
-	        }
+                    ChangeGardenTileToGrass(new Vector3Int(x, y, 0));
+                }
+            }
             ClearPlants();
-	    }
+        }
 
         [ContextMenu("InspectPlants")]
         public void InspectPlants()
@@ -510,9 +518,10 @@ namespace GrandmaGreen.Garden
             {
                 Vector3Int leftTile = topLeft + row * Vector3Int.down;
                 Vector3Int right = Vector3Int.right;
-                for (int j = 0; j < 7; j++) {
+                for (int j = 0; j < 7; j++)
+                {
                     ChangeGardenTileToPlot_Occupied(leftTile + j * right);
-	            }
+                }
                 PlantId plantId = (PlantId)flowerId;
                 Genotype.Generation mega = Genotype.Generation.F2;
                 CreatePlant(plantId, new Genotype("AaBb"), leftTile + right * 0, 0);
@@ -523,7 +532,7 @@ namespace GrandmaGreen.Garden
                 CreatePlant(plantId, new Genotype("aabb", mega), leftTile + right * 5, 2);
                 CreatePlant(plantId, new Genotype("AABB", mega), leftTile + right * 6, 2);
                 row++;
-	        }
+            }
         }
 
         [ContextMenu("VegetableTest")]

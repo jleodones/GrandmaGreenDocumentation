@@ -144,14 +144,19 @@ namespace GrandmaGreen.Entities
                     return;
                 }
 
+                Vector3 temp;
+                temp = animator.transform.localScale;
                 if (velocity.x < 0)
                 {
-                    this.gameObject.transform.localScale = new Vector3(1, 1, 1);
+                    if (temp.x < 0)
+                        temp.x *= -1;
                 }
                 else
                 {
-                    this.gameObject.transform.localScale = new Vector3(-1, 1, 1);
+                    if (temp.x > 0)
+                        temp.x *= -1;
                 }
+                animator.transform.localScale = temp;
                 animator.SetInteger("MOVEMENT", 1);
             }
             else
