@@ -18,14 +18,19 @@ namespace GrandmaGreen.Entities
         public void Awake()
         {
             EventManager.instance.EVENT_ASSIGN_TASK += AssignGolemAction;
+            golemManager.golemWorkTimer.Pause();
         }
 
         void OnEnable() {
             golemManager.LoadGolemData();
+            golemManager.golemWorkTimer.Resume(true);
+            golemManager.golemWorkTimer.onTick += GolemDoAction;
         }
 
         void OnDisable() {
             golemManager.SaveGolemData();
+            golemManager.golemWorkTimer.Pause();
+            golemManager.golemWorkTimer.onTick -= GolemDoAction;
         }
 
         [Header("Debug Options")]
@@ -52,38 +57,41 @@ namespace GrandmaGreen.Entities
             if(plants.Count != 0)
             {
                 //Debug.Log("Watering Task");
-                //int randIndex = Random.Range(0, plants.Count - 1);
-                //Debug.Log(plants[randIndex].cell);
                 golemManager.UpdateGolemTask(id);
             }
 
         }
 
-        public void GolemDoAction()
+        public void GolemDoAction(int value)
         {
             List<PlantState> plants = gardenArea.wiltedPlantList;
+            int wiltedIndex = 0;
+            bool fireEvent = false;
+
             foreach(GolemState golem in golemManager.golemStateTable)
             {
-                if (golem.assignedWatering)
-                {
-                    int randIndex = Random.Range(0, plants.Count - 1);
-                    int randIndex2 = randIndex + 1;
-                    Debug.Log("Assigned Cell: " + plants[randIndex].cell);
-                    //Debug.Log((ushort)golem.golemID);
-                    //golemManager.UpdateTaskCell((ushort)golem.golemID, plants[randIndex].cell);
-                    golemManager.UpdateTaskCell((ushort)CharacterId.PumpkinGolem, plants[randIndex].cell);
-                    if(!(randIndex2 >= plants.Count)) golemManager.UpdateTaskCell((ushort)CharacterId.TulipGolem, plants[randIndex2].cell);
-                    else golemManager.UpdateTaskCell((ushort)CharacterId.TulipGolem, plants[randIndex].cell);
-                }
+                // Add a check for Golem Happiness here once we get this sorted out
+                if((ushort)golem.golemID != 0){
+                    if ((golem.assignedWatering && golem.happiness > 0) && wiltedIndex < plants.Count)
+                    {
+                        fireEvent = true;
+                        //Debug.Log("Assigned Cell: " + plants[wiltedIndex].cell);
+                        golemManager.UpdateTaskCell((ushort)golem.golemID, plants[wiltedIndex].cell);
+                        
+                        wiltedIndex++;
+                    } else {
+                        golemManager.UpdateGolemTask((ushort)golem.golemID);
+                    }
+                }       
             }
-
-            EventManager.instance.HandleEVENT_GOLEM_DO_TASK();
+            
+            if(fireEvent) EventManager.instance.HandleEVENT_GOLEM_DO_TASK();
         }
 
         [Button(ButtonSizes.Medium)]
         public void WaterGolem()
         {
-            GolemDoAction();
+            GolemDoAction(1);
         }
     }
 }

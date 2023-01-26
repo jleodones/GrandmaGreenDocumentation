@@ -265,16 +265,18 @@ namespace GrandmaGreen.Entities
 
         public void UpdateTaskState()
         {
-            if(golemManager.golemStateTable[(int)id - 5000].assignedWatering)
-            {
-                Debug.Log("Task Assigned, now watering");
+            if(golemManager.golemStateTable[offsetId(id)].assignedWatering)
+            {       
                 m_isDoingTask = !m_isDoingTask;
                 behaviorTree.Blackboard.Set("isDoingTask", m_isDoingTask);
-                if(!m_isDoingTask) EventManager.instance.HandleEVENT_WATER_PLANT(golemManager.golemStateTable[(int)id - 5000].assignedCell);
-                Debug.Log(m_isDoingTask);
+                Debug.Log("Task state assigned:" + m_isDoingTask);
+                if(!m_isDoingTask){
+                    EventManager.instance.HandleEVENT_WATER_PLANT(golemManager.golemStateTable[offsetId(id)].assignedCell);
+                    golemManager.golemStateTable[offsetId(id)].happiness -= 10;
+                }
             } else
             {
-                Debug.Log("No Task Assigned");
+                Debug.Log("Some other task assigned");
             }
         }
 
@@ -436,6 +438,10 @@ namespace GrandmaGreen.Entities
         {
             return transform.position;
         }
+        #endregion
+
+        #region Utility
+        private int offsetId(CharacterId id) {return (int)id - 5000;}
         #endregion
     }
 }

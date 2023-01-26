@@ -12,6 +12,8 @@ using Newtonsoft.Json;
 
 namespace GrandmaGreen.Entities 
 {
+    using Timer = TimeLayer.TimeLayer;
+    
     [CreateAssetMenu(menuName = "GrandmaGreen/Entities/GolemManager")]
     public class GolemManager : ObjectSaver
     {
@@ -26,8 +28,14 @@ namespace GrandmaGreen.Entities
         public EntityController playerController;
 
         [JsonIgnore]
-        public GolemState[] golemStateTable;
+        public Timer golemWorkTimer;
 
+        [JsonIgnore]
+        public int golemHappinessThreshold = 30;
+
+        [JsonIgnore]
+        public GolemState[] golemStateTable;
+        
         public void Initialize()
         {
             //Subscribe
@@ -136,7 +144,8 @@ namespace GrandmaGreen.Entities
                 return;
             }
 
-            golemStateTable[index].assignedWatering = !golemStateTable[index].assignedWatering;
+            if(golemStateTable[index].happiness >= golemHappinessThreshold) golemStateTable[index].assignedWatering = true;
+            else golemStateTable[index].assignedWatering = false;
         }
 
         public void UpdateTaskCell(ushort id, Vector3Int cell)
