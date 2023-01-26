@@ -4452,12 +4452,12 @@ references:
   commentId: F:GrandmaGreen.Entities.GolemCrowdController.gardenArea
   fullName: GrandmaGreen.Entities.GolemCrowdController.gardenArea
   nameWithType: GolemCrowdController.gardenArea
-- uid: GrandmaGreen.Entities.GolemCrowdController.GolemDoAction
-  name: GolemDoAction()
-  href: api/GrandmaGreen.Entities.GolemCrowdController.html#GrandmaGreen_Entities_GolemCrowdController_GolemDoAction
-  commentId: M:GrandmaGreen.Entities.GolemCrowdController.GolemDoAction
-  fullName: GrandmaGreen.Entities.GolemCrowdController.GolemDoAction()
-  nameWithType: GolemCrowdController.GolemDoAction()
+- uid: GrandmaGreen.Entities.GolemCrowdController.GolemDoAction(System.Int32)
+  name: GolemDoAction(Int32)
+  href: api/GrandmaGreen.Entities.GolemCrowdController.html#GrandmaGreen_Entities_GolemCrowdController_GolemDoAction_System_Int32_
+  commentId: M:GrandmaGreen.Entities.GolemCrowdController.GolemDoAction(System.Int32)
+  fullName: GrandmaGreen.Entities.GolemCrowdController.GolemDoAction(System.Int32)
+  nameWithType: GolemCrowdController.GolemDoAction(Int32)
 - uid: GrandmaGreen.Entities.GolemCrowdController.GolemDoAction*
   name: GolemDoAction
   href: api/GrandmaGreen.Entities.GolemCrowdController.html#GrandmaGreen_Entities_GolemCrowdController_GolemDoAction_
@@ -4584,6 +4584,12 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Entities.GolemManager.GetPlayerPos
   nameWithType: GolemManager.GetPlayerPos
+- uid: GrandmaGreen.Entities.GolemManager.golemHappinessThreshold
+  name: golemHappinessThreshold
+  href: api/GrandmaGreen.Entities.GolemManager.html#GrandmaGreen_Entities_GolemManager_golemHappinessThreshold
+  commentId: F:GrandmaGreen.Entities.GolemManager.golemHappinessThreshold
+  fullName: GrandmaGreen.Entities.GolemManager.golemHappinessThreshold
+  nameWithType: GolemManager.golemHappinessThreshold
 - uid: GrandmaGreen.Entities.GolemManager.GolemNum
   name: GolemNum
   href: api/GrandmaGreen.Entities.GolemManager.html#GrandmaGreen_Entities_GolemManager_GolemNum
@@ -4602,6 +4608,12 @@ references:
   commentId: F:GrandmaGreen.Entities.GolemManager.golemStateTable
   fullName: GrandmaGreen.Entities.GolemManager.golemStateTable
   nameWithType: GolemManager.golemStateTable
+- uid: GrandmaGreen.Entities.GolemManager.golemWorkTimer
+  name: golemWorkTimer
+  href: api/GrandmaGreen.Entities.GolemManager.html#GrandmaGreen_Entities_GolemManager_golemWorkTimer
+  commentId: F:GrandmaGreen.Entities.GolemManager.golemWorkTimer
+  fullName: GrandmaGreen.Entities.GolemManager.golemWorkTimer
+  nameWithType: GolemManager.golemWorkTimer
 - uid: GrandmaGreen.Entities.GolemManager.Initialize
   name: Initialize()
   href: api/GrandmaGreen.Entities.GolemManager.html#GrandmaGreen_Entities_GolemManager_Initialize
