@@ -50,6 +50,7 @@ namespace GrandmaGreen.Entities
 
         public System.Action onEntityPathStart;
         public System.Action onEntityPathEnd;
+        public System.Action onEntityPathStopped;
 
         void Awake()
         {
@@ -261,7 +262,10 @@ namespace GrandmaGreen.Entities
                 yield return null;
             }
 
-            onEntityPathEnd?.Invoke();
+            if (splineFollow.wasForceStopped)
+                onEntityPathStopped?.Invoke();
+            else
+                onEntityPathEnd?.Invoke();
         }
 
 

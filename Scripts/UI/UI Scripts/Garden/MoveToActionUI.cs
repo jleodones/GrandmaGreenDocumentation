@@ -27,6 +27,7 @@ namespace GrandmaGreen.Garden
 
             playerController.entity.onEntityPathStart += StartMoveToAction;
             playerController.entity.onEntityPathEnd += EndMoveToAction;
+            playerController.entity.onEntityPathStopped += EndMoveToAction;
 
             tween = actionIcon.transform.DOBlendableLocalMoveBy(Vector3.up * 50.0f, 0.5f).SetLoops(-1, LoopType.Yoyo).SetEase(Ease.InOutSine);
 
