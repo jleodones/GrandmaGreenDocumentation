@@ -3973,6 +3973,12 @@ references:
   commentId: F:GrandmaGreen.Entities.GameEntity.onEntityPathStart
   fullName: GrandmaGreen.Entities.GameEntity.onEntityPathStart
   nameWithType: GameEntity.onEntityPathStart
+- uid: GrandmaGreen.Entities.GameEntity.onEntityPathStopped
+  name: onEntityPathStopped
+  href: api/GrandmaGreen.Entities.GameEntity.html#GrandmaGreen_Entities_GameEntity_onEntityPathStopped
+  commentId: F:GrandmaGreen.Entities.GameEntity.onEntityPathStopped
+  fullName: GrandmaGreen.Entities.GameEntity.onEntityPathStopped
+  nameWithType: GameEntity.onEntityPathStopped
 - uid: GrandmaGreen.Entities.GameEntity.pathfinderServicer
   name: pathfinderServicer
   href: api/GrandmaGreen.Entities.GameEntity.html#GrandmaGreen_Entities_GameEntity_pathfinderServicer
@@ -8365,6 +8371,290 @@ references:
   fullName.vb: GrandmaGreen.IServiceUser(Of U, T).SetServicer
   nameWithType: IServiceUser<U, T>.SetServicer
   nameWithType.vb: IServiceUser(Of U, T).SetServicer
+- uid: GrandmaGreen.Mail
+  name: GrandmaGreen.Mail
+  href: api/GrandmaGreen.Mail.html
+  commentId: N:GrandmaGreen.Mail
+  fullName: GrandmaGreen.Mail
+  nameWithType: GrandmaGreen.Mail
+- uid: GrandmaGreen.Mail.Letter
+  name: Letter
+  href: api/GrandmaGreen.Mail.Letter.html
+  commentId: T:GrandmaGreen.Mail.Letter
+  fullName: GrandmaGreen.Mail.Letter
+  nameWithType: Letter
+- uid: GrandmaGreen.Mail.Letter.#ctor(System.DateTime,System.String,System.String,System.UInt16[])
+  name: Letter(DateTime, String, String, UInt16[])
+  href: api/GrandmaGreen.Mail.Letter.html#GrandmaGreen_Mail_Letter__ctor_System_DateTime_System_String_System_String_System_UInt16___
+  commentId: M:GrandmaGreen.Mail.Letter.#ctor(System.DateTime,System.String,System.String,System.UInt16[])
+  name.vb: Letter(DateTime, String, String, UInt16())
+  fullName: GrandmaGreen.Mail.Letter.Letter(System.DateTime, System.String, System.String, System.UInt16[])
+  fullName.vb: GrandmaGreen.Mail.Letter.Letter(System.DateTime, System.String, System.String, System.UInt16())
+  nameWithType: Letter.Letter(DateTime, String, String, UInt16[])
+  nameWithType.vb: Letter.Letter(DateTime, String, String, UInt16())
+- uid: GrandmaGreen.Mail.Letter.#ctor*
+  name: Letter
+  href: api/GrandmaGreen.Mail.Letter.html#GrandmaGreen_Mail_Letter__ctor_
+  commentId: Overload:GrandmaGreen.Mail.Letter.#ctor
+  isSpec: "True"
+  fullName: GrandmaGreen.Mail.Letter.Letter
+  nameWithType: Letter.Letter
+- uid: GrandmaGreen.Mail.Letter.Attachments
+  name: Attachments
+  href: api/GrandmaGreen.Mail.Letter.html#GrandmaGreen_Mail_Letter_Attachments
+  commentId: F:GrandmaGreen.Mail.Letter.Attachments
+  fullName: GrandmaGreen.Mail.Letter.Attachments
+  nameWithType: Letter.Attachments
+- uid: GrandmaGreen.Mail.Letter.Body
+  name: Body
+  href: api/GrandmaGreen.Mail.Letter.html#GrandmaGreen_Mail_Letter_Body
+  commentId: F:GrandmaGreen.Mail.Letter.Body
+  fullName: GrandmaGreen.Mail.Letter.Body
+  nameWithType: Letter.Body
+- uid: GrandmaGreen.Mail.Letter.Subject
+  name: Subject
+  href: api/GrandmaGreen.Mail.Letter.html#GrandmaGreen_Mail_Letter_Subject
+  commentId: F:GrandmaGreen.Mail.Letter.Subject
+  fullName: GrandmaGreen.Mail.Letter.Subject
+  nameWithType: Letter.Subject
+- uid: GrandmaGreen.Mail.Letter.TimeSent
+  name: TimeSent
+  href: api/GrandmaGreen.Mail.Letter.html#GrandmaGreen_Mail_Letter_TimeSent
+  commentId: F:GrandmaGreen.Mail.Letter.TimeSent
+  fullName: GrandmaGreen.Mail.Letter.TimeSent
+  nameWithType: Letter.TimeSent
+- uid: GrandmaGreen.Mail.Letter.ToString
+  name: ToString()
+  href: api/GrandmaGreen.Mail.Letter.html#GrandmaGreen_Mail_Letter_ToString
+  commentId: M:GrandmaGreen.Mail.Letter.ToString
+  fullName: GrandmaGreen.Mail.Letter.ToString()
+  nameWithType: Letter.ToString()
+- uid: GrandmaGreen.Mail.Letter.ToString*
+  name: ToString
+  href: api/GrandmaGreen.Mail.Letter.html#GrandmaGreen_Mail_Letter_ToString_
+  commentId: Overload:GrandmaGreen.Mail.Letter.ToString
+  isSpec: "True"
+  fullName: GrandmaGreen.Mail.Letter.ToString
+  nameWithType: Letter.ToString
+- uid: GrandmaGreen.Mail.MailboxController
+  name: MailboxController
+  href: api/GrandmaGreen.Mail.MailboxController.html
+  commentId: T:GrandmaGreen.Mail.MailboxController
+  fullName: GrandmaGreen.Mail.MailboxController
+  nameWithType: MailboxController
+- uid: GrandmaGreen.Mail.MailboxController.DebugSendLetterIn5s
+  name: DebugSendLetterIn5s()
+  href: api/GrandmaGreen.Mail.MailboxController.html#GrandmaGreen_Mail_MailboxController_DebugSendLetterIn5s
+  commentId: M:GrandmaGreen.Mail.MailboxController.DebugSendLetterIn5s
+  fullName: GrandmaGreen.Mail.MailboxController.DebugSendLetterIn5s()
+  nameWithType: MailboxController.DebugSendLetterIn5s()
+- uid: GrandmaGreen.Mail.MailboxController.DebugSendLetterIn5s*
+  name: DebugSendLetterIn5s
+  href: api/GrandmaGreen.Mail.MailboxController.html#GrandmaGreen_Mail_MailboxController_DebugSendLetterIn5s_
+  commentId: Overload:GrandmaGreen.Mail.MailboxController.DebugSendLetterIn5s
+  isSpec: "True"
+  fullName: GrandmaGreen.Mail.MailboxController.DebugSendLetterIn5s
+  nameWithType: MailboxController.DebugSendLetterIn5s
+- uid: GrandmaGreen.Mail.MailboxController.DebugSendLetterNow
+  name: DebugSendLetterNow()
+  href: api/GrandmaGreen.Mail.MailboxController.html#GrandmaGreen_Mail_MailboxController_DebugSendLetterNow
+  commentId: M:GrandmaGreen.Mail.MailboxController.DebugSendLetterNow
+  fullName: GrandmaGreen.Mail.MailboxController.DebugSendLetterNow()
+  nameWithType: MailboxController.DebugSendLetterNow()
+- uid: GrandmaGreen.Mail.MailboxController.DebugSendLetterNow*
+  name: DebugSendLetterNow
+  href: api/GrandmaGreen.Mail.MailboxController.html#GrandmaGreen_Mail_MailboxController_DebugSendLetterNow_
+  commentId: Overload:GrandmaGreen.Mail.MailboxController.DebugSendLetterNow
+  isSpec: "True"
+  fullName: GrandmaGreen.Mail.MailboxController.DebugSendLetterNow
+  nameWithType: MailboxController.DebugSendLetterNow
+- uid: GrandmaGreen.Mail.MailboxController.GetLetters
+  name: GetLetters()
+  href: api/GrandmaGreen.Mail.MailboxController.html#GrandmaGreen_Mail_MailboxController_GetLetters
+  commentId: M:GrandmaGreen.Mail.MailboxController.GetLetters
+  fullName: GrandmaGreen.Mail.MailboxController.GetLetters()
+  nameWithType: MailboxController.GetLetters()
+- uid: GrandmaGreen.Mail.MailboxController.GetLetters*
+  name: GetLetters
+  href: api/GrandmaGreen.Mail.MailboxController.html#GrandmaGreen_Mail_MailboxController_GetLetters_
+  commentId: Overload:GrandmaGreen.Mail.MailboxController.GetLetters
+  isSpec: "True"
+  fullName: GrandmaGreen.Mail.MailboxController.GetLetters
+  nameWithType: MailboxController.GetLetters
+- uid: GrandmaGreen.Mail.MailboxController.mailbox
+  name: mailbox
+  href: api/GrandmaGreen.Mail.MailboxController.html#GrandmaGreen_Mail_MailboxController_mailbox
+  commentId: F:GrandmaGreen.Mail.MailboxController.mailbox
+  fullName: GrandmaGreen.Mail.MailboxController.mailbox
+  nameWithType: MailboxController.mailbox
+- uid: GrandmaGreen.Mail.MailboxController.TestOldLettersArrive
+  name: TestOldLettersArrive()
+  href: api/GrandmaGreen.Mail.MailboxController.html#GrandmaGreen_Mail_MailboxController_TestOldLettersArrive
+  commentId: M:GrandmaGreen.Mail.MailboxController.TestOldLettersArrive
+  fullName: GrandmaGreen.Mail.MailboxController.TestOldLettersArrive()
+  nameWithType: MailboxController.TestOldLettersArrive()
+- uid: GrandmaGreen.Mail.MailboxController.TestOldLettersArrive*
+  name: TestOldLettersArrive
+  href: api/GrandmaGreen.Mail.MailboxController.html#GrandmaGreen_Mail_MailboxController_TestOldLettersArrive_
+  commentId: Overload:GrandmaGreen.Mail.MailboxController.TestOldLettersArrive
+  isSpec: "True"
+  fullName: GrandmaGreen.Mail.MailboxController.TestOldLettersArrive
+  nameWithType: MailboxController.TestOldLettersArrive
+- uid: GrandmaGreen.Mail.MailboxModel
+  name: MailboxModel
+  href: api/GrandmaGreen.Mail.MailboxModel.html
+  commentId: T:GrandmaGreen.Mail.MailboxModel
+  fullName: GrandmaGreen.Mail.MailboxModel
+  nameWithType: MailboxModel
+- uid: GrandmaGreen.Mail.MailboxModel.CheckMailQueue
+  name: CheckMailQueue()
+  href: api/GrandmaGreen.Mail.MailboxModel.html#GrandmaGreen_Mail_MailboxModel_CheckMailQueue
+  commentId: M:GrandmaGreen.Mail.MailboxModel.CheckMailQueue
+  fullName: GrandmaGreen.Mail.MailboxModel.CheckMailQueue()
+  nameWithType: MailboxModel.CheckMailQueue()
+- uid: GrandmaGreen.Mail.MailboxModel.CheckMailQueue*
+  name: CheckMailQueue
+  href: api/GrandmaGreen.Mail.MailboxModel.html#GrandmaGreen_Mail_MailboxModel_CheckMailQueue_
+  commentId: Overload:GrandmaGreen.Mail.MailboxModel.CheckMailQueue
+  isSpec: "True"
+  fullName: GrandmaGreen.Mail.MailboxModel.CheckMailQueue
+  nameWithType: MailboxModel.CheckMailQueue
+- uid: GrandmaGreen.Mail.MailboxModel.Empty
+  name: Empty()
+  href: api/GrandmaGreen.Mail.MailboxModel.html#GrandmaGreen_Mail_MailboxModel_Empty
+  commentId: M:GrandmaGreen.Mail.MailboxModel.Empty
+  fullName: GrandmaGreen.Mail.MailboxModel.Empty()
+  nameWithType: MailboxModel.Empty()
+- uid: GrandmaGreen.Mail.MailboxModel.Empty*
+  name: Empty
+  href: api/GrandmaGreen.Mail.MailboxModel.html#GrandmaGreen_Mail_MailboxModel_Empty_
+  commentId: Overload:GrandmaGreen.Mail.MailboxModel.Empty
+  isSpec: "True"
+  fullName: GrandmaGreen.Mail.MailboxModel.Empty
+  nameWithType: MailboxModel.Empty
+- uid: GrandmaGreen.Mail.MailboxModel.GetLetterByDateTime(System.DateTime)
+  name: GetLetterByDateTime(DateTime)
+  href: api/GrandmaGreen.Mail.MailboxModel.html#GrandmaGreen_Mail_MailboxModel_GetLetterByDateTime_System_DateTime_
+  commentId: M:GrandmaGreen.Mail.MailboxModel.GetLetterByDateTime(System.DateTime)
+  fullName: GrandmaGreen.Mail.MailboxModel.GetLetterByDateTime(System.DateTime)
+  nameWithType: MailboxModel.GetLetterByDateTime(DateTime)
+- uid: GrandmaGreen.Mail.MailboxModel.GetLetterByDateTime*
+  name: GetLetterByDateTime
+  href: api/GrandmaGreen.Mail.MailboxModel.html#GrandmaGreen_Mail_MailboxModel_GetLetterByDateTime_
+  commentId: Overload:GrandmaGreen.Mail.MailboxModel.GetLetterByDateTime
+  isSpec: "True"
+  fullName: GrandmaGreen.Mail.MailboxModel.GetLetterByDateTime
+  nameWithType: MailboxModel.GetLetterByDateTime
+- uid: GrandmaGreen.Mail.MailboxModel.GetLetterByIndex(System.Int32)
+  name: GetLetterByIndex(Int32)
+  href: api/GrandmaGreen.Mail.MailboxModel.html#GrandmaGreen_Mail_MailboxModel_GetLetterByIndex_System_Int32_
+  commentId: M:GrandmaGreen.Mail.MailboxModel.GetLetterByIndex(System.Int32)
+  fullName: GrandmaGreen.Mail.MailboxModel.GetLetterByIndex(System.Int32)
+  nameWithType: MailboxModel.GetLetterByIndex(Int32)
+- uid: GrandmaGreen.Mail.MailboxModel.GetLetterByIndex*
+  name: GetLetterByIndex
+  href: api/GrandmaGreen.Mail.MailboxModel.html#GrandmaGreen_Mail_MailboxModel_GetLetterByIndex_
+  commentId: Overload:GrandmaGreen.Mail.MailboxModel.GetLetterByIndex
+  isSpec: "True"
+  fullName: GrandmaGreen.Mail.MailboxModel.GetLetterByIndex
+  nameWithType: MailboxModel.GetLetterByIndex
+- uid: GrandmaGreen.Mail.MailboxModel.GetLetterQueue
+  name: GetLetterQueue()
+  href: api/GrandmaGreen.Mail.MailboxModel.html#GrandmaGreen_Mail_MailboxModel_GetLetterQueue
+  commentId: M:GrandmaGreen.Mail.MailboxModel.GetLetterQueue
+  fullName: GrandmaGreen.Mail.MailboxModel.GetLetterQueue()
+  nameWithType: MailboxModel.GetLetterQueue()
+- uid: GrandmaGreen.Mail.MailboxModel.GetLetterQueue*
+  name: GetLetterQueue
+  href: api/GrandmaGreen.Mail.MailboxModel.html#GrandmaGreen_Mail_MailboxModel_GetLetterQueue_
+  commentId: Overload:GrandmaGreen.Mail.MailboxModel.GetLetterQueue
+  isSpec: "True"
+  fullName: GrandmaGreen.Mail.MailboxModel.GetLetterQueue
+  nameWithType: MailboxModel.GetLetterQueue
+- uid: GrandmaGreen.Mail.MailboxModel.GetLetters
+  name: GetLetters()
+  href: api/GrandmaGreen.Mail.MailboxModel.html#GrandmaGreen_Mail_MailboxModel_GetLetters
+  commentId: M:GrandmaGreen.Mail.MailboxModel.GetLetters
+  fullName: GrandmaGreen.Mail.MailboxModel.GetLetters()
+  nameWithType: MailboxModel.GetLetters()
+- uid: GrandmaGreen.Mail.MailboxModel.GetLetters*
+  name: GetLetters
+  href: api/GrandmaGreen.Mail.MailboxModel.html#GrandmaGreen_Mail_MailboxModel_GetLetters_
+  commentId: Overload:GrandmaGreen.Mail.MailboxModel.GetLetters
+  isSpec: "True"
+  fullName: GrandmaGreen.Mail.MailboxModel.GetLetters
+  nameWithType: MailboxModel.GetLetters
+- uid: GrandmaGreen.Mail.MailboxModel.RemoveLetter(System.Int32)
+  name: RemoveLetter(Int32)
+  href: api/GrandmaGreen.Mail.MailboxModel.html#GrandmaGreen_Mail_MailboxModel_RemoveLetter_System_Int32_
+  commentId: M:GrandmaGreen.Mail.MailboxModel.RemoveLetter(System.Int32)
+  fullName: GrandmaGreen.Mail.MailboxModel.RemoveLetter(System.Int32)
+  nameWithType: MailboxModel.RemoveLetter(Int32)
+- uid: GrandmaGreen.Mail.MailboxModel.RemoveLetter*
+  name: RemoveLetter
+  href: api/GrandmaGreen.Mail.MailboxModel.html#GrandmaGreen_Mail_MailboxModel_RemoveLetter_
+  commentId: Overload:GrandmaGreen.Mail.MailboxModel.RemoveLetter
+  isSpec: "True"
+  fullName: GrandmaGreen.Mail.MailboxModel.RemoveLetter
+  nameWithType: MailboxModel.RemoveLetter
+- uid: GrandmaGreen.Mail.MailboxModel.SendLetterAt(System.DateTime,System.String,System.String,System.UInt16[])
+  name: SendLetterAt(DateTime, String, String, UInt16[])
+  href: api/GrandmaGreen.Mail.MailboxModel.html#GrandmaGreen_Mail_MailboxModel_SendLetterAt_System_DateTime_System_String_System_String_System_UInt16___
+  commentId: M:GrandmaGreen.Mail.MailboxModel.SendLetterAt(System.DateTime,System.String,System.String,System.UInt16[])
+  name.vb: SendLetterAt(DateTime, String, String, UInt16())
+  fullName: GrandmaGreen.Mail.MailboxModel.SendLetterAt(System.DateTime, System.String, System.String, System.UInt16[])
+  fullName.vb: GrandmaGreen.Mail.MailboxModel.SendLetterAt(System.DateTime, System.String, System.String, System.UInt16())
+  nameWithType: MailboxModel.SendLetterAt(DateTime, String, String, UInt16[])
+  nameWithType.vb: MailboxModel.SendLetterAt(DateTime, String, String, UInt16())
+- uid: GrandmaGreen.Mail.MailboxModel.SendLetterAt*
+  name: SendLetterAt
+  href: api/GrandmaGreen.Mail.MailboxModel.html#GrandmaGreen_Mail_MailboxModel_SendLetterAt_
+  commentId: Overload:GrandmaGreen.Mail.MailboxModel.SendLetterAt
+  isSpec: "True"
+  fullName: GrandmaGreen.Mail.MailboxModel.SendLetterAt
+  nameWithType: MailboxModel.SendLetterAt
+- uid: GrandmaGreen.Mail.MailboxModel.SendLetterNow(System.String,System.String,System.UInt16[])
+  name: SendLetterNow(String, String, UInt16[])
+  href: api/GrandmaGreen.Mail.MailboxModel.html#GrandmaGreen_Mail_MailboxModel_SendLetterNow_System_String_System_String_System_UInt16___
+  commentId: M:GrandmaGreen.Mail.MailboxModel.SendLetterNow(System.String,System.String,System.UInt16[])
+  name.vb: SendLetterNow(String, String, UInt16())
+  fullName: GrandmaGreen.Mail.MailboxModel.SendLetterNow(System.String, System.String, System.UInt16[])
+  fullName.vb: GrandmaGreen.Mail.MailboxModel.SendLetterNow(System.String, System.String, System.UInt16())
+  nameWithType: MailboxModel.SendLetterNow(String, String, UInt16[])
+  nameWithType.vb: MailboxModel.SendLetterNow(String, String, UInt16())
+- uid: GrandmaGreen.Mail.MailboxModel.SendLetterNow*
+  name: SendLetterNow
+  href: api/GrandmaGreen.Mail.MailboxModel.html#GrandmaGreen_Mail_MailboxModel_SendLetterNow_
+  commentId: Overload:GrandmaGreen.Mail.MailboxModel.SendLetterNow
+  isSpec: "True"
+  fullName: GrandmaGreen.Mail.MailboxModel.SendLetterNow
+  nameWithType: MailboxModel.SendLetterNow
+- uid: GrandmaGreen.Mail.MailboxModel.Start
+  name: Start()
+  href: api/GrandmaGreen.Mail.MailboxModel.html#GrandmaGreen_Mail_MailboxModel_Start
+  commentId: M:GrandmaGreen.Mail.MailboxModel.Start
+  fullName: GrandmaGreen.Mail.MailboxModel.Start()
+  nameWithType: MailboxModel.Start()
+- uid: GrandmaGreen.Mail.MailboxModel.Start*
+  name: Start
+  href: api/GrandmaGreen.Mail.MailboxModel.html#GrandmaGreen_Mail_MailboxModel_Start_
+  commentId: Overload:GrandmaGreen.Mail.MailboxModel.Start
+  isSpec: "True"
+  fullName: GrandmaGreen.Mail.MailboxModel.Start
+  nameWithType: MailboxModel.Start
+- uid: GrandmaGreen.Mail.MailboxModel.ToString
+  name: ToString()
+  href: api/GrandmaGreen.Mail.MailboxModel.html#GrandmaGreen_Mail_MailboxModel_ToString
+  commentId: M:GrandmaGreen.Mail.MailboxModel.ToString
+  fullName: GrandmaGreen.Mail.MailboxModel.ToString()
+  nameWithType: MailboxModel.ToString()
+- uid: GrandmaGreen.Mail.MailboxModel.ToString*
+  name: ToString
+  href: api/GrandmaGreen.Mail.MailboxModel.html#GrandmaGreen_Mail_MailboxModel_ToString_
+  commentId: Overload:GrandmaGreen.Mail.MailboxModel.ToString
+  isSpec: "True"
+  fullName: GrandmaGreen.Mail.MailboxModel.ToString
+  nameWithType: MailboxModel.ToString
 - uid: GrandmaGreen.NewItemUI
   name: NewItemUI
   href: api/GrandmaGreen.NewItemUI.html
@@ -10034,6 +10324,38 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.ToolTest2.SetTools
   nameWithType: ToolTest2.SetTools
+- uid: GrandmaGreen.TutorialUIDisplay
+  name: TutorialUIDisplay
+  href: api/GrandmaGreen.TutorialUIDisplay.html
+  commentId: T:GrandmaGreen.TutorialUIDisplay
+  fullName: GrandmaGreen.TutorialUIDisplay
+  nameWithType: TutorialUIDisplay
+- uid: GrandmaGreen.TutorialUIDisplay.SetUpSlideshow(GrandmaGreen.SlideshowData)
+  name: SetUpSlideshow(SlideshowData)
+  href: api/GrandmaGreen.TutorialUIDisplay.html#GrandmaGreen_TutorialUIDisplay_SetUpSlideshow_GrandmaGreen_SlideshowData_
+  commentId: M:GrandmaGreen.TutorialUIDisplay.SetUpSlideshow(GrandmaGreen.SlideshowData)
+  fullName: GrandmaGreen.TutorialUIDisplay.SetUpSlideshow(GrandmaGreen.SlideshowData)
+  nameWithType: TutorialUIDisplay.SetUpSlideshow(SlideshowData)
+- uid: GrandmaGreen.TutorialUIDisplay.SetUpSlideshow*
+  name: SetUpSlideshow
+  href: api/GrandmaGreen.TutorialUIDisplay.html#GrandmaGreen_TutorialUIDisplay_SetUpSlideshow_
+  commentId: Overload:GrandmaGreen.TutorialUIDisplay.SetUpSlideshow
+  isSpec: "True"
+  fullName: GrandmaGreen.TutorialUIDisplay.SetUpSlideshow
+  nameWithType: TutorialUIDisplay.SetUpSlideshow
+- uid: GrandmaGreen.TutorialUIDisplay.Start
+  name: Start()
+  href: api/GrandmaGreen.TutorialUIDisplay.html#GrandmaGreen_TutorialUIDisplay_Start
+  commentId: M:GrandmaGreen.TutorialUIDisplay.Start
+  fullName: GrandmaGreen.TutorialUIDisplay.Start()
+  nameWithType: TutorialUIDisplay.Start()
+- uid: GrandmaGreen.TutorialUIDisplay.Start*
+  name: Start
+  href: api/GrandmaGreen.TutorialUIDisplay.html#GrandmaGreen_TutorialUIDisplay_Start_
+  commentId: Overload:GrandmaGreen.TutorialUIDisplay.Start
+  isSpec: "True"
+  fullName: GrandmaGreen.TutorialUIDisplay.Start
+  nameWithType: TutorialUIDisplay.Start
 - uid: GrandmaGreen.UI
   name: GrandmaGreen.UI
   href: api/GrandmaGreen.UI.html

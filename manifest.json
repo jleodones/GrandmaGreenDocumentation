@@ -796,7 +796,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.Entities.GameEntity.html",
-          "hash": "E3pPLBN8l19/A/ju2wfivBoJgNwmnFBG3nDVRKL2FSY="
+          "hash": "1m7mnQCKkCpJsyE4uTXwK/tk8a9PcYf/uZpaqUrfiDk="
         }
       },
       "is_incremental": false,
@@ -1320,6 +1320,54 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/GrandmaGreen.Mail.Letter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GrandmaGreen.Mail.Letter.html",
+          "hash": "PAuLgWQGpZ13o/32w3JrTK4EnXYy+GSNfwsm4bdug9s="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GrandmaGreen.Mail.MailboxController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GrandmaGreen.Mail.MailboxController.html",
+          "hash": "dbWTsT5GJlSRfZyKzs5eh8e5+4kkIPm7vAk/2d4xwYQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GrandmaGreen.Mail.MailboxModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GrandmaGreen.Mail.MailboxModel.html",
+          "hash": "XXaIplmcR6A9bQ8E+j7VDpZEPntqRR1T+FvGkS++llA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GrandmaGreen.Mail.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GrandmaGreen.Mail.html",
+          "hash": "+8AfYoQzP5sMlZLK+MYeqZPMVEq7lTiQXvFUmyPUoA8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/GrandmaGreen.NewItemUI.yml",
       "output": {
         ".html": {
@@ -1728,6 +1776,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/GrandmaGreen.TutorialUIDisplay.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GrandmaGreen.TutorialUIDisplay.html",
+          "hash": "6lQrw+20fAOj7tvCGzkjV+XGmCTivxEc8pMHdtt++w4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/GrandmaGreen.UI.BaseUIController.yml",
       "output": {
         ".html": {
@@ -1948,7 +2008,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.UIDisplayBase.html",
-          "hash": "ek0oznizJ4i2d+mXvMKWB3X5+ZbGPuhTqj2VLWSE1Eg="
+          "hash": "t1bf2ygX4Uyu1BEomjuFdYV0I45DS9ofxysmCmWsQqY="
         }
       },
       "is_incremental": false,
@@ -1960,7 +2020,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.html",
-          "hash": "3/h7iX6fHxz44UzABrDmH6SRzU+m5rjD+jTlRiEV+fQ="
+          "hash": "f0lFYnU4kwI5xAQ3LI5WGUBpS2opOpYwViFu5ebrzi0="
         }
       },
       "is_incremental": false,
@@ -1972,7 +2032,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "sJtCee/IJiJn1Hwv53/fGwaP/spEz/g4MvcloS5wh6c="
+          "hash": "fRaIivFJwP4D0u1DNkta+Pc8ag6IIl1gcTQxulgq+3c="
         }
       },
       "is_incremental": false,
@@ -2081,7 +2141,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 162,
+          "total_file_count": 167,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
