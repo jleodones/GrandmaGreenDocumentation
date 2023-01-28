@@ -176,7 +176,7 @@ namespace GrandmaGreen.Entities
 
                                 new Action(() =>
                                 {
-                                    UpdateTaskState();
+                                    UpdateTaskState(-10);
                                 }) { Label = "Water Cell"},
 
                                 new WaitUntilStopped()
@@ -263,7 +263,7 @@ namespace GrandmaGreen.Entities
             behaviorTree.Blackboard.Set("isInteract", m_isInteracting);
         }
 
-        public void UpdateTaskState()
+        public void UpdateTaskState(int happinessValue)
         {
             if(golemManager.golemStateTable[offsetId(id)].assignedWatering)
             {       
@@ -272,7 +272,7 @@ namespace GrandmaGreen.Entities
                 Debug.Log("Task state assigned:" + m_isDoingTask);
                 if(!m_isDoingTask){
                     EventManager.instance.HandleEVENT_WATER_PLANT(golemManager.golemStateTable[offsetId(id)].assignedCell);
-                    golemManager.golemStateTable[offsetId(id)].happiness -= 10;
+                    EventManager.instance.HandleEVENT_GOLEM_HAPPINESS_UPDATE((ushort)id, happinessValue);
                 }
             } else
             {

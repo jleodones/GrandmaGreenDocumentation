@@ -11,6 +11,7 @@ namespace GrandmaGreen.Entities
     {
         [Header("Golem Management")]
         public GolemManager golemManager;
+        public int happinessChangeValue = -10;
 
         [Header("Golem References")]
         public GardenAreaController gardenArea;
@@ -68,24 +69,57 @@ namespace GrandmaGreen.Entities
             int wiltedIndex = 0;
             bool fireEvent = false;
 
-            foreach(GolemState golem in golemManager.golemStateTable)
+            if(value > 1)
             {
-                // Add a check for Golem Happiness here once we get this sorted out
-                if((ushort)golem.golemID != 0){
-                    if ((golem.assignedWatering && golem.happiness > 0) && wiltedIndex < plants.Count)
+                GolemDoActionOnReturn(value);
+            } else
+            {
+                foreach (GolemState golem in golemManager.golemStateTable)
+                {
+                    // Add a check for Golem Happiness here once we get this sorted out
+                    if ((ushort)golem.golemID != 0)
                     {
-                        fireEvent = true;
-                        //Debug.Log("Assigned Cell: " + plants[wiltedIndex].cell);
-                        golemManager.UpdateTaskCell((ushort)golem.golemID, plants[wiltedIndex].cell);
-                        
-                        wiltedIndex++;
-                    } else {
-                        golemManager.UpdateGolemTask((ushort)golem.golemID);
+                        if ((golem.assignedWatering && golem.happiness > 0) && wiltedIndex < plants.Count)
+                        {
+                            //Debug.Log("Assigned Cell: " + plants[wiltedIndex].cell);
+                            fireEvent = true;
+                            golemManager.UpdateTaskCell((ushort)golem.golemID, plants[wiltedIndex].cell);
+                            wiltedIndex++;
+                        }
+                        else
+                        {
+                            golemManager.UpdateGolemTask((ushort)golem.golemID);
+                        }
                     }
-                }       
+                }
+
+                if (fireEvent) EventManager.instance.HandleEVENT_GOLEM_DO_TASK(happinessChangeValue);
+            }      
+        }
+
+        public void GolemDoActionOnReturn(int value)
+        {
+            List<PlantState> plants = gardenArea.wiltedPlantList;
+            int numGolemsWatering = 0;
+
+            foreach (GolemState golem in golemManager.golemStateTable)
+            {
+                if (golem.assignedWatering)
+                {
+                    numGolemsWatering++;
+                    EventManager.instance.HandleEVENT_GOLEM_HAPPINESS_UPDATE((ushort)golem.golemID, (happinessChangeValue * value));
+                    AssignGolemAction((ushort)golem.golemID);
+                }
             }
-            
-            if(fireEvent) EventManager.instance.HandleEVENT_GOLEM_DO_TASK();
+
+            for (int i = 0; i < (value * numGolemsWatering); i++)
+            {
+                if (plants.Count > 0)
+                {
+                    gardenArea.WaterPlant(plants[0].cell);
+                }
+            }
+
         }
 
         [Button(ButtonSizes.Medium)]

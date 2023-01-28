@@ -173,7 +173,7 @@ namespace GrandmaGreen
         public event Action<Vector3> EVENT_GOLEM_GRANDMA_MOVE_TO; 
         public event Action EVENT_GOLEM_RELEASE_SELECTED;
         public event Action<ushort> EVENT_ASSIGN_TASK;
-        public event Action EVENT_GOLEM_DO_TASK;
+        public event Action<int> EVENT_GOLEM_DO_TASK;
 
         public void HandleEVENT_GOLEM_RELEASE_SELECTED() {EVENT_GOLEM_RELEASE_SELECTED?.Invoke();}
         public void HandleEVENT_GOLEM_SPAWN(ushort id, Vector3 pos) { EVENT_GOLEM_SPAWN?.Invoke(id, pos); }
@@ -191,7 +191,7 @@ namespace GrandmaGreen
 
         public void HandleEVENT_GOLEM_ASSIGN_TASK(ushort id) { EVENT_ASSIGN_TASK?.Invoke(id); }
 
-        public void HandleEVENT_GOLEM_DO_TASK() { EVENT_GOLEM_DO_TASK?.Invoke(); }
+        public void HandleEVENT_GOLEM_DO_TASK(int happinessValue) { EVENT_GOLEM_DO_TASK?.Invoke(happinessValue); }
         #endregion
 
         #region Plant growth event.
