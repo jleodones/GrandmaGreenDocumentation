@@ -4401,12 +4401,12 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Entities.GolemController.UpdateMatureState
   nameWithType: GolemController.UpdateMatureState
-- uid: GrandmaGreen.Entities.GolemController.UpdateTaskState
-  name: UpdateTaskState()
-  href: api/GrandmaGreen.Entities.GolemController.html#GrandmaGreen_Entities_GolemController_UpdateTaskState
-  commentId: M:GrandmaGreen.Entities.GolemController.UpdateTaskState
-  fullName: GrandmaGreen.Entities.GolemController.UpdateTaskState()
-  nameWithType: GolemController.UpdateTaskState()
+- uid: GrandmaGreen.Entities.GolemController.UpdateTaskState(System.Int32)
+  name: UpdateTaskState(Int32)
+  href: api/GrandmaGreen.Entities.GolemController.html#GrandmaGreen_Entities_GolemController_UpdateTaskState_System_Int32_
+  commentId: M:GrandmaGreen.Entities.GolemController.UpdateTaskState(System.Int32)
+  fullName: GrandmaGreen.Entities.GolemController.UpdateTaskState(System.Int32)
+  nameWithType: GolemController.UpdateTaskState(Int32)
 - uid: GrandmaGreen.Entities.GolemController.UpdateTaskState*
   name: UpdateTaskState
   href: api/GrandmaGreen.Entities.GolemController.html#GrandmaGreen_Entities_GolemController_UpdateTaskState_
@@ -4471,12 +4471,31 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Entities.GolemCrowdController.GolemDoAction
   nameWithType: GolemCrowdController.GolemDoAction
+- uid: GrandmaGreen.Entities.GolemCrowdController.GolemDoActionOnReturn(System.Int32)
+  name: GolemDoActionOnReturn(Int32)
+  href: api/GrandmaGreen.Entities.GolemCrowdController.html#GrandmaGreen_Entities_GolemCrowdController_GolemDoActionOnReturn_System_Int32_
+  commentId: M:GrandmaGreen.Entities.GolemCrowdController.GolemDoActionOnReturn(System.Int32)
+  fullName: GrandmaGreen.Entities.GolemCrowdController.GolemDoActionOnReturn(System.Int32)
+  nameWithType: GolemCrowdController.GolemDoActionOnReturn(Int32)
+- uid: GrandmaGreen.Entities.GolemCrowdController.GolemDoActionOnReturn*
+  name: GolemDoActionOnReturn
+  href: api/GrandmaGreen.Entities.GolemCrowdController.html#GrandmaGreen_Entities_GolemCrowdController_GolemDoActionOnReturn_
+  commentId: Overload:GrandmaGreen.Entities.GolemCrowdController.GolemDoActionOnReturn
+  isSpec: "True"
+  fullName: GrandmaGreen.Entities.GolemCrowdController.GolemDoActionOnReturn
+  nameWithType: GolemCrowdController.GolemDoActionOnReturn
 - uid: GrandmaGreen.Entities.GolemCrowdController.golemManager
   name: golemManager
   href: api/GrandmaGreen.Entities.GolemCrowdController.html#GrandmaGreen_Entities_GolemCrowdController_golemManager
   commentId: F:GrandmaGreen.Entities.GolemCrowdController.golemManager
   fullName: GrandmaGreen.Entities.GolemCrowdController.golemManager
   nameWithType: GolemCrowdController.golemManager
+- uid: GrandmaGreen.Entities.GolemCrowdController.happinessChangeValue
+  name: happinessChangeValue
+  href: api/GrandmaGreen.Entities.GolemCrowdController.html#GrandmaGreen_Entities_GolemCrowdController_happinessChangeValue
+  commentId: F:GrandmaGreen.Entities.GolemCrowdController.happinessChangeValue
+  fullName: GrandmaGreen.Entities.GolemCrowdController.happinessChangeValue
+  nameWithType: GolemCrowdController.happinessChangeValue
 - uid: GrandmaGreen.Entities.GolemCrowdController.SpawnGolem
   name: SpawnGolem()
   href: api/GrandmaGreen.Entities.GolemCrowdController.html#GrandmaGreen_Entities_GolemCrowdController_SpawnGolem
@@ -4797,6 +4816,30 @@ references:
   commentId: T:GrandmaGreen.Entities.PlayerController
   fullName: GrandmaGreen.Entities.PlayerController
   nameWithType: PlayerController
+- uid: GrandmaGreen.Entities.SpriteOcclusionHandler
+  name: SpriteOcclusionHandler
+  href: api/GrandmaGreen.Entities.SpriteOcclusionHandler.html
+  commentId: T:GrandmaGreen.Entities.SpriteOcclusionHandler
+  fullName: GrandmaGreen.Entities.SpriteOcclusionHandler
+  nameWithType: SpriteOcclusionHandler
+- uid: GrandmaGreen.Entities.SpriteOcclusionHandler.BoundingRect
+  name: BoundingRect
+  href: api/GrandmaGreen.Entities.SpriteOcclusionHandler.html#GrandmaGreen_Entities_SpriteOcclusionHandler_BoundingRect
+  commentId: F:GrandmaGreen.Entities.SpriteOcclusionHandler.BoundingRect
+  fullName: GrandmaGreen.Entities.SpriteOcclusionHandler.BoundingRect
+  nameWithType: SpriteOcclusionHandler.BoundingRect
+- uid: GrandmaGreen.Entities.SpriteOcclusionHandler.GrandmaController
+  name: GrandmaController
+  href: api/GrandmaGreen.Entities.SpriteOcclusionHandler.html#GrandmaGreen_Entities_SpriteOcclusionHandler_GrandmaController
+  commentId: F:GrandmaGreen.Entities.SpriteOcclusionHandler.GrandmaController
+  fullName: GrandmaGreen.Entities.SpriteOcclusionHandler.GrandmaController
+  nameWithType: SpriteOcclusionHandler.GrandmaController
+- uid: GrandmaGreen.Entities.SpriteOcclusionHandler.Occlude
+  name: Occlude
+  href: api/GrandmaGreen.Entities.SpriteOcclusionHandler.html#GrandmaGreen_Entities_SpriteOcclusionHandler_Occlude
+  commentId: F:GrandmaGreen.Entities.SpriteOcclusionHandler.Occlude
+  fullName: GrandmaGreen.Entities.SpriteOcclusionHandler.Occlude
+  nameWithType: SpriteOcclusionHandler.Occlude
 - uid: GrandmaGreen.Entities.WanderBehavior
   name: WanderBehavior
   href: api/GrandmaGreen.Entities.WanderBehavior.html
@@ -5097,12 +5140,12 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.EventManager.HandleEVENT_GOLEM_ASSIGN_TASK
   nameWithType: EventManager.HandleEVENT_GOLEM_ASSIGN_TASK
-- uid: GrandmaGreen.EventManager.HandleEVENT_GOLEM_DO_TASK
-  name: HandleEVENT_GOLEM_DO_TASK()
-  href: api/GrandmaGreen.EventManager.html#GrandmaGreen_EventManager_HandleEVENT_GOLEM_DO_TASK
-  commentId: M:GrandmaGreen.EventManager.HandleEVENT_GOLEM_DO_TASK
-  fullName: GrandmaGreen.EventManager.HandleEVENT_GOLEM_DO_TASK()
-  nameWithType: EventManager.HandleEVENT_GOLEM_DO_TASK()
+- uid: GrandmaGreen.EventManager.HandleEVENT_GOLEM_DO_TASK(System.Int32)
+  name: HandleEVENT_GOLEM_DO_TASK(Int32)
+  href: api/GrandmaGreen.EventManager.html#GrandmaGreen_EventManager_HandleEVENT_GOLEM_DO_TASK_System_Int32_
+  commentId: M:GrandmaGreen.EventManager.HandleEVENT_GOLEM_DO_TASK(System.Int32)
+  fullName: GrandmaGreen.EventManager.HandleEVENT_GOLEM_DO_TASK(System.Int32)
+  nameWithType: EventManager.HandleEVENT_GOLEM_DO_TASK(Int32)
 - uid: GrandmaGreen.EventManager.HandleEVENT_GOLEM_DO_TASK*
   name: HandleEVENT_GOLEM_DO_TASK
   href: api/GrandmaGreen.EventManager.html#GrandmaGreen_EventManager_HandleEVENT_GOLEM_DO_TASK_
@@ -6263,6 +6306,19 @@ references:
   commentId: F:GrandmaGreen.Garden.GardenAreaController.playerTools
   fullName: GrandmaGreen.Garden.GardenAreaController.playerTools
   nameWithType: GardenAreaController.playerTools
+- uid: GrandmaGreen.Garden.GardenAreaController.PlayParticles
+  name: PlayParticles()
+  href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_PlayParticles
+  commentId: M:GrandmaGreen.Garden.GardenAreaController.PlayParticles
+  fullName: GrandmaGreen.Garden.GardenAreaController.PlayParticles()
+  nameWithType: GardenAreaController.PlayParticles()
+- uid: GrandmaGreen.Garden.GardenAreaController.PlayParticles*
+  name: PlayParticles
+  href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_PlayParticles_
+  commentId: Overload:GrandmaGreen.Garden.GardenAreaController.PlayParticles
+  isSpec: "True"
+  fullName: GrandmaGreen.Garden.GardenAreaController.PlayParticles
+  nameWithType: GardenAreaController.PlayParticles
 - uid: GrandmaGreen.Garden.GardenAreaController.ProcessAreaInput(InteractionEventData)
   name: ProcessAreaInput(InteractionEventData)
   href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_ProcessAreaInput_InteractionEventData_
