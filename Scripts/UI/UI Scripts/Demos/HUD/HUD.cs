@@ -28,6 +28,7 @@ namespace GrandmaGreen.UI.HUD
 
         private HUDController m_controller;
 
+
         public void Start()
         {
             m_controller = new(m_rootVisualElement);
@@ -94,8 +95,21 @@ namespace GrandmaGreen.UI.HUD
             m_rootVisualElement.Q<Button>("cultivisionButton").visible = !m_rootVisualElement.Q<Button>("cultivisionButton").visible;
             m_rootVisualElement.Q<Button>("collectionsButton").visible = !m_rootVisualElement.Q<Button>("collectionsButton").visible;
 
-            m_rootVisualElement.Q<Button>("cultivisionButton").pickingMode = (PickingMode)(m_rootVisualElement.Q<Button>("collectionsButton").pickingMode == 0 ? 1 : 0);
+            m_rootVisualElement.Q<Button>("cultivisionButton").pickingMode = (PickingMode)(m_rootVisualElement.Q<Button>("cultivisionButton").pickingMode == 0 ? 1 : 0);
             m_rootVisualElement.Q<Button>("collectionsButton").pickingMode = (PickingMode)(m_rootVisualElement.Q<Button>("collectionsButton").pickingMode == 0 ? 1 : 0);
+        }
+
+
+        public void EnableButton(string button)
+        {
+            m_rootVisualElement.Q<Button>(button).visible = true;
+            m_rootVisualElement.Q<Button>(button).pickingMode = PickingMode.Position;
+        }
+
+        public void DisableButton(string button)
+        {
+            m_rootVisualElement.Q<Button>(button).visible = false;
+            m_rootVisualElement.Q<Button>(button).pickingMode = PickingMode.Ignore;
         }
 
         public void OpenHUD()

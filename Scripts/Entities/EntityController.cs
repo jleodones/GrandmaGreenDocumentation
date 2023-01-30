@@ -99,6 +99,9 @@ namespace GrandmaGreen.Entities
 
         public virtual void SetDestination(Vector3 worldPos)
         {
+            if(!active)
+                return;
+
             if ((entity.CurrentPos() - worldPos).sqrMagnitude <= actionRange * actionRange)
             {
                 ExcecuteEntityActions();

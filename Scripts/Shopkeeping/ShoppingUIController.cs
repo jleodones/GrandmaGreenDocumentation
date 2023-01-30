@@ -280,6 +280,7 @@ namespace GrandmaGreen.Shopkeeping
         int currCycleDecor; //after the 2nd cycle, reset the all decor items list. increment each cycle.
         int currCycleFixture; //after the 4th cycle, reset the all fixture decor items list. increment each cycle.
         int currGardenExpansion; //the new garden expansion the player has get to unlock (default to 1, which means player only has a base garden and wants expansion 1)
+        int maxGardenExpansion;
 
         /// <summary>
         /// Pass in the collections SO. List will need to retrieve base costs of each item from the collections
@@ -297,6 +298,7 @@ namespace GrandmaGreen.Shopkeeping
             currCycleFixture = 1;
 
             currGardenExpansion = 1;
+            maxGardenExpansion = 3;
         }
 
         /// <summary>
@@ -453,6 +455,15 @@ namespace GrandmaGreen.Shopkeeping
                 return true;
             }
             else return false;
+        }
+
+        /// <summary>
+        /// Trigger the shop upgrade, which will give player upgraded tools, increase seed stocks from 3 to 5,
+        /// increase max garden expansion to 4
+        /// </summary>
+        public void UpgradeDecorShop()
+        {
+            maxGardenExpansion = 4;
         }
     }
 }

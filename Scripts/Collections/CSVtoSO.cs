@@ -71,7 +71,6 @@ namespace GrandmaGreen.Collections
 
                 switch (entryType)
                 {
-                    //TODO: fill up other plant properties
                     case "Plant":
                         //Plant data
                         PlantProperties plantProps = new PlantProperties();

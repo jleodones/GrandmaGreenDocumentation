@@ -15,21 +15,26 @@ namespace GrandmaGreen.Garden
         public EntityController playerController;
         public GardenToolSet toolSet;
         public ToolData currentTool;
-        public CollectionsSO collection;
 
         public ASoundContainer toolSelectionStartSFX;
         public ASoundContainer toolSelectionEndSFX;
 
         public event System.Action onToolSelectionStart;
         public event System.Action onToolSelectionEnd;
+
         public event System.Action<ToolData> onToolSelected;
 
         public ToolActionData lastToolAction;
 
         public bool toolSelectionActive = false;
-        
+
         public PlantId equippedSeed;
         public Genotype equippedSeedGenotype;
+
+        public System.Action onRequireSeedEquip;
+        public event System.Action onSeedEquipped;
+        public event System.Action onSeedEmpty;
+
 
         public void ToggleToolSelection()
         {
@@ -81,17 +86,20 @@ namespace GrandmaGreen.Garden
 
             currentTool = tool;
             onToolSelected?.Invoke(currentTool);
-            if (currentTool.toolIndex != 3)
+
+            if (currentTool.toolIndex == 3 && equippedSeed == 0)
             {
-                equippedSeed = 0;
+                onRequireSeedEquip?.Invoke();
             }
 
         }
 
         public void SetEquippedSeed(ushort plantIndex, Genotype genotype)
         {
-            equippedSeed = (PlantId) plantIndex;
+            equippedSeed = (PlantId)plantIndex;
             equippedSeedGenotype = genotype;
+
+            onSeedEquipped?.Invoke();
         }
 
         public void SetToolAction(TileData tile, Vector3Int cell, GardenAreaController area)
@@ -111,6 +119,17 @@ namespace GrandmaGreen.Garden
         public void DoCurrentToolAction()
         {
             toolSet.ToolAction(lastToolAction);
+
+            if (!(currentTool.toolIndex == 3 && equippedSeed != 0))
+                return;
+
+            if (EventManager.instance.HandleEVENT_INVENTORY_GET_SEED_COUNT((ushort)equippedSeed, equippedSeedGenotype) == 0)
+            {
+                equippedSeed = 0;
+                onSeedEmpty?.Invoke();
+                //onRequireSeedEquip?.Invoke();
+            }
+
         }
     }
 }

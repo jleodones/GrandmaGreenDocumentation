@@ -39,11 +39,18 @@ namespace GrandmaGreen
             exitButton.SetEnabled(false);
             
             //Disable left arrow
-            leftArrow.SetEnabled(false);
+            leftArrow.SetEnabled(false);    
+            rightArrow.SetEnabled(true);
             
+            currentPageIndex = 0;
+            SyncPageNavigator(currentPageIndex);
+
             SetText("title", data.title);
             FillInData(0);
             //Add page indicators
+
+            pageNavigator.Clear();
+
             for(int i = 0; i < data.slides.Count; i++)
             {
                 if (i == 0)

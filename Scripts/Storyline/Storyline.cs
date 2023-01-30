@@ -86,6 +86,21 @@ namespace GrandmaGreen
                 currentState = StoryState.COMPLETED;
         }
 
+        public void ClearStory()
+        {
+            if(currentState != StoryState.COMPLETED)
+            RemoveCurrentRequirement();
+
+            currentState = StoryState.INACTIVE;
+            
+            progress = 0;
+            for (int i = 0; i < requirements.Length; i++)
+            {
+                requirements[i].currentState = StoryState.INACTIVE;
+
+            }
+        }
+
         public void StartStory()
         {
             if (currentState != StoryState.INACTIVE)

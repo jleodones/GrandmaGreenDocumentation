@@ -252,6 +252,7 @@ namespace GrandmaGreen.Collections
         public List<Decor> FixtureList; //for cycle tracking purposes
         public Dictionary<ushort, PlantProperties> PlantLookup;
 
+
         static CollectionsSO s_Instance;
         public CollectionsSO LoadedInstance => s_Instance;
         public void LoadCollections()
@@ -270,6 +271,7 @@ namespace GrandmaGreen.Collections
         {
             CSVtoSO.GenerateCollectionsSO(this, dataSheet);
         }
+
 
         public bool IsFlower(PlantId id)
         {

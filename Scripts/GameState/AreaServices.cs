@@ -16,6 +16,7 @@ namespace GrandmaGreen
         [SerializeField][ReadOnly] AreaController[] areaControllerSet;
         [SerializeField][ReadOnly] int activeAreaIndex;
         public AreaController ActiveArea => areaControllerSet[activeAreaIndex];
+        public AreaExitState exitState;
 
         int m_lastRegisteredArea;
 
@@ -30,6 +31,8 @@ namespace GrandmaGreen
 
             activeAreaIndex = -1;
             areaControllerSet = new AreaController[5];
+
+            exitState.exitSide = Direction.SOUTH;
         }
 
         /// <summary>

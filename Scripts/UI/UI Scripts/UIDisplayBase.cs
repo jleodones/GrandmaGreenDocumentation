@@ -10,6 +10,11 @@ namespace GrandmaGreen
         public VisualElement m_rootVisualElement;
 
         private Dictionary<string, List<Action>> m_callbackDictionary;
+
+
+        public event System.Action onPanelOpened;
+        public event System.Action onPanelClosed;
+
         
         private void Awake()
         {
@@ -45,11 +50,15 @@ namespace GrandmaGreen
         public virtual void OpenUI()
         {
             m_rootVisualElement.style.display = DisplayStyle.Flex;
+
+            onPanelOpened?.Invoke();
         }
 
         public virtual void CloseUI()
         {
             m_rootVisualElement.style.display = DisplayStyle.None;
+
+            onPanelClosed?.Invoke();
         }
 
         public void RegisterButtonCallback(string buttonName, Action callbackFunction)

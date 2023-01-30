@@ -14,6 +14,8 @@ namespace GrandmaGreen
         {
             foreach (Storyline storyline in storylineSet)
             {
+                storyline.ClearStory();
+
                 storyline.onProgress += UpdateStorylineProgress;
                 storyline.onRegress += UpdateStorylineProgress;
                 storyline.onCompletion += UpdateStorylineProgress;

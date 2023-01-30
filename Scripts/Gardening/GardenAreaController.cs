@@ -30,7 +30,7 @@ namespace GrandmaGreen.Garden
         public List<Collider> decorList;
         public List<PlantState> plantListDebug;
         public List<PlantState> wiltedPlantList;
-        public TileStore tileStore;
+        
 
         bool returnFromPause = true;
 
@@ -39,6 +39,8 @@ namespace GrandmaGreen.Garden
         public float DropRate = 100;
         public float FertilizationBonus = 10;
 
+        public event System.Action onGardenTick;
+
         public override void Awake()
         {
             base.Awake();
@@ -46,6 +48,8 @@ namespace GrandmaGreen.Garden
             gardenManager.RegisterGarden(areaIndex);
 
             gardenManager.timers[areaIndex].Pause();
+
+            playerTools.ToolSelection(0);
         }
 
         void OnEnable()
@@ -289,7 +293,7 @@ namespace GrandmaGreen.Garden
                 gardenManager.CreatePlant(seed, genotype, growthStage, areaIndex, cell);
                 InstantiatePlantPrefab(cell, seed, growthStage);
                 // Remove the seed from inventory.
-                EventManager.instance.HandleEVENT_INVENTORY_REMOVE_SEED((ushort)seed, genotype);
+                
             }
         }
 
@@ -304,6 +308,8 @@ namespace GrandmaGreen.Garden
             }
             PlayParticles();
             returnFromPause = false;
+
+            onGardenTick?.Invoke();
         }
 
         public void PlayParticles()

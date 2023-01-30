@@ -170,8 +170,7 @@ namespace GrandmaGreen.Entities
         #region Saving
         public void LoadGolemData()
         {
-            if (golemStateTable.Length == 0)
-                golemStateTable = new GolemState[10];
+            golemStateTable = new GolemState[10];
                 
             GolemState newState = new GolemState();
             bool IsSpawnDemoGolem = true;

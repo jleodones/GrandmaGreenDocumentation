@@ -22,6 +22,11 @@ namespace GrandmaGreen.Garden
     {
         [SerializeField] List<ToolData> toolSet;
 
+        public event System.Action onTill;
+        public event System.Action onPlant;
+        public event System.Action onWater;
+        public event System.Action onHarvest;
+
         public ToolData this[int i]
         {
             get { return toolSet[i]; }
@@ -35,7 +40,7 @@ namespace GrandmaGreen.Garden
                 return;
             }
 
-            switch(action.tool.toolIndex)
+            switch (action.tool.toolIndex)
             {
                 case 0:
                     break;
@@ -61,6 +66,8 @@ namespace GrandmaGreen.Garden
                 action.area.ChangeGardenTileToPlot_Empty(action.gridcell);
                 action.tool.toolSFX[0].Play();
 
+                onTill?.Invoke();
+
             }
             else if (action.tile.plantable)
             {
@@ -71,7 +78,10 @@ namespace GrandmaGreen.Garden
             else if (action.tile.occupied)
             {
                 if (action.area.HarvestPlant(action.gridcell))
+                {
+                    onHarvest?.Invoke();
                     action.tool.toolSFX[2].Play();
+                }
                 else
                     action.tool.toolSFX[3].Play();
 
@@ -81,7 +91,7 @@ namespace GrandmaGreen.Garden
 
         void FertilizerAction(ToolActionData action)
         {
-            if(action.tile.occupied)
+            if (action.tile.occupied)
             {
                 action.area.FertilizePlant(action.gridcell);
                 action.tool.toolSFX[0].Play();
@@ -93,13 +103,12 @@ namespace GrandmaGreen.Garden
             // Placing the Plant Prefab on a tile and setting the Tile to "Occupied Plot Tile"
             if (action.tile.plantable && action.seedType != 0)
             {
-                if(EventManager.instance.HandleEVENT_INVENTORY_GET_SEED_COUNT((ushort)action.seedType, action.seedGenotype) != 0)
-                {
-                    action.area.CreatePlant(action.seedType, action.seedGenotype, action.gridcell);
-                    action.area.ChangeGardenTileToPlot_Occupied(action.gridcell);
-                    action.tool.toolSFX[0].Play();
-                }
+                EventManager.instance.HandleEVENT_INVENTORY_REMOVE_SEED((ushort)action.seedType, action.seedGenotype);
+                action.area.CreatePlant(action.seedType, action.seedGenotype, action.gridcell);
+                action.area.ChangeGardenTileToPlot_Occupied(action.gridcell);
+                action.tool.toolSFX[0].Play();
 
+                onPlant?.Invoke();
             }
         }
 
@@ -109,6 +118,8 @@ namespace GrandmaGreen.Garden
             if (action.tile.occupied)
             {
                 action.area.WaterPlant(action.gridcell);
+
+                onWater?.Invoke();
             }
 
             action.tool.toolSFX[0].Play();

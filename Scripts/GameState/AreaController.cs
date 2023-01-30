@@ -19,7 +19,7 @@ namespace GrandmaGreen
         public Pathfinder pathfinder;
         public Collider areaBounds;
         public EntityController playerController;
-        public AreaExitState exitState;
+        public TileStore tileStore;
         public Transform[] enterencePoints = new Transform[4];
 
         [field: Header("Area Variables")]
@@ -50,7 +50,7 @@ namespace GrandmaGreen
             pathfinder.LoadGrid();
             onActivation?.Invoke();
 
-            int enterenceIndex = (int)exitState.exitSide + 2;
+            int enterenceIndex = (int)(areaServicer.exitState.exitSide + 2);
             if (enterenceIndex > 3) enterenceIndex -= 4;
 
             playerController.entity.transform.position = enterencePoints[enterenceIndex].position;
@@ -84,12 +84,16 @@ namespace GrandmaGreen
         {
             lastSelectedPosition = worldPoint;
             lastSelectedCell = tilemap.WorldToCell(worldPoint);
-            lastSelectedTile = tilemap.GetTile(lastSelectedCell);
-            playerController.ClearActionQueue();
 
+
+
+
+            lastSelectedTile = tilemap.GetTile(lastSelectedCell);
+
+            playerController.ClearActionQueue();
             onTilemapSelection?.Invoke(lastSelectedCell);
 
-            playerController.SetDestination(worldPoint);
+            playerController.SetDestination(CheckPlayerDestination(worldPoint));
             // Release golem selected
             EventManager.instance.HandleEVENT_GOLEM_RELEASE_SELECTED();
 
@@ -99,6 +103,38 @@ namespace GrandmaGreen
                 playerController.QueueEntityAction(((IGameTile)lastSelectedTile).DoTileAction);
 
             }
+        }
+
+        Vector3 CheckPlayerDestination(Vector3 worldPoint)
+        {
+            Vector2 direction = (worldPoint - playerController.GetEntityPos()).normalized;
+            Vector2Int offset;
+
+            if (Mathf.Abs(direction.x) > Mathf.Abs(direction.y) || direction.y > 0)
+            {
+                offset = direction.x > 0 ?  Vector2Int.left : Vector2Int.right;
+            }
+            else
+            {
+                offset = Vector2Int.up;
+            }
+            Vector3Int offsetCellPos = lastSelectedCell + (Vector3Int)offset;
+            TileBase offsetTile = tilemap.GetTile(offsetCellPos);
+
+            if (offsetTile == null || !tileStore[offsetTile].pathable)
+            {
+                if (offset == Vector2Int.up)
+                {
+                    offset = direction.x > 0 ? Vector2Int.right : Vector2Int.left;
+                }
+                else
+                    offset =  Vector2Int.up;
+            }
+
+            offsetCellPos = lastSelectedCell + (Vector3Int)offset;
+
+
+            return (tilemap.GetCellCenterWorld(offsetCellPos) + worldPoint)/2;
         }
 
         public virtual void AreaDragged(Vector3 worldPoint)

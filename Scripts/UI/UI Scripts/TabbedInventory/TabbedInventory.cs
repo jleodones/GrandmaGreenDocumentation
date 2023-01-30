@@ -29,7 +29,7 @@ namespace GrandmaGreen.UI.Collections
 
         // Inventory scriptable object with all inventory data.
         public ObjectSaver inventoryData;
-        
+
         private TabbedInventoryController m_controller;
 
         public ASoundContainer[] soundContainers;
@@ -40,18 +40,18 @@ namespace GrandmaGreen.UI.Collections
 
         public bool enabled { get; set; }
         public bool handled { get; set; }
-        
+
         public IDraggable draggable { get; set; }
         void Start()
         {
             // Register player tab clicking events.
             RegisterTabCallbacks();
-            
-            playerToolData.onToolSelected += CheckOpenInventory;
-            
+
+            playerToolData.onRequireSeedEquip += CheckOpenInventory;
+
             // Threshold.
             m_rootVisualElement.Q("inventory-threshold");
-            
+
             // Instantiate the inventory items.
             // First, get all content jars.
             List<VisualElement> contentJars = GetAllContentJars().ToList();
@@ -61,7 +61,7 @@ namespace GrandmaGreen.UI.Collections
             InstantiateJar<Seed>(contentJars.Find(jar => jar.name == "seeds" + contentNameSuffix));
             InstantiateJar<Decor>(contentJars.Find(jar => jar.name == "decor" + contentNameSuffix));
             InstantiateJar<Plant>(contentJars.Find(jar => jar.name == "plants" + contentNameSuffix));
-            
+
             // Threshold instantiation.
             threshold = m_rootVisualElement.Q("inventory-threshold");
         }
@@ -95,14 +95,14 @@ namespace GrandmaGreen.UI.Collections
             string contentName = tab.name.Replace("-tab", contentContainerNameSuffix);
             return (ScrollView)(m_rootVisualElement.Q(name: contentName));
         }
-        
+
         void SelectTab(Button tab)
         {
             tab.AddToClassList("active-tab");
 
             ScrollView content = FindContent(tab);
             content.RemoveFromClassList("inactive-content");
-            
+
             // Play tab change SFX.
             soundContainers[2].Play();
         }
@@ -110,11 +110,11 @@ namespace GrandmaGreen.UI.Collections
         void UnselectTab(Button tab)
         {
             tab.RemoveFromClassList("active-tab");
-            
+
             ScrollView content = FindContent(tab);
             content.AddToClassList("inactive-content");
         }
-        
+
         void RegisterTabCallbacks()
         {
             // Get the list of tabs.
@@ -131,14 +131,14 @@ namespace GrandmaGreen.UI.Collections
                         GetAllTabs().Where(
                             (tab) => tab != clickedTab && tab.ClassListContains("active-tab")
                         ).ForEach(UnselectTab);
-                        
+
                         // Marking this tab as active.
                         SelectTab(clickedTab);
                     }
                 });
             });
         }
-        
+
         // BUILDING CONTENT JARS.
         UQueryBuilder<VisualElement> GetAllContentJars()
         {
@@ -151,7 +151,7 @@ namespace GrandmaGreen.UI.Collections
             {
                 if (componentStore.GetType() == typeof(T))
                 {
-                    jar.userData = (ComponentStore<T>) componentStore;
+                    jar.userData = (ComponentStore<T>)componentStore;
                     break;
                 }
             }
@@ -170,16 +170,16 @@ namespace GrandmaGreen.UI.Collections
         {
             // Clear the jar.
             jar.Clear();
-            
+
             // Add a child for each item in the list.
             // Retrieve list.
-            var componentStore = (ComponentStore<T>) jar.userData;
-            
+            var componentStore = (ComponentStore<T>)jar.userData;
+
             for (int i = 0; i < componentStore.components.Count; i++)
             {
                 // Instantiate the list entry.
                 var newListEntry = listEntryTemplate.Instantiate();
-                
+
                 // Instantiate a controller for the data
                 if (typeof(T) == new Seed().GetType())
                 {
@@ -192,7 +192,7 @@ namespace GrandmaGreen.UI.Collections
                     Sprite sprite = collectionsSO.GetSprite((PlantId)s.itemID, s.seedGenotype);
                     newListEntryLogic.SetInventoryData(s, sprite);
                     newListEntryLogic.SetSizeBadge(s.seedGenotype);
-                    
+
                     newListEntry.userData = newListEntryLogic;
                 }
                 else if (typeof(T) == new Plant().GetType())
@@ -201,14 +201,14 @@ namespace GrandmaGreen.UI.Collections
                         new TabbedInventoryItemController(newListEntry.Q<Button>());
 
                     var t = (ComponentStore<Plant>)jar.userData;
-                    Plant p = (Plant) t.components[i];
+                    Plant p = (Plant)t.components[i];
                     Sprite sprite = collectionsSO.GetInventorySprite((PlantId)p.itemID, p.plantGenotype);
                     newListEntryLogic.SetInventoryData(p, sprite);
                     newListEntryLogic.SetSizeBadge(p.plantGenotype);
 
                     Sprite spr = collectionsSO.GetInventorySprite((PlantId)p.itemID, p.plantGenotype);
                     newListEntryLogic.SetSizeBadge(p.plantGenotype);
-                    
+
                     newListEntry.userData = newListEntryLogic;
                 }
                 else
@@ -226,19 +226,19 @@ namespace GrandmaGreen.UI.Collections
 
                     newListEntry.userData = newListEntryLogic;
                 }
-                
+
                 // Append to jar.
                 jar.Add(newListEntry);
             }
         }
-        
+
         // Instantiate a new item for the inventory.
         public void RebuildJar(IInventoryItem item)
         {
             VisualElement jar = null;
             // First, get all content jars.
             List<VisualElement> contentJars = GetAllContentJars().ToList();
-            
+
             switch (item.itemType)
             {
                 case ItemType.Tool:
@@ -262,7 +262,7 @@ namespace GrandmaGreen.UI.Collections
 
         public void OnSeedEntryClicked(TabbedInventoryItemController itemController)
         {
-            Seed s = (Seed) itemController.m_inventoryItemData;
+            Seed s = (Seed)itemController.m_inventoryItemData;
 
             playerToolData.SetEquippedSeed(s.itemID, s.seedGenotype);
             CloseUI();
@@ -274,13 +274,13 @@ namespace GrandmaGreen.UI.Collections
             itemController.button.RegisterCallback<PointerMoveEvent>(PointerMoveHandler, TrickleDown.TrickleDown);
             itemController.button.RegisterCallback<PointerUpEvent>(PointerUpHandler, TrickleDown.TrickleDown);
         }
-        
+
         public void PointerDownHandler(PointerDownEvent evt)
         {
             Button draggedButton = evt.currentTarget as Button;
             draggable = draggedButton.parent.userData as IDraggable;
             draggable.startingPosition = Vector3.zero;
-            
+
             pointerStartPosition = evt.position;
             draggable.button.CapturePointer(evt.pointerId);
             enabled = true;
@@ -296,13 +296,14 @@ namespace GrandmaGreen.UI.Collections
 
                 // To-Do: Bound Checks
                 // Threshold Check
-                if(draggable.button.worldTransform.GetPosition().x <= threshold.worldTransform.GetPosition().x && !handled){
+                if (draggable.button.worldTransform.GetPosition().x <= threshold.worldTransform.GetPosition().x && !handled)
+                {
                     draggable.button.transform.position = Vector3.zero;
                     draggable.button.ReleasePointer(evt.pointerId);
                     CloseUI();
-                    
+
                     // UI to GameObject here
-                    VisualElement ve = ((Button) evt.currentTarget).parent;
+                    VisualElement ve = ((Button)evt.currentTarget).parent;
                     IInventoryItem item = (ve.userData as TabbedInventoryItemController).m_inventoryItemData;
                     EventManager.instance.HandleEVENT_INVENTORY_CUSTOMIZATION_START(item);
                     handled = true;
@@ -319,20 +320,19 @@ namespace GrandmaGreen.UI.Collections
             }
         }
 
-        void CheckOpenInventory(ToolData selectedTool)
+        void CheckOpenInventory()
         {
-            if (selectedTool.toolIndex == 3)
-            {
-                // Open inventory with a short delay for tool animation
-                m_rootVisualElement.style.transitionDelay = new List<TimeValue> {new(700, TimeUnit.Millisecond) };
-                OpenUI();
-                m_rootVisualElement.style.transitionDelay = new List<TimeValue> {new(0, TimeUnit.Millisecond) };
-                Button seedsTab = m_rootVisualElement.Q<Button>("seeds-tab");
-                GetAllTabs().Where(
-                    (tab) => tab != seedsTab && tab.ClassListContains("active-tab")
-                ).ForEach(UnselectTab);
-                SelectTab(seedsTab);
-            }
+
+            // Open inventory with a short delay for tool animation
+            m_rootVisualElement.style.transitionDelay = new List<TimeValue> { new(700, TimeUnit.Millisecond) };
+            OpenUI();
+            m_rootVisualElement.style.transitionDelay = new List<TimeValue> { new(0, TimeUnit.Millisecond) };
+            Button seedsTab = m_rootVisualElement.Q<Button>("seeds-tab");
+            GetAllTabs().Where(
+                (tab) => tab != seedsTab && tab.ClassListContains("active-tab")
+            ).ForEach(UnselectTab);
+            SelectTab(seedsTab);
+
         }
 
         // LOADING AND UNLOADING UI.
@@ -340,7 +340,7 @@ namespace GrandmaGreen.UI.Collections
         {
             // Sets up the controller for the whole inventory. The controller instantiates the inventory on its own upon creation.
             m_controller = new(this, inventoryData, collectionsSO);
-            
+
             // Subscribe to inventory related events.
             EventManager.instance.EVENT_INVENTORY_OPEN += OpenUI;
 

@@ -18,6 +18,8 @@ namespace GrandmaGreen
         protected static GrandmaGreenGameState s_Instance;
 
         [SerializeField] GameSettingsData settingsData;
+        [SerializeField] GrandmaGreenLevelLoader levelLoader;
+        [SerializeField] TutorialStateData tutorialStateData;
         [SerializeField] CollectionsSO collectionsData;
         [SerializeField] AreaServices areaServicer;
         [SerializeField] TimeLayerClock timeClock;
@@ -26,8 +28,10 @@ namespace GrandmaGreen
         [SerializeField] Entities.GolemManager golemManager;
         [SerializeField] UI.UIDisplayTracker UIdisplayRules;
         [SerializeField] SCENES currentScene;
+        [SerializeField] Core.Utilities.GameEventFlag onLevelTransitionFlag;
         [ReadOnly] int activeAreaIndex;
         [ReadOnly] bool isPaused;
+        [ReadOnly] bool levelTransitionEnabled = true;
 
         public static AreaController ActiveArea => s_Instance.areaServicer.ActiveArea;
         public static SCENES CurrentLocation => s_Instance.currentScene;
@@ -59,6 +63,7 @@ namespace GrandmaGreen
         void OnEnable()
         {
             SceneHandler.onSceneLoaded += SetCurrentScene;
+
         }
 
         void OnDisable()
@@ -94,16 +99,26 @@ namespace GrandmaGreen
 
         void InitalizeState()
         {
+            tutorialStateData.enableLevelTransition += EnableSceneTransition;
+            tutorialStateData.disableLevelTransition += DisableSceneTransition;
+
             settingsData.LoadSettings();
             UIdisplayRules.Initalize();
             collectionsData.LoadCollections();
             areaServicer.StartServices();
             storylineData.Initalize();
             golemManager.Initialize();
+
+            tutorialStateData.Initalize();
+
+            levelLoader.asyncLoadReq += GameSceneTransition;
         }
 
         void ReleaseState()
         {
+            tutorialStateData.enableLevelTransition -= EnableSceneTransition;
+            tutorialStateData.disableLevelTransition -= DisableSceneTransition;
+
             settingsData.SaveSettings();
             UIdisplayRules.Release();
             collectionsData.UnloadCollections();
@@ -111,6 +126,8 @@ namespace GrandmaGreen
             storylineData.Release();
             golemManager.SaveGolemData();
             saveManager.TriggerSave();
+
+            levelLoader.asyncLoadReq -= GameSceneTransition;
         }
 
         public void LoadGardenScreen(int gardenIndex)
@@ -125,9 +142,37 @@ namespace GrandmaGreen
             currentScene = scene;
         }
 
-        public void GameSceneTransition()
+        bool inSceneTransition = false;
+        public void GameSceneTransition(SCENES scene)
         {
+            if (!levelTransitionEnabled || inSceneTransition)
+                return;
 
+            StartSceneTransition(scene);
+
+        }
+
+        void StartSceneTransition(SCENES scene)
+        {
+            SceneHandler.onSceneLoaded += FinishSceneTransition;
+            scene.LoadAsync();
+        }
+
+        void FinishSceneTransition(SCENES scene)
+        {
+            SceneHandler.onSceneLoaded -= FinishSceneTransition;
+            onLevelTransitionFlag.Raise();
+
+        }
+
+        void EnableSceneTransition()
+        {
+            levelTransitionEnabled = true;
+        }
+
+        void DisableSceneTransition()
+        {
+            levelTransitionEnabled = false;
         }
     }
 }

@@ -18,13 +18,14 @@ namespace GrandmaGreen
     public class GamePortalTile : Tile, IGameTile
     {
         public SCENES toLoad;
+        public GrandmaGreenLevelLoader loader;
         public Direction portalDirection;
         public AreaExitState exitState;
-        
+
         public virtual void DoTileAction()
         {
             exitState.exitSide = portalDirection;
-            toLoad.LoadAsync();
+            loader.RequestLevelLoad(toLoad);
         }
 
         public virtual void DoTileAction(EntityController entity)
