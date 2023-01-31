@@ -106,6 +106,9 @@
       <a class="xref" href="GrandmaGreen.UIDisplayBase.html#GrandmaGreen_UIDisplayBase_onPanelClosed">UIDisplayBase.onPanelClosed</a>
     </div>
     <div>
+      <a class="xref" href="GrandmaGreen.UIDisplayBase.html#GrandmaGreen_UIDisplayBase_Awake">UIDisplayBase.Awake()</a>
+    </div>
+    <div>
       <a class="xref" href="GrandmaGreen.UIDisplayBase.html#GrandmaGreen_UIDisplayBase_RegisterButtonCallback_System_String_Action_">UIDisplayBase.RegisterButtonCallback(String, Action)</a>
     </div>
     <div>
@@ -194,12 +197,12 @@
   </table>
   
   
-  <h4 id="GrandmaGreen_UI_Collections_TabbedInventory_infoListEntryTemplate" data-uid="GrandmaGreen.UI.Collections.TabbedInventory.infoListEntryTemplate">infoListEntryTemplate</h4>
+  <h4 id="GrandmaGreen_UI_Collections_TabbedInventory_currentMode" data-uid="GrandmaGreen.UI.Collections.TabbedInventory.currentMode">currentMode</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public VisualTreeAsset infoListEntryTemplate</code></pre>
+    <pre><code class="lang-csharp hljs">public InventoryMode currentMode</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -211,7 +214,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">VisualTreeAsset</span></td>
+        <td><a class="xref" href="GrandmaGreen.UI.Collections.InventoryMode.html">InventoryMode</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -290,6 +293,30 @@
   </table>
   
   
+  <h4 id="GrandmaGreen_UI_Collections_TabbedInventory_sellingUI" data-uid="GrandmaGreen.UI.Collections.TabbedInventory.sellingUI">sellingUI</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SellingUIDisplay sellingUI</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="GrandmaGreen.SellingUIDisplay.html">SellingUIDisplay</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <h4 id="GrandmaGreen_UI_Collections_TabbedInventory_soundContainers" data-uid="GrandmaGreen.UI.Collections.TabbedInventory.soundContainers">soundContainers</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
@@ -335,31 +362,6 @@
     <tbody>
       <tr>
         <td><a class="xref" href="GrandmaGreen.IDraggable.html">IDraggable</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="GrandmaGreen_UI_Collections_TabbedInventory_enabled_" data-uid="GrandmaGreen.UI.Collections.TabbedInventory.enabled*"></a>
-  <h4 id="GrandmaGreen_UI_Collections_TabbedInventory_enabled" data-uid="GrandmaGreen.UI.Collections.TabbedInventory.enabled">enabled</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool enabled { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -453,6 +455,33 @@
   </div>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="GrandmaGreen.UIDisplayBase.html#GrandmaGreen_UIDisplayBase_CloseUI">UIDisplayBase.CloseUI()</a></div>
+  
+  
+  <a id="GrandmaGreen_UI_Collections_TabbedInventory_FinishPointer_" data-uid="GrandmaGreen.UI.Collections.TabbedInventory.FinishPointer*"></a>
+  <h4 id="GrandmaGreen_UI_Collections_TabbedInventory_FinishPointer_System_Int32_" data-uid="GrandmaGreen.UI.Collections.TabbedInventory.FinishPointer(System.Int32)">FinishPointer(Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void FinishPointer(int pointerId)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">pointerId</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="GrandmaGreen_UI_Collections_TabbedInventory_Load_" data-uid="GrandmaGreen.UI.Collections.TabbedInventory.Load*"></a>
@@ -612,6 +641,16 @@
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="GrandmaGreen_UI_Collections_TabbedInventory_RebuildAllJars_" data-uid="GrandmaGreen.UI.Collections.TabbedInventory.RebuildAllJars*"></a>
+  <h4 id="GrandmaGreen_UI_Collections_TabbedInventory_RebuildAllJars" data-uid="GrandmaGreen.UI.Collections.TabbedInventory.RebuildAllJars">RebuildAllJars()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RebuildAllJars()</code></pre>
+  </div>
   
   
   <a id="GrandmaGreen_UI_Collections_TabbedInventory_RebuildJar_" data-uid="GrandmaGreen.UI.Collections.TabbedInventory.RebuildJar*"></a>

@@ -113,12 +113,12 @@
   
   
   <a id="GrandmaGreen_Mail_Letter__ctor_" data-uid="GrandmaGreen.Mail.Letter.#ctor*"></a>
-  <h4 id="GrandmaGreen_Mail_Letter__ctor_System_DateTime_System_String_System_String_System_UInt16___" data-uid="GrandmaGreen.Mail.Letter.#ctor(System.DateTime,System.String,System.String,System.UInt16[])">Letter(DateTime, String, String, UInt16[])</h4>
+  <h4 id="GrandmaGreen_Mail_Letter__ctor_System_DateTime_System_String_System_String_System_String_System_String_System_UInt16___" data-uid="GrandmaGreen.Mail.Letter.#ctor(System.DateTime,System.String,System.String,System.String,System.String,System.UInt16[])">Letter(DateTime, String, String, String, String, UInt16[])</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Letter(DateTime time, string subject, string body, ushort[] attachments)</code></pre>
+    <pre><code class="lang-csharp hljs">public Letter(DateTime time, string subject, string heading, string body, string signature, ushort[] attachments)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -142,7 +142,17 @@
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">heading</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">body</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">signature</span></td>
         <td></td>
       </tr>
       <tr>
@@ -186,6 +196,54 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public string Body</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="GrandmaGreen_Mail_Letter_Heading" data-uid="GrandmaGreen.Mail.Letter.Heading">Heading</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Heading</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="GrandmaGreen_Mail_Letter_Signature" data-uid="GrandmaGreen.Mail.Letter.Signature">Signature</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Signature</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
