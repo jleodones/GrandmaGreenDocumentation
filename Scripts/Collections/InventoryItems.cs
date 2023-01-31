@@ -16,6 +16,8 @@ namespace GrandmaGreen.Collections {
         public ItemType itemType { get; set; }
         
         public string itemName { get; set; }
+        
+        public int quantity { get; set; }
 
         public string GetQuantityToString();
 
@@ -43,7 +45,7 @@ namespace GrandmaGreen.Collections {
         public string itemName { get; set; }
         
         // Amount of the object present in the inventory.
-        public int quantity;
+        public int quantity { get; set; }
 
         public Genotype plantGenotype;
 
@@ -84,7 +86,7 @@ namespace GrandmaGreen.Collections {
         public string itemName { get; set; }
         
         // Amount of the object present in the inventory.
-        public int quantity;
+        public int quantity { get; set; }
         
         public Genotype seedGenotype;
 
@@ -124,7 +126,7 @@ namespace GrandmaGreen.Collections {
         public string itemName { get; set; }
         
         // Amount of the object present in the inventory.
-        public int quantity;
+        public int quantity { get; set; }
 
         public Tool(ushort id, string name)
         {
@@ -166,7 +168,7 @@ namespace GrandmaGreen.Collections {
         public string itemName { get; set; }
         
         // Amount of the object present in the inventory.
-        public int quantity;
+        public int quantity { get; set; }
 
         public Decor(ushort id, string name)
         {

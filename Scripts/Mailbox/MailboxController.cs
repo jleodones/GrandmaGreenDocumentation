@@ -16,7 +16,7 @@ namespace GrandmaGreen.Mail
         {
             if (mailbox.CheckMailQueue())
             {
-                Debug.Log("New letter received");
+                Debug.Log("Letter Received at " + System.DateTime.Now);
                 Debug.Log(mailbox);
             }
         }
@@ -25,7 +25,7 @@ namespace GrandmaGreen.Mail
         public void DebugSendLetterNow()
         {
             Debug.Log("--- Sending Letter");
-            mailbox.SendLetterNow("Hello World!", "Lorem ipsum");
+            mailbox.SendLetterNow("Hello World!", "Heading", "Lorem ipsum", "From Grandma");
             Debug.Log(mailbox);
 	    }
 
@@ -34,7 +34,11 @@ namespace GrandmaGreen.Mail
         {
             var time = System.DateTime.Now.AddSeconds(5);
             Debug.Log("--- Sending letter at " + time);
-            mailbox.SendLetterAt(time, "Hello World in 5 seconds!", "5 seconds have passed..."); 
+            mailbox.SendLetterAt(time,
+                "Hello World in 5 seconds!",
+                "We'll wait for 5 seconds",
+                "5 seconds have passed...",
+                "From Grandma"); 
 	    }
 
         [ContextMenu("TestOldLettersArrive")]
@@ -45,7 +49,11 @@ namespace GrandmaGreen.Mail
             for (int i = 0; i < 5; i++) {
                 double randMs = UnityEngine.Random.Range(0, 1000);
                 var time2 = time.AddMilliseconds(randMs);
-                mailbox.SendLetterAt(time2, "Hello world 5 seconds ago!", "-5 seconds have passed...");
+                mailbox.SendLetterAt(time2,
+                    "Hello world 5 seconds ago!",
+                    "We already waited 5 seconds",
+                    "-5 seconds have passed...",
+                    "From Grandma");
             }
         }
 

@@ -5,7 +5,7 @@ using GrandmaGreen.Entities;
 
 namespace GrandmaGreen.UI.Golems
 {
-    public class GolemMenu : MonoBehaviour
+    public class GolemMenu : UIDisplayBase
     {
         /// <summary>
         /// Golem menu UI.

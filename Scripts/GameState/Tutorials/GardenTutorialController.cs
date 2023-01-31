@@ -7,6 +7,13 @@ using Cinemachine;
 
 namespace GrandmaGreen
 {
+    [System.Serializable]
+    public class DialoguePair
+    {
+        public Yarn.Unity.YarnProject yarnProject;
+        public string node;
+    }
+
     public class GardenTutorialController : MonoBehaviour
     {
         [Header("Data References")]
@@ -21,8 +28,11 @@ namespace GrandmaGreen
         public Garden.SeedUI seedUI;
         public TutorialUIDisplay tutorialUI;
         public Dialogue.Dialogueable dialogueable;
-        public Yarn.Unity.YarnProject introDialogue;
-        public Yarn.Unity.YarnProject mailboxDialogue;
+        public DialoguePair introDialogue;
+        public DialoguePair mailboxDialogue;
+        public DialoguePair leaveDialogue;
+        public DialoguePair golemSpawnDialogue;
+        public DialoguePair golemEvolveDialogue;
 
         [Header("Scene References")]
         public Entities.GameEntity playerEntity;
@@ -55,8 +65,8 @@ namespace GrandmaGreen
             tutorialStateData.tapHereGrandma += DoGrandmaTap;
             tutorialStateData.tapHereExit += DoTownSquareTap;
 
-            areaController.onGardenTick += ForceSetTutorialPlant;
-
+            tutorialStateData.introduceFirstGolem += TriggerGolemSpawnDialogue;
+            tutorialStateData.explainEvolvedGolem += TriggerGolemEvolveDialogue;
         }
 
 
@@ -70,7 +80,11 @@ namespace GrandmaGreen
             tutorialStateData.tapHereGrandma -= DoGrandmaTap;
             tutorialStateData.tapHereExit -= DoTownSquareTap;
 
-            areaController.onGardenTick -= ForceSetTutorialPlant;
+
+            tutorialStateData.introduceFirstGolem -= TriggerGolemSpawnDialogue;
+            tutorialStateData.explainEvolvedGolem -= TriggerGolemEvolveDialogue;
+
+
         }
 
         void PlaySlideshow(SlideshowData slideshowData)
@@ -79,10 +93,12 @@ namespace GrandmaGreen
             tutorialUI.OpenUI();
         }
 
-
+        #region  Core Tutorial
         void SetupGardenTutorialState()
         {
             uint progress = tutorialStateData.coreLoopTutorial.progress;
+
+            tutorialStateData.coreLoopTutorial.storylineData.onCompletion += CleanUpCoreLoopTutorial;
 
             if (progress < 7)
             {
@@ -90,6 +106,8 @@ namespace GrandmaGreen
                 HUD.DisableButton("collectionsButton");
                 HUD.DisableButton("customizationButton");
                 toolsMenu.DisableToolButton("fertilizer-container");
+
+                areaController.onGardenTick += ForceSetTutorialPlant;
 
             }
 
@@ -113,17 +131,18 @@ namespace GrandmaGreen
 
                 playerEntity.controller.PauseController();
 
-                dialogueable.yarnProject = introDialogue;
-                dialogueable.TriggerDialogue();
+                TriggerTutorialDialogue(introDialogue);
             }
         }
 
         public void OnTutorialDialogueRead()
         {
-            if (dialogueable.yarnProject == introDialogue)
+            if (lastDialogue == introDialogue && !tutorialStateData.coreLoopTutorial.isComplete)
                 ZoomCameraOut();
-            else if (dialogueable.yarnProject == mailboxDialogue)
+            else if (lastDialogue == mailboxDialogue && !tutorialStateData.coreLoopTutorial.isComplete)
                 tutorialStateData.onMoveFlag.Raise();
+            else if (lastDialogue == golemSpawnDialogue || lastDialogue == golemEvolveDialogue)
+                tutorialStateData.onGolemTalkedFlag.Raise();
         }
 
         void ZoomCameraOut()
@@ -167,21 +186,26 @@ namespace GrandmaGreen
 
         void DoTownSquareTap()
         {
+            TriggerTutorialDialogue(leaveDialogue);
             tapHint.SetActive(true);
             tapHint.transform.position = toTownSquarePosition.position;
         }
 
         List<Garden.PlantState> plants;
+        Vector3Int? tutorialCell = null;
         void UpdateTutorialPlant(int stage)
         {
-            plants = areaController.gardenManager.GetPlants(0);
-            if (plants.Count == 0)
-                return;
+            if (tutorialCell == null)
+            {
+                plants = areaController.gardenManager.GetPlants(0);
+                if (plants.Count == 0)
+                    return;
 
-            Vector3Int cell = plants[0].cell;
+                tutorialCell = plants[0].cell;
+            }
 
-            areaController.DestroyPlant(cell);
-            areaController.CreatePlant(starterPlantID, starterPlantGenotype, cell, stage);
+            areaController.DestroyPlant((Vector3Int)tutorialCell);
+            areaController.CreatePlant(starterPlantID, starterPlantGenotype, (Vector3Int)tutorialCell, stage);
         }
 
         void ForceSetTutorialPlant()
@@ -223,8 +247,7 @@ namespace GrandmaGreen
 
             tapHint.SetActive(false);
 
-            dialogueable.yarnProject = mailboxDialogue;
-            dialogueable.TriggerDialogue();
+            TriggerTutorialDialogue(mailboxDialogue);
         }
 
         IEnumerator WaitForGrandmaTap()
@@ -246,6 +269,38 @@ namespace GrandmaGreen
             tutorialStateData.playerToolData.onToolSelectionStart -= onGrandmaTapped;
 
             tapHint.SetActive(false);
+        }
+
+
+        void CleanUpCoreLoopTutorial(Storyline storyline)
+        {
+            areaController.onGardenTick -= ForceSetTutorialPlant;
+            tutorialStateData.coreLoopTutorial.storylineData.onCompletion -= CleanUpCoreLoopTutorial;
+        }
+        #endregion
+
+
+        #region  GolemTutorial
+
+        void TriggerGolemSpawnDialogue()
+        {
+            TriggerTutorialDialogue(golemSpawnDialogue);
+        }
+
+        void TriggerGolemEvolveDialogue()
+        {
+            TriggerTutorialDialogue(golemEvolveDialogue);
+        }
+
+        #endregion
+
+
+        DialoguePair lastDialogue;
+        void TriggerTutorialDialogue(DialoguePair dialoguePair)
+        {
+            lastDialogue = dialoguePair;
+            dialogueable.yarnProject = lastDialogue.yarnProject;
+            dialogueable.TriggerDialogueByNode(lastDialogue.node);
         }
     }
 }

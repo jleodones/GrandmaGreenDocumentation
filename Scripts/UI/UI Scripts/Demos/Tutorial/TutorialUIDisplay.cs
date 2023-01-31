@@ -17,7 +17,7 @@ namespace GrandmaGreen
         private SlideshowData data;
         private int currentPageIndex = 0;
 
-        public void Start()
+        public override void Load()
         {
             //Assign Variables
             leftArrow = m_rootVisualElement.Query<Button>("leftArrow");

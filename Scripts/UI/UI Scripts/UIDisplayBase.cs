@@ -16,7 +16,7 @@ namespace GrandmaGreen
         public event System.Action onPanelClosed;
 
         
-        private void Awake()
+        protected virtual void Awake()
         {
             m_rootVisualElement = GetComponent<UIDocument>().rootVisualElement.Q<VisualElement>("rootVisualElement");
             m_callbackDictionary = new Dictionary<string, List<Action>>();

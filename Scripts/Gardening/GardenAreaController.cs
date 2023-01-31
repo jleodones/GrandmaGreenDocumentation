@@ -220,19 +220,12 @@ namespace GrandmaGreen.Garden
         {
             Transform fruitTransform = plantPrefabLookup[cell].transform;
             SpriteRenderer tree = fruitTransform.Find("Tree").GetComponent<SpriteRenderer>();
-            SpriteRenderer fruit1 = fruitTransform.Find("Fruit1").GetComponent<SpriteRenderer>();
-            SpriteRenderer fruit2 = fruitTransform.Find("Fruit2").GetComponent<SpriteRenderer>();
-            SpriteRenderer fruit3 = fruitTransform.Find("Fruit3").GetComponent<SpriteRenderer>();
 
             PlantState plant = gardenManager.GetPlant(areaIndex, cell);
             Genotype genotype = gardenManager.GetGenotype(areaIndex, cell);
 
             tree.sprite = collection.GetFruitTree(plant.type, genotype, plant.growthStage);
-            fruit1.sprite = collection.GetFruitFruit(plant.type, genotype, plant.growthStage);
-            fruit2.sprite = collection.GetFruitFruit(plant.type, genotype, plant.growthStage);
-            fruit3.sprite = collection.GetFruitFruit(plant.type, genotype, plant.growthStage);
-
-            fruitTransform.localScale = new Vector3(1.0f, 1.0f, 1.0f) * plant.genotype.SpriteSize();
+            fruitTransform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
         }
 
         public void UpdateSprite(Vector3Int cell)
@@ -243,15 +236,15 @@ namespace GrandmaGreen.Garden
                 tilemap.SetColor(cell, gardenManager.wateredTileTintColor);
 
             PlantId id = gardenManager.GetPlantType(areaIndex, cell);
-            if (collection.IsFlower(id))
+            if (CollectionsSO.IsFlower(id))
             {
                 UpdateFlowerSprite(cell);
             }
-            else if (collection.IsVegetable(id))
+            else if (CollectionsSO.IsVegetable(id))
             {
                 UpdateVegetableSprite(cell);
             }
-            else if (collection.IsFruit(id))
+            else if (CollectionsSO.IsFruit(id))
             {
                 UpdateFruitSprite(cell);
             }
@@ -260,15 +253,15 @@ namespace GrandmaGreen.Garden
         public void InstantiatePlantPrefab(Vector3Int cell, PlantId id, int growthStage)
         {
             Vector3 centerOfCell = tilemap.GetCellCenterWorld(cell);
-            if (collection.IsFlower(id))
+            if (CollectionsSO.IsFlower(id))
             {
                 plantPrefabLookup[cell] = Instantiate(defaultFlowerPrefab, centerOfCell, Quaternion.identity);
             }
-            else if (collection.IsVegetable(id))
+            else if (CollectionsSO.IsVegetable(id))
             {
                 plantPrefabLookup[cell] = Instantiate(defaultVegetablePrefab, centerOfCell, Quaternion.identity);
             }
-            else if (collection.IsFruit(id))
+            else if (CollectionsSO.IsFruit(id))
             {
                 plantPrefabLookup[cell] = Instantiate(defaultFruitPrefab, centerOfCell, Quaternion.identity);
             }
@@ -650,12 +643,12 @@ namespace GrandmaGreen.Garden
         [ContextMenu("IdTypeTest")]
         public void IdTypeTest()
         {
-            Debug.Log("1001 is flower " + collection.IsFlower((PlantId)1001));
-            Debug.Log("1018 is flower " + collection.IsFlower((PlantId)1018));
-            Debug.Log("1008 is vegetable " + collection.IsVegetable((PlantId)1008));
-            Debug.Log("1001 is vegetable " + collection.IsVegetable((PlantId)1001));
-            Debug.Log("1015 is fruit " + collection.IsFruit((PlantId)1015));
-            Debug.Log("1008 is fruit " + collection.IsFruit((PlantId)1008));
+            Debug.Log("1001 is flower " + CollectionsSO.IsFlower((PlantId)1001));
+            Debug.Log("1018 is flower " + CollectionsSO.IsFlower((PlantId)1018));
+            Debug.Log("1008 is vegetable " + CollectionsSO.IsVegetable((PlantId)1008));
+            Debug.Log("1001 is vegetable " + CollectionsSO.IsVegetable((PlantId)1001));
+            Debug.Log("1015 is fruit " + CollectionsSO.IsFruit((PlantId)1015));
+            Debug.Log("1008 is fruit " + CollectionsSO.IsFruit((PlantId)1008));
         }
         #endregion
 

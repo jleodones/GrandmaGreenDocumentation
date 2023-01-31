@@ -1,8 +1,7 @@
 // This script attaches the tabbed menu logic to the game.
 
-using System;
 using System.Collections.Generic;
-using System.Transactions;
+using Core.SceneManagement;
 using UnityEngine;
 using UnityEngine.UIElements;
 using GrandmaGreen.SaveSystem;
@@ -12,6 +11,14 @@ using SpookuleleAudio;
 
 namespace GrandmaGreen.UI.Collections
 {
+    public enum InventoryMode
+    {
+        Default,
+        Customization,
+        Selling,
+        Gifting
+    }
+    
     public class TabbedInventory : UIDisplayBase, IDraggableContainer
     {
         public const string contentContainerNameSuffix = "ContentContainer";
@@ -19,14 +26,15 @@ namespace GrandmaGreen.UI.Collections
 
         public PlayerToolData playerToolData;
 
+        // Check scene.
+        public InventoryMode currentMode = InventoryMode.Customization;
+        
         // Template for list items.
         public VisualTreeAsset listEntryTemplate;
 
-        // Template for list items.
-        public VisualTreeAsset infoListEntryTemplate;
         // Collections SO.
         public CollectionsSO collectionsSO;
-
+        
         // Inventory scriptable object with all inventory data.
         public ObjectSaver inventoryData;
 
@@ -34,11 +42,13 @@ namespace GrandmaGreen.UI.Collections
 
         public ASoundContainer[] soundContainers;
 
+        // For shopping mode.
+        public SellingUIDisplay sellingUI;
+        
         // Related to being a draggable container.
         public VisualElement threshold { get; set; }
         public Vector3 pointerStartPosition { get; set; }
 
-        public bool enabled { get; set; }
         public bool handled { get; set; }
 
         public IDraggable draggable { get; set; }
@@ -46,11 +56,7 @@ namespace GrandmaGreen.UI.Collections
         {
             // Register player tab clicking events.
             RegisterTabCallbacks();
-
             playerToolData.onRequireSeedEquip += CheckOpenInventory;
-
-            // Threshold.
-            m_rootVisualElement.Q("inventory-threshold");
 
             // Instantiate the inventory items.
             // First, get all content jars.
@@ -64,6 +70,7 @@ namespace GrandmaGreen.UI.Collections
 
             // Threshold instantiation.
             threshold = m_rootVisualElement.Q("inventory-threshold");
+            draggable = null;
         }
 
         // OPENING AND CLOSING THE UI.
@@ -161,9 +168,6 @@ namespace GrandmaGreen.UI.Collections
         {
             SetItemSource<T>(ref jar);
             BuildJar<T>(ref jar);
-
-            Rect jarBound = jar.localBound;
-            Rect parentBound = jar.parent.localBound;
         }
 
         void BuildJar<T>(ref VisualElement jar) where T : struct
@@ -179,12 +183,12 @@ namespace GrandmaGreen.UI.Collections
             {
                 // Instantiate the list entry.
                 var newListEntry = listEntryTemplate.Instantiate();
-
+                
+                var newListEntryLogic = new TabbedInventoryItemController(newListEntry.Q<Button>());
+                
                 // Instantiate a controller for the data
                 if (typeof(T) == new Seed().GetType())
                 {
-                    var newListEntryLogic =
-                        new TabbedInventoryItemController(newListEntry.Q<Button>());
                     newListEntryLogic.SetButtonCallback(OnSeedEntryClicked);
 
                     var t = (ComponentStore<Seed>)jar.userData;
@@ -197,9 +201,6 @@ namespace GrandmaGreen.UI.Collections
                 }
                 else if (typeof(T) == new Plant().GetType())
                 {
-                    var newListEntryLogic =
-                        new TabbedInventoryItemController(newListEntry.Q<Button>());
-
                     var t = (ComponentStore<Plant>)jar.userData;
                     Plant p = (Plant)t.components[i];
                     Sprite sprite = collectionsSO.GetInventorySprite((PlantId)p.itemID, p.plantGenotype);
@@ -213,20 +214,16 @@ namespace GrandmaGreen.UI.Collections
                 }
                 else
                 {
-                    var newListEntryLogic = new TabbedInventoryItemController(newListEntry.Q<Button>());
-
                     IInventoryItem item = (IInventoryItem)componentStore.components[i];
                     Sprite sprite = collectionsSO.GetSprite(item.itemID);
                     newListEntryLogic.SetInventoryData(item, sprite);
 
-                    if (typeof(T) == new Decor().GetType())
-                    {
-                        OnItemCreated(newListEntryLogic);
-                    }
-
                     newListEntry.userData = newListEntryLogic;
                 }
 
+                
+                OnItemCreated(newListEntryLogic);
+                
                 // Append to jar.
                 jar.Add(newListEntry);
             }
@@ -260,12 +257,34 @@ namespace GrandmaGreen.UI.Collections
             }
         }
 
+        public void RebuildAllJars()
+        {
+            VisualElement jar;
+            // First, get all content jars.
+            List<VisualElement> contentJars = GetAllContentJars().ToList();
+            
+            jar = contentJars.Find(jar => jar.name == "tools" + contentNameSuffix);
+            BuildJar<Tool>(ref jar);
+
+            jar = contentJars.Find(jar => jar.name == "seeds" + contentNameSuffix);
+            BuildJar<Seed>(ref jar);
+            
+            jar = contentJars.Find(jar => jar.name == "plants" + contentNameSuffix);
+            BuildJar<Plant>(ref jar);
+            
+            jar = contentJars.Find(jar => jar.name == "decor" + contentNameSuffix);
+            BuildJar<Decor>(ref jar);
+        }
+
         public void OnSeedEntryClicked(TabbedInventoryItemController itemController)
         {
-            Seed s = (Seed)itemController.m_inventoryItemData;
+            if (currentMode == InventoryMode.Customization)
+            {
+                Seed s = (Seed)itemController.inventoryItemData;
 
-            playerToolData.SetEquippedSeed(s.itemID, s.seedGenotype);
-            CloseUI();
+                playerToolData.SetEquippedSeed(s.itemID, s.seedGenotype);
+                CloseUI();
+            }
         }
 
         public void OnItemCreated(TabbedInventoryItemController itemController)
@@ -277,19 +296,66 @@ namespace GrandmaGreen.UI.Collections
 
         public void PointerDownHandler(PointerDownEvent evt)
         {
+            // Retrieve button.
             Button draggedButton = evt.currentTarget as Button;
             draggable = draggedButton.parent.userData as IDraggable;
             draggable.startingPosition = Vector3.zero;
 
             pointerStartPosition = evt.position;
             draggable.button.CapturePointer(evt.pointerId);
-            enabled = true;
             handled = false;
         }
 
         public void PointerMoveHandler(PointerMoveEvent evt)
         {
-            if (enabled && draggable.button.HasPointerCapture(evt.pointerId))
+            switch (currentMode)
+            {
+                case InventoryMode.Default:
+                    break;
+                case InventoryMode.Gifting:
+                    break;
+                case InventoryMode.Customization:
+                    CustomizationDrag(evt);
+                    break;
+                case InventoryMode.Selling:
+                    SellingDrag(evt);
+                    break;
+            }
+        }
+
+        private void SellingDrag(PointerMoveEvent evt)
+        {
+            if (draggable != null && draggable.button.HasPointerCapture(evt.pointerId))
+            {
+                Vector3 pointerDelta = evt.position - pointerStartPosition;
+                draggable.button.transform.position = new Vector2(draggable.startingPosition.x + pointerDelta.x, draggable.startingPosition.y + pointerDelta.y);
+
+                // Threshold Check
+                if(sellingUI.IsInBounds(draggable.button.worldTransform.GetPosition()) && !handled){
+                    FinishPointer(evt.pointerId);
+                    handled = true;
+                    
+                    // Pass off the information to the selling box so it can instantiate the object.
+                    // UI to GameObject here
+                    VisualElement ve = ((Button) evt.currentTarget).parent;
+                    IInventoryItem item = (ve.userData as TabbedInventoryItemController).inventoryItemData;
+                    sellingUI.AddItem(item);
+                }
+            }
+        }
+
+        private void CustomizationDrag(PointerMoveEvent evt)
+        {
+            // UI to GameObject here
+            VisualElement ve = ((Button) evt.currentTarget).parent;
+            IInventoryItem item = (ve.userData as TabbedInventoryItemController).inventoryItemData;
+
+            if (item.itemType != ItemType.Decor)
+            {
+                return;
+            }
+            
+            if (draggable != null && draggable.button.HasPointerCapture(evt.pointerId))
             {
                 Vector3 pointerDelta = evt.position - pointerStartPosition;
                 draggable.button.transform.position = new Vector2(draggable.startingPosition.x + pointerDelta.x, draggable.startingPosition.y + pointerDelta.y);
@@ -298,13 +364,9 @@ namespace GrandmaGreen.UI.Collections
                 // Threshold Check
                 if (draggable.button.worldTransform.GetPosition().x <= threshold.worldTransform.GetPosition().x && !handled)
                 {
-                    draggable.button.transform.position = Vector3.zero;
-                    draggable.button.ReleasePointer(evt.pointerId);
+                    FinishPointer(evt.pointerId);
                     CloseUI();
-
-                    // UI to GameObject here
-                    VisualElement ve = ((Button)evt.currentTarget).parent;
-                    IInventoryItem item = (ve.userData as TabbedInventoryItemController).m_inventoryItemData;
+                    
                     EventManager.instance.HandleEVENT_INVENTORY_CUSTOMIZATION_START(item);
                     handled = true;
                 }
@@ -313,13 +375,19 @@ namespace GrandmaGreen.UI.Collections
 
         public void PointerUpHandler(PointerUpEvent evt)
         {
-            if (enabled && draggable.button.HasPointerCapture(evt.pointerId))
-            {
-                draggable.button.ReleasePointer(evt.pointerId);
-                draggable.button.transform.position = Vector3.zero;
-            }
+            FinishPointer(evt.pointerId);
         }
 
+        public void FinishPointer(int pointerId)
+        {
+            if (draggable != null && draggable.button.HasPointerCapture(pointerId))
+            {
+                draggable.button.ReleasePointer(pointerId);
+                draggable.button.transform.position = Vector3.zero;
+                draggable = null;
+            }
+        }
+        
         void CheckOpenInventory()
         {
 

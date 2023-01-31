@@ -21,12 +21,16 @@ namespace GrandmaGreen
         public GameEventFlag onToolMenuFlag;
         public GameEventFlag onGardeningFlag;
         public GameEventFlag onHarvestFlag;
+        public GameEventFlag onGolemSpawnedFlag;
+        public GameEventFlag onGolemTalkedFlag;
+        public GameEventFlag onGolemEvolvedFlag;
+        public GameEventFlag onGolemTaskFlag;
 
         [Header("References")]
         public Entities.EntityController playerController;
         public Garden.PlayerToolData playerToolData;
         public Garden.GardenToolSet gardenToolSet;
-        
+
         public event System.Action<SlideshowData> onPlaySlideshow;
 
         public bool AllTutorialsCompleted() => coreLoopTutorial.isComplete;
@@ -45,9 +49,12 @@ namespace GrandmaGreen
         public event System.Action tapHereGrandma;
         public event System.Action tapHereExit;
 
+        public event System.Action introduceFirstGolem;
+        public event System.Action explainEvolvedGolem;
+
         public void Initalize()
         {
-            if(!tutorialEnabled)
+            if (!tutorialEnabled)
                 return;
 
             if (AllTutorialsCompleted())
@@ -60,6 +67,14 @@ namespace GrandmaGreen
 
             if (!coreLoopTutorial.isComplete)
                 CoreLoopTutorialSetup();
+
+            if (!golemTutorial.isComplete)
+                GolemTutorialSetup();
+        }
+
+        public void Release()
+        {
+            GolemTutorialRelease();
         }
 
         void SetupSlideshowEvents(TutorialData tutorialData)
@@ -166,6 +181,68 @@ namespace GrandmaGreen
 
             coreLoopTutorial.storylineData.onProgress -= CoreLoopTutorialProgress;
             coreLoopTutorial.storylineData.onCompletion -= CoreLoopTutorialComplete;
+        }
+
+        System.Action<ushort, Vector3> golemSpawnedAction;
+        System.Action<ushort> golemEvolvedAction;
+        System.Action<int> golemTaskAction;
+        void GolemTutorialSetup()
+        {
+            SetupSlideshowEvents(golemTutorial);
+
+            golemTutorial.storylineData.onProgress += GolemTutorialProgress;
+            golemTutorial.storylineData.onCompletion += GolemTutorialComplete;
+
+            if (golemTutorial.progress == 0)
+            {
+                golemSpawnedAction = (_, _) => onGolemSpawnedFlag.Raise();
+                EventManager.instance.EVENT_GOLEM_SPAWN += golemSpawnedAction;
+            }
+            else if (golemTutorial.progress == 2)
+            {
+                golemEvolvedAction = (_) => onGolemEvolvedFlag.Raise();
+                EventManager.instance.EVENT_GOLEM_EVOLVE += golemEvolvedAction;
+            }
+            else if (golemTutorial.progress == 4)
+            {
+                golemTaskAction = (_) => onGolemTaskFlag.Raise();
+                EventManager.instance.EVENT_GOLEM_DO_TASK += golemTaskAction;
+            }
+        }
+
+        void GolemTutorialRelease()
+        {
+            EventManager.instance.EVENT_GOLEM_SPAWN -= golemSpawnedAction;
+            EventManager.instance.EVENT_GOLEM_EVOLVE -= golemEvolvedAction;
+            EventManager.instance.EVENT_GOLEM_DO_TASK -= golemTaskAction;
+        }
+
+        void GolemTutorialProgress(Storyline storyline)
+        {
+            switch (storyline.progress)
+            {
+                case 1:
+                    introduceFirstGolem?.Invoke();
+                    break;
+                case 2:
+                    golemEvolvedAction = (_) => onGolemEvolvedFlag.Raise();
+                    EventManager.instance.EVENT_GOLEM_EVOLVE += golemEvolvedAction;
+                    break;
+                case 3:
+                    explainEvolvedGolem?.Invoke();
+
+                    break;
+                case 4:
+                    golemTaskAction = (_) => onGolemTaskFlag.Raise();
+                    EventManager.instance.EVENT_GOLEM_DO_TASK += golemTaskAction;
+                    break;
+            }
+        }
+
+        void GolemTutorialComplete(Storyline storyline)
+        {
+            golemTutorial.storylineData.onProgress -= GolemTutorialProgress;
+            golemTutorial.storylineData.onCompletion -= GolemTutorialComplete;
         }
     }
 }

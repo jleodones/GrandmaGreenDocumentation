@@ -1,7 +1,6 @@
 using GrandmaGreen.Garden;
 using Sirenix.OdinInspector;
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
@@ -273,17 +272,17 @@ namespace GrandmaGreen.Collections
         }
 
 
-        public bool IsFlower(PlantId id)
+        public static bool IsFlower(PlantId id)
         {
             return Array.Exists<PlantId>((PlantId[])Enum.GetValues(typeof(FlowerId)), element => element == id);    
         }
 
-        public bool IsVegetable(PlantId id)
+        public static bool IsVegetable(PlantId id)
         {
             return Array.Exists<PlantId>((PlantId[])Enum.GetValues(typeof(VegetableId)), element => element == id);
         }
 
-        public bool IsFruit(PlantId id)
+        public static bool IsFruit(PlantId id)
         {
             return Array.Exists<PlantId>((PlantId[])Enum.GetValues(typeof(FruitId)), element => element == id);
         }
@@ -457,10 +456,19 @@ namespace GrandmaGreen.Collections
         public Sprite GetFruitTree(PlantId type, Genotype genotype, int growthStage)
         {
             PlantProperties plant = GetPlant(type);
-            Sprite[] sheet = Resources.LoadAll<Sprite>(plant.plantType.ToString() + "s/" + plant.name + "/" + plant.spriteBasePath);
-            if (growthStage == 0) return sheet[5];
-            else if (growthStage == 1) return sheet[1];
-            else if (growthStage == 2) return sheet[3];
+            string resourceDirPath = string.Format("{0}s/{1}/{2}",
+                plant.plantType.ToString(), plant.name, plant.spriteBasePath);
+            if (growthStage < 2)
+            {
+                Sprite[] sheet = Resources.LoadAll<Sprite>(resourceDirPath);
+                if (growthStage == 0) return sheet[5];
+                else if (growthStage == 1) return sheet[1];
+            }
+            else if (growthStage == 2)
+            {
+                string sprit_suffix = genotype.SpriteSuffix(type);
+                return Resources.Load<Sprite>(resourceDirPath + genotype.SpriteSuffix(type));
+            }
             return null;
         }
 

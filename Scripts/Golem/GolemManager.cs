@@ -35,6 +35,8 @@ namespace GrandmaGreen.Entities
 
         [JsonIgnore]
         public GolemState[] golemStateTable;
+
+        public bool IsSpawnDemoGolem = true;
         
         public void Initialize()
         {
@@ -173,7 +175,7 @@ namespace GrandmaGreen.Entities
             golemStateTable = new GolemState[10];
                 
             GolemState newState = new GolemState();
-            bool IsSpawnDemoGolem = true;
+            
 
             for (int index = 0; index < golemStateTable.Length; index++)
             {

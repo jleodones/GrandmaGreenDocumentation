@@ -1,14 +1,34 @@
 using UnityEngine;
 using Exception = System.Exception;
 using Random = UnityEngine.Random;
+using GrandmaGreen.Collections;
+using System.ComponentModel;
 
 namespace GrandmaGreen.Garden
 {
     [System.Serializable]
     public struct Genotype
     {
-        public enum Size { VeryBig, Big, Medium, Small, VerySmall };
-        public enum Trait { Dominant, Heterozygous, Recessive };
+        public enum Size {
+            [Description("XL")]
+            VeryBig,
+            [Description("L")]
+            Big,
+            [Description("M")]
+            Medium,
+            [Description("S")]
+            Small,
+            [Description("XS")]
+            VerySmall
+        };
+        public enum Trait {
+            [Description("Dom")]
+            Dominant,
+            [Description("Het")]
+            Heterozygous,
+            [Description("Rec")]
+            Recessive
+        };
         public enum Generation { P1, F1, F2 };
 
         public Size size;
@@ -51,6 +71,41 @@ namespace GrandmaGreen.Garden
             p1 = gen == Generation.P1;
             f1 = gen == Generation.F1;
             f2 = gen == Generation.F2;
+        }
+
+        public string SpriteSuffix(PlantId id)
+        {
+            if (CollectionsSO.IsFruit(id))
+            {
+                string trait_str = "";
+                string size_str = "";
+                switch (trait)
+                {
+                    case Trait.Recessive:
+                        trait_str = "Rec";
+                        break;
+                    case Trait.Heterozygous:
+                        trait_str = "Het";
+                        break;
+                    case Trait.Dominant:
+                        trait_str = "Dom";
+                        break;
+                }
+                switch (size)
+                {
+                    case Size.Small:
+                        size_str = "S";
+                        break;
+                    case Size.Medium:
+                        size_str = "M";
+                        break;
+                    case Size.Big:
+                        size_str = "L";
+                        break;
+                }
+                return string.Format("_{0}_{1}", trait_str, size_str);
+            }
+            return "";
         }
 
         public float SpriteSize()

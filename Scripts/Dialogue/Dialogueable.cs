@@ -9,6 +9,12 @@ using Random = UnityEngine.Random;
 
 namespace GrandmaGreen.Dialogue
 {
+    public enum DialogueMode
+    {
+        Tutorial,
+        Idle,
+        Story
+    }
     public class Dialogueable : MonoBehaviour
     {
         /// <summary>
@@ -21,7 +27,7 @@ namespace GrandmaGreen.Dialogue
         /// </summary>
         public ListContainer dialogueSFX;
 
-        public UnityAction<string> onFinishDialogue;
+        public UnityAction onFinishDialogue;
 
         /// <summary>
         /// Called to end dialogue and reset golem behavior.
@@ -38,11 +44,15 @@ namespace GrandmaGreen.Dialogue
 
         // Global line view.
         private CustomLineView m_lineView;
+
+        public DialogueMode dialogueMode = DialogueMode.Idle;
         void Awake()
         {
             // Search and store references to dialogue runner and dialogue line view.
             m_dialogueRunner = FindObjectOfType<DialogueRunner>();
             m_lineView = FindObjectOfType<CustomLineView>();
+            
+            // TODO: 
 
             onFinishDialogue += Finish;
         }
@@ -51,7 +61,6 @@ namespace GrandmaGreen.Dialogue
         /// Triggers dialogue, sending the yarn project to the dialogue runner.
         /// Tells it which node to start on, which is determined randomly for normal dialogue events.
         /// </summary>
-        /// TODO: Register golem with the line view for camera switching when speaking.
         public void TriggerDialogue()
         {
             // Set yarn project and dialogue sounds.
@@ -59,20 +68,46 @@ namespace GrandmaGreen.Dialogue
             m_lineView.dialogueSFX = dialogueSFX;
             
             // Add closing event.
-            m_dialogueRunner.onNodeComplete.AddListener(onFinishDialogue);
+            m_dialogueRunner.onDialogueComplete.AddListener(onFinishDialogue);
             
             // Calculate the starting node. For now, it's just idle dialogue.
-            // TODO: Check whether this should be a random dialogue or trigger an event.
-            string nodeStart = "Idle_";
-            int rand = (int)Random.Range(1, idleDialogueCount + 1);
+            string nodeStart = "";
+            switch (dialogueMode)
+            {
+                case DialogueMode.Tutorial:
+                    nodeStart = "Tutorial";
+                    break;
+                case DialogueMode.Idle:
+                    nodeStart = "Idle_";
+                    int rand = (int)Random.Range(1, idleDialogueCount + 1);
+                    nodeStart += rand.ToString();
+                    break;
+                case DialogueMode.Story:
+                    break;
+            }
 
-            m_dialogueRunner.StartDialogue(nodeStart + rand.ToString());
+            m_dialogueRunner.StartDialogue(nodeStart);
         }
 
-        private void Finish(string s)
+        public void TriggerDialogueByNode(string s)
         {
-            interactionEventScript.OnInteraction?.Invoke(new InteractionEventData());
-            m_dialogueRunner.onNodeComplete.RemoveListener(onFinishDialogue);
+            // Set yarn project and dialogue sounds.
+            m_dialogueRunner.SetProject(yarnProject);
+            m_lineView.dialogueSFX = dialogueSFX;
+            
+            // Add closing event.
+            m_dialogueRunner.onDialogueComplete.AddListener(onFinishDialogue);
+            
+            m_dialogueRunner.StartDialogue(s);
+        }
+
+        private void Finish()
+        {
+            if (interactionEventScript != null)
+            {
+                interactionEventScript.OnInteraction?.Invoke(new InteractionEventData());
+            }
+            m_dialogueRunner.onDialogueComplete.RemoveListener(onFinishDialogue);
         }
     }
 }

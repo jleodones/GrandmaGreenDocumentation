@@ -143,3 +143,7 @@ de .title-box {
 
 .cost-element {
 }
+
+.unity-list-view__empty-label {
+    display: none;
+}

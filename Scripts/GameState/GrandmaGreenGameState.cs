@@ -127,6 +127,8 @@ namespace GrandmaGreen
             golemManager.SaveGolemData();
             saveManager.TriggerSave();
 
+            tutorialStateData.Release();
+
             levelLoader.asyncLoadReq -= GameSceneTransition;
         }
 

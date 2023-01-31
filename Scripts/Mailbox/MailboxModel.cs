@@ -9,20 +9,31 @@ namespace GrandmaGreen.Mail
     {
         public System.DateTime TimeSent;
         public string Subject;
+        public string Heading;
         public string Body;
+        public string Signature;
         public ushort[] Attachments;
 
-        public Letter(System.DateTime time, string subject, string body, ushort[] attachments)
+        public Letter(System.DateTime time, string subject, string heading,
+            string body, string signature, ushort[] attachments)
         {
             TimeSent = time;
             Subject = subject;
+            Heading = heading;
             Body = body;
+            Signature = signature;
             Attachments = attachments;
         }
 
         public override string ToString()
 	    {
-            return "Letter\nSent: " + TimeSent + "\nSubject: " + Subject + "\nBody: " + Body + "\nAttachments: " + Attachments + "\n";
+            return "Letter " + TimeSent + "(Click to Expand)"
+                + "\nSubject: " + Subject
+                + "\nHeading: " + Heading
+                + "\nBody: " + Body
+                + "\nSignature: " + Signature
+                + "\nAttachments: " + Attachments
+                + "\n";
 	    }
     }
 
@@ -38,15 +49,18 @@ namespace GrandmaGreen.Mail
             return letters.Count == 0;
         }
 
-        public void SendLetterNow(string subject, string body, ushort[] attachments = default(ushort[]))
+        public void SendLetterNow(string subject, string heading, string body,
+            string signature, ushort[] attachments = default(ushort[]))
         {
             var time = System.DateTime.Now;
-            letters.Add(time, new Letter(time, subject, body, attachments));
+            letters.Add(time, new Letter(time, subject, heading, body, signature, attachments));
         }
 
-        public void SendLetterAt(System.DateTime time, string subject, string body, ushort[] attachments = default(ushort[]))
+        public void SendLetterAt(System.DateTime time, string subject, string heading, string body,
+            string signature, ushort[] attachments = default(ushort[]))
         {
-            letterQueue.Add(time, new Letter(time, subject, body, attachments));
+            Debug.Log("Sending letter at " + time);
+            letterQueue.Add(time, new Letter(time, subject, heading, body, signature, attachments));
         }
 
         public List<Letter> GetLetters()

@@ -8,11 +8,12 @@ namespace GrandmaGreen.UI.Collections
 {
     public class TabbedInventoryItemController : IDraggable
     {
-        public IInventoryItem m_inventoryItemData;
+        public IInventoryItem inventoryItemData;
+        public Sprite sprite;
         
         // This button.
         public Button button { get; set; }
-        
+
         // Draggable item's starting position.
         public Vector3 startingPosition { get; set; }
 
@@ -33,13 +34,15 @@ namespace GrandmaGreen.UI.Collections
         //element is supposed to display. Since the elements list 
         //in a `ListView` are pooled and reused, it's necessary to 
         //have a `Set` function to change which character's data to display.
-        public void SetInventoryData(IInventoryItem inventoryItem, Sprite sprite)
+        public void SetInventoryData(IInventoryItem inventoryItem, Sprite _sprite)
         {
+            sprite = _sprite;
+            
             button.Q<VisualElement>("item-image").style.backgroundImage = new StyleBackground(sprite);
             button.Q<Label>("quantity").text = inventoryItem.GetQuantityToString();
             button.Q<Label>("item-name").text = inventoryItem.itemName;
             
-            m_inventoryItemData = inventoryItem;
+            inventoryItemData = inventoryItem;
         }
 
         public void SetSizeBadge(Genotype genotype)
