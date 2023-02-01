@@ -12,7 +12,7 @@ namespace GrandmaGreen
 
         void OnEnable()
         {
-            animTween = transform.DOPunchScale(Vector3.one * 0.4f, pulseTime, 10, 0.5f).SetLoops(-1);
+            animTween = transform.DOScale(Vector3.one * 1.35f, pulseTime / 2).SetLoops(-1,LoopType.Yoyo);
         }
 
         void OnDisable()

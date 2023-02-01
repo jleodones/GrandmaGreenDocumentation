@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
+using Sirenix.OdinInspector;
 
 namespace GrandmaGreen.Mail
 {
@@ -40,8 +41,10 @@ namespace GrandmaGreen.Mail
     [CreateAssetMenu(menuName = "GrandmaGreen/Mail/MailboxModel")]
     public class MailboxModel : ScriptableObject
     {
-        private SortedList<System.DateTime, Letter> letters;
-        private SortedList<System.DateTime, Letter> letterQueue;
+        [ShowInInspector]
+        public SortedList<System.DateTime, Letter> letters;
+        [ShowInInspector]
+        public SortedList<System.DateTime, Letter> letterQueue;
         Timer timer;
 
         public bool Empty()

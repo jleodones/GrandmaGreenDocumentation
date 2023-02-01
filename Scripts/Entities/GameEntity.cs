@@ -26,6 +26,7 @@ namespace GrandmaGreen.Entities
         [Header("Entity References")]
         public EntityController controller;
         public Animator animator;
+        public SpookuleleAudio.ASoundContainer footsteps;
 
         [field: Header("Entity Variables")]
         public StateMachine<EntityState> entityStateMachine;
@@ -52,6 +53,7 @@ namespace GrandmaGreen.Entities
         public System.Action onEntityPathEnd;
         public System.Action onEntityPathStopped;
 
+        SoundPlayer footstepsSoundPlayer;
         void Awake()
         {
             controller.RegisterEntity(this);
@@ -112,12 +114,12 @@ namespace GrandmaGreen.Entities
 
         void MovingEnter()
         {
-            //     footstepsPlayer = sfx_Footsteps.Play();
+            footstepsSoundPlayer = footsteps.Play();
         }
 
         void MovingExit()
         {
-            //            footstepsPlayer.Stop();
+            footstepsSoundPlayer.Stop();
         }
 
         void MovingLogic()

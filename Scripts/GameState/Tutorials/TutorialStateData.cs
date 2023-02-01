@@ -25,6 +25,8 @@ namespace GrandmaGreen
         public GameEventFlag onGolemTalkedFlag;
         public GameEventFlag onGolemEvolvedFlag;
         public GameEventFlag onGolemTaskFlag;
+        public GameEventFlag onCrossbreedingFlag;
+        public GameEventFlag onCultivisionFlag;
 
         [Header("References")]
         public Entities.EntityController playerController;
@@ -33,7 +35,7 @@ namespace GrandmaGreen
 
         public event System.Action<SlideshowData> onPlaySlideshow;
 
-        public bool AllTutorialsCompleted() => coreLoopTutorial.isComplete;
+        public bool AllTutorialsCompleted() => coreLoopTutorial.isComplete && golemTutorial.isComplete && crossBreedingTutorial.isComplete;
 
         public event System.Action enableLevelTransition;
         public event System.Action disableLevelTransition;
@@ -44,6 +46,9 @@ namespace GrandmaGreen
 
         public event System.Action enableTrowel;
         public event System.Action disableTrowel;
+
+        public event System.Action enableSeedPacket;
+        public event System.Action disableSeedPacket;
 
         public event System.Action tapHereMailbox;
         public event System.Action tapHereGrandma;
@@ -70,6 +75,9 @@ namespace GrandmaGreen
 
             if (!golemTutorial.isComplete)
                 GolemTutorialSetup();
+
+            if (!crossBreedingTutorial.isComplete)
+                CrossbreedingTutorialSetup();
         }
 
         public void Release()
@@ -99,7 +107,7 @@ namespace GrandmaGreen
             onPlaySlideshow?.Invoke(slideshowData);
         }
 
-
+        #region  Coreloop
         void CoreLoopTutorialSetup()
         {
             SetupSlideshowEvents(coreLoopTutorial);
@@ -171,6 +179,7 @@ namespace GrandmaGreen
                     //Player has returned to garden
                     //TODO: Force Grow plant, prevent from dying
                     gardenToolSet.onHarvest += onHarvestFlag.Raise;
+                    disableSeedPacket?.Invoke();
                     break;
             }
         }
@@ -181,7 +190,13 @@ namespace GrandmaGreen
 
             coreLoopTutorial.storylineData.onProgress -= CoreLoopTutorialProgress;
             coreLoopTutorial.storylineData.onCompletion -= CoreLoopTutorialComplete;
+
+            enableSeedPacket?.Invoke();
         }
+
+        #endregion
+
+        #region  Golems
 
         System.Action<ushort, Vector3> golemSpawnedAction;
         System.Action<ushort> golemEvolvedAction;
@@ -244,5 +259,38 @@ namespace GrandmaGreen
             golemTutorial.storylineData.onProgress -= GolemTutorialProgress;
             golemTutorial.storylineData.onCompletion -= GolemTutorialComplete;
         }
+        #endregion
+
+        #region Crossbreeding
+        void CrossbreedingTutorialSetup()
+        {
+            SetupSlideshowEvents(crossBreedingTutorial);
+
+            crossBreedingTutorial.storylineData.onProgress += CrossbreedingTutorialProgress;
+            crossBreedingTutorial.storylineData.onCompletion += CrossbreedingTutorialComplete;
+
+        }
+
+        void CrossbreedingTutorialProgress(Storyline storyline)
+        {
+            switch (storyline.progress)
+            {
+                case 0:
+                    break;
+                case 1:
+                    break;
+                case 2:
+                    onCultivisionFlag.Raise();
+                    break;
+            }
+        }
+
+        void CrossbreedingTutorialComplete(Storyline storyline)
+        {
+            crossBreedingTutorial.storylineData.onProgress -= CrossbreedingTutorialProgress;
+            crossBreedingTutorial.storylineData.onCompletion -= CrossbreedingTutorialComplete;
+        }
+
+        #endregion
     }
 }

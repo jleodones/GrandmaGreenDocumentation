@@ -16,6 +16,7 @@ namespace GrandmaGreen
         public BulletinBoardUIDisplay bulletinBoardUI;
 
         public string phoebeIntroNode = "Story_1";
+        public string phoebeCrossbreedingNode = "Story_1";
 
         public TapHereUI phoebeTapHere;
         public TapHereUI bulletinBoardTapHere;
@@ -71,16 +72,16 @@ namespace GrandmaGreen
                 shopkeeperMenu.m_rootVisualElement.Q<Button>("shop").SetEnabled(false);
             }
 
-            if (!tutorialStateData.crossBreedingTutorial.isComplete)
+            else if (!tutorialStateData.crossBreedingTutorial.isComplete)
             {
-              //  EventManager.instance.EVENT_INVENTORY_ADD_SEED += CheckCrossbreedingPossible;
+                shoppingUI.onPanelClosed += TriggerCrossbreedingDialogue;
             }
         }
 
-        void CheckCrossbreedingPossible(ushort id, Garden.Genotype genotype)
+        void CheckCrossbreedingPossible()
         {
 
-        }   
+        }
 
 
         void SetBulletinBoardInteraction()
@@ -122,6 +123,22 @@ namespace GrandmaGreen
             onInteractionCompleteFlag.Raise();
 
             gardenTapHere.gameObject.SetActive(true);
+        }
+
+
+        void TriggerCrossbreedingDialogue()
+        {
+            shoppingUI.onPanelClosed -= TriggerCrossbreedingDialogue;
+            shopkeeperMenu.SetSpecialDialogue(phoebeCrossbreedingNode);
+            
+            shopkeeperMenu.dialogueScript.onFinishDialogue += SetCrossbreedingDialogueComplete;
+            shopkeeperMenu.OnDialogueTrigger();
+        }
+
+        void SetCrossbreedingDialogueComplete()
+        {
+            shopkeeperMenu.dialogueScript.onFinishDialogue -= SetCrossbreedingDialogueComplete;
+            tutorialStateData.onCrossbreedingFlag.Raise();
         }
     }
 }

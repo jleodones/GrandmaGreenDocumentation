@@ -10,20 +10,23 @@ namespace GrandmaGreen
     public class BulletinBoardUIDisplay : UIDisplayBase
     {
         public ObjectSaver inventoryObjectSaver;
-        
+
         // Entry template used to spawn info list items.
         public VisualTreeAsset infoListEntryTemplate;
-        
+
         public CollectionsSO collectionsSO;
 
         [ShowInInspector]
         public BulletinBoardUIController controller;
-        
+
+        public SpookuleleAudio.ASoundContainer openSFX;
+        public SpookuleleAudio.ASoundContainer closeSFX;
+
         public void Start()
         {
             // Instantiate controller.
             controller = new BulletinBoardUIController(this);
-            
+
             // For daily, announcement, and competition buttons, if clicked open the submission box.
             RegisterButtonCallback("daily", () =>
             {
@@ -34,7 +37,7 @@ namespace GrandmaGreen
             {
                 m_rootVisualElement.Q<VisualElement>("submissionBoxContainer").style.display = DisplayStyle.Flex;
             });
-            
+
             RegisterSubmissionBox();
         }
 
@@ -42,12 +45,15 @@ namespace GrandmaGreen
         {
             EventManager.instance.HandleEVENT_CLOSE_HUD();
             SetItemSource();
+            openSFX?.Play();
             base.OpenUI();
         }
 
         public override void CloseUI()
         {
+            closeSFX?.Play();
             base.CloseUI();
+
             EventManager.instance.HandleEVENT_OPEN_HUD();
         }
 
@@ -58,7 +64,7 @@ namespace GrandmaGreen
             {
                 m_rootVisualElement.Q<VisualElement>("submissionBoxContainer").style.display = DisplayStyle.None;
             });
-            
+
             // Get the list view.
             ListView submissionJar = m_rootVisualElement.Q<ListView>("submissionBoxListView");
             SetItemSource();
@@ -72,17 +78,17 @@ namespace GrandmaGreen
                 // Return the root of the instantiated visual tree
                 return newListEntry;
             };
-            
+
             // Set up bind function for a specific list entry.
             submissionJar.bindItem = (item, index) =>
             {
                 // Get this particular plant.
-                Plant plant = (Plant) submissionJar.itemsSource[index];
-                
+                Plant plant = (Plant)submissionJar.itemsSource[index];
+
                 // Get and set the item image.
-                Sprite sprite = collectionsSO.GetSprite((PlantId) plant.itemID, plant.plantGenotype, 2);
+                Sprite sprite = collectionsSO.GetSprite((PlantId)plant.itemID, plant.plantGenotype, 2);
                 item.Q<VisualElement>("plantImage").style.backgroundImage = new StyleBackground(sprite);
-                
+
                 // Get the button and set the callback.
                 item.Q<Button>("plantFavoriteButton").clicked += () =>
                 {
@@ -90,7 +96,7 @@ namespace GrandmaGreen
                     submissionJar.SetSelection(index);
                 };
             };
-            
+
             // On submit, remove plant from inventory, add money (base 100) to inventory, and close the entry box window.
             RegisterButtonCallback("submissionBoxSubmitButton", () =>
             {
@@ -110,7 +116,7 @@ namespace GrandmaGreen
                 }
             });
         }
-        
+
         // TODO: Everything here needs to be more generalized, so that it can work with any contest.
         public void SetItemSource()
         {
@@ -118,11 +124,11 @@ namespace GrandmaGreen
             ListView submissionJar = m_rootVisualElement.Q<ListView>("submissionBoxListView");
 
             // Get the correct component store from the object saver.
-            ComponentStore<Plant> plantStore = (ComponentStore<Plant>) inventoryObjectSaver.GetComponentStore<Plant>();
-            
+            ComponentStore<Plant> plantStore = (ComponentStore<Plant>)inventoryObjectSaver.GetComponentStore<Plant>();
+
             // Retrieve the list of APPLICABLE plants only.
             List<Plant> applicablePlants = new List<Plant>();
-            
+
             foreach (Plant p in plantStore.components)
             {
                 if (p.itemID == controller.currentBigContest.targetPlant.itemID)

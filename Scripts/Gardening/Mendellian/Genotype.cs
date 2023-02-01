@@ -75,35 +75,40 @@ namespace GrandmaGreen.Garden
 
         public string SpriteSuffix(PlantId id)
         {
-            if (CollectionsSO.IsFruit(id))
+            string trait_suf = "";
+            switch (trait)
             {
-                string trait_str = "";
-                string size_str = "";
-                switch (trait)
-                {
-                    case Trait.Recessive:
-                        trait_str = "Rec";
-                        break;
-                    case Trait.Heterozygous:
-                        trait_str = "Het";
-                        break;
-                    case Trait.Dominant:
-                        trait_str = "Dom";
-                        break;
-                }
+                case Trait.Recessive:
+                    trait_suf = "Rec";
+                    break;
+                case Trait.Heterozygous:
+                    trait_suf = "Het";
+                    break;
+                case Trait.Dominant:
+                    trait_suf = "Dom";
+                    break;
+            }
+            if (CollectionsSO.IsFlower(id))
+            {
+                string mega_suf = generation == Generation.F2 ? "_M" : "";
+                return string.Format("_{0}{1}", trait_suf, mega_suf);
+            }
+            else if (CollectionsSO.IsFruit(id) || CollectionsSO.IsVegetable(id))
+            {
+                string size_suf = "";
                 switch (size)
                 {
                     case Size.Small:
-                        size_str = "S";
+                        size_suf = "S";
                         break;
                     case Size.Medium:
-                        size_str = "M";
+                        size_suf = "M";
                         break;
                     case Size.Big:
-                        size_str = "L";
+                        size_suf = "L";
                         break;
                 }
-                return string.Format("_{0}_{1}", trait_str, size_str);
+                return string.Format("_{0}_{1}", trait_suf, size_suf);
             }
             return "";
         }
@@ -112,9 +117,9 @@ namespace GrandmaGreen.Garden
         {
             return size switch
             {
-                Size.Small => 0.75f,
+                Size.Small => 0.85f,
                 Size.Medium => 1.0f,
-                Size.Big => 1.25f,
+                Size.Big => 1.15f,
                 _ => 1.0f,
             };
         }

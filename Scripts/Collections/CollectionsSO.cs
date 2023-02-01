@@ -271,7 +271,6 @@ namespace GrandmaGreen.Collections
             CSVtoSO.GenerateCollectionsSO(this, dataSheet);
         }
 
-
         public static bool IsFlower(PlantId id)
         {
             return Array.Exists<PlantId>((PlantId[])Enum.GetValues(typeof(FlowerId)), element => element == id);    
@@ -285,6 +284,14 @@ namespace GrandmaGreen.Collections
         public static bool IsFruit(PlantId id)
         {
             return Array.Exists<PlantId>((PlantId[])Enum.GetValues(typeof(FruitId)), element => element == id);
+        }
+
+        public string GetResourcePath(PlantId id)
+        {
+            PlantProperties plant = GetPlant(id);
+            string resourceDirPath = string.Format("{0}s/{1}/{2}",
+                plant.plantType.ToString(), plant.name, plant.spriteBasePath);
+            return resourceDirPath;
         }
 
         public bool PlantToGolem(PlantId id, out CharacterId golemID)
@@ -371,28 +378,11 @@ namespace GrandmaGreen.Collections
                     suffix = "_Growing";
                     break;
                 case 2:
-                    suffix = "_Mature";
-                    if (IsFlower(type))
-                    {
-                        switch (genotype.trait)
-                        {
-                            case Genotype.Trait.Recessive:
-                                suffix = isMega ? "_Rec_M" : "_Rec";
-                                break;
-                            case Genotype.Trait.Heterozygous:
-                                suffix = "_Het";
-                                break;
-                            case Genotype.Trait.Dominant:
-                                suffix = isMega ? "_Dom_M" : "_Dom";
-                                break;
-                        }
-                    }
+                    suffix = genotype.SpriteSuffix(type);
                     break;
             }
 
-            StringBuilder finalSpritePath = new StringBuilder(plant.plantType.ToString(), 100);
-            finalSpritePath.Append("s/" + plant.name + "/" + plant.spriteBasePath + suffix);
-            return Resources.Load<Sprite>(finalSpritePath.ToString());
+            return Resources.Load<Sprite>(GetResourcePath(type) + suffix);
         }
 
         public Sprite GetInventorySprite(PlantId type, Genotype genotype)
@@ -447,17 +437,13 @@ namespace GrandmaGreen.Collections
         public Sprite GetVegetableHead(PlantId type, Genotype genotype, int growthStage)
         {
             if (growthStage < 2) return null;
-            PlantProperties plant = GetPlant(type);
-            StringBuilder finalSpritePath = new StringBuilder(plant.plantType.ToString(), 100);
-            finalSpritePath.Append("s/" + plant.name + "/" + plant.spriteBasePath + "_HeadLarge");
-            return Resources.Load<Sprite>(finalSpritePath.ToString());
+            string spritePath = GetResourcePath(type) + "_HeadLarge";
+            return Resources.Load<Sprite>(spritePath);
         }
 
         public Sprite GetFruitTree(PlantId type, Genotype genotype, int growthStage)
         {
-            PlantProperties plant = GetPlant(type);
-            string resourceDirPath = string.Format("{0}s/{1}/{2}",
-                plant.plantType.ToString(), plant.name, plant.spriteBasePath);
+            string resourceDirPath = GetResourcePath(type);
             if (growthStage < 2)
             {
                 Sprite[] sheet = Resources.LoadAll<Sprite>(resourceDirPath);
@@ -466,7 +452,6 @@ namespace GrandmaGreen.Collections
             }
             else if (growthStage == 2)
             {
-                string sprit_suffix = genotype.SpriteSuffix(type);
                 return Resources.Load<Sprite>(resourceDirPath + genotype.SpriteSuffix(type));
             }
             return null;
@@ -475,8 +460,8 @@ namespace GrandmaGreen.Collections
         public Sprite GetFruitFruit(PlantId type, Genotype genotype, int growthStage)
         {
             if (growthStage < 2) return null;
-            PlantProperties plant = GetPlant(type);
-            Sprite[] sheet = Resources.LoadAll<Sprite>(plant.plantType.ToString() + "s/" + plant.name + "/" + plant.spriteBasePath);
+            string resourceDirPath = GetResourcePath(type);
+            Sprite[] sheet = Resources.LoadAll<Sprite>(resourceDirPath);
             if (genotype.trait == Genotype.Trait.Dominant) return sheet[0];
             else if (genotype.trait == Genotype.Trait.Heterozygous) return sheet[2];
             else if (genotype.trait == Genotype.Trait.Recessive) return sheet[4];

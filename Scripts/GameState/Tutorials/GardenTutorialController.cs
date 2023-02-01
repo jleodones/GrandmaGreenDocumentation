@@ -65,8 +65,13 @@ namespace GrandmaGreen
             tutorialStateData.tapHereGrandma += DoGrandmaTap;
             tutorialStateData.tapHereExit += DoTownSquareTap;
 
+            tutorialStateData.disableSeedPacket += DisableSeeds;
+            tutorialStateData.enableSeedPacket += EnableSeeds;
+
             tutorialStateData.introduceFirstGolem += TriggerGolemSpawnDialogue;
             tutorialStateData.explainEvolvedGolem += TriggerGolemEvolveDialogue;
+
+            areaController.onGardenTick += ForceSetTutorialPlant;
         }
 
 
@@ -80,11 +85,14 @@ namespace GrandmaGreen
             tutorialStateData.tapHereGrandma -= DoGrandmaTap;
             tutorialStateData.tapHereExit -= DoTownSquareTap;
 
+            tutorialStateData.disableSeedPacket -= DisableSeeds;
+            tutorialStateData.enableSeedPacket -= EnableSeeds;
+
 
             tutorialStateData.introduceFirstGolem -= TriggerGolemSpawnDialogue;
             tutorialStateData.explainEvolvedGolem -= TriggerGolemEvolveDialogue;
 
-
+            areaController.onGardenTick -= ForceSetTutorialPlant;
         }
 
         void PlaySlideshow(SlideshowData slideshowData)
@@ -98,23 +106,22 @@ namespace GrandmaGreen
         {
             uint progress = tutorialStateData.coreLoopTutorial.progress;
 
-            tutorialStateData.coreLoopTutorial.storylineData.onCompletion += CleanUpCoreLoopTutorial;
+            if (!tutorialStateData.crossBreedingTutorial.isComplete && tutorialStateData.crossBreedingTutorial.progress <= 1)
+                HUD.DisableButton("cultivisionButton");
+
 
             if (progress < 7)
             {
-                HUD.DisableButton("cultivisionButton");
+
                 HUD.DisableButton("collectionsButton");
                 HUD.DisableButton("customizationButton");
                 toolsMenu.DisableToolButton("fertilizer-container");
-
-                areaController.onGardenTick += ForceSetTutorialPlant;
 
             }
 
             if (progress < 2)
             {
                 playerInteractable.SetActive(false);
-
             }
 
             if (progress < 1)
@@ -126,13 +133,15 @@ namespace GrandmaGreen
             {
                 HUD.DisableButton("inventoryButton");
 
-
                 playerCamera.m_Lens.OrthographicSize = 2;
 
                 playerEntity.controller.PauseController();
 
                 TriggerTutorialDialogue(introDialogue);
             }
+
+            if (progress > 2)
+                areaController.onGardenTick += ForceSetTutorialPlant;
         }
 
         public void OnTutorialDialogueRead()
@@ -184,6 +193,16 @@ namespace GrandmaGreen
             toolsMenu.DisableToolButton("trowel-container");
         }
 
+        void EnableSeeds()
+        {
+            toolsMenu.EnableToolButton("seeds-container");
+        }
+
+        void DisableSeeds()
+        {
+            toolsMenu.DisableToolButton("seeds-container");
+        }
+
         void DoTownSquareTap()
         {
             TriggerTutorialDialogue(leaveDialogue);
@@ -192,20 +211,17 @@ namespace GrandmaGreen
         }
 
         List<Garden.PlantState> plants;
-        Vector3Int? tutorialCell = null;
+        Vector3Int tutorialCell;
         void UpdateTutorialPlant(int stage)
         {
-            if (tutorialCell == null)
-            {
-                plants = areaController.gardenManager.GetPlants(0);
-                if (plants.Count == 0)
-                    return;
+            plants = areaController.gardenManager.GetPlants(0);
+            if (plants.Count == 0)
+                return;
 
-                tutorialCell = plants[0].cell;
-            }
+            tutorialCell = plants[0].cell;
 
-            areaController.DestroyPlant((Vector3Int)tutorialCell);
-            areaController.CreatePlant(starterPlantID, starterPlantGenotype, (Vector3Int)tutorialCell, stage);
+            areaController.DestroyPlant(tutorialCell);
+            areaController.CreatePlant(starterPlantID, starterPlantGenotype, tutorialCell, stage);
         }
 
         void ForceSetTutorialPlant()
@@ -217,11 +233,6 @@ namespace GrandmaGreen
                     break;
                 case 4:
                     UpdateTutorialPlant(1);
-                    break;
-                case 5:
-                    break;
-                case 6:
-                    UpdateTutorialPlant(2);
                     break;
                 case 7:
                     UpdateTutorialPlant(2);
@@ -272,11 +283,6 @@ namespace GrandmaGreen
         }
 
 
-        void CleanUpCoreLoopTutorial(Storyline storyline)
-        {
-            areaController.onGardenTick -= ForceSetTutorialPlant;
-            tutorialStateData.coreLoopTutorial.storylineData.onCompletion -= CleanUpCoreLoopTutorial;
-        }
         #endregion
 
 

@@ -7,7 +7,7 @@ namespace GrandmaGreen
     {
         // Settings reference.
         public SettingsUIDisplay m_settingsUIDisplay;
-        
+        public SpookuleleAudio.ASoundContainer startSFX;
         public void Start()
         {
             RegisterButtonCallback("startButton", OnStartClicked);
@@ -20,6 +20,7 @@ namespace GrandmaGreen
         private void OnStartClicked()
         {
             SceneExtensions.LoadAsync(SCENES.SetupTest);
+            startSFX.Play();
         }
 
         private void OnSettingsClicked()

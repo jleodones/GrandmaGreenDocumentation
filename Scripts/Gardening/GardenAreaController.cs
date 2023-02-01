@@ -23,9 +23,7 @@ namespace GrandmaGreen.Garden
         public GardenCustomizer gardenCustomizer;
         public GardenVFX gardenVFX;
         public Cinemachine.CinemachineVirtualCamera customizationCamera;
-        public GameObject defaultFlowerPrefab;
-        public GameObject defaultVegetablePrefab;
-        public GameObject defaultFruitPrefab;
+        public GameObject defaultPlantPrefab;
         public Dictionary<Vector3Int, GameObject> plantPrefabLookup;
         public List<Collider> decorList;
         public List<PlantState> plantListDebug;
@@ -124,6 +122,7 @@ namespace GrandmaGreen.Garden
                 if (!gardenManager.IsEmpty(areaIndex, cell))
                 {
                     UpdateSprite(cell);
+                    UpdateTile(cell);
                 }
             }
         }
@@ -162,14 +161,37 @@ namespace GrandmaGreen.Garden
             }
         }
 
-        public void UpdateFlowerSprite(Vector3Int cell)
+        public void UpdateTile(Vector3Int cell)
         {
-            Transform flowerTransform = plantPrefabLookup[cell].transform;
-            SpriteRenderer spriteRenderer = flowerTransform.Find("Sprite3D").GetComponent<SpriteRenderer>();
+            if (gardenManager.PlantNeedsWater(areaIndex, cell))
+                tilemap.SetColor(cell, gardenManager.dryTileTintColor);
+            else
+                tilemap.SetColor(cell, gardenManager.wateredTileTintColor);
+        }
+
+        public void UpdateSprite(Vector3Int cell)
+        {
+            PlantId id = gardenManager.GetPlantType(areaIndex, cell);
+            Transform plantTransform = plantPrefabLookup[cell].transform;
             PlantState plant = gardenManager.GetPlant(areaIndex, cell);
             Genotype genotype = gardenManager.GetGenotype(areaIndex, cell);
-            spriteRenderer.sprite = collection.GetSprite(plant.type, genotype, plant.growthStage);
-            flowerTransform.localScale = new Vector3(1.0f, 1.0f, 1.0f) * plant.genotype.SpriteSize();
+
+            SpriteRenderer spriteRenderer = plantTransform.Find("Sprite3D").GetComponent<SpriteRenderer>();
+            if (CollectionsSO.IsFlower(id))
+            {
+                spriteRenderer.sprite = collection.GetSprite(plant.type, genotype, plant.growthStage);
+                plantTransform.localScale = new Vector3(1.0f, 1.0f, 1.0f) * plant.genotype.SpriteSize();
+            }
+            else if (CollectionsSO.IsVegetable(id))
+            {
+                spriteRenderer.sprite = collection.GetSprite(plant.type, genotype, plant.growthStage);
+                plantTransform.localScale = new Vector3(1.0f, 1.0f, 1.0f) * plant.genotype.SpriteSize();
+            }
+            else if (CollectionsSO.IsFruit(id))
+            {
+                spriteRenderer.sprite = collection.GetFruitTree(plant.type, genotype, plant.growthStage);
+                plantTransform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
+            }
 
             if (gardenManager.PlantIsWilted(areaIndex, cell))
             {
@@ -178,8 +200,7 @@ namespace GrandmaGreen.Garden
             else if (gardenManager.PlantIsDead(areaIndex, cell))
             {
                 spriteRenderer.color = new Color(1f, 1f, 1f);
-                Sprite deadSprite = Resources.Load<Sprite>("Flowers/DeadPlant/PLA_DeadPlant");
-                spriteRenderer.sprite = deadSprite;
+                spriteRenderer.sprite = Resources.Load<Sprite>("Flowers/DeadPlant/PLA_DeadPlant");
             }
             else
             {
@@ -187,84 +208,10 @@ namespace GrandmaGreen.Garden
             }
         }
 
-        public void UpdateVegetableSprite(Vector3Int cell)
-        {
-            Transform vegetableTransform = plantPrefabLookup[cell].transform;
-            SpriteRenderer stalk = vegetableTransform.Find("Stalk").GetComponent<SpriteRenderer>();
-            SpriteRenderer head = vegetableTransform.Find("Head").GetComponent<SpriteRenderer>();
-            PlantState plant = gardenManager.GetPlant(areaIndex, cell);
-            Genotype genotype = gardenManager.GetGenotype(areaIndex, cell);
-            stalk.sprite = collection.GetSprite(plant.type, genotype, plant.growthStage);
-            head.sprite = collection.GetVegetableHead(plant.type, genotype, plant.growthStage);
-            vegetableTransform.localScale = new Vector3(1.0f, 1.0f, 1.0f) * plant.genotype.SpriteSize();
-
-            if (gardenManager.PlantIsWilted(areaIndex, cell))
-            {
-                stalk.color = new Color(0.71f, 0.4f, 0.11f);
-                head.color = new Color(0.71f, 0.4f, 0.11f);
-            }
-            else if (gardenManager.PlantIsDead(areaIndex, cell))
-            {
-                stalk.color = new Color(1f, 1f, 1f);
-                Sprite deadSprite = Resources.Load<Sprite>("Flowers/DeadPlant/PLA_DeadPlant");
-                stalk.sprite = deadSprite;
-            }
-            else
-            {
-                stalk.color = new Color(1f, 1f, 1f);
-                head.color = new Color(1f, 1f, 1f);
-            }
-        }
-
-        public void UpdateFruitSprite(Vector3Int cell)
-        {
-            Transform fruitTransform = plantPrefabLookup[cell].transform;
-            SpriteRenderer tree = fruitTransform.Find("Tree").GetComponent<SpriteRenderer>();
-
-            PlantState plant = gardenManager.GetPlant(areaIndex, cell);
-            Genotype genotype = gardenManager.GetGenotype(areaIndex, cell);
-
-            tree.sprite = collection.GetFruitTree(plant.type, genotype, plant.growthStage);
-            fruitTransform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
-        }
-
-        public void UpdateSprite(Vector3Int cell)
-        {
-            if(gardenManager.PlantNeedsWater(areaIndex,cell))
-                tilemap.SetColor(cell, gardenManager.dryTileTintColor);
-            else
-                tilemap.SetColor(cell, gardenManager.wateredTileTintColor);
-
-            PlantId id = gardenManager.GetPlantType(areaIndex, cell);
-            if (CollectionsSO.IsFlower(id))
-            {
-                UpdateFlowerSprite(cell);
-            }
-            else if (CollectionsSO.IsVegetable(id))
-            {
-                UpdateVegetableSprite(cell);
-            }
-            else if (CollectionsSO.IsFruit(id))
-            {
-                UpdateFruitSprite(cell);
-            }
-        }
-
         public void InstantiatePlantPrefab(Vector3Int cell, PlantId id, int growthStage)
         {
             Vector3 centerOfCell = tilemap.GetCellCenterWorld(cell);
-            if (CollectionsSO.IsFlower(id))
-            {
-                plantPrefabLookup[cell] = Instantiate(defaultFlowerPrefab, centerOfCell, Quaternion.identity);
-            }
-            else if (CollectionsSO.IsVegetable(id))
-            {
-                plantPrefabLookup[cell] = Instantiate(defaultVegetablePrefab, centerOfCell, Quaternion.identity);
-            }
-            else if (CollectionsSO.IsFruit(id))
-            {
-                plantPrefabLookup[cell] = Instantiate(defaultFruitPrefab, centerOfCell, Quaternion.identity);
-            }
+            plantPrefabLookup[cell] = Instantiate(defaultPlantPrefab, centerOfCell, Quaternion.identity);
             UpdateSprite(cell);
         }
 
