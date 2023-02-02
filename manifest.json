@@ -292,7 +292,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.BulletinBoardUIController.html",
-          "hash": "4ZBM/93KFICbltKbPS3Msp4Kk0W5TOsQ/f/Slk4euPw="
+          "hash": "uiykPkTQM+6MGxqOaTapEbp0DIdh3illKHjxWmzTZVA="
         }
       },
       "is_incremental": false,
@@ -304,7 +304,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.BulletinBoardUIDisplay.html",
-          "hash": "UEpnQylEPtH4DoeV6tBtIBvUPFghkFkdmSWSe0nHnhU="
+          "hash": "Xp538Nlfj351Bcy3X76wJtfibc2FTlyxqPpiWgWAfLw="
         }
       },
       "is_incremental": false,
@@ -336,23 +336,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/GrandmaGreen.CollectionUIDisplay.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/GrandmaGreen.CollectionUIDisplay.html",
-          "hash": "qtq3J88K9BcZWXzuh6swP6NC8t1eaSTO8vsNtLyLFxc="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/GrandmaGreen.Collections.AwardCollectionProperties.yml",
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.Collections.AwardCollectionProperties.html",
-          "hash": "5ndW5WpuFIWDXdYJF3AqYiOV3ymGiRxpQuBfTVmvh1w="
+          "hash": "VASUctRaHixWQhI26tpdEwNTRibMLhx6yVnnB4At0F0="
         }
       },
       "is_incremental": false,
@@ -412,7 +400,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.Collections.CollectionsSaver.html",
-          "hash": "g9G2s/w5STLGYYpypgsrJk3SYW0nvPTJzOrVl0uaaDA="
+          "hash": "OfEod6be2Xlt0DkUYH0Ril+KA8CGC/MDa2Kf8BxJqCk="
         }
       },
       "is_incremental": false,
@@ -460,7 +448,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.Collections.FriendCollectionProperties.html",
-          "hash": "nN+yeH3UTvvzoDVT2D36PTox7SIzKVgg/eNbhFFTG7A="
+          "hash": "zazOGe6OgNn/j1BiWq5SZtBpLd9HoM4K28R+01IrqNk="
         }
       },
       "is_incremental": false,
@@ -544,7 +532,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.Collections.PlantCollectionProperties.html",
-          "hash": "DtuVPqdZbS2fSVZPTtORa7Nk4SfKzFFpAhNYmVozD+I="
+          "hash": "xQViprgoTUfzunSchvazjwKx//bbPskFCA6Hfe0UwYc="
         }
       },
       "is_incremental": false,
@@ -688,7 +676,19 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.Dialogue.CustomLineView.html",
-          "hash": "53qY0QaFZJOfJRn37UsAEKvXZgaLPEjNK8jZaX2XhHg="
+          "hash": "gpn9+yxtitGwj/aQWcvOmqlYdO9VGn95MZ5gZLjndkM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GrandmaGreen.Dialogue.CustomOptionView.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GrandmaGreen.Dialogue.CustomOptionView.html",
+          "hash": "6xeUcC9IHkW7S2dzdg/J125REm/nqpdHrrDjowsITXs="
         }
       },
       "is_incremental": false,
@@ -748,7 +748,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.Dialogue.html",
-          "hash": "PmV+h4e3aT/X7KOpFJzU45kX2d64ilqBQGxjBn1fMQg="
+          "hash": "XzZktJ1bkouKn1nWN8zR3uxOVcLawC2kaODKwxdD208="
         }
       },
       "is_incremental": false,
@@ -988,7 +988,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.EventManager.html",
-          "hash": "MJoY2FYun7TLuimaERaaKDrEZJkkiv4Rh8LoVxsgsqE="
+          "hash": "uM7pddSMn26lDnyvZ47m4uDGC4SdktE6io0lIoci/ak="
         }
       },
       "is_incremental": false,
@@ -1312,7 +1312,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.GardenTutorialController.html",
-          "hash": "J/3B2YrA+onzOzLCpy2jZAAvtc7G7iAjD0GdMOlWIc8="
+          "hash": "dPcV1zDzZvEgDYNN9RgA3ggV9/1+JbBPZTKS22Jkyz8="
         }
       },
       "is_incremental": false,
@@ -1468,7 +1468,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.Mail.MailboxModel.html",
-          "hash": "nvQEbP1/8hzuQ3igrk+h4HD+yXfLogwc0zmDuCS+aVA="
+          "hash": "C4Vzj3Agzjq8XnUJMZqHMt/y/M/LE8cb/f/PrTE5tk8="
         }
       },
       "is_incremental": false,
@@ -1708,7 +1708,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.ShopkeeperMenu.html",
-          "hash": "GtylPY9UaY70pTRlcydMBMjqwrvaUgUYMW9eeUJSdM8="
+          "hash": "Vw9DT2ZjVYzayOBaDfTrbUpanQTbj9huAh6Hqd2DDL8="
         }
       },
       "is_incremental": false,
@@ -1984,7 +1984,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.TutorialStateData.html",
-          "hash": "n8+3h1s4jeNCwJCbBA1R+BcM/ZxA+aAb18OmWMjw2d8="
+          "hash": "eeY3M++irMTBQrFvnfNAY6Mia2BayHkgUEn0eEu7/J0="
         }
       },
       "is_incremental": false,
@@ -1996,7 +1996,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.TutorialUIDisplay.html",
-          "hash": "i+mcS4TwvDwPU+hVOGJOalBoRjXOfmLUjtEwodmvPDY="
+          "hash": "FuQ+gb7KQoC6sIzKpZ8iUlq06tKUFuNxd+XQTD1ZgeQ="
         }
       },
       "is_incremental": false,
@@ -2021,6 +2021,42 @@
         ".html": {
           "relative_path": "api/GrandmaGreen.UI.BaseUIDisplay.html",
           "hash": "hleu9tZSEMhD9jFekAAtwiVp026XDxN/yHBEk9UDrq8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GrandmaGreen.UI.Collections.CollectionUIDisplay.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GrandmaGreen.UI.Collections.CollectionUIDisplay.html",
+          "hash": "uEAhem/E2kp73EDcit9D5ckEWtss4sasI6ZJYioZ1a4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GrandmaGreen.UI.Collections.CollectionsMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GrandmaGreen.UI.Collections.CollectionsMode.html",
+          "hash": "D/xS+u3z4VarMsQZ60FzEIoRxPdATQoGrq9I0Ej+KxU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GrandmaGreen.UI.Collections.CurrentPage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GrandmaGreen.UI.Collections.CurrentPage.html",
+          "hash": "9eTiB1xdstYqm/hUBG5b7nqJzE7CZ3I1aCHEnwrdxNg="
         }
       },
       "is_incremental": false,
@@ -2080,7 +2116,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.UI.Collections.html",
-          "hash": "T8upGGJa/c8CuuOkQpfP438TpCB7epr2PT1TMcgJXM0="
+          "hash": "V7v+UwrRCt13MuK4+7d5kdI3beNlU/wUGRy2hHvYgz0="
         }
       },
       "is_incremental": false,
@@ -2116,7 +2152,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.UI.HUD.HUD.html",
-          "hash": "/RQjaVHmIU6FnuXDoHqCSgHF4pjWG7uB1np2hRPMUZ0="
+          "hash": "8rnAU4bFUGjkqbCuYnOeXOS/VyfTJBMLEVCxfsoCMnQ="
         }
       },
       "is_incremental": false,
@@ -2236,7 +2272,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.UIDisplayBase.html",
-          "hash": "Gg1ZuWJvUH/ab1qQrOxBR7yx3gkw2/CqpgdAVrPrwIc="
+          "hash": "FBOAhdpmGVfNo+ISHOE99Wdj0pLojEA92lLVdiesA7Q="
         }
       },
       "is_incremental": false,
@@ -2248,7 +2284,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.html",
-          "hash": "m5NPu6Rz0py8jkn8nX999XNz6CB4UtIdJBK9RHsu/Dw="
+          "hash": "H4WkZljdJ5B+YLZYviCqdJMfPed+U+UeuZF8zQaUiyM="
         }
       },
       "is_incremental": false,
@@ -2260,7 +2296,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "/4uZz1Ttw7LavcHjqPOSFdvHk3s0uL/quKYAPrYt7xs="
+          "hash": "FBIA5EoeRDympSWl4OWMHysqiUaosOYYcCtZyzLgeeE="
         }
       },
       "is_incremental": false,
@@ -2369,7 +2405,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 186,
+          "total_file_count": 189,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

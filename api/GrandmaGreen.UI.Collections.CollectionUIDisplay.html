@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class BulletinBoardUIDisplay
+    <title>Class CollectionUIDisplay
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class BulletinBoardUIDisplay
+    <meta name="title" content="Class CollectionUIDisplay
    ">
     <meta name="generator" content="docfx 2.59.4.0">
     
@@ -77,10 +77,10 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="GrandmaGreen.BulletinBoardUIDisplay">
+            <article class="content wrap" id="_content" data-uid="GrandmaGreen.UI.Collections.CollectionUIDisplay">
   
   
-  <h1 id="GrandmaGreen_BulletinBoardUIDisplay" data-uid="GrandmaGreen.BulletinBoardUIDisplay" class="text-break">Class BulletinBoardUIDisplay
+  <h1 id="GrandmaGreen_UI_Collections_CollectionUIDisplay" data-uid="GrandmaGreen.UI.Collections.CollectionUIDisplay" class="text-break">Class CollectionUIDisplay
   </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
@@ -88,7 +88,7 @@
     <h5>Inheritance</h5>
     <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Object</a></div>
     <div class="level1"><a class="xref" href="GrandmaGreen.UIDisplayBase.html">UIDisplayBase</a></div>
-    <div class="level2"><span class="xref">BulletinBoardUIDisplay</span></div>
+    <div class="level2"><span class="xref">CollectionUIDisplay</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -105,10 +105,7 @@
       <a class="xref" href="GrandmaGreen.UIDisplayBase.html#GrandmaGreen_UIDisplayBase_Awake">UIDisplayBase.Awake()</a>
     </div>
     <div>
-      <a class="xref" href="GrandmaGreen.UIDisplayBase.html#GrandmaGreen_UIDisplayBase_Load">UIDisplayBase.Load()</a>
-    </div>
-    <div>
-      <a class="xref" href="GrandmaGreen.UIDisplayBase.html#GrandmaGreen_UIDisplayBase_Unload">UIDisplayBase.Unload()</a>
+      <a class="xref" href="GrandmaGreen.UIDisplayBase.html#GrandmaGreen_UIDisplayBase_CloseUI">UIDisplayBase.CloseUI()</a>
     </div>
     <div>
       <a class="xref" href="GrandmaGreen.UIDisplayBase.html#GrandmaGreen_UIDisplayBase_RegisterButtonCallback_System_String_Action_">UIDisplayBase.RegisterButtonCallback(String, Action)</a>
@@ -117,22 +114,22 @@
       <a class="xref" href="GrandmaGreen.UIDisplayBase.html#GrandmaGreen_UIDisplayBase_RegisterButtonCallbackWithClose_System_String_Action_">UIDisplayBase.RegisterButtonCallbackWithClose(String, Action)</a>
     </div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="GrandmaGreen.html">GrandmaGreen</a></h6>
+  <h6><strong>Namespace</strong>: <a class="xref" href="GrandmaGreen.UI.Collections.html">GrandmaGreen.UI.Collections</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
-  <h5 id="GrandmaGreen_BulletinBoardUIDisplay_syntax">Syntax</h5>
+  <h5 id="GrandmaGreen_UI_Collections_CollectionUIDisplay_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class BulletinBoardUIDisplay : UIDisplayBase</code></pre>
+    <pre><code class="lang-csharp hljs">public class CollectionUIDisplay : UIDisplayBase</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   
   
-  <h4 id="GrandmaGreen_BulletinBoardUIDisplay_closeSFX" data-uid="GrandmaGreen.BulletinBoardUIDisplay.closeSFX">closeSFX</h4>
+  <h4 id="GrandmaGreen_UI_Collections_CollectionUIDisplay_collectionSaver" data-uid="GrandmaGreen.UI.Collections.CollectionUIDisplay.collectionSaver">collectionSaver</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public SpookuleleAudio.ASoundContainer closeSFX</code></pre>
+    <pre><code class="lang-csharp hljs">public CollectionsSaver collectionSaver</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -144,14 +141,38 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">SpookuleleAudio.ASoundContainer</span></td>
+        <td><span class="xref">CollectionsSaver</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <h4 id="GrandmaGreen_BulletinBoardUIDisplay_collectionsSO" data-uid="GrandmaGreen.BulletinBoardUIDisplay.collectionsSO">collectionsSO</h4>
+  <h4 id="GrandmaGreen_UI_Collections_CollectionUIDisplay_collectionsMode" data-uid="GrandmaGreen.UI.Collections.CollectionUIDisplay.collectionsMode">collectionsMode</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CollectionsMode collectionsMode</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="GrandmaGreen.UI.Collections.CollectionsMode.html">CollectionsMode</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="GrandmaGreen_UI_Collections_CollectionUIDisplay_collectionsSO" data-uid="GrandmaGreen.UI.Collections.CollectionUIDisplay.collectionsSO">collectionsSO</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -173,192 +194,24 @@
       </tr>
     </tbody>
   </table>
-  
-  
-  <h4 id="GrandmaGreen_BulletinBoardUIDisplay_contestLostLetter" data-uid="GrandmaGreen.BulletinBoardUIDisplay.contestLostLetter">contestLostLetter</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Letter contestLostLetter</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Letter</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="GrandmaGreen_BulletinBoardUIDisplay_contestWonLetter" data-uid="GrandmaGreen.BulletinBoardUIDisplay.contestWonLetter">contestWonLetter</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Letter contestWonLetter</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Letter</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="GrandmaGreen_BulletinBoardUIDisplay_controller" data-uid="GrandmaGreen.BulletinBoardUIDisplay.controller">controller</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public BulletinBoardUIController controller</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="GrandmaGreen.BulletinBoardUIController.html">BulletinBoardUIController</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="GrandmaGreen_BulletinBoardUIDisplay_infoListEntryTemplate" data-uid="GrandmaGreen.BulletinBoardUIDisplay.infoListEntryTemplate">infoListEntryTemplate</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public VisualTreeAsset infoListEntryTemplate</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">VisualTreeAsset</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="GrandmaGreen_BulletinBoardUIDisplay_inventoryObjectSaver" data-uid="GrandmaGreen.BulletinBoardUIDisplay.inventoryObjectSaver">inventoryObjectSaver</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ObjectSaver inventoryObjectSaver</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">ObjectSaver</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="GrandmaGreen_BulletinBoardUIDisplay_mailboxModel" data-uid="GrandmaGreen.BulletinBoardUIDisplay.mailboxModel">mailboxModel</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public MailboxModel mailboxModel</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">MailboxModel</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="GrandmaGreen_BulletinBoardUIDisplay_openSFX" data-uid="GrandmaGreen.BulletinBoardUIDisplay.openSFX">openSFX</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public SpookuleleAudio.ASoundContainer openSFX</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">SpookuleleAudio.ASoundContainer</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h3 id="methods">Methods
   </h3>
   
   
-  <a id="GrandmaGreen_BulletinBoardUIDisplay_CloseUI_" data-uid="GrandmaGreen.BulletinBoardUIDisplay.CloseUI*"></a>
-  <h4 id="GrandmaGreen_BulletinBoardUIDisplay_CloseUI" data-uid="GrandmaGreen.BulletinBoardUIDisplay.CloseUI">CloseUI()</h4>
+  <a id="GrandmaGreen_UI_Collections_CollectionUIDisplay_Load_" data-uid="GrandmaGreen.UI.Collections.CollectionUIDisplay.Load*"></a>
+  <h4 id="GrandmaGreen_UI_Collections_CollectionUIDisplay_Load" data-uid="GrandmaGreen.UI.Collections.CollectionUIDisplay.Load">Load()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override void CloseUI()</code></pre>
+    <pre><code class="lang-csharp hljs">public override void Load()</code></pre>
   </div>
   <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="GrandmaGreen.UIDisplayBase.html#GrandmaGreen_UIDisplayBase_CloseUI">UIDisplayBase.CloseUI()</a></div>
+  <div><a class="xref" href="GrandmaGreen.UIDisplayBase.html#GrandmaGreen_UIDisplayBase_Load">UIDisplayBase.Load()</a></div>
   
   
-  <a id="GrandmaGreen_BulletinBoardUIDisplay_OpenUI_" data-uid="GrandmaGreen.BulletinBoardUIDisplay.OpenUI*"></a>
-  <h4 id="GrandmaGreen_BulletinBoardUIDisplay_OpenUI" data-uid="GrandmaGreen.BulletinBoardUIDisplay.OpenUI">OpenUI()</h4>
+  <a id="GrandmaGreen_UI_Collections_CollectionUIDisplay_OpenUI_" data-uid="GrandmaGreen.UI.Collections.CollectionUIDisplay.OpenUI*"></a>
+  <h4 id="GrandmaGreen_UI_Collections_CollectionUIDisplay_OpenUI" data-uid="GrandmaGreen.UI.Collections.CollectionUIDisplay.OpenUI">OpenUI()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -369,34 +222,75 @@
   <div><a class="xref" href="GrandmaGreen.UIDisplayBase.html#GrandmaGreen_UIDisplayBase_OpenUI">UIDisplayBase.OpenUI()</a></div>
   
   
-  <a id="GrandmaGreen_BulletinBoardUIDisplay_RegisterSubmissionBox_" data-uid="GrandmaGreen.BulletinBoardUIDisplay.RegisterSubmissionBox*"></a>
-  <h4 id="GrandmaGreen_BulletinBoardUIDisplay_RegisterSubmissionBox" data-uid="GrandmaGreen.BulletinBoardUIDisplay.RegisterSubmissionBox">RegisterSubmissionBox()</h4>
+  <a id="GrandmaGreen_UI_Collections_CollectionUIDisplay_Unload_" data-uid="GrandmaGreen.UI.Collections.CollectionUIDisplay.Unload*"></a>
+  <h4 id="GrandmaGreen_UI_Collections_CollectionUIDisplay_Unload" data-uid="GrandmaGreen.UI.Collections.CollectionUIDisplay.Unload">Unload()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void RegisterSubmissionBox()</code></pre>
+    <pre><code class="lang-csharp hljs">public override void Unload()</code></pre>
   </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="GrandmaGreen.UIDisplayBase.html#GrandmaGreen_UIDisplayBase_Unload">UIDisplayBase.Unload()</a></div>
   
   
-  <a id="GrandmaGreen_BulletinBoardUIDisplay_SetItemSource_" data-uid="GrandmaGreen.BulletinBoardUIDisplay.SetItemSource*"></a>
-  <h4 id="GrandmaGreen_BulletinBoardUIDisplay_SetItemSource" data-uid="GrandmaGreen.BulletinBoardUIDisplay.SetItemSource">SetItemSource()</h4>
+  <a id="GrandmaGreen_UI_Collections_CollectionUIDisplay_UpdatePlant_" data-uid="GrandmaGreen.UI.Collections.CollectionUIDisplay.UpdatePlant*"></a>
+  <h4 id="GrandmaGreen_UI_Collections_CollectionUIDisplay_UpdatePlant_PlantCollectionProperties_System_Boolean_" data-uid="GrandmaGreen.UI.Collections.CollectionUIDisplay.UpdatePlant(PlantCollectionProperties,System.Boolean)">UpdatePlant(PlantCollectionProperties, Boolean)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void SetItemSource()</code></pre>
+    <pre><code class="lang-csharp hljs">public void UpdatePlant(PlantCollectionProperties plant, bool isNewPlant = true)</code></pre>
   </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">PlantCollectionProperties</span></td>
+        <td><span class="parametername">plant</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">isNewPlant</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
-  <a id="GrandmaGreen_BulletinBoardUIDisplay_Start_" data-uid="GrandmaGreen.BulletinBoardUIDisplay.Start*"></a>
-  <h4 id="GrandmaGreen_BulletinBoardUIDisplay_Start" data-uid="GrandmaGreen.BulletinBoardUIDisplay.Start">Start()</h4>
+  <a id="GrandmaGreen_UI_Collections_CollectionUIDisplay_UpdatePlantInfo_" data-uid="GrandmaGreen.UI.Collections.CollectionUIDisplay.UpdatePlantInfo*"></a>
+  <h4 id="GrandmaGreen_UI_Collections_CollectionUIDisplay_UpdatePlantInfo_IInventoryItem_" data-uid="GrandmaGreen.UI.Collections.CollectionUIDisplay.UpdatePlantInfo(IInventoryItem)">UpdatePlantInfo(IInventoryItem)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Start()</code></pre>
+    <pre><code class="lang-csharp hljs">public void UpdatePlantInfo(IInventoryItem item)</code></pre>
   </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IInventoryItem</span></td>
+        <td><span class="parametername">item</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
 </article>
           </div>
           
