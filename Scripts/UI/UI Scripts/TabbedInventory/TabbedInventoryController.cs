@@ -82,6 +82,9 @@ namespace GrandmaGreen.UI.Collections
                     
             // Update the UI system.
             m_parent.RebuildJar(s);
+            
+            // Call collections for potential update.
+            EventManager.instance.HandleEVENT_UPDATE_PLANT_COLLECTIONS(s);
         }
 
         public void InventoryRemoveSeed(ushort id, Genotype genotype)
@@ -131,6 +134,9 @@ namespace GrandmaGreen.UI.Collections
             }
             
             m_parent.RebuildJar(p);
+            
+            // Call collections for potential update.
+            EventManager.instance.HandleEVENT_UPDATE_PLANT_COLLECTIONS(p);
         }
         
         public void InventoryRemovePlant(ushort id, Genotype genotype)

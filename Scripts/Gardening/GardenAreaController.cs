@@ -213,6 +213,7 @@ namespace GrandmaGreen.Garden
             Vector3 centerOfCell = tilemap.GetCellCenterWorld(cell);
             plantPrefabLookup[cell] = Instantiate(defaultPlantPrefab, centerOfCell, Quaternion.identity);
             UpdateSprite(cell);
+            UpdateTile(cell);
         }
 
         public void DestroyPlantPrefab(Vector3Int cell)
@@ -287,6 +288,7 @@ namespace GrandmaGreen.Garden
                 }
 
                 UpdateSprite(updatedPlant.cell);
+                UpdateTile(updatedPlant.cell);
             }
         }
        
@@ -309,6 +311,7 @@ namespace GrandmaGreen.Garden
                     }
                 }
                 UpdateSprite(cell);
+                UpdateTile(cell);
             }
 
             // Spawn a particle system so we know that a plant has been watered

@@ -2,14 +2,15 @@
     <Style src="project://database/Assets/_GrandmaGreen/Scripts/UI/UI%20Scripts/Demos/Collection/CollectionStyles.uss?fileID=7433441132597879392&amp;guid=18a2304118979df468cffa2fbeb84499&amp;type=3#CollectionStyles" />
     <ui:VisualElement name="rootVisualElement" style="width: 100%; height: 100%; display: none;">
         <ui:VisualElement name="dim-bg" style="flex-grow: 1; align-items: center; justify-content: center; background-color: rgba(0, 0, 0, 0.36); flex-direction: row; padding-left: 50px; padding-right: 50px; padding-top: 50px; padding-bottom: 50px;">
-            <ui:VisualElement name="book-content" style="width: auto; height: auto; justify-content: space-between; border-top-left-radius: 0; border-bottom-left-radius: 0; border-top-right-radius: 0; border-bottom-right-radius: 0; border-left-color: rgb(242, 234, 211); border-right-color: rgb(242, 234, 211); border-top-color: rgb(242, 234, 211); border-bottom-color: rgb(242, 234, 211); border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; max-width: 1400px; max-height: 900px; min-width: 1166px; min-height: 750px;">
+            <ui:VisualElement name="book-content" style="width: auto; height: auto; justify-content: space-between; border-top-left-radius: 0; border-bottom-left-radius: 0; border-top-right-radius: 0; border-bottom-right-radius: 0; border-left-color: rgb(242, 234, 211); border-right-color: rgb(242, 234, 211); border-top-color: rgb(242, 234, 211); border-bottom-color: rgb(242, 234, 211); border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; max-width: 1400px; max-height: 900px; min-width: 1166px; min-height: 750px; display: flex;">
                 <ui:VisualElement name="scroll-area" style="align-items: center; justify-content: space-around; display: flex; position: absolute; height: 100%; left: -150px; top: 0; padding-top: 10%; padding-bottom: 10%;">
-                    <ui:VisualElement name="scroll-icon" class="scroll-icon" style="background-image: url(&apos;project://database/Assets/_GrandmaGreen/Art/Particles/PNG%20(Transparent)/circle_02.png?fileID=2800000&amp;guid=10efe9bb98b63c84f924e22838d4a4d5&amp;type=3#circle_02&apos;);" />
-                    <ui:VisualElement name="scroll-icon" class="scroll-icon" style="background-image: url(&apos;project://database/Assets/_GrandmaGreen/Scripts/UI/SampleArt/UI_Bloom_Green.png?fileID=2800000&amp;guid=6101aa3e7af6a4c95b62dd25b25ac41c&amp;type=3#UI_Bloom_Green&apos;);" />
-                    <ui:VisualElement name="scroll-icon" class="scroll-icon" style="background-image: url(&apos;project://database/Assets/_GrandmaGreen/Art/Particles/PNG%20(Transparent)/circle_02.png?fileID=2800000&amp;guid=10efe9bb98b63c84f924e22838d4a4d5&amp;type=3#circle_02&apos;);" />
-                    <ui:VisualElement name="scroll-icon" class="scroll-icon" style="background-image: url(&apos;project://database/Assets/_GrandmaGreen/Art/Particles/PNG%20(Transparent)/circle_02.png?fileID=2800000&amp;guid=10efe9bb98b63c84f924e22838d4a4d5&amp;type=3#circle_02&apos;);" />
-                    <ui:VisualElement name="scroll-icon" class="scroll-icon" style="background-image: url(&apos;project://database/Assets/_GrandmaGreen/Art/Particles/PNG%20(Transparent)/circle_02.png?fileID=2800000&amp;guid=10efe9bb98b63c84f924e22838d4a4d5&amp;type=3#circle_02&apos;);" />
-                    <ui:VisualElement name="scroll-icon" class="scroll-icon" style="background-image: url(&apos;project://database/Assets/_GrandmaGreen/Art/Particles/PNG%20(Transparent)/circle_02.png?fileID=2800000&amp;guid=10efe9bb98b63c84f924e22838d4a4d5&amp;type=3#circle_02&apos;);" />
+                    <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="scroll-icon-1" class="scroll-icon-active scroll-icon" />
+                    <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="scroll-icon-2" class="scroll-icon-inactive scroll-icon" />
+                    <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="scroll-icon-3" class="scroll-icon-inactive scroll-icon" />
+                    <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="scroll-icon-4" class="scroll-icon-inactive scroll-icon" />
+                    <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="scroll-icon-5" class="scroll-icon-inactive scroll-icon" />
+                    <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="scroll-icon-6" class="scroll-icon-inactive scroll-icon" />
+                    <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="scroll-icon-7" class="scroll-icon-inactive scroll-icon" />
                 </ui:VisualElement>
                 <ui:VisualElement name="tab-area" style="height: 100%; width: auto; display: flex; max-height: none; min-height: auto; max-width: 300px; min-width: 300px; position: absolute; justify-content: space-around; left: 88%; padding-top: 10%; padding-bottom: 10%;">
                     <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-tab" class="tab-button active-tab" style="background-image: url(&apos;project://database/Assets/_GrandmaGreen/Art/UI/Collection/UI_Collection_Tab_Plants.PNG?fileID=-1524098056&amp;guid=4d53119dae8c7914e96d64a2f72b10b3&amp;type=3#UI_Collection_Tab_Plants_0&apos;); -unity-background-scale-mode: scale-to-fit; background-color: rgba(188, 188, 188, 0);" />
@@ -18,93 +19,389 @@
                 </ui:VisualElement>
                 <ui:VisualElement name="book-bg" style="position: absolute; width: 100%; height: 100%; background-image: url(&apos;project://database/Assets/_GrandmaGreen/Art/UI/Collection/UI_Collection_Notepad.PNG?fileID=1015371084&amp;guid=e01ac790f1cd14d478fa2f5c4295f9a6&amp;type=3#UI_Collection_Notepad_0&apos;); -unity-background-scale-mode: scale-to-fit;" />
                 <ui:VisualElement name="page-flip" style="bottom: 30px; left: 0; width: 100px; height: 100px; position: absolute; background-image: url(&apos;project://database/Assets/_GrandmaGreen/Art/UI/Collection/UI_Collection_PageFlip.PNG?fileID=-601238173&amp;guid=3c5428224ffa2644bb0492830d46b9c2&amp;type=3#UI_Collection_PageFlip_0&apos;); background-color: rgba(0, 0, 0, 0);" />
-                <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="back-button" class="back-button" />
-                <ui:VisualElement name="plant-content" class="book-page">
+                <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="back-button" class="back-button" style="display: none;" />
+                <ui:VisualElement name="plant-page-1" class="book-page active-page">
                     <ui:GroupBox name="plant-row-1" style="align-items: stretch; justify-content: space-between; flex-direction: row; width: 100%; height: 33%;">
-                        <ui:VisualElement name="plant-unknown" class="item-container">
-                            <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-unknown-button" class="plant-item-button" style="background-image: resource(&apos;Flowers/Pansy/PLA_Pansy_Dom&apos;); -unity-background-image-tint-color: rgba(70, 70, 70, 0.33); background-color: rgba(221, 190, 151, 0);" />
+                        <ui:VisualElement name="Pansy-Dom-M" class="item-container">
+                            <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-unknown-button" class="plant-item-button entry-locked" style="background-image: resource(&apos;Flowers/Pansy/PLA_Pansy_Dom_M&apos;); background-color: rgba(221, 190, 151, 0);" />
                             <ui:Label tabindex="-1" display-tooltip-when-elided="true" name="plant-unknown-name" class="plant-name" />
                         </ui:VisualElement>
-                        <ui:VisualElement name="plant-known" class="item-container">
-                            <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-known-button" class="plant-item-button" style="background-image: resource(&apos;Flowers/Pansy/PLA_Pansy_Rec&apos;);" />
+                        <ui:VisualElement name="Pansy-Dom" class="item-container">
+                            <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-known-button" class="plant-item-button entry-locked" style="background-image: resource(&apos;Flowers/Pansy/PLA_Pansy_Dom&apos;);" />
                             <ui:Label tabindex="-1" text="pansy" display-tooltip-when-elided="true" name="plant-known-name" class="plant-name" />
                         </ui:VisualElement>
-                        <ui:VisualElement name="plant-known" class="item-container">
-                            <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-known-button" class="plant-item-button" style="background-image: resource(&apos;Flowers/Pansy/PLA_Pansy_Het&apos;);" />
+                        <ui:VisualElement name="Pansy-Het" class="item-container">
+                            <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-known-button" class="plant-item-button entry-locked" style="background-image: resource(&apos;Flowers/Pansy/PLA_Pansy_Het&apos;);" />
                             <ui:Label tabindex="-1" text="pansy" display-tooltip-when-elided="true" name="plant-known-name" class="plant-name" />
                         </ui:VisualElement>
-                        <ui:VisualElement name="plant-known" class="item-container">
-                            <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-known-button" class="plant-item-button" style="background-image: resource(&apos;Flowers/Pansy/PLA_Pansy_Dom&apos;);" />
+                        <ui:VisualElement name="Pansy-Rec" class="item-container">
+                            <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-known-button" class="plant-item-button entry-locked" style="background-image: resource(&apos;Flowers/Pansy/PLA_Pansy_Rec&apos;);" />
                             <ui:Label tabindex="-1" text="pansy" display-tooltip-when-elided="true" name="plant-known-name" class="plant-name" />
                         </ui:VisualElement>
-                        <ui:VisualElement name="plant-unknown" class="item-container">
-                            <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-unknown-button" class="plant-item-button" style="background-image: resource(&apos;Flowers/Pansy/PLA_Pansy_Dom&apos;); -unity-background-image-tint-color: rgba(70, 70, 70, 0.33); background-color: rgba(221, 190, 151, 0);" />
+                        <ui:VisualElement name="Pansy-Rec-M" class="item-container">
+                            <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-unknown-button" class="plant-item-button entry-locked" style="background-image: resource(&apos;Flowers/Pansy/PLA_Pansy_Rec_M&apos;); background-color: rgba(221, 190, 151, 0);" />
                             <ui:Label tabindex="-1" display-tooltip-when-elided="true" name="plant-unknown-name" class="plant-name" />
                         </ui:VisualElement>
                     </ui:GroupBox>
                     <ui:GroupBox name="plant-row-2" style="align-items: stretch; justify-content: space-between; flex-direction: row; width: 100%; height: 33%;">
-                        <ui:VisualElement name="plant-known" class="item-container">
-                            <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-known-button" class="plant-item-button" style="background-image: resource(&apos;Flowers/Calla Lily/PLA_CallaLily_Rec_M&apos;);" />
+                        <ui:VisualElement name="CallaLily-Dom-M" class="item-container">
+                            <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-known-button" class="plant-item-button entry-locked" style="background-image: resource(&apos;Flowers/Calla Lily/PLA_CallaLily_Dom_M&apos;);" />
                             <ui:Label tabindex="-1" text="calla lily" display-tooltip-when-elided="true" name="plant-known-name" class="plant-name" />
                         </ui:VisualElement>
-                        <ui:VisualElement name="plant-known" class="item-container">
-                            <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-known-button" class="plant-item-button" style="background-image: resource(&apos;Flowers/Calla Lily/PLA_CallaLily_Rec&apos;);" />
+                        <ui:VisualElement name="CallaLily-Dom" class="item-container">
+                            <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-known-button" class="plant-item-button entry-locked" style="background-image: resource(&apos;Flowers/Calla Lily/PLA_CallaLily_Dom&apos;);" />
                             <ui:Label tabindex="-1" text="calla lily" display-tooltip-when-elided="true" name="plant-known-name" class="plant-name" />
                         </ui:VisualElement>
-                        <ui:VisualElement name="plant-unknown" class="item-container">
-                            <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-unknown-button" class="plant-item-button" style="background-image: resource(&apos;Flowers/Calla Lily/PLA_CallaLily_Dom_M&apos;); -unity-background-image-tint-color: rgba(70, 70, 70, 0.33); background-color: rgba(221, 190, 151, 0);" />
+                        <ui:VisualElement name="CallaLily-Het" class="item-container">
+                            <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-unknown-button" class="plant-item-button entry-locked" style="background-image: resource(&apos;Flowers/Calla Lily/PLA_CallaLily_Het&apos;); background-color: rgba(221, 190, 151, 0);" />
                             <ui:Label tabindex="-1" display-tooltip-when-elided="true" name="plant-unknown-name" class="plant-name" />
                         </ui:VisualElement>
-                        <ui:VisualElement name="plant-known" class="item-container">
-                            <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-known-button" class="plant-item-button" style="background-image: resource(&apos;Flowers/Calla Lily/PLA_CallaLily_Dom&apos;);" />
+                        <ui:VisualElement name="CallaLily-Rec" class="item-container">
+                            <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-known-button" class="plant-item-button entry-locked" style="background-image: resource(&apos;Flowers/Calla Lily/PLA_CallaLily_Rec&apos;);" />
                             <ui:Label tabindex="-1" text="calla lily" display-tooltip-when-elided="true" name="plant-known-name" class="plant-name" />
                         </ui:VisualElement>
-                        <ui:VisualElement name="plant-known" class="item-container">
-                            <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-known-button" class="plant-item-button" style="background-image: resource(&apos;Flowers/Calla Lily/PLA_CallaLily_Dom_M&apos;);" />
+                        <ui:VisualElement name="CallaLily-Rec-M" class="item-container">
+                            <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-known-button" class="plant-item-button entry-locked" style="background-image: resource(&apos;Flowers/Calla Lily/PLA_CallaLily_Rec_M&apos;);" />
                             <ui:Label tabindex="-1" text="calla lily" display-tooltip-when-elided="true" name="plant-known-name" class="plant-name" />
                         </ui:VisualElement>
                     </ui:GroupBox>
                     <ui:GroupBox name="plant-row-3" style="align-items: stretch; justify-content: space-between; flex-direction: row; width: 100%; height: 33%;">
-                        <ui:VisualElement name="plant-known" class="item-container">
-                            <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-known-button" class="plant-item-button" style="background-image: resource(&apos;Flowers/Tulip/PLA_Tulip_Rec_M&apos;);" />
+                        <ui:VisualElement name="Tulip-Dom-M" class="item-container">
+                            <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-known-button" class="plant-item-button entry-locked" style="background-image: resource(&apos;Flowers/Tulip/PLA_Tulip_Dom_M&apos;);" />
                             <ui:Label tabindex="-1" text="tulip" display-tooltip-when-elided="true" name="plant-known-name" class="plant-name" />
                         </ui:VisualElement>
-                        <ui:VisualElement name="plant-unknown" class="item-container">
-                            <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-unknown-button" class="plant-item-button" style="background-image: resource(&apos;Flowers/Tulip/PLA_Tulip_Dom_M&apos;); -unity-background-image-tint-color: rgba(70, 70, 70, 0.33); background-color: rgba(221, 190, 151, 0);" />
+                        <ui:VisualElement name="Tulip-Dom" class="item-container">
+                            <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-unknown-button" class="plant-item-button entry-locked" style="background-image: resource(&apos;Flowers/Tulip/PLA_Tulip_Dom&apos;); background-color: rgba(221, 190, 151, 0);" />
                             <ui:Label tabindex="-1" display-tooltip-when-elided="true" name="plant-unknown-name" class="plant-name" />
                         </ui:VisualElement>
-                        <ui:VisualElement name="plant-known" class="item-container">
-                            <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-known-button" class="plant-item-button" style="background-image: resource(&apos;Flowers/Tulip/PLA_Tulip_Rec&apos;);" />
+                        <ui:VisualElement name="Tulip-Het" class="item-container">
+                            <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-known-button" class="plant-item-button entry-locked" style="background-image: resource(&apos;Flowers/Tulip/PLA_Tulip_Het&apos;);" />
                             <ui:Label tabindex="-1" text="tulip" display-tooltip-when-elided="true" name="plant-known-name" class="plant-name" />
                         </ui:VisualElement>
-                        <ui:VisualElement name="plant-unknown" class="item-container">
-                            <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-unknown-button" class="plant-item-button" style="background-image: resource(&apos;Flowers/Tulip/PLA_Tulip_Dom_M&apos;); -unity-background-image-tint-color: rgba(70, 70, 70, 0.33); background-color: rgba(221, 190, 151, 0);" />
+                        <ui:VisualElement name="Tulip-Rec" class="item-container">
+                            <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-unknown-button" class="plant-item-button entry-locked" style="background-image: resource(&apos;Flowers/Tulip/PLA_Tulip_Rec&apos;); background-color: rgba(221, 190, 151, 0);" />
                             <ui:Label tabindex="-1" display-tooltip-when-elided="true" name="plant-unknown-name" class="plant-name" />
                         </ui:VisualElement>
-                        <ui:VisualElement name="plant-known" class="item-container">
-                            <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-known-button" class="plant-item-button" style="background-image: resource(&apos;Flowers/Tulip/PLA_Tulip_Dom&apos;);" />
+                        <ui:VisualElement name="Tulip-Rec-M" class="item-container">
+                            <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-known-button" class="plant-item-button entry-locked" style="background-image: resource(&apos;Flowers/Tulip/PLA_Tulip_Rec_M&apos;);" />
                             <ui:Label tabindex="-1" text="tulip" display-tooltip-when-elided="true" name="plant-known-name" class="plant-name" />
+                        </ui:VisualElement>
+                    </ui:GroupBox>
+                </ui:VisualElement>
+                <ui:VisualElement name="plant-page-2" class="book-page">
+                    <ui:GroupBox name="plant-row-1" style="align-items: stretch; justify-content: space-between; flex-direction: row; width: 100%; height: 33%;">
+                        <ui:VisualElement name="Rose-Dom-M" class="item-container">
+                            <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-unknown-button" class="plant-item-button entry-locked" style="background-image: resource(&apos;Flowers/Rose/PLA_Rose_Dom_M&apos;); background-color: rgba(221, 190, 151, 0);" />
+                            <ui:Label tabindex="-1" display-tooltip-when-elided="true" name="plant-unknown-name" class="plant-name" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="Rose-Dom" class="item-container">
+                            <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-known-button" class="plant-item-button entry-locked" style="background-image: resource(&apos;Flowers/Rose/PLA_Rose_Dom&apos;);" />
+                            <ui:Label tabindex="-1" text="pansy" display-tooltip-when-elided="true" name="plant-known-name" class="plant-name" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="Rose-Het" class="item-container">
+                            <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-known-button" class="plant-item-button entry-locked" style="background-image: resource(&apos;Flowers/Rose/PLA_Rose_Het&apos;);" />
+                            <ui:Label tabindex="-1" text="pansy" display-tooltip-when-elided="true" name="plant-known-name" class="plant-name" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="Rose-Rec" class="item-container">
+                            <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-known-button" class="plant-item-button entry-locked" style="background-image: resource(&apos;Flowers/Rose/PLA_Rose_Rec&apos;);" />
+                            <ui:Label tabindex="-1" text="pansy" display-tooltip-when-elided="true" name="plant-known-name" class="plant-name" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="Rose-Rec-M" class="item-container">
+                            <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-unknown-button" class="plant-item-button entry-locked" style="background-image: resource(&apos;Flowers/Rose/PLA_Rose_Rec_M&apos;); background-color: rgba(221, 190, 151, 0);" />
+                            <ui:Label tabindex="-1" display-tooltip-when-elided="true" name="plant-unknown-name" class="plant-name" />
+                        </ui:VisualElement>
+                    </ui:GroupBox>
+                    <ui:GroupBox name="plant-row-2" style="align-items: stretch; justify-content: space-between; flex-direction: row; width: 100%; height: 33%;">
+                        <ui:VisualElement name="Dahlia-Dom-M" class="item-container">
+                            <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-known-button" class="plant-item-button entry-locked" style="background-image: resource(&apos;Flowers/Dahlia/PLA_Dahlia_Dom_M&apos;);" />
+                            <ui:Label tabindex="-1" text="calla lily" display-tooltip-when-elided="true" name="plant-known-name" class="plant-name" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="Dahlia-Dom" class="item-container">
+                            <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-known-button" class="plant-item-button entry-locked" style="background-image: resource(&apos;Flowers/Dahlia/PLA_Dahlia_Dom&apos;);" />
+                            <ui:Label tabindex="-1" text="calla lily" display-tooltip-when-elided="true" name="plant-known-name" class="plant-name" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="Dahlia-Het" class="item-container">
+                            <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-unknown-button" class="plant-item-button entry-locked" style="background-image: resource(&apos;Flowers/Dahlia/PLA_Dahlia_Het&apos;); background-color: rgba(221, 190, 151, 0);" />
+                            <ui:Label tabindex="-1" display-tooltip-when-elided="true" name="plant-unknown-name" class="plant-name" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="Dahlia-Rec" class="item-container">
+                            <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-known-button" class="plant-item-button entry-locked" style="background-image: resource(&apos;Flowers/Dahlia/PLA_Dahlia_Rec&apos;);" />
+                            <ui:Label tabindex="-1" text="calla lily" display-tooltip-when-elided="true" name="plant-known-name" class="plant-name" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="Dahlia-Rec-M" class="item-container">
+                            <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-known-button" class="plant-item-button entry-locked" style="background-image: resource(&apos;Flowers/Dahlia/PLA_Dahlia_Rec_M&apos;);" />
+                            <ui:Label tabindex="-1" text="calla lily" display-tooltip-when-elided="true" name="plant-known-name" class="plant-name" />
+                        </ui:VisualElement>
+                    </ui:GroupBox>
+                    <ui:GroupBox name="plant-row-3" style="align-items: stretch; justify-content: space-between; flex-direction: row; width: 100%; height: 33%;">
+                        <ui:VisualElement name="Hyacinth-Dom-M" class="item-container">
+                            <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-known-button" class="plant-item-button entry-locked" style="background-image: resource(&apos;Flowers/Hyacinth/PLA_Hyacinth_Dom_M&apos;);" />
+                            <ui:Label tabindex="-1" text="tulip" display-tooltip-when-elided="true" name="plant-known-name" class="plant-name" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="Hyacinth-Dom" class="item-container">
+                            <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-unknown-button" class="plant-item-button entry-locked" style="background-image: resource(&apos;Flowers/Hyacinth/PLA_Hyacinth_Dom&apos;); background-color: rgba(221, 190, 151, 0);" />
+                            <ui:Label tabindex="-1" display-tooltip-when-elided="true" name="plant-unknown-name" class="plant-name" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="Hyacinth-Het" class="item-container">
+                            <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-known-button" class="plant-item-button entry-locked" style="background-image: resource(&apos;Flowers/Hyacinth/PLA_Hyacinth_Het&apos;);" />
+                            <ui:Label tabindex="-1" text="tulip" display-tooltip-when-elided="true" name="plant-known-name" class="plant-name" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="Hyacinth-Rec" class="item-container">
+                            <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-unknown-button" class="plant-item-button entry-locked" style="background-image: resource(&apos;Flowers/Hyacinth/PLA_Hyacinth_Rec&apos;); background-color: rgba(221, 190, 151, 0);" />
+                            <ui:Label tabindex="-1" display-tooltip-when-elided="true" name="plant-unknown-name" class="plant-name" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="Hyacinth-Rec-M" class="item-container">
+                            <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-known-button" class="plant-item-button entry-locked" style="background-image: resource(&apos;Flowers/Hyacinth/PLA_Hyacinth_Rec_M&apos;);" />
+                            <ui:Label tabindex="-1" text="tulip" display-tooltip-when-elided="true" name="plant-known-name" class="plant-name" />
+                        </ui:VisualElement>
+                    </ui:GroupBox>
+                </ui:VisualElement>
+                <ui:VisualElement name="plant-page-3" class="book-page">
+                    <ui:GroupBox name="plant-row-1" style="align-items: stretch; justify-content: space-between; flex-direction: row; width: 100%; height: 33%;">
+                        <ui:VisualElement name="Crocus-Dom-M" class="item-container">
+                            <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-unknown-button" class="plant-item-button entry-locked" style="background-image: resource(&apos;Flowers/Crocus/PLA_Crocus_Dom_M&apos;); background-color: rgba(221, 190, 151, 0);" />
+                            <ui:Label tabindex="-1" display-tooltip-when-elided="true" name="plant-unknown-name" class="plant-name" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="Crocus-Dom" class="item-container">
+                            <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-known-button" class="plant-item-button entry-locked" style="background-image: resource(&apos;Flowers/Crocus/PLA_Crocus_Dom&apos;);" />
+                            <ui:Label tabindex="-1" text="pansy" display-tooltip-when-elided="true" name="plant-known-name" class="plant-name" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="Crocus-Het" class="item-container">
+                            <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-known-button" class="plant-item-button entry-locked" style="background-image: resource(&apos;Flowers/Crocus/PLA_Crocus_Het&apos;);" />
+                            <ui:Label tabindex="-1" text="pansy" display-tooltip-when-elided="true" name="plant-known-name" class="plant-name" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="Crocus-Rec" class="item-container">
+                            <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-known-button" class="plant-item-button entry-locked" style="background-image: resource(&apos;Flowers/Crocus/PLA_Crocus_Rec&apos;);" />
+                            <ui:Label tabindex="-1" text="pansy" display-tooltip-when-elided="true" name="plant-known-name" class="plant-name" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="Crocus-Rec-M" class="item-container">
+                            <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-unknown-button" class="plant-item-button entry-locked" style="background-image: resource(&apos;Flowers/Crocus/PLA_Crocus_Rec_M&apos;); background-color: rgba(221, 190, 151, 0);" />
+                            <ui:Label tabindex="-1" display-tooltip-when-elided="true" name="plant-unknown-name" class="plant-name" />
+                        </ui:VisualElement>
+                    </ui:GroupBox>
+                    <ui:GroupBox name="plant-row-2" style="align-items: stretch; justify-content: space-around; flex-direction: row; width: 100%; height: 33%;">
+                        <ui:VisualElement name="Cucumber-Dom" class="item-container">
+                            <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-known-button" class="plant-item-button entry-locked" style="background-image: resource(&apos;Vegetables/Cucumber/PLA_Cucumber_HeadLarge&apos;);" />
+                            <ui:Label tabindex="-1" text="calla lily" display-tooltip-when-elided="true" name="plant-known-name" class="plant-name" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="Cucumber-Het" class="item-container">
+                            <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-known-button" class="plant-item-button entry-locked" style="background-image: resource(&apos;Vegetables/Cucumber/PLA_Cucumber_HeadMedium&apos;);" />
+                            <ui:Label tabindex="-1" text="calla lily" display-tooltip-when-elided="true" name="plant-known-name" class="plant-name" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="Cucumber-Rec" class="item-container">
+                            <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-unknown-button" class="plant-item-button entry-locked" style="background-image: resource(&apos;Vegetables/Cucumber/PLA_Cucumber_HeadSmall&apos;); background-color: rgba(221, 190, 151, 0);" />
+                            <ui:Label tabindex="-1" display-tooltip-when-elided="true" name="plant-unknown-name" class="plant-name" />
+                        </ui:VisualElement>
+                    </ui:GroupBox>
+                    <ui:GroupBox name="plant-row-3" style="align-items: stretch; justify-content: space-around; flex-direction: row; width: 100%; height: 33%;">
+                        <ui:VisualElement name="Tomato-Dom" class="item-container">
+                            <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-known-button" class="plant-item-button entry-locked" style="background-image: resource(&apos;Vegetables/Tomato/PLA_Tomato_HeadLarge&apos;);" />
+                            <ui:Label tabindex="-1" text="tulip" display-tooltip-when-elided="true" name="plant-known-name" class="plant-name" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="Tomato-Het" class="item-container">
+                            <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-unknown-button" class="plant-item-button entry-locked" style="background-image: resource(&apos;Vegetables/Tomato/PLA_Tomato_HeadMedium&apos;); background-color: rgba(221, 190, 151, 0);" />
+                            <ui:Label tabindex="-1" display-tooltip-when-elided="true" name="plant-unknown-name" class="plant-name" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="Tomato-Rec" class="item-container">
+                            <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-known-button" class="plant-item-button entry-locked" style="background-image: resource(&apos;Vegetables/Tomato/PLA_Tomato_HeadSmall&apos;);" />
+                            <ui:Label tabindex="-1" text="tulip" display-tooltip-when-elided="true" name="plant-known-name" class="plant-name" />
+                        </ui:VisualElement>
+                    </ui:GroupBox>
+                </ui:VisualElement>
+                <ui:VisualElement name="plant-page-4" class="book-page">
+                    <ui:GroupBox name="plant-row-1" style="align-items: stretch; justify-content: space-around; flex-direction: row; width: 100%; height: 33%;">
+                        <ui:VisualElement name="Pepper-Dom" class="item-container">
+                            <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-known-button" class="plant-item-button entry-locked" style="background-image: resource(&apos;Vegetables/Pepper/PLA_Pepper_HeadLarge&apos;);" />
+                            <ui:Label tabindex="-1" text="pansy" display-tooltip-when-elided="true" name="plant-known-name" class="plant-name" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="Pepper-Het" class="item-container">
+                            <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-known-button" class="plant-item-button entry-locked" style="background-image: resource(&apos;Vegetables/Pepper/PLA_Pepper_HeadMedium&apos;);" />
+                            <ui:Label tabindex="-1" text="pansy" display-tooltip-when-elided="true" name="plant-known-name" class="plant-name" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="Pepper-Rec" class="item-container">
+                            <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-known-button" class="plant-item-button entry-locked" style="background-image: resource(&apos;Vegetables/Pepper/PLA_Pepper_HeadSmall&apos;);" />
+                            <ui:Label tabindex="-1" text="pansy" display-tooltip-when-elided="true" name="plant-known-name" class="plant-name" />
+                        </ui:VisualElement>
+                    </ui:GroupBox>
+                    <ui:GroupBox name="plant-row-2" style="align-items: stretch; justify-content: space-around; flex-direction: row; width: 100%; height: 33%;">
+                        <ui:VisualElement name="SweetPotato-Dom" class="item-container">
+                            <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-known-button" class="plant-item-button entry-locked" style="background-image: resource(&apos;Vegetables/Sweet Potato/PLA_SweetPotato_HeadMedium&apos;);" />
+                            <ui:Label tabindex="-1" text="calla lily" display-tooltip-when-elided="true" name="plant-known-name" class="plant-name" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="SweetPotato-Het" class="item-container">
+                            <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-unknown-button" class="plant-item-button entry-locked" style="background-image: resource(&apos;Vegetables/Sweet Potato/PLA_SweetPotato_HeadLarge&apos;); background-color: rgba(221, 190, 151, 0);" />
+                            <ui:Label tabindex="-1" display-tooltip-when-elided="true" name="plant-unknown-name" class="plant-name" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="SweetPotato-Rec" class="item-container">
+                            <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-known-button" class="plant-item-button entry-locked" style="background-image: resource(&apos;Vegetables/Sweet Potato/PLA_SweetPotato_HeadSmall&apos;);" />
+                            <ui:Label tabindex="-1" text="calla lily" display-tooltip-when-elided="true" name="plant-known-name" class="plant-name" />
+                        </ui:VisualElement>
+                    </ui:GroupBox>
+                    <ui:GroupBox name="plant-row-3" style="align-items: stretch; justify-content: space-around; flex-direction: row; width: 100%; height: 33%;">
+                        <ui:VisualElement name="Corn-Dom" class="item-container">
+                            <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-unknown-button" class="plant-item-button entry-locked" style="background-image: resource(&apos;Vegetables/Corn/PLA_Corn_HeadLarge&apos;); background-color: rgba(221, 190, 151, 0);" />
+                            <ui:Label tabindex="-1" display-tooltip-when-elided="true" name="plant-unknown-name" class="plant-name" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="Corn-Het" class="item-container">
+                            <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-known-button" class="plant-item-button entry-locked" style="background-image: resource(&apos;Vegetables/Corn/PLA_Corn_HeadMedium&apos;);" />
+                            <ui:Label tabindex="-1" text="tulip" display-tooltip-when-elided="true" name="plant-known-name" class="plant-name" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="Corn-Rec" class="item-container">
+                            <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-unknown-button" class="plant-item-button entry-locked" style="background-image: resource(&apos;Vegetables/Corn/PLA_Corn_HeadSmall&apos;); background-color: rgba(221, 190, 151, 0);" />
+                            <ui:Label tabindex="-1" display-tooltip-when-elided="true" name="plant-unknown-name" class="plant-name" />
+                        </ui:VisualElement>
+                    </ui:GroupBox>
+                </ui:VisualElement>
+                <ui:VisualElement name="plant-page-5" class="book-page">
+                    <ui:GroupBox name="plant-row-1" style="align-items: stretch; justify-content: space-around; flex-direction: row; width: 100%; height: 33%;">
+                        <ui:VisualElement name="Turnip-Dom" class="item-container">
+                            <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-known-button" class="plant-item-button entry-locked" style="background-image: resource(&apos;Vegetables/Turnip/PLA_Turnip_HeadLarge&apos;);" />
+                            <ui:Label tabindex="-1" text="pansy" display-tooltip-when-elided="true" name="plant-known-name" class="plant-name" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="Turnip-Het" class="item-container">
+                            <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-known-button" class="plant-item-button entry-locked" style="background-image: resource(&apos;Vegetables/Turnip/PLA_Turnip_HeadMedium&apos;);" />
+                            <ui:Label tabindex="-1" text="pansy" display-tooltip-when-elided="true" name="plant-known-name" class="plant-name" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="Turnip-Rec" class="item-container">
+                            <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-known-button" class="plant-item-button entry-locked" style="background-image: resource(&apos;Vegetables/Turnip/PLA_Turnip_HeadSmall&apos;);" />
+                            <ui:Label tabindex="-1" text="pansy" display-tooltip-when-elided="true" name="plant-known-name" class="plant-name" />
+                        </ui:VisualElement>
+                    </ui:GroupBox>
+                    <ui:GroupBox name="plant-row-2" style="align-items: stretch; justify-content: space-around; flex-direction: row; width: 100%; height: 33%;">
+                        <ui:VisualElement name="Pumpkin-Dom" class="item-container">
+                            <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-known-button" class="plant-item-button entry-locked" style="background-image: resource(&apos;Vegetables/Pumpkin/PLA_Pumpkin_HeadLarge&apos;);" />
+                            <ui:Label tabindex="-1" text="calla lily" display-tooltip-when-elided="true" name="plant-known-name" class="plant-name" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="Pumpkin-Het" class="item-container">
+                            <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-unknown-button" class="plant-item-button entry-locked" style="background-image: resource(&apos;Vegetables/Pumpkin/PLA_Pumpkin_HeadMedium&apos;); background-color: rgba(221, 190, 151, 0);" />
+                            <ui:Label tabindex="-1" display-tooltip-when-elided="true" name="plant-unknown-name" class="plant-name" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="Pumpkin-Rec" class="item-container">
+                            <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-known-button" class="plant-item-button entry-locked" style="background-image: resource(&apos;Vegetables/Pumpkin/PLA_Pumpkin_HeadSmall&apos;);" />
+                            <ui:Label tabindex="-1" text="calla lily" display-tooltip-when-elided="true" name="plant-known-name" class="plant-name" />
+                        </ui:VisualElement>
+                    </ui:GroupBox>
+                    <ui:GroupBox name="plant-row-3" style="align-items: stretch; justify-content: space-around; flex-direction: row; width: 100%; height: 33%;">
+                        <ui:VisualElement name="Apple-Dom" class="item-container">
+                            <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-unknown-button" class="plant-item-button entry-locked" style="background-image: resource(&apos;Fruits/Single Fruits/PLA_Apple_Dom_Inventory&apos;); background-color: rgba(221, 190, 151, 0);" />
+                            <ui:Label tabindex="-1" display-tooltip-when-elided="true" name="plant-unknown-name" class="plant-name" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="Apple-Het" class="item-container">
+                            <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-known-button" class="plant-item-button entry-locked" style="background-image: resource(&apos;Fruits/Single Fruits/PLA_Apple_Het_Inventory&apos;);" />
+                            <ui:Label tabindex="-1" text="tulip" display-tooltip-when-elided="true" name="plant-known-name" class="plant-name" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="Apple-Rec" class="item-container">
+                            <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-unknown-button" class="plant-item-button entry-locked" style="background-image: resource(&apos;Fruits/Single Fruits/PLA_Apple_Rec_Inventory&apos;); background-color: rgba(221, 190, 151, 0);" />
+                            <ui:Label tabindex="-1" display-tooltip-when-elided="true" name="plant-unknown-name" class="plant-name" />
+                        </ui:VisualElement>
+                    </ui:GroupBox>
+                </ui:VisualElement>
+                <ui:VisualElement name="plant-page-6" class="book-page">
+                    <ui:GroupBox name="plant-row-1" style="align-items: stretch; justify-content: space-around; flex-direction: row; width: 100%; height: 33%;">
+                        <ui:VisualElement name="Pear-Dom" class="item-container">
+                            <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-known-button" class="plant-item-button entry-locked" style="background-image: resource(&apos;Fruits/Single Fruits/PLA_Pear_Dom_Inventory&apos;);" />
+                            <ui:Label tabindex="-1" text="pansy" display-tooltip-when-elided="true" name="plant-known-name" class="plant-name" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="Pear-Het" class="item-container">
+                            <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-known-button" class="plant-item-button entry-locked" style="background-image: resource(&apos;Fruits/Single Fruits/PLA_Pear_Het_Inventory&apos;);" />
+                            <ui:Label tabindex="-1" text="pansy" display-tooltip-when-elided="true" name="plant-known-name" class="plant-name" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="Pear-Rec" class="item-container">
+                            <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-known-button" class="plant-item-button entry-locked" style="background-image: resource(&apos;Fruits/Single Fruits/PLA_Pear_Rec_Inventory&apos;);" />
+                            <ui:Label tabindex="-1" text="pansy" display-tooltip-when-elided="true" name="plant-known-name" class="plant-name" />
+                        </ui:VisualElement>
+                    </ui:GroupBox>
+                    <ui:GroupBox name="plant-row-2" style="align-items: stretch; justify-content: space-around; flex-direction: row; width: 100%; height: 33%;">
+                        <ui:VisualElement name="Watermelon-Dom" class="item-container">
+                            <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-known-button" class="plant-item-button entry-locked" style="background-image: resource(&apos;Fruits/Single Fruits/PLA_Watermelon_Dom_Inventory&apos;);" />
+                            <ui:Label tabindex="-1" text="calla lily" display-tooltip-when-elided="true" name="plant-known-name" class="plant-name" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="Watermelon-Het" class="item-container">
+                            <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-unknown-button" class="plant-item-button entry-locked" style="background-image: resource(&apos;Fruits/Single Fruits/PLA_Watermelon_Het_Inventory&apos;); background-color: rgba(221, 190, 151, 0);" />
+                            <ui:Label tabindex="-1" display-tooltip-when-elided="true" name="plant-unknown-name" class="plant-name" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="Watermelon-Rec" class="item-container">
+                            <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-known-button" class="plant-item-button entry-locked" style="background-image: resource(&apos;Fruits/Single Fruits/PLA_Watermelon_Rec_Inventory&apos;);" />
+                            <ui:Label tabindex="-1" text="calla lily" display-tooltip-when-elided="true" name="plant-known-name" class="plant-name" />
+                        </ui:VisualElement>
+                    </ui:GroupBox>
+                    <ui:GroupBox name="plant-row-3" style="align-items: stretch; justify-content: space-around; flex-direction: row; width: 100%; height: 33%;">
+                        <ui:VisualElement name="Cherry-Dom" class="item-container">
+                            <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-unknown-button" class="plant-item-button entry-locked" style="background-image: resource(&apos;Fruits/Single Fruits/PLA_Cherry_Dom_Inventory&apos;); background-color: rgba(221, 190, 151, 0);" />
+                            <ui:Label tabindex="-1" display-tooltip-when-elided="true" name="plant-unknown-name" class="plant-name" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="Cherry-Het" class="item-container">
+                            <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-known-button" class="plant-item-button entry-locked" style="background-image: resource(&apos;Fruits/Single Fruits/PLA_Cherry_Het_Inventory&apos;);" />
+                            <ui:Label tabindex="-1" text="tulip" display-tooltip-when-elided="true" name="plant-known-name" class="plant-name" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="Cherry-Rec" class="item-container">
+                            <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-unknown-button" class="plant-item-button entry-locked" style="background-image: resource(&apos;Fruits/Single Fruits/PLA_Cherry_Rec_Inventory&apos;); background-color: rgba(221, 190, 151, 0);" />
+                            <ui:Label tabindex="-1" display-tooltip-when-elided="true" name="plant-unknown-name" class="plant-name" />
+                        </ui:VisualElement>
+                    </ui:GroupBox>
+                </ui:VisualElement>
+                <ui:VisualElement name="plant-page-7" class="book-page">
+                    <ui:GroupBox name="plant-row-1" style="align-items: stretch; justify-content: space-around; flex-direction: row; width: 100%; height: 33%;">
+                        <ui:VisualElement name="Plum-Dom" class="item-container">
+                            <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-known-button" class="plant-item-button entry-locked" style="background-image: resource(&apos;Fruits/Single Fruits/PLA_Plum_Dom_Inventory&apos;);" />
+                            <ui:Label tabindex="-1" text="pansy" display-tooltip-when-elided="true" name="plant-known-name" class="plant-name" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="Plum-Het" class="item-container">
+                            <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-known-button" class="plant-item-button entry-locked" style="background-image: resource(&apos;Fruits/Single Fruits/PLA_Plum_Het_Inventory&apos;);" />
+                            <ui:Label tabindex="-1" text="pansy" display-tooltip-when-elided="true" name="plant-known-name" class="plant-name" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="Plum-Rec" class="item-container">
+                            <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-known-button" class="plant-item-button entry-locked" style="background-image: resource(&apos;Fruits/Single Fruits/PLA_Plum_Rec_Inventory&apos;);" />
+                            <ui:Label tabindex="-1" text="pansy" display-tooltip-when-elided="true" name="plant-known-name" class="plant-name" />
+                        </ui:VisualElement>
+                    </ui:GroupBox>
+                    <ui:GroupBox name="plant-row-2" style="align-items: stretch; justify-content: space-around; flex-direction: row; width: 100%; height: 33%;">
+                        <ui:VisualElement name="Peach-Dom" class="item-container">
+                            <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-known-button" class="plant-item-button entry-locked" style="background-image: resource(&apos;Fruits/Single Fruits/PLA_Peach_Dom_Inventory&apos;);" />
+                            <ui:Label tabindex="-1" text="calla lily" display-tooltip-when-elided="true" name="plant-known-name" class="plant-name" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="Peach-Het" class="item-container">
+                            <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-unknown-button" class="plant-item-button entry-locked" style="background-image: resource(&apos;Fruits/Single Fruits/PLA_Peach_Het_Inventory&apos;); background-color: rgba(221, 190, 151, 0);" />
+                            <ui:Label tabindex="-1" display-tooltip-when-elided="true" name="plant-unknown-name" class="plant-name" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="Peach-Rec" class="item-container">
+                            <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-known-button" class="plant-item-button entry-locked" style="background-image: resource(&apos;Fruits/Single Fruits/PLA_Peach_Rec_Inventory&apos;);" />
+                            <ui:Label tabindex="-1" text="calla lily" display-tooltip-when-elided="true" name="plant-known-name" class="plant-name" />
+                        </ui:VisualElement>
+                    </ui:GroupBox>
+                    <ui:GroupBox name="plant-row-3" style="align-items: stretch; justify-content: space-around; flex-direction: row; width: 100%; height: 33%;">
+                        <ui:VisualElement name="Blueberry-Dom" class="item-container">
+                            <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-unknown-button" class="plant-item-button entry-locked" style="background-image: resource(&apos;Fruits/Single Fruits/PLA_Blueberry_Dom_Inventory&apos;); background-color: rgba(221, 190, 151, 0);" />
+                            <ui:Label tabindex="-1" display-tooltip-when-elided="true" name="plant-unknown-name" class="plant-name" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="Blueberry-Het" class="item-container">
+                            <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-known-button" class="plant-item-button entry-locked" style="background-image: resource(&apos;Fruits/Single Fruits/PLA_Blueberry_Het_Inventory&apos;);" />
+                            <ui:Label tabindex="-1" text="tulip" display-tooltip-when-elided="true" name="plant-known-name" class="plant-name" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="Blueberry-Rec" class="item-container">
+                            <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="plant-unknown-button" class="plant-item-button entry-locked" style="background-image: resource(&apos;Fruits/Single Fruits/PLA_Blueberry_Rec_Inventory&apos;); background-color: rgba(221, 190, 151, 0);" />
+                            <ui:Label tabindex="-1" display-tooltip-when-elided="true" name="plant-unknown-name" class="plant-name" />
                         </ui:VisualElement>
                     </ui:GroupBox>
                 </ui:VisualElement>
                 <ui:VisualElement name="plant-entry" class="book-page" style="flex-direction: row;">
                     <ui:VisualElement name="plant-entry-bg" style="background-image: url(&apos;project://database/Assets/_GrandmaGreen/Art/UI/Collection/UI_Collection_Plants_Description.PNG?fileID=-529386214&amp;guid=e88c286642e90ad4b88555109a70e7ad&amp;type=3#UI_Collection_Plants_Description_0&apos;); -unity-background-scale-mode: scale-to-fit; width: 100%; height: 100%;" />
                     <ui:Label tabindex="-1" text="Title Name" display-tooltip-when-elided="true" name="plant-entry-name" style="position: absolute; top: 130px; -unity-font-definition: url(&apos;project://database/Assets/_GrandmaGreen/Art/UI/Fonts/Brevia/Brevia-Regular%20SDF.asset?fileID=11400000&amp;guid=b087b45a4ecf25d45a8614016e1dd393&amp;type=2#Brevia-Regular SDF&apos;); -unity-font: url(&apos;project://database/Assets/_GrandmaGreen/Art/UI/Fonts/Brevia/Brevia-Regular.otf?fileID=12800000&amp;guid=5a1bfd81ed39ecd418c1c034114fcc3c&amp;type=3#Brevia-Regular&apos;); -unity-font-style: bold; font-size: 40px; color: rgb(114, 67, 37); right: 100px; width: 320px; height: 70px; background-color: rgba(0, 0, 0, 0); -unity-text-align: middle-center;" />
-                    <ui:GroupBox name="plant-entry-images" style="position: absolute; width: 400px; height: 250px; left: 210px; top: 240px; flex-direction: row; align-items: flex-end; justify-content: space-between;">
-                        <ui:VisualElement name="plant-seeding" style="background-image: resource(&apos;Flowers/Pansy/PLA_Pansy_Seedling&apos;); width: 110px; height: 110px; -unity-background-scale-mode: scale-to-fit;" />
+                    <ui:GroupBox name="plant-entry-images" style="position: absolute; height: 250px; left: 210px; top: 240px; flex-direction: row; align-items: flex-end; justify-content: space-between; display: flex; width: 400px;">
+                        <ui:VisualElement name="plant-seedling" style="background-image: resource(&apos;Flowers/Pansy/PLA_Pansy_Seedling&apos;); width: 110px; height: 110px; -unity-background-scale-mode: scale-to-fit;" />
                         <ui:VisualElement name="plant-growing" style="width: 120px; height: 120px; -unity-background-scale-mode: scale-to-fit; background-image: resource(&apos;Flowers/Pansy/PLA_Pansy_Growing&apos;);" />
                         <ui:VisualElement name="plant-mature" style="width: 150px; height: 150px; background-image: resource(&apos;Flowers/Pansy/PLA_Pansy_Rec&apos;); -unity-background-scale-mode: scale-to-fit;" />
                     </ui:GroupBox>
                     <ui:VisualElement name="plant-entry-seed" style="position: absolute; background-color: rgba(0, 0, 0, 0); background-image: resource(&apos;Seed Packets/SEED_Pear&apos;); -unity-background-scale-mode: scale-to-fit; width: 120px; height: 140px; top: 170px; left: 125px;" />
                     <ui:GroupBox name="plant-sizes" style="position: absolute; width: 80px; height: 240px; background-color: rgba(0, 0, 0, 0); left: 30px; top: 360px; align-items: center; justify-content: space-between;">
-                        <ui:VisualElement name="small" style="width: 60px; height: 60px; background-image: url(&apos;project://database/Assets/_GrandmaGreen/Art/UI/Inventory/Resources/UI_Inventory_Badge_S.png?fileID=2800000&amp;guid=99824888d26d345bb97f508d5a71b3cb&amp;type=3#UI_Inventory_Badge_S&apos;); -unity-background-scale-mode: scale-to-fit;" />
-                        <ui:VisualElement name="mid" style="width: 60px; height: 60px; background-image: url(&apos;project://database/Assets/_GrandmaGreen/Art/UI/Inventory/Resources/UI_Inventory_Badge_M.png?fileID=2800000&amp;guid=e26545dbd39ba43d9b70bdb78834b41e&amp;type=3#UI_Inventory_Badge_M&apos;); -unity-background-scale-mode: scale-to-fit;" />
-                        <ui:VisualElement name="large-not-obtained" style="width: 60px; height: 60px; background-image: url(&apos;project://database/Assets/_GrandmaGreen/Art/UI/Inventory/Resources/UI_Inventory_Badge_L.png?fileID=2800000&amp;guid=7f2d400b6516041c4aaf366d634d3b53&amp;type=3#UI_Inventory_Badge_L&apos;); -unity-background-scale-mode: scale-to-fit; -unity-background-image-tint-color: rgba(207, 125, 93, 0.7);" />
+                        <ui:VisualElement name="small" class="size-badge size-badge-locked" style="width: 60px; height: 60px; background-image: url(&apos;project://database/Assets/_GrandmaGreen/Art/UI/Inventory/Resources/UI_Inventory_Badge_S.png?fileID=2800000&amp;guid=99824888d26d345bb97f508d5a71b3cb&amp;type=3#UI_Inventory_Badge_S&apos;); -unity-background-scale-mode: scale-to-fit;" />
+                        <ui:VisualElement name="mid" class="size-badge size-badge-locked" style="width: 60px; height: 60px; background-image: url(&apos;project://database/Assets/_GrandmaGreen/Art/UI/Inventory/Resources/UI_Inventory_Badge_M.png?fileID=2800000&amp;guid=e26545dbd39ba43d9b70bdb78834b41e&amp;type=3#UI_Inventory_Badge_M&apos;); -unity-background-scale-mode: scale-to-fit;" />
+                        <ui:VisualElement name="large" class="size-badge size-badge-locked" style="width: 60px; height: 60px; background-image: url(&apos;project://database/Assets/_GrandmaGreen/Art/UI/Inventory/Resources/UI_Inventory_Badge_L.png?fileID=2800000&amp;guid=7f2d400b6516041c4aaf366d634d3b53&amp;type=3#UI_Inventory_Badge_L&apos;); -unity-background-scale-mode: scale-to-fit;" />
                     </ui:GroupBox>
                     <ui:Label tabindex="-1" text="Plants are super cool! Grab a few and throw em in a salad and there&apos;s a healthy meal right there--amazing isn&apos;t it!" display-tooltip-when-elided="true" name="plant-description" style="position: absolute; -unity-font-style: normal; font-size: 20px; white-space: normal; -unity-font-definition: url(&apos;project://database/Assets/_GrandmaGreen/Art/UI/Fonts/Brevia/Brevia-Regular%20SDF.asset?fileID=11400000&amp;guid=b087b45a4ecf25d45a8614016e1dd393&amp;type=2#Brevia-Regular SDF&apos;); -unity-font: url(&apos;project://database/Assets/_GrandmaGreen/Art/UI/Fonts/Brevia/Brevia-Regular.otf?fileID=12800000&amp;guid=5a1bfd81ed39ecd418c1c034114fcc3c&amp;type=3#Brevia-Regular&apos;); color: rgb(114, 67, 37); left: 750px; top: 250px; width: 300px; height: 250px;" />
                     <ui:Label tabindex="-1" text="genotype: BB" display-tooltip-when-elided="true" name="plant-genotype" style="position: absolute; color: rgb(114, 67, 37); -unity-font-definition: url(&apos;project://database/Assets/_GrandmaGreen/Art/UI/Fonts/Brevia/Brevia-Regular%20SDF.asset?fileID=11400000&amp;guid=b087b45a4ecf25d45a8614016e1dd393&amp;type=2#Brevia-Regular SDF&apos;); -unity-font: url(&apos;project://database/Assets/_GrandmaGreen/Art/UI/Fonts/Brevia/Brevia-Regular.otf?fileID=12800000&amp;guid=5a1bfd81ed39ecd418c1c034114fcc3c&amp;type=3#Brevia-Regular&apos;); font-size: 30px; -unity-font-style: bold; left: 190px; top: 560px; width: 450px; height: 50px; -unity-text-align: middle-center;" />
-                    <ui:Label tabindex="-1" text="x  003" display-tooltip-when-elided="true" name="plant-awards-won" style="position: absolute; color: rgb(114, 67, 37); font-size: 30px; -unity-font-style: bold; -unity-font-definition: url(&apos;project://database/Assets/_GrandmaGreen/Art/UI/Fonts/Brevia/Brevia-Regular%20SDF.asset?fileID=11400000&amp;guid=b087b45a4ecf25d45a8614016e1dd393&amp;type=2#Brevia-Regular SDF&apos;); -unity-font: url(&apos;project://database/Assets/_GrandmaGreen/Art/UI/Fonts/Brevia/Brevia-Regular.otf?fileID=12800000&amp;guid=5a1bfd81ed39ecd418c1c034114fcc3c&amp;type=3#Brevia-Regular&apos;); left: 870px; top: 580px; width: 150px; height: 50px; -unity-text-align: middle-left;" />
-                    <ui:Label tabindex="-1" text="January 18th, 2020" display-tooltip-when-elided="true" name="plant-date" style="position: absolute; color: rgb(114, 67, 37); font-size: 30px; -unity-font-style: bold; -unity-font-definition: url(&apos;project://database/Assets/_GrandmaGreen/Art/UI/Fonts/Brevia/Brevia-Regular%20SDF.asset?fileID=11400000&amp;guid=b087b45a4ecf25d45a8614016e1dd393&amp;type=2#Brevia-Regular SDF&apos;); -unity-font: url(&apos;project://database/Assets/_GrandmaGreen/Art/UI/Fonts/Brevia/Brevia-Regular.otf?fileID=12800000&amp;guid=5a1bfd81ed39ecd418c1c034114fcc3c&amp;type=3#Brevia-Regular&apos;); width: 370px; height: 50px; left: 300px; top: 130px; -unity-text-align: middle-left;" />
+                    <ui:Label tabindex="-1" text="x  000" display-tooltip-when-elided="true" name="plant-awards-won" style="position: absolute; color: rgb(114, 67, 37); font-size: 30px; -unity-font-style: bold; -unity-font-definition: url(&apos;project://database/Assets/_GrandmaGreen/Art/UI/Fonts/Brevia/Brevia-Regular%20SDF.asset?fileID=11400000&amp;guid=b087b45a4ecf25d45a8614016e1dd393&amp;type=2#Brevia-Regular SDF&apos;); -unity-font: url(&apos;project://database/Assets/_GrandmaGreen/Art/UI/Fonts/Brevia/Brevia-Regular.otf?fileID=12800000&amp;guid=5a1bfd81ed39ecd418c1c034114fcc3c&amp;type=3#Brevia-Regular&apos;); left: 870px; top: 580px; width: 150px; height: 50px; -unity-text-align: middle-left;" />
+                    <ui:Label tabindex="-1" text="January 18th, 2020" display-tooltip-when-elided="true" name="plant-date" style="position: absolute; color: rgb(114, 67, 37); font-size: 30px; -unity-font-style: bold; -unity-font-definition: url(&apos;project://database/Assets/_GrandmaGreen/Art/UI/Fonts/Brevia/Brevia-Regular%20SDF.asset?fileID=11400000&amp;guid=b087b45a4ecf25d45a8614016e1dd393&amp;type=2#Brevia-Regular SDF&apos;); -unity-font: url(&apos;project://database/Assets/_GrandmaGreen/Art/UI/Fonts/Brevia/Brevia-Regular.otf?fileID=12800000&amp;guid=5a1bfd81ed39ecd418c1c034114fcc3c&amp;type=3#Brevia-Regular&apos;); width: 370px; height: 50px; left: 300px; top: 130px; -unity-text-align: middle-left; display: none;" />
                 </ui:VisualElement>
                 <ui:VisualElement name="friend-content" class="book-page">
                     <ui:Button tabindex="-1" display-tooltip-when-elided="true" class="friend-sticker-button" style="background-image: url(&apos;project://database/Assets/_GrandmaGreen/Art/UI/Collection/UI_Collection_Friend_Cotton_Sticker.png?fileID=2800000&amp;guid=c305fce683e702a42868c31f1e2a102e&amp;type=3#UI_Collection_Friend_Cotton_Sticker&apos;); position: absolute; left: 50px; top: 140px; -unity-background-image-tint-color: rgba(0, 0, 0, 0.35);" />
@@ -118,7 +415,7 @@
                     <ui:Button tabindex="-1" display-tooltip-when-elided="true" class="friend-sticker-button" style="background-image: url(&apos;project://database/Assets/_GrandmaGreen/Art/UI/Collection/UI_Collection_Friend_Cotton_Sticker.png?fileID=2800000&amp;guid=c305fce683e702a42868c31f1e2a102e&amp;type=3#UI_Collection_Friend_Cotton_Sticker&apos;); position: absolute; left: 700px; top: 380px; rotate: 0; -unity-background-image-tint-color: rgba(0, 0, 0, 0.36);" />
                     <ui:Button tabindex="-1" display-tooltip-when-elided="true" class="friend-sticker-button" style="background-image: url(&apos;project://database/Assets/_GrandmaGreen/Art/UI/Collection/UI_Collection_Friend_Apple_Sticker.png?fileID=2800000&amp;guid=4add99e1bc6832a4da527ee33d6443e7&amp;type=3#UI_Collection_Friend_Apple_Sticker&apos;); position: absolute; left: 530px; top: 500px; rotate: 75deg; -unity-background-image-tint-color: rgba(0, 0, 0, 0.33);" />
                 </ui:VisualElement>
-                <ui:VisualElement name="friend-entry" class="book-page active-page">
+                <ui:VisualElement name="friend-entry" class="book-page active-page" style="display: none;">
                     <ui:VisualElement name="friend-name-banner" style="position: absolute; width: 400px; height: 110px; background-image: url(&apos;project://database/Assets/_GrandmaGreen/Art/UI/Collection/UI_Collection_Friend_Title.PNG?fileID=729514315&amp;guid=7cb783d5aebfc634fa8524048e62bc12&amp;type=3#UI_Collection_Friend_Title_0&apos;); -unity-background-scale-mode: scale-to-fit; left: 150px; top: 170px;" />
                     <ui:Label tabindex="-1" text="golem name" display-tooltip-when-elided="true" name="friend-name" style="position: absolute; left: 180px; top: 185px; width: 340px; height: 70px; -unity-text-align: middle-center; font-size: 35px; -unity-font-style: bold; -unity-font-definition: url(&apos;project://database/Assets/_GrandmaGreen/Art/UI/Fonts/Brevia/Brevia-Regular%20SDF.asset?fileID=11400000&amp;guid=b087b45a4ecf25d45a8614016e1dd393&amp;type=2#Brevia-Regular SDF&apos;); -unity-font: url(&apos;project://database/Assets/_GrandmaGreen/Art/UI/Fonts/Brevia/Brevia-Regular.otf?fileID=12800000&amp;guid=5a1bfd81ed39ecd418c1c034114fcc3c&amp;type=3#Brevia-Regular&apos;); color: rgb(114, 67, 37);" />
                     <ui:VisualElement name="friend-pic-bg" style="background-image: url(&apos;project://database/Assets/_GrandmaGreen/Art/UI/Collection/UI_Collection_Friend_Blank.PNG?fileID=373487811&amp;guid=2d4d69fa1f8114240b438adb8e4b331f&amp;type=3#UI_Collection_Friend_Blank_0&apos;); width: 400px; height: 450px; -unity-background-scale-mode: scale-to-fit; position: absolute; top: 140px; left: 670px;" />

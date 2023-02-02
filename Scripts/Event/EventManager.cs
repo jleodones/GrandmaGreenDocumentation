@@ -208,6 +208,15 @@ namespace GrandmaGreen
             EVENT_WATER_PLANT?.Invoke(cell);
         }
         #endregion
+        
+        #region Customization
+        public event Action<IInventoryItem> EVENT_UPDATE_PLANT_COLLECTIONS;
+
+        public void HandleEVENT_UPDATE_PLANT_COLLECTIONS(IInventoryItem item)
+        {
+            EVENT_UPDATE_PLANT_COLLECTIONS.Invoke(item);
+        }
+        #endregion
        
         #region  Customization.
         public event Action<IInventoryItem> EVENT_INVENTORY_CUSTOMIZATION_START;

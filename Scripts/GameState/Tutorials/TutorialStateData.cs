@@ -50,6 +50,9 @@ namespace GrandmaGreen
         public event System.Action enableSeedPacket;
         public event System.Action disableSeedPacket;
 
+        public event System.Action enableWatering;
+        public event System.Action disableWatering;
+
         public event System.Action tapHereMailbox;
         public event System.Action tapHereGrandma;
         public event System.Action tapHereExit;
@@ -146,40 +149,53 @@ namespace GrandmaGreen
 
                 case 3:
                     playerToolData.onToolSelectionStart -= onToolMenuFlag.Raise;
+                    gardenToolSet.onTill += onGardeningFlag.Raise;
 
-                    gardenToolSet.onPlant += disableTrowel;
-                    gardenToolSet.onWater += onGardeningFlag.Raise;
+                    disableSeedPacket?.Invoke();
+                    disableWatering?.Invoke();
 
                     break;
 
                 case 4:
-                    gardenToolSet.onPlant -= disableTrowel;
-                    gardenToolSet.onWater -= onGardeningFlag.Raise;
+                    disableTrowel?.Invoke();
+                    enableSeedPacket?.Invoke();
 
-                    //seed planted + watered, grown one stage
-                    //TODO: Trigger gramma dialogue
+                    gardenToolSet.onTill -= onGardeningFlag.Raise;
+                    gardenToolSet.onPlant += onGardeningFlag.Raise;
+                    break;
+                case 5:
+                    disableSeedPacket?.Invoke();
+                    enableWatering?.Invoke();
+
+                    gardenToolSet.onPlant -= onGardeningFlag.Raise;
+                    gardenToolSet.onWater += onGardeningFlag.Raise;
+                    break;
+                case 6:
+                    disableTools?.Invoke();
+
+                    gardenToolSet.onWater -= onGardeningFlag.Raise;
 
                     playerToolData.EmptySelection();
                     enableLevelTransition?.Invoke();
                     tapHereExit?.Invoke();
-
                     break;
-
-                case 5:
+                case 7:
                     // Player has entered town square
                     disableLevelTransition?.Invoke();
                     break;
 
-                case 6:
+                case 8:
                     //Player has talked to phoebe, bulletin board
                     enableLevelTransition?.Invoke();
                     break;
 
-                case 7:
+                case 9:
                     //Player has returned to garden
                     //TODO: Force Grow plant, prevent from dying
                     gardenToolSet.onHarvest += onHarvestFlag.Raise;
                     disableSeedPacket?.Invoke();
+                    disableWatering?.Invoke();
+                    disableLevelTransition?.Invoke();
                     break;
             }
         }
@@ -192,6 +208,8 @@ namespace GrandmaGreen
             coreLoopTutorial.storylineData.onCompletion -= CoreLoopTutorialComplete;
 
             enableSeedPacket?.Invoke();
+            enableWatering?.Invoke();
+            enableLevelTransition?.Invoke();
         }
 
         #endregion

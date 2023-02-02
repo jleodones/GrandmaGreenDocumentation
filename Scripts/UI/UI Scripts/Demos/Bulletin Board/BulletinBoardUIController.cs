@@ -17,9 +17,22 @@ namespace GrandmaGreen
             
             // Setting up default contest.
             // TODO: Set this up for randomization later.
-            currentBigContest.targetPlant = new Plant((ushort) PlantId.Rose, "Rose", new Genotype("AaBb"));
+            currentBigContest.targetPlant = new Plant((ushort) PlantId.Rose, "Tulip", new Genotype("AaBb"));
             currentBigContest.rewardMoney = 200;
         }
-        
+
+        // TODO: Make this more advanced. Currently only evaluates based on plant type.
+        public bool EvaluatePlant(Plant submissionPlant)
+        {
+            // Check if they're the same plant lol.
+            if (submissionPlant.itemID == currentBigContest.targetPlant.itemID)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }

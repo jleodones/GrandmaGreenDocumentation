@@ -1,2 +1,24 @@
 #seeds-blossom {
 }
+
+.option-button {
+    width: 30%;
+    height: 85%;
+    background-color: rgba(0, 0, 0, 0);
+    border-left-color: rgba(0, 0, 0, 0);
+    border-right-color: rgba(0, 0, 0, 0);
+    border-top-color: rgba(0, 0, 0, 0);
+    border-bottom-color: rgba(0, 0, 0, 0);
+    align-items: center;
+    justify-content: center;
+}
+
+.option-text {
+    color: rgba(114, 67, 37, 255);
+    font-size: 358%;
+    -unity-text-align: middle-center;
+    white-space: normal;
+    -unity-font: url('project://database/Assets/_GrandmaGreen/Art/UI/Fonts/Brevia/Brevia-Regular.otf?fileID=12800000&guid=5a1bfd81ed39ecd418c1c034114fcc3c&type=3#Brevia-Regular');
+    -unity-font-definition: none;
+    -unity-font-style: bold;
+}

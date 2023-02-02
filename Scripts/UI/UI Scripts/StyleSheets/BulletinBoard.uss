@@ -11,5 +11,19 @@
     -unity-font-style: bold;
     -unity-font: url('project://database/Assets/_GrandmaGreen/Art/UI/Fonts/Brevia/Brevia-Regular.otf?fileID=12800000&guid=5a1bfd81ed39ecd418c1c034114fcc3c&type=3#Brevia-Regular');
     -unity-font-definition: url('project://database/Assets/_GrandmaGreen/Art/UI/Fonts/Brevia/Brevia-Regular%20SDF.asset?fileID=11400000&guid=b087b45a4ecf25d45a8614016e1dd393&type=2#Brevia-Regular SDF');
-    color: rgba(114, 67, 37, 255);
+    color: rgb(114, 67, 37);
+}
+
+.daily-tasks {
+    -unity-font-definition: none;
+    -unity-font: url('project://database/Assets/_GrandmaGreen/Art/UI/Fonts/Brevia/Brevia-Regular.otf?fileID=12800000&guid=5a1bfd81ed39ecd418c1c034114fcc3c&type=3#Brevia-Regular');
+    font-size: 18px;
+    -unity-font-style: bold;
+    color: rgba(255, 255, 255, 255);
+    top: 30%;
+    left: 7.5%;
+    width: 45%;
+    height: 12.5%;
+    white-space: normal;
+    -unity-text-align: middle-left;
 }

@@ -65,11 +65,15 @@ namespace GrandmaGreen.Entities
                 return;
             }
 
+            ClearActionQueue();
+
             if (grandmaPos.x < pos.x) {
                 SetDestination(pos - new Vector3(1.5f, 0, 0));
             } else {
                 SetDestination(pos + new Vector3(1.5f, 0, 0));
             }
+
+            entity.onEntityPathStopped?.Invoke();
         }
 
         public Vector3 GetEntityPos()

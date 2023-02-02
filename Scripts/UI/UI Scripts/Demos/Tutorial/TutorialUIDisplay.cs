@@ -17,6 +17,20 @@ namespace GrandmaGreen
         private SlideshowData data;
         private int currentPageIndex = 0;
 
+        public override void OpenUI()
+        {
+
+            EventManager.instance.HandleEVENT_CLOSE_HUD();
+            base.OpenUI();
+        }
+
+        public override void CloseUI()
+        {
+
+            EventManager.instance.HandleEVENT_OPEN_HUD();
+            base.CloseUI();
+        }
+
         public override void Load()
         {
             //Assign Variables
@@ -36,12 +50,18 @@ namespace GrandmaGreen
             this.data = data;
 
             //Disable exit button
-            exitButton.SetEnabled(false);
-            
-            //Disable left arrow
-            leftArrow.SetEnabled(false);    
-            rightArrow.SetEnabled(true);
-            
+            leftArrow.SetEnabled(false);
+            if (data.slides.Count > 1)
+            {
+                exitButton.SetEnabled(false);
+                rightArrow.SetEnabled(true);
+            }
+            else
+            {
+                exitButton.SetEnabled(true);
+                rightArrow.SetEnabled(false);
+            }
+
             currentPageIndex = 0;
             SyncPageNavigator(currentPageIndex);
 
@@ -51,7 +71,7 @@ namespace GrandmaGreen
 
             pageNavigator.Clear();
 
-            for(int i = 0; i < data.slides.Count; i++)
+            for (int i = 0; i < data.slides.Count; i++)
             {
                 if (i == 0)
                 {
@@ -71,9 +91,10 @@ namespace GrandmaGreen
             SetText("caption", page.caption);
         }
 
-        void MockChangeSlide(ClickEvent evt) {
+        void MockChangeSlide(ClickEvent evt)
+        {
             Button arrow = evt.currentTarget as Button;
-            if(arrow.name == "leftArrow")
+            if (arrow.name == "leftArrow")
             {
                 currentPageIndex--;
                 rightArrow.SetEnabled(true);

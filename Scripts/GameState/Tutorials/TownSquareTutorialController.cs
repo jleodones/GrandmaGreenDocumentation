@@ -16,7 +16,7 @@ namespace GrandmaGreen
         public BulletinBoardUIDisplay bulletinBoardUI;
 
         public string phoebeIntroNode = "Story_1";
-        public string phoebeCrossbreedingNode = "Story_1";
+        public string phoebeCrossbreedingNode = "Story_2";
 
         public TapHereUI phoebeTapHere;
         public TapHereUI bulletinBoardTapHere;
@@ -76,11 +76,6 @@ namespace GrandmaGreen
             {
                 shoppingUI.onPanelClosed += TriggerCrossbreedingDialogue;
             }
-        }
-
-        void CheckCrossbreedingPossible()
-        {
-
         }
 
 

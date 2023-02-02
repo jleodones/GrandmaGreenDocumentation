@@ -369,6 +369,11 @@ namespace GrandmaGreen.Collections
             bool isMega = genotype.generation == Genotype.Generation.F2;
             string suffix = "";
 
+            if (IsFruit(type))
+            {
+                return GetFruitTree(type, genotype, growthStage);
+            }
+
             switch (growthStage)
             {
                 case 0:
@@ -422,6 +427,10 @@ namespace GrandmaGreen.Collections
                         suffix = "_Dom";
                         break;
                 }
+            }
+            else
+            {
+                return GetVegetableHead(type, genotype, 2);
             }
             Sprite[] sheet = Resources.LoadAll<Sprite>(plant.plantType.ToString() + "s/" + plant.name + "/" + plant.spriteBasePath);
             Sprite seedSprite = sheet.Single(s => s.name == plant.spriteBasePath + suffix);

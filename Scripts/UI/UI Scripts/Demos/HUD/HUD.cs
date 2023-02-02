@@ -29,13 +29,14 @@ namespace GrandmaGreen.UI.HUD
         private HUDController m_controller;
 
 
-        public void Start()
+        public void Init()
         {
             m_controller = new(m_rootVisualElement);
+        }
 
+        public void Start()
+        {
             m_controller.RegisterButtonCallbacks();
-
-
 
             if (SceneManager.GetActiveScene().name == "SetupTest")
             {
@@ -77,6 +78,8 @@ namespace GrandmaGreen.UI.HUD
             EventManager.instance.EVENT_CLOSE_HUD_ANIMATED += CloseHUDAnimated;
             EventManager.instance.EVENT_UPDATE_MONEY_DISPLAY += UpdateMoneyDisplay;
             EventManager.instance.EVENT_TOGGLE_CUSTOMIZATION_MODE += ToggleCustomizationMode;
+
+            Init();
         }
 
         public override void Unload()

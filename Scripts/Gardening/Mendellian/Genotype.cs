@@ -22,11 +22,11 @@ namespace GrandmaGreen.Garden
             VerySmall
         };
         public enum Trait {
-            [Description("Dom")]
+            [Description("Homozygous Dominant")]
             Dominant,
-            [Description("Het")]
+            [Description("Heterozygous")]
             Heterozygous,
-            [Description("Rec")]
+            [Description("Homozygous Recessive")]
             Recessive
         };
         public enum Generation { P1, F1, F2 };
@@ -105,6 +105,9 @@ namespace GrandmaGreen.Garden
                         size_suf = "M";
                         break;
                     case Size.Big:
+                        size_suf = "L";
+                        break;
+                    case Size.VeryBig:
                         size_suf = "L";
                         break;
                 }

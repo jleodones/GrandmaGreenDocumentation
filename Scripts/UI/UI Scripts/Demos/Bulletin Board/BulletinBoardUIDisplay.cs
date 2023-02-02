@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using GrandmaGreen.Collections;
+using GrandmaGreen.Mail;
 using GrandmaGreen.SaveSystem;
 using Sirenix.OdinInspector;
 using UnityEngine;
@@ -16,12 +17,19 @@ namespace GrandmaGreen
 
         public CollectionsSO collectionsSO;
 
+        public MailboxModel mailboxModel;
+        
         [ShowInInspector]
         public BulletinBoardUIController controller;
 
         public SpookuleleAudio.ASoundContainer openSFX;
         public SpookuleleAudio.ASoundContainer closeSFX;
-
+        
+        // Letter templates, basic in-editor for now.
+        // TODO: Let's move this to the mailbox model later?
+        public Letter contestLostLetter;
+        public Letter contestWonLetter;
+        
         public void Start()
         {
             // Instantiate controller.
@@ -97,7 +105,7 @@ namespace GrandmaGreen
                 };
             };
 
-            // On submit, remove plant from inventory, add money (base 100) to inventory, and close the entry box window.
+            // On submit, remove plant from inventory, check the submission, and close the entry box window.
             RegisterButtonCallback("submissionBoxSubmitButton", () =>
             {
                 if (submissionJar.selectedIndex >= 0 && submissionJar.selectedIndex < submissionJar.itemsSource.Count)
@@ -105,14 +113,22 @@ namespace GrandmaGreen
                     // Close the list view.
                     m_rootVisualElement.Q<VisualElement>("submissionBoxContainer").style.display = DisplayStyle.None;
 
-                    // Add 100 coins.
-                    EventManager.instance.HandleEVENT_INVENTORY_ADD_MONEY(200);
-
                     // Remove plant from inventory.
                     Plant p = (Plant)submissionJar.selectedItem;
                     EventManager.instance.HandleEVENT_INVENTORY_REMOVE_PLANT(p.itemID, p.plantGenotype);
 
                     SetItemSource();
+                    
+                    // Check if the submission was good or not.
+                    if (controller.EvaluatePlant(p))
+                    {
+                        EventManager.instance.HandleEVENT_INVENTORY_ADD_MONEY(controller.currentBigContest.rewardMoney);
+                        mailboxModel.SendLetterNow(contestWonLetter);
+                    }
+                    else
+                    {
+                        mailboxModel.SendLetterNow(contestLostLetter);
+                    }
                 }
             });
         }

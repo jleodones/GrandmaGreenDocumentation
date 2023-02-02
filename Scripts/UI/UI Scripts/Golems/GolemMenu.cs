@@ -58,7 +58,7 @@ namespace GrandmaGreen.UI.Golems
             Bounds box = golemController.GetGolemBox();
 
             // Set menu location based box size
-            SetLocation(box.center + new Vector3(0, box.extents.y + 1.2f, 0));
+            SetLocation(transform.position);
             GetComponentInParent<GolemController>().onEntityMove += SetLocation;
             
             // Display.
@@ -105,8 +105,12 @@ namespace GrandmaGreen.UI.Golems
                 Vector3 UIpos = box.center + new Vector3(0, box.extents.y + 1.2f, 0);
                 Vector2 newPosition = RuntimePanelUtils.CameraTransformWorldToPanel(
                     root.panel, UIpos, Camera.main);
-                root.transform.position = newPosition.WithNewX(newPosition.x -
-                    root.layout.width / 2);
+
+                root.transform.position = newPosition;
+
+                // Moved UI to midpoint through UXML
+                //root.transform.position = newPosition.WithNewX(newPosition.x -
+                //    root.layout.width / 2);
             }
         }
     }

@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using System.Collections.Generic;
 using Sirenix.OdinInspector;
 
@@ -6,6 +7,7 @@ namespace GrandmaGreen.Mail
 {
     using Timer = TimeLayer.TimeLayer;
 
+    [Serializable]
     public struct Letter
     {
         public System.DateTime TimeSent;
@@ -59,11 +61,22 @@ namespace GrandmaGreen.Mail
             letters.Add(time, new Letter(time, subject, heading, body, signature, attachments));
         }
 
+        public void SendLetterNow(Letter letter)
+        {
+            var time = System.DateTime.Now;
+            letters.Add(time, letter);
+        }
+
         public void SendLetterAt(System.DateTime time, string subject, string heading, string body,
             string signature, ushort[] attachments = default(ushort[]))
         {
             Debug.Log("Sending letter at " + time);
             letterQueue.Add(time, new Letter(time, subject, heading, body, signature, attachments));
+        }
+
+        public void SendLetterAt(System.DateTime time, Letter letter)
+        {
+            letterQueue.Add(time, letter);
         }
 
         public List<Letter> GetLetters()

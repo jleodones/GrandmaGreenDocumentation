@@ -42,6 +42,7 @@ namespace GrandmaGreen
         public CinemachineVirtualCamera playerCamera;
         public Transform[] hintPositions;
         public Transform toTownSquarePosition;
+        public Collider mailboxColiider;
 
         void Awake()
         {
@@ -67,6 +68,9 @@ namespace GrandmaGreen
 
             tutorialStateData.disableSeedPacket += DisableSeeds;
             tutorialStateData.enableSeedPacket += EnableSeeds;
+            tutorialStateData.disableWatering += DisableWatering;
+            tutorialStateData.enableWatering += EnableWatering;
+
 
             tutorialStateData.introduceFirstGolem += TriggerGolemSpawnDialogue;
             tutorialStateData.explainEvolvedGolem += TriggerGolemEvolveDialogue;
@@ -87,6 +91,8 @@ namespace GrandmaGreen
 
             tutorialStateData.disableSeedPacket -= DisableSeeds;
             tutorialStateData.enableSeedPacket -= EnableSeeds;
+            tutorialStateData.disableWatering -= DisableWatering;
+            tutorialStateData.enableWatering -= EnableWatering;
 
 
             tutorialStateData.introduceFirstGolem -= TriggerGolemSpawnDialogue;
@@ -104,19 +110,19 @@ namespace GrandmaGreen
         #region  Core Tutorial
         void SetupGardenTutorialState()
         {
-            uint progress = tutorialStateData.coreLoopTutorial.progress;
-
             if (!tutorialStateData.crossBreedingTutorial.isComplete && tutorialStateData.crossBreedingTutorial.progress <= 1)
                 HUD.DisableButton("cultivisionButton");
 
-
-            if (progress < 7)
-            {
-
-                HUD.DisableButton("collectionsButton");
-                HUD.DisableButton("customizationButton");
+            if (!tutorialStateData.golemTutorial.isComplete && tutorialStateData.golemTutorial.progress < 1)
                 toolsMenu.DisableToolButton("fertilizer-container");
 
+            uint progress = tutorialStateData.coreLoopTutorial.progress;
+
+            if (progress < 9)
+            {
+                HUD.DisableButton("collectionsButton");
+                HUD.DisableButton("customizationButton");
+                mailboxColiider.enabled = false;
             }
 
             if (progress < 2)
@@ -140,7 +146,7 @@ namespace GrandmaGreen
                 TriggerTutorialDialogue(introDialogue);
             }
 
-            if (progress > 2)
+            if (progress > 4)
                 areaController.onGardenTick += ForceSetTutorialPlant;
         }
 
@@ -203,6 +209,16 @@ namespace GrandmaGreen
             toolsMenu.DisableToolButton("seeds-container");
         }
 
+        void EnableWatering()
+        {
+            toolsMenu.EnableToolButton("watering-container");
+        }
+
+        void DisableWatering()
+        {
+            toolsMenu.DisableToolButton("watering-container");
+        }
+
         void DoTownSquareTap()
         {
             TriggerTutorialDialogue(leaveDialogue);
@@ -228,13 +244,13 @@ namespace GrandmaGreen
         {
             switch (tutorialStateData.coreLoopTutorial.progress)
             {
-                case 3:
+                case 5:
                     UpdateTutorialPlant(0);
                     break;
-                case 4:
+                case 6:
                     UpdateTutorialPlant(1);
                     break;
-                case 7:
+                case 9:
                     UpdateTutorialPlant(2);
                     break;
             }
@@ -249,7 +265,7 @@ namespace GrandmaGreen
             for (int i = 0; i < hintPositions.Length; i++)
             {
 
-                while ((playerEntity.transform.position - hintPositions[i].position).magnitude > 2)
+                while ((playerEntity.transform.position - hintPositions[i].position).magnitude > 2.5f)
                     yield return null;
 
                 if (i < hintPositions.Length - 1)
@@ -291,6 +307,7 @@ namespace GrandmaGreen
         void TriggerGolemSpawnDialogue()
         {
             TriggerTutorialDialogue(golemSpawnDialogue);
+            toolsMenu.DisableToolButton("fertilizer-container");
         }
 
         void TriggerGolemEvolveDialogue()
