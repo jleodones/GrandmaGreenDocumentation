@@ -45,6 +45,8 @@ namespace GrandmaGreen.Garden
             EventManager.instance.EVENT_OPEN_HUD -= ActivateUI;
             EventManager.instance.EVENT_CLOSE_HUD -= DeactivateUI;
 
+            DeactivateUI();
+
             ///seedButton.onClick.RemoveListener(OnButtonClicked);
         }
 
@@ -82,6 +84,7 @@ namespace GrandmaGreen.Garden
 
         public void OnButtonClicked()
         {
+            
             playerToolData.onRequireSeedEquip.Invoke();
         }
     }

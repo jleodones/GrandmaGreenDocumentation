@@ -88,11 +88,11 @@ namespace GrandmaGreen
 
         private void DeleteSaveFile()
         {
-            // Delete save file.
-            EventManager.instance.HandleEVENT_DELETE_SAVE();
-
             // Then reload start scene.
             SceneExtensions.LoadAsync(SCENES.StartScene);
+            
+            // Delete save file.
+            EventManager.instance.HandleEVENT_DELETE_SAVE();
 
             selectSFX.Play();
         }

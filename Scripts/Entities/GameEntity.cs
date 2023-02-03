@@ -92,6 +92,7 @@ namespace GrandmaGreen.Entities
         protected virtual void OnDisable()
         {
             controller.PauseController();
+            footstepsSoundPlayer?.Stop();
         }
 
         public void Update()
@@ -268,6 +269,14 @@ namespace GrandmaGreen.Entities
                 onEntityPathStopped?.Invoke();
             else
                 onEntityPathEnd?.Invoke();
+        }
+
+        public void StopActions()
+        {
+            animator.SetInteger("MOVEMENT", 0);
+            animator.Update(0f);
+            splineFollow.ForceStop();
+            onEntityPathStopped?.Invoke();
         }
 
 

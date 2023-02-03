@@ -185,7 +185,7 @@ namespace GrandmaGreen
                 }
                 else
                 {
-                    s = m_collections.GetInventorySprite((PlantId) m_items[index].Item1.itemID, ((Seed) m_items[index].Item1).seedGenotype);
+                    s = m_collections.GetInventorySprite((PlantId) m_items[index].Item1.itemID, ((Plant) m_items[index].Item1).plantGenotype);
                 }
                 int basePrice = m_controller.GetSellingPriceById(m_items[index].Item1);
                 

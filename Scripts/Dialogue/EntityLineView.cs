@@ -8,7 +8,7 @@ using UnityEngine.EventSystems;
 
 namespace GrandmaGreen.Dialogue
 {
-    public class CustomLineView : DialogueViewBase
+    public class EntityLineView : DialogueViewBase
     {
         /// <summary>
         /// The UI document it uses to display text.

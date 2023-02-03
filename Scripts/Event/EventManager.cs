@@ -170,11 +170,15 @@ namespace GrandmaGreen
         public event Action<ushort, Vector3> EVENT_GOLEM_SPAWN;
         public event Action<ushort, int> EVENT_GOLEM_HAPPINESS_UPDATE;
         public event Action<ushort> EVENT_GOLEM_EVOLVE;
-        public event Action<Vector3> EVENT_GOLEM_GRANDMA_MOVE_TO; 
+        public event Action<Vector3> EVENT_GOLEM_GRANDMA_MOVE_TO;
+        public event Action<GameObject> EVENT_GOLEM_DRAG;
         public event Action EVENT_GOLEM_RELEASE_SELECTED;
         public event Action<ushort> EVENT_ASSIGN_TASK;
         public event Action<int> EVENT_GOLEM_DO_TASK;
+        public event Action EVENT_GOLEM_ENABLE;
+        public event Action EVENT_GOLEM_DISABLE;
 
+        public void HandleEVENT_GOLEM_DRAG(GameObject obj) { EVENT_GOLEM_DRAG?.Invoke(obj); }
         public void HandleEVENT_GOLEM_RELEASE_SELECTED() {EVENT_GOLEM_RELEASE_SELECTED?.Invoke();}
         public void HandleEVENT_GOLEM_SPAWN(ushort id, Vector3 pos) { EVENT_GOLEM_SPAWN?.Invoke(id, pos); }
         public void HandleEVENT_GOLEM_EVOLVE(ushort id) { EVENT_GOLEM_EVOLVE?.Invoke(id); }
@@ -192,6 +196,9 @@ namespace GrandmaGreen
         public void HandleEVENT_GOLEM_ASSIGN_TASK(ushort id) { EVENT_ASSIGN_TASK?.Invoke(id); }
 
         public void HandleEVENT_GOLEM_DO_TASK(int happinessValue) { EVENT_GOLEM_DO_TASK?.Invoke(happinessValue); }
+
+        public void HandleEVENT_GOLEM_ENABLE() { EVENT_GOLEM_ENABLE?.Invoke(); }
+        public void HandleEVENT_GOLEM_DISABLE() { EVENT_GOLEM_DISABLE?.Invoke(); }
         #endregion
 
         #region Plant growth event.

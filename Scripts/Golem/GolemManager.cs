@@ -44,6 +44,7 @@ namespace GrandmaGreen.Entities
             EventManager.instance.EVENT_GOLEM_SPAWN += OnGolemSpawn;
             EventManager.instance.EVENT_GOLEM_HAPPINESS_UPDATE += OnGolemHappinessChanged;
             EventManager.instance.EVENT_SYNC_AUTOSAVE += SaveGolemData;
+            EventManager.instance.EVENT_DELETE_SAVE += TriggerDeleteData;
 
             if (componentStores.Count == 0)
             {
@@ -167,15 +168,15 @@ namespace GrandmaGreen.Entities
             EventManager.instance.EVENT_GOLEM_SPAWN -= OnGolemSpawn;
             EventManager.instance.EVENT_GOLEM_HAPPINESS_UPDATE -= OnGolemHappinessChanged;
             EventManager.instance.EVENT_SYNC_AUTOSAVE -= SaveGolemData;
+            EventManager.instance.EVENT_DELETE_SAVE -= TriggerDeleteData;
         }
 
         #region Saving
         public void LoadGolemData()
         {
             golemStateTable = new GolemState[10];
-                
+
             GolemState newState = new GolemState();
-            
 
             for (int index = 0; index < golemStateTable.Length; index++)
             {
@@ -211,7 +212,12 @@ namespace GrandmaGreen.Entities
                 if (!UpdateValue<GolemState>(index, golemStateTable[index]))
                     Debug.Log("Could not save Golem Data!");
             }
-                Debug.Log("Golem Data Saved");
+                //Debug.Log("Golem Data Saved");
+        }
+
+        public void TriggerDeleteData()
+        {
+            golemStateTable = new GolemState[10];
         }
         #endregion
 

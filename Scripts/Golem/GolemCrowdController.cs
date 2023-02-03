@@ -1,9 +1,11 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using GrandmaGreen.Collections;
 using UnityEngine;
 using Sirenix.OdinInspector;
 using GrandmaGreen.Garden;
+using Core.Input;
 
 namespace GrandmaGreen.Entities
 {
@@ -15,11 +17,22 @@ namespace GrandmaGreen.Entities
 
         [Header("Golem References")]
         public GardenAreaController gardenArea;
+        public PointerState pointerState;
+
+        [Header("Settings")]
+        [SerializeField] float validCheckTime = 0.05f;
 
         public void Awake()
         {
             EventManager.instance.EVENT_ASSIGN_TASK += AssignGolemAction;
+            EventManager.instance.EVENT_GOLEM_DRAG += EnterDragGolem;
             golemManager.golemWorkTimer.Pause();
+        }
+
+        public void OnDestroy()
+        {
+            EventManager.instance.EVENT_ASSIGN_TASK -= AssignGolemAction;
+            EventManager.instance.EVENT_GOLEM_DRAG -= EnterDragGolem;
         }
 
         void OnEnable() {
@@ -120,6 +133,52 @@ namespace GrandmaGreen.Entities
                 }
             }
 
+        }
+
+        Coroutine inputState;
+        public void EnterDragGolem(GameObject golemObject)
+        {
+            inputState = gardenArea.StartCoroutine(GolemDragHandler(golemObject));
+        }
+
+          /// <summary>
+        /// TODO: Dont calculate per frame
+        /// </summary>
+        /// <param name="gardenArea"></param>
+        /// <returns></returns>
+        IEnumerator GolemDragHandler(GameObject golemObject)
+        {
+            WaitForSeconds waitForSeconds = new WaitForSeconds(validCheckTime);
+
+            Vector3 destination = gardenArea.lastSelectedPosition;
+            destination.z = 0;
+
+            golemObject.transform.position = destination;
+            // sprite.material = activeMaterial;
+            // decorItem.DisableInteraction();
+
+            bool isValid = true;
+            do
+            {
+                destination = gardenArea.lastDraggedPosition;
+                destination.z = 0;
+
+                golemObject.transform.position = destination;
+
+                Physics.SyncTransforms();
+
+                // isValid = CheckValidState(decorItem.boundsCollider, gardenArea);
+
+                // decorItem.sprite.color = isValid ? validColor : invalidColor;
+
+                yield return null;
+
+            } while ( isValid && pointerState.phase != PointerState.Phase.NONE);
+
+            // decorItem.sprite.material = defaultMaterial;
+            // decorItem.sprite.color = Color.white;
+            // decorItem.EnableInteraction();
+            GolemController golemController = gameObject.GetComponent<GolemController>();
         }
 
         [Button(ButtonSizes.Medium)]

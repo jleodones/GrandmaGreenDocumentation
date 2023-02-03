@@ -17,7 +17,7 @@ namespace GrandmaGreen
             
             // Setting up default contest.
             // TODO: Set this up for randomization later.
-            currentBigContest.targetPlant = new Plant((ushort) PlantId.Rose, "Tulip", new Genotype("AaBb"));
+            currentBigContest.targetPlant = new Plant((ushort) PlantId.Tulip, "Tulip", new Genotype("AaBb"));
             currentBigContest.rewardMoney = 200;
         }
 

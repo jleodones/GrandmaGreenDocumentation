@@ -28,7 +28,7 @@ namespace GrandmaGreen.Garden
         public List<Collider> decorList;
         public List<PlantState> plantListDebug;
         public List<PlantState> wiltedPlantList;
-        
+
 
         bool returnFromPause = true;
 
@@ -47,6 +47,7 @@ namespace GrandmaGreen.Garden
 
             gardenManager.timers[areaIndex].Pause();
 
+            playerTools.equippedSeed = 0;
             playerTools.ToolSelection(0);
         }
 
@@ -234,7 +235,7 @@ namespace GrandmaGreen.Garden
                 gardenManager.CreatePlant(seed, genotype, growthStage, areaIndex, cell);
                 InstantiatePlantPrefab(cell, seed, growthStage);
                 // Remove the seed from inventory.
-                
+
             }
         }
 
@@ -291,7 +292,7 @@ namespace GrandmaGreen.Garden
                 UpdateTile(updatedPlant.cell);
             }
         }
-       
+
         public void WaterPlant(Vector3Int cell)
         {
             if (!gardenManager.PlantIsDead(areaIndex, cell))
@@ -643,7 +644,9 @@ namespace GrandmaGreen.Garden
         {
             m_inCustomizationMode = true;
             customizationCamera.gameObject.SetActive(true);
+            playerController.entity.StopActions();
             playerController.entity.gameObject.SetActive(false);
+            EventManager.instance.HandleEVENT_GOLEM_DISABLE();
         }
 
         public void ExitCustomizationMode()
@@ -651,6 +654,7 @@ namespace GrandmaGreen.Garden
             m_inCustomizationMode = false;
             customizationCamera.gameObject.SetActive(false);
             playerController.entity.gameObject.SetActive(true);
+            EventManager.instance.HandleEVENT_GOLEM_ENABLE();
         }
 
         public void StartDecorCustomization(IInventoryItem item)

@@ -52,7 +52,9 @@ namespace GrandmaGreen.Entities
         SoundPlayer footstepsPlayer;
 
         private bool m_isInteracting = false;
+        private bool m_isDragging = false;
         private bool m_isDoingTask = false;
+        private float m_tapTime = float.MaxValue;
         #endregion
 
         #region events
@@ -70,6 +72,8 @@ namespace GrandmaGreen.Entities
             EventManager.instance.EVENT_GOLEM_EVOLVE += OnGolemEvolve;
             EventManager.instance.EVENT_GOLEM_RELEASE_SELECTED += OnGolemSelectRelease;
             EventManager.instance.EVENT_GOLEM_DO_TASK += UpdateTaskState;
+            EventManager.instance.EVENT_GOLEM_ENABLE += EnableGolem;
+            EventManager.instance.EVENT_GOLEM_DISABLE += DisableGolem;
 
             // create our behaviour tree and get it's blackboard
             behaviorTree = CreateBehaviourTree();
@@ -93,6 +97,8 @@ namespace GrandmaGreen.Entities
             EventManager.instance.EVENT_GOLEM_EVOLVE -= OnGolemEvolve;
             EventManager.instance.EVENT_GOLEM_RELEASE_SELECTED -= OnGolemSelectRelease;
             EventManager.instance.EVENT_GOLEM_DO_TASK -= UpdateTaskState;
+            EventManager.instance.EVENT_GOLEM_ENABLE -= EnableGolem;
+            EventManager.instance.EVENT_GOLEM_DISABLE -= DisableGolem;
             StopBehaviorTree();
         }
 
@@ -111,7 +117,7 @@ namespace GrandmaGreen.Entities
 
         public void FixedUpdate()
         {
-            if (m_isInteracting)
+            if (m_isInteracting && !m_isDragging)
             {
                 // facing to grandma
                 Vector3 playerPos = golemManager.GetPlayerPos();
@@ -126,7 +132,14 @@ namespace GrandmaGreen.Entities
                 } else {
                     GetComponentInChildren<GolemMenu>().ToggleMenu(false);
                 }
-            } 
+            }
+
+            if ((Time.time - m_tapTime > 0.5f))
+            {
+                m_tapTime = float.MaxValue;
+                UpdateDraggingState(true);
+                EventManager.instance.HandleEVENT_GOLEM_DRAG(this.gameObject);
+            }
         }
 
         private void InitializeBT() {
@@ -222,7 +235,7 @@ namespace GrandmaGreen.Entities
 
         void SetAnimatorParameters()
         {
-            if (velocity.magnitude != 0)
+            if (velocity.magnitude != 0 && m_isDragging == false)
             {
 
                  //early out if barely moving sideways, prevents flickering
@@ -246,9 +259,9 @@ namespace GrandmaGreen.Entities
         
         public void UpdateInteractState() 
         {
-            Debug.Log("Interacting.");
+            //Debug.Log("Interacting.");
             m_isInteracting = !m_isInteracting;
-            behaviorTree.Blackboard.Set("isInteract", m_isInteracting);
+            behaviorTree.Blackboard.Set("isInteract", m_isInteracting);     
             if (m_isInteracting) {
                 EventManager.instance.HandleEVENT_GOLEM_GRANDMA_MOVE_TO(transform.position);
             } else {
@@ -256,11 +269,10 @@ namespace GrandmaGreen.Entities
             }
         }
 
-        public void UpdateDraggingState()
+        public void UpdateDraggingState(bool state)
         {
-            Debug.Log("Dragging.");
-            m_isInteracting = !m_isInteracting;
-            behaviorTree.Blackboard.Set("isInteract", m_isInteracting);
+            m_isDragging = state;
+            behaviorTree.Blackboard.Set("isInteract", m_isDragging);
         }
 
         public void UpdateTaskState(int happinessValue)
@@ -285,12 +297,31 @@ namespace GrandmaGreen.Entities
             this.golemManager = mgmr;
         }
 
+        #region Interaction
         public void OnGolemSelectRelease()
         {
             m_isInteracting = false;
             behaviorTree.Blackboard.Set("isInteract", m_isInteracting);
             GetComponentInChildren<GolemMenu>().ToggleMenu(false);
         }
+
+        public void OnGolemTapped()
+        {
+            m_tapTime = Time.time;
+        }
+
+        public void OnGolemTapEnd()
+        {
+            float tappingTime = Time.time - m_tapTime;
+            Debug.Log("End Interaction: " + (tappingTime));
+
+            UpdateDraggingState(false);
+            if (tappingTime > 0 && tappingTime < 0.5f){
+                UpdateInteractState();
+                m_tapTime = float.MaxValue;
+            } 
+        }
+        #endregion
 
         #region Golem Evolution
         //Golem event handler
@@ -349,6 +380,16 @@ namespace GrandmaGreen.Entities
             float3[] pathable = CalculatePathable(range);
 
             return pathable[UnityEngine.Random.Range(0, pathable.Length)];
+        }
+
+        public void EnableGolem()
+        {
+            gameObject.SetActive(true);
+        }
+
+        public void DisableGolem()
+        {
+            gameObject.SetActive(false);
         }
 
         #region Path finding service 
@@ -442,6 +483,14 @@ namespace GrandmaGreen.Entities
 
         #region Utility
         private int offsetId(CharacterId id) {return (int)id - 5000;}
+
+        public GameObject getActiveRig()
+        {
+            if (isMature)
+                return MatureRig;
+            else 
+                return BabyRig;
+        }
         #endregion
     }
 }

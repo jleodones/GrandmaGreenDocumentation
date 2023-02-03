@@ -171,7 +171,7 @@ namespace GrandmaGreen
                     gardenToolSet.onWater += onGardeningFlag.Raise;
                     break;
                 case 6:
-                    disableTools?.Invoke();
+                    
 
                     gardenToolSet.onWater -= onGardeningFlag.Raise;
 

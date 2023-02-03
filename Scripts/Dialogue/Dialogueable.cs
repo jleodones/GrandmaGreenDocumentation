@@ -43,14 +43,14 @@ namespace GrandmaGreen.Dialogue
         private DialogueRunner m_dialogueRunner;
 
         // Global line view.
-        private CustomLineView m_lineView;
+        private EntityLineView m_lineView;
 
         public DialogueMode dialogueMode = DialogueMode.Idle;
         void Awake()
         {
             // Search and store references to dialogue runner and dialogue line view.
             m_dialogueRunner = FindObjectOfType<DialogueRunner>();
-            m_lineView = FindObjectOfType<CustomLineView>();
+            m_lineView = FindObjectOfType<EntityLineView>();
             
             // TODO: 
 

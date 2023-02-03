@@ -140,7 +140,8 @@ namespace GrandmaGreen
 
         void SetCurrentScene(SCENES scene)
         {
-            LoadGardenScreen(-1);
+            if (scene != SCENES.StartScene)
+                LoadGardenScreen(-1);
             currentScene = scene;
         }
 

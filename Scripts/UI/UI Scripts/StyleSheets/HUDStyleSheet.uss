@@ -1,13 +1,16 @@
 .icon-buttons {
     -unity-background-scale-mode: scale-to-fit;
-    width: 15%;
-    height: 0;
-    padding-top: 22.5%;
     background-color: rgba(0, 0, 0, 0);
     border-left-color: rgba(0, 0, 0, 0);
     border-right-color: rgba(0, 0, 0, 0);
     border-top-color: rgba(0, 0, 0, 0);
     border-bottom-color: rgba(0, 0, 0, 0);
+    padding-top: 12.5%;
+    height: 0;
+    width: 25%;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
 }
 
 .inventory-item {
@@ -91,14 +94,6 @@
     padding-right: 50px;
     padding-top: 20px;
     padding-bottom: 50px;
-}
-
-.button-content {
-    height: 100%;
-    width: 30%;
-    align-items: stretch;
-    flex-direction: row;
-    justify-content: space-between;
 }
 
 .info-text {

@@ -132,7 +132,7 @@ namespace GrandmaGreen
 
             if (progress < 1)
             {
-                seedUI.DeactivateUI();
+                seedUI.enabled = false;
             }
 
             if (progress == 0)
@@ -181,6 +181,7 @@ namespace GrandmaGreen
         void EnableInventory()
         {
             HUD.EnableButton("inventoryButton");
+            seedUI.enabled = true;
             seedUI.ActivateUI();
         }
 

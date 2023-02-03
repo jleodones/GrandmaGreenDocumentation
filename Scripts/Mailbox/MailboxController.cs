@@ -12,6 +12,7 @@ namespace GrandmaGreen.Mail
             mailbox.Start();
         }
 
+        /*
         void Update()
         {
             if (mailbox.CheckMailQueue())
@@ -20,6 +21,7 @@ namespace GrandmaGreen.Mail
                 Debug.Log(mailbox);
             }
         }
+        */
 
         [ContextMenu("TestSendLetterNow")]
         public void DebugSendLetterNow()
