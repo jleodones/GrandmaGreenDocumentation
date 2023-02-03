@@ -93,85 +93,10 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="GrandmaGreen_Mail_MailboxModel_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class MailboxModel : ScriptableObject</code></pre>
+    <pre><code class="lang-csharp hljs">public class MailboxModel : ObjectSaver</code></pre>
   </div>
-  <h3 id="fields">Fields
-  </h3>
-  
-  
-  <h4 id="GrandmaGreen_Mail_MailboxModel_letterQueue" data-uid="GrandmaGreen.Mail.MailboxModel.letterQueue">letterQueue</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public SortedList&lt;DateTime, Letter&gt; letterQueue</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.sortedlist-2">SortedList</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a>, <a class="xref" href="GrandmaGreen.Mail.Letter.html">Letter</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="GrandmaGreen_Mail_MailboxModel_letters" data-uid="GrandmaGreen.Mail.MailboxModel.letters">letters</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public SortedList&lt;DateTime, Letter&gt; letters</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.sortedlist-2">SortedList</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a>, <a class="xref" href="GrandmaGreen.Mail.Letter.html">Letter</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h3 id="methods">Methods
   </h3>
-  
-  
-  <a id="GrandmaGreen_Mail_MailboxModel_CheckMailQueue_" data-uid="GrandmaGreen.Mail.MailboxModel.CheckMailQueue*"></a>
-  <h4 id="GrandmaGreen_Mail_MailboxModel_CheckMailQueue" data-uid="GrandmaGreen.Mail.MailboxModel.CheckMailQueue">CheckMailQueue()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool CheckMailQueue()</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   
   
   <a id="GrandmaGreen_Mail_MailboxModel_Empty_" data-uid="GrandmaGreen.Mail.MailboxModel.Empty*"></a>
@@ -193,48 +118,6 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="GrandmaGreen_Mail_MailboxModel_GetLetterByDateTime_" data-uid="GrandmaGreen.Mail.MailboxModel.GetLetterByDateTime*"></a>
-  <h4 id="GrandmaGreen_Mail_MailboxModel_GetLetterByDateTime_System_DateTime_" data-uid="GrandmaGreen.Mail.MailboxModel.GetLetterByDateTime(System.DateTime)">GetLetterByDateTime(DateTime)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Letter GetLetterByDateTime(DateTime time)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></td>
-        <td><span class="parametername">time</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="GrandmaGreen.Mail.Letter.html">Letter</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -289,7 +172,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public List&lt;Letter&gt; GetLetterQueue()</code></pre>
+    <pre><code class="lang-csharp hljs">public List&lt;QueuedLetter&gt; GetLetterQueue()</code></pre>
   </div>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -301,7 +184,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="GrandmaGreen.Mail.Letter.html">Letter</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="GrandmaGreen.Mail.QueuedLetter.html">QueuedLetter</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -327,6 +210,31 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="GrandmaGreen.Mail.Letter.html">Letter</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="GrandmaGreen_Mail_MailboxModel_MailboxString_" data-uid="GrandmaGreen.Mail.MailboxModel.MailboxString*"></a>
+  <h4 id="GrandmaGreen_Mail_MailboxModel_MailboxString" data-uid="GrandmaGreen.Mail.MailboxModel.MailboxString">MailboxString()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string MailboxString()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -526,31 +434,6 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Start()</code></pre>
   </div>
-  
-  
-  <a id="GrandmaGreen_Mail_MailboxModel_ToString_" data-uid="GrandmaGreen.Mail.MailboxModel.ToString*"></a>
-  <h4 id="GrandmaGreen_Mail_MailboxModel_ToString" data-uid="GrandmaGreen.Mail.MailboxModel.ToString">ToString()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
 </article>
           </div>
           

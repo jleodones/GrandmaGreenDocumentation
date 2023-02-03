@@ -3453,161 +3453,6 @@ references:
   commentId: N:GrandmaGreen.Dialogue
   fullName: GrandmaGreen.Dialogue
   nameWithType: GrandmaGreen.Dialogue
-- uid: GrandmaGreen.Dialogue.CustomLineView
-  name: CustomLineView
-  href: api/GrandmaGreen.Dialogue.CustomLineView.html
-  commentId: T:GrandmaGreen.Dialogue.CustomLineView
-  fullName: GrandmaGreen.Dialogue.CustomLineView
-  nameWithType: CustomLineView
-- uid: GrandmaGreen.Dialogue.CustomLineView.autoAdvance
-  name: autoAdvance
-  href: api/GrandmaGreen.Dialogue.CustomLineView.html#GrandmaGreen_Dialogue_CustomLineView_autoAdvance
-  commentId: F:GrandmaGreen.Dialogue.CustomLineView.autoAdvance
-  fullName: GrandmaGreen.Dialogue.CustomLineView.autoAdvance
-  nameWithType: CustomLineView.autoAdvance
-- uid: GrandmaGreen.Dialogue.CustomLineView.dialogueSFX
-  name: dialogueSFX
-  href: api/GrandmaGreen.Dialogue.CustomLineView.html#GrandmaGreen_Dialogue_CustomLineView_dialogueSFX
-  commentId: F:GrandmaGreen.Dialogue.CustomLineView.dialogueSFX
-  fullName: GrandmaGreen.Dialogue.CustomLineView.dialogueSFX
-  nameWithType: CustomLineView.dialogueSFX
-- uid: GrandmaGreen.Dialogue.CustomLineView.dialogueUI
-  name: dialogueUI
-  href: api/GrandmaGreen.Dialogue.CustomLineView.html#GrandmaGreen_Dialogue_CustomLineView_dialogueUI
-  commentId: F:GrandmaGreen.Dialogue.CustomLineView.dialogueUI
-  fullName: GrandmaGreen.Dialogue.CustomLineView.dialogueUI
-  nameWithType: CustomLineView.dialogueUI
-- uid: GrandmaGreen.Dialogue.CustomLineView.DismissLine(Action)
-  name: DismissLine(Action)
-  href: api/GrandmaGreen.Dialogue.CustomLineView.html#GrandmaGreen_Dialogue_CustomLineView_DismissLine_Action_
-  commentId: M:GrandmaGreen.Dialogue.CustomLineView.DismissLine(Action)
-  fullName: GrandmaGreen.Dialogue.CustomLineView.DismissLine(Action)
-  nameWithType: CustomLineView.DismissLine(Action)
-- uid: GrandmaGreen.Dialogue.CustomLineView.DismissLine*
-  name: DismissLine
-  href: api/GrandmaGreen.Dialogue.CustomLineView.html#GrandmaGreen_Dialogue_CustomLineView_DismissLine_
-  commentId: Overload:GrandmaGreen.Dialogue.CustomLineView.DismissLine
-  isSpec: "True"
-  fullName: GrandmaGreen.Dialogue.CustomLineView.DismissLine
-  nameWithType: CustomLineView.DismissLine
-- uid: GrandmaGreen.Dialogue.CustomLineView.EndDialogueNode
-  name: EndDialogueNode()
-  href: api/GrandmaGreen.Dialogue.CustomLineView.html#GrandmaGreen_Dialogue_CustomLineView_EndDialogueNode
-  commentId: M:GrandmaGreen.Dialogue.CustomLineView.EndDialogueNode
-  fullName: GrandmaGreen.Dialogue.CustomLineView.EndDialogueNode()
-  nameWithType: CustomLineView.EndDialogueNode()
-- uid: GrandmaGreen.Dialogue.CustomLineView.EndDialogueNode*
-  name: EndDialogueNode
-  href: api/GrandmaGreen.Dialogue.CustomLineView.html#GrandmaGreen_Dialogue_CustomLineView_EndDialogueNode_
-  commentId: Overload:GrandmaGreen.Dialogue.CustomLineView.EndDialogueNode
-  isSpec: "True"
-  fullName: GrandmaGreen.Dialogue.CustomLineView.EndDialogueNode
-  nameWithType: CustomLineView.EndDialogueNode
-- uid: GrandmaGreen.Dialogue.CustomLineView.InterruptLine(LocalizedLine,Action)
-  name: InterruptLine(LocalizedLine, Action)
-  href: api/GrandmaGreen.Dialogue.CustomLineView.html#GrandmaGreen_Dialogue_CustomLineView_InterruptLine_LocalizedLine_Action_
-  commentId: M:GrandmaGreen.Dialogue.CustomLineView.InterruptLine(LocalizedLine,Action)
-  fullName: GrandmaGreen.Dialogue.CustomLineView.InterruptLine(LocalizedLine, Action)
-  nameWithType: CustomLineView.InterruptLine(LocalizedLine, Action)
-- uid: GrandmaGreen.Dialogue.CustomLineView.InterruptLine*
-  name: InterruptLine
-  href: api/GrandmaGreen.Dialogue.CustomLineView.html#GrandmaGreen_Dialogue_CustomLineView_InterruptLine_
-  commentId: Overload:GrandmaGreen.Dialogue.CustomLineView.InterruptLine
-  isSpec: "True"
-  fullName: GrandmaGreen.Dialogue.CustomLineView.InterruptLine
-  nameWithType: CustomLineView.InterruptLine
-- uid: GrandmaGreen.Dialogue.CustomLineView.onCharacterTyped
-  name: onCharacterTyped
-  href: api/GrandmaGreen.Dialogue.CustomLineView.html#GrandmaGreen_Dialogue_CustomLineView_onCharacterTyped
-  commentId: F:GrandmaGreen.Dialogue.CustomLineView.onCharacterTyped
-  fullName: GrandmaGreen.Dialogue.CustomLineView.onCharacterTyped
-  nameWithType: CustomLineView.onCharacterTyped
-- uid: GrandmaGreen.Dialogue.CustomLineView.OnContinueTriggered(ClickEvent)
-  name: OnContinueTriggered(ClickEvent)
-  href: api/GrandmaGreen.Dialogue.CustomLineView.html#GrandmaGreen_Dialogue_CustomLineView_OnContinueTriggered_ClickEvent_
-  commentId: M:GrandmaGreen.Dialogue.CustomLineView.OnContinueTriggered(ClickEvent)
-  fullName: GrandmaGreen.Dialogue.CustomLineView.OnContinueTriggered(ClickEvent)
-  nameWithType: CustomLineView.OnContinueTriggered(ClickEvent)
-- uid: GrandmaGreen.Dialogue.CustomLineView.OnContinueTriggered*
-  name: OnContinueTriggered
-  href: api/GrandmaGreen.Dialogue.CustomLineView.html#GrandmaGreen_Dialogue_CustomLineView_OnContinueTriggered_
-  commentId: Overload:GrandmaGreen.Dialogue.CustomLineView.OnContinueTriggered
-  isSpec: "True"
-  fullName: GrandmaGreen.Dialogue.CustomLineView.OnContinueTriggered
-  nameWithType: CustomLineView.OnContinueTriggered
-- uid: GrandmaGreen.Dialogue.CustomLineView.OnOptionSelected
-  name: OnOptionSelected
-  href: api/GrandmaGreen.Dialogue.CustomLineView.html#GrandmaGreen_Dialogue_CustomLineView_OnOptionSelected
-  commentId: F:GrandmaGreen.Dialogue.CustomLineView.OnOptionSelected
-  fullName: GrandmaGreen.Dialogue.CustomLineView.OnOptionSelected
-  nameWithType: CustomLineView.OnOptionSelected
-- uid: GrandmaGreen.Dialogue.CustomLineView.RunLine(LocalizedLine,Action)
-  name: RunLine(LocalizedLine, Action)
-  href: api/GrandmaGreen.Dialogue.CustomLineView.html#GrandmaGreen_Dialogue_CustomLineView_RunLine_LocalizedLine_Action_
-  commentId: M:GrandmaGreen.Dialogue.CustomLineView.RunLine(LocalizedLine,Action)
-  fullName: GrandmaGreen.Dialogue.CustomLineView.RunLine(LocalizedLine, Action)
-  nameWithType: CustomLineView.RunLine(LocalizedLine, Action)
-- uid: GrandmaGreen.Dialogue.CustomLineView.RunLine*
-  name: RunLine
-  href: api/GrandmaGreen.Dialogue.CustomLineView.html#GrandmaGreen_Dialogue_CustomLineView_RunLine_
-  commentId: Overload:GrandmaGreen.Dialogue.CustomLineView.RunLine
-  isSpec: "True"
-  fullName: GrandmaGreen.Dialogue.CustomLineView.RunLine
-  nameWithType: CustomLineView.RunLine
-- uid: GrandmaGreen.Dialogue.CustomLineView.RunOptions(DialogueOption[],Action{System.Int32})
-  name: RunOptions(DialogueOption[], Action<Int32>)
-  href: api/GrandmaGreen.Dialogue.CustomLineView.html#GrandmaGreen_Dialogue_CustomLineView_RunOptions_DialogueOption___Action_System_Int32__
-  commentId: M:GrandmaGreen.Dialogue.CustomLineView.RunOptions(DialogueOption[],Action{System.Int32})
-  name.vb: RunOptions(DialogueOption(), Action(Of Int32))
-  fullName: GrandmaGreen.Dialogue.CustomLineView.RunOptions(DialogueOption[], Action<System.Int32>)
-  fullName.vb: GrandmaGreen.Dialogue.CustomLineView.RunOptions(DialogueOption(), Action(Of System.Int32))
-  nameWithType: CustomLineView.RunOptions(DialogueOption[], Action<Int32>)
-  nameWithType.vb: CustomLineView.RunOptions(DialogueOption(), Action(Of Int32))
-- uid: GrandmaGreen.Dialogue.CustomLineView.RunOptions*
-  name: RunOptions
-  href: api/GrandmaGreen.Dialogue.CustomLineView.html#GrandmaGreen_Dialogue_CustomLineView_RunOptions_
-  commentId: Overload:GrandmaGreen.Dialogue.CustomLineView.RunOptions
-  isSpec: "True"
-  fullName: GrandmaGreen.Dialogue.CustomLineView.RunOptions
-  nameWithType: CustomLineView.RunOptions
-- uid: GrandmaGreen.Dialogue.CustomLineView.StartDialogueNode
-  name: StartDialogueNode()
-  href: api/GrandmaGreen.Dialogue.CustomLineView.html#GrandmaGreen_Dialogue_CustomLineView_StartDialogueNode
-  commentId: M:GrandmaGreen.Dialogue.CustomLineView.StartDialogueNode
-  fullName: GrandmaGreen.Dialogue.CustomLineView.StartDialogueNode()
-  nameWithType: CustomLineView.StartDialogueNode()
-- uid: GrandmaGreen.Dialogue.CustomLineView.StartDialogueNode*
-  name: StartDialogueNode
-  href: api/GrandmaGreen.Dialogue.CustomLineView.html#GrandmaGreen_Dialogue_CustomLineView_StartDialogueNode_
-  commentId: Overload:GrandmaGreen.Dialogue.CustomLineView.StartDialogueNode
-  isSpec: "True"
-  fullName: GrandmaGreen.Dialogue.CustomLineView.StartDialogueNode
-  nameWithType: CustomLineView.StartDialogueNode
-- uid: GrandmaGreen.Dialogue.CustomLineView.typewriterEffectSpeed
-  name: typewriterEffectSpeed
-  href: api/GrandmaGreen.Dialogue.CustomLineView.html#GrandmaGreen_Dialogue_CustomLineView_typewriterEffectSpeed
-  commentId: F:GrandmaGreen.Dialogue.CustomLineView.typewriterEffectSpeed
-  fullName: GrandmaGreen.Dialogue.CustomLineView.typewriterEffectSpeed
-  nameWithType: CustomLineView.typewriterEffectSpeed
-- uid: GrandmaGreen.Dialogue.CustomLineView.UserRequestedViewAdvancement
-  name: UserRequestedViewAdvancement()
-  href: api/GrandmaGreen.Dialogue.CustomLineView.html#GrandmaGreen_Dialogue_CustomLineView_UserRequestedViewAdvancement
-  commentId: M:GrandmaGreen.Dialogue.CustomLineView.UserRequestedViewAdvancement
-  fullName: GrandmaGreen.Dialogue.CustomLineView.UserRequestedViewAdvancement()
-  nameWithType: CustomLineView.UserRequestedViewAdvancement()
-- uid: GrandmaGreen.Dialogue.CustomLineView.UserRequestedViewAdvancement*
-  name: UserRequestedViewAdvancement
-  href: api/GrandmaGreen.Dialogue.CustomLineView.html#GrandmaGreen_Dialogue_CustomLineView_UserRequestedViewAdvancement_
-  commentId: Overload:GrandmaGreen.Dialogue.CustomLineView.UserRequestedViewAdvancement
-  isSpec: "True"
-  fullName: GrandmaGreen.Dialogue.CustomLineView.UserRequestedViewAdvancement
-  nameWithType: CustomLineView.UserRequestedViewAdvancement
-- uid: GrandmaGreen.Dialogue.CustomLineView.useTypewriterEffect
-  name: useTypewriterEffect
-  href: api/GrandmaGreen.Dialogue.CustomLineView.html#GrandmaGreen_Dialogue_CustomLineView_useTypewriterEffect
-  commentId: F:GrandmaGreen.Dialogue.CustomLineView.useTypewriterEffect
-  fullName: GrandmaGreen.Dialogue.CustomLineView.useTypewriterEffect
-  nameWithType: CustomLineView.useTypewriterEffect
 - uid: GrandmaGreen.Dialogue.CustomOptionView
   name: CustomOptionView
   href: api/GrandmaGreen.Dialogue.CustomOptionView.html
@@ -3875,6 +3720,161 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Dialogue.Effects.Typewriter
   nameWithType: Effects.Typewriter
+- uid: GrandmaGreen.Dialogue.EntityLineView
+  name: EntityLineView
+  href: api/GrandmaGreen.Dialogue.EntityLineView.html
+  commentId: T:GrandmaGreen.Dialogue.EntityLineView
+  fullName: GrandmaGreen.Dialogue.EntityLineView
+  nameWithType: EntityLineView
+- uid: GrandmaGreen.Dialogue.EntityLineView.autoAdvance
+  name: autoAdvance
+  href: api/GrandmaGreen.Dialogue.EntityLineView.html#GrandmaGreen_Dialogue_EntityLineView_autoAdvance
+  commentId: F:GrandmaGreen.Dialogue.EntityLineView.autoAdvance
+  fullName: GrandmaGreen.Dialogue.EntityLineView.autoAdvance
+  nameWithType: EntityLineView.autoAdvance
+- uid: GrandmaGreen.Dialogue.EntityLineView.dialogueSFX
+  name: dialogueSFX
+  href: api/GrandmaGreen.Dialogue.EntityLineView.html#GrandmaGreen_Dialogue_EntityLineView_dialogueSFX
+  commentId: F:GrandmaGreen.Dialogue.EntityLineView.dialogueSFX
+  fullName: GrandmaGreen.Dialogue.EntityLineView.dialogueSFX
+  nameWithType: EntityLineView.dialogueSFX
+- uid: GrandmaGreen.Dialogue.EntityLineView.dialogueUI
+  name: dialogueUI
+  href: api/GrandmaGreen.Dialogue.EntityLineView.html#GrandmaGreen_Dialogue_EntityLineView_dialogueUI
+  commentId: F:GrandmaGreen.Dialogue.EntityLineView.dialogueUI
+  fullName: GrandmaGreen.Dialogue.EntityLineView.dialogueUI
+  nameWithType: EntityLineView.dialogueUI
+- uid: GrandmaGreen.Dialogue.EntityLineView.DismissLine(Action)
+  name: DismissLine(Action)
+  href: api/GrandmaGreen.Dialogue.EntityLineView.html#GrandmaGreen_Dialogue_EntityLineView_DismissLine_Action_
+  commentId: M:GrandmaGreen.Dialogue.EntityLineView.DismissLine(Action)
+  fullName: GrandmaGreen.Dialogue.EntityLineView.DismissLine(Action)
+  nameWithType: EntityLineView.DismissLine(Action)
+- uid: GrandmaGreen.Dialogue.EntityLineView.DismissLine*
+  name: DismissLine
+  href: api/GrandmaGreen.Dialogue.EntityLineView.html#GrandmaGreen_Dialogue_EntityLineView_DismissLine_
+  commentId: Overload:GrandmaGreen.Dialogue.EntityLineView.DismissLine
+  isSpec: "True"
+  fullName: GrandmaGreen.Dialogue.EntityLineView.DismissLine
+  nameWithType: EntityLineView.DismissLine
+- uid: GrandmaGreen.Dialogue.EntityLineView.EndDialogueNode
+  name: EndDialogueNode()
+  href: api/GrandmaGreen.Dialogue.EntityLineView.html#GrandmaGreen_Dialogue_EntityLineView_EndDialogueNode
+  commentId: M:GrandmaGreen.Dialogue.EntityLineView.EndDialogueNode
+  fullName: GrandmaGreen.Dialogue.EntityLineView.EndDialogueNode()
+  nameWithType: EntityLineView.EndDialogueNode()
+- uid: GrandmaGreen.Dialogue.EntityLineView.EndDialogueNode*
+  name: EndDialogueNode
+  href: api/GrandmaGreen.Dialogue.EntityLineView.html#GrandmaGreen_Dialogue_EntityLineView_EndDialogueNode_
+  commentId: Overload:GrandmaGreen.Dialogue.EntityLineView.EndDialogueNode
+  isSpec: "True"
+  fullName: GrandmaGreen.Dialogue.EntityLineView.EndDialogueNode
+  nameWithType: EntityLineView.EndDialogueNode
+- uid: GrandmaGreen.Dialogue.EntityLineView.InterruptLine(LocalizedLine,Action)
+  name: InterruptLine(LocalizedLine, Action)
+  href: api/GrandmaGreen.Dialogue.EntityLineView.html#GrandmaGreen_Dialogue_EntityLineView_InterruptLine_LocalizedLine_Action_
+  commentId: M:GrandmaGreen.Dialogue.EntityLineView.InterruptLine(LocalizedLine,Action)
+  fullName: GrandmaGreen.Dialogue.EntityLineView.InterruptLine(LocalizedLine, Action)
+  nameWithType: EntityLineView.InterruptLine(LocalizedLine, Action)
+- uid: GrandmaGreen.Dialogue.EntityLineView.InterruptLine*
+  name: InterruptLine
+  href: api/GrandmaGreen.Dialogue.EntityLineView.html#GrandmaGreen_Dialogue_EntityLineView_InterruptLine_
+  commentId: Overload:GrandmaGreen.Dialogue.EntityLineView.InterruptLine
+  isSpec: "True"
+  fullName: GrandmaGreen.Dialogue.EntityLineView.InterruptLine
+  nameWithType: EntityLineView.InterruptLine
+- uid: GrandmaGreen.Dialogue.EntityLineView.onCharacterTyped
+  name: onCharacterTyped
+  href: api/GrandmaGreen.Dialogue.EntityLineView.html#GrandmaGreen_Dialogue_EntityLineView_onCharacterTyped
+  commentId: F:GrandmaGreen.Dialogue.EntityLineView.onCharacterTyped
+  fullName: GrandmaGreen.Dialogue.EntityLineView.onCharacterTyped
+  nameWithType: EntityLineView.onCharacterTyped
+- uid: GrandmaGreen.Dialogue.EntityLineView.OnContinueTriggered(ClickEvent)
+  name: OnContinueTriggered(ClickEvent)
+  href: api/GrandmaGreen.Dialogue.EntityLineView.html#GrandmaGreen_Dialogue_EntityLineView_OnContinueTriggered_ClickEvent_
+  commentId: M:GrandmaGreen.Dialogue.EntityLineView.OnContinueTriggered(ClickEvent)
+  fullName: GrandmaGreen.Dialogue.EntityLineView.OnContinueTriggered(ClickEvent)
+  nameWithType: EntityLineView.OnContinueTriggered(ClickEvent)
+- uid: GrandmaGreen.Dialogue.EntityLineView.OnContinueTriggered*
+  name: OnContinueTriggered
+  href: api/GrandmaGreen.Dialogue.EntityLineView.html#GrandmaGreen_Dialogue_EntityLineView_OnContinueTriggered_
+  commentId: Overload:GrandmaGreen.Dialogue.EntityLineView.OnContinueTriggered
+  isSpec: "True"
+  fullName: GrandmaGreen.Dialogue.EntityLineView.OnContinueTriggered
+  nameWithType: EntityLineView.OnContinueTriggered
+- uid: GrandmaGreen.Dialogue.EntityLineView.OnOptionSelected
+  name: OnOptionSelected
+  href: api/GrandmaGreen.Dialogue.EntityLineView.html#GrandmaGreen_Dialogue_EntityLineView_OnOptionSelected
+  commentId: F:GrandmaGreen.Dialogue.EntityLineView.OnOptionSelected
+  fullName: GrandmaGreen.Dialogue.EntityLineView.OnOptionSelected
+  nameWithType: EntityLineView.OnOptionSelected
+- uid: GrandmaGreen.Dialogue.EntityLineView.RunLine(LocalizedLine,Action)
+  name: RunLine(LocalizedLine, Action)
+  href: api/GrandmaGreen.Dialogue.EntityLineView.html#GrandmaGreen_Dialogue_EntityLineView_RunLine_LocalizedLine_Action_
+  commentId: M:GrandmaGreen.Dialogue.EntityLineView.RunLine(LocalizedLine,Action)
+  fullName: GrandmaGreen.Dialogue.EntityLineView.RunLine(LocalizedLine, Action)
+  nameWithType: EntityLineView.RunLine(LocalizedLine, Action)
+- uid: GrandmaGreen.Dialogue.EntityLineView.RunLine*
+  name: RunLine
+  href: api/GrandmaGreen.Dialogue.EntityLineView.html#GrandmaGreen_Dialogue_EntityLineView_RunLine_
+  commentId: Overload:GrandmaGreen.Dialogue.EntityLineView.RunLine
+  isSpec: "True"
+  fullName: GrandmaGreen.Dialogue.EntityLineView.RunLine
+  nameWithType: EntityLineView.RunLine
+- uid: GrandmaGreen.Dialogue.EntityLineView.RunOptions(DialogueOption[],Action{System.Int32})
+  name: RunOptions(DialogueOption[], Action<Int32>)
+  href: api/GrandmaGreen.Dialogue.EntityLineView.html#GrandmaGreen_Dialogue_EntityLineView_RunOptions_DialogueOption___Action_System_Int32__
+  commentId: M:GrandmaGreen.Dialogue.EntityLineView.RunOptions(DialogueOption[],Action{System.Int32})
+  name.vb: RunOptions(DialogueOption(), Action(Of Int32))
+  fullName: GrandmaGreen.Dialogue.EntityLineView.RunOptions(DialogueOption[], Action<System.Int32>)
+  fullName.vb: GrandmaGreen.Dialogue.EntityLineView.RunOptions(DialogueOption(), Action(Of System.Int32))
+  nameWithType: EntityLineView.RunOptions(DialogueOption[], Action<Int32>)
+  nameWithType.vb: EntityLineView.RunOptions(DialogueOption(), Action(Of Int32))
+- uid: GrandmaGreen.Dialogue.EntityLineView.RunOptions*
+  name: RunOptions
+  href: api/GrandmaGreen.Dialogue.EntityLineView.html#GrandmaGreen_Dialogue_EntityLineView_RunOptions_
+  commentId: Overload:GrandmaGreen.Dialogue.EntityLineView.RunOptions
+  isSpec: "True"
+  fullName: GrandmaGreen.Dialogue.EntityLineView.RunOptions
+  nameWithType: EntityLineView.RunOptions
+- uid: GrandmaGreen.Dialogue.EntityLineView.StartDialogueNode
+  name: StartDialogueNode()
+  href: api/GrandmaGreen.Dialogue.EntityLineView.html#GrandmaGreen_Dialogue_EntityLineView_StartDialogueNode
+  commentId: M:GrandmaGreen.Dialogue.EntityLineView.StartDialogueNode
+  fullName: GrandmaGreen.Dialogue.EntityLineView.StartDialogueNode()
+  nameWithType: EntityLineView.StartDialogueNode()
+- uid: GrandmaGreen.Dialogue.EntityLineView.StartDialogueNode*
+  name: StartDialogueNode
+  href: api/GrandmaGreen.Dialogue.EntityLineView.html#GrandmaGreen_Dialogue_EntityLineView_StartDialogueNode_
+  commentId: Overload:GrandmaGreen.Dialogue.EntityLineView.StartDialogueNode
+  isSpec: "True"
+  fullName: GrandmaGreen.Dialogue.EntityLineView.StartDialogueNode
+  nameWithType: EntityLineView.StartDialogueNode
+- uid: GrandmaGreen.Dialogue.EntityLineView.typewriterEffectSpeed
+  name: typewriterEffectSpeed
+  href: api/GrandmaGreen.Dialogue.EntityLineView.html#GrandmaGreen_Dialogue_EntityLineView_typewriterEffectSpeed
+  commentId: F:GrandmaGreen.Dialogue.EntityLineView.typewriterEffectSpeed
+  fullName: GrandmaGreen.Dialogue.EntityLineView.typewriterEffectSpeed
+  nameWithType: EntityLineView.typewriterEffectSpeed
+- uid: GrandmaGreen.Dialogue.EntityLineView.UserRequestedViewAdvancement
+  name: UserRequestedViewAdvancement()
+  href: api/GrandmaGreen.Dialogue.EntityLineView.html#GrandmaGreen_Dialogue_EntityLineView_UserRequestedViewAdvancement
+  commentId: M:GrandmaGreen.Dialogue.EntityLineView.UserRequestedViewAdvancement
+  fullName: GrandmaGreen.Dialogue.EntityLineView.UserRequestedViewAdvancement()
+  nameWithType: EntityLineView.UserRequestedViewAdvancement()
+- uid: GrandmaGreen.Dialogue.EntityLineView.UserRequestedViewAdvancement*
+  name: UserRequestedViewAdvancement
+  href: api/GrandmaGreen.Dialogue.EntityLineView.html#GrandmaGreen_Dialogue_EntityLineView_UserRequestedViewAdvancement_
+  commentId: Overload:GrandmaGreen.Dialogue.EntityLineView.UserRequestedViewAdvancement
+  isSpec: "True"
+  fullName: GrandmaGreen.Dialogue.EntityLineView.UserRequestedViewAdvancement
+  nameWithType: EntityLineView.UserRequestedViewAdvancement
+- uid: GrandmaGreen.Dialogue.EntityLineView.useTypewriterEffect
+  name: useTypewriterEffect
+  href: api/GrandmaGreen.Dialogue.EntityLineView.html#GrandmaGreen_Dialogue_EntityLineView_useTypewriterEffect
+  commentId: F:GrandmaGreen.Dialogue.EntityLineView.useTypewriterEffect
+  fullName: GrandmaGreen.Dialogue.EntityLineView.useTypewriterEffect
+  nameWithType: EntityLineView.useTypewriterEffect
 - uid: GrandmaGreen.DialoguePair
   name: DialoguePair
   href: api/GrandmaGreen.DialoguePair.html
@@ -4548,6 +4548,19 @@ references:
   commentId: F:GrandmaGreen.Entities.GameEntity.splineFollow
   fullName: GrandmaGreen.Entities.GameEntity.splineFollow
   nameWithType: GameEntity.splineFollow
+- uid: GrandmaGreen.Entities.GameEntity.StopActions
+  name: StopActions()
+  href: api/GrandmaGreen.Entities.GameEntity.html#GrandmaGreen_Entities_GameEntity_StopActions
+  commentId: M:GrandmaGreen.Entities.GameEntity.StopActions
+  fullName: GrandmaGreen.Entities.GameEntity.StopActions()
+  nameWithType: GameEntity.StopActions()
+- uid: GrandmaGreen.Entities.GameEntity.StopActions*
+  name: StopActions
+  href: api/GrandmaGreen.Entities.GameEntity.html#GrandmaGreen_Entities_GameEntity_StopActions_
+  commentId: Overload:GrandmaGreen.Entities.GameEntity.StopActions
+  isSpec: "True"
+  fullName: GrandmaGreen.Entities.GameEntity.StopActions
+  nameWithType: GameEntity.StopActions
 - uid: GrandmaGreen.Entities.GameEntity.Update
   name: Update()
   href: api/GrandmaGreen.Entities.GameEntity.html#GrandmaGreen_Entities_GameEntity_Update
@@ -4649,6 +4662,32 @@ references:
   commentId: F:GrandmaGreen.Entities.GolemController.delay
   fullName: GrandmaGreen.Entities.GolemController.delay
   nameWithType: GolemController.delay
+- uid: GrandmaGreen.Entities.GolemController.DisableGolem
+  name: DisableGolem()
+  href: api/GrandmaGreen.Entities.GolemController.html#GrandmaGreen_Entities_GolemController_DisableGolem
+  commentId: M:GrandmaGreen.Entities.GolemController.DisableGolem
+  fullName: GrandmaGreen.Entities.GolemController.DisableGolem()
+  nameWithType: GolemController.DisableGolem()
+- uid: GrandmaGreen.Entities.GolemController.DisableGolem*
+  name: DisableGolem
+  href: api/GrandmaGreen.Entities.GolemController.html#GrandmaGreen_Entities_GolemController_DisableGolem_
+  commentId: Overload:GrandmaGreen.Entities.GolemController.DisableGolem
+  isSpec: "True"
+  fullName: GrandmaGreen.Entities.GolemController.DisableGolem
+  nameWithType: GolemController.DisableGolem
+- uid: GrandmaGreen.Entities.GolemController.EnableGolem
+  name: EnableGolem()
+  href: api/GrandmaGreen.Entities.GolemController.html#GrandmaGreen_Entities_GolemController_EnableGolem
+  commentId: M:GrandmaGreen.Entities.GolemController.EnableGolem
+  fullName: GrandmaGreen.Entities.GolemController.EnableGolem()
+  nameWithType: GolemController.EnableGolem()
+- uid: GrandmaGreen.Entities.GolemController.EnableGolem*
+  name: EnableGolem
+  href: api/GrandmaGreen.Entities.GolemController.html#GrandmaGreen_Entities_GolemController_EnableGolem_
+  commentId: Overload:GrandmaGreen.Entities.GolemController.EnableGolem
+  isSpec: "True"
+  fullName: GrandmaGreen.Entities.GolemController.EnableGolem
+  nameWithType: GolemController.EnableGolem
 - uid: GrandmaGreen.Entities.GolemController.EvolveGolem
   name: EvolveGolem()
   href: api/GrandmaGreen.Entities.GolemController.html#GrandmaGreen_Entities_GolemController_EvolveGolem
@@ -4704,6 +4743,19 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Entities.GolemController.FollowPath
   nameWithType: GolemController.FollowPath
+- uid: GrandmaGreen.Entities.GolemController.getActiveRig
+  name: getActiveRig()
+  href: api/GrandmaGreen.Entities.GolemController.html#GrandmaGreen_Entities_GolemController_getActiveRig
+  commentId: M:GrandmaGreen.Entities.GolemController.getActiveRig
+  fullName: GrandmaGreen.Entities.GolemController.getActiveRig()
+  nameWithType: GolemController.getActiveRig()
+- uid: GrandmaGreen.Entities.GolemController.getActiveRig*
+  name: getActiveRig
+  href: api/GrandmaGreen.Entities.GolemController.html#GrandmaGreen_Entities_GolemController_getActiveRig_
+  commentId: Overload:GrandmaGreen.Entities.GolemController.getActiveRig
+  isSpec: "True"
+  fullName: GrandmaGreen.Entities.GolemController.getActiveRig
+  nameWithType: GolemController.getActiveRig
 - uid: GrandmaGreen.Entities.GolemController.GetGolemBox
   name: GetGolemBox()
   href: api/GrandmaGreen.Entities.GolemController.html#GrandmaGreen_Entities_GolemController_GetGolemBox
@@ -4811,6 +4863,32 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Entities.GolemController.OnGolemSelectRelease
   nameWithType: GolemController.OnGolemSelectRelease
+- uid: GrandmaGreen.Entities.GolemController.OnGolemTapEnd
+  name: OnGolemTapEnd()
+  href: api/GrandmaGreen.Entities.GolemController.html#GrandmaGreen_Entities_GolemController_OnGolemTapEnd
+  commentId: M:GrandmaGreen.Entities.GolemController.OnGolemTapEnd
+  fullName: GrandmaGreen.Entities.GolemController.OnGolemTapEnd()
+  nameWithType: GolemController.OnGolemTapEnd()
+- uid: GrandmaGreen.Entities.GolemController.OnGolemTapEnd*
+  name: OnGolemTapEnd
+  href: api/GrandmaGreen.Entities.GolemController.html#GrandmaGreen_Entities_GolemController_OnGolemTapEnd_
+  commentId: Overload:GrandmaGreen.Entities.GolemController.OnGolemTapEnd
+  isSpec: "True"
+  fullName: GrandmaGreen.Entities.GolemController.OnGolemTapEnd
+  nameWithType: GolemController.OnGolemTapEnd
+- uid: GrandmaGreen.Entities.GolemController.OnGolemTapped
+  name: OnGolemTapped()
+  href: api/GrandmaGreen.Entities.GolemController.html#GrandmaGreen_Entities_GolemController_OnGolemTapped
+  commentId: M:GrandmaGreen.Entities.GolemController.OnGolemTapped
+  fullName: GrandmaGreen.Entities.GolemController.OnGolemTapped()
+  nameWithType: GolemController.OnGolemTapped()
+- uid: GrandmaGreen.Entities.GolemController.OnGolemTapped*
+  name: OnGolemTapped
+  href: api/GrandmaGreen.Entities.GolemController.html#GrandmaGreen_Entities_GolemController_OnGolemTapped_
+  commentId: Overload:GrandmaGreen.Entities.GolemController.OnGolemTapped
+  isSpec: "True"
+  fullName: GrandmaGreen.Entities.GolemController.OnGolemTapped
+  nameWithType: GolemController.OnGolemTapped
 - uid: GrandmaGreen.Entities.GolemController.pathfinderServicer
   name: pathfinderServicer
   href: api/GrandmaGreen.Entities.GolemController.html#GrandmaGreen_Entities_GolemController_pathfinderServicer
@@ -4906,12 +4984,12 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Entities.GolemController.Update
   nameWithType: GolemController.Update
-- uid: GrandmaGreen.Entities.GolemController.UpdateDraggingState
-  name: UpdateDraggingState()
-  href: api/GrandmaGreen.Entities.GolemController.html#GrandmaGreen_Entities_GolemController_UpdateDraggingState
-  commentId: M:GrandmaGreen.Entities.GolemController.UpdateDraggingState
-  fullName: GrandmaGreen.Entities.GolemController.UpdateDraggingState()
-  nameWithType: GolemController.UpdateDraggingState()
+- uid: GrandmaGreen.Entities.GolemController.UpdateDraggingState(System.Boolean)
+  name: UpdateDraggingState(Boolean)
+  href: api/GrandmaGreen.Entities.GolemController.html#GrandmaGreen_Entities_GolemController_UpdateDraggingState_System_Boolean_
+  commentId: M:GrandmaGreen.Entities.GolemController.UpdateDraggingState(System.Boolean)
+  fullName: GrandmaGreen.Entities.GolemController.UpdateDraggingState(System.Boolean)
+  nameWithType: GolemController.UpdateDraggingState(Boolean)
 - uid: GrandmaGreen.Entities.GolemController.UpdateDraggingState*
   name: UpdateDraggingState
   href: api/GrandmaGreen.Entities.GolemController.html#GrandmaGreen_Entities_GolemController_UpdateDraggingState_
@@ -4996,6 +5074,19 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Entities.GolemCrowdController.Awake
   nameWithType: GolemCrowdController.Awake
+- uid: GrandmaGreen.Entities.GolemCrowdController.EnterDragGolem(GameObject)
+  name: EnterDragGolem(GameObject)
+  href: api/GrandmaGreen.Entities.GolemCrowdController.html#GrandmaGreen_Entities_GolemCrowdController_EnterDragGolem_GameObject_
+  commentId: M:GrandmaGreen.Entities.GolemCrowdController.EnterDragGolem(GameObject)
+  fullName: GrandmaGreen.Entities.GolemCrowdController.EnterDragGolem(GameObject)
+  nameWithType: GolemCrowdController.EnterDragGolem(GameObject)
+- uid: GrandmaGreen.Entities.GolemCrowdController.EnterDragGolem*
+  name: EnterDragGolem
+  href: api/GrandmaGreen.Entities.GolemCrowdController.html#GrandmaGreen_Entities_GolemCrowdController_EnterDragGolem_
+  commentId: Overload:GrandmaGreen.Entities.GolemCrowdController.EnterDragGolem
+  isSpec: "True"
+  fullName: GrandmaGreen.Entities.GolemCrowdController.EnterDragGolem
+  nameWithType: GolemCrowdController.EnterDragGolem
 - uid: GrandmaGreen.Entities.GolemCrowdController.gardenArea
   name: gardenArea
   href: api/GrandmaGreen.Entities.GolemCrowdController.html#GrandmaGreen_Entities_GolemCrowdController_gardenArea
@@ -5040,6 +5131,25 @@ references:
   commentId: F:GrandmaGreen.Entities.GolemCrowdController.happinessChangeValue
   fullName: GrandmaGreen.Entities.GolemCrowdController.happinessChangeValue
   nameWithType: GolemCrowdController.happinessChangeValue
+- uid: GrandmaGreen.Entities.GolemCrowdController.OnDestroy
+  name: OnDestroy()
+  href: api/GrandmaGreen.Entities.GolemCrowdController.html#GrandmaGreen_Entities_GolemCrowdController_OnDestroy
+  commentId: M:GrandmaGreen.Entities.GolemCrowdController.OnDestroy
+  fullName: GrandmaGreen.Entities.GolemCrowdController.OnDestroy()
+  nameWithType: GolemCrowdController.OnDestroy()
+- uid: GrandmaGreen.Entities.GolemCrowdController.OnDestroy*
+  name: OnDestroy
+  href: api/GrandmaGreen.Entities.GolemCrowdController.html#GrandmaGreen_Entities_GolemCrowdController_OnDestroy_
+  commentId: Overload:GrandmaGreen.Entities.GolemCrowdController.OnDestroy
+  isSpec: "True"
+  fullName: GrandmaGreen.Entities.GolemCrowdController.OnDestroy
+  nameWithType: GolemCrowdController.OnDestroy
+- uid: GrandmaGreen.Entities.GolemCrowdController.pointerState
+  name: pointerState
+  href: api/GrandmaGreen.Entities.GolemCrowdController.html#GrandmaGreen_Entities_GolemCrowdController_pointerState
+  commentId: F:GrandmaGreen.Entities.GolemCrowdController.pointerState
+  fullName: GrandmaGreen.Entities.GolemCrowdController.pointerState
+  nameWithType: GolemCrowdController.pointerState
 - uid: GrandmaGreen.Entities.GolemCrowdController.SpawnGolem
   name: SpawnGolem()
   href: api/GrandmaGreen.Entities.GolemCrowdController.html#GrandmaGreen_Entities_GolemCrowdController_SpawnGolem
@@ -5121,6 +5231,12 @@ references:
   commentId: F:GrandmaGreen.Entities.GolemData.spawnChance
   fullName: GrandmaGreen.Entities.GolemData.spawnChance
   nameWithType: GolemData.spawnChance
+- uid: GrandmaGreen.Entities.GolemInputHandler
+  name: GolemInputHandler
+  href: api/GrandmaGreen.Entities.GolemInputHandler.html
+  commentId: T:GrandmaGreen.Entities.GolemInputHandler
+  fullName: GrandmaGreen.Entities.GolemInputHandler
+  nameWithType: GolemInputHandler
 - uid: GrandmaGreen.Entities.GolemManager
   name: GolemManager
   href: api/GrandmaGreen.Entities.GolemManager.html
@@ -5286,6 +5402,19 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Entities.GolemManager.SaveGolemData
   nameWithType: GolemManager.SaveGolemData
+- uid: GrandmaGreen.Entities.GolemManager.TriggerDeleteData
+  name: TriggerDeleteData()
+  href: api/GrandmaGreen.Entities.GolemManager.html#GrandmaGreen_Entities_GolemManager_TriggerDeleteData
+  commentId: M:GrandmaGreen.Entities.GolemManager.TriggerDeleteData
+  fullName: GrandmaGreen.Entities.GolemManager.TriggerDeleteData()
+  nameWithType: GolemManager.TriggerDeleteData()
+- uid: GrandmaGreen.Entities.GolemManager.TriggerDeleteData*
+  name: TriggerDeleteData
+  href: api/GrandmaGreen.Entities.GolemManager.html#GrandmaGreen_Entities_GolemManager_TriggerDeleteData_
+  commentId: Overload:GrandmaGreen.Entities.GolemManager.TriggerDeleteData
+  isSpec: "True"
+  fullName: GrandmaGreen.Entities.GolemManager.TriggerDeleteData
+  nameWithType: GolemManager.TriggerDeleteData
 - uid: GrandmaGreen.Entities.GolemManager.UpdateGolemTask(System.UInt16)
   name: UpdateGolemTask(UInt16)
   href: api/GrandmaGreen.Entities.GolemManager.html#GrandmaGreen_Entities_GolemManager_UpdateGolemTask_System_UInt16_
@@ -5457,12 +5586,30 @@ references:
   commentId: E:GrandmaGreen.EventManager.EVENT_DELETE_SAVE
   fullName: GrandmaGreen.EventManager.EVENT_DELETE_SAVE
   nameWithType: EventManager.EVENT_DELETE_SAVE
+- uid: GrandmaGreen.EventManager.EVENT_GOLEM_DISABLE
+  name: EVENT_GOLEM_DISABLE
+  href: api/GrandmaGreen.EventManager.html#GrandmaGreen_EventManager_EVENT_GOLEM_DISABLE
+  commentId: E:GrandmaGreen.EventManager.EVENT_GOLEM_DISABLE
+  fullName: GrandmaGreen.EventManager.EVENT_GOLEM_DISABLE
+  nameWithType: EventManager.EVENT_GOLEM_DISABLE
 - uid: GrandmaGreen.EventManager.EVENT_GOLEM_DO_TASK
   name: EVENT_GOLEM_DO_TASK
   href: api/GrandmaGreen.EventManager.html#GrandmaGreen_EventManager_EVENT_GOLEM_DO_TASK
   commentId: E:GrandmaGreen.EventManager.EVENT_GOLEM_DO_TASK
   fullName: GrandmaGreen.EventManager.EVENT_GOLEM_DO_TASK
   nameWithType: EventManager.EVENT_GOLEM_DO_TASK
+- uid: GrandmaGreen.EventManager.EVENT_GOLEM_DRAG
+  name: EVENT_GOLEM_DRAG
+  href: api/GrandmaGreen.EventManager.html#GrandmaGreen_EventManager_EVENT_GOLEM_DRAG
+  commentId: E:GrandmaGreen.EventManager.EVENT_GOLEM_DRAG
+  fullName: GrandmaGreen.EventManager.EVENT_GOLEM_DRAG
+  nameWithType: EventManager.EVENT_GOLEM_DRAG
+- uid: GrandmaGreen.EventManager.EVENT_GOLEM_ENABLE
+  name: EVENT_GOLEM_ENABLE
+  href: api/GrandmaGreen.EventManager.html#GrandmaGreen_EventManager_EVENT_GOLEM_ENABLE
+  commentId: E:GrandmaGreen.EventManager.EVENT_GOLEM_ENABLE
+  fullName: GrandmaGreen.EventManager.EVENT_GOLEM_ENABLE
+  nameWithType: EventManager.EVENT_GOLEM_ENABLE
 - uid: GrandmaGreen.EventManager.EVENT_GOLEM_EVOLVE
   name: EVENT_GOLEM_EVOLVE
   href: api/GrandmaGreen.EventManager.html#GrandmaGreen_EventManager_EVENT_GOLEM_EVOLVE
@@ -5696,6 +5843,19 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.EventManager.HandleEVENT_GOLEM_ASSIGN_TASK
   nameWithType: EventManager.HandleEVENT_GOLEM_ASSIGN_TASK
+- uid: GrandmaGreen.EventManager.HandleEVENT_GOLEM_DISABLE
+  name: HandleEVENT_GOLEM_DISABLE()
+  href: api/GrandmaGreen.EventManager.html#GrandmaGreen_EventManager_HandleEVENT_GOLEM_DISABLE
+  commentId: M:GrandmaGreen.EventManager.HandleEVENT_GOLEM_DISABLE
+  fullName: GrandmaGreen.EventManager.HandleEVENT_GOLEM_DISABLE()
+  nameWithType: EventManager.HandleEVENT_GOLEM_DISABLE()
+- uid: GrandmaGreen.EventManager.HandleEVENT_GOLEM_DISABLE*
+  name: HandleEVENT_GOLEM_DISABLE
+  href: api/GrandmaGreen.EventManager.html#GrandmaGreen_EventManager_HandleEVENT_GOLEM_DISABLE_
+  commentId: Overload:GrandmaGreen.EventManager.HandleEVENT_GOLEM_DISABLE
+  isSpec: "True"
+  fullName: GrandmaGreen.EventManager.HandleEVENT_GOLEM_DISABLE
+  nameWithType: EventManager.HandleEVENT_GOLEM_DISABLE
 - uid: GrandmaGreen.EventManager.HandleEVENT_GOLEM_DO_TASK(System.Int32)
   name: HandleEVENT_GOLEM_DO_TASK(Int32)
   href: api/GrandmaGreen.EventManager.html#GrandmaGreen_EventManager_HandleEVENT_GOLEM_DO_TASK_System_Int32_
@@ -5709,6 +5869,32 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.EventManager.HandleEVENT_GOLEM_DO_TASK
   nameWithType: EventManager.HandleEVENT_GOLEM_DO_TASK
+- uid: GrandmaGreen.EventManager.HandleEVENT_GOLEM_DRAG(GameObject)
+  name: HandleEVENT_GOLEM_DRAG(GameObject)
+  href: api/GrandmaGreen.EventManager.html#GrandmaGreen_EventManager_HandleEVENT_GOLEM_DRAG_GameObject_
+  commentId: M:GrandmaGreen.EventManager.HandleEVENT_GOLEM_DRAG(GameObject)
+  fullName: GrandmaGreen.EventManager.HandleEVENT_GOLEM_DRAG(GameObject)
+  nameWithType: EventManager.HandleEVENT_GOLEM_DRAG(GameObject)
+- uid: GrandmaGreen.EventManager.HandleEVENT_GOLEM_DRAG*
+  name: HandleEVENT_GOLEM_DRAG
+  href: api/GrandmaGreen.EventManager.html#GrandmaGreen_EventManager_HandleEVENT_GOLEM_DRAG_
+  commentId: Overload:GrandmaGreen.EventManager.HandleEVENT_GOLEM_DRAG
+  isSpec: "True"
+  fullName: GrandmaGreen.EventManager.HandleEVENT_GOLEM_DRAG
+  nameWithType: EventManager.HandleEVENT_GOLEM_DRAG
+- uid: GrandmaGreen.EventManager.HandleEVENT_GOLEM_ENABLE
+  name: HandleEVENT_GOLEM_ENABLE()
+  href: api/GrandmaGreen.EventManager.html#GrandmaGreen_EventManager_HandleEVENT_GOLEM_ENABLE
+  commentId: M:GrandmaGreen.EventManager.HandleEVENT_GOLEM_ENABLE
+  fullName: GrandmaGreen.EventManager.HandleEVENT_GOLEM_ENABLE()
+  nameWithType: EventManager.HandleEVENT_GOLEM_ENABLE()
+- uid: GrandmaGreen.EventManager.HandleEVENT_GOLEM_ENABLE*
+  name: HandleEVENT_GOLEM_ENABLE
+  href: api/GrandmaGreen.EventManager.html#GrandmaGreen_EventManager_HandleEVENT_GOLEM_ENABLE_
+  commentId: Overload:GrandmaGreen.EventManager.HandleEVENT_GOLEM_ENABLE
+  isSpec: "True"
+  fullName: GrandmaGreen.EventManager.HandleEVENT_GOLEM_ENABLE
+  nameWithType: EventManager.HandleEVENT_GOLEM_ENABLE
 - uid: GrandmaGreen.EventManager.HandleEVENT_GOLEM_EVOLVE(System.UInt16)
   name: HandleEVENT_GOLEM_EVOLVE(UInt16)
   href: api/GrandmaGreen.EventManager.html#GrandmaGreen_EventManager_HandleEVENT_GOLEM_EVOLVE_System_UInt16_
@@ -9411,19 +9597,6 @@ references:
   commentId: T:GrandmaGreen.Mail.MailboxModel
   fullName: GrandmaGreen.Mail.MailboxModel
   nameWithType: MailboxModel
-- uid: GrandmaGreen.Mail.MailboxModel.CheckMailQueue
-  name: CheckMailQueue()
-  href: api/GrandmaGreen.Mail.MailboxModel.html#GrandmaGreen_Mail_MailboxModel_CheckMailQueue
-  commentId: M:GrandmaGreen.Mail.MailboxModel.CheckMailQueue
-  fullName: GrandmaGreen.Mail.MailboxModel.CheckMailQueue()
-  nameWithType: MailboxModel.CheckMailQueue()
-- uid: GrandmaGreen.Mail.MailboxModel.CheckMailQueue*
-  name: CheckMailQueue
-  href: api/GrandmaGreen.Mail.MailboxModel.html#GrandmaGreen_Mail_MailboxModel_CheckMailQueue_
-  commentId: Overload:GrandmaGreen.Mail.MailboxModel.CheckMailQueue
-  isSpec: "True"
-  fullName: GrandmaGreen.Mail.MailboxModel.CheckMailQueue
-  nameWithType: MailboxModel.CheckMailQueue
 - uid: GrandmaGreen.Mail.MailboxModel.Empty
   name: Empty()
   href: api/GrandmaGreen.Mail.MailboxModel.html#GrandmaGreen_Mail_MailboxModel_Empty
@@ -9437,19 +9610,6 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Mail.MailboxModel.Empty
   nameWithType: MailboxModel.Empty
-- uid: GrandmaGreen.Mail.MailboxModel.GetLetterByDateTime(System.DateTime)
-  name: GetLetterByDateTime(DateTime)
-  href: api/GrandmaGreen.Mail.MailboxModel.html#GrandmaGreen_Mail_MailboxModel_GetLetterByDateTime_System_DateTime_
-  commentId: M:GrandmaGreen.Mail.MailboxModel.GetLetterByDateTime(System.DateTime)
-  fullName: GrandmaGreen.Mail.MailboxModel.GetLetterByDateTime(System.DateTime)
-  nameWithType: MailboxModel.GetLetterByDateTime(DateTime)
-- uid: GrandmaGreen.Mail.MailboxModel.GetLetterByDateTime*
-  name: GetLetterByDateTime
-  href: api/GrandmaGreen.Mail.MailboxModel.html#GrandmaGreen_Mail_MailboxModel_GetLetterByDateTime_
-  commentId: Overload:GrandmaGreen.Mail.MailboxModel.GetLetterByDateTime
-  isSpec: "True"
-  fullName: GrandmaGreen.Mail.MailboxModel.GetLetterByDateTime
-  nameWithType: MailboxModel.GetLetterByDateTime
 - uid: GrandmaGreen.Mail.MailboxModel.GetLetterByIndex(System.Int32)
   name: GetLetterByIndex(Int32)
   href: api/GrandmaGreen.Mail.MailboxModel.html#GrandmaGreen_Mail_MailboxModel_GetLetterByIndex_System_Int32_
@@ -9489,18 +9649,19 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Mail.MailboxModel.GetLetters
   nameWithType: MailboxModel.GetLetters
-- uid: GrandmaGreen.Mail.MailboxModel.letterQueue
-  name: letterQueue
-  href: api/GrandmaGreen.Mail.MailboxModel.html#GrandmaGreen_Mail_MailboxModel_letterQueue
-  commentId: F:GrandmaGreen.Mail.MailboxModel.letterQueue
-  fullName: GrandmaGreen.Mail.MailboxModel.letterQueue
-  nameWithType: MailboxModel.letterQueue
-- uid: GrandmaGreen.Mail.MailboxModel.letters
-  name: letters
-  href: api/GrandmaGreen.Mail.MailboxModel.html#GrandmaGreen_Mail_MailboxModel_letters
-  commentId: F:GrandmaGreen.Mail.MailboxModel.letters
-  fullName: GrandmaGreen.Mail.MailboxModel.letters
-  nameWithType: MailboxModel.letters
+- uid: GrandmaGreen.Mail.MailboxModel.MailboxString
+  name: MailboxString()
+  href: api/GrandmaGreen.Mail.MailboxModel.html#GrandmaGreen_Mail_MailboxModel_MailboxString
+  commentId: M:GrandmaGreen.Mail.MailboxModel.MailboxString
+  fullName: GrandmaGreen.Mail.MailboxModel.MailboxString()
+  nameWithType: MailboxModel.MailboxString()
+- uid: GrandmaGreen.Mail.MailboxModel.MailboxString*
+  name: MailboxString
+  href: api/GrandmaGreen.Mail.MailboxModel.html#GrandmaGreen_Mail_MailboxModel_MailboxString_
+  commentId: Overload:GrandmaGreen.Mail.MailboxModel.MailboxString
+  isSpec: "True"
+  fullName: GrandmaGreen.Mail.MailboxModel.MailboxString
+  nameWithType: MailboxModel.MailboxString
 - uid: GrandmaGreen.Mail.MailboxModel.RemoveLetter(System.Int32)
   name: RemoveLetter(Int32)
   href: api/GrandmaGreen.Mail.MailboxModel.html#GrandmaGreen_Mail_MailboxModel_RemoveLetter_System_Int32_
@@ -9571,19 +9732,46 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Mail.MailboxModel.Start
   nameWithType: MailboxModel.Start
-- uid: GrandmaGreen.Mail.MailboxModel.ToString
-  name: ToString()
-  href: api/GrandmaGreen.Mail.MailboxModel.html#GrandmaGreen_Mail_MailboxModel_ToString
-  commentId: M:GrandmaGreen.Mail.MailboxModel.ToString
-  fullName: GrandmaGreen.Mail.MailboxModel.ToString()
-  nameWithType: MailboxModel.ToString()
-- uid: GrandmaGreen.Mail.MailboxModel.ToString*
-  name: ToString
-  href: api/GrandmaGreen.Mail.MailboxModel.html#GrandmaGreen_Mail_MailboxModel_ToString_
-  commentId: Overload:GrandmaGreen.Mail.MailboxModel.ToString
+- uid: GrandmaGreen.Mail.QueuedLetter
+  name: QueuedLetter
+  href: api/GrandmaGreen.Mail.QueuedLetter.html
+  commentId: T:GrandmaGreen.Mail.QueuedLetter
+  fullName: GrandmaGreen.Mail.QueuedLetter
+  nameWithType: QueuedLetter
+- uid: GrandmaGreen.Mail.QueuedLetter.#ctor(System.DateTime,GrandmaGreen.Mail.Letter)
+  name: QueuedLetter(DateTime, Letter)
+  href: api/GrandmaGreen.Mail.QueuedLetter.html#GrandmaGreen_Mail_QueuedLetter__ctor_System_DateTime_GrandmaGreen_Mail_Letter_
+  commentId: M:GrandmaGreen.Mail.QueuedLetter.#ctor(System.DateTime,GrandmaGreen.Mail.Letter)
+  fullName: GrandmaGreen.Mail.QueuedLetter.QueuedLetter(System.DateTime, GrandmaGreen.Mail.Letter)
+  nameWithType: QueuedLetter.QueuedLetter(DateTime, Letter)
+- uid: GrandmaGreen.Mail.QueuedLetter.#ctor(System.DateTime,System.String,System.String,System.String,System.String,System.UInt16[])
+  name: QueuedLetter(DateTime, String, String, String, String, UInt16[])
+  href: api/GrandmaGreen.Mail.QueuedLetter.html#GrandmaGreen_Mail_QueuedLetter__ctor_System_DateTime_System_String_System_String_System_String_System_String_System_UInt16___
+  commentId: M:GrandmaGreen.Mail.QueuedLetter.#ctor(System.DateTime,System.String,System.String,System.String,System.String,System.UInt16[])
+  name.vb: QueuedLetter(DateTime, String, String, String, String, UInt16())
+  fullName: GrandmaGreen.Mail.QueuedLetter.QueuedLetter(System.DateTime, System.String, System.String, System.String, System.String, System.UInt16[])
+  fullName.vb: GrandmaGreen.Mail.QueuedLetter.QueuedLetter(System.DateTime, System.String, System.String, System.String, System.String, System.UInt16())
+  nameWithType: QueuedLetter.QueuedLetter(DateTime, String, String, String, String, UInt16[])
+  nameWithType.vb: QueuedLetter.QueuedLetter(DateTime, String, String, String, String, UInt16())
+- uid: GrandmaGreen.Mail.QueuedLetter.#ctor*
+  name: QueuedLetter
+  href: api/GrandmaGreen.Mail.QueuedLetter.html#GrandmaGreen_Mail_QueuedLetter__ctor_
+  commentId: Overload:GrandmaGreen.Mail.QueuedLetter.#ctor
   isSpec: "True"
-  fullName: GrandmaGreen.Mail.MailboxModel.ToString
-  nameWithType: MailboxModel.ToString
+  fullName: GrandmaGreen.Mail.QueuedLetter.QueuedLetter
+  nameWithType: QueuedLetter.QueuedLetter
+- uid: GrandmaGreen.Mail.QueuedLetter.letter
+  name: letter
+  href: api/GrandmaGreen.Mail.QueuedLetter.html#GrandmaGreen_Mail_QueuedLetter_letter
+  commentId: F:GrandmaGreen.Mail.QueuedLetter.letter
+  fullName: GrandmaGreen.Mail.QueuedLetter.letter
+  nameWithType: QueuedLetter.letter
+- uid: GrandmaGreen.Mail.QueuedLetter.time
+  name: time
+  href: api/GrandmaGreen.Mail.QueuedLetter.html#GrandmaGreen_Mail_QueuedLetter_time
+  commentId: F:GrandmaGreen.Mail.QueuedLetter.time
+  fullName: GrandmaGreen.Mail.QueuedLetter.time
+  nameWithType: QueuedLetter.time
 - uid: GrandmaGreen.MailboxUIDisplay
   name: MailboxUIDisplay
   href: api/GrandmaGreen.MailboxUIDisplay.html
