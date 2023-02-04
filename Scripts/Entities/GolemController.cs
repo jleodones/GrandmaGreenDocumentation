@@ -385,10 +385,12 @@ namespace GrandmaGreen.Entities
         public void EnableGolem()
         {
             gameObject.SetActive(true);
+            behaviorTree.Start();
         }
 
         public void DisableGolem()
         {
+            behaviorTree.Stop();
             gameObject.SetActive(false);
         }
 
