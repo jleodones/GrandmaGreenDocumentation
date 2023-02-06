@@ -376,6 +376,19 @@ references:
   isSpec: "True"
   fullName: ToolsMenuController.ShowToolsMenu
   nameWithType: ToolsMenuController.ShowToolsMenu
+- uid: Global.ToolsMenuController.ToolCallbacks
+  name: ToolCallbacks()
+  href: api/Global.ToolsMenuController.html#Global_ToolsMenuController_ToolCallbacks
+  commentId: M:Global.ToolsMenuController.ToolCallbacks
+  fullName: ToolsMenuController.ToolCallbacks()
+  nameWithType: ToolsMenuController.ToolCallbacks()
+- uid: Global.ToolsMenuController.ToolCallbacks*
+  name: ToolCallbacks
+  href: api/Global.ToolsMenuController.html#Global_ToolsMenuController_ToolCallbacks_
+  commentId: Overload:Global.ToolsMenuController.ToolCallbacks
+  isSpec: "True"
+  fullName: ToolsMenuController.ToolCallbacks
+  nameWithType: ToolsMenuController.ToolCallbacks
 - uid: Global.ToolsMenuController.toolData
   name: toolData
   href: api/Global.ToolsMenuController.html#Global_ToolsMenuController_toolData
