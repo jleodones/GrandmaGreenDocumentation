@@ -390,6 +390,8 @@ namespace GrandmaGreen.Entities
 
         public void DisableGolem()
         {
+            animator.SetInteger("MOVEMENT", 0);
+            animator.Update(0f);
             behaviorTree.Stop();
             gameObject.SetActive(false);
         }

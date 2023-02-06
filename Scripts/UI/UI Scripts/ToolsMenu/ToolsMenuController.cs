@@ -27,15 +27,20 @@ public class ToolsMenuController
     // RegisterToolCallbacks: Assigns a function to every tool button
     public void RegisterToolCallbacks()
     {
+        ToolCallbacks();
+
+        toolData.onToolSelectionStart += ShowToolsMenu;
+        toolData.onToolSelectionEnd += HideToolsMenu;
+        root.style.display = DisplayStyle.None;
+    }
+
+    //ToolCallbacks: Assigns functions to tool buttons (seperated for reusability)
+    public void ToolCallbacks(){
         UQueryBuilder<Button> tools = GetAllTools();
         tools.ForEach((Button tool) =>
         {
             tool.RegisterCallback<ClickEvent>(ToolOnClick);
         });
-
-        toolData.onToolSelectionStart += ShowToolsMenu;
-        toolData.onToolSelectionEnd += HideToolsMenu;
-        root.style.display = DisplayStyle.None;
     }
 
     // GetAllTools: returns all buttons (which are all tools)
@@ -49,7 +54,7 @@ public class ToolsMenuController
     private void ToolOnClick(ClickEvent evt)
     {
         Button clickedTool = evt.currentTarget as Button;
-
+        clickedTool.UnregisterCallback<ClickEvent>(ToolOnClick);
         toolData.ToolSelection(int.Parse(clickedTool.text));
 
         // Start bloom animation
@@ -69,14 +74,16 @@ public class ToolsMenuController
         bloomStart.UnregisterCallback<TransitionEndEvent>(OnBloom);
         bloomStart.RegisterCallback<TransitionEndEvent>(OnUnbloom);
         bloomStart.style.transitionDelay = new List<TimeValue> { new(200, TimeUnit.Millisecond) };
-        bloomStart.style.scale = new Scale(new Vector2(1, 1));
+        bloomStart.style.scale = new Scale(new Vector2(1, 1)); 
         bloomStart.style.rotate = new Rotate(25);
     }
 
     private void OnUnbloom(TransitionEndEvent evt)
     {
+        ToolCallbacks();
         toolData.EndToolSelection();
         bloomStart.UnregisterCallback<TransitionEndEvent>(OnUnbloom);
+        
     }
 
     // ShowToolsMenu: displays the root visual element
