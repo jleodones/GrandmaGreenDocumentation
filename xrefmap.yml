@@ -998,12 +998,6 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.BulletinBoardUIDisplay.CloseUI
   nameWithType: BulletinBoardUIDisplay.CloseUI
-- uid: GrandmaGreen.BulletinBoardUIDisplay.collectionsSO
-  name: collectionsSO
-  href: api/GrandmaGreen.BulletinBoardUIDisplay.html#GrandmaGreen_BulletinBoardUIDisplay_collectionsSO
-  commentId: F:GrandmaGreen.BulletinBoardUIDisplay.collectionsSO
-  fullName: GrandmaGreen.BulletinBoardUIDisplay.collectionsSO
-  nameWithType: BulletinBoardUIDisplay.collectionsSO
 - uid: GrandmaGreen.BulletinBoardUIDisplay.contestLostLetter
   name: contestLostLetter
   href: api/GrandmaGreen.BulletinBoardUIDisplay.html#GrandmaGreen_BulletinBoardUIDisplay_contestLostLetter
@@ -1300,12 +1294,6 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Collections.CollectionsSaver.Clear
   nameWithType: CollectionsSaver.Clear
-- uid: GrandmaGreen.Collections.CollectionsSaver.collections
-  name: collections
-  href: api/GrandmaGreen.Collections.CollectionsSaver.html#GrandmaGreen_Collections_CollectionsSaver_collections
-  commentId: F:GrandmaGreen.Collections.CollectionsSaver.collections
-  fullName: GrandmaGreen.Collections.CollectionsSaver.collections
-  nameWithType: CollectionsSaver.collections
 - uid: GrandmaGreen.Collections.CollectionsSaver.FriendContainsKey(GrandmaGreen.Collections.FriendCollectionProperties)
   name: FriendContainsKey(FriendCollectionProperties)
   href: api/GrandmaGreen.Collections.CollectionsSaver.html#GrandmaGreen_Collections_CollectionsSaver_FriendContainsKey_GrandmaGreen_Collections_FriendCollectionProperties_
@@ -1630,14 +1618,7 @@ references:
 - uid: GrandmaGreen.Collections.CollectionsSO.LoadedInstance
   name: LoadedInstance
   href: api/GrandmaGreen.Collections.CollectionsSO.html#GrandmaGreen_Collections_CollectionsSO_LoadedInstance
-  commentId: P:GrandmaGreen.Collections.CollectionsSO.LoadedInstance
-  fullName: GrandmaGreen.Collections.CollectionsSO.LoadedInstance
-  nameWithType: CollectionsSO.LoadedInstance
-- uid: GrandmaGreen.Collections.CollectionsSO.LoadedInstance*
-  name: LoadedInstance
-  href: api/GrandmaGreen.Collections.CollectionsSO.html#GrandmaGreen_Collections_CollectionsSO_LoadedInstance_
-  commentId: Overload:GrandmaGreen.Collections.CollectionsSO.LoadedInstance
-  isSpec: "True"
+  commentId: F:GrandmaGreen.Collections.CollectionsSO.LoadedInstance
   fullName: GrandmaGreen.Collections.CollectionsSO.LoadedInstance
   nameWithType: CollectionsSO.LoadedInstance
 - uid: GrandmaGreen.Collections.CollectionsSO.PlantGenotypeMasterList
@@ -2654,24 +2635,6 @@ references:
   commentId: F:GrandmaGreen.Collections.ItemProperties.tag
   fullName: GrandmaGreen.Collections.ItemProperties.tag
   nameWithType: ItemProperties.tag
-- uid: GrandmaGreen.Collections.ItemSpriteList
-  name: ItemSpriteList
-  href: api/GrandmaGreen.Collections.ItemSpriteList.html
-  commentId: T:GrandmaGreen.Collections.ItemSpriteList
-  fullName: GrandmaGreen.Collections.ItemSpriteList
-  nameWithType: ItemSpriteList
-- uid: GrandmaGreen.Collections.ItemSpriteList.id
-  name: id
-  href: api/GrandmaGreen.Collections.ItemSpriteList.html#GrandmaGreen_Collections_ItemSpriteList_id
-  commentId: F:GrandmaGreen.Collections.ItemSpriteList.id
-  fullName: GrandmaGreen.Collections.ItemSpriteList.id
-  nameWithType: ItemSpriteList.id
-- uid: GrandmaGreen.Collections.ItemSpriteList.sprites
-  name: sprites
-  href: api/GrandmaGreen.Collections.ItemSpriteList.html#GrandmaGreen_Collections_ItemSpriteList_sprites
-  commentId: F:GrandmaGreen.Collections.ItemSpriteList.sprites
-  fullName: GrandmaGreen.Collections.ItemSpriteList.sprites
-  nameWithType: ItemSpriteList.sprites
 - uid: GrandmaGreen.Collections.ItemType
   name: ItemType
   href: api/GrandmaGreen.Collections.ItemType.html
@@ -8652,12 +8615,6 @@ references:
   commentId: F:GrandmaGreen.Garden.SeedUI.canvasGroup
   fullName: GrandmaGreen.Garden.SeedUI.canvasGroup
   nameWithType: SeedUI.canvasGroup
-- uid: GrandmaGreen.Garden.SeedUI.collections
-  name: collections
-  href: api/GrandmaGreen.Garden.SeedUI.html#GrandmaGreen_Garden_SeedUI_collections
-  commentId: F:GrandmaGreen.Garden.SeedUI.collections
-  fullName: GrandmaGreen.Garden.SeedUI.collections
-  nameWithType: SeedUI.collections
 - uid: GrandmaGreen.Garden.SeedUI.DeactivateUI
   name: DeactivateUI()
   href: api/GrandmaGreen.Garden.SeedUI.html#GrandmaGreen_Garden_SeedUI_DeactivateUI
@@ -8804,12 +8761,6 @@ references:
   commentId: T:GrandmaGreen.Garden.ToolEquip
   fullName: GrandmaGreen.Garden.ToolEquip
   nameWithType: ToolEquip
-- uid: GrandmaGreen.Garden.ToolEquip.collections
-  name: collections
-  href: api/GrandmaGreen.Garden.ToolEquip.html#GrandmaGreen_Garden_ToolEquip_collections
-  commentId: F:GrandmaGreen.Garden.ToolEquip.collections
-  fullName: GrandmaGreen.Garden.ToolEquip.collections
-  nameWithType: ToolEquip.collections
 - uid: GrandmaGreen.Garden.ToolEquip.playerTools
   name: playerTools
   href: api/GrandmaGreen.Garden.ToolEquip.html#GrandmaGreen_Garden_ToolEquip_playerTools
@@ -10739,12 +10690,6 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.SellingUIDisplay.IsInBounds
   nameWithType: SellingUIDisplay.IsInBounds
-- uid: GrandmaGreen.SellingUIDisplay.m_collections
-  name: m_collections
-  href: api/GrandmaGreen.SellingUIDisplay.html#GrandmaGreen_SellingUIDisplay_m_collections
-  commentId: F:GrandmaGreen.SellingUIDisplay.m_collections
-  fullName: GrandmaGreen.SellingUIDisplay.m_collections
-  nameWithType: SellingUIDisplay.m_collections
 - uid: GrandmaGreen.SellingUIDisplay.OpenUI
   name: OpenUI()
   href: api/GrandmaGreen.SellingUIDisplay.html#GrandmaGreen_SellingUIDisplay_OpenUI
@@ -11086,12 +11031,12 @@ references:
   commentId: T:GrandmaGreen.Shopkeeping.DecorShopUIController
   fullName: GrandmaGreen.Shopkeeping.DecorShopUIController
   nameWithType: DecorShopUIController
-- uid: GrandmaGreen.Shopkeeping.DecorShopUIController.#ctor(CollectionsSO)
-  name: DecorShopUIController(CollectionsSO)
-  href: api/GrandmaGreen.Shopkeeping.DecorShopUIController.html#GrandmaGreen_Shopkeeping_DecorShopUIController__ctor_CollectionsSO_
-  commentId: M:GrandmaGreen.Shopkeeping.DecorShopUIController.#ctor(CollectionsSO)
-  fullName: GrandmaGreen.Shopkeeping.DecorShopUIController.DecorShopUIController(CollectionsSO)
-  nameWithType: DecorShopUIController.DecorShopUIController(CollectionsSO)
+- uid: GrandmaGreen.Shopkeeping.DecorShopUIController.#ctor
+  name: DecorShopUIController()
+  href: api/GrandmaGreen.Shopkeeping.DecorShopUIController.html#GrandmaGreen_Shopkeeping_DecorShopUIController__ctor
+  commentId: M:GrandmaGreen.Shopkeeping.DecorShopUIController.#ctor
+  fullName: GrandmaGreen.Shopkeeping.DecorShopUIController.DecorShopUIController()
+  nameWithType: DecorShopUIController.DecorShopUIController()
 - uid: GrandmaGreen.Shopkeeping.DecorShopUIController.#ctor*
   name: DecorShopUIController
   href: api/GrandmaGreen.Shopkeeping.DecorShopUIController.html#GrandmaGreen_Shopkeeping_DecorShopUIController__ctor_
@@ -11183,12 +11128,12 @@ references:
   commentId: T:GrandmaGreen.Shopkeeping.GardeningShopUIController
   fullName: GrandmaGreen.Shopkeeping.GardeningShopUIController
   nameWithType: GardeningShopUIController
-- uid: GrandmaGreen.Shopkeeping.GardeningShopUIController.#ctor(CollectionsSO)
-  name: GardeningShopUIController(CollectionsSO)
-  href: api/GrandmaGreen.Shopkeeping.GardeningShopUIController.html#GrandmaGreen_Shopkeeping_GardeningShopUIController__ctor_CollectionsSO_
-  commentId: M:GrandmaGreen.Shopkeeping.GardeningShopUIController.#ctor(CollectionsSO)
-  fullName: GrandmaGreen.Shopkeeping.GardeningShopUIController.GardeningShopUIController(CollectionsSO)
-  nameWithType: GardeningShopUIController.GardeningShopUIController(CollectionsSO)
+- uid: GrandmaGreen.Shopkeeping.GardeningShopUIController.#ctor
+  name: GardeningShopUIController()
+  href: api/GrandmaGreen.Shopkeeping.GardeningShopUIController.html#GrandmaGreen_Shopkeeping_GardeningShopUIController__ctor
+  commentId: M:GrandmaGreen.Shopkeeping.GardeningShopUIController.#ctor
+  fullName: GrandmaGreen.Shopkeeping.GardeningShopUIController.GardeningShopUIController()
+  nameWithType: GardeningShopUIController.GardeningShopUIController()
 - uid: GrandmaGreen.Shopkeeping.GardeningShopUIController.#ctor*
   name: GardeningShopUIController
   href: api/GrandmaGreen.Shopkeeping.GardeningShopUIController.html#GrandmaGreen_Shopkeeping_GardeningShopUIController__ctor_
@@ -11375,6 +11320,12 @@ references:
   commentId: F:GrandmaGreen.StartScreenUIDisplay.m_settingsUIDisplay
   fullName: GrandmaGreen.StartScreenUIDisplay.m_settingsUIDisplay
   nameWithType: StartScreenUIDisplay.m_settingsUIDisplay
+- uid: GrandmaGreen.StartScreenUIDisplay.onStartScreen
+  name: onStartScreen
+  href: api/GrandmaGreen.StartScreenUIDisplay.html#GrandmaGreen_StartScreenUIDisplay_onStartScreen
+  commentId: F:GrandmaGreen.StartScreenUIDisplay.onStartScreen
+  fullName: GrandmaGreen.StartScreenUIDisplay.onStartScreen
+  nameWithType: StartScreenUIDisplay.onStartScreen
 - uid: GrandmaGreen.StartScreenUIDisplay.Start
   name: Start()
   href: api/GrandmaGreen.StartScreenUIDisplay.html#GrandmaGreen_StartScreenUIDisplay_Start
@@ -12780,12 +12731,6 @@ references:
   commentId: F:GrandmaGreen.UI.Collections.CollectionUIDisplay.collectionsMode
   fullName: GrandmaGreen.UI.Collections.CollectionUIDisplay.collectionsMode
   nameWithType: CollectionUIDisplay.collectionsMode
-- uid: GrandmaGreen.UI.Collections.CollectionUIDisplay.collectionsSO
-  name: collectionsSO
-  href: api/GrandmaGreen.UI.Collections.CollectionUIDisplay.html#GrandmaGreen_UI_Collections_CollectionUIDisplay_collectionsSO
-  commentId: F:GrandmaGreen.UI.Collections.CollectionUIDisplay.collectionsSO
-  fullName: GrandmaGreen.UI.Collections.CollectionUIDisplay.collectionsSO
-  nameWithType: CollectionUIDisplay.collectionsSO
 - uid: GrandmaGreen.UI.Collections.CollectionUIDisplay.Load
   name: Load()
   href: api/GrandmaGreen.UI.Collections.CollectionUIDisplay.html#GrandmaGreen_UI_Collections_CollectionUIDisplay_Load
@@ -12918,12 +12863,6 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.UI.Collections.TabbedInventory.CloseUI
   nameWithType: TabbedInventory.CloseUI
-- uid: GrandmaGreen.UI.Collections.TabbedInventory.collectionsSO
-  name: collectionsSO
-  href: api/GrandmaGreen.UI.Collections.TabbedInventory.html#GrandmaGreen_UI_Collections_TabbedInventory_collectionsSO
-  commentId: F:GrandmaGreen.UI.Collections.TabbedInventory.collectionsSO
-  fullName: GrandmaGreen.UI.Collections.TabbedInventory.collectionsSO
-  nameWithType: TabbedInventory.collectionsSO
 - uid: GrandmaGreen.UI.Collections.TabbedInventory.contentContainerNameSuffix
   name: contentContainerNameSuffix
   href: api/GrandmaGreen.UI.Collections.TabbedInventory.html#GrandmaGreen_UI_Collections_TabbedInventory_contentContainerNameSuffix
@@ -13173,12 +13112,12 @@ references:
   commentId: T:GrandmaGreen.UI.Collections.TabbedInventoryController
   fullName: GrandmaGreen.UI.Collections.TabbedInventoryController
   nameWithType: TabbedInventoryController
-- uid: GrandmaGreen.UI.Collections.TabbedInventoryController.#ctor(GrandmaGreen.UI.Collections.TabbedInventory,ObjectSaver,CollectionsSO)
-  name: TabbedInventoryController(TabbedInventory, ObjectSaver, CollectionsSO)
-  href: api/GrandmaGreen.UI.Collections.TabbedInventoryController.html#GrandmaGreen_UI_Collections_TabbedInventoryController__ctor_GrandmaGreen_UI_Collections_TabbedInventory_ObjectSaver_CollectionsSO_
-  commentId: M:GrandmaGreen.UI.Collections.TabbedInventoryController.#ctor(GrandmaGreen.UI.Collections.TabbedInventory,ObjectSaver,CollectionsSO)
-  fullName: GrandmaGreen.UI.Collections.TabbedInventoryController.TabbedInventoryController(GrandmaGreen.UI.Collections.TabbedInventory, ObjectSaver, CollectionsSO)
-  nameWithType: TabbedInventoryController.TabbedInventoryController(TabbedInventory, ObjectSaver, CollectionsSO)
+- uid: GrandmaGreen.UI.Collections.TabbedInventoryController.#ctor(GrandmaGreen.UI.Collections.TabbedInventory,ObjectSaver)
+  name: TabbedInventoryController(TabbedInventory, ObjectSaver)
+  href: api/GrandmaGreen.UI.Collections.TabbedInventoryController.html#GrandmaGreen_UI_Collections_TabbedInventoryController__ctor_GrandmaGreen_UI_Collections_TabbedInventory_ObjectSaver_
+  commentId: M:GrandmaGreen.UI.Collections.TabbedInventoryController.#ctor(GrandmaGreen.UI.Collections.TabbedInventory,ObjectSaver)
+  fullName: GrandmaGreen.UI.Collections.TabbedInventoryController.TabbedInventoryController(GrandmaGreen.UI.Collections.TabbedInventory, ObjectSaver)
+  nameWithType: TabbedInventoryController.TabbedInventoryController(TabbedInventory, ObjectSaver)
 - uid: GrandmaGreen.UI.Collections.TabbedInventoryController.#ctor*
   name: TabbedInventoryController
   href: api/GrandmaGreen.UI.Collections.TabbedInventoryController.html#GrandmaGreen_UI_Collections_TabbedInventoryController__ctor_
