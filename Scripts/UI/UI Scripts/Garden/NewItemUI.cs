@@ -10,7 +10,6 @@ namespace GrandmaGreen
 {
     public class NewItemUI : MonoBehaviour
     {
-        [SerializeField] CollectionsSO collectionsSO;
         [SerializeField] CanvasGroup parentCanvas;
         [SerializeField] TextMeshProUGUI textObj;
         [SerializeField] Image image;
@@ -34,8 +33,8 @@ namespace GrandmaGreen
 
         void QueueNewPlant(ushort id, Garden.Genotype genotype)
         {
-            string name = collectionsSO.GetPlant((PlantId)id).name;
-            Sprite sprite = collectionsSO.GetInventorySprite((PlantId)id, genotype);
+            string name = CollectionsSO.LoadedInstance.GetPlant((PlantId)id).name;
+            Sprite sprite = CollectionsSO.LoadedInstance.GetInventorySprite((PlantId)id, genotype);
 
 
             QueueNewItem(name, sprite);
@@ -43,8 +42,8 @@ namespace GrandmaGreen
 
         void QueueNewSeed(ushort id, Garden.Genotype genotype)
         {
-            string name = collectionsSO.GetPlant((PlantId)id).name;
-            Sprite sprite = collectionsSO.GetSprite((PlantId)id, genotype);
+            string name = CollectionsSO.LoadedInstance.GetPlant((PlantId)id).name;
+            Sprite sprite = CollectionsSO.LoadedInstance.GetSprite((PlantId)id, genotype);
 
             QueueNewItem(name, sprite);
         }

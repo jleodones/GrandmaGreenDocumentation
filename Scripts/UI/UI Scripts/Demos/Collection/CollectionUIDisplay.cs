@@ -23,7 +23,6 @@ namespace GrandmaGreen.UI.Collections
     public class CollectionUIDisplay : UIDisplayBase
     {
         public CollectionsSaver collectionSaver;
-        public CollectionsSO collectionsSO;
         public CollectionsMode collectionsMode = CollectionsMode.Plants;
         private List<Button> m_scrollIcons;
 
@@ -33,8 +32,6 @@ namespace GrandmaGreen.UI.Collections
             // Event manager subscribe.
             EventManager.instance.EVENT_UPDATE_PLANT_COLLECTIONS += UpdatePlantInfo;
             
-            // Give the collection saver its collectionsSO.
-            collectionSaver.collections = collectionsSO;
             collectionSaver.onPlantUpdate = UpdatePlant;
 
             // Set the scroll buttons.
@@ -213,7 +210,7 @@ namespace GrandmaGreen.UI.Collections
             Genotype g = new Genotype();
             g.trait = plantProperties.trait;
             
-            Sprite seed = collectionsSO.GetSprite((PlantId)plantProperties.id, g);
+            Sprite seed = CollectionsSO.LoadedInstance.GetSprite((PlantId)plantProperties.id, g);
             plantInfoPage.Q<VisualElement>("plant-entry-seed").style.backgroundImage = new StyleBackground(seed);
             
             // Check if mature plant.
@@ -224,9 +221,9 @@ namespace GrandmaGreen.UI.Collections
             {
                 plantGrowthImages.style.display = DisplayStyle.Flex;
                 // Set sprites.
-                Sprite seedling = collectionsSO.GetSprite((PlantId)plantProperties.id, g, 0);
-                Sprite growing = collectionsSO.GetSprite((PlantId)plantProperties.id, g, 1);
-                Sprite mature = collectionsSO.GetSprite((PlantId)plantProperties.id, g, 2);
+                Sprite seedling = CollectionsSO.LoadedInstance.GetSprite((PlantId)plantProperties.id, g, 0);
+                Sprite growing = CollectionsSO.LoadedInstance.GetSprite((PlantId)plantProperties.id, g, 1);
+                Sprite mature = CollectionsSO.LoadedInstance.GetSprite((PlantId)plantProperties.id, g, 2);
 
                 plantGrowthImages.Q<VisualElement>("plant-seedling").style.backgroundImage = new StyleBackground(seedling);
                 plantGrowthImages.Q<VisualElement>("plant-growing").style.backgroundImage = new StyleBackground(growing);

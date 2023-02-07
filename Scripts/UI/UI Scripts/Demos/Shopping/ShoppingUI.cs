@@ -13,7 +13,6 @@ namespace GrandmaGreen.UI.Shopping
 {
     public class ShoppingUI : UIDisplayBase
     {
-        [SerializeField] private CollectionsSO collections;
 
         public List<ShopItem> availableItems;
 
@@ -37,7 +36,7 @@ namespace GrandmaGreen.UI.Shopping
                 EventManager.instance.HandleEVENT_INVENTORY_GET_MONEY().ToString();
 
             // Controller set up.
-            m_controller = new GardeningShopUIController(collections);
+            m_controller = new GardeningShopUIController();
             availableItems = m_controller.GetGardenList();
 
             // Set up the popup window.

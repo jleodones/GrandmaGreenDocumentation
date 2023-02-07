@@ -15,8 +15,6 @@ namespace GrandmaGreen
         // Entry template used to spawn info list items.
         public VisualTreeAsset infoListEntryTemplate;
 
-        public CollectionsSO collectionsSO;
-
         public MailboxModel mailboxModel;
         
         [ShowInInspector]
@@ -94,7 +92,7 @@ namespace GrandmaGreen
                 Plant plant = (Plant)submissionJar.itemsSource[index];
 
                 // Get and set the item image.
-                Sprite sprite = collectionsSO.GetSprite((PlantId)plant.itemID, plant.plantGenotype, 2);
+                Sprite sprite = CollectionsSO.LoadedInstance.GetSprite((PlantId)plant.itemID, plant.plantGenotype, 2);
                 item.Q<VisualElement>("plantImage").style.backgroundImage = new StyleBackground(sprite);
 
                 // Get the button and set the callback.

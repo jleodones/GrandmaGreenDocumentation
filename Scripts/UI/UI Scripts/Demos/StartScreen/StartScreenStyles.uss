@@ -5,7 +5,7 @@
     -unity-font: url('project://database/Assets/_GrandmaGreen/Art/UI/Fonts/Brevia/Brevia-Regular.otf?fileID=12800000&guid=5a1bfd81ed39ecd418c1c034114fcc3c&type=3#Brevia-Regular');
     -unity-font-definition: url('project://database/Assets/_GrandmaGreen/Art/UI/Fonts/Brevia/Brevia-Regular%20SDF.asset?fileID=11400000&guid=b087b45a4ecf25d45a8614016e1dd393&type=2#Brevia-Regular SDF');
     -unity-font-style: bold;
-    color: rgba(114, 67, 37, 255);
+    color: rgb(114, 67, 37);
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
     border-top-right-radius: 20px;
@@ -13,3 +13,11 @@
     -unity-text-align: middle-center;
     white-space: nowrap;
 }
+
+.expanded {
+    scale: 1.2 1.2;
+}
+
+#startButton{
+    transition-duration: 1.3s;
+    }

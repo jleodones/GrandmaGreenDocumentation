@@ -43,8 +43,6 @@ namespace GrandmaGreen.Garden
     [CreateAssetMenu(menuName = "GrandmaGreen/Garden/GardenManager")]
     public class GardenManager : ScriptableObject
     {
-        [SerializeField]
-        CollectionsSO collection;
 
         [SerializeField]
         GardenSaver[] plantLookup;
@@ -177,7 +175,7 @@ namespace GrandmaGreen.Garden
         public void UpdateGrowthStage(int areaIndex, Vector3Int cell)
         {
             PlantState plant = GetPlant(areaIndex, cell);
-            int max = collection.GetPlant(plant.type).growthStages;
+            int max = CollectionsSO.LoadedInstance.GetPlant(plant.type).growthStages;
 
             if (!IsEmpty(areaIndex, cell) && plant.growthStage < max - 1)
             {
@@ -186,7 +184,7 @@ namespace GrandmaGreen.Garden
 
                 //Reset the waterStage and waterTimers on growth
                 updatedPlant.waterStage = 0;
-                int supposedTimer = updatedPlant.waterTimer - collection.GetPlant(plant.type).growthTime;
+                int supposedTimer = updatedPlant.waterTimer - CollectionsSO.LoadedInstance.GetPlant(plant.type).growthTime;
                 //Debug.Log(supposedTimer);
                 if (supposedTimer < 0)
                 {
@@ -230,7 +228,7 @@ namespace GrandmaGreen.Garden
                     {
                         updatedPlant.waterStage = 1;
 
-                        if (updatedPlant.waterTimer >= collection.GetPlant(plant.type).growthTime)
+                        if (updatedPlant.waterTimer >= CollectionsSO.LoadedInstance.GetPlant(plant.type).growthTime)
                         {
                             waterStageUpdated = true;
                         }
@@ -271,7 +269,7 @@ namespace GrandmaGreen.Garden
         public bool PlantIsFullyGrown(int areaIndex, Vector3Int cell)
         {
             PlantState plant = GetPlant(areaIndex, cell);
-            PlantProperties properties = collection.GetPlant(plant.type);
+            PlantProperties properties = CollectionsSO.LoadedInstance.GetPlant(plant.type);
             return plant.growthStage == properties.growthStages - 1;
         }
 
@@ -282,7 +280,7 @@ namespace GrandmaGreen.Garden
 
 
             PlantState plant = GetPlant(areaIndex, cell);
-            PlantProperties properties = collection.GetPlant(plant.type);
+            PlantProperties properties = CollectionsSO.LoadedInstance.GetPlant(plant.type);
 
             if (PlantIsFullyGrown(areaIndex, cell))
                 return plant.waterTimer > 0;

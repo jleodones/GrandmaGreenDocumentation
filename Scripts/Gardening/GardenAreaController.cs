@@ -11,9 +11,6 @@ namespace GrandmaGreen.Garden
     /// </summary>
     public class GardenAreaController : AreaController
     {
-        [Header("Collections")]
-        [SerializeField]
-        CollectionsSO collection;
 
         [Header("Player References")]
         public PlayerToolData playerTools;
@@ -42,7 +39,7 @@ namespace GrandmaGreen.Garden
         public override void Awake()
         {
             base.Awake();
-            collection.DEBUGLoadPlantProperties();
+            CollectionsSO.LoadedInstance.DEBUGLoadPlantProperties();
             gardenManager.RegisterGarden(areaIndex);
 
             gardenManager.timers[areaIndex].Pause();
@@ -180,17 +177,17 @@ namespace GrandmaGreen.Garden
             SpriteRenderer spriteRenderer = plantTransform.Find("Sprite3D").GetComponent<SpriteRenderer>();
             if (CollectionsSO.IsFlower(id))
             {
-                spriteRenderer.sprite = collection.GetSprite(plant.type, genotype, plant.growthStage);
+                spriteRenderer.sprite = CollectionsSO.LoadedInstance.GetSprite(plant.type, genotype, plant.growthStage);
                 plantTransform.localScale = new Vector3(1.0f, 1.0f, 1.0f) * plant.genotype.SpriteSize();
             }
             else if (CollectionsSO.IsVegetable(id))
             {
-                spriteRenderer.sprite = collection.GetSprite(plant.type, genotype, plant.growthStage);
+                spriteRenderer.sprite = CollectionsSO.LoadedInstance.GetSprite(plant.type, genotype, plant.growthStage);
                 plantTransform.localScale = new Vector3(1.0f, 1.0f, 1.0f) * plant.genotype.SpriteSize();
             }
             else if (CollectionsSO.IsFruit(id))
             {
-                spriteRenderer.sprite = collection.GetFruitTree(plant.type, genotype, plant.growthStage);
+                spriteRenderer.sprite = CollectionsSO.LoadedInstance.GetFruitTree(plant.type, genotype, plant.growthStage);
                 plantTransform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
             }
 
@@ -260,13 +257,13 @@ namespace GrandmaGreen.Garden
 
             foreach (PlantState updatedPlant in updatedPlantsList)
             {
-                if (updatedPlant.waterStage == 1 && updatedPlant.waterTimer >= collection.GetPlant(updatedPlant.type).growthTime)
+                if (updatedPlant.waterStage == 1 && updatedPlant.waterTimer >= CollectionsSO.LoadedInstance.GetPlant(updatedPlant.type).growthTime)
                 {
                     gardenManager.UpdateGrowthStage(areaIndex, updatedPlant.cell);
                 }
                 else
                 {
-                    if (updatedPlant.waterTimer == collection.GetPlant(updatedPlant.type).growthTime)
+                    if (updatedPlant.waterTimer == CollectionsSO.LoadedInstance.GetPlant(updatedPlant.type).growthTime)
                     {
                         Debug.Log("Plant is ready for water");
                     }
@@ -342,7 +339,7 @@ namespace GrandmaGreen.Garden
         {
             if (gardenManager.IsEmpty(areaIndex, cell)) return false;
 
-            int maxGrowthStages = collection.GetPlant(
+            int maxGrowthStages = CollectionsSO.LoadedInstance.GetPlant(
                 gardenManager.GetPlantType(areaIndex, cell))
                 .growthStages;
 
@@ -373,7 +370,7 @@ namespace GrandmaGreen.Garden
 
                 Debug.Log(debug);
 
-                PlantProperties properties = collection.GetPlant(childPlantType);
+                PlantProperties properties = CollectionsSO.LoadedInstance.GetPlant(childPlantType);
                 EventManager.instance.HandleEVENT_INVENTORY_ADD_PLANT((ushort)motherPlantType, motherGenotype);
 
                 float trueDropRate = DropRate;
@@ -386,7 +383,7 @@ namespace GrandmaGreen.Garden
                 DestroyPlant(cell);
 
                 CharacterId golemType;
-                if (collection.PlantToGolem(motherPlantType, out golemType))
+                if (CollectionsSO.LoadedInstance.PlantToGolem(motherPlantType, out golemType))
                     EventManager.instance.HandleEVENT_GOLEM_SPAWN((ushort)golemType, cell);
                 return true;
             }

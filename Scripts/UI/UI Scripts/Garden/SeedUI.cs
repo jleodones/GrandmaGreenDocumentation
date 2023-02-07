@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using GrandmaGreen.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,7 +9,6 @@ namespace GrandmaGreen.Garden
     public class SeedUI : MonoBehaviour
     {
         public PlayerToolData playerToolData;
-        public Collections.CollectionsSO collections;
         public Image seedImage;
         public Button seedButton;
         public CanvasGroup canvasGroup;
@@ -72,7 +72,7 @@ namespace GrandmaGreen.Garden
 
         void SetSeed()
         {
-            seedImage.sprite = collections.GetSprite(playerToolData.equippedSeed, playerToolData.equippedSeedGenotype);
+            seedImage.sprite = CollectionsSO.LoadedInstance.GetSprite(playerToolData.equippedSeed, playerToolData.equippedSeedGenotype);
             seedImage.color = Color.white;
         }
 

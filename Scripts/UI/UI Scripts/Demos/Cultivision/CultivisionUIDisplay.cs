@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using GrandmaGreen.Collections;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -13,7 +14,6 @@ namespace GrandmaGreen
          */
 
         [SerializeField] private Garden.GardenAreaController gardenController;
-        [SerializeField] private Collections.CollectionsSO collections;
         private Garden.PlantState plant;
         private Garden.Genotype genotypePlant;
         private List<Garden.PlantState> breedingCandiates;
@@ -66,7 +66,7 @@ namespace GrandmaGreen
             breedingCandiates = gardenController.GetBreedingCandidates(cell);
             var name = plant.type;
             genotypePlant = plant.genotype;
-            Sprite sprite = collections.GetSprite(name, genotypePlant, plant.growthStage);
+            Sprite sprite = CollectionsSO.LoadedInstance.GetSprite(name, genotypePlant, plant.growthStage);
 
             //Set data
             SetCandidates(breedingCandiates);
@@ -120,7 +120,7 @@ namespace GrandmaGreen
                 string elementName = "candidate" + index.ToString();
                 Display(index.ToString() + "Candidate", true);
                 SetText(elementName, genotype.ToString());
-                Sprite sprite = collections.GetSprite(candidate.type, genotype, candidate.growthStage);
+                Sprite sprite = CollectionsSO.LoadedInstance.GetSprite(candidate.type, genotype, candidate.growthStage);
                 SetSprite(index.ToString(), sprite);
                 index++;
             }

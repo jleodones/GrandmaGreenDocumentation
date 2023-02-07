@@ -16,9 +16,6 @@ namespace GrandmaGreen.UI.Collections
         
         // Inventory data.
         private ObjectSaver m_inventoryData;
-        
-        // Collections data.
-        private CollectionsSO m_collections;
 
         // Inventory width varibles for show/hide
         private Length inventoryWidth = (Length)(.45 * Screen.width);
@@ -31,11 +28,10 @@ namespace GrandmaGreen.UI.Collections
         /// <summary>
         /// The TabbedInventoryController is attached to the TabbedInventory UI. It registers and controlls tab switching, as well as loading old and new items into the inventory.
         /// </summary>
-        public TabbedInventoryController(TabbedInventory parent, ObjectSaver inventoryData, CollectionsSO collectionsSo)
+        public TabbedInventoryController(TabbedInventory parent, ObjectSaver inventoryData)
         {
             m_parent = parent;
             m_inventoryData = inventoryData;
-            m_collections = collectionsSo;
         }
         
                 /// Everything here needs to be moved to the InventoryUIController later.
@@ -72,7 +68,7 @@ namespace GrandmaGreen.UI.Collections
 
         public void InventoryAddSeed(ushort id, Genotype genotype)
         {
-            Seed s = new Seed(id, m_collections.GetItem(id).name, genotype);
+            Seed s = new Seed(id, CollectionsSO.LoadedInstance.GetItem(id).name, genotype);
 
             if (m_inventoryData.RequestData(-1, ref s))
             {
@@ -89,7 +85,7 @@ namespace GrandmaGreen.UI.Collections
 
         public void InventoryRemoveSeed(ushort id, Genotype genotype)
         {
-            Seed s = new Seed(id, m_collections.GetItem(id).name, genotype);
+            Seed s = new Seed(id, CollectionsSO.LoadedInstance.GetItem(id).name, genotype);
 
             if (m_inventoryData.RequestData(-1, ref s))
             {
@@ -111,7 +107,7 @@ namespace GrandmaGreen.UI.Collections
 
         public int InventoryGetSeedCount(ushort id, Genotype genotype)
         {
-            Seed s = new Seed(id, m_collections.GetItem(id).name, genotype);
+            Seed s = new Seed(id, CollectionsSO.LoadedInstance.GetItem(id).name, genotype);
 
             if (m_inventoryData.RequestData(-1, ref s))
             {
@@ -122,7 +118,7 @@ namespace GrandmaGreen.UI.Collections
 
         public void InventoryAddPlant(ushort id, Genotype genotype)
         {
-            Plant p = new Plant(id, m_collections.GetItem(id).name, genotype);
+            Plant p = new Plant(id, CollectionsSO.LoadedInstance.GetItem(id).name, genotype);
             
             if (m_inventoryData.RequestData(-1, ref p))
             {
@@ -141,7 +137,7 @@ namespace GrandmaGreen.UI.Collections
         
         public void InventoryRemovePlant(ushort id, Genotype genotype)
         {
-            Plant p = new Plant(id, m_collections.GetItem(id).name, genotype);
+            Plant p = new Plant(id, CollectionsSO.LoadedInstance.GetItem(id).name, genotype);
             
             if (m_inventoryData.RequestData<Plant>(-1, ref p))
             {
@@ -161,7 +157,7 @@ namespace GrandmaGreen.UI.Collections
 
         public void InventoryAddTool(ushort id)
         {
-            Tool t = new Tool(id, m_collections.GetItem(id).name);
+            Tool t = new Tool(id, CollectionsSO.LoadedInstance.GetItem(id).name);
             
             if (m_inventoryData.RequestData(-1, ref t))
             {
@@ -173,7 +169,7 @@ namespace GrandmaGreen.UI.Collections
 
         public void InventoryRemoveTool(ushort id)
         {
-            Tool t = new Tool(id, m_collections.GetItem(id).name);
+            Tool t = new Tool(id, CollectionsSO.LoadedInstance.GetItem(id).name);
 
             if (m_inventoryData.RequestData(-1, ref t))
             {
@@ -193,7 +189,7 @@ namespace GrandmaGreen.UI.Collections
         
         public void InventoryAddDecor(ushort id)
         {
-            Decor d = new Decor(id, m_collections.GetItem(id).name);
+            Decor d = new Decor(id, CollectionsSO.LoadedInstance.GetItem(id).name);
             
             if (m_inventoryData.RequestData(-1, ref d))
             {
@@ -205,7 +201,7 @@ namespace GrandmaGreen.UI.Collections
 
         public void InventoryRemoveDecor(ushort id)
         {
-            Decor d = new Decor(id, m_collections.GetItem(id).name);
+            Decor d = new Decor(id, CollectionsSO.LoadedInstance.GetItem(id).name);
 
             if (m_inventoryData.RequestData(-1, ref d))
             {

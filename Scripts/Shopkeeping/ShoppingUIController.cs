@@ -29,7 +29,6 @@ namespace GrandmaGreen.Shopkeeping
     public class GardeningShopUIController
     {
         List<ShopItem> GardenList;
-        CollectionsSO collections;
         List<Seed> AllSeedsList; //copy of the plant genotype master list
 
         int currCycle; //after the 4th cycle, reset allseedslist. increment each cycle.
@@ -75,10 +74,9 @@ namespace GrandmaGreen.Shopkeeping
         /// <summary>
         /// Pass in the collections SO.
         /// </summary>
-        public GardeningShopUIController(CollectionsSO collectionsinput)
+        public GardeningShopUIController()
         {
-            collections = collectionsinput;
-            AllSeedsList = new List<Seed>(collections.PlantGenotypeMasterList);
+            AllSeedsList = new List<Seed>(CollectionsSO.LoadedInstance.PlantGenotypeMasterList);
 
             currCycle = 1;
             //initial ratios
@@ -117,7 +115,7 @@ namespace GrandmaGreen.Shopkeeping
             if(currCycle > 4)
             {
                 currCycle = 1;
-                AllSeedsList = new List<Seed>(collections.PlantGenotypeMasterList);
+                AllSeedsList = new List<Seed>(CollectionsSO.LoadedInstance.PlantGenotypeMasterList);
             }
         }
 
@@ -163,7 +161,7 @@ namespace GrandmaGreen.Shopkeeping
                         if (!typeAlreadyExists)
                         {
                             //check whether it's flower,veggie, or fruit. if limit of specific type is exceeded, skip this seed
-                            Collections.PlantType plantType = collections.GetPlant((PlantId)currSeed.itemID).plantType;
+                            Collections.PlantType plantType = CollectionsSO.LoadedInstance.GetPlant((PlantId)currSeed.itemID).plantType;
                             if(plantType == (Collections.PlantType)1) //flower
                             {
                                 currNumFlowers++;
@@ -203,11 +201,11 @@ namespace GrandmaGreen.Shopkeeping
             {
                 Seed seed = tempSeedList[i];
                 ShopItem item = new ShopItem();
-                item.sprite = collections.GetSprite((PlantId)seed.itemID, seed.seedGenotype);
+                item.sprite = CollectionsSO.LoadedInstance.GetSprite((PlantId)seed.itemID, seed.seedGenotype);
                 item.quantity = 3;
                 item.name = seed.itemName;
                 int megaValue = GetMegaValue(seed.seedGenotype.ToString());
-                item.baseCost = collections.GetItem(seed.itemID).baseCost * megaValue;
+                item.baseCost = CollectionsSO.LoadedInstance.GetItem(seed.itemID).baseCost * megaValue;
                 item.myItem = new Seed((ushort)seed.itemID, seed.itemName, seed.seedGenotype);
                 GardenList.Add(item);
             }
@@ -224,7 +222,7 @@ namespace GrandmaGreen.Shopkeeping
         {
             if (item.itemID >= 1000 && item.itemID < 4000)
             {
-                PlantProperties plantProps = collections.GetPlant((PlantId)item.itemID);
+                PlantProperties plantProps = CollectionsSO.LoadedInstance.GetPlant((PlantId)item.itemID);
                 /* 
                  * Use plantProps item to get the baseGoldPerTimeUnit and multiply by mega value, then multiply by growthTime (also from plantprops), times 2
                  */
@@ -274,7 +272,6 @@ namespace GrandmaGreen.Shopkeeping
     public class DecorShopUIController
     {
         List<ShopItem> DecorList; //all items that will show up in decor shop this cycle
-        CollectionsSO collections;
         List<Decor> AllDecorList;
         List<Decor> AllFixturesList;
         int currCycleDecor; //after the 2nd cycle, reset the all decor items list. increment each cycle.
@@ -286,11 +283,10 @@ namespace GrandmaGreen.Shopkeeping
         /// Pass in the collections SO. List will need to retrieve base costs of each item from the collections
         /// </summary>
         /// <param name="collections"></param>
-        public DecorShopUIController(CollectionsSO collectionsinput)
+        public DecorShopUIController()
         {
-            collections = collectionsinput;
-            AllDecorList = new List<Decor>(collections.DecorList);
-            AllFixturesList = new List<Decor>(collections.FixtureList);
+            AllDecorList = new List<Decor>(CollectionsSO.LoadedInstance.DecorList);
+            AllFixturesList = new List<Decor>(CollectionsSO.LoadedInstance.FixtureList);
 
             DecorList = new List<ShopItem>();
 
@@ -311,12 +307,12 @@ namespace GrandmaGreen.Shopkeeping
             if(currCycleDecor > 2)
             {
                 currCycleDecor = 1;
-                AllDecorList = new List<Decor>(collections.DecorList);
+                AllDecorList = new List<Decor>(CollectionsSO.LoadedInstance.DecorList);
             }
             if(currCycleFixture > 4)
             {
                 currCycleFixture = 1;
-                AllFixturesList = new List<Decor>(collections.FixtureList);
+                AllFixturesList = new List<Decor>(CollectionsSO.LoadedInstance.FixtureList);
             }
         }
 
@@ -341,13 +337,13 @@ namespace GrandmaGreen.Shopkeeping
                     Random rnd = new Random();
                     int ind = rnd.Next(AllDecorList.Count);
                     Decor currDecor = AllDecorList[ind];
-                    if (!tempDecorList.Contains(currDecor) && collections.ItemLookup[currDecor.itemID].decorType != "Fixture") //make sure item is not already in our list
+                    if (!tempDecorList.Contains(currDecor) && CollectionsSO.LoadedInstance.ItemLookup[currDecor.itemID].decorType != "Fixture") //make sure item is not already in our list
                     {
                         //make sure decor type does not already exist in our list
                         bool typeAlreadyExists = false;
                         foreach (Decor item in tempDecorList)
                         {
-                            if (collections.ItemLookup[currDecor.itemID].decorType == collections.ItemLookup[item.itemID].decorType)
+                            if (CollectionsSO.LoadedInstance.ItemLookup[currDecor.itemID].decorType == CollectionsSO.LoadedInstance.ItemLookup[item.itemID].decorType)
                             {
                                 typeAlreadyExists = true;
                             }
@@ -403,10 +399,10 @@ namespace GrandmaGreen.Shopkeeping
             {
                 Decor decor = tempDecorList[i];
                 ShopItem item = new ShopItem();
-                item.sprite = collections.GetSprite(decor.itemID);
+                item.sprite = CollectionsSO.LoadedInstance.GetSprite(decor.itemID);
                 item.quantity = 1;
                 item.name = decor.itemName;
-                item.baseCost = collections.GetItem(decor.itemID).baseCost; //change when design team figures out costs
+                item.baseCost = CollectionsSO.LoadedInstance.GetItem(decor.itemID).baseCost; //change when design team figures out costs
                 item.myItem = new Decor((ushort)decor.itemID, decor.itemName);
                 DecorList.Add(item);
             }
@@ -433,7 +429,7 @@ namespace GrandmaGreen.Shopkeeping
         {
             if (item.itemID >= 4000 && item.itemID <= 4100)
             {
-                ItemProperties itemProps = collections.GetItem((ushort)item.itemID);
+                ItemProperties itemProps = CollectionsSO.LoadedInstance.GetItem((ushort)item.itemID);
                 //TODO: update selling price once the design team figures it out
 
                 return (int)(itemProps.baseCost / 2);

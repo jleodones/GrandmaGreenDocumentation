@@ -251,18 +251,17 @@ namespace GrandmaGreen.Collections
         public List<Decor> FixtureList; //for cycle tracking purposes
         public Dictionary<ushort, PlantProperties> PlantLookup;
 
+        public static CollectionsSO LoadedInstance;
 
-        static CollectionsSO s_Instance;
-        public CollectionsSO LoadedInstance => s_Instance;
         public void LoadCollections()
         {
             GenerateCollections();
-            s_Instance = this;
+            LoadedInstance = this;
         }
 
         public void UnloadCollections()
         {
-            s_Instance = null;
+            LoadedInstance = null;
         }
 
         [Button()]

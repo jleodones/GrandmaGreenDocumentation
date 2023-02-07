@@ -48,8 +48,6 @@ namespace GrandmaGreen.Collections
     [CreateAssetMenu(menuName = "GrandmaGreen/Collections/CollectionsSaver")]
     public class CollectionsSaver : ObjectSaver
     {
-        [JsonIgnore]
-        public CollectionsSO collections;
 
         [JsonIgnore]
         public Action<PlantCollectionProperties, bool> onPlantUpdate;
@@ -225,7 +223,7 @@ namespace GrandmaGreen.Collections
                 // Add it as a seed.
                 Seed seed = (Seed)item;
                 props.name = seed.itemName;
-                props.description = collections.GetItem(props.id).description;
+                props.description = CollectionsSO.LoadedInstance.GetItem(props.id).description;
                 props.matureUnlocked = false; //if harvested is 0, only seed packet has been unlocked. otherwise mature has been unlocked.
                 props.unlockedSizes = new List<Genotype.Size>();
                 props.unlockedSizes.Add(seed.seedGenotype.size);

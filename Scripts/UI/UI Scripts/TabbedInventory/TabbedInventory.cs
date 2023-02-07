@@ -31,9 +31,6 @@ namespace GrandmaGreen.UI.Collections
         
         // Template for list items.
         public VisualTreeAsset listEntryTemplate;
-
-        // Collections SO.
-        public CollectionsSO collectionsSO;
         
         // Inventory scriptable object with all inventory data.
         public ObjectSaver inventoryData;
@@ -193,7 +190,7 @@ namespace GrandmaGreen.UI.Collections
 
                     var t = (ComponentStore<Seed>)jar.userData;
                     Seed s = (Seed)t.components[i];
-                    Sprite sprite = collectionsSO.GetSprite((PlantId)s.itemID, s.seedGenotype);
+                    Sprite sprite = CollectionsSO.LoadedInstance.GetSprite((PlantId)s.itemID, s.seedGenotype);
                     newListEntryLogic.SetInventoryData(s, sprite);
                     newListEntryLogic.SetSizeBadge(s.seedGenotype);
 
@@ -203,11 +200,11 @@ namespace GrandmaGreen.UI.Collections
                 {
                     var t = (ComponentStore<Plant>)jar.userData;
                     Plant p = (Plant)t.components[i];
-                    Sprite sprite = collectionsSO.GetInventorySprite((PlantId)p.itemID, p.plantGenotype);
+                    Sprite sprite = CollectionsSO.LoadedInstance.GetInventorySprite((PlantId)p.itemID, p.plantGenotype);
                     newListEntryLogic.SetInventoryData(p, sprite);
                     newListEntryLogic.SetSizeBadge(p.plantGenotype);
 
-                    Sprite spr = collectionsSO.GetInventorySprite((PlantId)p.itemID, p.plantGenotype);
+                    Sprite spr = CollectionsSO.LoadedInstance.GetInventorySprite((PlantId)p.itemID, p.plantGenotype);
                     newListEntryLogic.SetSizeBadge(p.plantGenotype);
 
                     newListEntry.userData = newListEntryLogic;
@@ -215,7 +212,7 @@ namespace GrandmaGreen.UI.Collections
                 else
                 {
                     IInventoryItem item = (IInventoryItem)componentStore.components[i];
-                    Sprite sprite = collectionsSO.GetSprite(item.itemID);
+                    Sprite sprite = CollectionsSO.LoadedInstance.GetSprite(item.itemID);
                     newListEntryLogic.SetInventoryData(item, sprite);
 
                     newListEntry.userData = newListEntryLogic;
@@ -407,7 +404,7 @@ namespace GrandmaGreen.UI.Collections
         public override void Load()
         {
             // Sets up the controller for the whole inventory. The controller instantiates the inventory on its own upon creation.
-            m_controller = new(this, inventoryData, collectionsSO);
+            m_controller = new(this, inventoryData);
 
             // Subscribe to inventory related events.
             EventManager.instance.EVENT_INVENTORY_OPEN += OpenUI;

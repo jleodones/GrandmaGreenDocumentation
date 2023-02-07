@@ -5,6 +5,7 @@ using UnityEngine.Tilemaps;
 using Core.Input;
 using DG.Tweening;
 using SpookuleleAudio;
+using GrandmaGreen.Collections;
 
 namespace GrandmaGreen.Garden
 {
@@ -14,7 +15,6 @@ namespace GrandmaGreen.Garden
         [Header("References")]
         [SerializeField] GardenDecorItem decorItemPrefab;
         [SerializeField] Collections.DecorationId debugDecor;
-        [SerializeField] Collections.CollectionsSO collections;
         [SerializeField] TileStore tileStore;
         [SerializeField] PointerState pointerState;
         [SerializeField] Cinemachine.CinemachineVirtualCamera customizationCamera;
@@ -36,7 +36,7 @@ namespace GrandmaGreen.Garden
             GardenDecorItem decorItem = Instantiate(decorItemPrefab);
 
             decorItem.decorID = decorID;
-            Sprite decorSprite = collections.GetSprite((ushort)decorID);
+            Sprite decorSprite = CollectionsSO.LoadedInstance.GetSprite((ushort)decorID);
             decorItem.GetComponentInChildren<SpriteRenderer>().sprite = decorSprite;
 
             Vector3 colliderSize = decorItem.boundsCollider.size;

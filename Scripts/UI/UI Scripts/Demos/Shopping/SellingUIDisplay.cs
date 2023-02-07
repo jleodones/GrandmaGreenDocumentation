@@ -16,13 +16,12 @@ namespace GrandmaGreen
         private List<Tuple<IInventoryItem, int>> m_items;
         private ListView m_sellingBox;
         public VisualTreeAsset sellingItemTemplate;
-        public CollectionsSO m_collections;
 
         private GardeningShopUIController m_controller;
         private int m_currentSalesTotal = 0;
         void Start()
         {
-            m_controller = new GardeningShopUIController(m_collections);
+            m_controller = new GardeningShopUIController();
             m_sellingBox = m_rootVisualElement.Q<ListView>("content-jar");
             m_sellingBox.Q<ScrollView>().verticalScrollerVisibility = ScrollerVisibility.Hidden;
             
@@ -181,11 +180,11 @@ namespace GrandmaGreen
                 Sprite s;
                 if (m_items[index].GetType() == new Seed().GetType())
                 {
-                    s = m_collections.GetSprite((PlantId) m_items[index].Item1.itemID, ((Seed) m_items[index].Item1).seedGenotype);
+                    s = CollectionsSO.LoadedInstance.GetSprite((PlantId) m_items[index].Item1.itemID, ((Seed) m_items[index].Item1).seedGenotype);
                 }
                 else
                 {
-                    s = m_collections.GetInventorySprite((PlantId) m_items[index].Item1.itemID, ((Plant) m_items[index].Item1).plantGenotype);
+                    s = CollectionsSO.LoadedInstance.GetInventorySprite((PlantId) m_items[index].Item1.itemID, ((Plant) m_items[index].Item1).plantGenotype);
                 }
                 int basePrice = m_controller.GetSellingPriceById(m_items[index].Item1);
                 

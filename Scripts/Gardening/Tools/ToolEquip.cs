@@ -11,7 +11,6 @@ namespace GrandmaGreen.Garden
         public PlayerToolData playerTools;
         public SpriteResolver toolSpriteResolver;
         public SpriteRenderer spriteRenderer;
-        public CollectionsSO collections;
         static readonly string SPRITE_CATEGORY = "Tools";
 
         void OnEnable()
