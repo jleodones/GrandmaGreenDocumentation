@@ -74,5 +74,11 @@ namespace GrandmaGreen.UI.Collections
             button.Q<VisualElement>("size").style.backgroundImage = new StyleBackground(sprite);
             button.Q<VisualElement>("size").style.display = DisplayStyle.Flex;
         }
+
+        public void SetAlpha(float a)
+        {
+            button.Q<VisualElement>("item-image").style.unityBackgroundImageTintColor = new Color(1, 1, 1, a);
+            button.Q<Label>("quantity").style.color = new Color(0.45882f, 0.26275f, 0.14510f, a);
+        }
     }
 }

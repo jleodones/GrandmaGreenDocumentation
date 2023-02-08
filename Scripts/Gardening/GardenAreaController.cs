@@ -80,7 +80,6 @@ namespace GrandmaGreen.Garden
 
             gardenManager.timers[areaIndex].Pause();
             gardenManager.timers[areaIndex].onTick -= IncrementTimer;
-            returnFromPause = true;
         }
 
         #region Input
@@ -255,39 +254,49 @@ namespace GrandmaGreen.Garden
         {
             List<PlantState> updatedPlantsList = gardenManager.GetPlants(areaIndex);
 
-            foreach (PlantState updatedPlant in updatedPlantsList)
+            if (!returnFromPause)
             {
-                if (updatedPlant.waterStage == 1 && updatedPlant.waterTimer >= CollectionsSO.LoadedInstance.GetPlant(updatedPlant.type).growthTime)
+                foreach (PlantState updatedPlant in updatedPlantsList)
                 {
-                    gardenManager.UpdateGrowthStage(areaIndex, updatedPlant.cell);
-                }
-                else
-                {
-                    if (updatedPlant.waterTimer == CollectionsSO.LoadedInstance.GetPlant(updatedPlant.type).growthTime)
+                    if (updatedPlant.waterStage == 1 && updatedPlant.waterTimer >= CollectionsSO.LoadedInstance.GetPlant(updatedPlant.type).growthTime)
                     {
-                        Debug.Log("Plant is ready for water");
+                        gardenManager.UpdateGrowthStage(areaIndex, updatedPlant.cell);
                     }
-                    else if (updatedPlant.waterTimer == gardenManager.WiltTime // Plant has reached its wilt time while player is playing
-                        || (gardenManager.PlantIsWilted(areaIndex, updatedPlant.cell) && returnFromPause)) // Plant has reached wilt time while player is away
+                    else
                     {
-                        // Wilted
-                        wiltedPlantList.Add(updatedPlant);
-                        gardenVFX.PlayDryParticle(tilemap.GetCellCenterWorld(updatedPlant.cell));
-                    }
-                    else if (!gardenManager.PlantIsFullyGrown(areaIndex, updatedPlant.cell))
-                    {
-                        if (updatedPlant.waterTimer == gardenManager.DeathTime // Plant has reached death time while player is playing
-                            || (gardenManager.PlantIsDead(areaIndex, updatedPlant.cell) && returnFromPause)) // Plant has reached death time while player is away
+                        if (updatedPlant.waterTimer == CollectionsSO.LoadedInstance.GetPlant(updatedPlant.type).growthTime)
                         {
-                            // Dead
+                            Debug.Log("Plant is ready for water");
+                        }
+                        else if (updatedPlant.waterTimer == gardenManager.WiltTime // Plant has reached its wilt time while player is playing
+                            || (gardenManager.PlantIsWilted(areaIndex, updatedPlant.cell) && returnFromPause)) // Plant has reached wilt time while player is away
+                        {
+                            // Wilted
+                            wiltedPlantList.Add(updatedPlant);
                             gardenVFX.PlayDryParticle(tilemap.GetCellCenterWorld(updatedPlant.cell));
                         }
+                        else if (!gardenManager.PlantIsFullyGrown(areaIndex, updatedPlant.cell))
+                        {
+                            if (updatedPlant.waterTimer == gardenManager.DeathTime // Plant has reached death time while player is playing
+                                || (gardenManager.PlantIsDead(areaIndex, updatedPlant.cell) && returnFromPause)) // Plant has reached death time while player is away
+                            {
+                                // Dead
+                                gardenVFX.PlayDryParticle(tilemap.GetCellCenterWorld(updatedPlant.cell));
+                            }
+                        }
                     }
+                    UpdateSprite(updatedPlant.cell);
+                    UpdateTile(updatedPlant.cell);
                 }
-
-                UpdateSprite(updatedPlant.cell);
-                UpdateTile(updatedPlant.cell);
+            } 
+            else
+            {
+                foreach (PlantState plantOnReturn in updatedPlantsList)
+                {
+                    if (!plantOnReturn.previouslyDead) wiltedPlantList.Add(plantOnReturn);
+                }
             }
+                
         }
 
         public void WaterPlant(Vector3Int cell)
@@ -314,6 +323,33 @@ namespace GrandmaGreen.Garden
 
             // Spawn a particle system so we know that a plant has been watered
             gardenVFX.PlayWaterParticle(tilemap.GetCellCenterWorld(cell));
+        }
+
+        public void OnReturnWaterPlant(Vector3Int cell)
+        {
+            if (gardenManager.UpdateWaterStage(areaIndex, cell))
+            {
+                gardenManager.UpdateGrowthStage(areaIndex, cell);
+                // Debug.Log("Plant Growth via WaterPlant");
+            }
+
+            foreach (PlantState plantToRemove in wiltedPlantList)
+            {
+                if (plantToRemove.cell == cell)
+                {
+                    wiltedPlantList.Remove(plantToRemove);
+
+                    PlantState updatedPlant = gardenManager.GetPlant(areaIndex, cell);
+                    if (updatedPlant.waterTimer >= gardenManager.WiltTime)
+                    {
+                        wiltedPlantList.Add(updatedPlant);
+                    }
+                    
+                    break;
+                }
+            }
+            UpdateSprite(cell);
+            UpdateTile(cell);
         }
 
         public void FertilizePlant(Vector3Int cell)

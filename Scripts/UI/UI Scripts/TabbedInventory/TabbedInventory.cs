@@ -1,9 +1,11 @@
 // This script attaches the tabbed menu logic to the game.
 
+using System.Collections;
 using System.Collections.Generic;
 using Core.SceneManagement;
 using UnityEngine;
 using UnityEngine.UIElements;
+using Core.Input;
 using GrandmaGreen.SaveSystem;
 using GrandmaGreen.Collections;
 using GrandmaGreen.Garden;
@@ -44,11 +46,17 @@ namespace GrandmaGreen.UI.Collections
         
         // Related to being a draggable container.
         public VisualElement threshold { get; set; }
+        public VisualElement content { get; set; }
         public Vector3 pointerStartPosition { get; set; }
 
         public bool handled { get; set; }
-
         public IDraggable draggable { get; set; }
+
+        // Dragging UI objects
+        [SerializeField] Canvas canvas;
+        [SerializeField] UnityEngine.UI.Image itemSprite;
+        [SerializeField] PointerState pointerState;
+
         void Start()
         {
             // Register player tab clicking events.
@@ -67,6 +75,7 @@ namespace GrandmaGreen.UI.Collections
 
             // Threshold instantiation.
             threshold = m_rootVisualElement.Q("inventory-threshold");
+            content = m_rootVisualElement.Q("content");
             draggable = null;
         }
 
@@ -287,7 +296,11 @@ namespace GrandmaGreen.UI.Collections
         public void OnItemCreated(TabbedInventoryItemController itemController)
         {
             itemController.button.RegisterCallback<PointerDownEvent>(PointerDownHandler, TrickleDown.TrickleDown);
+
+            // TODO: Because we are moving the sprites instead, we also want to get rid of the callbacks for this pointer move handler.
             itemController.button.RegisterCallback<PointerMoveEvent>(PointerMoveHandler, TrickleDown.TrickleDown);
+
+            // TODO: Test whether the pointer up handler still works with the sprite method.
             itemController.button.RegisterCallback<PointerUpEvent>(PointerUpHandler, TrickleDown.TrickleDown);
         }
 
@@ -295,12 +308,59 @@ namespace GrandmaGreen.UI.Collections
         {
             // Retrieve button.
             Button draggedButton = evt.currentTarget as Button;
-            draggable = draggedButton.parent.userData as IDraggable;
-            draggable.startingPosition = Vector3.zero;
 
-            pointerStartPosition = evt.position;
-            draggable.button.CapturePointer(evt.pointerId);
+            // TODO: Turn it into a draggable sprite.
+            // Retrieve the inventory sprite object from the draggedButton.userData as TabbedInventoryItemController.
+
+            // Instantiate a sprite.
+            // Capture the pointer on that sprite so that the sprite moves on drag instead of the inventory item.
+            // Meanwhile, hide the draggedButton so that it appears to be "moving."
+            StartCoroutine(DragItem(draggedButton));
+
+            //draggable = draggedButton.parent.userData as IDraggable;
+            //draggable.startingPosition = Vector3.zero;
+
+            //pointerStartPosition = evt.position;
+            //draggable.button.CapturePointer(evt.pointerId);
             handled = false;
+        }
+
+        public IEnumerator DragItem(Button draggedButton)
+        {
+            TabbedInventoryItemController item = draggedButton.parent.userData as TabbedInventoryItemController;
+            Sprite sprite = item.sprite;
+            item.SetAlpha(0.2f);
+
+            ItemType type = item.inventoryItemData.itemType;
+            if (type != ItemType.Decor) yield break;
+
+            canvas.gameObject.SetActive(true);
+            itemSprite.sprite = sprite;
+
+            float scale = m_rootVisualElement.resolvedStyle.width / (float)Screen.width;
+            print(scale);
+
+            do
+            {
+                itemSprite.transform.position = pointerState.positionRaw;
+
+                if (scale * itemSprite.transform.position.x <= threshold.worldTransform.GetPosition().x && !handled)
+                {
+                    CloseUI();
+
+                    canvas.gameObject.SetActive(false);
+                    item.SetAlpha(1.0f);
+
+                    EventManager.instance.HandleEVENT_INVENTORY_CUSTOMIZATION_START(item.inventoryItemData);
+                    handled = true;
+                }
+
+                yield return null;
+
+            } while (pointerState.phase != PointerState.Phase.NONE);
+
+            canvas.gameObject.SetActive(false);
+            item.SetAlpha(1.0f);
         }
 
         public void PointerMoveHandler(PointerMoveEvent evt)

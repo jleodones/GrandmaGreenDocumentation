@@ -147,7 +147,7 @@ namespace GrandmaGreen.Entities
                 return;
             }
 
-            if(golemStateTable[index].happiness >= golemHappinessThreshold) golemStateTable[index].assignedWatering = true;
+            if(golemStateTable[index].happiness >= golemHappinessThreshold && golemStateTable[index].isMature) golemStateTable[index].assignedWatering = true;
             else golemStateTable[index].assignedWatering = false;
         }
 

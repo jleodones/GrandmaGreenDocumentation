@@ -22,6 +22,7 @@ namespace GrandmaGreen.Garden
 
         // State Manager for Fertilization Use
         public bool isFertilized;
+        public bool previouslyDead;
     }
 
     [System.Serializable]
@@ -88,7 +89,8 @@ namespace GrandmaGreen.Garden
                 // Adding for watering.
                 waterStage = 0, // Adding a plant makes it unwatered
                 waterTimer = 0, // Start timer at 0 and tick up
-                isFertilized = false
+                isFertilized = false,
+                previouslyDead = false
             };
         }
 
@@ -179,23 +181,22 @@ namespace GrandmaGreen.Garden
 
             if (!IsEmpty(areaIndex, cell) && plant.growthStage < max - 1)
             {
-                PlantState updatedPlant = plant;
-                updatedPlant.growthStage = plant.growthStage + 1;
+                plant.growthStage += 1;
+                plant.waterStage = 0;
 
-                //Reset the waterStage and waterTimers on growth
-                updatedPlant.waterStage = 0;
-                int supposedTimer = updatedPlant.waterTimer - CollectionsSO.LoadedInstance.GetPlant(plant.type).growthTime;
-                //Debug.Log(supposedTimer);
-                if (supposedTimer < 0)
+                int supposedTimer = plant.waterTimer - CollectionsSO.LoadedInstance.GetPlant(plant.type).growthTime;
+                //Debug.Log("Timer of plant after watering: " + supposedTimer);
+
+                if(supposedTimer < 0)
                 {
-                    updatedPlant.waterTimer = 0;
+                    plant.waterTimer = 0;
                 }
                 else
                 {
-                    updatedPlant.waterTimer = supposedTimer;
+                    plant.waterTimer = supposedTimer;
                 }
 
-                plantLookup[areaIndex][cell] = updatedPlant;
+                plantLookup[areaIndex][cell] = plant;
             }
         }
 
@@ -216,19 +217,18 @@ namespace GrandmaGreen.Garden
             if (!IsEmpty(areaIndex, cell))
             {
                 PlantState plant = GetPlant(areaIndex, cell);
-                PlantState updatedPlant = plant;
 
                 if (!PlantIsWilted(areaIndex, cell))
                 {
                     if (PlantIsFullyGrown(areaIndex, cell))
                     {
-                        updatedPlant.waterTimer = 0;
+                        plant.waterTimer = 0;
                     }
                     else
                     {
-                        updatedPlant.waterStage = 1;
+                        plant.waterStage = 1;
 
-                        if (updatedPlant.waterTimer >= CollectionsSO.LoadedInstance.GetPlant(plant.type).growthTime)
+                        if (plant.waterTimer >= CollectionsSO.LoadedInstance.GetPlant(plant.type).growthTime)
                         {
                             waterStageUpdated = true;
                         }
@@ -236,10 +236,10 @@ namespace GrandmaGreen.Garden
                 }
                 else
                 {
-                    updatedPlant.waterTimer = 0;
+                    plant.waterTimer = 0;
                 }
 
-                plantLookup[areaIndex][cell] = updatedPlant;
+                plantLookup[areaIndex][cell] = plant;
 
             }
 
@@ -316,9 +316,13 @@ namespace GrandmaGreen.Garden
             {
                 PlantState plant = GetPlant(areaIndex, cell);
 
-                return plant.waterTimer >= DeathTime
-                    && !PlantIsFullyGrown(areaIndex, cell); //336;
-
+                if(plant.waterTimer >= DeathTime && !PlantIsFullyGrown(areaIndex, cell))
+                {
+                    plant.previouslyDead = true;
+                    plantLookup[areaIndex][cell] = plant;
+                    return true;
+                }
+                return false;
             }
             else
                 return false;

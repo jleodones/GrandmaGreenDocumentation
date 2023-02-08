@@ -275,7 +275,8 @@ namespace GrandmaGreen.Entities
         {
             animator.SetInteger("MOVEMENT", 0);
             animator.Update(0f);
-            splineFollow.ForceStop();
+            if (splineFollow.CurrentSpline != null)
+                splineFollow.ForceStop();
             onEntityPathStopped?.Invoke();
         }
 
