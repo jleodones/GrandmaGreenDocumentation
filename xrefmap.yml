@@ -51,6 +51,12 @@ references:
   commentId: F:Global.GameLoadingScreen.canvas
   fullName: GameLoadingScreen.canvas
   nameWithType: GameLoadingScreen.canvas
+- uid: Global.GameLoadingScreen.LoadingEnd
+  name: LoadingEnd()
+  href: api/Global.GameLoadingScreen.html#Global_GameLoadingScreen_LoadingEnd
+  commentId: M:Global.GameLoadingScreen.LoadingEnd
+  fullName: GameLoadingScreen.LoadingEnd()
+  nameWithType: GameLoadingScreen.LoadingEnd()
 - uid: Global.GameLoadingScreen.LoadingEnd(SCENES)
   name: LoadingEnd(SCENES)
   href: api/Global.GameLoadingScreen.html#Global_GameLoadingScreen_LoadingEnd_SCENES_
@@ -4664,6 +4670,19 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Entities.GolemController.EnableGolem
   nameWithType: GolemController.EnableGolem
+- uid: GrandmaGreen.Entities.GolemController.EnterDraggingState(System.Boolean)
+  name: EnterDraggingState(Boolean)
+  href: api/GrandmaGreen.Entities.GolemController.html#GrandmaGreen_Entities_GolemController_EnterDraggingState_System_Boolean_
+  commentId: M:GrandmaGreen.Entities.GolemController.EnterDraggingState(System.Boolean)
+  fullName: GrandmaGreen.Entities.GolemController.EnterDraggingState(System.Boolean)
+  nameWithType: GolemController.EnterDraggingState(Boolean)
+- uid: GrandmaGreen.Entities.GolemController.EnterDraggingState*
+  name: EnterDraggingState
+  href: api/GrandmaGreen.Entities.GolemController.html#GrandmaGreen_Entities_GolemController_EnterDraggingState_
+  commentId: Overload:GrandmaGreen.Entities.GolemController.EnterDraggingState
+  isSpec: "True"
+  fullName: GrandmaGreen.Entities.GolemController.EnterDraggingState
+  nameWithType: GolemController.EnterDraggingState
 - uid: GrandmaGreen.Entities.GolemController.EvolveGolem
   name: EvolveGolem()
   href: api/GrandmaGreen.Entities.GolemController.html#GrandmaGreen_Entities_GolemController_EvolveGolem
@@ -4677,6 +4696,19 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Entities.GolemController.EvolveGolem
   nameWithType: GolemController.EvolveGolem
+- uid: GrandmaGreen.Entities.GolemController.ExitDragAttempt(System.Boolean)
+  name: ExitDragAttempt(Boolean)
+  href: api/GrandmaGreen.Entities.GolemController.html#GrandmaGreen_Entities_GolemController_ExitDragAttempt_System_Boolean_
+  commentId: M:GrandmaGreen.Entities.GolemController.ExitDragAttempt(System.Boolean)
+  fullName: GrandmaGreen.Entities.GolemController.ExitDragAttempt(System.Boolean)
+  nameWithType: GolemController.ExitDragAttempt(Boolean)
+- uid: GrandmaGreen.Entities.GolemController.ExitDragAttempt*
+  name: ExitDragAttempt
+  href: api/GrandmaGreen.Entities.GolemController.html#GrandmaGreen_Entities_GolemController_ExitDragAttempt_
+  commentId: Overload:GrandmaGreen.Entities.GolemController.ExitDragAttempt
+  isSpec: "True"
+  fullName: GrandmaGreen.Entities.GolemController.ExitDragAttempt
+  nameWithType: GolemController.ExitDragAttempt
 - uid: GrandmaGreen.Entities.GolemController.FindRandomDestination(System.Int32)
   name: FindRandomDestination(Int32)
   href: api/GrandmaGreen.Entities.GolemController.html#GrandmaGreen_Entities_GolemController_FindRandomDestination_System_Int32_
@@ -4960,19 +4992,6 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Entities.GolemController.Update
   nameWithType: GolemController.Update
-- uid: GrandmaGreen.Entities.GolemController.UpdateDraggingState(System.Boolean)
-  name: UpdateDraggingState(Boolean)
-  href: api/GrandmaGreen.Entities.GolemController.html#GrandmaGreen_Entities_GolemController_UpdateDraggingState_System_Boolean_
-  commentId: M:GrandmaGreen.Entities.GolemController.UpdateDraggingState(System.Boolean)
-  fullName: GrandmaGreen.Entities.GolemController.UpdateDraggingState(System.Boolean)
-  nameWithType: GolemController.UpdateDraggingState(Boolean)
-- uid: GrandmaGreen.Entities.GolemController.UpdateDraggingState*
-  name: UpdateDraggingState
-  href: api/GrandmaGreen.Entities.GolemController.html#GrandmaGreen_Entities_GolemController_UpdateDraggingState_
-  commentId: Overload:GrandmaGreen.Entities.GolemController.UpdateDraggingState
-  isSpec: "True"
-  fullName: GrandmaGreen.Entities.GolemController.UpdateDraggingState
-  nameWithType: GolemController.UpdateDraggingState
 - uid: GrandmaGreen.Entities.GolemController.UpdateInteractState
   name: UpdateInteractState()
   href: api/GrandmaGreen.Entities.GolemController.html#GrandmaGreen_Entities_GolemController_UpdateInteractState
@@ -5050,6 +5069,19 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Entities.GolemCrowdController.Awake
   nameWithType: GolemCrowdController.Awake
+- uid: GrandmaGreen.Entities.GolemCrowdController.CheckValidState(Collider)
+  name: CheckValidState(Collider)
+  href: api/GrandmaGreen.Entities.GolemCrowdController.html#GrandmaGreen_Entities_GolemCrowdController_CheckValidState_Collider_
+  commentId: M:GrandmaGreen.Entities.GolemCrowdController.CheckValidState(Collider)
+  fullName: GrandmaGreen.Entities.GolemCrowdController.CheckValidState(Collider)
+  nameWithType: GolemCrowdController.CheckValidState(Collider)
+- uid: GrandmaGreen.Entities.GolemCrowdController.CheckValidState*
+  name: CheckValidState
+  href: api/GrandmaGreen.Entities.GolemCrowdController.html#GrandmaGreen_Entities_GolemCrowdController_CheckValidState_
+  commentId: Overload:GrandmaGreen.Entities.GolemCrowdController.CheckValidState
+  isSpec: "True"
+  fullName: GrandmaGreen.Entities.GolemCrowdController.CheckValidState
+  nameWithType: GolemCrowdController.CheckValidState
 - uid: GrandmaGreen.Entities.GolemCrowdController.EnterDragGolem(GameObject)
   name: EnterDragGolem(GameObject)
   href: api/GrandmaGreen.Entities.GolemCrowdController.html#GrandmaGreen_Entities_GolemCrowdController_EnterDragGolem_GameObject_
@@ -5107,6 +5139,12 @@ references:
   commentId: F:GrandmaGreen.Entities.GolemCrowdController.happinessChangeValue
   fullName: GrandmaGreen.Entities.GolemCrowdController.happinessChangeValue
   nameWithType: GolemCrowdController.happinessChangeValue
+- uid: GrandmaGreen.Entities.GolemCrowdController.invalidColor
+  name: invalidColor
+  href: api/GrandmaGreen.Entities.GolemCrowdController.html#GrandmaGreen_Entities_GolemCrowdController_invalidColor
+  commentId: F:GrandmaGreen.Entities.GolemCrowdController.invalidColor
+  fullName: GrandmaGreen.Entities.GolemCrowdController.invalidColor
+  nameWithType: GolemCrowdController.invalidColor
 - uid: GrandmaGreen.Entities.GolemCrowdController.OnDestroy
   name: OnDestroy()
   href: api/GrandmaGreen.Entities.GolemCrowdController.html#GrandmaGreen_Entities_GolemCrowdController_OnDestroy
@@ -8409,6 +8447,19 @@ references:
   commentId: T:GrandmaGreen.Garden.PlayerToolData
   fullName: GrandmaGreen.Garden.PlayerToolData
   nameWithType: PlayerToolData
+- uid: GrandmaGreen.Garden.PlayerToolData.ClearTools
+  name: ClearTools()
+  href: api/GrandmaGreen.Garden.PlayerToolData.html#GrandmaGreen_Garden_PlayerToolData_ClearTools
+  commentId: M:GrandmaGreen.Garden.PlayerToolData.ClearTools
+  fullName: GrandmaGreen.Garden.PlayerToolData.ClearTools()
+  nameWithType: PlayerToolData.ClearTools()
+- uid: GrandmaGreen.Garden.PlayerToolData.ClearTools*
+  name: ClearTools
+  href: api/GrandmaGreen.Garden.PlayerToolData.html#GrandmaGreen_Garden_PlayerToolData_ClearTools_
+  commentId: Overload:GrandmaGreen.Garden.PlayerToolData.ClearTools
+  isSpec: "True"
+  fullName: GrandmaGreen.Garden.PlayerToolData.ClearTools
+  nameWithType: PlayerToolData.ClearTools
 - uid: GrandmaGreen.Garden.PlayerToolData.currentTool
   name: currentTool
   href: api/GrandmaGreen.Garden.PlayerToolData.html#GrandmaGreen_Garden_PlayerToolData_currentTool
@@ -8615,38 +8666,51 @@ references:
   commentId: T:GrandmaGreen.Garden.SeedUI
   fullName: GrandmaGreen.Garden.SeedUI
   nameWithType: SeedUI
-- uid: GrandmaGreen.Garden.SeedUI.ActivateUI
-  name: ActivateUI()
-  href: api/GrandmaGreen.Garden.SeedUI.html#GrandmaGreen_Garden_SeedUI_ActivateUI
-  commentId: M:GrandmaGreen.Garden.SeedUI.ActivateUI
-  fullName: GrandmaGreen.Garden.SeedUI.ActivateUI()
-  nameWithType: SeedUI.ActivateUI()
-- uid: GrandmaGreen.Garden.SeedUI.ActivateUI*
-  name: ActivateUI
-  href: api/GrandmaGreen.Garden.SeedUI.html#GrandmaGreen_Garden_SeedUI_ActivateUI_
-  commentId: Overload:GrandmaGreen.Garden.SeedUI.ActivateUI
-  isSpec: "True"
-  fullName: GrandmaGreen.Garden.SeedUI.ActivateUI
-  nameWithType: SeedUI.ActivateUI
 - uid: GrandmaGreen.Garden.SeedUI.canvasGroup
   name: canvasGroup
   href: api/GrandmaGreen.Garden.SeedUI.html#GrandmaGreen_Garden_SeedUI_canvasGroup
   commentId: F:GrandmaGreen.Garden.SeedUI.canvasGroup
   fullName: GrandmaGreen.Garden.SeedUI.canvasGroup
   nameWithType: SeedUI.canvasGroup
-- uid: GrandmaGreen.Garden.SeedUI.DeactivateUI
-  name: DeactivateUI()
-  href: api/GrandmaGreen.Garden.SeedUI.html#GrandmaGreen_Garden_SeedUI_DeactivateUI
-  commentId: M:GrandmaGreen.Garden.SeedUI.DeactivateUI
-  fullName: GrandmaGreen.Garden.SeedUI.DeactivateUI()
-  nameWithType: SeedUI.DeactivateUI()
-- uid: GrandmaGreen.Garden.SeedUI.DeactivateUI*
-  name: DeactivateUI
-  href: api/GrandmaGreen.Garden.SeedUI.html#GrandmaGreen_Garden_SeedUI_DeactivateUI_
-  commentId: Overload:GrandmaGreen.Garden.SeedUI.DeactivateUI
+- uid: GrandmaGreen.Garden.SeedUI.CloseUI
+  name: CloseUI()
+  href: api/GrandmaGreen.Garden.SeedUI.html#GrandmaGreen_Garden_SeedUI_CloseUI
+  commentId: M:GrandmaGreen.Garden.SeedUI.CloseUI
+  fullName: GrandmaGreen.Garden.SeedUI.CloseUI()
+  nameWithType: SeedUI.CloseUI()
+- uid: GrandmaGreen.Garden.SeedUI.CloseUI*
+  name: CloseUI
+  href: api/GrandmaGreen.Garden.SeedUI.html#GrandmaGreen_Garden_SeedUI_CloseUI_
+  commentId: Overload:GrandmaGreen.Garden.SeedUI.CloseUI
   isSpec: "True"
-  fullName: GrandmaGreen.Garden.SeedUI.DeactivateUI
-  nameWithType: SeedUI.DeactivateUI
+  fullName: GrandmaGreen.Garden.SeedUI.CloseUI
+  nameWithType: SeedUI.CloseUI
+- uid: GrandmaGreen.Garden.SeedUI.DisableInteraction
+  name: DisableInteraction()
+  href: api/GrandmaGreen.Garden.SeedUI.html#GrandmaGreen_Garden_SeedUI_DisableInteraction
+  commentId: M:GrandmaGreen.Garden.SeedUI.DisableInteraction
+  fullName: GrandmaGreen.Garden.SeedUI.DisableInteraction()
+  nameWithType: SeedUI.DisableInteraction()
+- uid: GrandmaGreen.Garden.SeedUI.DisableInteraction*
+  name: DisableInteraction
+  href: api/GrandmaGreen.Garden.SeedUI.html#GrandmaGreen_Garden_SeedUI_DisableInteraction_
+  commentId: Overload:GrandmaGreen.Garden.SeedUI.DisableInteraction
+  isSpec: "True"
+  fullName: GrandmaGreen.Garden.SeedUI.DisableInteraction
+  nameWithType: SeedUI.DisableInteraction
+- uid: GrandmaGreen.Garden.SeedUI.EnableInteraction
+  name: EnableInteraction()
+  href: api/GrandmaGreen.Garden.SeedUI.html#GrandmaGreen_Garden_SeedUI_EnableInteraction
+  commentId: M:GrandmaGreen.Garden.SeedUI.EnableInteraction
+  fullName: GrandmaGreen.Garden.SeedUI.EnableInteraction()
+  nameWithType: SeedUI.EnableInteraction()
+- uid: GrandmaGreen.Garden.SeedUI.EnableInteraction*
+  name: EnableInteraction
+  href: api/GrandmaGreen.Garden.SeedUI.html#GrandmaGreen_Garden_SeedUI_EnableInteraction_
+  commentId: Overload:GrandmaGreen.Garden.SeedUI.EnableInteraction
+  isSpec: "True"
+  fullName: GrandmaGreen.Garden.SeedUI.EnableInteraction
+  nameWithType: SeedUI.EnableInteraction
 - uid: GrandmaGreen.Garden.SeedUI.OnButtonClicked
   name: OnButtonClicked()
   href: api/GrandmaGreen.Garden.SeedUI.html#GrandmaGreen_Garden_SeedUI_OnButtonClicked
@@ -8660,6 +8724,19 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Garden.SeedUI.OnButtonClicked
   nameWithType: SeedUI.OnButtonClicked
+- uid: GrandmaGreen.Garden.SeedUI.OpenUI
+  name: OpenUI()
+  href: api/GrandmaGreen.Garden.SeedUI.html#GrandmaGreen_Garden_SeedUI_OpenUI
+  commentId: M:GrandmaGreen.Garden.SeedUI.OpenUI
+  fullName: GrandmaGreen.Garden.SeedUI.OpenUI()
+  nameWithType: SeedUI.OpenUI()
+- uid: GrandmaGreen.Garden.SeedUI.OpenUI*
+  name: OpenUI
+  href: api/GrandmaGreen.Garden.SeedUI.html#GrandmaGreen_Garden_SeedUI_OpenUI_
+  commentId: Overload:GrandmaGreen.Garden.SeedUI.OpenUI
+  isSpec: "True"
+  fullName: GrandmaGreen.Garden.SeedUI.OpenUI
+  nameWithType: SeedUI.OpenUI
 - uid: GrandmaGreen.Garden.SeedUI.playerToolData
   name: playerToolData
   href: api/GrandmaGreen.Garden.SeedUI.html#GrandmaGreen_Garden_SeedUI_playerToolData
@@ -8678,6 +8755,12 @@ references:
   commentId: F:GrandmaGreen.Garden.SeedUI.seedImage
   fullName: GrandmaGreen.Garden.SeedUI.seedImage
   nameWithType: SeedUI.seedImage
+- uid: GrandmaGreen.Garden.SeedUI.tabbedInventory
+  name: tabbedInventory
+  href: api/GrandmaGreen.Garden.SeedUI.html#GrandmaGreen_Garden_SeedUI_tabbedInventory
+  commentId: F:GrandmaGreen.Garden.SeedUI.tabbedInventory
+  fullName: GrandmaGreen.Garden.SeedUI.tabbedInventory
+  nameWithType: SeedUI.tabbedInventory
 - uid: GrandmaGreen.Garden.TileState
   name: TileState
   href: api/GrandmaGreen.Garden.TileState.html
@@ -11339,12 +11422,6 @@ references:
   commentId: F:GrandmaGreen.StartScreenUIDisplay.m_settingsUIDisplay
   fullName: GrandmaGreen.StartScreenUIDisplay.m_settingsUIDisplay
   nameWithType: StartScreenUIDisplay.m_settingsUIDisplay
-- uid: GrandmaGreen.StartScreenUIDisplay.onStartScreen
-  name: onStartScreen
-  href: api/GrandmaGreen.StartScreenUIDisplay.html#GrandmaGreen_StartScreenUIDisplay_onStartScreen
-  commentId: F:GrandmaGreen.StartScreenUIDisplay.onStartScreen
-  fullName: GrandmaGreen.StartScreenUIDisplay.onStartScreen
-  nameWithType: StartScreenUIDisplay.onStartScreen
 - uid: GrandmaGreen.StartScreenUIDisplay.Start
   name: Start()
   href: api/GrandmaGreen.StartScreenUIDisplay.html#GrandmaGreen_StartScreenUIDisplay_Start
@@ -12926,12 +13003,12 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.UI.Collections.TabbedInventory.draggable
   nameWithType: TabbedInventory.draggable
-- uid: GrandmaGreen.UI.Collections.TabbedInventory.DragItem(Button)
-  name: DragItem(Button)
-  href: api/GrandmaGreen.UI.Collections.TabbedInventory.html#GrandmaGreen_UI_Collections_TabbedInventory_DragItem_Button_
-  commentId: M:GrandmaGreen.UI.Collections.TabbedInventory.DragItem(Button)
-  fullName: GrandmaGreen.UI.Collections.TabbedInventory.DragItem(Button)
-  nameWithType: TabbedInventory.DragItem(Button)
+- uid: GrandmaGreen.UI.Collections.TabbedInventory.DragItem(Button,Canvas)
+  name: DragItem(Button, Canvas)
+  href: api/GrandmaGreen.UI.Collections.TabbedInventory.html#GrandmaGreen_UI_Collections_TabbedInventory_DragItem_Button_Canvas_
+  commentId: M:GrandmaGreen.UI.Collections.TabbedInventory.DragItem(Button,Canvas)
+  fullName: GrandmaGreen.UI.Collections.TabbedInventory.DragItem(Button, Canvas)
+  nameWithType: TabbedInventory.DragItem(Button, Canvas)
 - uid: GrandmaGreen.UI.Collections.TabbedInventory.DragItem*
   name: DragItem
   href: api/GrandmaGreen.UI.Collections.TabbedInventory.html#GrandmaGreen_UI_Collections_TabbedInventory_DragItem_
