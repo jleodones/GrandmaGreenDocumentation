@@ -1,0 +1,33 @@
+.circle {
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    width: 25px;
+    height: 25px;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    margin-left: 25px;
+    margin-right: 25px;
+    -unity-background-image-tint-color: rgb(200, 180, 160);
+    background-color: rgba(200, 180, 160, 0.66);
+}
+
+.currentCircle {
+    width: 80px;
+    height: 80px;
+    background-image: url('project://database/Assets/_GrandmaGreen/Art/UI/General/UI_General_PageIndicator.png?fileID=2800000&guid=5ea0b5a324363344aa79dbfd2e86e51b&type=3#UI_General_PageIndicator');
+    margin-right: 20px;
+    opacity: 1;
+    margin-left: 20px;
+}
+
+.pageNavigator {
+    background-color: rgba(255, 249, 217, 0.89);
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+}

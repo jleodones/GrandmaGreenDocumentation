@@ -19,5 +19,4 @@
 }
 
 #startButton{
-    transition-duration: 1.3s;
     }

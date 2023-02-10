@@ -44,7 +44,11 @@ namespace GrandmaGreen
                     storyline.SetProgress(newProgress);
                 }
                 else
-                    AddComponent<uint>(storylineSet.IndexOf(storyline), 0);
+                    if(!AddComponent<uint>(storylineSet.IndexOf(storyline), 0))
+                    {
+                        CreateNewStore<uint>();
+                        AddComponent<uint>(storylineSet.IndexOf(storyline), 0);
+                    }
 
                 storyline.StartStory();
             }

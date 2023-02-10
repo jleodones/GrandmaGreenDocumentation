@@ -1,0 +1,8 @@
+.clouds:hover {
+    translate: 200% 0;
+    transition-property: translate;
+    transition-duration: 35s;
+}
+
+.clouds {
+}

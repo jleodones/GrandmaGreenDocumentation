@@ -6,6 +6,7 @@ using UnityEngine;
 using Sirenix.OdinInspector;
 using GrandmaGreen.Garden;
 using Core.Input;
+using UnityEngine.Tilemaps;
 
 namespace GrandmaGreen.Entities
 {
@@ -18,9 +19,11 @@ namespace GrandmaGreen.Entities
         [Header("Golem References")]
         public GardenAreaController gardenArea;
         public PointerState pointerState;
+        [SerializeField] TileStore tileStore;
 
         [Header("Settings")]
         [SerializeField] float validCheckTime = 0.05f;
+        public Color invalidColor;
 
         bool returnFromPause = true;
         public void Awake()
@@ -64,6 +67,12 @@ namespace GrandmaGreen.Entities
             ushort id = (ushort)CharacterId.TulipGolem;
             Vector3 pos = new Vector3(0,0,0);
             golemManager.OnGolemSpawn(id, pos);
+        }
+
+        [Button(ButtonSizes.Medium)]
+        public void WaterGolem()
+        {
+            GolemDoAction(1);
         }
 
         public void AssignGolemAction(ushort id)
@@ -158,10 +167,11 @@ namespace GrandmaGreen.Entities
             destination.z = 0;
 
             golemObject.transform.position = destination;
-            // sprite.material = activeMaterial;
-            // decorItem.DisableInteraction();
 
-            bool isValid = true;
+            GolemController golemController = golemObject.GetComponent<GolemController>();
+            GameObject golemRig = golemController.getActiveRig();
+            bool isValid = false;
+
             do
             {
                 destination = gardenArea.lastDraggedPosition;
@@ -171,24 +181,45 @@ namespace GrandmaGreen.Entities
 
                 Physics.SyncTransforms();
 
-                // isValid = CheckValidState(decorItem.boundsCollider, gardenArea);
+                isValid = CheckValidState(golemRig.GetComponentInChildren<Collider>());
+                //print("Valid to drag: " + isValid);
 
-                // decorItem.sprite.color = isValid ? validColor : invalidColor;
+                foreach (SpriteRenderer renderer in golemRig.GetComponentsInChildren<SpriteRenderer>())
+                {
+                    renderer.color = isValid ? Color.white : invalidColor;
+                }
 
                 yield return null;
 
-            } while ( isValid && pointerState.phase != PointerState.Phase.NONE);
+            } while (golemObject && pointerState.phase != PointerState.Phase.NONE);
 
-            // decorItem.sprite.material = defaultMaterial;
-            // decorItem.sprite.color = Color.white;
-            // decorItem.EnableInteraction();
-            GolemController golemController = gameObject.GetComponent<GolemController>();
+            foreach (SpriteRenderer renderer in golemRig.GetComponentsInChildren<SpriteRenderer>())
+            {
+                renderer.color = Color.white;
+            }
+            golemController.ExitDragAttempt(isValid);
         }
-
-        [Button(ButtonSizes.Medium)]
-        public void WaterGolem()
+        public bool CheckValidState(Collider golemCollider)
         {
-            GolemDoAction(1);
+            Vector3Int tileBlockSize = Vector3Int.one;
+            tileBlockSize.x = Mathf.CeilToInt(golemCollider.bounds.size.x);
+            tileBlockSize.y = Mathf.CeilToInt(golemCollider.bounds.size.y); 
+
+            Vector3Int tileBlockOrigin = Vector3Int.zero;
+            tileBlockOrigin = gardenArea.tilemap.WorldToCell(golemCollider.transform.position);
+            tileBlockOrigin.x -= tileBlockSize.x / 2;
+
+            BoundsInt colliderBounds = new BoundsInt(tileBlockOrigin, tileBlockSize);
+
+            TileBase[] m_tileBlock = gardenArea.tilemap.GetTilesBlock(colliderBounds);
+
+            foreach (TileBase tileBase in m_tileBlock)
+            {
+                if (!tileStore[tileBase].pathable)
+                    return false;
+            }
+
+            return true;
         }
     }
 }

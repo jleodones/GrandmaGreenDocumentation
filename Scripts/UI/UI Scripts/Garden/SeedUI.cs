@@ -9,6 +9,7 @@ namespace GrandmaGreen.Garden
     public class SeedUI : MonoBehaviour
     {
         public PlayerToolData playerToolData;
+        public UI.Collections.TabbedInventory tabbedInventory;
         public Image seedImage;
         public Button seedButton;
         public CanvasGroup canvasGroup;
@@ -27,11 +28,18 @@ namespace GrandmaGreen.Garden
 
             //seedButton.onClick.AddListener(OnButtonClicked);
 
-            EventManager.instance.EVENT_OPEN_HUD += ActivateUI;
-            EventManager.instance.EVENT_CLOSE_HUD += DeactivateUI;
+            EventManager.instance.EVENT_OPEN_HUD += OpenUI;
+            EventManager.instance.EVENT_CLOSE_HUD += CloseUI;
+
+            tabbedInventory.onPanelOpened += OpenUI;
+            tabbedInventory.onPanelOpened += DisableInteraction;
+
+            tabbedInventory.onPanelClosed += EnableInteraction;
 
             if (playerToolData.equippedSeed != 0)
                 SetSeed();
+
+            OpenUI();
         }
 
 
@@ -42,10 +50,16 @@ namespace GrandmaGreen.Garden
             playerToolData.onSeedEquipped -= SetSeed;
             playerToolData.onSeedEmpty -= EmptySeed;
 
-            EventManager.instance.EVENT_OPEN_HUD -= ActivateUI;
-            EventManager.instance.EVENT_CLOSE_HUD -= DeactivateUI;
+            EventManager.instance.EVENT_OPEN_HUD -= OpenUI;
+            EventManager.instance.EVENT_CLOSE_HUD -= CloseUI;
 
-            DeactivateUI();
+            tabbedInventory.onPanelOpened -= OpenUI;
+            tabbedInventory.onPanelOpened -= DisableInteraction;
+
+            tabbedInventory.onPanelClosed -= EnableInteraction;
+
+
+            CloseUI();
 
             ///seedButton.onClick.RemoveListener(OnButtonClicked);
         }
@@ -53,21 +67,33 @@ namespace GrandmaGreen.Garden
         void CheckEquippedTool(ToolData tool)
         {
             if (tool.toolIndex == 3)
-                ActivateUI();
+                EnableInteraction();
             else
-                DeactivateUI();
+                DisableInteraction();
         }
 
-        public void ActivateUI()
+        public void EnableInteraction()
         {
             //canvasGroup.alpha = 1;
             seedButton.interactable = true;
         }
 
-        public void DeactivateUI()
+        public void DisableInteraction()
         {
             //canvasGroup.alpha = 0;
             seedButton.interactable = false;
+        }
+
+        public void OpenUI()
+        {
+            canvasGroup.alpha = 1;
+            EnableInteraction();
+        }
+
+        public void CloseUI()
+        {
+            canvasGroup.alpha = 0;
+            DisableInteraction();
         }
 
         void SetSeed()
@@ -84,7 +110,7 @@ namespace GrandmaGreen.Garden
 
         public void OnButtonClicked()
         {
-            
+
             playerToolData.onRequireSeedEquip.Invoke();
         }
     }

@@ -11,7 +11,7 @@ public class GameLoadingScreen : MonoBehaviour
 
     void Awake()
     {
-        //Sce.sceneLoaded += DisableOnFirstSceneLoad;
+        SceneManager.sceneLoaded += DisableOnGameStartup;
     }
 
     void OnDestroy()
@@ -36,7 +36,15 @@ public class GameLoadingScreen : MonoBehaviour
         canvas.enabled = true;
     }
 
-    protected virtual void LoadingEnd(SCENES scene)
+    void DisableOnGameStartup(Scene scene, LoadSceneMode loadSceneMode)
+    {
+        SceneManager.sceneLoaded -= DisableOnGameStartup;
+        LoadingEnd();
+    }
+
+    public void LoadingEnd(SCENES scene) => LoadingEnd();
+
+    protected virtual void LoadingEnd()
     {
         canvas.enabled = false;
     }

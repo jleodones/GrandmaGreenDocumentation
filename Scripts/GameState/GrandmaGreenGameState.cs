@@ -26,6 +26,7 @@ namespace GrandmaGreen
         [SerializeField] StorylineDataStore storylineData;
         [SerializeField] SaveSystem.SaveManager saveManager;
         [SerializeField] Entities.GolemManager golemManager;
+        [SerializeField] Garden.PlayerToolData playerToolData;
         [SerializeField] UI.UIDisplayTracker UIdisplayRules;
         [SerializeField] SCENES currentScene;
         [SerializeField] Core.Utilities.GameEventFlag onLevelTransitionFlag;
@@ -108,10 +109,12 @@ namespace GrandmaGreen
             areaServicer.StartServices();
             storylineData.Initalize();
             golemManager.Initialize();
-
+            playerToolData.ClearTools();
             tutorialStateData.Initalize();
 
             levelLoader.asyncLoadReq += GameSceneTransition;
+
+            EventManager.instance.EVENT_DELETE_SAVE += playerToolData.ClearTools;
         }
 
         void ReleaseState()
@@ -130,6 +133,8 @@ namespace GrandmaGreen
             tutorialStateData.Release();
 
             levelLoader.asyncLoadReq -= GameSceneTransition;
+
+            EventManager.instance.EVENT_DELETE_SAVE -= playerToolData.ClearTools;
         }
 
         public void LoadGardenScreen(int gardenIndex)
@@ -176,6 +181,12 @@ namespace GrandmaGreen
         void DisableSceneTransition()
         {
             levelTransitionEnabled = false;
+        }
+
+
+        void InitalizePlayerTools()
+        {
+
         }
     }
 }

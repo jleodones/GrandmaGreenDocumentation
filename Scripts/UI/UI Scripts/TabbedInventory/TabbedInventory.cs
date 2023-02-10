@@ -53,8 +53,8 @@ namespace GrandmaGreen.UI.Collections
         public IDraggable draggable { get; set; }
 
         // Dragging UI objects
-        [SerializeField] Canvas canvas;
-        [SerializeField] UnityEngine.UI.Image itemSprite;
+        [SerializeField] Canvas dragUI;
+        private UnityEngine.UI.Image itemSprite;
         [SerializeField] PointerState pointerState;
 
         void Start()
@@ -308,6 +308,7 @@ namespace GrandmaGreen.UI.Collections
         {
             // Retrieve button.
             Button draggedButton = evt.currentTarget as Button;
+            Canvas canvas = Instantiate(dragUI);
 
             // TODO: Turn it into a draggable sprite.
             // Retrieve the inventory sprite object from the draggedButton.userData as TabbedInventoryItemController.
@@ -315,7 +316,7 @@ namespace GrandmaGreen.UI.Collections
             // Instantiate a sprite.
             // Capture the pointer on that sprite so that the sprite moves on drag instead of the inventory item.
             // Meanwhile, hide the draggedButton so that it appears to be "moving."
-            StartCoroutine(DragItem(draggedButton));
+            StartCoroutine(DragItem(draggedButton, canvas));
 
             //draggable = draggedButton.parent.userData as IDraggable;
             //draggable.startingPosition = Vector3.zero;
@@ -325,20 +326,21 @@ namespace GrandmaGreen.UI.Collections
             handled = false;
         }
 
-        public IEnumerator DragItem(Button draggedButton)
+        public IEnumerator DragItem(Button draggedButton, Canvas canvas)
         {
+            itemSprite = canvas.GetComponentInChildren<UnityEngine.UI.Image>();
+
             TabbedInventoryItemController item = draggedButton.parent.userData as TabbedInventoryItemController;
             Sprite sprite = item.sprite;
             item.SetAlpha(0.2f);
 
             ItemType type = item.inventoryItemData.itemType;
-            if (type != ItemType.Decor) yield break;
+            //if (type != ItemType.Decor) yield break;
 
-            canvas.gameObject.SetActive(true);
+
             itemSprite.sprite = sprite;
 
             float scale = m_rootVisualElement.resolvedStyle.width / (float)Screen.width;
-            print(scale);
 
             do
             {
@@ -348,19 +350,25 @@ namespace GrandmaGreen.UI.Collections
                 {
                     CloseUI();
 
-                    canvas.gameObject.SetActive(false);
+                    EventManager.instance.HandleEVENT_INVENTORY_CUSTOMIZATION_START(item.inventoryItemData);
+
+                    Destroy(canvas.gameObject);
+                    itemSprite = null;
                     item.SetAlpha(1.0f);
 
-                    EventManager.instance.HandleEVENT_INVENTORY_CUSTOMIZATION_START(item.inventoryItemData);
                     handled = true;
                 }
 
                 yield return null;
 
-            } while (pointerState.phase != PointerState.Phase.NONE);
+            } while (!handled && pointerState.phase != PointerState.Phase.NONE);
 
-            canvas.gameObject.SetActive(false);
-            item.SetAlpha(1.0f);
+            if (!handled)
+            {
+                Destroy(canvas.gameObject);
+                itemSprite = null;
+                item.SetAlpha(1.0f);
+            }
         }
 
         public void PointerMoveHandler(PointerMoveEvent evt)

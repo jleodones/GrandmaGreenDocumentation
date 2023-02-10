@@ -76,6 +76,8 @@ namespace GrandmaGreen
             tutorialStateData.explainEvolvedGolem += TriggerGolemEvolveDialogue;
 
             areaController.onGardenTick += ForceSetTutorialPlant;
+
+            dialogueable.onFinishDialogue += OnTutorialDialogueRead;
         }
 
 
@@ -99,6 +101,8 @@ namespace GrandmaGreen
             tutorialStateData.explainEvolvedGolem -= TriggerGolemEvolveDialogue;
 
             areaController.onGardenTick -= ForceSetTutorialPlant;
+
+            dialogueable.onFinishDialogue -= OnTutorialDialogueRead;
         }
 
         void PlaySlideshow(SlideshowData slideshowData)
@@ -115,6 +119,10 @@ namespace GrandmaGreen
 
             if (!tutorialStateData.golemTutorial.isComplete && tutorialStateData.golemTutorial.progress < 1)
                 toolsMenu.DisableToolButton("fertilizer-container");
+
+
+            if(tutorialStateData.coreLoopTutorial.isComplete)
+                return;
 
             uint progress = tutorialStateData.coreLoopTutorial.progress;
 
@@ -182,7 +190,7 @@ namespace GrandmaGreen
         {
             HUD.EnableButton("inventoryButton");
             seedUI.enabled = true;
-            seedUI.ActivateUI();
+            seedUI.OpenUI();
         }
 
         void EnableTools()

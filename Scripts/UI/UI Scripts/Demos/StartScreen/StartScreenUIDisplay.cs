@@ -13,12 +13,13 @@ namespace GrandmaGreen
         // Settings reference.
         public SettingsUIDisplay m_settingsUIDisplay;
         public SpookuleleAudio.ASoundContainer startSFX;
-        public bool onStartScreen = true;
         private Button startButton;
+        private VisualElement splashScreen;
         public void Start()
         {
             startButton = m_rootVisualElement.Q<Button>("startButton");
-            RegisterButtonCallback("startButton", OnStartClicked);
+            splashScreen = m_rootVisualElement.Q<VisualElement>("splashScreen");
+            splashScreen.RegisterCallback<ClickEvent>(OnStartClicked);
             RegisterButtonCallback("settingsButton", OnSettingsClicked);
 
             // Tells the settings UI to open the start screen back up when the exit button is called.
@@ -32,16 +33,14 @@ namespace GrandmaGreen
             m_rootVisualElement.schedule.Execute(() => startButton.ToggleInClassList("expanded")).StartingIn(100);
         }
 
-        private void OnStartClicked()
+        private void OnStartClicked(ClickEvent evt)
         {
-            onStartScreen = false;
             SceneExtensions.LoadAsync(SCENES.SetupTest);
             startSFX.Play();
         }
 
         private void OnSettingsClicked()
         {
-            onStartScreen = false;
             CloseUI();
             m_settingsUIDisplay.OpenUI();
         }

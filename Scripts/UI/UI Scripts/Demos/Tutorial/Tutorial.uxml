@@ -1,6 +1,5 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
-    <Style src="project://database/Assets/_GrandmaGreen/Scripts/UI/UI%20Scripts/StyleSheets/Mailbox.uss?fileID=7433441132597879392&amp;guid=899de7249ae4f42a095103546590a9ff&amp;type=3#Mailbox" />
-    <Style src="project://database/Assets/_GrandmaGreen/Scripts/UI/UI%20Scripts/StyleSheets/Tutorial.uss?fileID=7433441132597879392&amp;guid=05385981f93b4454b87ee2b1e974ba88&amp;type=3#Tutorial" />
+    <Style src="project://database/Assets/_GrandmaGreen/Scripts/UI/UI%20Scripts/StyleSheets/General.uss?fileID=7433441132597879392&amp;guid=609d9a75a0335dc4eb509f0c94425558&amp;type=3#General" />
     <ui:VisualElement name="rootVisualElement" style="flex-grow: 1; flex-direction: column; justify-content: flex-start; align-items: center; padding-left: 25px; padding-right: 25px; padding-top: 25px; padding-bottom: 25px; background-color: rgba(0, 0, 0, 0.16); display: none;">
         <ui:VisualElement name="buttonContainer" style="flex-direction: row; width: 100%; justify-content: flex-end; height: 80px;" />
         <ui:VisualElement name="contentContainer" style="height: 80%; width: 100%; flex-direction: row; justify-content: center; align-items: center; padding-bottom: 2%;">
@@ -20,7 +19,7 @@
             <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="rightArrow" style="height: 100px; width: 100px; background-color: rgba(255, 255, 255, 0); background-image: url(&apos;project://database/Assets/_GrandmaGreen/Art/UI/General/UI_General_Arrow.png?fileID=2800000&amp;guid=c6c9d317e9140402eb4232d556a770c1&amp;type=3#UI_General_Arrow&apos;); border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0;" />
         </ui:VisualElement>
         <ui:VisualElement name="navigatorContainer" style="flex-direction: row; justify-content: center; align-items: center; height: auto; width: 100%; overflow: visible;">
-            <ui:VisualElement name="pageNavigator" style="flex-direction: row; color: rgb(57, 57, 57); background-color: rgba(255, 249, 217, 0.89); border-top-left-radius: 30px; border-bottom-left-radius: 30px; border-top-right-radius: 30px; border-bottom-right-radius: 30px; justify-content: space-around; align-items: center; height: 80%;" />
+            <ui:VisualElement name="pageNavigator" style="flex-direction: row; justify-content: space-around; align-items: center; height:80%;" class="pageNavigator" />
         </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>

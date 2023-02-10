@@ -36,6 +36,13 @@ namespace GrandmaGreen.Garden
         public event System.Action onSeedEmpty;
 
 
+        public void ClearTools()
+        {
+            equippedSeed= 0;
+            equippedSeedGenotype = default;
+            ToolSelection(0);
+        }
+
         public void ToggleToolSelection()
         {
             if (!toolSelectionActive)

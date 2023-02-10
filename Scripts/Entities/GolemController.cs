@@ -55,6 +55,7 @@ namespace GrandmaGreen.Entities
         private bool m_isDragging = false;
         private bool m_isDoingTask = false;
         private float m_tapTime = float.MaxValue;
+        private Vector3 m_originalPos;
         #endregion
 
         #region events
@@ -137,7 +138,7 @@ namespace GrandmaGreen.Entities
             if ((Time.time - m_tapTime > 0.5f))
             {
                 m_tapTime = float.MaxValue;
-                UpdateDraggingState(true);
+                EnterDraggingState(true);
                 EventManager.instance.HandleEVENT_GOLEM_DRAG(this.gameObject);
             }
         }
@@ -269,10 +270,23 @@ namespace GrandmaGreen.Entities
             }
         }
 
-        public void UpdateDraggingState(bool state)
+        public void EnterDraggingState(bool state)
         {
             m_isDragging = state;
             behaviorTree.Blackboard.Set("isInteract", m_isDragging);
+            m_originalPos = transform.position;
+            GetComponentInChildren<GolemMenu>().ToggleMenu(false);
+        }
+
+        public void ExitDragAttempt(bool attempt)
+        {
+            m_isDragging = false;
+            m_isInteracting = false;
+            behaviorTree.Blackboard.Set("isInteract", false);
+            if (!attempt)
+            {
+                transform.position = m_originalPos;
+            }
         }
 
         public void UpdateTaskState(int happinessValue)
@@ -315,7 +329,6 @@ namespace GrandmaGreen.Entities
             float tappingTime = Time.time - m_tapTime;
             Debug.Log("End Interaction: " + (tappingTime));
 
-            UpdateDraggingState(false);
             if (tappingTime > 0 && tappingTime < 0.5f){
                 UpdateInteractState();
                 m_tapTime = float.MaxValue;

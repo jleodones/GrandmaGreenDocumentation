@@ -72,7 +72,7 @@ namespace GrandmaGreen
             SetCandidates(breedingCandiates);
             SetPlantName(name.ToString());
             Display("phenotype", true);
-            SetSprite("", sprite);
+            SetSprite("phenotype", sprite);
             SetParent(genotypePlant.ToString(), true);
 
         }
@@ -117,11 +117,10 @@ namespace GrandmaGreen
             foreach (Garden.PlantState candidate in candidates)
             {
                 Garden.Genotype genotype = candidate.genotype;
-                string elementName = "candidate" + index.ToString();
-                Display(index.ToString() + "Candidate", true);
-                SetText(elementName, genotype.ToString());
+                string elementName = index.ToString() + "Candidate";
+                Display(elementName, true);
                 Sprite sprite = CollectionsSO.LoadedInstance.GetSprite(candidate.type, genotype, candidate.growthStage);
-                SetSprite(index.ToString(), sprite);
+                SetSprite(elementName, sprite);
                 index++;
             }
 
@@ -132,8 +131,8 @@ namespace GrandmaGreen
             m_rootVisualElement.Q<Label>(id).text = newText;
         }
 
-        void SetSprite(string index, Sprite sprite) {
-            m_rootVisualElement.Q("phenotype" + index).style.backgroundImage = new StyleBackground(sprite);
+        void SetSprite(string elementName, Sprite sprite) {
+            m_rootVisualElement.Q(elementName).style.backgroundImage = new StyleBackground(sprite);
 
         }
 
@@ -161,7 +160,6 @@ namespace GrandmaGreen
             for(int i = 1; i <= 4; i++)
             {
                 Display(i.ToString() + "Candidate", false);
-                SetText("candidate" + i.ToString(), "");
             }
         }
 
