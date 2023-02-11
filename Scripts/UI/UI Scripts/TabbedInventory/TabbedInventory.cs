@@ -55,6 +55,7 @@ namespace GrandmaGreen.UI.Collections
         // Dragging UI objects
         [SerializeField] Canvas dragUI;
         private UnityEngine.UI.Image itemSprite;
+        private bool isDragging;
         [SerializeField] PointerState pointerState;
 
         void Start()
@@ -308,7 +309,6 @@ namespace GrandmaGreen.UI.Collections
         {
             // Retrieve button.
             Button draggedButton = evt.currentTarget as Button;
-            Canvas canvas = Instantiate(dragUI);
 
             // TODO: Turn it into a draggable sprite.
             // Retrieve the inventory sprite object from the draggedButton.userData as TabbedInventoryItemController.
@@ -316,59 +316,9 @@ namespace GrandmaGreen.UI.Collections
             // Instantiate a sprite.
             // Capture the pointer on that sprite so that the sprite moves on drag instead of the inventory item.
             // Meanwhile, hide the draggedButton so that it appears to be "moving."
-            StartCoroutine(DragItem(draggedButton, canvas));
+            StartCoroutine(DragItem(draggedButton));
 
-            //draggable = draggedButton.parent.userData as IDraggable;
-            //draggable.startingPosition = Vector3.zero;
-
-            //pointerStartPosition = evt.position;
-            //draggable.button.CapturePointer(evt.pointerId);
             handled = false;
-        }
-
-        public IEnumerator DragItem(Button draggedButton, Canvas canvas)
-        {
-            itemSprite = canvas.GetComponentInChildren<UnityEngine.UI.Image>();
-
-            TabbedInventoryItemController item = draggedButton.parent.userData as TabbedInventoryItemController;
-            Sprite sprite = item.sprite;
-            item.SetAlpha(0.2f);
-
-            ItemType type = item.inventoryItemData.itemType;
-            //if (type != ItemType.Decor) yield break;
-
-
-            itemSprite.sprite = sprite;
-
-            float scale = m_rootVisualElement.resolvedStyle.width / (float)Screen.width;
-
-            do
-            {
-                itemSprite.transform.position = pointerState.positionRaw;
-
-                if (scale * itemSprite.transform.position.x <= threshold.worldTransform.GetPosition().x && !handled)
-                {
-                    CloseUI();
-
-                    EventManager.instance.HandleEVENT_INVENTORY_CUSTOMIZATION_START(item.inventoryItemData);
-
-                    Destroy(canvas.gameObject);
-                    itemSprite = null;
-                    item.SetAlpha(1.0f);
-
-                    handled = true;
-                }
-
-                yield return null;
-
-            } while (!handled && pointerState.phase != PointerState.Phase.NONE);
-
-            if (!handled)
-            {
-                Destroy(canvas.gameObject);
-                itemSprite = null;
-                item.SetAlpha(1.0f);
-            }
         }
 
         public void PointerMoveHandler(PointerMoveEvent evt)
@@ -386,6 +336,120 @@ namespace GrandmaGreen.UI.Collections
                     SellingDrag(evt);
                     break;
             }
+
+            if (isDragging)
+                evt.StopPropagation();
+        }
+
+        public void PointerUpHandler(PointerUpEvent evt)
+        {
+            FinishPointer(evt.pointerId);
+        }
+
+        public void FinishPointer(int pointerId)
+        {
+            if (draggable != null && draggable.button.HasPointerCapture(pointerId))
+            {
+                draggable.button.ReleasePointer(pointerId);
+                draggable.button.transform.position = Vector3.zero;
+                draggable = null;
+            }
+        }
+
+        #region dragging
+
+        public IEnumerator DragItem(Button draggedButton)
+        {
+            // Determine the direction player is going
+            Debug.Log(pointerState.deltaRaw);
+            Vector3 startPos = pointerState.positionRaw;
+
+            yield return new WaitUntil(() => pointerState.positionRaw != startPos);
+
+            Vector3 newPos = pointerState.positionRaw;
+
+            isDragging = (Mathf.Abs(startPos.x - newPos.x) >= Mathf.Abs(startPos.y - newPos.y));
+
+            // Break if scrolling
+            if (!isDragging)
+                yield break;
+
+            // Create canvas and load image
+            Canvas canvas = Instantiate(dragUI);
+
+            itemSprite = canvas.GetComponentInChildren<UnityEngine.UI.Image>();
+
+            TabbedInventoryItemController item = draggedButton.parent.userData as TabbedInventoryItemController;
+            Sprite sprite = item.sprite;
+            itemSprite.sprite = sprite;
+            item.SetAlpha(0.2f);
+
+            // Determine type and take action
+            ItemType type = item.inventoryItemData.itemType;
+            switch (type)
+            {
+                case ItemType.Plant:
+                    StartCoroutine(DemoDrag(canvas, item));
+                    break;
+                case ItemType.Seed:
+                    StartCoroutine(DemoDrag(canvas, item));
+                    break;
+                case ItemType.Tool:
+                    StartCoroutine(DemoDrag(canvas, item));
+                    break;
+                case ItemType.Decor:
+                    StartCoroutine(DecorationDrag(canvas, item));
+                    break;
+            }
+        }
+
+        public IEnumerator DecorationDrag(Canvas canvas, TabbedInventoryItemController item)
+        {
+            float scale = m_rootVisualElement.resolvedStyle.width / (float)Screen.width;
+
+            do
+            {
+                itemSprite.transform.position = pointerState.positionRaw;
+
+                if (scale * itemSprite.transform.position.x <= threshold.worldTransform.GetPosition().x && !handled)
+                {
+                    CloseUI();
+
+                    EventManager.instance.HandleEVENT_INVENTORY_CUSTOMIZATION_START(item.inventoryItemData);
+
+                    TeardownDrag(canvas, item);
+
+                    handled = true;
+                }
+
+                yield return null;
+
+            } while (!handled && pointerState.phase != PointerState.Phase.NONE);
+
+            if (!handled)
+                TeardownDrag(canvas, item);
+        }
+
+        public IEnumerator DemoDrag(Canvas canvas, TabbedInventoryItemController item)
+        {
+            do
+            {
+                itemSprite.transform.position = pointerState.positionRaw;
+
+                yield return null;
+
+            } while (!handled && pointerState.phase != PointerState.Phase.NONE);
+
+            if (!handled)
+                TeardownDrag(canvas, item);
+        }
+
+        public void TeardownDrag(Canvas canvas, TabbedInventoryItemController item)
+        {
+            Destroy(canvas.gameObject);
+            itemSprite = null;
+            item.SetAlpha(1.0f);
+            isDragging = false;
         }
 
         private void SellingDrag(PointerMoveEvent evt)
@@ -438,20 +502,7 @@ namespace GrandmaGreen.UI.Collections
             }
         }
 
-        public void PointerUpHandler(PointerUpEvent evt)
-        {
-            FinishPointer(evt.pointerId);
-        }
-
-        public void FinishPointer(int pointerId)
-        {
-            if (draggable != null && draggable.button.HasPointerCapture(pointerId))
-            {
-                draggable.button.ReleasePointer(pointerId);
-                draggable.button.transform.position = Vector3.zero;
-                draggable = null;
-            }
-        }
+        #endregion
         
         void CheckOpenInventory()
         {
