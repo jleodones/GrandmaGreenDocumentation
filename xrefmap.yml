@@ -12990,6 +12990,32 @@ references:
   commentId: F:GrandmaGreen.UI.Collections.TabbedInventory.currentMode
   fullName: GrandmaGreen.UI.Collections.TabbedInventory.currentMode
   nameWithType: TabbedInventory.currentMode
+- uid: GrandmaGreen.UI.Collections.TabbedInventory.DecorationDrag(Canvas,GrandmaGreen.UI.Collections.TabbedInventoryItemController)
+  name: DecorationDrag(Canvas, TabbedInventoryItemController)
+  href: api/GrandmaGreen.UI.Collections.TabbedInventory.html#GrandmaGreen_UI_Collections_TabbedInventory_DecorationDrag_Canvas_GrandmaGreen_UI_Collections_TabbedInventoryItemController_
+  commentId: M:GrandmaGreen.UI.Collections.TabbedInventory.DecorationDrag(Canvas,GrandmaGreen.UI.Collections.TabbedInventoryItemController)
+  fullName: GrandmaGreen.UI.Collections.TabbedInventory.DecorationDrag(Canvas, GrandmaGreen.UI.Collections.TabbedInventoryItemController)
+  nameWithType: TabbedInventory.DecorationDrag(Canvas, TabbedInventoryItemController)
+- uid: GrandmaGreen.UI.Collections.TabbedInventory.DecorationDrag*
+  name: DecorationDrag
+  href: api/GrandmaGreen.UI.Collections.TabbedInventory.html#GrandmaGreen_UI_Collections_TabbedInventory_DecorationDrag_
+  commentId: Overload:GrandmaGreen.UI.Collections.TabbedInventory.DecorationDrag
+  isSpec: "True"
+  fullName: GrandmaGreen.UI.Collections.TabbedInventory.DecorationDrag
+  nameWithType: TabbedInventory.DecorationDrag
+- uid: GrandmaGreen.UI.Collections.TabbedInventory.DemoDrag(Canvas,GrandmaGreen.UI.Collections.TabbedInventoryItemController)
+  name: DemoDrag(Canvas, TabbedInventoryItemController)
+  href: api/GrandmaGreen.UI.Collections.TabbedInventory.html#GrandmaGreen_UI_Collections_TabbedInventory_DemoDrag_Canvas_GrandmaGreen_UI_Collections_TabbedInventoryItemController_
+  commentId: M:GrandmaGreen.UI.Collections.TabbedInventory.DemoDrag(Canvas,GrandmaGreen.UI.Collections.TabbedInventoryItemController)
+  fullName: GrandmaGreen.UI.Collections.TabbedInventory.DemoDrag(Canvas, GrandmaGreen.UI.Collections.TabbedInventoryItemController)
+  nameWithType: TabbedInventory.DemoDrag(Canvas, TabbedInventoryItemController)
+- uid: GrandmaGreen.UI.Collections.TabbedInventory.DemoDrag*
+  name: DemoDrag
+  href: api/GrandmaGreen.UI.Collections.TabbedInventory.html#GrandmaGreen_UI_Collections_TabbedInventory_DemoDrag_
+  commentId: Overload:GrandmaGreen.UI.Collections.TabbedInventory.DemoDrag
+  isSpec: "True"
+  fullName: GrandmaGreen.UI.Collections.TabbedInventory.DemoDrag
+  nameWithType: TabbedInventory.DemoDrag
 - uid: GrandmaGreen.UI.Collections.TabbedInventory.draggable
   name: draggable
   href: api/GrandmaGreen.UI.Collections.TabbedInventory.html#GrandmaGreen_UI_Collections_TabbedInventory_draggable
@@ -13003,12 +13029,12 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.UI.Collections.TabbedInventory.draggable
   nameWithType: TabbedInventory.draggable
-- uid: GrandmaGreen.UI.Collections.TabbedInventory.DragItem(Button,Canvas)
-  name: DragItem(Button, Canvas)
-  href: api/GrandmaGreen.UI.Collections.TabbedInventory.html#GrandmaGreen_UI_Collections_TabbedInventory_DragItem_Button_Canvas_
-  commentId: M:GrandmaGreen.UI.Collections.TabbedInventory.DragItem(Button,Canvas)
-  fullName: GrandmaGreen.UI.Collections.TabbedInventory.DragItem(Button, Canvas)
-  nameWithType: TabbedInventory.DragItem(Button, Canvas)
+- uid: GrandmaGreen.UI.Collections.TabbedInventory.DragItem(Button)
+  name: DragItem(Button)
+  href: api/GrandmaGreen.UI.Collections.TabbedInventory.html#GrandmaGreen_UI_Collections_TabbedInventory_DragItem_Button_
+  commentId: M:GrandmaGreen.UI.Collections.TabbedInventory.DragItem(Button)
+  fullName: GrandmaGreen.UI.Collections.TabbedInventory.DragItem(Button)
+  nameWithType: TabbedInventory.DragItem(Button)
 - uid: GrandmaGreen.UI.Collections.TabbedInventory.DragItem*
   name: DragItem
   href: api/GrandmaGreen.UI.Collections.TabbedInventory.html#GrandmaGreen_UI_Collections_TabbedInventory_DragItem_
@@ -13202,6 +13228,19 @@ references:
   commentId: F:GrandmaGreen.UI.Collections.TabbedInventory.soundContainers
   fullName: GrandmaGreen.UI.Collections.TabbedInventory.soundContainers
   nameWithType: TabbedInventory.soundContainers
+- uid: GrandmaGreen.UI.Collections.TabbedInventory.TeardownDrag(Canvas,GrandmaGreen.UI.Collections.TabbedInventoryItemController)
+  name: TeardownDrag(Canvas, TabbedInventoryItemController)
+  href: api/GrandmaGreen.UI.Collections.TabbedInventory.html#GrandmaGreen_UI_Collections_TabbedInventory_TeardownDrag_Canvas_GrandmaGreen_UI_Collections_TabbedInventoryItemController_
+  commentId: M:GrandmaGreen.UI.Collections.TabbedInventory.TeardownDrag(Canvas,GrandmaGreen.UI.Collections.TabbedInventoryItemController)
+  fullName: GrandmaGreen.UI.Collections.TabbedInventory.TeardownDrag(Canvas, GrandmaGreen.UI.Collections.TabbedInventoryItemController)
+  nameWithType: TabbedInventory.TeardownDrag(Canvas, TabbedInventoryItemController)
+- uid: GrandmaGreen.UI.Collections.TabbedInventory.TeardownDrag*
+  name: TeardownDrag
+  href: api/GrandmaGreen.UI.Collections.TabbedInventory.html#GrandmaGreen_UI_Collections_TabbedInventory_TeardownDrag_
+  commentId: Overload:GrandmaGreen.UI.Collections.TabbedInventory.TeardownDrag
+  isSpec: "True"
+  fullName: GrandmaGreen.UI.Collections.TabbedInventory.TeardownDrag
+  nameWithType: TabbedInventory.TeardownDrag
 - uid: GrandmaGreen.UI.Collections.TabbedInventory.threshold
   name: threshold
   href: api/GrandmaGreen.UI.Collections.TabbedInventory.html#GrandmaGreen_UI_Collections_TabbedInventory_threshold
