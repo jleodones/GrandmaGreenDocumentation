@@ -432,6 +432,177 @@ references:
   commentId: N:GrandmaGreen
   fullName: GrandmaGreen
   nameWithType: GrandmaGreen
+- uid: GrandmaGreen.AchivementDataStore
+  name: AchivementDataStore
+  href: api/GrandmaGreen.AchivementDataStore.html
+  commentId: T:GrandmaGreen.AchivementDataStore
+  fullName: GrandmaGreen.AchivementDataStore
+  nameWithType: AchivementDataStore
+- uid: GrandmaGreen.AchivementDataStore.achivements
+  name: achivements
+  href: api/GrandmaGreen.AchivementDataStore.html#GrandmaGreen_AchivementDataStore_achivements
+  commentId: F:GrandmaGreen.AchivementDataStore.achivements
+  fullName: GrandmaGreen.AchivementDataStore.achivements
+  nameWithType: AchivementDataStore.achivements
+- uid: GrandmaGreen.AchivementDataStore.Initalize
+  name: Initalize()
+  href: api/GrandmaGreen.AchivementDataStore.html#GrandmaGreen_AchivementDataStore_Initalize
+  commentId: M:GrandmaGreen.AchivementDataStore.Initalize
+  fullName: GrandmaGreen.AchivementDataStore.Initalize()
+  nameWithType: AchivementDataStore.Initalize()
+- uid: GrandmaGreen.AchivementDataStore.Initalize*
+  name: Initalize
+  href: api/GrandmaGreen.AchivementDataStore.html#GrandmaGreen_AchivementDataStore_Initalize_
+  commentId: Overload:GrandmaGreen.AchivementDataStore.Initalize
+  isSpec: "True"
+  fullName: GrandmaGreen.AchivementDataStore.Initalize
+  nameWithType: AchivementDataStore.Initalize
+- uid: GrandmaGreen.AchivementDataStore.LoadAchivementProgress
+  name: LoadAchivementProgress()
+  href: api/GrandmaGreen.AchivementDataStore.html#GrandmaGreen_AchivementDataStore_LoadAchivementProgress
+  commentId: M:GrandmaGreen.AchivementDataStore.LoadAchivementProgress
+  fullName: GrandmaGreen.AchivementDataStore.LoadAchivementProgress()
+  nameWithType: AchivementDataStore.LoadAchivementProgress()
+- uid: GrandmaGreen.AchivementDataStore.LoadAchivementProgress*
+  name: LoadAchivementProgress
+  href: api/GrandmaGreen.AchivementDataStore.html#GrandmaGreen_AchivementDataStore_LoadAchivementProgress_
+  commentId: Overload:GrandmaGreen.AchivementDataStore.LoadAchivementProgress
+  isSpec: "True"
+  fullName: GrandmaGreen.AchivementDataStore.LoadAchivementProgress
+  nameWithType: AchivementDataStore.LoadAchivementProgress
+- uid: GrandmaGreen.AchivementDataStore.onAchivementCompleted
+  name: onAchivementCompleted
+  href: api/GrandmaGreen.AchivementDataStore.html#GrandmaGreen_AchivementDataStore_onAchivementCompleted
+  commentId: F:GrandmaGreen.AchivementDataStore.onAchivementCompleted
+  fullName: GrandmaGreen.AchivementDataStore.onAchivementCompleted
+  nameWithType: AchivementDataStore.onAchivementCompleted
+- uid: GrandmaGreen.AchivementDataStore.Release
+  name: Release()
+  href: api/GrandmaGreen.AchivementDataStore.html#GrandmaGreen_AchivementDataStore_Release
+  commentId: M:GrandmaGreen.AchivementDataStore.Release
+  fullName: GrandmaGreen.AchivementDataStore.Release()
+  nameWithType: AchivementDataStore.Release()
+- uid: GrandmaGreen.AchivementDataStore.Release*
+  name: Release
+  href: api/GrandmaGreen.AchivementDataStore.html#GrandmaGreen_AchivementDataStore_Release_
+  commentId: Overload:GrandmaGreen.AchivementDataStore.Release
+  isSpec: "True"
+  fullName: GrandmaGreen.AchivementDataStore.Release
+  nameWithType: AchivementDataStore.Release
+- uid: GrandmaGreen.AchivementDataStore.requirements
+  name: requirements
+  href: api/GrandmaGreen.AchivementDataStore.html#GrandmaGreen_AchivementDataStore_requirements
+  commentId: F:GrandmaGreen.AchivementDataStore.requirements
+  fullName: GrandmaGreen.AchivementDataStore.requirements
+  nameWithType: AchivementDataStore.requirements
+- uid: GrandmaGreen.AchivementDataStore.SaveAchivementProgress
+  name: SaveAchivementProgress()
+  href: api/GrandmaGreen.AchivementDataStore.html#GrandmaGreen_AchivementDataStore_SaveAchivementProgress
+  commentId: M:GrandmaGreen.AchivementDataStore.SaveAchivementProgress
+  fullName: GrandmaGreen.AchivementDataStore.SaveAchivementProgress()
+  nameWithType: AchivementDataStore.SaveAchivementProgress()
+- uid: GrandmaGreen.AchivementDataStore.SaveAchivementProgress*
+  name: SaveAchivementProgress
+  href: api/GrandmaGreen.AchivementDataStore.html#GrandmaGreen_AchivementDataStore_SaveAchivementProgress_
+  commentId: Overload:GrandmaGreen.AchivementDataStore.SaveAchivementProgress
+  isSpec: "True"
+  fullName: GrandmaGreen.AchivementDataStore.SaveAchivementProgress
+  nameWithType: AchivementDataStore.SaveAchivementProgress
+- uid: GrandmaGreen.AchivementRequirement
+  name: AchivementRequirement
+  href: api/GrandmaGreen.AchivementRequirement.html
+  commentId: T:GrandmaGreen.AchivementRequirement
+  fullName: GrandmaGreen.AchivementRequirement
+  nameWithType: AchivementRequirement
+- uid: GrandmaGreen.AchivementRequirement.DeregisterAchivement(GrandmaGreen.GameAchivement)
+  name: DeregisterAchivement(GameAchivement)
+  href: api/GrandmaGreen.AchivementRequirement.html#GrandmaGreen_AchivementRequirement_DeregisterAchivement_GrandmaGreen_GameAchivement_
+  commentId: M:GrandmaGreen.AchivementRequirement.DeregisterAchivement(GrandmaGreen.GameAchivement)
+  fullName: GrandmaGreen.AchivementRequirement.DeregisterAchivement(GrandmaGreen.GameAchivement)
+  nameWithType: AchivementRequirement.DeregisterAchivement(GameAchivement)
+- uid: GrandmaGreen.AchivementRequirement.DeregisterAchivement*
+  name: DeregisterAchivement
+  href: api/GrandmaGreen.AchivementRequirement.html#GrandmaGreen_AchivementRequirement_DeregisterAchivement_
+  commentId: Overload:GrandmaGreen.AchivementRequirement.DeregisterAchivement
+  isSpec: "True"
+  fullName: GrandmaGreen.AchivementRequirement.DeregisterAchivement
+  nameWithType: AchivementRequirement.DeregisterAchivement
+- uid: GrandmaGreen.AchivementRequirement.onRequirementValueChanged
+  name: onRequirementValueChanged
+  href: api/GrandmaGreen.AchivementRequirement.html#GrandmaGreen_AchivementRequirement_onRequirementValueChanged
+  commentId: F:GrandmaGreen.AchivementRequirement.onRequirementValueChanged
+  fullName: GrandmaGreen.AchivementRequirement.onRequirementValueChanged
+  nameWithType: AchivementRequirement.onRequirementValueChanged
+- uid: GrandmaGreen.AchivementRequirement.RegisterAchivement(GrandmaGreen.GameAchivement)
+  name: RegisterAchivement(GameAchivement)
+  href: api/GrandmaGreen.AchivementRequirement.html#GrandmaGreen_AchivementRequirement_RegisterAchivement_GrandmaGreen_GameAchivement_
+  commentId: M:GrandmaGreen.AchivementRequirement.RegisterAchivement(GrandmaGreen.GameAchivement)
+  fullName: GrandmaGreen.AchivementRequirement.RegisterAchivement(GrandmaGreen.GameAchivement)
+  nameWithType: AchivementRequirement.RegisterAchivement(GameAchivement)
+- uid: GrandmaGreen.AchivementRequirement.RegisterAchivement*
+  name: RegisterAchivement
+  href: api/GrandmaGreen.AchivementRequirement.html#GrandmaGreen_AchivementRequirement_RegisterAchivement_
+  commentId: Overload:GrandmaGreen.AchivementRequirement.RegisterAchivement
+  isSpec: "True"
+  fullName: GrandmaGreen.AchivementRequirement.RegisterAchivement
+  nameWithType: AchivementRequirement.RegisterAchivement
+- uid: GrandmaGreen.AchivementRequirement.ReleaseAchivementRequirement
+  name: ReleaseAchivementRequirement()
+  href: api/GrandmaGreen.AchivementRequirement.html#GrandmaGreen_AchivementRequirement_ReleaseAchivementRequirement
+  commentId: M:GrandmaGreen.AchivementRequirement.ReleaseAchivementRequirement
+  fullName: GrandmaGreen.AchivementRequirement.ReleaseAchivementRequirement()
+  nameWithType: AchivementRequirement.ReleaseAchivementRequirement()
+- uid: GrandmaGreen.AchivementRequirement.ReleaseAchivementRequirement*
+  name: ReleaseAchivementRequirement
+  href: api/GrandmaGreen.AchivementRequirement.html#GrandmaGreen_AchivementRequirement_ReleaseAchivementRequirement_
+  commentId: Overload:GrandmaGreen.AchivementRequirement.ReleaseAchivementRequirement
+  isSpec: "True"
+  fullName: GrandmaGreen.AchivementRequirement.ReleaseAchivementRequirement
+  nameWithType: AchivementRequirement.ReleaseAchivementRequirement
+- uid: GrandmaGreen.AchivementRequirement.RequirementValueChanged(System.Int32)
+  name: RequirementValueChanged(Int32)
+  href: api/GrandmaGreen.AchivementRequirement.html#GrandmaGreen_AchivementRequirement_RequirementValueChanged_System_Int32_
+  commentId: M:GrandmaGreen.AchivementRequirement.RequirementValueChanged(System.Int32)
+  fullName: GrandmaGreen.AchivementRequirement.RequirementValueChanged(System.Int32)
+  nameWithType: AchivementRequirement.RequirementValueChanged(Int32)
+- uid: GrandmaGreen.AchivementRequirement.RequirementValueChanged*
+  name: RequirementValueChanged
+  href: api/GrandmaGreen.AchivementRequirement.html#GrandmaGreen_AchivementRequirement_RequirementValueChanged_
+  commentId: Overload:GrandmaGreen.AchivementRequirement.RequirementValueChanged
+  isSpec: "True"
+  fullName: GrandmaGreen.AchivementRequirement.RequirementValueChanged
+  nameWithType: AchivementRequirement.RequirementValueChanged
+- uid: GrandmaGreen.AchivementRequirement.SetupAchivementRequirement
+  name: SetupAchivementRequirement()
+  href: api/GrandmaGreen.AchivementRequirement.html#GrandmaGreen_AchivementRequirement_SetupAchivementRequirement
+  commentId: M:GrandmaGreen.AchivementRequirement.SetupAchivementRequirement
+  fullName: GrandmaGreen.AchivementRequirement.SetupAchivementRequirement()
+  nameWithType: AchivementRequirement.SetupAchivementRequirement()
+- uid: GrandmaGreen.AchivementRequirement.SetupAchivementRequirement*
+  name: SetupAchivementRequirement
+  href: api/GrandmaGreen.AchivementRequirement.html#GrandmaGreen_AchivementRequirement_SetupAchivementRequirement_
+  commentId: Overload:GrandmaGreen.AchivementRequirement.SetupAchivementRequirement
+  isSpec: "True"
+  fullName: GrandmaGreen.AchivementRequirement.SetupAchivementRequirement
+  nameWithType: AchivementRequirement.SetupAchivementRequirement
+- uid: GrandmaGreen.AchivementState
+  name: AchivementState
+  href: api/GrandmaGreen.AchivementState.html
+  commentId: T:GrandmaGreen.AchivementState
+  fullName: GrandmaGreen.AchivementState
+  nameWithType: AchivementState
+- uid: GrandmaGreen.AchivementState.achivementName
+  name: achivementName
+  href: api/GrandmaGreen.AchivementState.html#GrandmaGreen_AchivementState_achivementName
+  commentId: F:GrandmaGreen.AchivementState.achivementName
+  fullName: GrandmaGreen.AchivementState.achivementName
+  nameWithType: AchivementState.achivementName
+- uid: GrandmaGreen.AchivementState.progression
+  name: progression
+  href: api/GrandmaGreen.AchivementState.html#GrandmaGreen_AchivementState_progression
+  commentId: F:GrandmaGreen.AchivementState.progression
+  fullName: GrandmaGreen.AchivementState.progression
+  nameWithType: AchivementState.progression
 - uid: GrandmaGreen.AreaController
   name: AreaController
   href: api/GrandmaGreen.AreaController.html
@@ -1022,6 +1193,19 @@ references:
   commentId: F:GrandmaGreen.BulletinBoardUIDisplay.controller
   fullName: GrandmaGreen.BulletinBoardUIDisplay.controller
   nameWithType: BulletinBoardUIDisplay.controller
+- uid: GrandmaGreen.BulletinBoardUIDisplay.HandleTap
+  name: HandleTap()
+  href: api/GrandmaGreen.BulletinBoardUIDisplay.html#GrandmaGreen_BulletinBoardUIDisplay_HandleTap
+  commentId: M:GrandmaGreen.BulletinBoardUIDisplay.HandleTap
+  fullName: GrandmaGreen.BulletinBoardUIDisplay.HandleTap()
+  nameWithType: BulletinBoardUIDisplay.HandleTap()
+- uid: GrandmaGreen.BulletinBoardUIDisplay.HandleTap*
+  name: HandleTap
+  href: api/GrandmaGreen.BulletinBoardUIDisplay.html#GrandmaGreen_BulletinBoardUIDisplay_HandleTap_
+  commentId: Overload:GrandmaGreen.BulletinBoardUIDisplay.HandleTap
+  isSpec: "True"
+  fullName: GrandmaGreen.BulletinBoardUIDisplay.HandleTap
+  nameWithType: BulletinBoardUIDisplay.HandleTap
 - uid: GrandmaGreen.BulletinBoardUIDisplay.infoListEntryTemplate
   name: infoListEntryTemplate
   href: api/GrandmaGreen.BulletinBoardUIDisplay.html#GrandmaGreen_BulletinBoardUIDisplay_infoListEntryTemplate
@@ -1059,6 +1243,12 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.BulletinBoardUIDisplay.OpenUI
   nameWithType: BulletinBoardUIDisplay.OpenUI
+- uid: GrandmaGreen.BulletinBoardUIDisplay.player
+  name: player
+  href: api/GrandmaGreen.BulletinBoardUIDisplay.html#GrandmaGreen_BulletinBoardUIDisplay_player
+  commentId: F:GrandmaGreen.BulletinBoardUIDisplay.player
+  fullName: GrandmaGreen.BulletinBoardUIDisplay.player
+  nameWithType: BulletinBoardUIDisplay.player
 - uid: GrandmaGreen.BulletinBoardUIDisplay.RegisterSubmissionBox
   name: RegisterSubmissionBox()
   href: api/GrandmaGreen.BulletinBoardUIDisplay.html#GrandmaGreen_BulletinBoardUIDisplay_RegisterSubmissionBox
@@ -1072,6 +1262,19 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.BulletinBoardUIDisplay.RegisterSubmissionBox
   nameWithType: BulletinBoardUIDisplay.RegisterSubmissionBox
+- uid: GrandmaGreen.BulletinBoardUIDisplay.ReleaseShopkeeper
+  name: ReleaseShopkeeper()
+  href: api/GrandmaGreen.BulletinBoardUIDisplay.html#GrandmaGreen_BulletinBoardUIDisplay_ReleaseShopkeeper
+  commentId: M:GrandmaGreen.BulletinBoardUIDisplay.ReleaseShopkeeper
+  fullName: GrandmaGreen.BulletinBoardUIDisplay.ReleaseShopkeeper()
+  nameWithType: BulletinBoardUIDisplay.ReleaseShopkeeper()
+- uid: GrandmaGreen.BulletinBoardUIDisplay.ReleaseShopkeeper*
+  name: ReleaseShopkeeper
+  href: api/GrandmaGreen.BulletinBoardUIDisplay.html#GrandmaGreen_BulletinBoardUIDisplay_ReleaseShopkeeper_
+  commentId: Overload:GrandmaGreen.BulletinBoardUIDisplay.ReleaseShopkeeper
+  isSpec: "True"
+  fullName: GrandmaGreen.BulletinBoardUIDisplay.ReleaseShopkeeper
+  nameWithType: BulletinBoardUIDisplay.ReleaseShopkeeper
 - uid: GrandmaGreen.BulletinBoardUIDisplay.SetItemSource
   name: SetItemSource()
   href: api/GrandmaGreen.BulletinBoardUIDisplay.html#GrandmaGreen_BulletinBoardUIDisplay_SetItemSource
@@ -1098,6 +1301,19 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.BulletinBoardUIDisplay.Start
   nameWithType: BulletinBoardUIDisplay.Start
+- uid: GrandmaGreen.BulletinBoardUIDisplay.ToggleMenu(System.Boolean)
+  name: ToggleMenu(Boolean)
+  href: api/GrandmaGreen.BulletinBoardUIDisplay.html#GrandmaGreen_BulletinBoardUIDisplay_ToggleMenu_System_Boolean_
+  commentId: M:GrandmaGreen.BulletinBoardUIDisplay.ToggleMenu(System.Boolean)
+  fullName: GrandmaGreen.BulletinBoardUIDisplay.ToggleMenu(System.Boolean)
+  nameWithType: BulletinBoardUIDisplay.ToggleMenu(Boolean)
+- uid: GrandmaGreen.BulletinBoardUIDisplay.ToggleMenu*
+  name: ToggleMenu
+  href: api/GrandmaGreen.BulletinBoardUIDisplay.html#GrandmaGreen_BulletinBoardUIDisplay_ToggleMenu_
+  commentId: Overload:GrandmaGreen.BulletinBoardUIDisplay.ToggleMenu
+  isSpec: "True"
+  fullName: GrandmaGreen.BulletinBoardUIDisplay.ToggleMenu
+  nameWithType: BulletinBoardUIDisplay.ToggleMenu
 - uid: GrandmaGreen.CameraZoom
   name: CameraZoom
   href: api/GrandmaGreen.CameraZoom.html
@@ -1441,6 +1657,38 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Collections.CollectionsSO.GenerateCollections
   nameWithType: CollectionsSO.GenerateCollections
+- uid: GrandmaGreen.Collections.CollectionsSO.GetCachedSingleSprite(System.String,Sprite@)
+  name: GetCachedSingleSprite(String, out Sprite)
+  href: api/GrandmaGreen.Collections.CollectionsSO.html#GrandmaGreen_Collections_CollectionsSO_GetCachedSingleSprite_System_String_Sprite__
+  commentId: M:GrandmaGreen.Collections.CollectionsSO.GetCachedSingleSprite(System.String,Sprite@)
+  name.vb: GetCachedSingleSprite(String, ByRef Sprite)
+  fullName: GrandmaGreen.Collections.CollectionsSO.GetCachedSingleSprite(System.String, out Sprite)
+  fullName.vb: GrandmaGreen.Collections.CollectionsSO.GetCachedSingleSprite(System.String, ByRef Sprite)
+  nameWithType: CollectionsSO.GetCachedSingleSprite(String, out Sprite)
+  nameWithType.vb: CollectionsSO.GetCachedSingleSprite(String, ByRef Sprite)
+- uid: GrandmaGreen.Collections.CollectionsSO.GetCachedSingleSprite*
+  name: GetCachedSingleSprite
+  href: api/GrandmaGreen.Collections.CollectionsSO.html#GrandmaGreen_Collections_CollectionsSO_GetCachedSingleSprite_
+  commentId: Overload:GrandmaGreen.Collections.CollectionsSO.GetCachedSingleSprite
+  isSpec: "True"
+  fullName: GrandmaGreen.Collections.CollectionsSO.GetCachedSingleSprite
+  nameWithType: CollectionsSO.GetCachedSingleSprite
+- uid: GrandmaGreen.Collections.CollectionsSO.GetCachedSpriteSheet(System.String,Sprite[]@)
+  name: GetCachedSpriteSheet(String, out Sprite[])
+  href: api/GrandmaGreen.Collections.CollectionsSO.html#GrandmaGreen_Collections_CollectionsSO_GetCachedSpriteSheet_System_String_Sprite____
+  commentId: M:GrandmaGreen.Collections.CollectionsSO.GetCachedSpriteSheet(System.String,Sprite[]@)
+  name.vb: GetCachedSpriteSheet(String, ByRef Sprite())
+  fullName: GrandmaGreen.Collections.CollectionsSO.GetCachedSpriteSheet(System.String, out Sprite[])
+  fullName.vb: GrandmaGreen.Collections.CollectionsSO.GetCachedSpriteSheet(System.String, ByRef Sprite())
+  nameWithType: CollectionsSO.GetCachedSpriteSheet(String, out Sprite[])
+  nameWithType.vb: CollectionsSO.GetCachedSpriteSheet(String, ByRef Sprite())
+- uid: GrandmaGreen.Collections.CollectionsSO.GetCachedSpriteSheet*
+  name: GetCachedSpriteSheet
+  href: api/GrandmaGreen.Collections.CollectionsSO.html#GrandmaGreen_Collections_CollectionsSO_GetCachedSpriteSheet_
+  commentId: Overload:GrandmaGreen.Collections.CollectionsSO.GetCachedSpriteSheet
+  isSpec: "True"
+  fullName: GrandmaGreen.Collections.CollectionsSO.GetCachedSpriteSheet
+  nameWithType: CollectionsSO.GetCachedSpriteSheet
 - uid: GrandmaGreen.Collections.CollectionsSO.GetFruitFruit(GrandmaGreen.Collections.PlantId,Genotype,System.Int32)
   name: GetFruitFruit(PlantId, Genotype, Int32)
   href: api/GrandmaGreen.Collections.CollectionsSO.html#GrandmaGreen_Collections_CollectionsSO_GetFruitFruit_GrandmaGreen_Collections_PlantId_Genotype_System_Int32_
@@ -1655,6 +1903,18 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Collections.CollectionsSO.PlantToGolem
   nameWithType: CollectionsSO.PlantToGolem
+- uid: GrandmaGreen.Collections.CollectionsSO.SingleSpriteCache
+  name: SingleSpriteCache
+  href: api/GrandmaGreen.Collections.CollectionsSO.html#GrandmaGreen_Collections_CollectionsSO_SingleSpriteCache
+  commentId: F:GrandmaGreen.Collections.CollectionsSO.SingleSpriteCache
+  fullName: GrandmaGreen.Collections.CollectionsSO.SingleSpriteCache
+  nameWithType: CollectionsSO.SingleSpriteCache
+- uid: GrandmaGreen.Collections.CollectionsSO.SpriteSheetCache
+  name: SpriteSheetCache
+  href: api/GrandmaGreen.Collections.CollectionsSO.html#GrandmaGreen_Collections_CollectionsSO_SpriteSheetCache
+  commentId: F:GrandmaGreen.Collections.CollectionsSO.SpriteSheetCache
+  fullName: GrandmaGreen.Collections.CollectionsSO.SpriteSheetCache
+  nameWithType: CollectionsSO.SpriteSheetCache
 - uid: GrandmaGreen.Collections.CollectionsSO.UnloadCollections
   name: UnloadCollections()
   href: api/GrandmaGreen.Collections.CollectionsSO.html#GrandmaGreen_Collections_CollectionsSO_UnloadCollections
@@ -5416,6 +5676,12 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Entities.GolemManager.SaveGolemData
   nameWithType: GolemManager.SaveGolemData
+- uid: GrandmaGreen.Entities.GolemManager.tiles
+  name: tiles
+  href: api/GrandmaGreen.Entities.GolemManager.html#GrandmaGreen_Entities_GolemManager_tiles
+  commentId: F:GrandmaGreen.Entities.GolemManager.tiles
+  fullName: GrandmaGreen.Entities.GolemManager.tiles
+  nameWithType: GolemManager.tiles
 - uid: GrandmaGreen.Entities.GolemManager.TriggerDeleteData
   name: TriggerDeleteData()
   href: api/GrandmaGreen.Entities.GolemManager.html#GrandmaGreen_Entities_GolemManager_TriggerDeleteData
@@ -5467,6 +5733,12 @@ references:
   commentId: F:GrandmaGreen.Entities.GolemState.assignedCell
   fullName: GrandmaGreen.Entities.GolemState.assignedCell
   nameWithType: GolemState.assignedCell
+- uid: GrandmaGreen.Entities.GolemState.assignedCellInWorldSpace
+  name: assignedCellInWorldSpace
+  href: api/GrandmaGreen.Entities.GolemState.html#GrandmaGreen_Entities_GolemState_assignedCellInWorldSpace
+  commentId: F:GrandmaGreen.Entities.GolemState.assignedCellInWorldSpace
+  fullName: GrandmaGreen.Entities.GolemState.assignedCellInWorldSpace
+  nameWithType: GolemState.assignedCellInWorldSpace
 - uid: GrandmaGreen.Entities.GolemState.assignedWatering
   name: assignedWatering
   href: api/GrandmaGreen.Entities.GolemState.html#GrandmaGreen_Entities_GolemState_assignedWatering
@@ -6279,6 +6551,128 @@ references:
   commentId: F:GrandmaGreen.EventManager.instance
   fullName: GrandmaGreen.EventManager.instance
   nameWithType: EventManager.instance
+- uid: GrandmaGreen.GameAchivement
+  name: GameAchivement
+  href: api/GrandmaGreen.GameAchivement.html
+  commentId: T:GrandmaGreen.GameAchivement
+  fullName: GrandmaGreen.GameAchivement
+  nameWithType: GameAchivement
+- uid: GrandmaGreen.GameAchivement.AddProgression(System.Int32)
+  name: AddProgression(Int32)
+  href: api/GrandmaGreen.GameAchivement.html#GrandmaGreen_GameAchivement_AddProgression_System_Int32_
+  commentId: M:GrandmaGreen.GameAchivement.AddProgression(System.Int32)
+  fullName: GrandmaGreen.GameAchivement.AddProgression(System.Int32)
+  nameWithType: GameAchivement.AddProgression(Int32)
+- uid: GrandmaGreen.GameAchivement.AddProgression*
+  name: AddProgression
+  href: api/GrandmaGreen.GameAchivement.html#GrandmaGreen_GameAchivement_AddProgression_
+  commentId: Overload:GrandmaGreen.GameAchivement.AddProgression
+  isSpec: "True"
+  fullName: GrandmaGreen.GameAchivement.AddProgression
+  nameWithType: GameAchivement.AddProgression
+- uid: GrandmaGreen.GameAchivement.completed
+  name: completed
+  href: api/GrandmaGreen.GameAchivement.html#GrandmaGreen_GameAchivement_completed
+  commentId: P:GrandmaGreen.GameAchivement.completed
+  fullName: GrandmaGreen.GameAchivement.completed
+  nameWithType: GameAchivement.completed
+- uid: GrandmaGreen.GameAchivement.completed*
+  name: completed
+  href: api/GrandmaGreen.GameAchivement.html#GrandmaGreen_GameAchivement_completed_
+  commentId: Overload:GrandmaGreen.GameAchivement.completed
+  isSpec: "True"
+  fullName: GrandmaGreen.GameAchivement.completed
+  nameWithType: GameAchivement.completed
+- uid: GrandmaGreen.GameAchivement.DeregisterRequirement
+  name: DeregisterRequirement()
+  href: api/GrandmaGreen.GameAchivement.html#GrandmaGreen_GameAchivement_DeregisterRequirement
+  commentId: M:GrandmaGreen.GameAchivement.DeregisterRequirement
+  fullName: GrandmaGreen.GameAchivement.DeregisterRequirement()
+  nameWithType: GameAchivement.DeregisterRequirement()
+- uid: GrandmaGreen.GameAchivement.DeregisterRequirement*
+  name: DeregisterRequirement
+  href: api/GrandmaGreen.GameAchivement.html#GrandmaGreen_GameAchivement_DeregisterRequirement_
+  commentId: Overload:GrandmaGreen.GameAchivement.DeregisterRequirement
+  isSpec: "True"
+  fullName: GrandmaGreen.GameAchivement.DeregisterRequirement
+  nameWithType: GameAchivement.DeregisterRequirement
+- uid: GrandmaGreen.GameAchivement.goalProgression
+  name: goalProgression
+  href: api/GrandmaGreen.GameAchivement.html#GrandmaGreen_GameAchivement_goalProgression
+  commentId: P:GrandmaGreen.GameAchivement.goalProgression
+  fullName: GrandmaGreen.GameAchivement.goalProgression
+  nameWithType: GameAchivement.goalProgression
+- uid: GrandmaGreen.GameAchivement.goalProgression*
+  name: goalProgression
+  href: api/GrandmaGreen.GameAchivement.html#GrandmaGreen_GameAchivement_goalProgression_
+  commentId: Overload:GrandmaGreen.GameAchivement.goalProgression
+  isSpec: "True"
+  fullName: GrandmaGreen.GameAchivement.goalProgression
+  nameWithType: GameAchivement.goalProgression
+- uid: GrandmaGreen.GameAchivement.index
+  name: index
+  href: api/GrandmaGreen.GameAchivement.html#GrandmaGreen_GameAchivement_index
+  commentId: F:GrandmaGreen.GameAchivement.index
+  fullName: GrandmaGreen.GameAchivement.index
+  nameWithType: GameAchivement.index
+- uid: GrandmaGreen.GameAchivement.name
+  name: name
+  href: api/GrandmaGreen.GameAchivement.html#GrandmaGreen_GameAchivement_name
+  commentId: P:GrandmaGreen.GameAchivement.name
+  fullName: GrandmaGreen.GameAchivement.name
+  nameWithType: GameAchivement.name
+- uid: GrandmaGreen.GameAchivement.name*
+  name: name
+  href: api/GrandmaGreen.GameAchivement.html#GrandmaGreen_GameAchivement_name_
+  commentId: Overload:GrandmaGreen.GameAchivement.name
+  isSpec: "True"
+  fullName: GrandmaGreen.GameAchivement.name
+  nameWithType: GameAchivement.name
+- uid: GrandmaGreen.GameAchivement.onCompletion
+  name: onCompletion
+  href: api/GrandmaGreen.GameAchivement.html#GrandmaGreen_GameAchivement_onCompletion
+  commentId: F:GrandmaGreen.GameAchivement.onCompletion
+  fullName: GrandmaGreen.GameAchivement.onCompletion
+  nameWithType: GameAchivement.onCompletion
+- uid: GrandmaGreen.GameAchivement.progression
+  name: progression
+  href: api/GrandmaGreen.GameAchivement.html#GrandmaGreen_GameAchivement_progression
+  commentId: P:GrandmaGreen.GameAchivement.progression
+  fullName: GrandmaGreen.GameAchivement.progression
+  nameWithType: GameAchivement.progression
+- uid: GrandmaGreen.GameAchivement.progression*
+  name: progression
+  href: api/GrandmaGreen.GameAchivement.html#GrandmaGreen_GameAchivement_progression_
+  commentId: Overload:GrandmaGreen.GameAchivement.progression
+  isSpec: "True"
+  fullName: GrandmaGreen.GameAchivement.progression
+  nameWithType: GameAchivement.progression
+- uid: GrandmaGreen.GameAchivement.RegisterRequirement
+  name: RegisterRequirement()
+  href: api/GrandmaGreen.GameAchivement.html#GrandmaGreen_GameAchivement_RegisterRequirement
+  commentId: M:GrandmaGreen.GameAchivement.RegisterRequirement
+  fullName: GrandmaGreen.GameAchivement.RegisterRequirement()
+  nameWithType: GameAchivement.RegisterRequirement()
+- uid: GrandmaGreen.GameAchivement.RegisterRequirement*
+  name: RegisterRequirement
+  href: api/GrandmaGreen.GameAchivement.html#GrandmaGreen_GameAchivement_RegisterRequirement_
+  commentId: Overload:GrandmaGreen.GameAchivement.RegisterRequirement
+  isSpec: "True"
+  fullName: GrandmaGreen.GameAchivement.RegisterRequirement
+  nameWithType: GameAchivement.RegisterRequirement
+- uid: GrandmaGreen.GameAchivement.SetProgression(System.Int32)
+  name: SetProgression(Int32)
+  href: api/GrandmaGreen.GameAchivement.html#GrandmaGreen_GameAchivement_SetProgression_System_Int32_
+  commentId: M:GrandmaGreen.GameAchivement.SetProgression(System.Int32)
+  fullName: GrandmaGreen.GameAchivement.SetProgression(System.Int32)
+  nameWithType: GameAchivement.SetProgression(Int32)
+- uid: GrandmaGreen.GameAchivement.SetProgression*
+  name: SetProgression
+  href: api/GrandmaGreen.GameAchivement.html#GrandmaGreen_GameAchivement_SetProgression_
+  commentId: Overload:GrandmaGreen.GameAchivement.SetProgression
+  isSpec: "True"
+  fullName: GrandmaGreen.GameAchivement.SetProgression
+  nameWithType: GameAchivement.SetProgression
 - uid: GrandmaGreen.GamePortalTile
   name: GamePortalTile
   href: api/GrandmaGreen.GamePortalTile.html
@@ -11410,6 +11804,38 @@ references:
   commentId: F:GrandmaGreen.SlideshowData.title
   fullName: GrandmaGreen.SlideshowData.title
   nameWithType: SlideshowData.title
+- uid: GrandmaGreen.SpendMoneyRequirement
+  name: SpendMoneyRequirement
+  href: api/GrandmaGreen.SpendMoneyRequirement.html
+  commentId: T:GrandmaGreen.SpendMoneyRequirement
+  fullName: GrandmaGreen.SpendMoneyRequirement
+  nameWithType: SpendMoneyRequirement
+- uid: GrandmaGreen.SpendMoneyRequirement.ReleaseAchivementRequirement
+  name: ReleaseAchivementRequirement()
+  href: api/GrandmaGreen.SpendMoneyRequirement.html#GrandmaGreen_SpendMoneyRequirement_ReleaseAchivementRequirement
+  commentId: M:GrandmaGreen.SpendMoneyRequirement.ReleaseAchivementRequirement
+  fullName: GrandmaGreen.SpendMoneyRequirement.ReleaseAchivementRequirement()
+  nameWithType: SpendMoneyRequirement.ReleaseAchivementRequirement()
+- uid: GrandmaGreen.SpendMoneyRequirement.ReleaseAchivementRequirement*
+  name: ReleaseAchivementRequirement
+  href: api/GrandmaGreen.SpendMoneyRequirement.html#GrandmaGreen_SpendMoneyRequirement_ReleaseAchivementRequirement_
+  commentId: Overload:GrandmaGreen.SpendMoneyRequirement.ReleaseAchivementRequirement
+  isSpec: "True"
+  fullName: GrandmaGreen.SpendMoneyRequirement.ReleaseAchivementRequirement
+  nameWithType: SpendMoneyRequirement.ReleaseAchivementRequirement
+- uid: GrandmaGreen.SpendMoneyRequirement.SetupAchivementRequirement
+  name: SetupAchivementRequirement()
+  href: api/GrandmaGreen.SpendMoneyRequirement.html#GrandmaGreen_SpendMoneyRequirement_SetupAchivementRequirement
+  commentId: M:GrandmaGreen.SpendMoneyRequirement.SetupAchivementRequirement
+  fullName: GrandmaGreen.SpendMoneyRequirement.SetupAchivementRequirement()
+  nameWithType: SpendMoneyRequirement.SetupAchivementRequirement()
+- uid: GrandmaGreen.SpendMoneyRequirement.SetupAchivementRequirement*
+  name: SetupAchivementRequirement
+  href: api/GrandmaGreen.SpendMoneyRequirement.html#GrandmaGreen_SpendMoneyRequirement_SetupAchivementRequirement_
+  commentId: Overload:GrandmaGreen.SpendMoneyRequirement.SetupAchivementRequirement
+  isSpec: "True"
+  fullName: GrandmaGreen.SpendMoneyRequirement.SetupAchivementRequirement
+  nameWithType: SpendMoneyRequirement.SetupAchivementRequirement
 - uid: GrandmaGreen.StartScreenUIDisplay
   name: StartScreenUIDisplay
   href: api/GrandmaGreen.StartScreenUIDisplay.html

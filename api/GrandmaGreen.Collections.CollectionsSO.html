@@ -241,6 +241,54 @@
       </tr>
     </tbody>
   </table>
+  
+  
+  <h4 id="GrandmaGreen_Collections_CollectionsSO_SingleSpriteCache" data-uid="GrandmaGreen.Collections.CollectionsSO.SingleSpriteCache">SingleSpriteCache</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Dictionary&lt;string, Sprite&gt; SingleSpriteCache</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>, <span class="xref">Sprite</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="GrandmaGreen_Collections_CollectionsSO_SpriteSheetCache" data-uid="GrandmaGreen.Collections.CollectionsSO.SpriteSheetCache">SpriteSheetCache</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Dictionary&lt;string, Sprite[]&gt; SpriteSheetCache</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>, <span class="xref">Sprite</span>[]&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
   </h3>
   
@@ -263,6 +311,104 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void GenerateCollections()</code></pre>
   </div>
+  
+  
+  <a id="GrandmaGreen_Collections_CollectionsSO_GetCachedSingleSprite_" data-uid="GrandmaGreen.Collections.CollectionsSO.GetCachedSingleSprite*"></a>
+  <h4 id="GrandmaGreen_Collections_CollectionsSO_GetCachedSingleSprite_System_String_Sprite__" data-uid="GrandmaGreen.Collections.CollectionsSO.GetCachedSingleSprite(System.String,Sprite@)">GetCachedSingleSprite(String, out Sprite)</h4>
+  <div class="markdown level1 summary"><p>Returns true if the given path exists in the Sprite Cache dictionary. If true, sets outSprite as the single sprite.
+If false, sets outSprite using Resources.Load and saves to the cache dictionary for single sprites</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool GetCachedSingleSprite(string path, out Sprite outSprite)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">path</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Sprite</span></td>
+        <td><span class="parametername">outSprite</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="GrandmaGreen_Collections_CollectionsSO_GetCachedSpriteSheet_" data-uid="GrandmaGreen.Collections.CollectionsSO.GetCachedSpriteSheet*"></a>
+  <h4 id="GrandmaGreen_Collections_CollectionsSO_GetCachedSpriteSheet_System_String_Sprite____" data-uid="GrandmaGreen.Collections.CollectionsSO.GetCachedSpriteSheet(System.String,Sprite[]@)">GetCachedSpriteSheet(String, out Sprite[])</h4>
+  <div class="markdown level1 summary"><p>Returns true if the given path exists in the Sprite Sheet Cache dictionary. If true, sets outSheet as the sprite sheet.
+If false, sets outSheet using Resources.Load and saves to the cache dictionary for sprite sheets</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool GetCachedSpriteSheet(string path, out Sprite[] outSheet)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">path</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Sprite</span>[]</td>
+        <td><span class="parametername">outSheet</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="GrandmaGreen_Collections_CollectionsSO_GetFruitFruit_" data-uid="GrandmaGreen.Collections.CollectionsSO.GetFruitFruit*"></a>

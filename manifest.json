@@ -192,6 +192,42 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/GrandmaGreen.AchivementDataStore.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GrandmaGreen.AchivementDataStore.html",
+          "hash": "7GRLCn47sLrBN5IDkypxAk/XtmrLBVGFXGjl4vOOqnc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GrandmaGreen.AchivementRequirement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GrandmaGreen.AchivementRequirement.html",
+          "hash": "hEdP02y7CEdak7LWeU+nSGhdVcpY8C5KmhkYUuJrMcE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GrandmaGreen.AchivementState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GrandmaGreen.AchivementState.html",
+          "hash": "6PFpAyC7lBWbmkCvX4lK1tUktAiYhYMkel4fE2z2O3Q="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/GrandmaGreen.AreaController.yml",
       "output": {
         ".html": {
@@ -304,7 +340,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.BulletinBoardUIDisplay.html",
-          "hash": "3Hth40hjgMHEi39tazcjysCtkYTkCb3WW5tcUpXlkew="
+          "hash": "IAoHqXbVHDOrFvGXUFXuIxQynOR5RYGrbGg4RjCsDck="
         }
       },
       "is_incremental": false,
@@ -388,7 +424,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.Collections.CollectionsSO.html",
-          "hash": "hCktXVEzsVAwMyszp+QUkRKOeLOAKtW2HHc8nndy/q0="
+          "hash": "rMa6A/AWd6Xn9tspM8WaIDXU7z4gPgAk8RwUlLd14IA="
         }
       },
       "is_incremental": false,
@@ -916,7 +952,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.Entities.GolemManager.html",
-          "hash": "A00vaGicr0A7B+i96XFZgvRJlL4G8Ol4ToCJUlI6sBY="
+          "hash": "on4p50xxhV7cDrMzhNEgwy9k9T7XWpvsd1JjuL//O5M="
         }
       },
       "is_incremental": false,
@@ -928,7 +964,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.Entities.GolemState.html",
-          "hash": "urAA6GzbZuoMaDXr6CflgEIrlBHnARpOtgpkLF2Erbo="
+          "hash": "BGUPcFohy0BeijEqKI3c/fbwWxcr6m04jd5cwxPJE8E="
         }
       },
       "is_incremental": false,
@@ -989,6 +1025,18 @@
         ".html": {
           "relative_path": "api/GrandmaGreen.EventManager.html",
           "hash": "3+ELBzdiLWeb2OzPJ6xtaAZhIt8t1ha5C5JQdrHrW4g="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GrandmaGreen.GameAchivement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GrandmaGreen.GameAchivement.html",
+          "hash": "JxC8OhDoGElt9s4fLtlPir5fU4++gJKm5R/ac8hqgC8="
         }
       },
       "is_incremental": false,
@@ -1624,7 +1672,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.SaveSystem.ObjectSaver.html",
-          "hash": "ntfuhCjY9qYk25Y7FU7otWiKutXRbKrpqPeuzlo5VSA="
+          "hash": "54XTCLM++5Ub3+VDoczFPcU10j/YwqFVZWZQG5UFqrI="
         }
       },
       "is_incremental": false,
@@ -1817,6 +1865,18 @@
         ".html": {
           "relative_path": "api/GrandmaGreen.SlideshowData.html",
           "hash": "/wQi959lxdKgEjnzRmQlabdzm+5tOlRE/jrJNeuHxFM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GrandmaGreen.SpendMoneyRequirement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GrandmaGreen.SpendMoneyRequirement.html",
+          "hash": "zH15iV5AgoMur7MCEEFwyCfNLCmIqAKH8gZx5Bemw7Q="
         }
       },
       "is_incremental": false,
@@ -2296,7 +2356,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.html",
-          "hash": "H4WkZljdJ5B+YLZYviCqdJMfPed+U+UeuZF8zQaUiyM="
+          "hash": "EhtNpTvhGDo6yGhrjfsU/eHDOdHIoglNtXYEEy7zZQQ="
         }
       },
       "is_incremental": false,
@@ -2308,7 +2368,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "LQcvvhZez8EooOBIW3aNKYJCF5FZAORnTkntC5493qM="
+          "hash": "UWCsee7/yuvgAx7UYTdJbSzu1Kvv/UdPaPctE0p9aww="
         }
       },
       "is_incremental": false,
@@ -2417,7 +2477,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 190,
+          "total_file_count": 195,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
