@@ -54,6 +54,7 @@ namespace GrandmaGreen.Entities
         public System.Action onEntityPathStopped;
 
         SoundPlayer footstepsSoundPlayer;
+        Coroutine footstepsLoops;
         void Awake()
         {
             controller.RegisterEntity(this);
@@ -92,6 +93,7 @@ namespace GrandmaGreen.Entities
         protected virtual void OnDisable()
         {
             controller.PauseController();
+            StopCoroutine(FootstepsSFXLoop());
             footstepsSoundPlayer?.Stop();
         }
 
@@ -115,12 +117,12 @@ namespace GrandmaGreen.Entities
 
         void MovingEnter()
         {
-            footstepsSoundPlayer = footsteps.Play();
+            footstepsLoops = StartCoroutine(FootstepsSFXLoop());
         }
 
         void MovingExit()
         {
-            footstepsSoundPlayer.Stop();
+
         }
 
         void MovingLogic()
@@ -284,6 +286,20 @@ namespace GrandmaGreen.Entities
         public virtual Vector3 CurrentPos()
         {
             return transform.position;
+        }
+
+
+        IEnumerator FootstepsSFXLoop()
+        {
+            while (entityStateMachine.activeState == EntityState.MovingTo)
+            {
+                if (footstepsSoundPlayer?.IsPlaying != true)
+                    footstepsSoundPlayer = footsteps.Play();
+
+                yield return null;
+            }
+
+            footstepsSoundPlayer?.Stop();
         }
     }
 }

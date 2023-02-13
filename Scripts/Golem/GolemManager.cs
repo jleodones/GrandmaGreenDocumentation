@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Splines;
+using UnityEngine.Tilemaps;
 using Pathfinding;
 using Core.RNG;
 using GrandmaGreen.Collections;
@@ -35,6 +36,9 @@ namespace GrandmaGreen.Entities
 
         [JsonIgnore]
         public GolemState[] golemStateTable;
+
+        [JsonIgnore]
+        public Tilemap tiles;
 
         public bool IsSpawnDemoGolem = true;
         
@@ -161,6 +165,10 @@ namespace GrandmaGreen.Entities
             }
 
             golemStateTable[index].assignedCell = cell;
+            Vector3 cellInWorldSpace = tiles.CellToWorld(cell);
+            float[] worldSpaceArray = new float[] {cellInWorldSpace.x, cellInWorldSpace.y, cellInWorldSpace.z};
+
+            golemStateTable[index].assignedCellInWorldSpace = worldSpaceArray;
         }
 
         public void OnDestroy() {

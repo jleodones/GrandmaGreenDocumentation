@@ -274,7 +274,7 @@ namespace GrandmaGreen
             for (int i = 0; i < hintPositions.Length; i++)
             {
 
-                while ((playerEntity.transform.position - hintPositions[i].position).magnitude > 2.5f)
+                while ((playerEntity.transform.position - hintPositions[i].position).magnitude > 2.0f)
                     yield return null;
 
                 if (i < hintPositions.Length - 1)

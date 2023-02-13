@@ -174,9 +174,11 @@ namespace GrandmaGreen.Entities
                                 {
                                     if (!inBound)
                                     {
-                                        Vector3 pos = golemManager.golemStateTable[(int)id - 5000].assignedCell;
+                                        Vector3 pos = new Vector3(golemManager.golemStateTable[(int)id - 5000].assignedCellInWorldSpace[0], 
+                                            golemManager.golemStateTable[(int)id - 5000].assignedCellInWorldSpace[1], 
+                                            golemManager.golemStateTable[(int)id - 5000].assignedCellInWorldSpace[2]);
                                         SetDestination(pos);
-                                        if ((pos - transform.position).magnitude < 1f)
+                                        if (!splineFollow.isFollowing)
                                         {
                                             return Action.Result.SUCCESS;
                                         }
@@ -292,13 +294,16 @@ namespace GrandmaGreen.Entities
         public void UpdateTaskState(int happinessValue)
         {
             if(golemManager.golemStateTable[offsetId(id)].assignedWatering)
-            {       
-                m_isDoingTask = !m_isDoingTask;
-                behaviorTree.Blackboard.Set("isDoingTask", m_isDoingTask);
-                Debug.Log("Task state assigned:" + m_isDoingTask);
-                if(!m_isDoingTask){
-                    EventManager.instance.HandleEVENT_WATER_PLANT(golemManager.golemStateTable[offsetId(id)].assignedCell);
-                    EventManager.instance.HandleEVENT_GOLEM_HAPPINESS_UPDATE((ushort)id, happinessValue);
+            {
+                if (!m_isDoingTask || !splineFollow.isFollowing)
+                {
+                    m_isDoingTask = !m_isDoingTask;
+                    behaviorTree.Blackboard.Set("isDoingTask", m_isDoingTask);
+                    Debug.Log("Task state assigned:" + m_isDoingTask);
+                    if(!m_isDoingTask){
+                        EventManager.instance.HandleEVENT_WATER_PLANT(golemManager.golemStateTable[offsetId(id)].assignedCell);
+                        EventManager.instance.HandleEVENT_GOLEM_HAPPINESS_UPDATE((ushort)id, happinessValue);
+                    }
                 }
             } else
             {

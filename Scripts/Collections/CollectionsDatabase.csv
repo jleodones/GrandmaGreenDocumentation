@@ -1,275 +1,275 @@
 Inventory,,,,,,,,,
-
+,,,,,,,,,
 Item ID,Item type,Item Name,Item Description,Aesthetic tag (decor only),Base Cost,Seed Description,Plant Decor Type,Growth Time,Base Gold Per Time Unit
-
+,,,,,,,,,
 1,Tool,Trowel,desc,,100,,,,
-
+,,,,,,,,,
 2,Tool,Watering Can,,,100,,,,
-
+,,,,,,,,,
 3,Tool,Seed Packet,,,100,,,,
-
+,,,,,,,,,
 4,Tool,Upgraded Trowel,,,100,,,,
-
+,,,,,,,,,
 5,Tool,Upgraded Watering Can,,,100,,,,
-
+,,,,,,,,,
 6,Tool,Fertilizer,,,100,,,,
-
+,,,,,,,,,
 1001,Plant,Rose,,,6,,Flower,6,1.2
-
+,,,,,,,,,
 1002,Plant,Tulip,,,1,,Flower,1,0.5
-
+,,,,,,,,,
 1003,Plant,Calla Lily,,,8,,Flower,7,1.6
-
+,,,,,,,,,
 1004,Plant,Dahlia,,,10,,Flower,5,2
-
+,,,,,,,,,
 1005,Plant,Hyacinth,,,2,,Flower,3,0.8
-
+,,,,,,,,,
 1006,Plant,Pansy,,,7,,Flower,4,1.8
-
+,,,,,,,,,
 1007,Plant,Crocus,,,5,,Flower,2,1.6
-
+,,,,,,,,,
 1008,Plant,Cucumber,,,1,,Vegetable,8,0.8
-
+,,,,,,,,,
 1009,Plant,Tomato,,,2,,Vegetable,8,0.8
-
-1010,Plant,Pepper,,,12,,Vegetable,8,2
-
+,,,,,,,,,
+1010,Plant,Pepper,,,12,,Vegetable,10,2
+,,,,,,,,,
 1011,Plant,Sweet Potato,,,6,,Vegetable,12,1.6
-
+,,,,,,,,,
 1012,Plant,Corn,,,7,,Vegetable,6,1.8
-
-1013,Plant,Turnip,,,8,,Vegetable,6,2.5
-
-1014,Plant,Pumpkin,,,10,,Vegetable,12,1.6
-
+,,,,,,,,,
+1013,Plant,Turnip,,,8,,Vegetable,7,2.5
+,,,,,,,,,
+1014,Plant,Pumpkin,,,10,,Vegetable,15,1.6
+,,,,,,,,,
 1015,Plant,Apple,,,5,,Fruit,18,1.2
-
+,,,,,,,,,
 1016,Plant,Pear,,,6,,Fruit,18,1.6
-
-1017,Plant,Watermelon,,,10,,Fruit,24,2.5
-
+,,,,,,,,,
+1017,Plant,Watermelon,,,10,,Fruit,30,2.5
+,,,,,,,,,
 1018,Plant,Cherry,,,2,,Fruit,15,0.8
-
+,,,,,,,,,
 1019,Plant,Plum,,,7,,Fruit,20,1.8
-
-1020,Plant,Peach,,,8,,Fruit,22,2
-
+,,,,,,,,,
+1020,Plant,Peach,,,8,,Fruit,24,2
+,,,,,,,,,
 1021,Plant,Blueberry,,,1,,Fruit,15,0.5
-
+,,,,,,,,,
 4001,Decor,Torch,,,100,,Torch,,
-
+,,,,,,,,,
 4002,Decor,Tulip Golem Memento,,,100,,Memento,,
-
+,,,,,,,,,
 4003,Decor,Apple Golem Memento,,,100,,Memento,,
-
+,,,,,,,,,
 4004,Decor,Crocus Golem Memento,,,100,,Memento,,
-
+,,,,,,,,,
 4005,Decor,Turnip Golem Memento,,,100,,Memento,,
-
+,,,,,,,,,
 4006,Decor,Pumpkin Golem Memento,,,100,,Memento,,
-
+,,,,,,,,,
 4007,Decor,Cotton Golem Memento,,,100,,Memento,,
-
+,,,,,,,,,
 4008,Decor,Camping Lantern,,,100,,Lantern,,
-
+,,,,,,,,,
 4009,Decor,Simple Hanging Lamp Post,,,100,,Lamp Post,,
-
+,,,,,,,,,
 4010,Decor,Jack-O-Lantern,,,100,,Lantern,,
-
+,,,,,,,,,
 4011,Decor,Iron Lamp Post,,,100,,Lamp Post,,
-
+,,,,,,,,,
 4012,Decor,Japanese Garden Lantern,,,100,,Lantern,,
-
+,,,,,,,,,
 4013,Decor,Mushroom Lamp,,,100,,Lamp,,
-
+,,,,,,,,,
 4014,Decor,Scarecrow,,,100,,Scarecrow,,
-
+,,,,,,,,,
 4015,Decor,Bicycle,,,100,,Bicycle,,
-
+,,,,,,,,,
 4016,Decor,Flower Wagon,,,100,,Wagon,,
-
+,,,,,,,,,
 4017,Decor,Harvest Basket,,,100,,Basket,,
-
+,,,,,,,,,
 4018,Decor,Umbrella,,,100,,Umbrella,,
-
+,,,,,,,,,
 4019,Decor,Swingset,,,100,,Swingset,,
-
+,,,,,,,,,
 4020,Decor,Leafpile,,,100,,Leafpile,,
-
+,,,,,,,,,
 4021,Decor,Potted Plant 01,,,100,,Potted Plant,,
-
+,,,,,,,,,
 4022,Decor,Potted Plant 02,,,100,,Potted Plant,,
-
+,,,,,,,,,
 4023,Decor,Potted Plant 03,,,100,,Potted Plant,,
-
+,,,,,,,,,
 4024,Decor,French Country Urn,,,100,,Urn,,
-
+,,,,,,,,,
 4025,Decor,Garden Gnome Basic,,,100,,Gnome,,
-
+,,,,,,,,,
 4026,Decor,Garden Gnome Sexy,,,100,,Gnome,,
-
+,,,,,,,,,
 4027,Decor,Garden Gnome Gold,,,100,,Gnome,,
-
+,,,,,,,,,
 4028,Decor,Frog Sculpture,,,100,,Sculpture,,
-
+,,,,,,,,,
 4029,Decor,Flamingo,,,100,,Flamingo,,
-
+,,,,,,,,,
 4030,Decor,Art Nouveau Sculpture 01,,,100,,Sculpture,,
-
+,,,,,,,,,
 4031,Decor,Art Nouveau Sculpture 02,,,100,,Sculpture,,
-
+,,,,,,,,,
 4032,Decor,Art Nouveau Sculpture 03,,,100,,Sculpture,,
-
+,,,,,,,,,
 4033,Decor,Simple Wooden Bench,,,100,,Bench,,
-
+,,,,,,,,,
 4034,Decor,Simple Wooden Chair,,,100,,Chair,,
-
+,,,,,,,,,
 4035,Decor,Stone Bench,,,100,,Bench,,
-
+,,,,,,,,,
 4036,Decor,Iron Bench,,,100,,Bench,,
-
+,,,,,,,,,
 4037,Decor,Iron Chair,,,100,,Chair,,
-
+,,,,,,,,,
 4038,Decor,Rocking Chair,,,100,,Chair,,
-
+,,,,,,,,,
 4039,Decor,Mushroom Stool,,,100,,Stool,,
-
+,,,,,,,,,
 4040,Decor,Picnic Spread,,,100,,Picnic Spread,,
-
+,,,,,,,,,
 4041,Decor,Simple Wooden Table,,,100,,Table,,
-
+,,,,,,,,,
 4042,Decor,Flower Table,,,100,,Table,,
-
+,,,,,,,,,
 4043,Decor,Iron Table,,,100,,Table,,
-
+,,,,,,,,,
 4044,Decor,Bird Bath,,,100,,Bird Bath,,
-
+,,,,,,,,,
 4045,Decor,Natural Pond,,,100,,Pond,,
-
+,,,,,,,,,
 4046,Decor,Fancy Pond,,,100,,Pond,,
-
+,,,,,,,,,
 4047,Decor,Koi Pond,,,100,,Pond,,
-
+,,,,,,,,,
 4048,Decor,Simple Fountain,,,100,,Fountain,,
-
+,,,,,,,,,
 4049,Decor,Fancy Fountain,,,100,,Fountain,,
-
+,,,,,,,,,
 4050,Decor,Magic Fountain,,,100,,Fountain,,
-
+,,,,,,,,,
 4051,Decor,Well,,,100,,Well,,
-
+,,,,,,,,,
 4052,Decor,Waterpump,,,100,,Waterpump,,
-
+,,,,,,,,,
 4053,Decor,Grecian Ruin,,,100,,Grecian Ruin,,
-
+,,,,,,,,,
 4054,Decor,Sundial,,,100,,Sundial,,
-
+,,,,,,,,,
 4055,Decor,Claude Monet Painting,,,100,,Painting,,
-
+,,,,,,,,,
 4056,Decor,John Singer Sargent Painting,,,100,,Painting,,
-
+,,,,,,,,,
 4057,Decor,Mailbox Basic,,,100,,Fixture,,
-
+,,,,,,,,,
 4058,Decor,Mailbox Cottagecore,,,100,,Fixture,,
-
+,,,,,,,,,
 4059,Decor,Mailbox Goth,,,100,,Fixture,,
-
+,,,,,,,,,
 4060,Decor,Mailbox Fairy,,,100,,Fixture,,
-
+,,,,,,,,,
 4061,Decor,Mailbox Oriental,,,100,,Fixture,,
-
+,,,,,,,,,
 4062,Decor,Mailbox Cabin,,,100,,Fixture,,
-
+,,,,,,,,,
 4063,Decor,Mailbox Pastel,,,100,,Fixture,,
-
+,,,,,,,,,
 4064,Decor,White Picket Fence,,,100,,Fixture,,
-
+,,,,,,,,,
 4065,Decor,Simple Wooden Fence,,,100,,Fixture,,
-
+,,,,,,,,,
 4066,Decor,Farm Fence,,,100,,Fixture,,
-
+,,,,,,,,,
 4067,Decor,Fancy Iron Fence,,,100,,Fixture,,
-
+,,,,,,,,,
 4068,Decor,Fieldstone Fence,,,100,,Fixture,,
-
+,,,,,,,,,
 4069,Decor,Ivy-Covered Brick Fence,,,100,,Fixture,,
-
+,,,,,,,,,
 4070,Decor,Historical English Exterior,,,100,,Fixture,,
-
+,,,,,,,,,
 4071,Decor,French Provincial Exterior,,,100,,Fixture,,
-
+,,,,,,,,,
 4072,Decor,PNW Cabin Exterior,,,100,,Fixture,,
-
+,,,,,,,,,
 4073,Decor,Traditional Japanese Exterior,,,100,,Fixture,,
-
+,,,,,,,,,
 4074,Decor,Modern Exterior,,,100,,Fixture,,
-
+,,,,,,,,,
 4075,Decor,Acorn Exterior,,,100,,Fixture,,
-
+,,,,,,,,,
 4076,Decor,Pastel Exterior,,,100,,Fixture,,
-
+,,,,,,,,,
 4077,Decor,Witchy Goth Exterior,,,100,,Fixture,,
-
+,,,,,,,,,
 4078,Decor,Fairy Magic Exterior,,,100,,Fixture,,
-
+,,,,,,,,,
 4079,Decor,European Castle Exterior,,,100,,Fixture,,
-
+,,,,,,,,,
 4080,Decor,Dirt Path,,,100,,Path,,
-
+,,,,,,,,,
 4081,Decor,Cobblestone Path,,,100,,Path,,
-
+,,,,,,,,,
 4082,Decor,Tile Path,,,100,,Path,,
-
+,,,,,,,,,
 4083,Decor,Wood Path,,,100,,Path,,
-
+,,,,,,,,,
 4084,Decor,Oak Tree,,,100,,Tree,,
-
+,,,,,,,,,
 4085,Decor,Pine Tree,,,100,,Tree,,
-
+,,,,,,,,,
 4086,Decor,Willow Tree,,,100,,Tree,,
-
+,,,,,,,,,
 4087,Decor,Palm Tree,,,100,,Tree,,
-
+,,,,,,,,,
 4088,Decor,Maple Tree,,,100,,Tree,,
-
+,,,,,,,,,
 4089,Decor,Poplar Tree,,,100,,Tree,,
-
+,,,,,,,,,
 4090,Decor,Stump Tree,,,100,,Tree,,
-
+,,,,,,,,,
 4091,Decor,Hydrangea Bush,,,100,,Bush,,
-
+,,,,,,,,,
 4092,Decor,Oleander Bush,,,100,,Bush,,
-
+,,,,,,,,,
 4093,Decor,Gardenia Bush,,,100,,Bush,,
-
+,,,,,,,,,
 4094,Decor,Boxwood Bush,,,100,,Bush,,
-
+,,,,,,,,,
 4095,Decor,Common Poppy,,,100,,Flower,,
-
+,,,,,,,,,
 4096,Decor,Forget Me Not,,,100,,Flower,,
-
+,,,,,,,,,
 4097,Decor,Wild Daisies,,,100,,Flower,,
-
+,,,,,,,,,
 4098,Decor,Dandelion,,,100,,Flower,,
-
+,,,,,,,,,
 4099,Decor,Clover,,,100,,Flower,,
-
+,,,,,,,,,
 4100,Decor,Hemlock,,,100,,Flower,,
-
+,,,,,,,,,
 5001,Character,Grandma,,,0,,,,
-
+,,,,,,,,,
 5002,Character,Gardening Shopkeeper,,,0,,,,
-
+,,,,,,,,,
 5003,Character,Decor Shopkeeper,,,0,,,,
-
+,,,,,,,,,
 5004,Character,Tulip Golem,,,0,,,,
-
+,,,,,,,,,
 5005,Character,Apple Golem,,,0,,,,
-
+,,,,,,,,,
 5006,Character,Cotton Golem,,,0,,,,
-
+,,,,,,,,,
 5007,Character,Crocus Golem,,,0,,,,
-
+,,,,,,,,,
 5008,Character,Pumpkin Golem,,,0,,,,
-
+,,,,,,,,,
 5009,Character,Turnip Golem,,,0,,,,

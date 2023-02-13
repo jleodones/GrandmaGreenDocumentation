@@ -27,7 +27,11 @@ namespace GrandmaGreen
         // TODO: Let's move this to the mailbox model later?
         public Letter contestLostLetter;
         public Letter contestWonLetter;
-        
+
+        public GameObject player;
+        private bool m_isMenuOpen = false;
+        private bool m_isInteracting = false;
+
         public void Start()
         {
             // Instantiate controller.
@@ -47,8 +51,28 @@ namespace GrandmaGreen
             RegisterSubmissionBox();
         }
 
+        private void Update()
+        {
+            if (m_isInteracting)
+            {
+                // facing to grandma
+                Vector3 playerPos = player.transform.position;
+
+                if ((playerPos - transform.position).sqrMagnitude <= 5.0f)
+                {
+                    ToggleMenu(true);
+                }
+                else
+                {
+                    ToggleMenu(false);
+                }
+            }
+        }
+
         public override void OpenUI()
         {
+            m_isMenuOpen = true;
+
             EventManager.instance.HandleEVENT_CLOSE_HUD();
             SetItemSource();
             openSFX?.Play();
@@ -57,6 +81,9 @@ namespace GrandmaGreen
 
         public override void CloseUI()
         {
+            m_isMenuOpen = false;
+            m_isInteracting = false;
+
             closeSFX?.Play();
             base.CloseUI();
 
@@ -161,6 +188,43 @@ namespace GrandmaGreen
             {
                 submissionJar.Rebuild();
             }
+        }
+
+        public void HandleTap()
+        {
+            if (!m_isMenuOpen)
+            {
+                EventManager.instance.HandleEVENT_GOLEM_GRANDMA_MOVE_TO(transform.position);
+                m_isInteracting = true;
+            }
+            else
+            {
+                ToggleMenu(false);
+                m_isInteracting = false;
+            }
+        }
+
+        public void ToggleMenu(bool isOpen)
+        {
+            if (m_isMenuOpen == isOpen) return;
+            m_isMenuOpen = isOpen;
+
+            if (m_isMenuOpen)
+            {
+                OpenUI();
+            }
+            else
+            {
+                CloseUI();
+            }
+        }
+
+        public void ReleaseShopkeeper()
+        {
+            if (!m_isInteracting) return;
+
+            m_isInteracting = false;
+            ToggleMenu(false);
         }
     }
 }

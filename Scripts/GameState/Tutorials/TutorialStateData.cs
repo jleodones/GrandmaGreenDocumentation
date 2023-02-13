@@ -151,27 +151,28 @@ namespace GrandmaGreen
                     playerToolData.onToolSelectionStart -= onToolMenuFlag.Raise;
                     gardenToolSet.onTill += onGardeningFlag.Raise;
 
-                    disableSeedPacket?.Invoke();
-                    disableWatering?.Invoke();
+                    //disableSeedPacket?.Invoke();
+                    //disableWatering?.Invoke();
 
                     break;
 
                 case 4:
-                    disableTrowel?.Invoke();
+
                     enableSeedPacket?.Invoke();
 
                     gardenToolSet.onTill -= onGardeningFlag.Raise;
                     gardenToolSet.onPlant += onGardeningFlag.Raise;
                     break;
                 case 5:
-                    disableSeedPacket?.Invoke();
-                    enableWatering?.Invoke();
+                    disableTrowel?.Invoke();
+                    //disableSeedPacket?.Invoke();
+                    //enableWatering?.Invoke();
 
                     gardenToolSet.onPlant -= onGardeningFlag.Raise;
                     gardenToolSet.onWater += onGardeningFlag.Raise;
                     break;
                 case 6:
-                    
+
 
                     gardenToolSet.onWater -= onGardeningFlag.Raise;
 

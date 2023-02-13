@@ -27,6 +27,7 @@ namespace GrandmaGreen
         [SerializeField] SaveSystem.SaveManager saveManager;
         [SerializeField] Entities.GolemManager golemManager;
         [SerializeField] Garden.PlayerToolData playerToolData;
+        [SerializeField]  AchivementDataStore achivementData;
         [SerializeField] UI.UIDisplayTracker UIdisplayRules;
         [SerializeField] SCENES currentScene;
         [SerializeField] Core.Utilities.GameEventFlag onLevelTransitionFlag;
@@ -111,6 +112,7 @@ namespace GrandmaGreen
             golemManager.Initialize();
             playerToolData.ClearTools();
             tutorialStateData.Initalize();
+            achivementData.Initalize();
 
             levelLoader.asyncLoadReq += GameSceneTransition;
 
@@ -128,7 +130,10 @@ namespace GrandmaGreen
             timeClock.SaveCurrentDateTime();
             storylineData.Release();
             golemManager.SaveGolemData();
+            achivementData.Release();
+
             saveManager.TriggerSave();
+
 
             tutorialStateData.Release();
 

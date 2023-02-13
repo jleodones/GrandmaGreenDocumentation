@@ -36,9 +36,11 @@ namespace GrandmaGreen.Collections
             collections.PlantGenotypeMasterList = new List<Seed>();
             collections.DecorList = new List<Decor>();
             collections.FixtureList = new List<Decor>();
+            collections.SpriteSheetCache = new Dictionary<string, Sprite[]>();
+            collections.SingleSpriteCache = new Dictionary<string, Sprite>();
             //collections.CharacterLookup = new Dictionary<ushort, CharacterProperties>();
             //collections.SeedLookup = new Dictionary<ushort, SeedProperties>();
-
+            
 
             //read the CSV
             for (int i = 2; i < allLines.Length; i++)

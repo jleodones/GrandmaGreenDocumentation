@@ -43,6 +43,7 @@ namespace GrandmaGreen.Entities
             golemManager.LoadGolemData();
             golemManager.golemWorkTimer.Resume(true);
             golemManager.golemWorkTimer.onTick += GolemDoAction;
+            golemManager.tiles = gardenArea.tilemap;
         }
 
         void OnDisable() {

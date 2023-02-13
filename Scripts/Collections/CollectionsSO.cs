@@ -251,6 +251,9 @@ namespace GrandmaGreen.Collections
         public List<Decor> FixtureList; //for cycle tracking purposes
         public Dictionary<ushort, PlantProperties> PlantLookup;
 
+        public Dictionary<string, Sprite> SingleSpriteCache;
+        public Dictionary<string, Sprite[]> SpriteSheetCache;
+
         public static CollectionsSO LoadedInstance;
 
         public void LoadCollections()
@@ -272,7 +275,7 @@ namespace GrandmaGreen.Collections
 
         public static bool IsFlower(PlantId id)
         {
-            return Array.Exists<PlantId>((PlantId[])Enum.GetValues(typeof(FlowerId)), element => element == id);    
+            return Array.Exists<PlantId>((PlantId[])Enum.GetValues(typeof(FlowerId)), element => element == id);
         }
 
         public static bool IsVegetable(PlantId id)
@@ -341,7 +344,10 @@ namespace GrandmaGreen.Collections
         ///</summary>
         public Sprite GetSprite(string spritePath)
         {
-            return Resources.Load(spritePath, typeof(Sprite)) as Sprite;
+            Sprite sprite;
+            GetCachedSingleSprite(spritePath, out sprite);
+            return sprite;
+            //return Resources.Load(spritePath, typeof(Sprite)) as Sprite;
         }
 
         ///<summary>
@@ -351,7 +357,9 @@ namespace GrandmaGreen.Collections
         public Sprite GetSprite(ushort id)
         {
             ItemProperties item = GetItem(id);
-            return Resources.Load(GetItem(id).spritePath, typeof(Sprite)) as Sprite;
+            Sprite sprite;
+            GetCachedSingleSprite(item.spritePath, out sprite);
+            return sprite;
         }
 
         /// <summary>
@@ -385,8 +393,9 @@ namespace GrandmaGreen.Collections
                     suffix = genotype.SpriteSuffix(type);
                     break;
             }
-
-            return Resources.Load<Sprite>(GetResourcePath(type) + suffix);
+            Sprite sprite;
+            GetCachedSingleSprite(GetResourcePath(type) + suffix, out sprite);
+            return sprite;
         }
 
         public Sprite GetInventorySprite(PlantId type, Genotype genotype)
@@ -431,7 +440,10 @@ namespace GrandmaGreen.Collections
             {
                 return GetVegetableHead(type, genotype, 2);
             }
-            Sprite[] sheet = Resources.LoadAll<Sprite>(plant.plantType.ToString() + "s/" + plant.name + "/" + plant.spriteBasePath);
+
+            //Sprite[] sheet = Resources.LoadAll<Sprite>(plant.plantType.ToString() + "s/" + plant.name + "/" + plant.spriteBasePath);
+            Sprite[] sheet;
+            GetCachedSpriteSheet(plant.plantType.ToString() + "s/" + plant.name + "/" + plant.spriteBasePath, out sheet);
             Sprite seedSprite = sheet.Single(s => s.name == plant.spriteBasePath + suffix);
             return seedSprite;
         }
@@ -446,7 +458,9 @@ namespace GrandmaGreen.Collections
         {
             if (growthStage < 2) return null;
             string spritePath = GetResourcePath(type) + "_HeadLarge";
-            return Resources.Load<Sprite>(spritePath);
+            Sprite sprite;
+            GetCachedSingleSprite(spritePath, out sprite);
+            return sprite;
         }
 
         public Sprite GetFruitTree(PlantId type, Genotype genotype, int growthStage)
@@ -454,13 +468,17 @@ namespace GrandmaGreen.Collections
             string resourceDirPath = GetResourcePath(type);
             if (growthStage < 2)
             {
-                Sprite[] sheet = Resources.LoadAll<Sprite>(resourceDirPath);
+                //Sprite[] sheet = Resources.LoadAll<Sprite>(resourceDirPath);
+                Sprite[] sheet;
+                GetCachedSpriteSheet(resourceDirPath, out sheet);
                 if (growthStage == 0) return sheet[5];
                 else if (growthStage == 1) return sheet[1];
             }
             else if (growthStage == 2)
             {
-                return Resources.Load<Sprite>(resourceDirPath + genotype.SpriteSuffix(type));
+                Sprite sprite;
+                GetCachedSingleSprite(resourceDirPath + genotype.SpriteSuffix(type), out sprite);
+                return sprite;
             }
             return null;
         }
@@ -469,7 +487,9 @@ namespace GrandmaGreen.Collections
         {
             if (growthStage < 2) return null;
             string resourceDirPath = GetResourcePath(type);
-            Sprite[] sheet = Resources.LoadAll<Sprite>(resourceDirPath);
+            //Sprite[] sheet = Resources.LoadAll<Sprite>(resourceDirPath);
+            Sprite[] sheet;
+            GetCachedSpriteSheet(resourceDirPath, out sheet);
             if (genotype.trait == Genotype.Trait.Dominant) return sheet[0];
             else if (genotype.trait == Genotype.Trait.Heterozygous) return sheet[2];
             else if (genotype.trait == Genotype.Trait.Recessive) return sheet[4];
@@ -498,11 +518,57 @@ namespace GrandmaGreen.Collections
                     suffix = isMega ? "_Dom_M" : "_Dom";
                     break;
             }
-            
-            Sprite[] sheet = Resources.LoadAll<Sprite>("Seed Packets/" + baseSpritePath);
+
+            //Sprite[] sheet = Resources.LoadAll<Sprite>("Seed Packets/" + baseSpritePath);
+            Sprite[] sheet;
+            GetCachedSpriteSheet("Seed Packets/" + baseSpritePath, out sheet);
 
             Sprite seedSprite = sheet.Single(s => s.name == baseSpritePath + suffix);
             return seedSprite;
+        }
+
+        /// <summary>
+        /// Returns true if the given path exists in the Sprite Cache dictionary. If true, sets outSprite as the single sprite.
+        /// If false, sets outSprite using Resources.Load and saves to the cache dictionary for single sprites
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="outSprite"></param>
+        /// <returns></returns>
+        public bool GetCachedSingleSprite(string path, out Sprite outSprite)
+        {
+            if (SingleSpriteCache.ContainsKey(path))
+            {
+                outSprite = SingleSpriteCache[path];
+                return true;
+            }
+            else
+            {
+                outSprite = Resources.Load<Sprite>(path);
+                SingleSpriteCache.Add(path, outSprite);
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Returns true if the given path exists in the Sprite Sheet Cache dictionary. If true, sets outSheet as the sprite sheet.
+        /// If false, sets outSheet using Resources.Load and saves to the cache dictionary for sprite sheets
+        /// </summary>
+        /// <param name="path"></param>
+        /// <param name="outSheet"></param>
+        /// <returns></returns>
+        public bool GetCachedSpriteSheet(string path, out Sprite[] outSheet)
+        {
+            if (SpriteSheetCache.ContainsKey(path))
+            {
+                outSheet = SpriteSheetCache[path];
+                return true;
+            }
+            else
+            {
+                outSheet = Resources.LoadAll<Sprite>(path);
+                SpriteSheetCache.Add(path, outSheet);
+                return false;
+            }
         }
 
         // temporary hard-coded plant properties
@@ -516,35 +582,35 @@ namespace GrandmaGreen.Collections
             roseProp.waterPerStage = 1;
 
             PlantLookup[(ushort)PlantId.Rose] = roseProp;
-            
+
             PlantProperties tulipProp = PlantLookup[(ushort)PlantId.Tulip];
             tulipProp.growthStages = 3;
             tulipProp.growthTime = 10;
             tulipProp.waterPerStage = 2;
 
             PlantLookup[(ushort)PlantId.Tulip] = tulipProp;
-            
+
             PlantProperties callalily = PlantLookup[(ushort)PlantId.CallaLily];
             callalily.growthStages = 3;
             callalily.growthTime = 10;
             callalily.waterPerStage = 1;
 
             PlantLookup[(ushort)PlantId.CallaLily] = callalily;
-            
+
             PlantProperties dahlia = PlantLookup[(ushort)PlantId.Dahlia];
             dahlia.growthStages = 3;
             dahlia.growthTime = 10;
             dahlia.waterPerStage = 1;
 
             PlantLookup[(ushort)PlantId.Dahlia] = dahlia;
-            
+
             PlantProperties hyacinth = PlantLookup[(ushort)PlantId.Hyacinth];
             hyacinth.growthStages = 3;
             hyacinth.growthTime = 10;
             hyacinth.waterPerStage = 1;
 
             PlantLookup[(ushort)PlantId.Hyacinth] = hyacinth;
-            
+
             PlantProperties pansy = PlantLookup[(ushort)PlantId.Pansy];
             pansy.growthStages = 3;
             pansy.growthTime = 10;

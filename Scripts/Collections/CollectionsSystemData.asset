@@ -60,7 +60,10 @@ MonoBehaviour:
       Entry: 3
       Data: 100
     - Name: tag
-      Entry: 6
+      Entry: 1
+      Data: 
+    - Name: decorType
+      Entry: 1
       Data: 
     - Name: 
       Entry: 8
@@ -93,7 +96,10 @@ MonoBehaviour:
       Entry: 3
       Data: 100
     - Name: tag
-      Entry: 6
+      Entry: 1
+      Data: 
+    - Name: decorType
+      Entry: 1
       Data: 
     - Name: 
       Entry: 8
@@ -126,7 +132,10 @@ MonoBehaviour:
       Entry: 3
       Data: 100
     - Name: tag
-      Entry: 6
+      Entry: 1
+      Data: 
+    - Name: decorType
+      Entry: 1
       Data: 
     - Name: 
       Entry: 8
@@ -159,7 +168,10 @@ MonoBehaviour:
       Entry: 3
       Data: 100
     - Name: tag
-      Entry: 6
+      Entry: 1
+      Data: 
+    - Name: decorType
+      Entry: 1
       Data: 
     - Name: 
       Entry: 8
@@ -192,7 +204,10 @@ MonoBehaviour:
       Entry: 3
       Data: 100
     - Name: tag
-      Entry: 6
+      Entry: 1
+      Data: 
+    - Name: decorType
+      Entry: 1
       Data: 
     - Name: 
       Entry: 8
@@ -225,7 +240,10 @@ MonoBehaviour:
       Entry: 3
       Data: 100
     - Name: tag
-      Entry: 6
+      Entry: 1
+      Data: 
+    - Name: decorType
+      Entry: 1
       Data: 
     - Name: 
       Entry: 8
@@ -258,8 +276,11 @@ MonoBehaviour:
       Entry: 3
       Data: 6
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Flower
     - Name: 
       Entry: 8
       Data: 
@@ -291,8 +312,11 @@ MonoBehaviour:
       Entry: 3
       Data: 1
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Flower
     - Name: 
       Entry: 8
       Data: 
@@ -324,8 +348,11 @@ MonoBehaviour:
       Entry: 3
       Data: 8
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Flower
     - Name: 
       Entry: 8
       Data: 
@@ -357,8 +384,11 @@ MonoBehaviour:
       Entry: 3
       Data: 10
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Flower
     - Name: 
       Entry: 8
       Data: 
@@ -390,8 +420,11 @@ MonoBehaviour:
       Entry: 3
       Data: 2
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Flower
     - Name: 
       Entry: 8
       Data: 
@@ -423,8 +456,11 @@ MonoBehaviour:
       Entry: 3
       Data: 7
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Flower
     - Name: 
       Entry: 8
       Data: 
@@ -456,8 +492,11 @@ MonoBehaviour:
       Entry: 3
       Data: 5
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Flower
     - Name: 
       Entry: 8
       Data: 
@@ -489,8 +528,11 @@ MonoBehaviour:
       Entry: 3
       Data: 1
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Vegetable
     - Name: 
       Entry: 8
       Data: 
@@ -522,8 +564,11 @@ MonoBehaviour:
       Entry: 3
       Data: 2
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Vegetable
     - Name: 
       Entry: 8
       Data: 
@@ -555,8 +600,11 @@ MonoBehaviour:
       Entry: 3
       Data: 12
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Vegetable
     - Name: 
       Entry: 8
       Data: 
@@ -588,8 +636,11 @@ MonoBehaviour:
       Entry: 3
       Data: 6
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Vegetable
     - Name: 
       Entry: 8
       Data: 
@@ -621,8 +672,11 @@ MonoBehaviour:
       Entry: 3
       Data: 7
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Vegetable
     - Name: 
       Entry: 8
       Data: 
@@ -640,13 +694,13 @@ MonoBehaviour:
       Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
     - Name: name
       Entry: 1
-      Data: Radish
+      Data: Turnip
     - Name: description
       Entry: 1
       Data: 
     - Name: spritePath
       Entry: 1
-      Data: PLA_Radish
+      Data: PLA_Turnip
     - Name: itemType
       Entry: 1
       Data: Plant
@@ -654,8 +708,11 @@ MonoBehaviour:
       Entry: 3
       Data: 8
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Vegetable
     - Name: 
       Entry: 8
       Data: 
@@ -687,8 +744,11 @@ MonoBehaviour:
       Entry: 3
       Data: 10
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Vegetable
     - Name: 
       Entry: 8
       Data: 
@@ -720,8 +780,11 @@ MonoBehaviour:
       Entry: 3
       Data: 5
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Fruit
     - Name: 
       Entry: 8
       Data: 
@@ -753,8 +816,11 @@ MonoBehaviour:
       Entry: 3
       Data: 6
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Fruit
     - Name: 
       Entry: 8
       Data: 
@@ -786,8 +852,11 @@ MonoBehaviour:
       Entry: 3
       Data: 10
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Fruit
     - Name: 
       Entry: 8
       Data: 
@@ -819,8 +888,11 @@ MonoBehaviour:
       Entry: 3
       Data: 2
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Fruit
     - Name: 
       Entry: 8
       Data: 
@@ -852,8 +924,11 @@ MonoBehaviour:
       Entry: 3
       Data: 7
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Fruit
     - Name: 
       Entry: 8
       Data: 
@@ -885,8 +960,11 @@ MonoBehaviour:
       Entry: 3
       Data: 8
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Fruit
     - Name: 
       Entry: 8
       Data: 
@@ -918,8 +996,11 @@ MonoBehaviour:
       Entry: 3
       Data: 1
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Fruit
     - Name: 
       Entry: 8
       Data: 
@@ -951,8 +1032,11 @@ MonoBehaviour:
       Entry: 3
       Data: 100
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Torch
     - Name: 
       Entry: 8
       Data: 
@@ -984,8 +1068,11 @@ MonoBehaviour:
       Entry: 3
       Data: 100
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Memento
     - Name: 
       Entry: 8
       Data: 
@@ -1017,8 +1104,11 @@ MonoBehaviour:
       Entry: 3
       Data: 100
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Memento
     - Name: 
       Entry: 8
       Data: 
@@ -1050,8 +1140,11 @@ MonoBehaviour:
       Entry: 3
       Data: 100
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Memento
     - Name: 
       Entry: 8
       Data: 
@@ -1069,13 +1162,13 @@ MonoBehaviour:
       Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
     - Name: name
       Entry: 1
-      Data: Radish Golem Memento
+      Data: Turnip Golem Memento
     - Name: description
       Entry: 1
       Data: 
     - Name: spritePath
       Entry: 1
-      Data: DEC_Radish_Golem_Memento
+      Data: DEC_Turnip_Golem_Memento
     - Name: itemType
       Entry: 1
       Data: Decor
@@ -1083,8 +1176,11 @@ MonoBehaviour:
       Entry: 3
       Data: 100
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Memento
     - Name: 
       Entry: 8
       Data: 
@@ -1116,8 +1212,11 @@ MonoBehaviour:
       Entry: 3
       Data: 100
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Memento
     - Name: 
       Entry: 8
       Data: 
@@ -1149,8 +1248,11 @@ MonoBehaviour:
       Entry: 3
       Data: 100
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Memento
     - Name: 
       Entry: 8
       Data: 
@@ -1182,8 +1284,11 @@ MonoBehaviour:
       Entry: 3
       Data: 100
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Lantern
     - Name: 
       Entry: 8
       Data: 
@@ -1215,8 +1320,11 @@ MonoBehaviour:
       Entry: 3
       Data: 100
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Lamp Post
     - Name: 
       Entry: 8
       Data: 
@@ -1248,8 +1356,11 @@ MonoBehaviour:
       Entry: 3
       Data: 100
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Lantern
     - Name: 
       Entry: 8
       Data: 
@@ -1281,8 +1392,11 @@ MonoBehaviour:
       Entry: 3
       Data: 100
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Lamp Post
     - Name: 
       Entry: 8
       Data: 
@@ -1314,8 +1428,11 @@ MonoBehaviour:
       Entry: 3
       Data: 100
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Lantern
     - Name: 
       Entry: 8
       Data: 
@@ -1347,8 +1464,11 @@ MonoBehaviour:
       Entry: 3
       Data: 100
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Lamp
     - Name: 
       Entry: 8
       Data: 
@@ -1380,8 +1500,11 @@ MonoBehaviour:
       Entry: 3
       Data: 100
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Scarecrow
     - Name: 
       Entry: 8
       Data: 
@@ -1413,8 +1536,11 @@ MonoBehaviour:
       Entry: 3
       Data: 100
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Bicycle
     - Name: 
       Entry: 8
       Data: 
@@ -1446,8 +1572,11 @@ MonoBehaviour:
       Entry: 3
       Data: 100
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Wagon
     - Name: 
       Entry: 8
       Data: 
@@ -1479,8 +1608,11 @@ MonoBehaviour:
       Entry: 3
       Data: 100
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Basket
     - Name: 
       Entry: 8
       Data: 
@@ -1512,8 +1644,11 @@ MonoBehaviour:
       Entry: 3
       Data: 100
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Umbrella
     - Name: 
       Entry: 8
       Data: 
@@ -1545,8 +1680,11 @@ MonoBehaviour:
       Entry: 3
       Data: 100
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Swingset
     - Name: 
       Entry: 8
       Data: 
@@ -1578,8 +1716,11 @@ MonoBehaviour:
       Entry: 3
       Data: 100
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Leafpile
     - Name: 
       Entry: 8
       Data: 
@@ -1611,8 +1752,11 @@ MonoBehaviour:
       Entry: 3
       Data: 100
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Potted Plant
     - Name: 
       Entry: 8
       Data: 
@@ -1644,8 +1788,11 @@ MonoBehaviour:
       Entry: 3
       Data: 100
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Potted Plant
     - Name: 
       Entry: 8
       Data: 
@@ -1677,8 +1824,11 @@ MonoBehaviour:
       Entry: 3
       Data: 100
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Potted Plant
     - Name: 
       Entry: 8
       Data: 
@@ -1710,8 +1860,11 @@ MonoBehaviour:
       Entry: 3
       Data: 100
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Urn
     - Name: 
       Entry: 8
       Data: 
@@ -1743,8 +1896,11 @@ MonoBehaviour:
       Entry: 3
       Data: 100
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Gnome
     - Name: 
       Entry: 8
       Data: 
@@ -1776,8 +1932,11 @@ MonoBehaviour:
       Entry: 3
       Data: 100
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Gnome
     - Name: 
       Entry: 8
       Data: 
@@ -1809,8 +1968,11 @@ MonoBehaviour:
       Entry: 3
       Data: 100
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Gnome
     - Name: 
       Entry: 8
       Data: 
@@ -1842,8 +2004,11 @@ MonoBehaviour:
       Entry: 3
       Data: 100
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Sculpture
     - Name: 
       Entry: 8
       Data: 
@@ -1875,8 +2040,11 @@ MonoBehaviour:
       Entry: 3
       Data: 100
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Flamingo
     - Name: 
       Entry: 8
       Data: 
@@ -1894,13 +2062,13 @@ MonoBehaviour:
       Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
     - Name: name
       Entry: 1
-      Data: Art Nouveau Sculture 01
+      Data: Art Nouveau Sculpture 01
     - Name: description
       Entry: 1
       Data: 
     - Name: spritePath
       Entry: 1
-      Data: DEC_Art_Nouveau_Sculture_01
+      Data: DEC_Art_Nouveau_Sculpture_01
     - Name: itemType
       Entry: 1
       Data: Decor
@@ -1908,8 +2076,11 @@ MonoBehaviour:
       Entry: 3
       Data: 100
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Sculpture
     - Name: 
       Entry: 8
       Data: 
@@ -1927,13 +2098,13 @@ MonoBehaviour:
       Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
     - Name: name
       Entry: 1
-      Data: Art Nouveau Sculture 02
+      Data: Art Nouveau Sculpture 02
     - Name: description
       Entry: 1
       Data: 
     - Name: spritePath
       Entry: 1
-      Data: DEC_Art_Nouveau_Sculture_02
+      Data: DEC_Art_Nouveau_Sculpture_02
     - Name: itemType
       Entry: 1
       Data: Decor
@@ -1941,8 +2112,11 @@ MonoBehaviour:
       Entry: 3
       Data: 100
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Sculpture
     - Name: 
       Entry: 8
       Data: 
@@ -1960,13 +2134,13 @@ MonoBehaviour:
       Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
     - Name: name
       Entry: 1
-      Data: Art Nouveau Sculture 03
+      Data: Art Nouveau Sculpture 03
     - Name: description
       Entry: 1
       Data: 
     - Name: spritePath
       Entry: 1
-      Data: DEC_Art_Nouveau_Sculture_03
+      Data: DEC_Art_Nouveau_Sculpture_03
     - Name: itemType
       Entry: 1
       Data: Decor
@@ -1974,8 +2148,11 @@ MonoBehaviour:
       Entry: 3
       Data: 100
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Sculpture
     - Name: 
       Entry: 8
       Data: 
@@ -2007,8 +2184,11 @@ MonoBehaviour:
       Entry: 3
       Data: 100
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Bench
     - Name: 
       Entry: 8
       Data: 
@@ -2040,8 +2220,11 @@ MonoBehaviour:
       Entry: 3
       Data: 100
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Chair
     - Name: 
       Entry: 8
       Data: 
@@ -2073,8 +2256,11 @@ MonoBehaviour:
       Entry: 3
       Data: 100
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Bench
     - Name: 
       Entry: 8
       Data: 
@@ -2106,8 +2292,11 @@ MonoBehaviour:
       Entry: 3
       Data: 100
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Bench
     - Name: 
       Entry: 8
       Data: 
@@ -2139,8 +2328,11 @@ MonoBehaviour:
       Entry: 3
       Data: 100
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Chair
     - Name: 
       Entry: 8
       Data: 
@@ -2172,8 +2364,11 @@ MonoBehaviour:
       Entry: 3
       Data: 100
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Chair
     - Name: 
       Entry: 8
       Data: 
@@ -2205,8 +2400,11 @@ MonoBehaviour:
       Entry: 3
       Data: 100
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Stool
     - Name: 
       Entry: 8
       Data: 
@@ -2238,8 +2436,11 @@ MonoBehaviour:
       Entry: 3
       Data: 100
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Picnic Spread
     - Name: 
       Entry: 8
       Data: 
@@ -2271,8 +2472,11 @@ MonoBehaviour:
       Entry: 3
       Data: 100
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Table
     - Name: 
       Entry: 8
       Data: 
@@ -2304,8 +2508,11 @@ MonoBehaviour:
       Entry: 3
       Data: 100
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Table
     - Name: 
       Entry: 8
       Data: 
@@ -2337,8 +2544,11 @@ MonoBehaviour:
       Entry: 3
       Data: 100
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Table
     - Name: 
       Entry: 8
       Data: 
@@ -2370,8 +2580,11 @@ MonoBehaviour:
       Entry: 3
       Data: 100
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Bird Bath
     - Name: 
       Entry: 8
       Data: 
@@ -2403,8 +2616,11 @@ MonoBehaviour:
       Entry: 3
       Data: 100
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Pond
     - Name: 
       Entry: 8
       Data: 
@@ -2436,8 +2652,11 @@ MonoBehaviour:
       Entry: 3
       Data: 100
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Pond
     - Name: 
       Entry: 8
       Data: 
@@ -2469,8 +2688,11 @@ MonoBehaviour:
       Entry: 3
       Data: 100
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Pond
     - Name: 
       Entry: 8
       Data: 
@@ -2502,8 +2724,11 @@ MonoBehaviour:
       Entry: 3
       Data: 100
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Fountain
     - Name: 
       Entry: 8
       Data: 
@@ -2535,8 +2760,11 @@ MonoBehaviour:
       Entry: 3
       Data: 100
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Fountain
     - Name: 
       Entry: 8
       Data: 
@@ -2568,8 +2796,11 @@ MonoBehaviour:
       Entry: 3
       Data: 100
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Fountain
     - Name: 
       Entry: 8
       Data: 
@@ -2601,8 +2832,11 @@ MonoBehaviour:
       Entry: 3
       Data: 100
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Well
     - Name: 
       Entry: 8
       Data: 
@@ -2634,8 +2868,11 @@ MonoBehaviour:
       Entry: 3
       Data: 100
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Waterpump
     - Name: 
       Entry: 8
       Data: 
@@ -2667,8 +2904,11 @@ MonoBehaviour:
       Entry: 3
       Data: 100
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Grecian Ruin
     - Name: 
       Entry: 8
       Data: 
@@ -2700,8 +2940,11 @@ MonoBehaviour:
       Entry: 3
       Data: 100
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Sundial
     - Name: 
       Entry: 8
       Data: 
@@ -2733,8 +2976,11 @@ MonoBehaviour:
       Entry: 3
       Data: 100
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Painting
     - Name: 
       Entry: 8
       Data: 
@@ -2766,8 +3012,11 @@ MonoBehaviour:
       Entry: 3
       Data: 100
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Painting
     - Name: 
       Entry: 8
       Data: 
@@ -2799,8 +3048,11 @@ MonoBehaviour:
       Entry: 3
       Data: 100
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Fixture
     - Name: 
       Entry: 8
       Data: 
@@ -2832,8 +3084,11 @@ MonoBehaviour:
       Entry: 3
       Data: 100
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Fixture
     - Name: 
       Entry: 8
       Data: 
@@ -2865,8 +3120,11 @@ MonoBehaviour:
       Entry: 3
       Data: 100
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Fixture
     - Name: 
       Entry: 8
       Data: 
@@ -2898,8 +3156,11 @@ MonoBehaviour:
       Entry: 3
       Data: 100
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Fixture
     - Name: 
       Entry: 8
       Data: 
@@ -2931,8 +3192,11 @@ MonoBehaviour:
       Entry: 3
       Data: 100
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Fixture
     - Name: 
       Entry: 8
       Data: 
@@ -2964,8 +3228,11 @@ MonoBehaviour:
       Entry: 3
       Data: 100
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Fixture
     - Name: 
       Entry: 8
       Data: 
@@ -2997,8 +3264,11 @@ MonoBehaviour:
       Entry: 3
       Data: 100
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Fixture
     - Name: 
       Entry: 8
       Data: 
@@ -3030,8 +3300,11 @@ MonoBehaviour:
       Entry: 3
       Data: 100
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Fixture
     - Name: 
       Entry: 8
       Data: 
@@ -3063,8 +3336,11 @@ MonoBehaviour:
       Entry: 3
       Data: 100
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Fixture
     - Name: 
       Entry: 8
       Data: 
@@ -3096,8 +3372,11 @@ MonoBehaviour:
       Entry: 3
       Data: 100
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Fixture
     - Name: 
       Entry: 8
       Data: 
@@ -3129,8 +3408,11 @@ MonoBehaviour:
       Entry: 3
       Data: 100
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Fixture
     - Name: 
       Entry: 8
       Data: 
@@ -3162,8 +3444,11 @@ MonoBehaviour:
       Entry: 3
       Data: 100
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Fixture
     - Name: 
       Entry: 8
       Data: 
@@ -3195,8 +3480,11 @@ MonoBehaviour:
       Entry: 3
       Data: 100
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Fixture
     - Name: 
       Entry: 8
       Data: 
@@ -3228,8 +3516,11 @@ MonoBehaviour:
       Entry: 3
       Data: 100
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Fixture
     - Name: 
       Entry: 8
       Data: 
@@ -3261,8 +3552,11 @@ MonoBehaviour:
       Entry: 3
       Data: 100
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Fixture
     - Name: 
       Entry: 8
       Data: 
@@ -3294,8 +3588,11 @@ MonoBehaviour:
       Entry: 3
       Data: 100
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Fixture
     - Name: 
       Entry: 8
       Data: 
@@ -3327,8 +3624,11 @@ MonoBehaviour:
       Entry: 3
       Data: 100
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Fixture
     - Name: 
       Entry: 8
       Data: 
@@ -3360,8 +3660,11 @@ MonoBehaviour:
       Entry: 3
       Data: 100
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Fixture
     - Name: 
       Entry: 8
       Data: 
@@ -3393,8 +3696,11 @@ MonoBehaviour:
       Entry: 3
       Data: 100
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Fixture
     - Name: 
       Entry: 8
       Data: 
@@ -3426,8 +3732,11 @@ MonoBehaviour:
       Entry: 3
       Data: 100
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Fixture
     - Name: 
       Entry: 8
       Data: 
@@ -3459,8 +3768,11 @@ MonoBehaviour:
       Entry: 3
       Data: 100
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Fixture
     - Name: 
       Entry: 8
       Data: 
@@ -3492,8 +3804,11 @@ MonoBehaviour:
       Entry: 3
       Data: 100
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Fixture
     - Name: 
       Entry: 8
       Data: 
@@ -3525,8 +3840,11 @@ MonoBehaviour:
       Entry: 3
       Data: 100
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Fixture
     - Name: 
       Entry: 8
       Data: 
@@ -3558,8 +3876,11 @@ MonoBehaviour:
       Entry: 3
       Data: 100
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Path
     - Name: 
       Entry: 8
       Data: 
@@ -3591,8 +3912,11 @@ MonoBehaviour:
       Entry: 3
       Data: 100
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Path
     - Name: 
       Entry: 8
       Data: 
@@ -3624,8 +3948,11 @@ MonoBehaviour:
       Entry: 3
       Data: 100
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Path
     - Name: 
       Entry: 8
       Data: 
@@ -3657,8 +3984,11 @@ MonoBehaviour:
       Entry: 3
       Data: 100
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Path
     - Name: 
       Entry: 8
       Data: 
@@ -3690,8 +4020,11 @@ MonoBehaviour:
       Entry: 3
       Data: 100
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Tree
     - Name: 
       Entry: 8
       Data: 
@@ -3723,8 +4056,11 @@ MonoBehaviour:
       Entry: 3
       Data: 100
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Tree
     - Name: 
       Entry: 8
       Data: 
@@ -3756,8 +4092,11 @@ MonoBehaviour:
       Entry: 3
       Data: 100
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Tree
     - Name: 
       Entry: 8
       Data: 
@@ -3789,8 +4128,11 @@ MonoBehaviour:
       Entry: 3
       Data: 100
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Tree
     - Name: 
       Entry: 8
       Data: 
@@ -3822,8 +4164,11 @@ MonoBehaviour:
       Entry: 3
       Data: 100
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Tree
     - Name: 
       Entry: 8
       Data: 
@@ -3855,8 +4200,11 @@ MonoBehaviour:
       Entry: 3
       Data: 100
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Tree
     - Name: 
       Entry: 8
       Data: 
@@ -3888,8 +4236,11 @@ MonoBehaviour:
       Entry: 3
       Data: 100
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Tree
     - Name: 
       Entry: 8
       Data: 
@@ -3921,8 +4272,11 @@ MonoBehaviour:
       Entry: 3
       Data: 100
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Bush
     - Name: 
       Entry: 8
       Data: 
@@ -3954,8 +4308,11 @@ MonoBehaviour:
       Entry: 3
       Data: 100
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Bush
     - Name: 
       Entry: 8
       Data: 
@@ -3987,8 +4344,11 @@ MonoBehaviour:
       Entry: 3
       Data: 100
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Bush
     - Name: 
       Entry: 8
       Data: 
@@ -4020,8 +4380,11 @@ MonoBehaviour:
       Entry: 3
       Data: 100
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Bush
     - Name: 
       Entry: 8
       Data: 
@@ -4053,8 +4416,11 @@ MonoBehaviour:
       Entry: 3
       Data: 100
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Flower
     - Name: 
       Entry: 8
       Data: 
@@ -4086,8 +4452,11 @@ MonoBehaviour:
       Entry: 3
       Data: 100
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Flower
     - Name: 
       Entry: 8
       Data: 
@@ -4119,8 +4488,11 @@ MonoBehaviour:
       Entry: 3
       Data: 100
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Flower
     - Name: 
       Entry: 8
       Data: 
@@ -4152,8 +4524,11 @@ MonoBehaviour:
       Entry: 3
       Data: 100
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Flower
     - Name: 
       Entry: 8
       Data: 
@@ -4185,8 +4560,11 @@ MonoBehaviour:
       Entry: 3
       Data: 100
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Flower
     - Name: 
       Entry: 8
       Data: 
@@ -4218,8 +4596,11 @@ MonoBehaviour:
       Entry: 3
       Data: 100
     - Name: tag
-      Entry: 6
+      Entry: 1
       Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Flower
     - Name: 
       Entry: 8
       Data: 
@@ -4251,7 +4632,10 @@ MonoBehaviour:
       Entry: 3
       Data: 0
     - Name: tag
-      Entry: 6
+      Entry: 1
+      Data: 
+    - Name: decorType
+      Entry: 1
       Data: 
     - Name: 
       Entry: 8
@@ -4284,7 +4668,10 @@ MonoBehaviour:
       Entry: 3
       Data: 0
     - Name: tag
-      Entry: 6
+      Entry: 1
+      Data: 
+    - Name: decorType
+      Entry: 1
       Data: 
     - Name: 
       Entry: 8
@@ -4317,7 +4704,10 @@ MonoBehaviour:
       Entry: 3
       Data: 0
     - Name: tag
-      Entry: 6
+      Entry: 1
+      Data: 
+    - Name: decorType
+      Entry: 1
       Data: 
     - Name: 
       Entry: 8
@@ -4350,7 +4740,10 @@ MonoBehaviour:
       Entry: 3
       Data: 0
     - Name: tag
-      Entry: 6
+      Entry: 1
+      Data: 
+    - Name: decorType
+      Entry: 1
       Data: 
     - Name: 
       Entry: 8
@@ -4383,7 +4776,10 @@ MonoBehaviour:
       Entry: 3
       Data: 0
     - Name: tag
-      Entry: 6
+      Entry: 1
+      Data: 
+    - Name: decorType
+      Entry: 1
       Data: 
     - Name: 
       Entry: 8
@@ -4416,7 +4812,10 @@ MonoBehaviour:
       Entry: 3
       Data: 0
     - Name: tag
-      Entry: 6
+      Entry: 1
+      Data: 
+    - Name: decorType
+      Entry: 1
       Data: 
     - Name: 
       Entry: 8
@@ -4449,7 +4848,10 @@ MonoBehaviour:
       Entry: 3
       Data: 0
     - Name: tag
-      Entry: 6
+      Entry: 1
+      Data: 
+    - Name: decorType
+      Entry: 1
       Data: 
     - Name: 
       Entry: 8
@@ -4482,7 +4884,10 @@ MonoBehaviour:
       Entry: 3
       Data: 0
     - Name: tag
-      Entry: 6
+      Entry: 1
+      Data: 
+    - Name: decorType
+      Entry: 1
       Data: 
     - Name: 
       Entry: 8
@@ -4501,13 +4906,13 @@ MonoBehaviour:
       Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
     - Name: name
       Entry: 1
-      Data: Radish Golem
+      Data: Turnip Golem
     - Name: description
       Entry: 1
       Data: 
     - Name: spritePath
       Entry: 1
-      Data: CHA_Radish_Golem
+      Data: CHA_Turnip_Golem
     - Name: itemType
       Entry: 1
       Data: Character
@@ -4515,7 +4920,10 @@ MonoBehaviour:
       Entry: 3
       Data: 0
     - Name: tag
-      Entry: 6
+      Entry: 1
+      Data: 
+    - Name: decorType
+      Entry: 1
       Data: 
     - Name: 
       Entry: 8
@@ -4562,10 +4970,10 @@ MonoBehaviour:
       Data: 3
     - Name: growthTime
       Entry: 3
-      Data: 10
+      Data: 6
     - Name: waterPerStage
       Entry: 3
-      Data: 1
+      Data: 200
     - Name: baseGoldPerTimeUnit
       Entry: 4
       Data: 1.2
@@ -4601,10 +5009,10 @@ MonoBehaviour:
       Data: 3
     - Name: growthTime
       Entry: 3
-      Data: 10
+      Data: 1
     - Name: waterPerStage
       Entry: 3
-      Data: 2
+      Data: 200
     - Name: baseGoldPerTimeUnit
       Entry: 4
       Data: 0.5
@@ -4640,10 +5048,10 @@ MonoBehaviour:
       Data: 3
     - Name: growthTime
       Entry: 3
-      Data: 10
+      Data: 7
     - Name: waterPerStage
       Entry: 3
-      Data: 1
+      Data: 200
     - Name: baseGoldPerTimeUnit
       Entry: 4
       Data: 1.6
@@ -4679,10 +5087,10 @@ MonoBehaviour:
       Data: 3
     - Name: growthTime
       Entry: 3
-      Data: 10
+      Data: 5
     - Name: waterPerStage
       Entry: 3
-      Data: 1
+      Data: 200
     - Name: baseGoldPerTimeUnit
       Entry: 4
       Data: 2
@@ -4718,10 +5126,10 @@ MonoBehaviour:
       Data: 3
     - Name: growthTime
       Entry: 3
-      Data: 10
+      Data: 3
     - Name: waterPerStage
       Entry: 3
-      Data: 1
+      Data: 200
     - Name: baseGoldPerTimeUnit
       Entry: 4
       Data: 0.8
@@ -4757,10 +5165,10 @@ MonoBehaviour:
       Data: 3
     - Name: growthTime
       Entry: 3
-      Data: 10
+      Data: 4
     - Name: waterPerStage
       Entry: 3
-      Data: 1
+      Data: 200
     - Name: baseGoldPerTimeUnit
       Entry: 4
       Data: 1.8
@@ -4796,10 +5204,10 @@ MonoBehaviour:
       Data: 3
     - Name: growthTime
       Entry: 3
-      Data: 10
+      Data: 2
     - Name: waterPerStage
       Entry: 3
-      Data: 1
+      Data: 200
     - Name: baseGoldPerTimeUnit
       Entry: 4
       Data: 1.6
@@ -4913,7 +5321,7 @@ MonoBehaviour:
       Data: 3
     - Name: growthTime
       Entry: 3
-      Data: 8
+      Data: 10
     - Name: waterPerStage
       Entry: 3
       Data: 200
@@ -5018,19 +5426,19 @@ MonoBehaviour:
       Data: GrandmaGreen.Collections.PlantProperties, GrandmaGreen
     - Name: name
       Entry: 1
-      Data: Radish
+      Data: Turnip
     - Name: description
       Entry: 1
       Data: 
     - Name: spriteBasePath
       Entry: 1
-      Data: PLA_Radish
+      Data: PLA_Turnip
     - Name: growthStages
       Entry: 3
       Data: 3
     - Name: growthTime
       Entry: 3
-      Data: 6
+      Data: 7
     - Name: waterPerStage
       Entry: 3
       Data: 200
@@ -5069,7 +5477,7 @@ MonoBehaviour:
       Data: 3
     - Name: growthTime
       Entry: 3
-      Data: 12
+      Data: 15
     - Name: waterPerStage
       Entry: 3
       Data: 200
@@ -5186,7 +5594,7 @@ MonoBehaviour:
       Data: 3
     - Name: growthTime
       Entry: 3
-      Data: 24
+      Data: 30
     - Name: waterPerStage
       Entry: 3
       Data: 200
@@ -5303,7 +5711,7 @@ MonoBehaviour:
       Data: 3
     - Name: growthTime
       Entry: 3
-      Data: 22
+      Data: 24
     - Name: waterPerStage
       Entry: 3
       Data: 200
@@ -5364,2177 +5772,799 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+    - Name: SingleSpriteCache
+      Entry: 7
+      Data: 3|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[UnityEngine.Sprite,
+        UnityEngine.CoreModule]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 4|System.Collections.Generic.GenericEqualityComparer`1[[System.String,
+        mscorlib]], mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: SpriteSheetCache
+      Entry: 7
+      Data: 5|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[UnityEngine.Sprite[],
+        UnityEngine.CoreModule]], mscorlib
+    - Name: comparer
+      Entry: 9
+      Data: 4
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
   dataSheet: {fileID: 4900000, guid: e4679a0928809465cb693a3e5dc5ecfa, type: 3}
   PlantGenotypeMasterList:
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 1
-      b1: 1
-      b2: 1
-      p1: 1
-      f1: 0
-      f2: 0
-      size: 0
-      trait: 0
-      generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 1
-      b1: 1
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
-      size: 0
-      trait: 1
-      generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 1
-      b1: 0
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
-      size: 0
-      trait: 2
-      generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 0
-      b1: 1
-      b2: 1
-      p1: 1
-      f1: 0
-      f2: 0
+  - seedGenotype:
       size: 1
       trait: 0
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 0
-      b1: 1
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
+  - seedGenotype:
       size: 1
       trait: 1
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 0
-      b1: 0
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
+  - seedGenotype:
       size: 1
       trait: 2
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 0
-      a2: 0
-      b1: 1
-      b2: 1
-      p1: 1
-      f1: 0
-      f2: 0
+  - seedGenotype:
       size: 2
       trait: 0
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 0
-      a2: 0
-      b1: 1
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
+  - seedGenotype:
       size: 2
       trait: 1
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 0
-      a2: 0
-      b1: 0
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
+  - seedGenotype:
       size: 2
       trait: 2
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 1
-      b1: 1
-      b2: 1
-      p1: 1
-      f1: 0
-      f2: 0
-      size: 0
+  - seedGenotype:
+      size: 3
       trait: 0
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 1
-      b1: 1
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
-      size: 0
+  - seedGenotype:
+      size: 3
       trait: 1
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 0
-      b1: 1
-      b2: 1
-      p1: 1
-      f1: 0
-      f2: 0
+  - seedGenotype:
+      size: 3
+      trait: 2
+      generation: 0
+  - seedGenotype:
       size: 1
       trait: 0
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 0
-      b1: 1
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
+  - seedGenotype:
       size: 1
       trait: 1
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 0
-      b1: 0
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
+  - seedGenotype:
       size: 1
       trait: 2
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 0
-      a2: 0
-      b1: 1
-      b2: 1
-      p1: 1
-      f1: 0
-      f2: 0
+  - seedGenotype:
       size: 2
       trait: 0
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 0
-      a2: 0
-      b1: 1
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
+  - seedGenotype:
       size: 2
       trait: 1
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 0
-      a2: 0
-      b1: 0
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
+  - seedGenotype:
       size: 2
       trait: 2
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 1
-      b1: 1
-      b2: 1
-      p1: 1
-      f1: 0
-      f2: 0
-      size: 0
+  - seedGenotype:
+      size: 3
       trait: 0
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 1
-      b1: 1
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
-      size: 0
+  - seedGenotype:
+      size: 3
       trait: 1
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 1
-      b1: 0
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
-      size: 0
+  - seedGenotype:
+      size: 3
       trait: 2
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 0
-      b1: 1
-      b2: 1
-      p1: 1
-      f1: 0
-      f2: 0
+  - seedGenotype:
       size: 1
       trait: 0
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 0
-      b1: 1
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
+  - seedGenotype:
       size: 1
       trait: 1
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 0
-      b1: 0
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
+  - seedGenotype:
       size: 1
       trait: 2
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 0
-      a2: 0
-      b1: 1
-      b2: 1
-      p1: 1
-      f1: 0
-      f2: 0
+  - seedGenotype:
       size: 2
       trait: 0
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 0
-      a2: 0
-      b1: 1
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
+  - seedGenotype:
       size: 2
       trait: 1
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 0
-      a2: 0
-      b1: 0
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
+  - seedGenotype:
       size: 2
       trait: 2
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 1
-      b1: 1
-      b2: 1
-      p1: 1
-      f1: 0
-      f2: 0
-      size: 0
+  - seedGenotype:
+      size: 3
       trait: 0
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 1
-      b1: 1
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
-      size: 0
+  - seedGenotype:
+      size: 3
       trait: 1
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 1
-      b1: 0
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
-      size: 0
+  - seedGenotype:
+      size: 3
       trait: 2
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 0
-      b1: 1
-      b2: 1
-      p1: 1
-      f1: 0
-      f2: 0
+  - seedGenotype:
       size: 1
       trait: 0
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 0
-      b1: 1
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
+  - seedGenotype:
       size: 1
       trait: 1
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 0
-      b1: 0
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
+  - seedGenotype:
       size: 1
       trait: 2
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 0
-      a2: 0
-      b1: 1
-      b2: 1
-      p1: 1
-      f1: 0
-      f2: 0
+  - seedGenotype:
       size: 2
       trait: 0
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 0
-      a2: 0
-      b1: 1
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
+  - seedGenotype:
       size: 2
       trait: 1
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 0
-      a2: 0
-      b1: 0
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
+  - seedGenotype:
       size: 2
       trait: 2
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 1
-      b1: 1
-      b2: 1
-      p1: 1
-      f1: 0
-      f2: 0
-      size: 0
+  - seedGenotype:
+      size: 3
       trait: 0
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 1
-      b1: 1
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
-      size: 0
+  - seedGenotype:
+      size: 3
       trait: 1
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 1
-      b1: 0
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
-      size: 0
+  - seedGenotype:
+      size: 3
       trait: 2
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 0
-      b1: 1
-      b2: 1
-      p1: 1
-      f1: 0
-      f2: 0
+  - seedGenotype:
       size: 1
       trait: 0
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 0
-      b1: 1
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
+  - seedGenotype:
       size: 1
       trait: 1
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 0
-      b1: 0
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
+  - seedGenotype:
       size: 1
       trait: 2
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 0
-      a2: 0
-      b1: 1
-      b2: 1
-      p1: 1
-      f1: 0
-      f2: 0
+  - seedGenotype:
       size: 2
       trait: 0
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 0
-      a2: 0
-      b1: 1
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
+  - seedGenotype:
       size: 2
       trait: 1
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 0
-      a2: 0
-      b1: 0
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
+  - seedGenotype:
       size: 2
       trait: 2
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 1
-      b1: 1
-      b2: 1
-      p1: 1
-      f1: 0
-      f2: 0
-      size: 0
+  - seedGenotype:
+      size: 3
       trait: 0
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 1
-      b1: 1
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
-      size: 0
+  - seedGenotype:
+      size: 3
       trait: 1
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 1
-      b1: 0
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
-      size: 0
+  - seedGenotype:
+      size: 3
       trait: 2
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 0
-      b1: 1
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
+  - seedGenotype:
+      size: 1
+      trait: 0
+      generation: 0
+  - seedGenotype:
       size: 1
       trait: 1
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 0
-      b1: 0
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
+  - seedGenotype:
       size: 1
       trait: 2
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 0
-      a2: 0
-      b1: 1
-      b2: 1
-      p1: 1
-      f1: 0
-      f2: 0
+  - seedGenotype:
       size: 2
       trait: 0
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 0
-      a2: 0
-      b1: 1
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
+  - seedGenotype:
       size: 2
       trait: 1
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 0
-      a2: 0
-      b1: 0
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
+  - seedGenotype:
       size: 2
       trait: 2
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 1
-      b1: 1
-      b2: 1
-      p1: 1
-      f1: 0
-      f2: 0
-      size: 0
+  - seedGenotype:
+      size: 3
       trait: 0
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 1
-      b1: 0
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
-      size: 0
+  - seedGenotype:
+      size: 3
+      trait: 1
+      generation: 0
+  - seedGenotype:
+      size: 3
       trait: 2
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 0
-      b1: 1
-      b2: 1
-      p1: 1
-      f1: 0
-      f2: 0
+  - seedGenotype:
       size: 1
       trait: 0
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 0
-      b1: 1
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
+  - seedGenotype:
       size: 1
       trait: 1
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 0
-      b1: 0
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
+  - seedGenotype:
       size: 1
       trait: 2
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 0
-      a2: 0
-      b1: 1
-      b2: 1
-      p1: 1
-      f1: 0
-      f2: 0
+  - seedGenotype:
       size: 2
       trait: 0
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 0
-      a2: 0
-      b1: 1
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
+  - seedGenotype:
       size: 2
       trait: 1
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 0
-      a2: 0
-      b1: 0
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
+  - seedGenotype:
       size: 2
       trait: 2
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 1
-      b1: 1
-      b2: 1
-      p1: 1
-      f1: 0
-      f2: 0
-      size: 0
+  - seedGenotype:
+      size: 3
       trait: 0
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 1
-      b1: 1
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
-      size: 0
+  - seedGenotype:
+      size: 3
       trait: 1
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 1
-      b1: 0
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
-      size: 0
+  - seedGenotype:
+      size: 3
       trait: 2
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 0
-      b1: 1
-      b2: 1
-      p1: 1
-      f1: 0
-      f2: 0
+  - seedGenotype:
       size: 1
       trait: 0
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 0
-      b1: 1
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
+  - seedGenotype:
       size: 1
       trait: 1
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 0
-      b1: 0
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
+  - seedGenotype:
       size: 1
       trait: 2
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 0
-      a2: 0
-      b1: 1
-      b2: 1
-      p1: 1
-      f1: 0
-      f2: 0
+  - seedGenotype:
       size: 2
       trait: 0
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 0
-      a2: 0
-      b1: 1
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
+  - seedGenotype:
       size: 2
       trait: 1
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 0
-      a2: 0
-      b1: 0
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
+  - seedGenotype:
       size: 2
       trait: 2
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 1
-      b1: 1
-      b2: 1
-      p1: 1
-      f1: 0
-      f2: 0
-      size: 0
+  - seedGenotype:
+      size: 3
       trait: 0
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 1
-      b1: 1
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
-      size: 0
+  - seedGenotype:
+      size: 3
       trait: 1
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 1
-      b1: 0
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
-      size: 0
+  - seedGenotype:
+      size: 3
       trait: 2
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 0
-      b1: 1
-      b2: 1
-      p1: 1
-      f1: 0
-      f2: 0
+  - seedGenotype:
       size: 1
       trait: 0
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 0
-      b1: 1
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
+  - seedGenotype:
       size: 1
       trait: 1
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 0
-      b1: 0
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
+  - seedGenotype:
       size: 1
       trait: 2
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 0
-      a2: 0
-      b1: 1
-      b2: 1
-      p1: 1
-      f1: 0
-      f2: 0
+  - seedGenotype:
       size: 2
       trait: 0
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 0
-      a2: 0
-      b1: 1
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
+  - seedGenotype:
       size: 2
       trait: 1
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 0
-      a2: 0
-      b1: 0
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
+  - seedGenotype:
       size: 2
       trait: 2
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 1
-      b1: 1
-      b2: 1
-      p1: 1
-      f1: 0
-      f2: 0
-      size: 0
+  - seedGenotype:
+      size: 3
       trait: 0
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 1
-      b1: 1
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
-      size: 0
+  - seedGenotype:
+      size: 3
       trait: 1
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 1
-      b1: 0
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
-      size: 0
+  - seedGenotype:
+      size: 3
       trait: 2
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 0
-      b1: 1
-      b2: 1
-      p1: 1
-      f1: 0
-      f2: 0
+  - seedGenotype:
       size: 1
       trait: 0
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 0
-      b1: 1
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
+  - seedGenotype:
       size: 1
       trait: 1
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 0
-      b1: 0
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
+  - seedGenotype:
       size: 1
       trait: 2
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 0
-      a2: 0
-      b1: 1
-      b2: 1
-      p1: 1
-      f1: 0
-      f2: 0
+  - seedGenotype:
       size: 2
       trait: 0
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 0
-      a2: 0
-      b1: 0
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
-      size: 2
-      trait: 2
-      generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 1
-      b1: 1
-      b2: 1
-      p1: 1
-      f1: 0
-      f2: 0
-      size: 0
-      trait: 0
-      generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 1
-      b1: 1
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
-      size: 0
-      trait: 1
-      generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 1
-      b1: 0
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
-      size: 0
-      trait: 2
-      generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 0
-      b1: 1
-      b2: 1
-      p1: 1
-      f1: 0
-      f2: 0
-      size: 1
-      trait: 0
-      generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 0
-      b1: 1
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
-      size: 1
-      trait: 1
-      generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 0
-      b1: 0
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
-      size: 1
-      trait: 2
-      generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 0
-      a2: 0
-      b1: 1
-      b2: 1
-      p1: 1
-      f1: 0
-      f2: 0
-      size: 2
-      trait: 0
-      generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 0
-      a2: 0
-      b1: 1
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
+  - seedGenotype:
       size: 2
       trait: 1
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 0
-      a2: 0
-      b1: 0
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
+  - seedGenotype:
       size: 2
       trait: 2
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 1
-      b1: 1
-      b2: 1
-      p1: 1
-      f1: 0
-      f2: 0
-      size: 0
+  - seedGenotype:
+      size: 3
       trait: 0
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 1
-      b1: 1
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
-      size: 0
+  - seedGenotype:
+      size: 3
       trait: 1
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 1
-      b1: 0
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
-      size: 0
+  - seedGenotype:
+      size: 3
       trait: 2
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 0
-      b1: 1
-      b2: 1
-      p1: 1
-      f1: 0
-      f2: 0
+  - seedGenotype:
       size: 1
       trait: 0
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 0
-      b1: 1
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
+  - seedGenotype:
       size: 1
       trait: 1
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 0
-      b1: 0
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
+  - seedGenotype:
       size: 1
       trait: 2
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 0
-      a2: 0
-      b1: 1
-      b2: 1
-      p1: 1
-      f1: 0
-      f2: 0
+  - seedGenotype:
       size: 2
       trait: 0
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 0
-      a2: 0
-      b1: 0
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
+  - seedGenotype:
       size: 2
-      trait: 2
-      generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 1
-      b1: 1
-      b2: 1
-      p1: 1
-      f1: 0
-      f2: 0
-      size: 0
-      trait: 0
-      generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 1
-      b1: 1
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
-      size: 0
       trait: 1
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 1
-      b1: 0
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
-      size: 0
+  - seedGenotype:
+      size: 2
       trait: 2
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 0
-      b1: 1
-      b2: 1
-      p1: 1
-      f1: 0
-      f2: 0
+  - seedGenotype:
+      size: 3
+      trait: 0
+      generation: 0
+  - seedGenotype:
+      size: 3
+      trait: 1
+      generation: 0
+  - seedGenotype:
+      size: 3
+      trait: 2
+      generation: 0
+  - seedGenotype:
       size: 1
       trait: 0
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 0
-      b1: 1
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
+  - seedGenotype:
       size: 1
       trait: 1
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 0
-      b1: 0
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
+  - seedGenotype:
       size: 1
       trait: 2
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 0
-      a2: 0
-      b1: 1
-      b2: 1
-      p1: 1
-      f1: 0
-      f2: 0
+  - seedGenotype:
       size: 2
       trait: 0
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 0
-      a2: 0
-      b1: 1
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
+  - seedGenotype:
       size: 2
       trait: 1
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 0
-      a2: 0
-      b1: 0
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
+  - seedGenotype:
       size: 2
       trait: 2
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 1
-      b1: 1
-      b2: 1
-      p1: 1
-      f1: 0
-      f2: 0
-      size: 0
+  - seedGenotype:
+      size: 3
       trait: 0
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 1
-      b1: 1
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
-      size: 0
+  - seedGenotype:
+      size: 3
       trait: 1
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 0
-      b1: 1
-      b2: 1
-      p1: 1
-      f1: 0
-      f2: 0
+  - seedGenotype:
+      size: 3
+      trait: 2
+      generation: 0
+  - seedGenotype:
       size: 1
       trait: 0
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 0
-      b1: 1
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
+  - seedGenotype:
       size: 1
       trait: 1
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 0
-      b1: 0
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
+  - seedGenotype:
       size: 1
       trait: 2
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 0
-      a2: 0
-      b1: 1
-      b2: 1
-      p1: 1
-      f1: 0
-      f2: 0
+  - seedGenotype:
       size: 2
       trait: 0
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 0
-      a2: 0
-      b1: 1
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
+  - seedGenotype:
       size: 2
       trait: 1
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 0
-      a2: 0
-      b1: 0
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
+  - seedGenotype:
       size: 2
       trait: 2
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 1
-      b1: 1
-      b2: 1
-      p1: 1
-      f1: 0
-      f2: 0
-      size: 0
+  - seedGenotype:
+      size: 3
       trait: 0
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 1
-      b1: 1
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
-      size: 0
+  - seedGenotype:
+      size: 3
       trait: 1
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 1
-      b1: 0
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
-      size: 0
+  - seedGenotype:
+      size: 3
       trait: 2
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 0
-      b1: 1
-      b2: 1
-      p1: 1
-      f1: 0
-      f2: 0
+  - seedGenotype:
       size: 1
       trait: 0
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 0
-      b1: 1
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
+  - seedGenotype:
       size: 1
       trait: 1
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 0
-      b1: 0
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
+  - seedGenotype:
       size: 1
       trait: 2
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 0
-      a2: 0
-      b1: 1
-      b2: 1
-      p1: 1
-      f1: 0
-      f2: 0
+  - seedGenotype:
       size: 2
       trait: 0
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 0
-      a2: 0
-      b1: 1
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
+  - seedGenotype:
       size: 2
       trait: 1
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 0
-      a2: 0
-      b1: 0
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
+  - seedGenotype:
       size: 2
       trait: 2
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 1
-      b1: 1
-      b2: 1
-      p1: 1
-      f1: 0
-      f2: 0
-      size: 0
+  - seedGenotype:
+      size: 3
       trait: 0
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 1
-      b1: 1
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
-      size: 0
+  - seedGenotype:
+      size: 3
       trait: 1
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 1
-      b1: 0
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
-      size: 0
+  - seedGenotype:
+      size: 3
       trait: 2
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 0
-      b1: 1
-      b2: 1
-      p1: 1
-      f1: 0
-      f2: 0
+  - seedGenotype:
       size: 1
       trait: 0
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 0
-      b1: 0
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
-      size: 1
-      trait: 2
-      generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 0
-      a2: 0
-      b1: 1
-      b2: 1
-      p1: 1
-      f1: 0
-      f2: 0
-      size: 2
-      trait: 0
-      generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 0
-      a2: 0
-      b1: 1
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
-      size: 2
-      trait: 1
-      generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 0
-      a2: 0
-      b1: 0
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
-      size: 2
-      trait: 2
-      generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 1
-      b1: 1
-      b2: 1
-      p1: 1
-      f1: 0
-      f2: 0
-      size: 0
-      trait: 0
-      generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 1
-      b1: 1
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
-      size: 0
-      trait: 1
-      generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 1
-      b1: 0
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
-      size: 0
-      trait: 2
-      generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 0
-      b1: 1
-      b2: 1
-      p1: 1
-      f1: 0
-      f2: 0
-      size: 1
-      trait: 0
-      generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 0
-      b1: 1
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
+  - seedGenotype:
       size: 1
       trait: 1
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 0
-      b1: 0
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
+  - seedGenotype:
       size: 1
       trait: 2
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 0
-      a2: 0
-      b1: 1
-      b2: 1
-      p1: 1
-      f1: 0
-      f2: 0
+  - seedGenotype:
       size: 2
       trait: 0
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 0
-      a2: 0
-      b1: 1
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
+  - seedGenotype:
       size: 2
       trait: 1
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 0
-      a2: 0
-      b1: 0
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
+  - seedGenotype:
       size: 2
       trait: 2
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 1
-      b1: 1
-      b2: 1
-      p1: 1
-      f1: 0
-      f2: 0
-      size: 0
+  - seedGenotype:
+      size: 3
       trait: 0
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 1
-      b1: 1
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
-      size: 0
+  - seedGenotype:
+      size: 3
       trait: 1
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 1
-      b1: 0
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
-      size: 0
+  - seedGenotype:
+      size: 3
       trait: 2
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 0
-      b1: 1
-      b2: 1
-      p1: 1
-      f1: 0
-      f2: 0
+  - seedGenotype:
       size: 1
       trait: 0
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 0
-      b1: 1
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
+  - seedGenotype:
       size: 1
       trait: 1
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 0
-      b1: 0
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
+  - seedGenotype:
       size: 1
       trait: 2
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 0
-      a2: 0
-      b1: 1
-      b2: 1
-      p1: 1
-      f1: 0
-      f2: 0
+  - seedGenotype:
       size: 2
       trait: 0
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 0
-      a2: 0
-      b1: 1
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
+  - seedGenotype:
       size: 2
       trait: 1
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 0
-      a2: 0
-      b1: 0
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
+  - seedGenotype:
       size: 2
       trait: 2
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 1
-      b1: 1
-      b2: 1
-      p1: 1
-      f1: 0
-      f2: 0
-      size: 0
+  - seedGenotype:
+      size: 3
       trait: 0
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 1
-      b1: 1
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
-      size: 0
+  - seedGenotype:
+      size: 3
       trait: 1
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 1
-      b1: 0
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
-      size: 0
+  - seedGenotype:
+      size: 3
       trait: 2
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 0
-      b1: 1
-      b2: 1
-      p1: 1
-      f1: 0
-      f2: 0
+  - seedGenotype:
       size: 1
       trait: 0
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 0
-      b1: 1
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
+  - seedGenotype:
       size: 1
       trait: 1
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 0
-      b1: 0
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
+  - seedGenotype:
       size: 1
       trait: 2
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 0
-      a2: 0
-      b1: 1
-      b2: 1
-      p1: 1
-      f1: 0
-      f2: 0
+  - seedGenotype:
       size: 2
       trait: 0
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 0
-      a2: 0
-      b1: 1
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
+  - seedGenotype:
       size: 2
       trait: 1
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 0
-      a2: 0
-      b1: 0
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
+  - seedGenotype:
       size: 2
       trait: 2
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 1
-      b1: 1
-      b2: 1
-      p1: 1
-      f1: 0
-      f2: 0
-      size: 0
+  - seedGenotype:
+      size: 3
       trait: 0
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 1
-      b1: 1
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
-      size: 0
+  - seedGenotype:
+      size: 3
       trait: 1
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 1
-      b1: 0
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
-      size: 0
+  - seedGenotype:
+      size: 3
       trait: 2
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 0
-      b1: 1
-      b2: 1
-      p1: 1
-      f1: 0
-      f2: 0
+  - seedGenotype:
       size: 1
       trait: 0
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 0
-      b1: 1
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
+  - seedGenotype:
       size: 1
       trait: 1
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 0
-      a2: 0
-      b1: 1
-      b2: 1
-      p1: 1
-      f1: 0
-      f2: 0
-      size: 2
-      trait: 0
-      generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 0
-      a2: 0
-      b1: 1
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
-      size: 2
-      trait: 1
-      generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 0
-      a2: 0
-      b1: 0
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
-      size: 2
-      trait: 2
-      generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 1
-      b1: 1
-      b2: 1
-      p1: 1
-      f1: 0
-      f2: 0
-      size: 0
-      trait: 0
-      generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 1
-      b1: 1
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
-      size: 0
-      trait: 1
-      generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 1
-      b1: 0
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
-      size: 0
-      trait: 2
-      generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 0
-      b1: 1
-      b2: 1
-      p1: 1
-      f1: 0
-      f2: 0
-      size: 1
-      trait: 0
-      generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 0
-      b1: 1
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
-      size: 1
-      trait: 1
-      generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 1
-      a2: 0
-      b1: 0
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
+  - seedGenotype:
       size: 1
       trait: 2
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 0
-      a2: 0
-      b1: 1
-      b2: 1
-      p1: 1
-      f1: 0
-      f2: 0
+  - seedGenotype:
       size: 2
       trait: 0
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 0
-      a2: 0
-      b1: 1
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
+  - seedGenotype:
       size: 2
       trait: 1
       generation: 0
-  - quantity: 0
-    seedGenotype:
-      a1: 0
-      a2: 0
-      b1: 0
-      b2: 0
-      p1: 1
-      f1: 0
-      f2: 0
+  - seedGenotype:
       size: 2
       trait: 2
       generation: 0
+  - seedGenotype:
+      size: 3
+      trait: 0
+      generation: 0
+  - seedGenotype:
+      size: 3
+      trait: 1
+      generation: 0
+  - seedGenotype:
+      size: 3
+      trait: 2
+      generation: 0
+  - seedGenotype:
+      size: 1
+      trait: 0
+      generation: 0
+  - seedGenotype:
+      size: 1
+      trait: 1
+      generation: 0
+  - seedGenotype:
+      size: 1
+      trait: 2
+      generation: 0
+  - seedGenotype:
+      size: 2
+      trait: 0
+      generation: 0
+  - seedGenotype:
+      size: 2
+      trait: 1
+      generation: 0
+  - seedGenotype:
+      size: 2
+      trait: 2
+      generation: 0
+  - seedGenotype:
+      size: 3
+      trait: 0
+      generation: 0
+  - seedGenotype:
+      size: 3
+      trait: 1
+      generation: 0
+  - seedGenotype:
+      size: 3
+      trait: 2
+      generation: 0
+  - seedGenotype:
+      size: 1
+      trait: 0
+      generation: 0
+  - seedGenotype:
+      size: 1
+      trait: 1
+      generation: 0
+  - seedGenotype:
+      size: 1
+      trait: 2
+      generation: 0
+  - seedGenotype:
+      size: 2
+      trait: 0
+      generation: 0
+  - seedGenotype:
+      size: 2
+      trait: 1
+      generation: 0
+  - seedGenotype:
+      size: 2
+      trait: 2
+      generation: 0
+  - seedGenotype:
+      size: 3
+      trait: 0
+      generation: 0
+  - seedGenotype:
+      size: 3
+      trait: 1
+      generation: 0
+  - seedGenotype:
+      size: 3
+      trait: 2
+      generation: 0
+  - seedGenotype:
+      size: 1
+      trait: 0
+      generation: 0
+  - seedGenotype:
+      size: 1
+      trait: 1
+      generation: 0
+  - seedGenotype:
+      size: 1
+      trait: 2
+      generation: 0
+  - seedGenotype:
+      size: 2
+      trait: 0
+      generation: 0
+  - seedGenotype:
+      size: 2
+      trait: 1
+      generation: 0
+  - seedGenotype:
+      size: 2
+      trait: 2
+      generation: 0
+  - seedGenotype:
+      size: 3
+      trait: 0
+      generation: 0
+  - seedGenotype:
+      size: 3
+      trait: 1
+      generation: 0
+  - seedGenotype:
+      size: 3
+      trait: 2
+      generation: 0
+  DecorList: []
+  FixtureList: []

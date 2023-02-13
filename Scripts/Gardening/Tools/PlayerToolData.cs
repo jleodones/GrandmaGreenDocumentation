@@ -105,7 +105,7 @@ namespace GrandmaGreen.Garden
         {
             equippedSeed = (PlantId)plantIndex;
             equippedSeedGenotype = genotype;
-
+            ToolSelection(3);
             onSeedEquipped?.Invoke();
         }
 

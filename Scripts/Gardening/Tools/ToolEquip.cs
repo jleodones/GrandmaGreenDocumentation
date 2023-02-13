@@ -16,11 +16,15 @@ namespace GrandmaGreen.Garden
         void OnEnable()
         {
             playerTools.onToolSelected += SetEquippedTool;
+            playerTools.onSeedEquipped += SetEquippedSeed;
+            playerTools.onSeedEmpty += ClearSeed;
         }
 
         void OnDisable()
         {
             playerTools.onToolSelected -= SetEquippedTool;
+            playerTools.onSeedEquipped -= SetEquippedSeed;
+            playerTools.onSeedEmpty -= ClearSeed;
         }
 
         void SetEquippedTool(ToolData toolData)
@@ -28,11 +32,23 @@ namespace GrandmaGreen.Garden
             if (toolData.toolIndex == 3)
             {
                 toolSpriteResolver.SetCategoryAndLabel(SPRITE_CATEGORY, "Empty");
-                //spriteRenderer.sprite = collections.GetSprite(playerTools.equippedSeed, playerTools.equippedSeedGenotype);
+
+                if (playerTools.equippedSeed != 0)SetEquippedSeed();
                 return;
             }
 
+            ClearSeed();
             toolSpriteResolver.SetCategoryAndLabel(SPRITE_CATEGORY, toolData.toolName);
+        }
+
+        void SetEquippedSeed()
+        {
+            spriteRenderer.sprite = CollectionsSO.LoadedInstance.GetSprite(playerTools.equippedSeed, playerTools.equippedSeedGenotype);
+        }
+
+        void ClearSeed()
+        {
+            spriteRenderer.sprite = null;
         }
     }
 }

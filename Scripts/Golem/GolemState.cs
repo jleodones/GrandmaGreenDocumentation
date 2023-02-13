@@ -14,5 +14,7 @@ namespace GrandmaGreen.Entities
         public bool isMature;
         public bool isTravelling;
         public bool assignedWatering;
+
+        public float[] assignedCellInWorldSpace;
     }
 }
