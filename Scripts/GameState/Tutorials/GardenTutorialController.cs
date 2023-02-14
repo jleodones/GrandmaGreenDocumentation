@@ -78,6 +78,8 @@ namespace GrandmaGreen
             areaController.onGardenTick += ForceSetTutorialPlant;
 
             dialogueable.onFinishDialogue += OnTutorialDialogueRead;
+
+            tutorialStateData.unlockExtraUI += EnableExtraUI;
         }
 
 
@@ -103,6 +105,8 @@ namespace GrandmaGreen
             areaController.onGardenTick -= ForceSetTutorialPlant;
 
             dialogueable.onFinishDialogue -= OnTutorialDialogueRead;
+
+            tutorialStateData.unlockExtraUI -= EnableExtraUI;
         }
 
         void PlaySlideshow(SlideshowData slideshowData)
@@ -121,7 +125,7 @@ namespace GrandmaGreen
                 toolsMenu.DisableToolButton("fertilizer-container");
 
 
-            if(tutorialStateData.coreLoopTutorial.isComplete)
+            if (tutorialStateData.coreLoopTutorial.isComplete)
                 return;
 
             uint progress = tutorialStateData.coreLoopTutorial.progress;
@@ -228,6 +232,12 @@ namespace GrandmaGreen
             toolsMenu.DisableToolButton("watering-container");
         }
 
+        void EnableExtraUI()
+        {
+            HUD.EnableButton("collectionsButton");
+            HUD.EnableButton("customizationButton");
+        }
+
         void DoTownSquareTap()
         {
             TriggerTutorialDialogue(leaveDialogue);
@@ -274,8 +284,16 @@ namespace GrandmaGreen
             for (int i = 0; i < hintPositions.Length; i++)
             {
 
-                while ((playerEntity.transform.position - hintPositions[i].position).magnitude > 2.0f)
-                    yield return null;
+                if (i == hintPositions.Length - 1)
+                {
+                    while ((playerEntity.transform.position - hintPositions[i].position).magnitude > 2.5f)
+                        yield return null;
+                }
+                else
+                    while ((playerEntity.transform.position - hintPositions[i].position).magnitude > 2.0f)
+                        yield return null;
+
+
 
                 if (i < hintPositions.Length - 1)
                     tapHint.transform.DOMove(hintPositions[i + 1].position, 1.0f);

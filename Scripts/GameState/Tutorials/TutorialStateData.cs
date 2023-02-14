@@ -57,6 +57,8 @@ namespace GrandmaGreen
         public event System.Action tapHereGrandma;
         public event System.Action tapHereExit;
 
+        public event System.Action unlockExtraUI;
+
         public event System.Action introduceFirstGolem;
         public event System.Action explainEvolvedGolem;
 
@@ -195,7 +197,7 @@ namespace GrandmaGreen
                     //TODO: Force Grow plant, prevent from dying
                     gardenToolSet.onHarvest += onHarvestFlag.Raise;
                     disableSeedPacket?.Invoke();
-                    disableWatering?.Invoke();
+                    //disableWatering?.Invoke();
                     disableLevelTransition?.Invoke();
                     break;
             }
@@ -211,6 +213,7 @@ namespace GrandmaGreen
             enableSeedPacket?.Invoke();
             enableWatering?.Invoke();
             enableLevelTransition?.Invoke();
+            unlockExtraUI?.Invoke();
         }
 
         #endregion
