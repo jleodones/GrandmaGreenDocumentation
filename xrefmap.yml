@@ -12871,6 +12871,12 @@ references:
   commentId: F:GrandmaGreen.TutorialStateData.tutorialEnabled
   fullName: GrandmaGreen.TutorialStateData.tutorialEnabled
   nameWithType: TutorialStateData.tutorialEnabled
+- uid: GrandmaGreen.TutorialStateData.unlockExtraUI
+  name: unlockExtraUI
+  href: api/GrandmaGreen.TutorialStateData.html#GrandmaGreen_TutorialStateData_unlockExtraUI
+  commentId: E:GrandmaGreen.TutorialStateData.unlockExtraUI
+  fullName: GrandmaGreen.TutorialStateData.unlockExtraUI
+  nameWithType: TutorialStateData.unlockExtraUI
 - uid: GrandmaGreen.TutorialUIDisplay
   name: TutorialUIDisplay
   href: api/GrandmaGreen.TutorialUIDisplay.html
