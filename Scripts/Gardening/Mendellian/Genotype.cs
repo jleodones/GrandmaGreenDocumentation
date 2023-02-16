@@ -88,12 +88,12 @@ namespace GrandmaGreen.Garden
                     trait_suf = "Dom";
                     break;
             }
-            if (CollectionsSO.IsFlower(id))
+            if (CollectionsSO.IsFlower(id) || CollectionsSO.IsVegetable(id))
             {
                 string mega_suf = generation == Generation.F2 ? "_M" : "";
                 return string.Format("_{0}{1}", trait_suf, mega_suf);
             }
-            else if (CollectionsSO.IsFruit(id) || CollectionsSO.IsVegetable(id))
+            else if (CollectionsSO.IsFruit(id))
             {
                 string size_suf = "";
                 switch (size)
