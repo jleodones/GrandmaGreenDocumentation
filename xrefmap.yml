@@ -785,7 +785,7 @@ references:
 - uid: GrandmaGreen.AreaController.onTilemapSelection
   name: onTilemapSelection
   href: api/GrandmaGreen.AreaController.html#GrandmaGreen_AreaController_onTilemapSelection
-  commentId: E:GrandmaGreen.AreaController.onTilemapSelection
+  commentId: F:GrandmaGreen.AreaController.onTilemapSelection
   fullName: GrandmaGreen.AreaController.onTilemapSelection
   nameWithType: AreaController.onTilemapSelection
 - uid: GrandmaGreen.AreaController.OnValidate
@@ -7053,6 +7053,19 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Garden.GardenAreaController.AddGardenDecorItem
   nameWithType: GardenAreaController.AddGardenDecorItem
+- uid: GrandmaGreen.Garden.GardenAreaController.AreaSelection(Vector3)
+  name: AreaSelection(Vector3)
+  href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_AreaSelection_Vector3_
+  commentId: M:GrandmaGreen.Garden.GardenAreaController.AreaSelection(Vector3)
+  fullName: GrandmaGreen.Garden.GardenAreaController.AreaSelection(Vector3)
+  nameWithType: GardenAreaController.AreaSelection(Vector3)
+- uid: GrandmaGreen.Garden.GardenAreaController.AreaSelection*
+  name: AreaSelection
+  href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_AreaSelection_
+  commentId: Overload:GrandmaGreen.Garden.GardenAreaController.AreaSelection
+  isSpec: "True"
+  fullName: GrandmaGreen.Garden.GardenAreaController.AreaSelection
+  nameWithType: GardenAreaController.AreaSelection
 - uid: GrandmaGreen.Garden.GardenAreaController.Awake
   name: Awake()
   href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_Awake
@@ -13648,6 +13661,19 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.UI.Collections.TabbedInventory.RebuildJar
   nameWithType: TabbedInventory.RebuildJar
+- uid: GrandmaGreen.UI.Collections.TabbedInventory.SellDrag(Canvas,GrandmaGreen.UI.Collections.TabbedInventoryItemController)
+  name: SellDrag(Canvas, TabbedInventoryItemController)
+  href: api/GrandmaGreen.UI.Collections.TabbedInventory.html#GrandmaGreen_UI_Collections_TabbedInventory_SellDrag_Canvas_GrandmaGreen_UI_Collections_TabbedInventoryItemController_
+  commentId: M:GrandmaGreen.UI.Collections.TabbedInventory.SellDrag(Canvas,GrandmaGreen.UI.Collections.TabbedInventoryItemController)
+  fullName: GrandmaGreen.UI.Collections.TabbedInventory.SellDrag(Canvas, GrandmaGreen.UI.Collections.TabbedInventoryItemController)
+  nameWithType: TabbedInventory.SellDrag(Canvas, TabbedInventoryItemController)
+- uid: GrandmaGreen.UI.Collections.TabbedInventory.SellDrag*
+  name: SellDrag
+  href: api/GrandmaGreen.UI.Collections.TabbedInventory.html#GrandmaGreen_UI_Collections_TabbedInventory_SellDrag_
+  commentId: Overload:GrandmaGreen.UI.Collections.TabbedInventory.SellDrag
+  isSpec: "True"
+  fullName: GrandmaGreen.UI.Collections.TabbedInventory.SellDrag
+  nameWithType: TabbedInventory.SellDrag
 - uid: GrandmaGreen.UI.Collections.TabbedInventory.sellingUI
   name: sellingUI
   href: api/GrandmaGreen.UI.Collections.TabbedInventory.html#GrandmaGreen_UI_Collections_TabbedInventory_sellingUI
