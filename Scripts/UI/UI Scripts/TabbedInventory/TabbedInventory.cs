@@ -389,10 +389,12 @@ namespace GrandmaGreen.UI.Collections
             switch (type)
             {
                 case ItemType.Plant:
-                    StartCoroutine(DemoDrag(canvas, item));
+                    StartCoroutine(SellDrag(canvas, item));
                     break;
                 case ItemType.Seed:
                     StartCoroutine(DemoDrag(canvas, item));
+                    // Disabled until seed selling implemented
+                    //StartCoroutine(SellDrag(canvas, item));
                     break;
                 case ItemType.Tool:
                     StartCoroutine(DemoDrag(canvas, item));
@@ -401,6 +403,31 @@ namespace GrandmaGreen.UI.Collections
                     StartCoroutine(DecorationDrag(canvas, item));
                     break;
             }
+        }
+
+        public IEnumerator SellDrag(Canvas canvas, TabbedInventoryItemController item)
+        {
+            float scale = m_rootVisualElement.resolvedStyle.width / (float)Screen.width;
+
+            do
+            {
+                itemSprite.transform.position = pointerState.positionRaw;
+
+                if (sellingUI && sellingUI.IsInBounds(itemSprite.transform.position * scale) && !handled)
+                {
+                    sellingUI.AddItem(item.inventoryItemData);
+
+                    TeardownDrag(canvas, item);
+
+                    handled = true;
+                }
+
+                yield return null;
+
+            } while (!handled && pointerState.phase != PointerState.Phase.NONE);
+
+            if (!handled)
+                TeardownDrag(canvas, item);
         }
 
         public IEnumerator DecorationDrag(Canvas canvas, TabbedInventoryItemController item)

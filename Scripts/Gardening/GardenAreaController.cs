@@ -3,6 +3,7 @@ using GrandmaGreen.Collections;
 using GrandmaGreen.Entities;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 namespace GrandmaGreen.Garden
 {
@@ -94,6 +95,64 @@ namespace GrandmaGreen.Garden
             {
                 AreaDragged(eventData.interactionPoint);
             }
+        }
+
+        public override void AreaSelection(Vector3 worldPoint)
+        {
+            lastSelectedPosition = worldPoint;
+            lastSelectedCell = tilemap.WorldToCell(worldPoint);
+
+            lastSelectedTile = tilemap.GetTile(lastSelectedCell);
+
+            playerController.ClearActionQueue();
+            onTilemapSelection?.Invoke(lastSelectedCell);
+
+            playerController.SetDestination(CheckPlayerDestination(lastSelectedPosition));
+
+            // Release golem selected
+            EventManager.instance.HandleEVENT_GOLEM_RELEASE_SELECTED();
+
+
+            if (((lastSelectedTile as IGameTile)) != null)
+            {
+                playerController.QueueEntityAction(((IGameTile)lastSelectedTile).DoTileAction);
+
+            }
+        }
+
+        Vector3 CheckPlayerDestination(Vector3 worldPoint)
+        {
+            if(playerTools.currentTool.toolIndex==0)
+                return worldPoint;
+
+            Vector2 direction = (worldPoint - playerController.GetEntityPos()).normalized;
+            Vector2Int offset;
+
+            if (Mathf.Abs(direction.x) > Mathf.Abs(direction.y) || direction.y > 0)
+            {
+                offset = direction.x > 0 ?  Vector2Int.left : Vector2Int.right;
+            }
+            else
+            {
+                offset = Vector2Int.up;
+            }
+            Vector3Int offsetCellPos = lastSelectedCell + (Vector3Int)offset;
+            TileBase offsetTile = tilemap.GetTile(offsetCellPos);
+
+            if (offsetTile == null || !tileStore[offsetTile].pathable)
+            {
+                if (offset == Vector2Int.up)
+                {
+                    offset = direction.x > 0 ? Vector2Int.right : Vector2Int.left;
+                }
+                else
+                    offset =  Vector2Int.up;
+            }
+
+            offsetCellPos = lastSelectedCell + (Vector3Int)offset;
+
+
+            return (tilemap.GetCellCenterWorld(offsetCellPos) + worldPoint)/2;
         }
 
         //Selects a garden tile in world space
