@@ -11,6 +11,7 @@ public struct TileData
     public bool plantable;
     public bool plottable;
     public bool occupied;
+    public bool fertilized;
 }
 
 [CreateAssetMenu(fileName = "TileStore", menuName = "GrandmaGreen/TileStore", order = 0)]

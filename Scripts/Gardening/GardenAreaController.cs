@@ -718,6 +718,16 @@ namespace GrandmaGreen.Garden
             ChangeGardenTile(position, tileStore[2]);
         }
 
+        public void ChangeGardenTileToPlot_Fertilized(Vector3Int position)
+        {
+            ChangeGardenTile(position, tileStore[5]);
+        }
+
+        public void ChangeOccupiedGardenTileTo_Fertilized(Vector3Int position)
+        {
+            ChangeGardenTile(position, tileStore[6]);
+        }
+
         #endregion
 
         #region  Customziation

@@ -91,9 +91,19 @@ namespace GrandmaGreen.Garden
 
         void FertilizerAction(ToolActionData action)
         {
-            if (action.tile.occupied)
+            if (!action.tile.fertilized)
             {
-                action.area.FertilizePlant(action.gridcell);
+                if (action.tile.occupied)
+                {
+                    Debug.Log("Fertilizing an already occupied tile");
+                    action.area.ChangeOccupiedGardenTileTo_Fertilized(action.gridcell);
+                    action.area.FertilizePlant(action.gridcell);
+                } else if(action.tile.plantable)
+                {
+                    Debug.Log("Fertilizing an unoccupied tile");
+                    action.area.ChangeGardenTileToPlot_Fertilized(action.gridcell);
+                }
+
                 action.tool.toolSFX[0].Play();
             }
         }
@@ -105,7 +115,17 @@ namespace GrandmaGreen.Garden
             {
                 EventManager.instance.HandleEVENT_INVENTORY_REMOVE_SEED((ushort)action.seedType, action.seedGenotype);
                 action.area.CreatePlant(action.seedType, action.seedGenotype, action.gridcell);
-                action.area.ChangeGardenTileToPlot_Occupied(action.gridcell);
+
+                if(!action.tile.fertilized)
+                {
+                    action.area.ChangeGardenTileToPlot_Occupied(action.gridcell);
+                }
+                else
+                {
+                    action.area.ChangeOccupiedGardenTileTo_Fertilized(action.gridcell);
+                    action.area.FertilizePlant(action.gridcell);
+                }
+
                 action.tool.toolSFX[0].Play();
 
                 onPlant?.Invoke();

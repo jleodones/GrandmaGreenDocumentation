@@ -14,7 +14,7 @@
 }
 
 .inventory-item {
-    border-top-left-radius: 50%;
+    border-top-left-radius: 850ms;
     border-bottom-left-radius: 50%;
     border-top-right-radius: 50%;
     border-bottom-right-radius: 50%;
@@ -141,4 +141,9 @@
     flex-wrap: wrap;
     align-items: flex-start;
     justify-content: flex-start;
+}
+
+.closed-inventory {
+    translate: 100% 0;
+    transition-duration: 500ms;
 }

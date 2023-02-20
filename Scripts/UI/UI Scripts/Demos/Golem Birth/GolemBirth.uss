@@ -1,8 +1,39 @@
-.clouds:hover {
+.floatClouds {
     translate: 200% 0;
-    transition-property: translate;
-    transition-duration: 35s;
+    transition-duration: 500s;
 }
 
-.clouds {
+.resetCloud {
+    left: -100%;
+}
+
+.pushLeftCloud {
+    translate: 25% 0;
+    transition-duration: 800ms;
+}
+
+.pushGolem {
+    translate: 0 -110%;
+    transition-duration: 500ms;
+}
+
+.bounceGolem {
+    translate: 0 -115%;
+}
+
+#golemSprite {
+    transition-duration: 2s;
+}
+
+.pushRightCloud {
+    translate: -25% 0;
+    transition-duration: 800ms;
+}
+
+.smallText {
+    scale: 0.5 0.5;
+}
+
+.largeText {
+    scale: 1.5 1.5;
 }

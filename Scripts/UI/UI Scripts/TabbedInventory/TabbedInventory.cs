@@ -84,8 +84,9 @@ namespace GrandmaGreen.UI.Collections
         public override void OpenUI()
         {
             // Close HUD first.
-            EventManager.instance.HandleEVENT_CLOSE_HUD();
-            base.OpenUI();
+            //EventManager.instance.HandleEVENT_CLOSE_HUD();
+            //base.OpenUI();
+            m_rootVisualElement.ToggleInClassList("closed-inventory");
             // Play open inventory SFX.
             soundContainers[0].Play();
         }
@@ -94,7 +95,8 @@ namespace GrandmaGreen.UI.Collections
         {
             // Play the inventory close SFX.
             soundContainers[1].Play();
-            base.CloseUI();
+            m_rootVisualElement.ToggleInClassList("closed-inventory");
+            //base.CloseUI();
             EventManager.instance.HandleEVENT_OPEN_HUD();
         }
 
