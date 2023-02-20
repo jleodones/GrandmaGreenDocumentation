@@ -201,6 +201,12 @@ references:
   commentId: T:Global.TileData
   fullName: TileData
   nameWithType: TileData
+- uid: Global.TileData.fertilized
+  name: fertilized
+  href: api/Global.TileData.html#Global_TileData_fertilized
+  commentId: F:Global.TileData.fertilized
+  fullName: TileData.fertilized
+  nameWithType: TileData.fertilized
 - uid: Global.TileData.occupied
   name: occupied
   href: api/Global.TileData.html#Global_TileData_occupied
@@ -7118,6 +7124,19 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Garden.GardenAreaController.ChangeGardenTileToPlot_Empty
   nameWithType: GardenAreaController.ChangeGardenTileToPlot_Empty
+- uid: GrandmaGreen.Garden.GardenAreaController.ChangeGardenTileToPlot_Fertilized(Vector3Int)
+  name: ChangeGardenTileToPlot_Fertilized(Vector3Int)
+  href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_ChangeGardenTileToPlot_Fertilized_Vector3Int_
+  commentId: M:GrandmaGreen.Garden.GardenAreaController.ChangeGardenTileToPlot_Fertilized(Vector3Int)
+  fullName: GrandmaGreen.Garden.GardenAreaController.ChangeGardenTileToPlot_Fertilized(Vector3Int)
+  nameWithType: GardenAreaController.ChangeGardenTileToPlot_Fertilized(Vector3Int)
+- uid: GrandmaGreen.Garden.GardenAreaController.ChangeGardenTileToPlot_Fertilized*
+  name: ChangeGardenTileToPlot_Fertilized
+  href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_ChangeGardenTileToPlot_Fertilized_
+  commentId: Overload:GrandmaGreen.Garden.GardenAreaController.ChangeGardenTileToPlot_Fertilized
+  isSpec: "True"
+  fullName: GrandmaGreen.Garden.GardenAreaController.ChangeGardenTileToPlot_Fertilized
+  nameWithType: GardenAreaController.ChangeGardenTileToPlot_Fertilized
 - uid: GrandmaGreen.Garden.GardenAreaController.ChangeGardenTileToPlot_Occupied(Vector3Int)
   name: ChangeGardenTileToPlot_Occupied(Vector3Int)
   href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_ChangeGardenTileToPlot_Occupied_Vector3Int_
@@ -7131,6 +7150,19 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Garden.GardenAreaController.ChangeGardenTileToPlot_Occupied
   nameWithType: GardenAreaController.ChangeGardenTileToPlot_Occupied
+- uid: GrandmaGreen.Garden.GardenAreaController.ChangeOccupiedGardenTileTo_Fertilized(Vector3Int)
+  name: ChangeOccupiedGardenTileTo_Fertilized(Vector3Int)
+  href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_ChangeOccupiedGardenTileTo_Fertilized_Vector3Int_
+  commentId: M:GrandmaGreen.Garden.GardenAreaController.ChangeOccupiedGardenTileTo_Fertilized(Vector3Int)
+  fullName: GrandmaGreen.Garden.GardenAreaController.ChangeOccupiedGardenTileTo_Fertilized(Vector3Int)
+  nameWithType: GardenAreaController.ChangeOccupiedGardenTileTo_Fertilized(Vector3Int)
+- uid: GrandmaGreen.Garden.GardenAreaController.ChangeOccupiedGardenTileTo_Fertilized*
+  name: ChangeOccupiedGardenTileTo_Fertilized
+  href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_ChangeOccupiedGardenTileTo_Fertilized_
+  commentId: Overload:GrandmaGreen.Garden.GardenAreaController.ChangeOccupiedGardenTileTo_Fertilized
+  isSpec: "True"
+  fullName: GrandmaGreen.Garden.GardenAreaController.ChangeOccupiedGardenTileTo_Fertilized
+  nameWithType: GardenAreaController.ChangeOccupiedGardenTileTo_Fertilized
 - uid: GrandmaGreen.Garden.GardenAreaController.ClearPlants
   name: ClearPlants()
   href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_ClearPlants
@@ -9458,6 +9490,38 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.GeneralExtensions.WithNewX
   nameWithType: GeneralExtensions.WithNewX
+- uid: GrandmaGreen.GolemBirthUIDisplay
+  name: GolemBirthUIDisplay
+  href: api/GrandmaGreen.GolemBirthUIDisplay.html
+  commentId: T:GrandmaGreen.GolemBirthUIDisplay
+  fullName: GrandmaGreen.GolemBirthUIDisplay
+  nameWithType: GolemBirthUIDisplay
+- uid: GrandmaGreen.GolemBirthUIDisplay.OpenUI
+  name: OpenUI()
+  href: api/GrandmaGreen.GolemBirthUIDisplay.html#GrandmaGreen_GolemBirthUIDisplay_OpenUI
+  commentId: M:GrandmaGreen.GolemBirthUIDisplay.OpenUI
+  fullName: GrandmaGreen.GolemBirthUIDisplay.OpenUI()
+  nameWithType: GolemBirthUIDisplay.OpenUI()
+- uid: GrandmaGreen.GolemBirthUIDisplay.OpenUI*
+  name: OpenUI
+  href: api/GrandmaGreen.GolemBirthUIDisplay.html#GrandmaGreen_GolemBirthUIDisplay_OpenUI_
+  commentId: Overload:GrandmaGreen.GolemBirthUIDisplay.OpenUI
+  isSpec: "True"
+  fullName: GrandmaGreen.GolemBirthUIDisplay.OpenUI
+  nameWithType: GolemBirthUIDisplay.OpenUI
+- uid: GrandmaGreen.GolemBirthUIDisplay.Start
+  name: Start()
+  href: api/GrandmaGreen.GolemBirthUIDisplay.html#GrandmaGreen_GolemBirthUIDisplay_Start
+  commentId: M:GrandmaGreen.GolemBirthUIDisplay.Start
+  fullName: GrandmaGreen.GolemBirthUIDisplay.Start()
+  nameWithType: GolemBirthUIDisplay.Start()
+- uid: GrandmaGreen.GolemBirthUIDisplay.Start*
+  name: Start
+  href: api/GrandmaGreen.GolemBirthUIDisplay.html#GrandmaGreen_GolemBirthUIDisplay_Start_
+  commentId: Overload:GrandmaGreen.GolemBirthUIDisplay.Start
+  isSpec: "True"
+  fullName: GrandmaGreen.GolemBirthUIDisplay.Start
+  nameWithType: GolemBirthUIDisplay.Start
 - uid: GrandmaGreen.GrandmaGreenGameState
   name: GrandmaGreenGameState
   href: api/GrandmaGreen.GrandmaGreenGameState.html

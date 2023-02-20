@@ -112,7 +112,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.TileData.html",
-          "hash": "eFQnerIMAqoV3BWupE7m/mwGndRzRQkhKuI8OXs7UuU="
+          "hash": "Wn4BaFGznNpwnj2U0koGR4a8BA/Tn/J01Zi0jcCUbgM="
         }
       },
       "is_incremental": false,
@@ -1108,7 +1108,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.Garden.GardenAreaController.html",
-          "hash": "9Tm9fyF5dSsWWeUURBV/E5XmEGPuYHDYKFL51qNPE/Y="
+          "hash": "5CfeRhQ9DCWB0HvhfzNzeJbsIkPwuxccSB7K3zez3P0="
         }
       },
       "is_incremental": false,
@@ -1373,6 +1373,18 @@
         ".html": {
           "relative_path": "api/GrandmaGreen.GeneralExtensions.html",
           "hash": "Tkd8qo21Lf+UN5KVCM3PdgaT0NGSrFxVNLrPAIVbx98="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GrandmaGreen.GolemBirthUIDisplay.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GrandmaGreen.GolemBirthUIDisplay.html",
+          "hash": "T6PkvArlAP370juVMZIk6ACTNaSdFE1PKMjWJCQjJaE="
         }
       },
       "is_incremental": false,
@@ -2344,7 +2356,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.UIDisplayBase.html",
-          "hash": "FBOAhdpmGVfNo+ISHOE99Wdj0pLojEA92lLVdiesA7Q="
+          "hash": "jnvHmczmfV/mIxNuFWNKmhmjHsP6K90r603kKsTM3Mo="
         }
       },
       "is_incremental": false,
@@ -2356,7 +2368,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.html",
-          "hash": "EhtNpTvhGDo6yGhrjfsU/eHDOdHIoglNtXYEEy7zZQQ="
+          "hash": "Cq05MxLD/uwUmszwJl9cVGJGQ6wW9j45nHLES2nzVdg="
         }
       },
       "is_incremental": false,
@@ -2368,7 +2380,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "UWCsee7/yuvgAx7UYTdJbSzu1Kvv/UdPaPctE0p9aww="
+          "hash": "pVr92pmFjU2umpJKoOO1PAGIa/l84iearVqndLD+MOw="
         }
       },
       "is_incremental": false,
@@ -2477,7 +2489,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 195,
+          "total_file_count": 196,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
