@@ -19,8 +19,10 @@ namespace GrandmaGreen.Garden
         [Header("Garden Management")]
         public GardenManager gardenManager;
         public GardenCustomizer gardenCustomizer;
+        
         public GardenVFX gardenVFX;
         public Cinemachine.CinemachineVirtualCamera customizationCamera;
+        public GameObject customizationCanvas;
         public GameObject defaultPlantPrefab;
         public Dictionary<Vector3Int, GameObject> plantPrefabLookup;
         public List<Collider> decorList;
@@ -749,6 +751,8 @@ namespace GrandmaGreen.Garden
             playerController.entity.StopActions();
             playerController.entity.gameObject.SetActive(false);
             EventManager.instance.HandleEVENT_GOLEM_DISABLE();
+
+            customizationCanvas.SetActive(true);
         }
 
         public void ExitCustomizationMode()
@@ -757,6 +761,8 @@ namespace GrandmaGreen.Garden
             customizationCamera.gameObject.SetActive(false);
             playerController.entity.gameObject.SetActive(true);
             EventManager.instance.HandleEVENT_GOLEM_ENABLE();
+
+            customizationCanvas.SetActive(false);
         }
 
         public void StartDecorCustomization(IInventoryItem item)
@@ -796,6 +802,10 @@ namespace GrandmaGreen.Garden
                 {
                     Destroy(m_CurrentDecorItem.gameObject);
                 }
+                else if (gardenCustomizer.deleteDecorItem)
+                {
+                    RemoveDecorItemFromGarden(m_CurrentDecorItem);
+                }
                 else
                     m_CurrentDecorItem.transform.position = m_OriginalPosition;
             }
@@ -808,6 +818,7 @@ namespace GrandmaGreen.Garden
         public void AddGardenDecorItem(GardenDecorItem decorItem)
         {
             gardenManager.UpdateDecorItem(areaIndex, decorItem.decorID, decorItem.transform.position);
+            EventManager.instance.HandleEVENT_INVENTORY_REMOVE_DECOR((ushort)decorItem.decorID);
 
             decorItem.onInteraction += StartDecorCustomization;
         }
@@ -821,6 +832,9 @@ namespace GrandmaGreen.Garden
         public void RemoveDecorItemFromGarden(GardenDecorItem decorItem)
         {
             Debug.Log("Decor item removed!");
+            gardenManager.RemoveDecorItem(areaIndex, decorItem.decorID, m_OriginalPosition);
+            EventManager.instance.HandleEVENT_INVENTORY_ADD_DECOR((ushort)decorItem.decorID);
+            Destroy(decorItem.gameObject);
         }
 
         #endregion

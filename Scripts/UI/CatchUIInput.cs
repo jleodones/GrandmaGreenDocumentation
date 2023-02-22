@@ -19,25 +19,45 @@ namespace GrandmaGreen
         {
             root = document.rootVisualElement;
 
-            root.RegisterCallback<PointerDownEvent>(OnWorldPointerDown);
-            root.RegisterCallback<PointerMoveEvent>(OnWorldPointerMove);
             root.RegisterCallback<PointerUpEvent>(OnWorldPointerUp);
-            root.RegisterCallback<PointerOutEvent>(OnWorldPointerExit);
+            root.RegisterCallback<PointerDownEvent>(OnWorldPointerDown);
+
+            root.RegisterCallback<PointerMoveEvent>(OnWorldPointerMove);
+            root.RegisterCallback<PointerOverEvent>(OnWorldPointerOver);
+
             root.RegisterCallback<PointerEnterEvent>(OnWorldPointerEnter);
+            root.RegisterCallback<PointerOutEvent>(OnWorldPointerExit);
+
+            root.RegisterCallback<PointerCaptureOutEvent>(OnWorldPointerOut);
+            root.RegisterCallback<PointerLeaveEvent>(OnWorldPointerLeave);
+
         }
 
         void OnDisable()
         {
-            root.UnregisterCallback<PointerDownEvent>(OnWorldPointerDown);
-            root.UnregisterCallback<PointerMoveEvent>(OnWorldPointerMove);
             root.UnregisterCallback<PointerUpEvent>(OnWorldPointerUp);
-            root.UnregisterCallback<PointerOutEvent>(OnWorldPointerExit);
+            root.UnregisterCallback<PointerDownEvent>(OnWorldPointerDown);
+
+            root.UnregisterCallback<PointerMoveEvent>(OnWorldPointerMove);
+            root.UnregisterCallback<PointerOverEvent>(OnWorldPointerOver);
+
             root.UnregisterCallback<PointerEnterEvent>(OnWorldPointerEnter);
+            root.UnregisterCallback<PointerOutEvent>(OnWorldPointerExit);
+            
+            root.UnregisterCallback<PointerCaptureOutEvent>(OnWorldPointerOut);
+            root.UnregisterCallback<PointerLeaveEvent>(OnWorldPointerLeave);
+
+
         }
 
         void OnWorldPointerDown(PointerDownEvent e)
         {
             m_PointerActive = true;
+        }
+
+        void OnWorldPointerUp(PointerUpEvent e)
+        {
+            m_PointerActive = false;
         }
 
         void OnWorldPointerMove(PointerMoveEvent e)
@@ -55,9 +75,19 @@ namespace GrandmaGreen
             m_PointerActive = false;
         }
 
-        void OnWorldPointerUp(PointerUpEvent e)
+        void OnWorldPointerLeave(PointerLeaveEvent e)
         {
             m_PointerActive = false;
+        }
+
+        void OnWorldPointerOut(PointerCaptureOutEvent e)
+        {
+            m_PointerActive = false;
+        }
+
+        void OnWorldPointerOver(PointerOverEvent e)
+        {
+            m_PointerActive = true;
         }
 
         void Update()
@@ -70,6 +100,7 @@ namespace GrandmaGreen
 
 
             touchInteraction.qPointerEvent = null;
+            m_PointerActive = false;
         }
     }
 }

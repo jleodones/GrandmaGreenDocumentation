@@ -31,6 +31,9 @@ namespace GrandmaGreen.Garden
             EventManager.instance.EVENT_OPEN_HUD += OpenUI;
             EventManager.instance.EVENT_CLOSE_HUD += CloseUI;
 
+            EventManager.instance.EVENT_TOGGLE_CUSTOMIZATION_MODE += ToggleUI;
+
+
             tabbedInventory.onPanelOpened += OpenUI;
             tabbedInventory.onPanelOpened += DisableInteraction;
 
@@ -52,6 +55,8 @@ namespace GrandmaGreen.Garden
 
             EventManager.instance.EVENT_OPEN_HUD -= OpenUI;
             EventManager.instance.EVENT_CLOSE_HUD -= CloseUI;
+
+            EventManager.instance.EVENT_TOGGLE_CUSTOMIZATION_MODE -= ToggleUI;
 
             tabbedInventory.onPanelOpened -= OpenUI;
             tabbedInventory.onPanelOpened -= DisableInteraction;
@@ -94,6 +99,14 @@ namespace GrandmaGreen.Garden
         {
             canvasGroup.alpha = 0;
             DisableInteraction();
+        }
+
+        void ToggleUI()
+        {
+            if (canvasGroup.alpha == 0)
+                OpenUI();
+            else
+                CloseUI();
         }
 
         void SetSeed()

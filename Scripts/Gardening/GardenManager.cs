@@ -187,7 +187,7 @@ namespace GrandmaGreen.Garden
                 int supposedTimer = plant.waterTimer - CollectionsSO.LoadedInstance.GetPlant(plant.type).growthTime;
                 //Debug.Log("Timer of plant after watering: " + supposedTimer);
 
-                if(supposedTimer < 0)
+                if (supposedTimer < 0)
                 {
                     plant.waterTimer = 0;
                 }
@@ -316,7 +316,7 @@ namespace GrandmaGreen.Garden
             {
                 PlantState plant = GetPlant(areaIndex, cell);
 
-                if(plant.waterTimer >= DeathTime && !PlantIsFullyGrown(areaIndex, cell))
+                if (plant.waterTimer >= DeathTime && !PlantIsFullyGrown(areaIndex, cell))
                 {
                     plant.previouslyDead = true;
                     plantLookup[areaIndex][cell] = plant;
@@ -376,6 +376,18 @@ namespace GrandmaGreen.Garden
                     y = newPosition.y,
                 }
             );
+        }
+
+        public void RemoveDecorItem(int areaIndex, DecorationId decorID, Vector3 position)
+        {
+            plantLookup[areaIndex].RemoveDecorState(
+                new DecorState()
+                {
+                    ID = decorID,
+                    x = ((Vector3)position).x,
+                    y = ((Vector3)position).y,
+                }
+                );
         }
 
         public List<DecorState> GetDecor(int areaIndex)

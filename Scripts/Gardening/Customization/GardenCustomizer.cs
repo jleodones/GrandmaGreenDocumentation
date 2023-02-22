@@ -6,6 +6,7 @@ using Core.Input;
 using DG.Tweening;
 using SpookuleleAudio;
 using GrandmaGreen.Collections;
+using UnityEngine.EventSystems;
 
 namespace GrandmaGreen.Garden
 {
@@ -17,7 +18,6 @@ namespace GrandmaGreen.Garden
         [SerializeField] Collections.DecorationId debugDecor;
         [SerializeField] TileStore tileStore;
         [SerializeField] PointerState pointerState;
-        [SerializeField] Cinemachine.CinemachineVirtualCamera customizationCamera;
 
         [Header("Settings")]
         [SerializeField] float colliderSizeModifier = 1.05f;
@@ -30,6 +30,8 @@ namespace GrandmaGreen.Garden
         [SerializeField] Color invalidColor;
 
         public GardenDecorItem GenerateDecorItem() => GenerateDecorItem(debugDecor);
+
+        Plane xyPlane = new Plane(-Vector3.forward, Vector3.zero);
 
         public GardenDecorItem GenerateDecorItem(Collections.DecorationId decorID)
         {
@@ -58,19 +60,22 @@ namespace GrandmaGreen.Garden
 
             BoundsInt colliderBounds = new BoundsInt(tileBlockOrigin, tileBlockSize);
 
+
             TileBase[] m_tileBlock = decorArea.tilemap.GetTilesBlock(colliderBounds);
 
             foreach (TileBase tileBase in m_tileBlock)
             {
-                if (!tileStore[tileBase].pathable || tileStore[tileBase].occupied || tileStore[tileBase].plantable)
+                if (!tileStore[tileBase].pathable)// || tileStore[tileBase].occupied || tileStore[tileBase].plantable)
                     return false;
             }
+
 
             foreach (Collider coll in Physics.OverlapBox(decorItem.bounds.center, decorItem.bounds.extents, Quaternion.identity, decorLayerMask))
             {
                 if (coll != decorItem)
                     return false;
             }
+
 
             return true;
         }
@@ -91,19 +96,27 @@ namespace GrandmaGreen.Garden
         /// <returns></returns>
         IEnumerator DecorCustomizationHandler(GardenAreaController decorArea, GardenDecorItem decorItem)
         {
+
+            Vector3 cameraForwardAxis = Camera.main.transform.forward;
             WaitForSeconds waitForSeconds = new WaitForSeconds(validCheckTime);
 
-            Vector3 destination = decorArea.lastSelectedPosition;
+            Ray ray = new Ray(pointerState.position, cameraForwardAxis);
+            xyPlane.Raycast(ray, out float offset);
+            Vector3 destination = pointerState.position + offset * cameraForwardAxis;
             destination.z = 0;
 
             decorItem.transform.position = destination;
             decorItem.sprite.material = activeMaterial;
             decorItem.DisableInteraction();
 
+            deleteDecorItem = false;
+
             bool isValid = false;
             do
             {
-                destination = decorArea.lastDraggedPosition;
+                ray = new Ray(pointerState.position, cameraForwardAxis);
+                xyPlane.Raycast(ray, out offset);
+                destination = pointerState.position + offset * cameraForwardAxis;
                 destination.z = 0;
 
                 decorItem.transform.position = destination;
@@ -112,16 +125,34 @@ namespace GrandmaGreen.Garden
 
                 isValid = CheckValidState(decorItem.boundsCollider, decorArea);
 
+                decorItem.transform.position -= cameraForwardAxis * 8;
+
                 decorItem.sprite.color = isValid ? validColor : invalidColor;
 
                 yield return null;
 
             } while (decorItem && pointerState.phase != PointerState.Phase.NONE);
 
+            decorItem.transform.position = destination;
             decorItem.sprite.material = defaultMaterial;
             decorItem.sprite.color = Color.white;
             decorItem.EnableInteraction();
+
+            if (deleteDecorItem)
+                isValid = false;
+
             EventManager.instance.HandleEVENT_CUSTOMIZATION_ATTEMPT(isValid);
+        }
+
+        public bool deleteDecorItem = false;
+        public void DeleteCurrentDecorItem()
+        {
+            deleteDecorItem = true;
+        }
+
+        public void KeepCurrentDecorItem()
+        {
+            deleteDecorItem = false;
         }
     }
 }
