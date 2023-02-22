@@ -3695,6 +3695,12 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.CultivisionUIDisplay.Start
   nameWithType: CultivisionUIDisplay.Start
+- uid: GrandmaGreen.CustomizationUI
+  name: CustomizationUI
+  href: api/GrandmaGreen.CustomizationUI.html
+  commentId: T:GrandmaGreen.CustomizationUI
+  fullName: GrandmaGreen.CustomizationUI
+  nameWithType: CustomizationUI
 - uid: GrandmaGreen.Dialogue
   name: GrandmaGreen.Dialogue
   href: api/GrandmaGreen.Dialogue.html
@@ -7221,6 +7227,12 @@ references:
   commentId: F:GrandmaGreen.Garden.GardenAreaController.customizationCamera
   fullName: GrandmaGreen.Garden.GardenAreaController.customizationCamera
   nameWithType: GardenAreaController.customizationCamera
+- uid: GrandmaGreen.Garden.GardenAreaController.customizationCanvas
+  name: customizationCanvas
+  href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_customizationCanvas
+  commentId: F:GrandmaGreen.Garden.GardenAreaController.customizationCanvas
+  fullName: GrandmaGreen.Garden.GardenAreaController.customizationCanvas
+  nameWithType: GardenAreaController.customizationCanvas
 - uid: GrandmaGreen.Garden.GardenAreaController.decorList
   name: decorList
   href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_decorList
@@ -7714,6 +7726,25 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Garden.GardenCustomizer.CheckValidState
   nameWithType: GardenCustomizer.CheckValidState
+- uid: GrandmaGreen.Garden.GardenCustomizer.DeleteCurrentDecorItem
+  name: DeleteCurrentDecorItem()
+  href: api/GrandmaGreen.Garden.GardenCustomizer.html#GrandmaGreen_Garden_GardenCustomizer_DeleteCurrentDecorItem
+  commentId: M:GrandmaGreen.Garden.GardenCustomizer.DeleteCurrentDecorItem
+  fullName: GrandmaGreen.Garden.GardenCustomizer.DeleteCurrentDecorItem()
+  nameWithType: GardenCustomizer.DeleteCurrentDecorItem()
+- uid: GrandmaGreen.Garden.GardenCustomizer.DeleteCurrentDecorItem*
+  name: DeleteCurrentDecorItem
+  href: api/GrandmaGreen.Garden.GardenCustomizer.html#GrandmaGreen_Garden_GardenCustomizer_DeleteCurrentDecorItem_
+  commentId: Overload:GrandmaGreen.Garden.GardenCustomizer.DeleteCurrentDecorItem
+  isSpec: "True"
+  fullName: GrandmaGreen.Garden.GardenCustomizer.DeleteCurrentDecorItem
+  nameWithType: GardenCustomizer.DeleteCurrentDecorItem
+- uid: GrandmaGreen.Garden.GardenCustomizer.deleteDecorItem
+  name: deleteDecorItem
+  href: api/GrandmaGreen.Garden.GardenCustomizer.html#GrandmaGreen_Garden_GardenCustomizer_deleteDecorItem
+  commentId: F:GrandmaGreen.Garden.GardenCustomizer.deleteDecorItem
+  fullName: GrandmaGreen.Garden.GardenCustomizer.deleteDecorItem
+  nameWithType: GardenCustomizer.deleteDecorItem
 - uid: GrandmaGreen.Garden.GardenCustomizer.EnterDecorCustomizationState(GrandmaGreen.Garden.GardenAreaController,GrandmaGreen.Garden.GardenDecorItem)
   name: EnterDecorCustomizationState(GardenAreaController, GardenDecorItem)
   href: api/GrandmaGreen.Garden.GardenCustomizer.html#GrandmaGreen_Garden_GardenCustomizer_EnterDecorCustomizationState_GrandmaGreen_Garden_GardenAreaController_GrandmaGreen_Garden_GardenDecorItem_
@@ -7746,6 +7777,19 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Garden.GardenCustomizer.GenerateDecorItem
   nameWithType: GardenCustomizer.GenerateDecorItem
+- uid: GrandmaGreen.Garden.GardenCustomizer.KeepCurrentDecorItem
+  name: KeepCurrentDecorItem()
+  href: api/GrandmaGreen.Garden.GardenCustomizer.html#GrandmaGreen_Garden_GardenCustomizer_KeepCurrentDecorItem
+  commentId: M:GrandmaGreen.Garden.GardenCustomizer.KeepCurrentDecorItem
+  fullName: GrandmaGreen.Garden.GardenCustomizer.KeepCurrentDecorItem()
+  nameWithType: GardenCustomizer.KeepCurrentDecorItem()
+- uid: GrandmaGreen.Garden.GardenCustomizer.KeepCurrentDecorItem*
+  name: KeepCurrentDecorItem
+  href: api/GrandmaGreen.Garden.GardenCustomizer.html#GrandmaGreen_Garden_GardenCustomizer_KeepCurrentDecorItem_
+  commentId: Overload:GrandmaGreen.Garden.GardenCustomizer.KeepCurrentDecorItem
+  isSpec: "True"
+  fullName: GrandmaGreen.Garden.GardenCustomizer.KeepCurrentDecorItem
+  nameWithType: GardenCustomizer.KeepCurrentDecorItem
 - uid: GrandmaGreen.Garden.GardenDecorItem
   name: GardenDecorItem
   href: api/GrandmaGreen.Garden.GardenDecorItem.html
@@ -8125,6 +8169,19 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Garden.GardenManager.RegisterGarden
   nameWithType: GardenManager.RegisterGarden
+- uid: GrandmaGreen.Garden.GardenManager.RemoveDecorItem(System.Int32,DecorationId,Vector3)
+  name: RemoveDecorItem(Int32, DecorationId, Vector3)
+  href: api/GrandmaGreen.Garden.GardenManager.html#GrandmaGreen_Garden_GardenManager_RemoveDecorItem_System_Int32_DecorationId_Vector3_
+  commentId: M:GrandmaGreen.Garden.GardenManager.RemoveDecorItem(System.Int32,DecorationId,Vector3)
+  fullName: GrandmaGreen.Garden.GardenManager.RemoveDecorItem(System.Int32, DecorationId, Vector3)
+  nameWithType: GardenManager.RemoveDecorItem(Int32, DecorationId, Vector3)
+- uid: GrandmaGreen.Garden.GardenManager.RemoveDecorItem*
+  name: RemoveDecorItem
+  href: api/GrandmaGreen.Garden.GardenManager.html#GrandmaGreen_Garden_GardenManager_RemoveDecorItem_
+  commentId: Overload:GrandmaGreen.Garden.GardenManager.RemoveDecorItem
+  isSpec: "True"
+  fullName: GrandmaGreen.Garden.GardenManager.RemoveDecorItem
+  nameWithType: GardenManager.RemoveDecorItem
 - uid: GrandmaGreen.Garden.GardenManager.SetFertilization(System.Int32,Vector3Int)
   name: SetFertilization(Int32, Vector3Int)
   href: api/GrandmaGreen.Garden.GardenManager.html#GrandmaGreen_Garden_GardenManager_SetFertilization_System_Int32_Vector3Int_
