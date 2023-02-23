@@ -4,7 +4,7 @@ using GrandmaGreen.Collections;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-namespace GrandmaGreen
+namespace GrandmaGreen.UI.Cultivision
 {
     public class CultivisionUIDisplay : UIDisplayBase
     {

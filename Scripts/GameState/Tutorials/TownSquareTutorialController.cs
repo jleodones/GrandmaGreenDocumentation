@@ -1,9 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
+using GrandmaGreen.UI.BulletinBoard;
+using GrandmaGreen.UI.Shopping;
 
-namespace GrandmaGreen
+namespace GrandmaGreen.UI.Tutorial
 {
     public class TownSquareTutorialController : MonoBehaviour
     {
@@ -12,7 +12,7 @@ namespace GrandmaGreen
 
         public TutorialUIDisplay tutorialUI;
         public ShopkeeperMenu shopkeeperMenu;
-        public UI.Shopping.ShoppingUI shoppingUI;
+        public ShoppingUI shoppingUI;
         public BulletinBoardUIDisplay bulletinBoardUI;
 
         public string phoebeIntroNode = "Story_1";

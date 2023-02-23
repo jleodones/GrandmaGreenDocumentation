@@ -4,6 +4,8 @@ using System;
 using System.Collections;
 using Core.SceneManagement;
 using GrandmaGreen.UI.Collections;
+using GrandmaGreen.UI.Cultivision;
+using GrandmaGreen.UI.Settings;
 using UnityEngine.PlayerLoop;
 using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;

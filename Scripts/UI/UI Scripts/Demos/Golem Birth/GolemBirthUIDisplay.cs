@@ -1,10 +1,9 @@
-using System;
 using System.Collections.Generic;
-using GrandmaGreen.Collections;
+using GrandmaGreen.UI;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-namespace GrandmaGreen
+namespace GrandmaGreen.UI.Golems
 {
     public class GolemBirthUIDisplay : UIDisplayBase
     {

@@ -6,6 +6,8 @@ using Unity.Mathematics;
 using UnityEngine.Splines;
 using Core.FSM;
 using SpookuleleAudio;
+using Sirenix.OdinInspector;
+using GrandmaGreen.Collections;
 
 namespace GrandmaGreen.Entities
 {
@@ -300,6 +302,13 @@ namespace GrandmaGreen.Entities
             }
 
             footstepsSoundPlayer?.Stop();
+        }
+
+        public ExpressionId exp;
+        [Button(ButtonSizes.Medium)]
+        public void UpdateGrandmaExp()
+        {
+            animator.SetInteger("expressionID", (int)exp);
         }
     }
 }

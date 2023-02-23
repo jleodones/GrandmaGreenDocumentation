@@ -6,7 +6,7 @@ using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-namespace GrandmaGreen
+namespace GrandmaGreen.UI.BulletinBoard
 {
     public class BulletinBoardUIDisplay : UIDisplayBase
     {

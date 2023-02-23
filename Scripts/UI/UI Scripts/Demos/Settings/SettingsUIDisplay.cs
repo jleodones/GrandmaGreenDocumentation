@@ -1,7 +1,7 @@
 using Core.SceneManagement;
 using UnityEngine.UIElements;
 
-namespace GrandmaGreen
+namespace GrandmaGreen.UI.Settings
 {
     public class SettingsUIDisplay : UIDisplayBase
     {

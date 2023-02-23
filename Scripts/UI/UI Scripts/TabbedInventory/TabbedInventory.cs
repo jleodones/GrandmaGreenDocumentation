@@ -9,6 +9,7 @@ using Core.Input;
 using GrandmaGreen.SaveSystem;
 using GrandmaGreen.Collections;
 using GrandmaGreen.Garden;
+using GrandmaGreen.UI.Selling;
 using SpookuleleAudio;
 
 namespace GrandmaGreen.UI.Collections
@@ -85,7 +86,8 @@ namespace GrandmaGreen.UI.Collections
         {
             // Close HUD first.
             //EventManager.instance.HandleEVENT_CLOSE_HUD();
-            //base.OpenUI();
+            
+            base.OpenUI();
             m_rootVisualElement.ToggleInClassList("closed-inventory");
             // Play open inventory SFX.
             soundContainers[0].Play();
@@ -96,7 +98,7 @@ namespace GrandmaGreen.UI.Collections
             // Play the inventory close SFX.
             soundContainers[1].Play();
             m_rootVisualElement.ToggleInClassList("closed-inventory");
-            //base.CloseUI();
+            base.CloseUI();
             EventManager.instance.HandleEVENT_OPEN_HUD();
         }
 
@@ -321,6 +323,7 @@ namespace GrandmaGreen.UI.Collections
             StartCoroutine(DragItem(draggedButton));
 
             handled = false;
+            evt.StopPropagation();
         }
 
         public void PointerMoveHandler(PointerMoveEvent evt)
@@ -332,10 +335,10 @@ namespace GrandmaGreen.UI.Collections
                 case InventoryMode.Gifting:
                     break;
                 case InventoryMode.Customization:
-                    CustomizationDrag(evt);
+                    // CustomizationDrag(evt);
                     break;
                 case InventoryMode.Selling:
-                    SellingDrag(evt);
+                    // SellingDrag(evt);
                     break;
             }
 
@@ -394,9 +397,9 @@ namespace GrandmaGreen.UI.Collections
                     StartCoroutine(SellDrag(canvas, item));
                     break;
                 case ItemType.Seed:
-                    StartCoroutine(DemoDrag(canvas, item));
+                    // StartCoroutine(DemoDrag(canvas, item));
                     // Disabled until seed selling implemented
-                    //StartCoroutine(SellDrag(canvas, item));
+                    StartCoroutine(SellDrag(canvas, item));
                     break;
                 case ItemType.Tool:
                     StartCoroutine(DemoDrag(canvas, item));
@@ -479,56 +482,6 @@ namespace GrandmaGreen.UI.Collections
             itemSprite = null;
             item.SetAlpha(1.0f);
             isDragging = false;
-        }
-
-        private void SellingDrag(PointerMoveEvent evt)
-        {
-            if (draggable != null && draggable.button.HasPointerCapture(evt.pointerId))
-            {
-                Vector3 pointerDelta = evt.position - pointerStartPosition;
-                draggable.button.transform.position = new Vector2(draggable.startingPosition.x + pointerDelta.x, draggable.startingPosition.y + pointerDelta.y);
-
-                // Threshold Check
-                if(sellingUI.IsInBounds(draggable.button.worldTransform.GetPosition()) && !handled){
-                    FinishPointer(evt.pointerId);
-                    handled = true;
-                    
-                    // Pass off the information to the selling box so it can instantiate the object.
-                    // UI to GameObject here
-                    VisualElement ve = ((Button) evt.currentTarget).parent;
-                    IInventoryItem item = (ve.userData as TabbedInventoryItemController).inventoryItemData;
-                    sellingUI.AddItem(item);
-                }
-            }
-        }
-
-        private void CustomizationDrag(PointerMoveEvent evt)
-        {
-            // UI to GameObject here
-            VisualElement ve = ((Button) evt.currentTarget).parent;
-            IInventoryItem item = (ve.userData as TabbedInventoryItemController).inventoryItemData;
-
-            if (item.itemType != ItemType.Decor)
-            {
-                return;
-            }
-            
-            if (draggable != null && draggable.button.HasPointerCapture(evt.pointerId))
-            {
-                Vector3 pointerDelta = evt.position - pointerStartPosition;
-                draggable.button.transform.position = new Vector2(draggable.startingPosition.x + pointerDelta.x, draggable.startingPosition.y + pointerDelta.y);
-
-                // To-Do: Bound Checks
-                // Threshold Check
-                if (draggable.button.worldTransform.GetPosition().x <= threshold.worldTransform.GetPosition().x && !handled)
-                {
-                    FinishPointer(evt.pointerId);
-                    CloseUI();
-                    
-                    EventManager.instance.HandleEVENT_INVENTORY_CUSTOMIZATION_START(item);
-                    handled = true;
-                }
-            }
         }
 
         #endregion

@@ -6,7 +6,7 @@ using UnityEngine;
 
 using UnityEngine.UIElements;
 
-namespace GrandmaGreen
+namespace GrandmaGreen.UI.Tutorial
 {
     public class TutorialUIDisplay : UIDisplayBase
     {

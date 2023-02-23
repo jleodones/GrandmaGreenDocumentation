@@ -6,7 +6,7 @@ using GrandmaGreen.Garden;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-namespace GrandmaGreen
+namespace GrandmaGreen.UI.Selling
 {
     public class SellingItemController
     {

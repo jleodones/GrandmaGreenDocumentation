@@ -1,13 +1,9 @@
 using GrandmaGreen.Mail;
-using System;
-
 using System.Collections.Generic;
-
 using UnityEngine;
-
 using UnityEngine.UIElements;
 
-namespace GrandmaGreen
+namespace GrandmaGreen.UI.Mailbox
 {
     public class MailboxUIDisplay : UIDisplayBase
     {

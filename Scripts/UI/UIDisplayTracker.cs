@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Sirenix.OdinInspector;
@@ -18,16 +17,18 @@ namespace GrandmaGreen.UI
     [CreateAssetMenu(menuName = "GrandmaGreen/UI/UIDisplayRules")]
     public class UIDisplayTracker : SerializedScriptableObject
     {
-        [SerializeField] public Dictionary<UITag, UIDisplayRule> displayRules = new Dictionary<UITag, UIDisplayRule>();
-
-        static Dictionary<UITag, List<BaseUIDisplay>> trackedUIDisplays;
+        public Dictionary<UITag, UIDisplayRule> displayRules = new Dictionary<UITag, UIDisplayRule>();
+        
+        static List<UIDisplayBase> activeUIDisplays;
+        static Dictionary<UITag, List<UIDisplayBase>> trackedUIDisplays;
         static Dictionary<UITag, UIDisplayRule> DisplayRules;
 
         public void Initalize()
         {
             DisplayRules = displayRules;
-            trackedUIDisplays = new Dictionary<UITag, List<BaseUIDisplay>>();
-
+            trackedUIDisplays = new Dictionary<UITag, List<UIDisplayBase>>();
+            activeUIDisplays = new List<UIDisplayBase>();
+            
             Debug.Log(displayRules);
             Debug.Log(DisplayRules);
         }
@@ -38,53 +39,122 @@ namespace GrandmaGreen.UI
             trackedUIDisplays = null;
         }
 
-        public static void AddPanel(BaseUIDisplay uiDisplay)
+        public static void AddPanel(UIDisplayBase uiDisplay)
         {
-            if (uiDisplay.PanelTags == 0)
+            if (uiDisplay.panelTags == 0)
                 return;
-
-            trackedUIDisplays.TryAdd(uiDisplay.PanelTags, new List<BaseUIDisplay>());
-            trackedUIDisplays[uiDisplay.PanelTags].Add(uiDisplay);
-
-            ProcessOpenDisplayRule(uiDisplay.PanelTags);
+            
+            trackedUIDisplays.TryAdd(uiDisplay.panelTags, new List<UIDisplayBase>());
+            trackedUIDisplays.TryAdd(UITag.ALL, new List<UIDisplayBase>());
+            
+            trackedUIDisplays[uiDisplay.panelTags].Add(uiDisplay);
+            trackedUIDisplays[UITag.ALL].Add(uiDisplay);
         }
 
-        public static void RemovePanel(BaseUIDisplay uiDisplay)
+        public static void RemovePanel(UIDisplayBase uiDisplay)
         {
-            trackedUIDisplays[uiDisplay.PanelTags].Remove(uiDisplay);
-
-            ProcessCloseDisplayRule(uiDisplay.PanelTags);
+            if (trackedUIDisplays != null)
+            {
+                trackedUIDisplays[uiDisplay.panelTags].Remove(uiDisplay);
+                trackedUIDisplays[UITag.ALL].Remove(uiDisplay);
+            }
         }
 
-        static void ProcessOpenDisplayRule(UITag tag)
+        public static void ProcessOpenDisplayRule(UITag tag)
+        {
+            if (!DisplayRules.TryGetValue(tag, out UIDisplayRule rule))
+                return;
+            // Parse again.
+            var list = rule.closeWhenKeyOpened.ToString().Split(", ");
+            List<UITag> tags = new List<UITag>();
+            foreach (string s in list)
+            {
+                UITag.TryParse(s, false, out UITag result);
+                if (result == UITag.None)
+                    continue;
+                tags.Add(result);
+            }
+
+            foreach (UITag t in tags)
+            {
+                if (!trackedUIDisplays.TryGetValue(t, out var l))
+                    continue;
+                foreach (UIDisplayBase display in l)
+                {
+                    display.UICloseLogic();
+                    activeUIDisplays.Remove(display);
+                }
+            }
+
+            // Parse again.
+            list = rule.openWhenKeyOpened.ToString().Split(", ");
+            tags.Clear();
+            foreach (string s in list)
+            {
+                UITag.TryParse(s, false, out UITag result);
+                if (result == UITag.None)
+                    continue;
+                tags.Add(result);
+            }
+
+            foreach (UITag t in tags)
+            {
+                if (!trackedUIDisplays.TryGetValue(t, out var l))
+                    continue;
+                foreach (UIDisplayBase display in l)
+                {
+                    display.UIOpenLogic();
+                    activeUIDisplays.Add(display);
+                }
+            }
+        }
+
+        public static void ProcessCloseDisplayRule(UITag tag)
         {
             if (!DisplayRules.TryGetValue(tag, out UIDisplayRule rule))
                 return;
 
-            foreach (BaseUIDisplay display in trackedUIDisplays[rule.openWhenKeyOpened])
+            var list = rule.closeWhenKeyClosed.ToString().Split(", ");
+            List<UITag> tags = new List<UITag>();
+            foreach (string s in list)
             {
-                display.OpenPanel();
+                UITag.TryParse(s, false, out UITag result);
+                if (result == UITag.None)
+                    continue;
+                tags.Add(result);
             }
 
-            foreach (BaseUIDisplay display in trackedUIDisplays[rule.closeWhenKeyOpened])
+            foreach (UITag t in tags)
             {
-                display.ClosePanel();
-            }
-        }
-
-        static void ProcessCloseDisplayRule(UITag tag)
-        {
-            if (!DisplayRules.TryGetValue(tag, out UIDisplayRule rule))
-                return;
-
-            foreach (BaseUIDisplay display in trackedUIDisplays[rule.openWhenKeyClosed])
-            {
-                display.OpenPanel();
+                if (!trackedUIDisplays.TryGetValue(t, out var l))
+                    continue;
+                foreach (UIDisplayBase display in l)
+                {
+                    display.UICloseLogic();
+                    activeUIDisplays.Remove(display);
+                }
             }
 
-            foreach (BaseUIDisplay display in trackedUIDisplays[rule.closeWhenKeyClosed])
+            list = rule.openWhenKeyClosed.ToString().Split(", ");
+            tags.Clear();
+            foreach (string s in list)
             {
-                display.ClosePanel();
+                UITag.TryParse(s, false, out UITag result);
+
+                if (result == UITag.None)
+                    continue;
+                tags.Add(result);
+            }
+
+            foreach (UITag t in tags)
+            {
+                if (!trackedUIDisplays.TryGetValue(t, out var l))
+                    continue;
+                foreach (UIDisplayBase display in l)
+                {
+                    display.UIOpenLogic();
+                    activeUIDisplays.Add(display);
+                }
             }
         }
     }

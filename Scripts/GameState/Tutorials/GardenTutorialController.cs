@@ -4,6 +4,7 @@ using UnityEngine;
 using Core.Utilities;
 using DG.Tweening;
 using Cinemachine;
+using GrandmaGreen.UI.Tutorial;
 
 namespace GrandmaGreen
 {

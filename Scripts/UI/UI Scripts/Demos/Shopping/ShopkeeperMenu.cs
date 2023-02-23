@@ -1,11 +1,9 @@
 using UnityEngine;
 using UnityEngine.UIElements;
 using GrandmaGreen.Dialogue;
-using GrandmaGreen.Entities;
-using GrandmaGreen.UI.Collections;
-using GrandmaGreen.UI.Shopping;
+using GrandmaGreen.UI.Selling;
 
-namespace GrandmaGreen
+namespace GrandmaGreen.UI.Shopping
 {
     public class ShopkeeperMenu : UIDisplayBase
     {

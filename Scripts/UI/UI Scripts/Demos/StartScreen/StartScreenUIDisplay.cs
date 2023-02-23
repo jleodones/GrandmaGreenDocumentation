@@ -1,4 +1,5 @@
 using Core.SceneManagement;
+using GrandmaGreen.UI.Settings;
 using Sirenix.OdinInspector;
 using UnityEngine.UIElements;
 using UnityEngine;
@@ -6,7 +7,7 @@ using System.Collections.Generic;
 
 
 
-namespace GrandmaGreen
+namespace GrandmaGreen.UI.StartScreen
 {
     public class StartScreenUIDisplay : UIDisplayBase
     {

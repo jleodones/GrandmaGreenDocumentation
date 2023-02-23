@@ -1,10 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using GrandmaGreen.Collections;
 using GrandmaGreen.Garden;
-using UnityEngine;
 
-namespace GrandmaGreen
+namespace GrandmaGreen.UI.BulletinBoard
 {
     public class BulletinBoardUIController
     {

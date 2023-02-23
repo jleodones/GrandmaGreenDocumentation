@@ -8,7 +8,7 @@ using GrandmaGreen.UI.Collections;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-namespace GrandmaGreen
+namespace GrandmaGreen.UI.Selling
 {
     public class SellingUIDisplay : UIDisplayBase
     {
@@ -38,7 +38,7 @@ namespace GrandmaGreen
         {
             // Open inventory UI along with itself.
             inventoryUI.currentMode = InventoryMode.Selling;
-            inventoryUI.OpenUI();
+            // inventoryUI.OpenUI();
             m_items.Clear();
             
             // Since it should be empty, show empty box UI.
@@ -58,7 +58,7 @@ namespace GrandmaGreen
         {
             // Clear selling box data.
             inventoryUI.currentMode = InventoryMode.Customization;
-            inventoryUI.CloseUI();
+            // inventoryUI.CloseUI();
             m_items.Clear();
 
             // Then close.
@@ -177,8 +177,11 @@ namespace GrandmaGreen
             // Set up bind function for a specific list entry.
             m_sellingBox.bindItem = (item, index) =>
             {
+                if (index < 0 || index >= m_items.Count)
+                    return;
+                
                 Sprite s;
-                if (m_items[index].GetType() == new Seed().GetType())
+                if (m_items[index].Item1.itemType == ItemType.Seed)
                 {
                     s = CollectionsSO.LoadedInstance.GetSprite((PlantId) m_items[index].Item1.itemID, ((Seed) m_items[index].Item1).seedGenotype);
                 }
