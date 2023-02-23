@@ -126,12 +126,12 @@
   
   
   <a id="GrandmaGreen_UI_UIDisplayTracker_AddPanel_" data-uid="GrandmaGreen.UI.UIDisplayTracker.AddPanel*"></a>
-  <h4 id="GrandmaGreen_UI_UIDisplayTracker_AddPanel_GrandmaGreen_UI_BaseUIDisplay_" data-uid="GrandmaGreen.UI.UIDisplayTracker.AddPanel(GrandmaGreen.UI.BaseUIDisplay)">AddPanel(BaseUIDisplay)</h4>
+  <h4 id="GrandmaGreen_UI_UIDisplayTracker_AddPanel_GrandmaGreen_UI_UIDisplayBase_" data-uid="GrandmaGreen.UI.UIDisplayTracker.AddPanel(GrandmaGreen.UI.UIDisplayBase)">AddPanel(UIDisplayBase)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void AddPanel(BaseUIDisplay uiDisplay)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void AddPanel(UIDisplayBase uiDisplay)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -144,7 +144,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="GrandmaGreen.UI.BaseUIDisplay.html">BaseUIDisplay</a></td>
+        <td><a class="xref" href="GrandmaGreen.UI.UIDisplayBase.html">UIDisplayBase</a></td>
         <td><span class="parametername">uiDisplay</span></td>
         <td></td>
       </tr>
@@ -162,23 +162,13 @@
   </div>
   
   
-  <a id="GrandmaGreen_UI_UIDisplayTracker_Release_" data-uid="GrandmaGreen.UI.UIDisplayTracker.Release*"></a>
-  <h4 id="GrandmaGreen_UI_UIDisplayTracker_Release" data-uid="GrandmaGreen.UI.UIDisplayTracker.Release">Release()</h4>
+  <a id="GrandmaGreen_UI_UIDisplayTracker_ProcessCloseDisplayRule_" data-uid="GrandmaGreen.UI.UIDisplayTracker.ProcessCloseDisplayRule*"></a>
+  <h4 id="GrandmaGreen_UI_UIDisplayTracker_ProcessCloseDisplayRule_GrandmaGreen_UI_UITag_" data-uid="GrandmaGreen.UI.UIDisplayTracker.ProcessCloseDisplayRule(GrandmaGreen.UI.UITag)">ProcessCloseDisplayRule(UITag)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Release()</code></pre>
-  </div>
-  
-  
-  <a id="GrandmaGreen_UI_UIDisplayTracker_RemovePanel_" data-uid="GrandmaGreen.UI.UIDisplayTracker.RemovePanel*"></a>
-  <h4 id="GrandmaGreen_UI_UIDisplayTracker_RemovePanel_GrandmaGreen_UI_BaseUIDisplay_" data-uid="GrandmaGreen.UI.UIDisplayTracker.RemovePanel(GrandmaGreen.UI.BaseUIDisplay)">RemovePanel(BaseUIDisplay)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void RemovePanel(BaseUIDisplay uiDisplay)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void ProcessCloseDisplayRule(UITag tag)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -191,7 +181,71 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="GrandmaGreen.UI.BaseUIDisplay.html">BaseUIDisplay</a></td>
+        <td><a class="xref" href="GrandmaGreen.UI.UITag.html">UITag</a></td>
+        <td><span class="parametername">tag</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="GrandmaGreen_UI_UIDisplayTracker_ProcessOpenDisplayRule_" data-uid="GrandmaGreen.UI.UIDisplayTracker.ProcessOpenDisplayRule*"></a>
+  <h4 id="GrandmaGreen_UI_UIDisplayTracker_ProcessOpenDisplayRule_GrandmaGreen_UI_UITag_" data-uid="GrandmaGreen.UI.UIDisplayTracker.ProcessOpenDisplayRule(GrandmaGreen.UI.UITag)">ProcessOpenDisplayRule(UITag)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void ProcessOpenDisplayRule(UITag tag)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="GrandmaGreen.UI.UITag.html">UITag</a></td>
+        <td><span class="parametername">tag</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="GrandmaGreen_UI_UIDisplayTracker_Release_" data-uid="GrandmaGreen.UI.UIDisplayTracker.Release*"></a>
+  <h4 id="GrandmaGreen_UI_UIDisplayTracker_Release" data-uid="GrandmaGreen.UI.UIDisplayTracker.Release">Release()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Release()</code></pre>
+  </div>
+  
+  
+  <a id="GrandmaGreen_UI_UIDisplayTracker_RemovePanel_" data-uid="GrandmaGreen.UI.UIDisplayTracker.RemovePanel*"></a>
+  <h4 id="GrandmaGreen_UI_UIDisplayTracker_RemovePanel_GrandmaGreen_UI_UIDisplayBase_" data-uid="GrandmaGreen.UI.UIDisplayTracker.RemovePanel(GrandmaGreen.UI.UIDisplayBase)">RemovePanel(UIDisplayBase)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void RemovePanel(UIDisplayBase uiDisplay)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="GrandmaGreen.UI.UIDisplayBase.html">UIDisplayBase</a></td>
         <td><span class="parametername">uiDisplay</span></td>
         <td></td>
       </tr>

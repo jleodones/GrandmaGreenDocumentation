@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class BaseUIDisplay
+    <title>Class UIDisplayBase
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class BaseUIDisplay
+    <meta name="title" content="Class UIDisplayBase
    ">
     <meta name="generator" content="docfx 2.59.4.0">
     
@@ -77,60 +77,75 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="GrandmaGreen.UI.BaseUIDisplay">
+            <article class="content wrap" id="_content" data-uid="GrandmaGreen.UI.UIDisplayBase">
   
   
-  <h1 id="GrandmaGreen_UI_BaseUIDisplay" data-uid="GrandmaGreen.UI.BaseUIDisplay" class="text-break">Class BaseUIDisplay
+  <h1 id="GrandmaGreen_UI_UIDisplayBase" data-uid="GrandmaGreen.UI.UIDisplayBase" class="text-break">Class UIDisplayBase
   </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Object</a></div>
-    <div class="level1"><span class="xref">BaseUIDisplay</span></div>
+    <div class="level1"><span class="xref">UIDisplayBase</span></div>
+      <div class="level2"><a class="xref" href="GrandmaGreen.UI.BulletinBoard.BulletinBoardUIDisplay.html">BulletinBoardUIDisplay</a></div>
+      <div class="level2"><a class="xref" href="GrandmaGreen.UI.Collections.CollectionUIDisplay.html">CollectionUIDisplay</a></div>
+      <div class="level2"><a class="xref" href="GrandmaGreen.UI.Collections.TabbedInventory.html">TabbedInventory</a></div>
+      <div class="level2"><a class="xref" href="GrandmaGreen.UI.Cultivision.CultivisionUIDisplay.html">CultivisionUIDisplay</a></div>
+      <div class="level2"><a class="xref" href="GrandmaGreen.UI.Golems.GolemBirthUIDisplay.html">GolemBirthUIDisplay</a></div>
+      <div class="level2"><a class="xref" href="GrandmaGreen.UI.Golems.GolemMenu.html">GolemMenu</a></div>
+      <div class="level2"><a class="xref" href="GrandmaGreen.UI.HUD.HUD.html">HUD</a></div>
+      <div class="level2"><a class="xref" href="GrandmaGreen.UI.Mailbox.MailboxUIDisplay.html">MailboxUIDisplay</a></div>
+      <div class="level2"><a class="xref" href="GrandmaGreen.UI.Selling.SellingUIDisplay.html">SellingUIDisplay</a></div>
+      <div class="level2"><a class="xref" href="GrandmaGreen.UI.Settings.SettingsUIDisplay.html">SettingsUIDisplay</a></div>
+      <div class="level2"><a class="xref" href="GrandmaGreen.UI.Shopping.ShopkeeperMenu.html">ShopkeeperMenu</a></div>
+      <div class="level2"><a class="xref" href="GrandmaGreen.UI.Shopping.ShoppingUI.html">ShoppingUI</a></div>
+      <div class="level2"><a class="xref" href="GrandmaGreen.UI.StartScreen.StartScreenUIDisplay.html">StartScreenUIDisplay</a></div>
+      <div class="level2"><a class="xref" href="GrandmaGreen.UI.Tutorial.TutorialUIDisplay.html">TutorialUIDisplay</a></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="GrandmaGreen.UI.html">GrandmaGreen.UI</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
-  <h5 id="GrandmaGreen_UI_BaseUIDisplay_syntax">Syntax</h5>
+  <h5 id="GrandmaGreen_UI_UIDisplayBase_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class BaseUIDisplay : MonoBehaviour</code></pre>
+    <pre><code class="lang-csharp hljs">public class UIDisplayBase : MonoBehaviour</code></pre>
   </div>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="GrandmaGreen_UI_UIDisplayBase_m_rootVisualElement" data-uid="GrandmaGreen.UI.UIDisplayBase.m_rootVisualElement">m_rootVisualElement</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public VisualElement m_rootVisualElement</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">VisualElement</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="properties">Properties
   </h3>
   
   
-  <a id="GrandmaGreen_UI_BaseUIDisplay_Controller_" data-uid="GrandmaGreen.UI.BaseUIDisplay.Controller*"></a>
-  <h4 id="GrandmaGreen_UI_BaseUIDisplay_Controller" data-uid="GrandmaGreen.UI.BaseUIDisplay.Controller">Controller</h4>
+  <a id="GrandmaGreen_UI_UIDisplayBase_displayEnabled_" data-uid="GrandmaGreen.UI.UIDisplayBase.displayEnabled*"></a>
+  <h4 id="GrandmaGreen_UI_UIDisplayBase_displayEnabled" data-uid="GrandmaGreen.UI.UIDisplayBase.displayEnabled">displayEnabled</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual BaseUIController Controller { get; protected set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="GrandmaGreen.UI.BaseUIController.html">BaseUIController</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="GrandmaGreen_UI_BaseUIDisplay_DisplayEnabled_" data-uid="GrandmaGreen.UI.BaseUIDisplay.DisplayEnabled*"></a>
-  <h4 id="GrandmaGreen_UI_BaseUIDisplay_DisplayEnabled" data-uid="GrandmaGreen.UI.BaseUIDisplay.DisplayEnabled">DisplayEnabled</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual bool DisplayEnabled { get; protected set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual bool displayEnabled { get; protected set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -149,13 +164,13 @@
   </table>
   
   
-  <a id="GrandmaGreen_UI_BaseUIDisplay_DisplayInteractive_" data-uid="GrandmaGreen.UI.BaseUIDisplay.DisplayInteractive*"></a>
-  <h4 id="GrandmaGreen_UI_BaseUIDisplay_DisplayInteractive" data-uid="GrandmaGreen.UI.BaseUIDisplay.DisplayInteractive">DisplayInteractive</h4>
+  <a id="GrandmaGreen_UI_UIDisplayBase_displayInteractive_" data-uid="GrandmaGreen.UI.UIDisplayBase.displayInteractive*"></a>
+  <h4 id="GrandmaGreen_UI_UIDisplayBase_displayInteractive" data-uid="GrandmaGreen.UI.UIDisplayBase.displayInteractive">displayInteractive</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual bool DisplayInteractive { get; protected set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual bool displayInteractive { get; protected set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -174,13 +189,13 @@
   </table>
   
   
-  <a id="GrandmaGreen_UI_BaseUIDisplay_DisplayOpen_" data-uid="GrandmaGreen.UI.BaseUIDisplay.DisplayOpen*"></a>
-  <h4 id="GrandmaGreen_UI_BaseUIDisplay_DisplayOpen" data-uid="GrandmaGreen.UI.BaseUIDisplay.DisplayOpen">DisplayOpen</h4>
+  <a id="GrandmaGreen_UI_UIDisplayBase_displayOpen_" data-uid="GrandmaGreen.UI.UIDisplayBase.displayOpen*"></a>
+  <h4 id="GrandmaGreen_UI_UIDisplayBase_displayOpen" data-uid="GrandmaGreen.UI.UIDisplayBase.displayOpen">displayOpen</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual bool DisplayOpen { get; protected set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual bool displayOpen { get; protected set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -199,13 +214,13 @@
   </table>
   
   
-  <a id="GrandmaGreen_UI_BaseUIDisplay_PanelTags_" data-uid="GrandmaGreen.UI.BaseUIDisplay.PanelTags*"></a>
-  <h4 id="GrandmaGreen_UI_BaseUIDisplay_PanelTags" data-uid="GrandmaGreen.UI.BaseUIDisplay.PanelTags">PanelTags</h4>
+  <a id="GrandmaGreen_UI_UIDisplayBase_panelTags_" data-uid="GrandmaGreen.UI.UIDisplayBase.panelTags*"></a>
+  <h4 id="GrandmaGreen_UI_UIDisplayBase_panelTags" data-uid="GrandmaGreen.UI.UIDisplayBase.panelTags">panelTags</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual UITag PanelTags { get; protected set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual UITag panelTags { get; protected set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -224,8 +239,8 @@
   </table>
   
   
-  <a id="GrandmaGreen_UI_BaseUIDisplay_UIDocument_" data-uid="GrandmaGreen.UI.BaseUIDisplay.UIDocument*"></a>
-  <h4 id="GrandmaGreen_UI_BaseUIDisplay_UIDocument" data-uid="GrandmaGreen.UI.BaseUIDisplay.UIDocument">UIDocument</h4>
+  <a id="GrandmaGreen_UI_UIDisplayBase_UIDocument_" data-uid="GrandmaGreen.UI.UIDisplayBase.UIDocument*"></a>
+  <h4 id="GrandmaGreen_UI_UIDisplayBase_UIDocument" data-uid="GrandmaGreen.UI.UIDisplayBase.UIDocument">UIDocument</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -251,18 +266,28 @@
   </h3>
   
   
-  <a id="GrandmaGreen_UI_BaseUIDisplay_ClosePanel_" data-uid="GrandmaGreen.UI.BaseUIDisplay.ClosePanel*"></a>
-  <h4 id="GrandmaGreen_UI_BaseUIDisplay_ClosePanel" data-uid="GrandmaGreen.UI.BaseUIDisplay.ClosePanel">ClosePanel()</h4>
+  <a id="GrandmaGreen_UI_UIDisplayBase_Awake_" data-uid="GrandmaGreen.UI.UIDisplayBase.Awake*"></a>
+  <h4 id="GrandmaGreen_UI_UIDisplayBase_Awake" data-uid="GrandmaGreen.UI.UIDisplayBase.Awake">Awake()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void ClosePanel()</code></pre>
+    <pre><code class="lang-csharp hljs">protected virtual void Awake()</code></pre>
   </div>
   
   
-  <a id="GrandmaGreen_UI_BaseUIDisplay_DisableInteraction_" data-uid="GrandmaGreen.UI.BaseUIDisplay.DisableInteraction*"></a>
-  <h4 id="GrandmaGreen_UI_BaseUIDisplay_DisableInteraction" data-uid="GrandmaGreen.UI.BaseUIDisplay.DisableInteraction">DisableInteraction()</h4>
+  <a id="GrandmaGreen_UI_UIDisplayBase_CloseUI_" data-uid="GrandmaGreen.UI.UIDisplayBase.CloseUI*"></a>
+  <h4 id="GrandmaGreen_UI_UIDisplayBase_CloseUI" data-uid="GrandmaGreen.UI.UIDisplayBase.CloseUI">CloseUI()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void CloseUI()</code></pre>
+  </div>
+  
+  
+  <a id="GrandmaGreen_UI_UIDisplayBase_DisableInteraction_" data-uid="GrandmaGreen.UI.UIDisplayBase.DisableInteraction*"></a>
+  <h4 id="GrandmaGreen_UI_UIDisplayBase_DisableInteraction" data-uid="GrandmaGreen.UI.UIDisplayBase.DisableInteraction">DisableInteraction()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -271,18 +296,18 @@
   </div>
   
   
-  <a id="GrandmaGreen_UI_BaseUIDisplay_DisablePanel_" data-uid="GrandmaGreen.UI.BaseUIDisplay.DisablePanel*"></a>
-  <h4 id="GrandmaGreen_UI_BaseUIDisplay_DisablePanel" data-uid="GrandmaGreen.UI.BaseUIDisplay.DisablePanel">DisablePanel()</h4>
+  <a id="GrandmaGreen_UI_UIDisplayBase_DisableUI_" data-uid="GrandmaGreen.UI.UIDisplayBase.DisableUI*"></a>
+  <h4 id="GrandmaGreen_UI_UIDisplayBase_DisableUI" data-uid="GrandmaGreen.UI.UIDisplayBase.DisableUI">DisableUI()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void DisablePanel()</code></pre>
+    <pre><code class="lang-csharp hljs">public void DisableUI()</code></pre>
   </div>
   
   
-  <a id="GrandmaGreen_UI_BaseUIDisplay_EnableInteraction_" data-uid="GrandmaGreen.UI.BaseUIDisplay.EnableInteraction*"></a>
-  <h4 id="GrandmaGreen_UI_BaseUIDisplay_EnableInteraction" data-uid="GrandmaGreen.UI.BaseUIDisplay.EnableInteraction">EnableInteraction()</h4>
+  <a id="GrandmaGreen_UI_UIDisplayBase_EnableInteraction_" data-uid="GrandmaGreen.UI.UIDisplayBase.EnableInteraction*"></a>
+  <h4 id="GrandmaGreen_UI_UIDisplayBase_EnableInteraction" data-uid="GrandmaGreen.UI.UIDisplayBase.EnableInteraction">EnableInteraction()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -291,28 +316,18 @@
   </div>
   
   
-  <a id="GrandmaGreen_UI_BaseUIDisplay_EnablePanel_" data-uid="GrandmaGreen.UI.BaseUIDisplay.EnablePanel*"></a>
-  <h4 id="GrandmaGreen_UI_BaseUIDisplay_EnablePanel" data-uid="GrandmaGreen.UI.BaseUIDisplay.EnablePanel">EnablePanel()</h4>
+  <a id="GrandmaGreen_UI_UIDisplayBase_EnableUI_" data-uid="GrandmaGreen.UI.UIDisplayBase.EnableUI*"></a>
+  <h4 id="GrandmaGreen_UI_UIDisplayBase_EnableUI" data-uid="GrandmaGreen.UI.UIDisplayBase.EnableUI">EnableUI()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void EnablePanel()</code></pre>
+    <pre><code class="lang-csharp hljs">public void EnableUI()</code></pre>
   </div>
   
   
-  <a id="GrandmaGreen_UI_BaseUIDisplay_InitalizePanel_" data-uid="GrandmaGreen.UI.BaseUIDisplay.InitalizePanel*"></a>
-  <h4 id="GrandmaGreen_UI_BaseUIDisplay_InitalizePanel" data-uid="GrandmaGreen.UI.BaseUIDisplay.InitalizePanel">InitalizePanel()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual void InitalizePanel()</code></pre>
-  </div>
-  
-  
-  <a id="GrandmaGreen_UI_BaseUIDisplay_InteractionDisabledLogic_" data-uid="GrandmaGreen.UI.BaseUIDisplay.InteractionDisabledLogic*"></a>
-  <h4 id="GrandmaGreen_UI_BaseUIDisplay_InteractionDisabledLogic" data-uid="GrandmaGreen.UI.BaseUIDisplay.InteractionDisabledLogic">InteractionDisabledLogic()</h4>
+  <a id="GrandmaGreen_UI_UIDisplayBase_InteractionDisabledLogic_" data-uid="GrandmaGreen.UI.UIDisplayBase.InteractionDisabledLogic*"></a>
+  <h4 id="GrandmaGreen_UI_UIDisplayBase_InteractionDisabledLogic" data-uid="GrandmaGreen.UI.UIDisplayBase.InteractionDisabledLogic">InteractionDisabledLogic()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -321,8 +336,8 @@
   </div>
   
   
-  <a id="GrandmaGreen_UI_BaseUIDisplay_InteractionEnabledLogic_" data-uid="GrandmaGreen.UI.BaseUIDisplay.InteractionEnabledLogic*"></a>
-  <h4 id="GrandmaGreen_UI_BaseUIDisplay_InteractionEnabledLogic" data-uid="GrandmaGreen.UI.BaseUIDisplay.InteractionEnabledLogic">InteractionEnabledLogic()</h4>
+  <a id="GrandmaGreen_UI_UIDisplayBase_InteractionEnabledLogic_" data-uid="GrandmaGreen.UI.UIDisplayBase.InteractionEnabledLogic*"></a>
+  <h4 id="GrandmaGreen_UI_UIDisplayBase_InteractionEnabledLogic" data-uid="GrandmaGreen.UI.UIDisplayBase.InteractionEnabledLogic">InteractionEnabledLogic()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -331,49 +346,123 @@
   </div>
   
   
-  <a id="GrandmaGreen_UI_BaseUIDisplay_OnValidate_" data-uid="GrandmaGreen.UI.BaseUIDisplay.OnValidate*"></a>
-  <h4 id="GrandmaGreen_UI_BaseUIDisplay_OnValidate" data-uid="GrandmaGreen.UI.BaseUIDisplay.OnValidate">OnValidate()</h4>
+  <a id="GrandmaGreen_UI_UIDisplayBase_Load_" data-uid="GrandmaGreen.UI.UIDisplayBase.Load*"></a>
+  <h4 id="GrandmaGreen_UI_UIDisplayBase_Load" data-uid="GrandmaGreen.UI.UIDisplayBase.Load">Load()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected virtual void OnValidate()</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual void Load()</code></pre>
   </div>
   
   
-  <a id="GrandmaGreen_UI_BaseUIDisplay_OpenPanel_" data-uid="GrandmaGreen.UI.BaseUIDisplay.OpenPanel*"></a>
-  <h4 id="GrandmaGreen_UI_BaseUIDisplay_OpenPanel" data-uid="GrandmaGreen.UI.BaseUIDisplay.OpenPanel">OpenPanel()</h4>
+  <a id="GrandmaGreen_UI_UIDisplayBase_OpenUI_" data-uid="GrandmaGreen.UI.UIDisplayBase.OpenUI*"></a>
+  <h4 id="GrandmaGreen_UI_UIDisplayBase_OpenUI" data-uid="GrandmaGreen.UI.UIDisplayBase.OpenUI">OpenUI()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void OpenPanel()</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual void OpenUI()</code></pre>
   </div>
   
   
-  <a id="GrandmaGreen_UI_BaseUIDisplay_PanelCloseLogic_" data-uid="GrandmaGreen.UI.BaseUIDisplay.PanelCloseLogic*"></a>
-  <h4 id="GrandmaGreen_UI_BaseUIDisplay_PanelCloseLogic" data-uid="GrandmaGreen.UI.BaseUIDisplay.PanelCloseLogic">PanelCloseLogic()</h4>
+  <a id="GrandmaGreen_UI_UIDisplayBase_RegisterButtonCallback_" data-uid="GrandmaGreen.UI.UIDisplayBase.RegisterButtonCallback*"></a>
+  <h4 id="GrandmaGreen_UI_UIDisplayBase_RegisterButtonCallback_System_String_Action_" data-uid="GrandmaGreen.UI.UIDisplayBase.RegisterButtonCallback(System.String,Action)">RegisterButtonCallback(String, Action)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected virtual void PanelCloseLogic()</code></pre>
+    <pre><code class="lang-csharp hljs">public void RegisterButtonCallback(string buttonName, Action callbackFunction)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">buttonName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Action</span></td>
+        <td><span class="parametername">callbackFunction</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="GrandmaGreen_UI_UIDisplayBase_RegisterButtonCallbackWithClose_" data-uid="GrandmaGreen.UI.UIDisplayBase.RegisterButtonCallbackWithClose*"></a>
+  <h4 id="GrandmaGreen_UI_UIDisplayBase_RegisterButtonCallbackWithClose_System_String_Action_" data-uid="GrandmaGreen.UI.UIDisplayBase.RegisterButtonCallbackWithClose(System.String,Action)">RegisterButtonCallbackWithClose(String, Action)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RegisterButtonCallbackWithClose(string buttonName, Action callbackFunction)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">buttonName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Action</span></td>
+        <td><span class="parametername">callbackFunction</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="GrandmaGreen_UI_UIDisplayBase_UICloseLogic_" data-uid="GrandmaGreen.UI.UIDisplayBase.UICloseLogic*"></a>
+  <h4 id="GrandmaGreen_UI_UIDisplayBase_UICloseLogic" data-uid="GrandmaGreen.UI.UIDisplayBase.UICloseLogic">UICloseLogic()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void UICloseLogic()</code></pre>
   </div>
   
   
-  <a id="GrandmaGreen_UI_BaseUIDisplay_PanelOpenLogic_" data-uid="GrandmaGreen.UI.BaseUIDisplay.PanelOpenLogic*"></a>
-  <h4 id="GrandmaGreen_UI_BaseUIDisplay_PanelOpenLogic" data-uid="GrandmaGreen.UI.BaseUIDisplay.PanelOpenLogic">PanelOpenLogic()</h4>
+  <a id="GrandmaGreen_UI_UIDisplayBase_UIOpenLogic_" data-uid="GrandmaGreen.UI.UIDisplayBase.UIOpenLogic*"></a>
+  <h4 id="GrandmaGreen_UI_UIDisplayBase_UIOpenLogic" data-uid="GrandmaGreen.UI.UIDisplayBase.UIOpenLogic">UIOpenLogic()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected virtual void PanelOpenLogic()</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual void UIOpenLogic()</code></pre>
+  </div>
+  
+  
+  <a id="GrandmaGreen_UI_UIDisplayBase_Unload_" data-uid="GrandmaGreen.UI.UIDisplayBase.Unload*"></a>
+  <h4 id="GrandmaGreen_UI_UIDisplayBase_Unload" data-uid="GrandmaGreen.UI.UIDisplayBase.Unload">Unload()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void Unload()</code></pre>
   </div>
   <h3 id="events">Events
   </h3>
   
   
-  <h4 id="GrandmaGreen_UI_BaseUIDisplay_onPanelClosed" data-uid="GrandmaGreen.UI.BaseUIDisplay.onPanelClosed">onPanelClosed</h4>
+  <h4 id="GrandmaGreen_UI_UIDisplayBase_onPanelClosed" data-uid="GrandmaGreen.UI.UIDisplayBase.onPanelClosed">onPanelClosed</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -397,7 +486,7 @@
   </table>
   
   
-  <h4 id="GrandmaGreen_UI_BaseUIDisplay_onPanelDisabled" data-uid="GrandmaGreen.UI.BaseUIDisplay.onPanelDisabled">onPanelDisabled</h4>
+  <h4 id="GrandmaGreen_UI_UIDisplayBase_onPanelDisabled" data-uid="GrandmaGreen.UI.UIDisplayBase.onPanelDisabled">onPanelDisabled</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -421,7 +510,7 @@
   </table>
   
   
-  <h4 id="GrandmaGreen_UI_BaseUIDisplay_onPanelEnabled" data-uid="GrandmaGreen.UI.BaseUIDisplay.onPanelEnabled">onPanelEnabled</h4>
+  <h4 id="GrandmaGreen_UI_UIDisplayBase_onPanelEnabled" data-uid="GrandmaGreen.UI.UIDisplayBase.onPanelEnabled">onPanelEnabled</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -445,7 +534,7 @@
   </table>
   
   
-  <h4 id="GrandmaGreen_UI_BaseUIDisplay_onPanelOpened" data-uid="GrandmaGreen.UI.BaseUIDisplay.onPanelOpened">onPanelOpened</h4>
+  <h4 id="GrandmaGreen_UI_UIDisplayBase_onPanelOpened" data-uid="GrandmaGreen.UI.UIDisplayBase.onPanelOpened">onPanelOpened</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
