@@ -76,7 +76,6 @@ namespace GrandmaGreen.Collections
         Blueberry = 1021
     }
 
-
     public enum CharacterId : ushort
     {
         Grandma = 5001,
@@ -89,6 +88,18 @@ namespace GrandmaGreen.Collections
         PumpkinGolem = 5008,
         TurnipGolem = 5009
     }
+
+    public enum ExpressionId : ushort
+    { 
+        Neutral = 0,
+        Happy = 1,
+        Sad = 2,
+        Surprise = 3,
+        Angry = 4,
+        Blush = 5,
+        Confused = 6
+    }
+
 
     public enum DecorationId : ushort
     {

@@ -28,7 +28,7 @@ namespace GrandmaGreen.Shopkeeping
     /// </summary>
     public class GardeningShopUIController
     {
-        List<ShopItem> GardenList;
+        public List<ShopItem> GardenList;
         List<Seed> AllSeedsList; //copy of the plant genotype master list
 
         int currCycle; //after the 4th cycle, reset allseedslist. increment each cycle.
@@ -70,28 +70,26 @@ namespace GrandmaGreen.Shopkeeping
             }
         }
 
-
-        /// <summary>
-        /// Pass in the collections SO.
-        /// </summary>
         public GardeningShopUIController()
         {
             AllSeedsList = new List<Seed>(CollectionsSO.LoadedInstance.PlantGenotypeMasterList);
-
+            
             currCycle = 1;
             //initial ratios
             numFlowers = 3;
             numVeggies = 3;
             numFruits = 2;
+            GenerateGardenList();
         }
 
         /// <summary>
-        /// Each new cycle, call this function to update the gardening shopkeeping system's cycle count
-        /// If exceeds 
+        /// Each new cycle, call this function to update the gardening shopkeeping system's cycle count.
+        /// Regenerates the garden list so that the Shopping UI uses the controller's GardenList.
         /// </summary>
-        public void UpdateCycle()
+        public void UpdateCycle(int val)
         {
             currCycle++;
+            GenerateGardenList();
             //rotate the ratios
             switch (currCycle)
             {
@@ -120,11 +118,11 @@ namespace GrandmaGreen.Shopkeeping
         }
 
         /// <summary>
-        /// Generate and get List<ShopItem> containing all items in the gardening shop this cycle
-        /// Call this once per cycle. Reset the garden shop after the 4th cycle
+        /// Generate the List<ShopItem> containing all items in the gardening shop this cycle
+        /// Call this once per cycle.
         /// </summary>
         /// <returns></returns>
-        public List<ShopItem> GetGardenList()
+        public void GenerateGardenList()
         {
             List<Seed> tempSeedList = new List<Seed>();
             List<string> genotypeList = new List<string> { "AABB", "AABb", "AAbb", "AaBB", "AaBb", "Aabb", "aaBB", "aaBb", "aabb" };
@@ -209,8 +207,6 @@ namespace GrandmaGreen.Shopkeeping
                 item.myItem = new Seed((ushort)seed.itemID, seed.itemName, seed.seedGenotype);
                 GardenList.Add(item);
             }
-
-            return GardenList;
         }
 
         /// <summary>
@@ -262,6 +258,17 @@ namespace GrandmaGreen.Shopkeeping
                 return true;
             }
             else return false;
+        }
+
+        /// <summary>
+        /// Returns the time left until the next cycle (shop reset)
+        /// </summary>
+        /// <returns></returns>
+        public int GetTimeRemaining()
+        {
+
+
+            return 0;
         }
 
     }

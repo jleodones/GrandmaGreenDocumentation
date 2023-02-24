@@ -11,12 +11,18 @@ using Sirenix.OdinInspector;
 
 namespace GrandmaGreen.UI.Shopping
 {
+    using Timer = TimeLayer.TimeLayer;
     public class ShoppingUI : UIDisplayBase
     {
 
         public List<ShopItem> availableItems;
 
         private GardeningShopUIController m_controller;
+
+        //[SerializeField]
+        //public Timer shopTimer;
+        [SerializeField]
+        public ShoppingManager shop;
 
         // Stuff for the shopping amount. This should theoretically get sent to the ShoppingUIController, but will be handled here for now.
         public int m_currentAmount = 1;
@@ -29,15 +35,29 @@ namespace GrandmaGreen.UI.Shopping
         public SpookuleleAudio.ASoundContainer counterSFX;
         public SpookuleleAudio.ASoundContainer cancelSFX;
 
+        private void OnEnable()
+        {
+            shop.StartShop();
+            // Controller set up.
+            //m_controller = new GardeningShopUIController();
+            //shopTimer.onTick += m_controller.UpdateCycle;
+            availableItems = shop.currGardenList;
+            //shopTimer.Resume(true);
+        }
+
+        private void OnDisable()
+        {
+            //shopTimer.onTick -= m_controller.UpdateCycle;
+            //shopTimer.Pause();
+        }
+
         void Start()
         {
             // Setting money.
             m_rootVisualElement.Q<Label>("GoldAmount").text =
                 EventManager.instance.HandleEVENT_INVENTORY_GET_MONEY().ToString();
 
-            // Controller set up.
-            m_controller = new GardeningShopUIController();
-            availableItems = m_controller.GetGardenList();
+            
 
             // Set up the popup window.
             RegisterPopupWindow();

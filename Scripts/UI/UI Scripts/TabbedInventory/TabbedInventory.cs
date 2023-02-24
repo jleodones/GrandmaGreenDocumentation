@@ -119,6 +119,7 @@ namespace GrandmaGreen.UI.Collections
             tab.AddToClassList("active-tab");
 
             ScrollView content = FindContent(tab);
+            Debug.Log(tab + "    " + tab.childCount);
             content.RemoveFromClassList("inactive-content");
 
             // Play tab change SFX.
@@ -154,6 +155,10 @@ namespace GrandmaGreen.UI.Collections
                         SelectTab(clickedTab);
                     }
                 });
+
+                ScrollView view = FindContent(tab);
+
+                view.RegisterCallback<PointerMoveEvent>(ScrollMoveHandler, TrickleDown.TrickleDown);
             });
         }
 
@@ -311,6 +316,7 @@ namespace GrandmaGreen.UI.Collections
 
         public void PointerDownHandler(PointerDownEvent evt)
         {
+            Debug.Log("Pointer down");
             // Retrieve button.
             Button draggedButton = evt.currentTarget as Button;
 
@@ -328,6 +334,7 @@ namespace GrandmaGreen.UI.Collections
 
         public void PointerMoveHandler(PointerMoveEvent evt)
         {
+            Debug.Log("Pointer move");
             switch (currentMode)
             {
                 case InventoryMode.Default:
@@ -342,13 +349,34 @@ namespace GrandmaGreen.UI.Collections
                     break;
             }
 
-            if (isDragging)
+            if (isDragging || handled)
                 evt.StopPropagation();
         }
 
         public void PointerUpHandler(PointerUpEvent evt)
         {
+            Debug.Log("Pointer up");
             FinishPointer(evt.pointerId);
+        }
+
+        public void ScrollMoveHandler(PointerMoveEvent evt)
+        {
+            Debug.Log("Scroll move");
+
+            if (isDragging)
+            {
+                evt.StopPropagation();
+                return;
+            }
+
+            //List<VisualElement> contentJars = GetAllContentJars().ToList();
+            //foreach (var jar in contentJars)
+            //{
+            //    string buttonName = jar.name.Replace("Content", "-tab");
+            //    Button tab = m_rootVisualElement.Query<Button>(buttonName);
+            //    if (tab.ClassListContains("active-tab") && jar.childCount <= 9)
+            //        evt.StopPropagation();
+            //}
         }
 
         public void FinishPointer(int pointerId)
@@ -373,7 +401,7 @@ namespace GrandmaGreen.UI.Collections
 
             Vector3 newPos = pointerState.positionRaw;
 
-            isDragging = (Mathf.Abs(startPos.x - newPos.x) >= Mathf.Abs(startPos.y - newPos.y));
+            isDragging = (Mathf.Abs(startPos.x - newPos.x) >= Mathf.Abs(startPos.y - newPos.y) * 0.6f);
 
             // Break if scrolling
             if (!isDragging)
@@ -420,7 +448,11 @@ namespace GrandmaGreen.UI.Collections
 
                 if (sellingUI && sellingUI.IsInBounds(itemSprite.transform.position * scale) && !handled)
                 {
-                    sellingUI.AddItem(item.inventoryItemData);
+                    if (!item.inventoryItemData.isBeingSold)
+                    {
+                        item.inventoryItemData.isBeingSold = true;
+                        sellingUI.AddItem(item.inventoryItemData);
+                    }
 
                     TeardownDrag(canvas, item);
 

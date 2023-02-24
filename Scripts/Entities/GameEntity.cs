@@ -165,6 +165,7 @@ namespace GrandmaGreen.Entities
                         temp.x *= -1;
                 }
                 animator.transform.localScale = temp;
+                animator.SetInteger("EXPRESSION", 0);
                 animator.SetInteger("MOVEMENT", 1);
             }
             else
@@ -304,11 +305,12 @@ namespace GrandmaGreen.Entities
             footstepsSoundPlayer?.Stop();
         }
 
-        public ExpressionId exp;
+        [Header("Debug Options")]
+        public ExpressionId Expression;
         [Button(ButtonSizes.Medium)]
         public void UpdateGrandmaExp()
         {
-            animator.SetInteger("expressionID", (int)exp);
+            animator.SetInteger("EXPRESSION", (int)Expression);
         }
     }
 }

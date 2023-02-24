@@ -39,6 +39,7 @@ namespace GrandmaGreen.UI.Selling
             // Open inventory UI along with itself.
             inventoryUI.currentMode = InventoryMode.Selling;
             // inventoryUI.OpenUI();
+            foreach (var item in m_items) item.Item1.isBeingSold = false;
             m_items.Clear();
             
             // Since it should be empty, show empty box UI.
@@ -59,7 +60,9 @@ namespace GrandmaGreen.UI.Selling
             // Clear selling box data.
             inventoryUI.currentMode = InventoryMode.Customization;
             // inventoryUI.CloseUI();
+            foreach (var item in m_items) item.Item1.isBeingSold = false;
             m_items.Clear();
+            m_currentSalesTotal = 0;
 
             // Then close.
             base.CloseUI();
@@ -80,6 +83,7 @@ namespace GrandmaGreen.UI.Selling
                 }
 
                 var n = new Tuple<IInventoryItem, int>(item, item.quantity);
+                item.isBeingSold = true;
                 m_items.Add(n);
                 AdjustSalesTotal(true, m_controller.GetSellingPriceById(n.Item1) * n.Item1.quantity);
                 m_sellingBox.RefreshItems();
@@ -90,7 +94,8 @@ namespace GrandmaGreen.UI.Selling
         {
             var n = m_items.First( i => i.Item1 == item);
             AdjustSalesTotal(false, m_controller.GetSellingPriceById(n.Item1) * n.Item2);
-            
+
+            item.isBeingSold = false;
             m_items.Remove(n);
             m_sellingBox.RefreshItems();
             
@@ -128,8 +133,9 @@ namespace GrandmaGreen.UI.Selling
             // Set sales total.
             m_currentSalesTotal = 0;
             m_rootVisualElement.Q<Label>("sale-total").text = m_currentSalesTotal.ToString();
-            
+
             // Clear all items.
+            foreach (var item in m_items) item.Item1.isBeingSold = false;
             m_items.Clear();
             m_sellingBox.RefreshItems();
             inventoryUI.RebuildAllJars();

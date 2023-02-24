@@ -26,7 +26,7 @@ namespace GrandmaGreen.TimeLayer
     {
         [field: SerializeField] public float tickSeconds { get; private set; } = 1;
 
-        public bool paused { get; private set; } = false;
+        [field: SerializeField] public bool paused { get; private set; } = false;
         public event Action<int> onTick;
 
         double m_tickValue = 0;

@@ -19,6 +19,8 @@ namespace GrandmaGreen.Collections {
         
         public int quantity { get; set; }
 
+        public bool isBeingSold { get; set; }
+
         public string GetQuantityToString();
 
     }
@@ -47,6 +49,8 @@ namespace GrandmaGreen.Collections {
         // Amount of the object present in the inventory.
         public int quantity { get; set; }
 
+        public bool isBeingSold { get; set; }
+
         public Genotype plantGenotype;
 
         public Plant(ushort id, string name, Genotype genotype)
@@ -57,6 +61,8 @@ namespace GrandmaGreen.Collections {
             itemName = name;
             quantity = 1;
             plantGenotype = genotype;
+
+            isBeingSold = false;
         }
         
         public string GetQuantityToString()
@@ -87,7 +93,9 @@ namespace GrandmaGreen.Collections {
         
         // Amount of the object present in the inventory.
         public int quantity { get; set; }
-        
+
+        public bool isBeingSold { get; set; }
+
         public Genotype seedGenotype;
 
         public Seed(ushort id, string name, Genotype genotype)
@@ -98,6 +106,8 @@ namespace GrandmaGreen.Collections {
             itemName = name;
             quantity = 1;
             seedGenotype = genotype;
+
+            isBeingSold = false;
         }
         
         public string GetQuantityToString()
@@ -128,6 +138,8 @@ namespace GrandmaGreen.Collections {
         // Amount of the object present in the inventory.
         public int quantity { get; set; }
 
+        public bool isBeingSold { get; set; }
+
         public Tool(ushort id, string name)
         {
             itemType = ItemType.Tool;
@@ -135,6 +147,8 @@ namespace GrandmaGreen.Collections {
             itemID = id;
             itemName = name;
             quantity = 1;
+
+            isBeingSold = false;
         }
         
         public Tool(ushort id, string name, int num)
@@ -144,6 +158,8 @@ namespace GrandmaGreen.Collections {
             itemID = id;
             itemName = name;
             quantity = num;
+
+            isBeingSold = false;
         }
 
         public string GetQuantityToString()
@@ -170,6 +186,8 @@ namespace GrandmaGreen.Collections {
         // Amount of the object present in the inventory.
         public int quantity { get; set; }
 
+        public bool isBeingSold { get; set; }
+
         public Decor(ushort id, string name)
         {
             itemType = ItemType.Decor;
@@ -177,6 +195,8 @@ namespace GrandmaGreen.Collections {
             itemID = id;
             itemName = name;
             quantity = 1;
+
+            isBeingSold = false;
         }
         
         public Decor(ushort id, string name, int num)
@@ -186,6 +206,8 @@ namespace GrandmaGreen.Collections {
             itemID = id;
             itemName = name;
             quantity = num;
+
+            isBeingSold = false;
         }
         
         public string GetQuantityToString()
