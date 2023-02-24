@@ -424,7 +424,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.Collections.Decor.html",
-          "hash": "1qVuNmk6V4HhqClGN8iOuY1ph1lu0uYHxKxt0dqEmB4="
+          "hash": "tHfLwErSd6rjhF91ObsQSzVhxuCwxQz66TbrK2Zg1ew="
         }
       },
       "is_incremental": false,
@@ -437,6 +437,18 @@
         ".html": {
           "relative_path": "api/GrandmaGreen.Collections.DecorationId.html",
           "hash": "XFb5In1Qwk3vm2jnwtefu3KBGFcCdAekJ2rswnwtsmA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GrandmaGreen.Collections.ExpressionId.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GrandmaGreen.Collections.ExpressionId.html",
+          "hash": "jqP9XrVzb/3JghtvirwMs9Us44ikUsBvT9n3uY5pgVo="
         }
       },
       "is_incremental": false,
@@ -484,7 +496,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.Collections.IInventoryItem.html",
-          "hash": "SVuImXNnNtZvD4OFiEI1MfbQUdN3ijDukUoQYY29Txw="
+          "hash": "pmELitoEqhqQRUQGi8TaXIgWFfqkSVGfW655FIheV6g="
         }
       },
       "is_incremental": false,
@@ -520,7 +532,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.Collections.Plant.html",
-          "hash": "F4u5gTwuKPtCQEg8fkc1gMoFO+FYJ1p6f3BeAZ+Iuog="
+          "hash": "PAun3FRqYtr3RZHbGK7QYybh5BpeS60l0di9B1vQd/E="
         }
       },
       "is_incremental": false,
@@ -580,7 +592,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.Collections.Seed.html",
-          "hash": "uAyCHtGnh4K1Nl3646eludMSR+trxoCPbKQ9pGK0oRE="
+          "hash": "rvdhIhuev0jFcEt8Xr09DEntCj7dNsmrP41pXkPLA1M="
         }
       },
       "is_incremental": false,
@@ -592,7 +604,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.Collections.Tool.html",
-          "hash": "lDHX16XVP1jziJ+YB1wpS3+9JD0YwPijMq3G4eSvsmE="
+          "hash": "OrLpSaMnpoKncAWtmbHEV9h+ynoAmJMf/GjVoEJyVXY="
         }
       },
       "is_incremental": false,
@@ -628,7 +640,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.Collections.html",
-          "hash": "vM47sIuzgXqWbVpxwmuuC+gltRrDe7V/1jzhfSNsV0s="
+          "hash": "/IRckstx4TBDDn2k+aBclZI0BT76XZLJQY+Xz5HOllw="
         }
       },
       "is_incremental": false,
@@ -868,7 +880,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.Entities.GameEntity.html",
-          "hash": "k/aT1X6flzraK8JZhV7eMI8aIxFP+o6mbFOfG7SWTjg="
+          "hash": "fQudI5D72I/IMPiGctbqfytUlc00pyNGu4FnNebSTRk="
         }
       },
       "is_incremental": false,
@@ -1708,7 +1720,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.Shopkeeping.GardeningShopUIController.html",
-          "hash": "0LUSHiAp6GoJwWEmm+Sj6sxaqbbYx2NMDcaNcGZQGlw="
+          "hash": "sixDR4qvFaSbQCfoxTpghANpLM9p5Kj0GaT+Nj7Klw8="
         }
       },
       "is_incremental": false,
@@ -1728,11 +1740,23 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/GrandmaGreen.Shopkeeping.ShoppingManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GrandmaGreen.Shopkeeping.ShoppingManager.html",
+          "hash": "IvWa8Id3xq97CYxFT3MSYf8odz2IAQkQjkxlZTg423M="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/GrandmaGreen.Shopkeeping.yml",
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.Shopkeeping.html",
-          "hash": "S2Grob0lqdrAe8a9MMeezV9I4k5wIHjqXwJ87MZ7OTE="
+          "hash": "n2GA1xkaR9ZH5Gk1gVOobqx5d1PktnQM9k7G4nEXuDU="
         }
       },
       "is_incremental": false,
@@ -2056,7 +2080,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.UI.Collections.TabbedInventory.html",
-          "hash": "3VVwM3YxOXKx22vBifgH1+HyBRL3K3RM/t5tA1P3wgA="
+          "hash": "RZ5mB/W6G08snt6/Y7yAzRKBw8c8B2II3CxZeSzur7k="
         }
       },
       "is_incremental": false,
@@ -2308,7 +2332,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.UI.Shopping.ShoppingUI.html",
-          "hash": "i9Br6mYh3PE9ZXdRWZ+cZ11vLzxRVXHO5l4YOTrspi8="
+          "hash": "Thy5bokv9bIrikwm+DUXvmgkLBQPsB62xXCe6v8QGkY="
         }
       },
       "is_incremental": false,
@@ -2464,7 +2488,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "dHzpFEzzcIE9SxW769yZzwE682hDuK8PDpdM/YvXNxc="
+          "hash": "RKq7FD3mkNyM5+Hfp6yoFDWW75roKhUVCCW5/661eEY="
         }
       },
       "is_incremental": false,
@@ -2573,7 +2597,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 203,
+          "total_file_count": 205,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

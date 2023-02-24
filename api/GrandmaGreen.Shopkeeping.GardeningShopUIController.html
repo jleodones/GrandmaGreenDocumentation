@@ -125,26 +125,24 @@
   
   <a id="GrandmaGreen_Shopkeeping_GardeningShopUIController__ctor_" data-uid="GrandmaGreen.Shopkeeping.GardeningShopUIController.#ctor*"></a>
   <h4 id="GrandmaGreen_Shopkeeping_GardeningShopUIController__ctor" data-uid="GrandmaGreen.Shopkeeping.GardeningShopUIController.#ctor">GardeningShopUIController()</h4>
-  <div class="markdown level1 summary"><p>Pass in the collections SO.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public GardeningShopUIController()</code></pre>
   </div>
-  <h3 id="methods">Methods
+  <h3 id="fields">Fields
   </h3>
   
   
-  <a id="GrandmaGreen_Shopkeeping_GardeningShopUIController_GetGardenList_" data-uid="GrandmaGreen.Shopkeeping.GardeningShopUIController.GetGardenList*"></a>
-  <h4 id="GrandmaGreen_Shopkeeping_GardeningShopUIController_GetGardenList" data-uid="GrandmaGreen.Shopkeeping.GardeningShopUIController.GetGardenList">GetGardenList()</h4>
+  <h4 id="GrandmaGreen_Shopkeeping_GardeningShopUIController_GardenList" data-uid="GrandmaGreen.Shopkeeping.GardeningShopUIController.GardenList">GardenList</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public List&lt;ShopItem&gt; GetGardenList()</code></pre>
+    <pre><code class="lang-csharp hljs">public List&lt;ShopItem&gt; GardenList</code></pre>
   </div>
-  <h5 class="returns">Returns</h5>
+  <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -159,6 +157,18 @@
       </tr>
     </tbody>
   </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="GrandmaGreen_Shopkeeping_GardeningShopUIController_GenerateGardenList_" data-uid="GrandmaGreen.Shopkeeping.GardeningShopUIController.GenerateGardenList*"></a>
+  <h4 id="GrandmaGreen_Shopkeeping_GardeningShopUIController_GenerateGardenList" data-uid="GrandmaGreen.Shopkeeping.GardeningShopUIController.GenerateGardenList">GenerateGardenList()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void GenerateGardenList()</code></pre>
+  </div>
   
   
   <a id="GrandmaGreen_Shopkeeping_GardeningShopUIController_GetSellingPriceById_" data-uid="GrandmaGreen.Shopkeeping.GardeningShopUIController.GetSellingPriceById*"></a>
@@ -187,6 +197,32 @@
       </tr>
     </tbody>
   </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="GrandmaGreen_Shopkeeping_GardeningShopUIController_GetTimeRemaining_" data-uid="GrandmaGreen.Shopkeeping.GardeningShopUIController.GetTimeRemaining*"></a>
+  <h4 id="GrandmaGreen_Shopkeeping_GardeningShopUIController_GetTimeRemaining" data-uid="GrandmaGreen.Shopkeeping.GardeningShopUIController.GetTimeRemaining">GetTimeRemaining()</h4>
+  <div class="markdown level1 summary"><p>Returns the time left until the next cycle (shop reset)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int GetTimeRemaining()</code></pre>
+  </div>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
@@ -248,15 +284,32 @@
   
   
   <a id="GrandmaGreen_Shopkeeping_GardeningShopUIController_UpdateCycle_" data-uid="GrandmaGreen.Shopkeeping.GardeningShopUIController.UpdateCycle*"></a>
-  <h4 id="GrandmaGreen_Shopkeeping_GardeningShopUIController_UpdateCycle" data-uid="GrandmaGreen.Shopkeeping.GardeningShopUIController.UpdateCycle">UpdateCycle()</h4>
-  <div class="markdown level1 summary"><p>Each new cycle, call this function to update the gardening shopkeeping system&apos;s cycle count
-If exceeds </p>
+  <h4 id="GrandmaGreen_Shopkeeping_GardeningShopUIController_UpdateCycle_System_Int32_" data-uid="GrandmaGreen.Shopkeeping.GardeningShopUIController.UpdateCycle(System.Int32)">UpdateCycle(Int32)</h4>
+  <div class="markdown level1 summary"><p>Each new cycle, call this function to update the gardening shopkeeping system&apos;s cycle count.
+Regenerates the garden list so that the Shopping UI uses the controller&apos;s GardenList.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void UpdateCycle()</code></pre>
+    <pre><code class="lang-csharp hljs">public void UpdateCycle(int val)</code></pre>
   </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">val</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
 </article>
           </div>
           
