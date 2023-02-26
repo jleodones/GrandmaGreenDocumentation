@@ -20,7 +20,6 @@ namespace GrandmaGreen.UI.Golems
         private bool m_isGolemActive = false;
         
         private bool m_isMenuOpen = false;
-        private VisualElement root;
         private GolemController golemController;
 
         void OnEnable()
@@ -30,7 +29,6 @@ namespace GrandmaGreen.UI.Golems
             golemMenu.rootVisualElement.Q<Button>("gift").RegisterCallback<ClickEvent>(OnGiftTrigger);
             golemMenu.rootVisualElement.Q<Button>("task").RegisterCallback<ClickEvent>(OnTaskTrigger);
 
-            root = golemMenu.rootVisualElement.Q("rootElement");
             golemController =  GetComponentInParent<GolemController>();
         }
 
@@ -52,7 +50,7 @@ namespace GrandmaGreen.UI.Golems
         public void GolemMenuOpen()
         {
             // Close the HUD.
-            EventManager.instance.HandleEVENT_CLOSE_HUD();
+            // EventManager.instance.HandleEVENT_CLOSE_HUD();
 
             // Get Collider bounding box
             Bounds box = golemController.GetGolemBox();
@@ -62,19 +60,19 @@ namespace GrandmaGreen.UI.Golems
             GetComponentInParent<GolemController>().onEntityMove += SetLocation;
             
             // Display.
-            root.style.display = DisplayStyle.Flex;
+            m_rootVisualElement.style.display = DisplayStyle.Flex;
         }
 
         public void GolemMenuClose()
         {
-            EventManager.instance.HandleEVENT_OPEN_HUD();
-            root.style.display = DisplayStyle.None;
+            // EventManager.instance.HandleEVENT_OPEN_HUD();
+            m_rootVisualElement.style.display = DisplayStyle.None;
         }
 
         private void OnDialogueTrigger(ClickEvent clickEvent)
         {
             // Disable menu.
-            root.style.display = DisplayStyle.None;
+            m_rootVisualElement.style.display = DisplayStyle.None;
 
             // Find the golem's dialogue script.
             Dialogueable dialogueScript = GetComponentInChildren<Dialogueable>();
@@ -104,13 +102,13 @@ namespace GrandmaGreen.UI.Golems
                 Bounds box = golemController.GetGolemBox();
                 Vector3 UIpos = box.center + new Vector3(0, box.extents.y + 1.2f, 0);
                 Vector2 newPosition = RuntimePanelUtils.CameraTransformWorldToPanel(
-                    root.panel, UIpos, Camera.main);
+                    m_rootVisualElement.panel, UIpos, Camera.main);
 
-                root.transform.position = newPosition;
+                m_rootVisualElement.transform.position = newPosition;
 
                 // Moved UI to midpoint through UXML
-                //root.transform.position = newPosition.WithNewX(newPosition.x -
-                //    root.layout.width / 2);
+                //m_rootVisualElement.transform.position = newPosition.WithNewX(newPosition.x -
+                //    m_rootVisualElement.layout.width / 2);
             }
         }
     }

@@ -4,10 +4,13 @@ using UnityEngine;
 using Sirenix.OdinInspector;
 using GrandmaGreen.SaveSystem;
 using GrandmaGreen.Garden;
+using GrandmaGreen.UI.HUD;
 
 namespace GrandmaGreen {
     public class GameSystemDummy : MonoBehaviour
     {
+        public HUD hud;
+        
         [Button(ButtonSizes.Medium)]
         public void ResourcesLoadTest()
         {
@@ -52,6 +55,18 @@ namespace GrandmaGreen {
         public int SampleTest()
         {
             return 3;
+        }
+        
+        [Button()]
+        public void CloseHUD()
+        {
+            hud.CloseUI();
+        }
+
+        [Button()]
+        public void OpenHUD()
+        {
+            hud.OpenUI();
         }
     }
 }

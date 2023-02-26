@@ -92,7 +92,7 @@ namespace GrandmaGreen.UI.Shopping
             m_isMenuOpen = true;
 
             // Close the HUD.
-            EventManager.instance.HandleEVENT_CLOSE_HUD();
+            // EventManager.instance.HandleEVENT_CLOSE_HUD();
 
             // Get Collider bounding box
             //Bounds box = GetComponentInParent<Collider>().bounds;
@@ -107,7 +107,7 @@ namespace GrandmaGreen.UI.Shopping
             m_isMenuOpen = false;
             m_isInteracting = false;
 
-            EventManager.instance.HandleEVENT_OPEN_HUD();
+            // EventManager.instance.HandleEVENT_OPEN_HUD();
             base.CloseUI();
         }
 
@@ -123,7 +123,7 @@ namespace GrandmaGreen.UI.Shopping
         {
             ToggleMenu(false);
 
-            EventManager.instance.HandleEVENT_CLOSE_HUD();
+            // EventManager.instance.HandleEVENT_CLOSE_HUD();
 
             // Call the dialogue trigger.
 
@@ -142,7 +142,7 @@ namespace GrandmaGreen.UI.Shopping
             // Close menu.
             ToggleMenu(false);
 
-            EventManager.instance.HandleEVENT_CLOSE_HUD();
+            // EventManager.instance.HandleEVENT_CLOSE_HUD();
 
             sellingUI.OpenUI();
         }
@@ -152,7 +152,7 @@ namespace GrandmaGreen.UI.Shopping
             // Close this UI first.
             ToggleMenu(false);
 
-            EventManager.instance.HandleEVENT_CLOSE_HUD();
+            // EventManager.instance.HandleEVENT_CLOSE_HUD();
 
             // Then open shop UI.
             shopUI.OpenUI();

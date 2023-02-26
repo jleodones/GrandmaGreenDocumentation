@@ -73,7 +73,6 @@ namespace GrandmaGreen.UI.BulletinBoard
         {
             m_isMenuOpen = true;
 
-            EventManager.instance.HandleEVENT_CLOSE_HUD();
             SetItemSource();
             openSFX?.Play();
             base.OpenUI();
@@ -86,8 +85,6 @@ namespace GrandmaGreen.UI.BulletinBoard
 
             closeSFX?.Play();
             base.CloseUI();
-
-            EventManager.instance.HandleEVENT_OPEN_HUD();
         }
 
         public void RegisterSubmissionBox()

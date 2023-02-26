@@ -59,6 +59,11 @@ namespace GrandmaGreen.UI
             
             RegisterButtonCallback("exitButton", CloseUI);
             UIDisplayTracker.AddPanel(this);
+
+            if (!displayOpen)
+            {
+                m_rootVisualElement.style.display = DisplayStyle.None;
+            }
             
             Load();
         }
@@ -195,7 +200,7 @@ namespace GrandmaGreen.UI
                 m_callbackDictionary[buttonName].Add(callbackFunction);
             }
         }
-
+        
         public void RegisterButtonCallbackWithClose(string buttonName, Action callbackFunction)
         {
             Button button;
@@ -222,7 +227,7 @@ namespace GrandmaGreen.UI
                 m_callbackDictionary[buttonName].Add(callbackFunction);
             }
         }
-
+        
         private void DeregisterButtonCallback(string buttonName, Action callbackFunction)
         {
             m_rootVisualElement.Q<Button>(buttonName).clicked -= callbackFunction;

@@ -82,24 +82,24 @@ namespace GrandmaGreen.UI.Collections
         }
 
         // OPENING AND CLOSING THE UI.
-        public override void OpenUI()
+        public override void UIOpenLogic()
         {
             // Close HUD first.
             //EventManager.instance.HandleEVENT_CLOSE_HUD();
             
-            base.OpenUI();
+            base.UIOpenLogic();
             m_rootVisualElement.ToggleInClassList("closed-inventory");
             // Play open inventory SFX.
             soundContainers[0].Play();
         }
 
-        public override void CloseUI()
+        public override void UICloseLogic()
         {
             // Play the inventory close SFX.
             soundContainers[1].Play();
             m_rootVisualElement.ToggleInClassList("closed-inventory");
-            base.CloseUI();
-            EventManager.instance.HandleEVENT_OPEN_HUD();
+            base.UICloseLogic();
+            // EventManager.instance.HandleEVENT_OPEN_HUD();
         }
 
         // BUILDING THE TABS SWITCHING EVENTS.
@@ -369,14 +369,20 @@ namespace GrandmaGreen.UI.Collections
                 return;
             }
 
-            //List<VisualElement> contentJars = GetAllContentJars().ToList();
-            //foreach (var jar in contentJars)
-            //{
-            //    string buttonName = jar.name.Replace("Content", "-tab");
-            //    Button tab = m_rootVisualElement.Query<Button>(buttonName);
-            //    if (tab.ClassListContains("active-tab") && jar.childCount <= 9)
-            //        evt.StopPropagation();
-            //}
+            List<VisualElement> contentJars = GetAllContentJars().ToList();
+            foreach (var jar in contentJars)
+            {
+                string buttonName = jar.name.Replace("Content", "-tab");
+                Button tab = m_rootVisualElement.Query<Button>(buttonName);
+                if (tab.ClassListContains("active-tab"))
+                {
+                    // If jar is smaller than parent, ie. the jar is not filled yet.
+                    if (jar.worldBound.size.y < jar.parent.worldBound.size.y)
+                    {
+                        evt.StopPropagation();
+                    }
+                }
+            }
         }
 
         public void FinishPointer(int pointerId)

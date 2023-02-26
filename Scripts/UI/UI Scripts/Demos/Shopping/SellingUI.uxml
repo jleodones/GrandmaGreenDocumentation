@@ -9,6 +9,10 @@
         </ui:VisualElement>
         <ui:VisualElement name="selling-container" style="width: 50%; height: 100%; align-items: center;">
             <ui:VisualElement name="selling-bg" style="width: 80%; height: 70%; background-image: url(&apos;project://database/Assets/_GrandmaGreen/Art/UI/Shopping/UI_Shopping_Sell_Background.png?fileID=2800000&amp;guid=77cb6a85019614e289e942a23d4d7a18&amp;type=3#UI_Shopping_Sell_Background&apos;); left: 0; top: 10%; align-items: center;">
+                <ui:VisualElement name="boundTop" style="position: absolute;" />
+                <ui:VisualElement name="boundRight" style="position: absolute; left: 100%; top: 50%;" />
+                <ui:VisualElement name="boundLeft" style="position: absolute; right: 100%; top: 50%;" />
+                <ui:VisualElement name="boundBottom" style="position: absolute; bottom: 0;" />
                 <ui:VisualElement name="empty" style="width: 60%; height: 60%; left: 20%; top: 10%; align-items: center; justify-content: center; position: absolute;">
                     <ui:Label tabindex="-1" text="Drag in items you want to SELL." display-tooltip-when-elided="true" name="text" style="font-size: 50%; white-space: normal; color: rgb(103, 82, 82); -unity-font-style: bold; -unity-text-align: upper-center;" />
                     <ui:VisualElement name="visual" style="background-image: url(&apos;project://database/Assets/_GrandmaGreen/Art/UI/Shopping/UI_Shopping_Sell_Icon.png?fileID=2800000&amp;guid=2d20ae1b7238448fc90b10a88ed193ad&amp;type=3#UI_Shopping_Sell_Icon&apos;); width: 60%; height: 60%;" />

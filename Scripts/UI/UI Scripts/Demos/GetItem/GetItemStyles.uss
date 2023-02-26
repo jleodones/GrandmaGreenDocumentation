@@ -1,0 +1,47 @@
+.item-container {
+}
+
+.item-container-bg {
+    width: 350px;
+    height: 350px;
+    -unity-background-scale-mode: scale-to-fit;
+    background-image: url('project://database/Assets/_GrandmaGreen/Scripts/UI/SampleArt/UI_Bloom_Orange.png?fileID=2800000&guid=4f15353aa12f345af9d7292e55f4238c&type=3#UI_Bloom_Orange');
+    align-items: center;
+    justify-content: center;
+}
+
+.item-name-text {
+    -unity-font: url('project://database/Assets/_GrandmaGreen/Art/UI/Fonts/Brevia/Brevia-Regular.ttf?fileID=12800000&guid=aad336cfecd184781b600667849adc4e&type=3#Brevia-Regular');
+    color: rgba(103, 69, 43, 255);
+    -unity-font-style: bold;
+    -unity-text-align: middle-center;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: rgba(218, 227, 153, 255);
+    height: 40px;
+    font-size: 20px;
+}
+
+.item-amount-container {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    background-color: rgba(245, 226, 154, 255);
+    height: 30px;
+    width: 50px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    color: rgba(103, 69, 43, 255);
+    -unity-text-align: middle-center;
+    -unity-font: url('project://database/Assets/_GrandmaGreen/Art/UI/Fonts/Brevia/Brevia-Regular.ttf?fileID=12800000&guid=aad336cfecd184781b600667849adc4e&type=3#Brevia-Regular');
+    -unity-font-style: bold;
+    font-size: 20px;
+}
+
+.unselected-item {
+    -unity-background-image-tint-color: rgba(255, 255, 255, 0);
+}

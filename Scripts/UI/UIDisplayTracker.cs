@@ -19,7 +19,7 @@ namespace GrandmaGreen.UI
     {
         public Dictionary<UITag, UIDisplayRule> displayRules = new Dictionary<UITag, UIDisplayRule>();
         
-        static List<UIDisplayBase> activeUIDisplays;
+        // static List<UIDisplayBase> activeUIDisplays;
         static Dictionary<UITag, List<UIDisplayBase>> trackedUIDisplays;
         static Dictionary<UITag, UIDisplayRule> DisplayRules;
 
@@ -27,7 +27,7 @@ namespace GrandmaGreen.UI
         {
             DisplayRules = displayRules;
             trackedUIDisplays = new Dictionary<UITag, List<UIDisplayBase>>();
-            activeUIDisplays = new List<UIDisplayBase>();
+            // activeUIDisplays = new List<UIDisplayBase>();
             
             Debug.Log(displayRules);
             Debug.Log(DisplayRules);
@@ -64,6 +64,7 @@ namespace GrandmaGreen.UI
         {
             if (!DisplayRules.TryGetValue(tag, out UIDisplayRule rule))
                 return;
+            
             // Parse again.
             var list = rule.closeWhenKeyOpened.ToString().Split(", ");
             List<UITag> tags = new List<UITag>();
@@ -82,7 +83,7 @@ namespace GrandmaGreen.UI
                 foreach (UIDisplayBase display in l)
                 {
                     display.UICloseLogic();
-                    activeUIDisplays.Remove(display);
+                    // activeUIDisplays.Remove(display);
                 }
             }
 
@@ -104,7 +105,7 @@ namespace GrandmaGreen.UI
                 foreach (UIDisplayBase display in l)
                 {
                     display.UIOpenLogic();
-                    activeUIDisplays.Add(display);
+                    // activeUIDisplays.Add(display);
                 }
             }
         }
@@ -131,7 +132,7 @@ namespace GrandmaGreen.UI
                 foreach (UIDisplayBase display in l)
                 {
                     display.UICloseLogic();
-                    activeUIDisplays.Remove(display);
+                    // activeUIDisplays.Remove(display);
                 }
             }
 
@@ -153,7 +154,7 @@ namespace GrandmaGreen.UI
                 foreach (UIDisplayBase display in l)
                 {
                     display.UIOpenLogic();
-                    activeUIDisplays.Add(display);
+                    // activeUIDisplays.Add(display);
                 }
             }
         }

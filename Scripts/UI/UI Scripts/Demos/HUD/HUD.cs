@@ -42,8 +42,8 @@ namespace GrandmaGreen.UI.HUD
 
             if (SceneManager.GetActiveScene().name == "SetupTest")
             {
-                RegisterButtonCallbackWithClose("cultivisionButton", cultivisionUIDisplay.OpenUI);
-                cultivisionUIDisplay.RegisterButtonCallback("exitButton", OpenHUDAnimated);
+                RegisterButtonCallback("cultivisionButton", cultivisionUIDisplay.OpenUI);
+                // cultivisionUIDisplay.RegisterButtonCallback("exitButton", OpenHUDAnimated);
 
                 RegisterButtonCallback("customizationButton", () =>
                 {
@@ -59,14 +59,14 @@ namespace GrandmaGreen.UI.HUD
                 m_rootVisualElement.Q<Button>("customizationButton").pickingMode = PickingMode.Ignore;
             }
 
-            RegisterButtonCallbackWithClose("inventoryButton", inventoryUIDisplay.OpenUI);
-            inventoryUIDisplay.RegisterButtonCallback("exitButton", OpenUI);
+            RegisterButtonCallback("inventoryButton", inventoryUIDisplay.OpenUI);
+            // inventoryUIDisplay.RegisterButtonCallback("exitButton", OpenUI);
 
-            RegisterButtonCallbackWithClose("collectionsButton", collectionUIDisplay.OpenUI);
-            collectionUIDisplay.RegisterButtonCallback("exitButton", OpenHUDAnimated);
+            RegisterButtonCallback("collectionsButton", collectionUIDisplay.OpenUI);
+            // collectionUIDisplay.RegisterButtonCallback("exitButton", OpenHUDAnimated);
 
-            RegisterButtonCallbackWithClose("settingsButton", settingsUIDisplay.OpenUI);
-            settingsUIDisplay.RegisterButtonCallback("exitButton", OpenUI);
+            RegisterButtonCallback("settingsButton", settingsUIDisplay.OpenUI);
+            // settingsUIDisplay.RegisterButtonCallback("exitButton", OpenUI);
 
             EventManager.instance.HandleEVENT_UPDATE_MONEY_DISPLAY();
         }
@@ -74,9 +74,9 @@ namespace GrandmaGreen.UI.HUD
         public override void Load()
         {
             // Register global events.
-            EventManager.instance.EVENT_OPEN_HUD += OpenHUD;
+            // EventManager.instance.EVENT_OPEN_HUD += OpenHUD;
             EventManager.instance.EVENT_OPEN_HUD_ANIMATED += OpenHUDAnimated;
-            EventManager.instance.EVENT_CLOSE_HUD += CloseHUD;
+            // EventManager.instance.EVENT_CLOSE_HUD += CloseHUD;
             EventManager.instance.EVENT_CLOSE_HUD_ANIMATED += CloseHUDAnimated;
             EventManager.instance.EVENT_UPDATE_MONEY_DISPLAY += UpdateMoneyDisplay;
             EventManager.instance.EVENT_TOGGLE_CUSTOMIZATION_MODE += ToggleCustomizationMode;
@@ -87,9 +87,9 @@ namespace GrandmaGreen.UI.HUD
         public override void Unload()
         {
             // Register global events.
-            EventManager.instance.EVENT_OPEN_HUD -= OpenHUD;
+            //EventManager.instance.EVENT_OPEN_HUD -= OpenHUD;
             EventManager.instance.EVENT_OPEN_HUD_ANIMATED -= OpenHUDAnimated;
-            EventManager.instance.EVENT_CLOSE_HUD -= CloseHUD;
+            //EventManager.instance.EVENT_CLOSE_HUD -= CloseHUD;
             EventManager.instance.EVENT_CLOSE_HUD_ANIMATED -= CloseHUDAnimated;
             EventManager.instance.EVENT_UPDATE_MONEY_DISPLAY -= UpdateMoneyDisplay;
             EventManager.instance.EVENT_TOGGLE_CUSTOMIZATION_MODE -= ToggleCustomizationMode;

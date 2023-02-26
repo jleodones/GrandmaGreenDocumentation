@@ -17,19 +17,19 @@ namespace GrandmaGreen.UI.Tutorial
         private SlideshowData data;
         private int currentPageIndex = 0;
 
-        public override void OpenUI()
-        {
-
-            EventManager.instance.HandleEVENT_CLOSE_HUD();
-            base.OpenUI();
-        }
-
-        public override void CloseUI()
-        {
-
-            EventManager.instance.HandleEVENT_OPEN_HUD();
-            base.CloseUI();
-        }
+        // public override void OpenUI()
+        // {
+        //
+        //     EventManager.instance.HandleEVENT_CLOSE_HUD();
+        //     base.OpenUI();
+        // }
+        //
+        // public override void CloseUI()
+        // {
+        //
+        //     EventManager.instance.HandleEVENT_OPEN_HUD();
+        //     base.CloseUI();
+        // }
 
         public override void Load()
         {

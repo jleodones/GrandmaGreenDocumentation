@@ -70,7 +70,21 @@ namespace GrandmaGreen.UI.Selling
 
         public bool IsInBounds(Vector3 itemPosition)
         {
-            return m_rootVisualElement.Q<VisualElement>("selling-bg").worldBound.Contains(itemPosition);
+            VisualElement boundTop = m_rootVisualElement.Q<VisualElement>("boundTop");
+            VisualElement boundBottom = m_rootVisualElement.Q<VisualElement>("boundBottom");
+            VisualElement boundLeft = m_rootVisualElement.Q<VisualElement>("boundLeft");
+            VisualElement boundRight = m_rootVisualElement.Q <VisualElement>("boundRight");
+
+            if (itemPosition.x <= boundRight.worldTransform.GetPosition().x &&
+                itemPosition.y >= boundLeft.worldTransform.GetPosition().x)
+            {
+                if (itemPosition.y >= boundTop.worldTransform.GetPosition().y &&
+                    itemPosition.y <= boundBottom.worldTransform.GetPosition().y)
+                {
+                    return true;
+                }
+            }
+            return false;
         }
 
         public void AddItem(IInventoryItem item)
