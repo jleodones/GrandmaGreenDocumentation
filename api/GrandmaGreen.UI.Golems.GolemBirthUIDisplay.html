@@ -126,13 +126,7 @@
       <a class="xref" href="GrandmaGreen.UI.UIDisplayBase.html#GrandmaGreen_UI_UIDisplayBase_Awake">UIDisplayBase.Awake()</a>
     </div>
     <div>
-      <a class="xref" href="GrandmaGreen.UI.UIDisplayBase.html#GrandmaGreen_UI_UIDisplayBase_Load">UIDisplayBase.Load()</a>
-    </div>
-    <div>
-      <a class="xref" href="GrandmaGreen.UI.UIDisplayBase.html#GrandmaGreen_UI_UIDisplayBase_Unload">UIDisplayBase.Unload()</a>
-    </div>
-    <div>
-      <a class="xref" href="GrandmaGreen.UI.UIDisplayBase.html#GrandmaGreen_UI_UIDisplayBase_UIOpenLogic">UIDisplayBase.UIOpenLogic()</a>
+      <a class="xref" href="GrandmaGreen.UI.UIDisplayBase.html#GrandmaGreen_UI_UIDisplayBase_OpenUI">UIDisplayBase.OpenUI()</a>
     </div>
     <div>
       <a class="xref" href="GrandmaGreen.UI.UIDisplayBase.html#GrandmaGreen_UI_UIDisplayBase_CloseUI">UIDisplayBase.CloseUI()</a>
@@ -175,16 +169,75 @@
   </h3>
   
   
-  <a id="GrandmaGreen_UI_Golems_GolemBirthUIDisplay_OpenUI_" data-uid="GrandmaGreen.UI.Golems.GolemBirthUIDisplay.OpenUI*"></a>
-  <h4 id="GrandmaGreen_UI_Golems_GolemBirthUIDisplay_OpenUI" data-uid="GrandmaGreen.UI.Golems.GolemBirthUIDisplay.OpenUI">OpenUI()</h4>
+  <a id="GrandmaGreen_UI_Golems_GolemBirthUIDisplay_CloseUIHandler_" data-uid="GrandmaGreen.UI.Golems.GolemBirthUIDisplay.CloseUIHandler*"></a>
+  <h4 id="GrandmaGreen_UI_Golems_GolemBirthUIDisplay_CloseUIHandler_ClickEvent_" data-uid="GrandmaGreen.UI.Golems.GolemBirthUIDisplay.CloseUIHandler(ClickEvent)">CloseUIHandler(ClickEvent)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override void OpenUI()</code></pre>
+    <pre><code class="lang-csharp hljs">public void CloseUIHandler(ClickEvent ce)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">ClickEvent</span></td>
+        <td><span class="parametername">ce</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="GrandmaGreen_UI_Golems_GolemBirthUIDisplay_Load_" data-uid="GrandmaGreen.UI.Golems.GolemBirthUIDisplay.Load*"></a>
+  <h4 id="GrandmaGreen_UI_Golems_GolemBirthUIDisplay_Load" data-uid="GrandmaGreen.UI.Golems.GolemBirthUIDisplay.Load">Load()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Load()</code></pre>
   </div>
   <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="GrandmaGreen.UI.UIDisplayBase.html#GrandmaGreen_UI_UIDisplayBase_OpenUI">UIDisplayBase.OpenUI()</a></div>
+  <div><a class="xref" href="GrandmaGreen.UI.UIDisplayBase.html#GrandmaGreen_UI_UIDisplayBase_Load">UIDisplayBase.Load()</a></div>
+  
+  
+  <a id="GrandmaGreen_UI_Golems_GolemBirthUIDisplay_OpenUIHandler_" data-uid="GrandmaGreen.UI.Golems.GolemBirthUIDisplay.OpenUIHandler*"></a>
+  <h4 id="GrandmaGreen_UI_Golems_GolemBirthUIDisplay_OpenUIHandler_System_UInt16_Vector3_" data-uid="GrandmaGreen.UI.Golems.GolemBirthUIDisplay.OpenUIHandler(System.UInt16,Vector3)">OpenUIHandler(UInt16, Vector3)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void OpenUIHandler(ushort golemID, Vector3 spawnLocation)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">UInt16</a></td>
+        <td><span class="parametername">golemID</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td><span class="parametername">spawnLocation</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="GrandmaGreen_UI_Golems_GolemBirthUIDisplay_Start_" data-uid="GrandmaGreen.UI.Golems.GolemBirthUIDisplay.Start*"></a>
@@ -195,6 +248,57 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Start()</code></pre>
   </div>
+  
+  
+  <a id="GrandmaGreen_UI_Golems_GolemBirthUIDisplay_TestHandler_" data-uid="GrandmaGreen.UI.Golems.GolemBirthUIDisplay.TestHandler*"></a>
+  <h4 id="GrandmaGreen_UI_Golems_GolemBirthUIDisplay_TestHandler_System_UInt16_" data-uid="GrandmaGreen.UI.Golems.GolemBirthUIDisplay.TestHandler(System.UInt16)">TestHandler(UInt16)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void TestHandler(ushort golemID)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">UInt16</a></td>
+        <td><span class="parametername">golemID</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="GrandmaGreen_UI_Golems_GolemBirthUIDisplay_UIOpenLogic_" data-uid="GrandmaGreen.UI.Golems.GolemBirthUIDisplay.UIOpenLogic*"></a>
+  <h4 id="GrandmaGreen_UI_Golems_GolemBirthUIDisplay_UIOpenLogic" data-uid="GrandmaGreen.UI.Golems.GolemBirthUIDisplay.UIOpenLogic">UIOpenLogic()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void UIOpenLogic()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="GrandmaGreen.UI.UIDisplayBase.html#GrandmaGreen_UI_UIDisplayBase_UIOpenLogic">UIDisplayBase.UIOpenLogic()</a></div>
+  
+  
+  <a id="GrandmaGreen_UI_Golems_GolemBirthUIDisplay_Unload_" data-uid="GrandmaGreen.UI.Golems.GolemBirthUIDisplay.Unload*"></a>
+  <h4 id="GrandmaGreen_UI_Golems_GolemBirthUIDisplay_Unload" data-uid="GrandmaGreen.UI.Golems.GolemBirthUIDisplay.Unload">Unload()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Unload()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="GrandmaGreen.UI.UIDisplayBase.html#GrandmaGreen_UI_UIDisplayBase_Unload">UIDisplayBase.Unload()</a></div>
 </article>
           </div>
           

@@ -1197,24 +1197,24 @@ references:
   commentId: T:GrandmaGreen.Collections.CharacterId
   fullName: GrandmaGreen.Collections.CharacterId
   nameWithType: CharacterId
-- uid: GrandmaGreen.Collections.CharacterId.AppleGolem
-  name: AppleGolem
-  href: api/GrandmaGreen.Collections.CharacterId.html#GrandmaGreen_Collections_CharacterId_AppleGolem
-  commentId: F:GrandmaGreen.Collections.CharacterId.AppleGolem
-  fullName: GrandmaGreen.Collections.CharacterId.AppleGolem
-  nameWithType: CharacterId.AppleGolem
-- uid: GrandmaGreen.Collections.CharacterId.CottonGolem
-  name: CottonGolem
-  href: api/GrandmaGreen.Collections.CharacterId.html#GrandmaGreen_Collections_CharacterId_CottonGolem
-  commentId: F:GrandmaGreen.Collections.CharacterId.CottonGolem
-  fullName: GrandmaGreen.Collections.CharacterId.CottonGolem
-  nameWithType: CharacterId.CottonGolem
-- uid: GrandmaGreen.Collections.CharacterId.CrocusGolem
-  name: CrocusGolem
-  href: api/GrandmaGreen.Collections.CharacterId.html#GrandmaGreen_Collections_CharacterId_CrocusGolem
-  commentId: F:GrandmaGreen.Collections.CharacterId.CrocusGolem
-  fullName: GrandmaGreen.Collections.CharacterId.CrocusGolem
-  nameWithType: CharacterId.CrocusGolem
+- uid: GrandmaGreen.Collections.CharacterId.Apple
+  name: Apple
+  href: api/GrandmaGreen.Collections.CharacterId.html#GrandmaGreen_Collections_CharacterId_Apple
+  commentId: F:GrandmaGreen.Collections.CharacterId.Apple
+  fullName: GrandmaGreen.Collections.CharacterId.Apple
+  nameWithType: CharacterId.Apple
+- uid: GrandmaGreen.Collections.CharacterId.Cotton
+  name: Cotton
+  href: api/GrandmaGreen.Collections.CharacterId.html#GrandmaGreen_Collections_CharacterId_Cotton
+  commentId: F:GrandmaGreen.Collections.CharacterId.Cotton
+  fullName: GrandmaGreen.Collections.CharacterId.Cotton
+  nameWithType: CharacterId.Cotton
+- uid: GrandmaGreen.Collections.CharacterId.Crocus
+  name: Crocus
+  href: api/GrandmaGreen.Collections.CharacterId.html#GrandmaGreen_Collections_CharacterId_Crocus
+  commentId: F:GrandmaGreen.Collections.CharacterId.Crocus
+  fullName: GrandmaGreen.Collections.CharacterId.Crocus
+  nameWithType: CharacterId.Crocus
 - uid: GrandmaGreen.Collections.CharacterId.DecorShopkeeper
   name: DecorShopkeeper
   href: api/GrandmaGreen.Collections.CharacterId.html#GrandmaGreen_Collections_CharacterId_DecorShopkeeper
@@ -1233,24 +1233,24 @@ references:
   commentId: F:GrandmaGreen.Collections.CharacterId.Grandma
   fullName: GrandmaGreen.Collections.CharacterId.Grandma
   nameWithType: CharacterId.Grandma
-- uid: GrandmaGreen.Collections.CharacterId.PumpkinGolem
-  name: PumpkinGolem
-  href: api/GrandmaGreen.Collections.CharacterId.html#GrandmaGreen_Collections_CharacterId_PumpkinGolem
-  commentId: F:GrandmaGreen.Collections.CharacterId.PumpkinGolem
-  fullName: GrandmaGreen.Collections.CharacterId.PumpkinGolem
-  nameWithType: CharacterId.PumpkinGolem
-- uid: GrandmaGreen.Collections.CharacterId.TulipGolem
-  name: TulipGolem
-  href: api/GrandmaGreen.Collections.CharacterId.html#GrandmaGreen_Collections_CharacterId_TulipGolem
-  commentId: F:GrandmaGreen.Collections.CharacterId.TulipGolem
-  fullName: GrandmaGreen.Collections.CharacterId.TulipGolem
-  nameWithType: CharacterId.TulipGolem
-- uid: GrandmaGreen.Collections.CharacterId.TurnipGolem
-  name: TurnipGolem
-  href: api/GrandmaGreen.Collections.CharacterId.html#GrandmaGreen_Collections_CharacterId_TurnipGolem
-  commentId: F:GrandmaGreen.Collections.CharacterId.TurnipGolem
-  fullName: GrandmaGreen.Collections.CharacterId.TurnipGolem
-  nameWithType: CharacterId.TurnipGolem
+- uid: GrandmaGreen.Collections.CharacterId.Pumpkin
+  name: Pumpkin
+  href: api/GrandmaGreen.Collections.CharacterId.html#GrandmaGreen_Collections_CharacterId_Pumpkin
+  commentId: F:GrandmaGreen.Collections.CharacterId.Pumpkin
+  fullName: GrandmaGreen.Collections.CharacterId.Pumpkin
+  nameWithType: CharacterId.Pumpkin
+- uid: GrandmaGreen.Collections.CharacterId.Tulip
+  name: Tulip
+  href: api/GrandmaGreen.Collections.CharacterId.html#GrandmaGreen_Collections_CharacterId_Tulip
+  commentId: F:GrandmaGreen.Collections.CharacterId.Tulip
+  fullName: GrandmaGreen.Collections.CharacterId.Tulip
+  nameWithType: CharacterId.Tulip
+- uid: GrandmaGreen.Collections.CharacterId.Turnip
+  name: Turnip
+  href: api/GrandmaGreen.Collections.CharacterId.html#GrandmaGreen_Collections_CharacterId_Turnip
+  commentId: F:GrandmaGreen.Collections.CharacterId.Turnip
+  fullName: GrandmaGreen.Collections.CharacterId.Turnip
+  nameWithType: CharacterId.Turnip
 - uid: GrandmaGreen.Collections.CharacterProperties
   name: CharacterProperties
   href: api/GrandmaGreen.Collections.CharacterProperties.html
@@ -5321,19 +5321,19 @@ references:
   commentId: F:GrandmaGreen.Entities.GolemCrowdController.pointerState
   fullName: GrandmaGreen.Entities.GolemCrowdController.pointerState
   nameWithType: GolemCrowdController.pointerState
-- uid: GrandmaGreen.Entities.GolemCrowdController.SpawnGolem
-  name: SpawnGolem()
-  href: api/GrandmaGreen.Entities.GolemCrowdController.html#GrandmaGreen_Entities_GolemCrowdController_SpawnGolem
-  commentId: M:GrandmaGreen.Entities.GolemCrowdController.SpawnGolem
-  fullName: GrandmaGreen.Entities.GolemCrowdController.SpawnGolem()
-  nameWithType: GolemCrowdController.SpawnGolem()
-- uid: GrandmaGreen.Entities.GolemCrowdController.SpawnGolem*
-  name: SpawnGolem
-  href: api/GrandmaGreen.Entities.GolemCrowdController.html#GrandmaGreen_Entities_GolemCrowdController_SpawnGolem_
-  commentId: Overload:GrandmaGreen.Entities.GolemCrowdController.SpawnGolem
+- uid: GrandmaGreen.Entities.GolemCrowdController.SpawnTulipGolem
+  name: SpawnTulipGolem()
+  href: api/GrandmaGreen.Entities.GolemCrowdController.html#GrandmaGreen_Entities_GolemCrowdController_SpawnTulipGolem
+  commentId: M:GrandmaGreen.Entities.GolemCrowdController.SpawnTulipGolem
+  fullName: GrandmaGreen.Entities.GolemCrowdController.SpawnTulipGolem()
+  nameWithType: GolemCrowdController.SpawnTulipGolem()
+- uid: GrandmaGreen.Entities.GolemCrowdController.SpawnTulipGolem*
+  name: SpawnTulipGolem
+  href: api/GrandmaGreen.Entities.GolemCrowdController.html#GrandmaGreen_Entities_GolemCrowdController_SpawnTulipGolem_
+  commentId: Overload:GrandmaGreen.Entities.GolemCrowdController.SpawnTulipGolem
   isSpec: "True"
-  fullName: GrandmaGreen.Entities.GolemCrowdController.SpawnGolem
-  nameWithType: GolemCrowdController.SpawnGolem
+  fullName: GrandmaGreen.Entities.GolemCrowdController.SpawnTulipGolem
+  nameWithType: GolemCrowdController.SpawnTulipGolem
 - uid: GrandmaGreen.Entities.GolemCrowdController.theGolem
   name: theGolem
   href: api/GrandmaGreen.Entities.GolemCrowdController.html#GrandmaGreen_Entities_GolemCrowdController_theGolem
@@ -11284,6 +11284,19 @@ references:
   commentId: F:GrandmaGreen.Shopkeeping.ShoppingManager.currGardenList
   fullName: GrandmaGreen.Shopkeeping.ShoppingManager.currGardenList
   nameWithType: ShoppingManager.currGardenList
+- uid: GrandmaGreen.Shopkeeping.ShoppingManager.GetTimeLeft
+  name: GetTimeLeft()
+  href: api/GrandmaGreen.Shopkeeping.ShoppingManager.html#GrandmaGreen_Shopkeeping_ShoppingManager_GetTimeLeft
+  commentId: M:GrandmaGreen.Shopkeeping.ShoppingManager.GetTimeLeft
+  fullName: GrandmaGreen.Shopkeeping.ShoppingManager.GetTimeLeft()
+  nameWithType: ShoppingManager.GetTimeLeft()
+- uid: GrandmaGreen.Shopkeeping.ShoppingManager.GetTimeLeft*
+  name: GetTimeLeft
+  href: api/GrandmaGreen.Shopkeeping.ShoppingManager.html#GrandmaGreen_Shopkeeping_ShoppingManager_GetTimeLeft_
+  commentId: Overload:GrandmaGreen.Shopkeeping.ShoppingManager.GetTimeLeft
+  isSpec: "True"
+  fullName: GrandmaGreen.Shopkeeping.ShoppingManager.GetTimeLeft
+  nameWithType: ShoppingManager.GetTimeLeft
 - uid: GrandmaGreen.Shopkeeping.ShoppingManager.m_controller
   name: m_controller
   href: api/GrandmaGreen.Shopkeeping.ShoppingManager.html#GrandmaGreen_Shopkeeping_ShoppingManager_m_controller
@@ -11835,6 +11848,19 @@ references:
   commentId: T:GrandmaGreen.TimeLayer.TimeLayer
   fullName: GrandmaGreen.TimeLayer.TimeLayer
   nameWithType: TimeLayer
+- uid: GrandmaGreen.TimeLayer.TimeLayer.GetTickValue
+  name: GetTickValue()
+  href: api/GrandmaGreen.TimeLayer.TimeLayer.html#GrandmaGreen_TimeLayer_TimeLayer_GetTickValue
+  commentId: M:GrandmaGreen.TimeLayer.TimeLayer.GetTickValue
+  fullName: GrandmaGreen.TimeLayer.TimeLayer.GetTickValue()
+  nameWithType: TimeLayer.GetTickValue()
+- uid: GrandmaGreen.TimeLayer.TimeLayer.GetTickValue*
+  name: GetTickValue
+  href: api/GrandmaGreen.TimeLayer.TimeLayer.html#GrandmaGreen_TimeLayer_TimeLayer_GetTickValue_
+  commentId: Overload:GrandmaGreen.TimeLayer.TimeLayer.GetTickValue
+  isSpec: "True"
+  fullName: GrandmaGreen.TimeLayer.TimeLayer.GetTickValue
+  nameWithType: TimeLayer.GetTickValue
 - uid: GrandmaGreen.TimeLayer.TimeLayer.onTick
   name: onTick
   href: api/GrandmaGreen.TimeLayer.TimeLayer.html#GrandmaGreen_TimeLayer_TimeLayer_onTick
@@ -13442,19 +13468,45 @@ references:
   commentId: T:GrandmaGreen.UI.Golems.GolemBirthUIDisplay
   fullName: GrandmaGreen.UI.Golems.GolemBirthUIDisplay
   nameWithType: GolemBirthUIDisplay
-- uid: GrandmaGreen.UI.Golems.GolemBirthUIDisplay.OpenUI
-  name: OpenUI()
-  href: api/GrandmaGreen.UI.Golems.GolemBirthUIDisplay.html#GrandmaGreen_UI_Golems_GolemBirthUIDisplay_OpenUI
-  commentId: M:GrandmaGreen.UI.Golems.GolemBirthUIDisplay.OpenUI
-  fullName: GrandmaGreen.UI.Golems.GolemBirthUIDisplay.OpenUI()
-  nameWithType: GolemBirthUIDisplay.OpenUI()
-- uid: GrandmaGreen.UI.Golems.GolemBirthUIDisplay.OpenUI*
-  name: OpenUI
-  href: api/GrandmaGreen.UI.Golems.GolemBirthUIDisplay.html#GrandmaGreen_UI_Golems_GolemBirthUIDisplay_OpenUI_
-  commentId: Overload:GrandmaGreen.UI.Golems.GolemBirthUIDisplay.OpenUI
+- uid: GrandmaGreen.UI.Golems.GolemBirthUIDisplay.CloseUIHandler(ClickEvent)
+  name: CloseUIHandler(ClickEvent)
+  href: api/GrandmaGreen.UI.Golems.GolemBirthUIDisplay.html#GrandmaGreen_UI_Golems_GolemBirthUIDisplay_CloseUIHandler_ClickEvent_
+  commentId: M:GrandmaGreen.UI.Golems.GolemBirthUIDisplay.CloseUIHandler(ClickEvent)
+  fullName: GrandmaGreen.UI.Golems.GolemBirthUIDisplay.CloseUIHandler(ClickEvent)
+  nameWithType: GolemBirthUIDisplay.CloseUIHandler(ClickEvent)
+- uid: GrandmaGreen.UI.Golems.GolemBirthUIDisplay.CloseUIHandler*
+  name: CloseUIHandler
+  href: api/GrandmaGreen.UI.Golems.GolemBirthUIDisplay.html#GrandmaGreen_UI_Golems_GolemBirthUIDisplay_CloseUIHandler_
+  commentId: Overload:GrandmaGreen.UI.Golems.GolemBirthUIDisplay.CloseUIHandler
   isSpec: "True"
-  fullName: GrandmaGreen.UI.Golems.GolemBirthUIDisplay.OpenUI
-  nameWithType: GolemBirthUIDisplay.OpenUI
+  fullName: GrandmaGreen.UI.Golems.GolemBirthUIDisplay.CloseUIHandler
+  nameWithType: GolemBirthUIDisplay.CloseUIHandler
+- uid: GrandmaGreen.UI.Golems.GolemBirthUIDisplay.Load
+  name: Load()
+  href: api/GrandmaGreen.UI.Golems.GolemBirthUIDisplay.html#GrandmaGreen_UI_Golems_GolemBirthUIDisplay_Load
+  commentId: M:GrandmaGreen.UI.Golems.GolemBirthUIDisplay.Load
+  fullName: GrandmaGreen.UI.Golems.GolemBirthUIDisplay.Load()
+  nameWithType: GolemBirthUIDisplay.Load()
+- uid: GrandmaGreen.UI.Golems.GolemBirthUIDisplay.Load*
+  name: Load
+  href: api/GrandmaGreen.UI.Golems.GolemBirthUIDisplay.html#GrandmaGreen_UI_Golems_GolemBirthUIDisplay_Load_
+  commentId: Overload:GrandmaGreen.UI.Golems.GolemBirthUIDisplay.Load
+  isSpec: "True"
+  fullName: GrandmaGreen.UI.Golems.GolemBirthUIDisplay.Load
+  nameWithType: GolemBirthUIDisplay.Load
+- uid: GrandmaGreen.UI.Golems.GolemBirthUIDisplay.OpenUIHandler(System.UInt16,Vector3)
+  name: OpenUIHandler(UInt16, Vector3)
+  href: api/GrandmaGreen.UI.Golems.GolemBirthUIDisplay.html#GrandmaGreen_UI_Golems_GolemBirthUIDisplay_OpenUIHandler_System_UInt16_Vector3_
+  commentId: M:GrandmaGreen.UI.Golems.GolemBirthUIDisplay.OpenUIHandler(System.UInt16,Vector3)
+  fullName: GrandmaGreen.UI.Golems.GolemBirthUIDisplay.OpenUIHandler(System.UInt16, Vector3)
+  nameWithType: GolemBirthUIDisplay.OpenUIHandler(UInt16, Vector3)
+- uid: GrandmaGreen.UI.Golems.GolemBirthUIDisplay.OpenUIHandler*
+  name: OpenUIHandler
+  href: api/GrandmaGreen.UI.Golems.GolemBirthUIDisplay.html#GrandmaGreen_UI_Golems_GolemBirthUIDisplay_OpenUIHandler_
+  commentId: Overload:GrandmaGreen.UI.Golems.GolemBirthUIDisplay.OpenUIHandler
+  isSpec: "True"
+  fullName: GrandmaGreen.UI.Golems.GolemBirthUIDisplay.OpenUIHandler
+  nameWithType: GolemBirthUIDisplay.OpenUIHandler
 - uid: GrandmaGreen.UI.Golems.GolemBirthUIDisplay.Start
   name: Start()
   href: api/GrandmaGreen.UI.Golems.GolemBirthUIDisplay.html#GrandmaGreen_UI_Golems_GolemBirthUIDisplay_Start
@@ -13468,6 +13520,45 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.UI.Golems.GolemBirthUIDisplay.Start
   nameWithType: GolemBirthUIDisplay.Start
+- uid: GrandmaGreen.UI.Golems.GolemBirthUIDisplay.TestHandler(System.UInt16)
+  name: TestHandler(UInt16)
+  href: api/GrandmaGreen.UI.Golems.GolemBirthUIDisplay.html#GrandmaGreen_UI_Golems_GolemBirthUIDisplay_TestHandler_System_UInt16_
+  commentId: M:GrandmaGreen.UI.Golems.GolemBirthUIDisplay.TestHandler(System.UInt16)
+  fullName: GrandmaGreen.UI.Golems.GolemBirthUIDisplay.TestHandler(System.UInt16)
+  nameWithType: GolemBirthUIDisplay.TestHandler(UInt16)
+- uid: GrandmaGreen.UI.Golems.GolemBirthUIDisplay.TestHandler*
+  name: TestHandler
+  href: api/GrandmaGreen.UI.Golems.GolemBirthUIDisplay.html#GrandmaGreen_UI_Golems_GolemBirthUIDisplay_TestHandler_
+  commentId: Overload:GrandmaGreen.UI.Golems.GolemBirthUIDisplay.TestHandler
+  isSpec: "True"
+  fullName: GrandmaGreen.UI.Golems.GolemBirthUIDisplay.TestHandler
+  nameWithType: GolemBirthUIDisplay.TestHandler
+- uid: GrandmaGreen.UI.Golems.GolemBirthUIDisplay.UIOpenLogic
+  name: UIOpenLogic()
+  href: api/GrandmaGreen.UI.Golems.GolemBirthUIDisplay.html#GrandmaGreen_UI_Golems_GolemBirthUIDisplay_UIOpenLogic
+  commentId: M:GrandmaGreen.UI.Golems.GolemBirthUIDisplay.UIOpenLogic
+  fullName: GrandmaGreen.UI.Golems.GolemBirthUIDisplay.UIOpenLogic()
+  nameWithType: GolemBirthUIDisplay.UIOpenLogic()
+- uid: GrandmaGreen.UI.Golems.GolemBirthUIDisplay.UIOpenLogic*
+  name: UIOpenLogic
+  href: api/GrandmaGreen.UI.Golems.GolemBirthUIDisplay.html#GrandmaGreen_UI_Golems_GolemBirthUIDisplay_UIOpenLogic_
+  commentId: Overload:GrandmaGreen.UI.Golems.GolemBirthUIDisplay.UIOpenLogic
+  isSpec: "True"
+  fullName: GrandmaGreen.UI.Golems.GolemBirthUIDisplay.UIOpenLogic
+  nameWithType: GolemBirthUIDisplay.UIOpenLogic
+- uid: GrandmaGreen.UI.Golems.GolemBirthUIDisplay.Unload
+  name: Unload()
+  href: api/GrandmaGreen.UI.Golems.GolemBirthUIDisplay.html#GrandmaGreen_UI_Golems_GolemBirthUIDisplay_Unload
+  commentId: M:GrandmaGreen.UI.Golems.GolemBirthUIDisplay.Unload
+  fullName: GrandmaGreen.UI.Golems.GolemBirthUIDisplay.Unload()
+  nameWithType: GolemBirthUIDisplay.Unload()
+- uid: GrandmaGreen.UI.Golems.GolemBirthUIDisplay.Unload*
+  name: Unload
+  href: api/GrandmaGreen.UI.Golems.GolemBirthUIDisplay.html#GrandmaGreen_UI_Golems_GolemBirthUIDisplay_Unload_
+  commentId: Overload:GrandmaGreen.UI.Golems.GolemBirthUIDisplay.Unload
+  isSpec: "True"
+  fullName: GrandmaGreen.UI.Golems.GolemBirthUIDisplay.Unload
+  nameWithType: GolemBirthUIDisplay.Unload
 - uid: GrandmaGreen.UI.Golems.GolemMenu
   name: GolemMenu
   href: api/GrandmaGreen.UI.Golems.GolemMenu.html
@@ -15142,6 +15233,12 @@ references:
   commentId: F:GrandmaGreen.UI.UITag.SHOPPING
   fullName: GrandmaGreen.UI.UITag.SHOPPING
   nameWithType: UITag.SHOPPING
+- uid: GrandmaGreen.UI.UITag.SPLASH_SCREEN
+  name: SPLASH_SCREEN
+  href: api/GrandmaGreen.UI.UITag.html#GrandmaGreen_UI_UITag_SPLASH_SCREEN
+  commentId: F:GrandmaGreen.UI.UITag.SPLASH_SCREEN
+  fullName: GrandmaGreen.UI.UITag.SPLASH_SCREEN
+  nameWithType: UITag.SPLASH_SCREEN
 - uid: GrandmaGreen.UI.UITag.START_SCREEN
   name: START_SCREEN
   href: api/GrandmaGreen.UI.UITag.html#GrandmaGreen_UI_UITag_START_SCREEN
