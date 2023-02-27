@@ -2,7 +2,6 @@
 
 using System.Collections;
 using System.Collections.Generic;
-using Core.SceneManagement;
 using UnityEngine;
 using UnityEngine.UIElements;
 using Core.Input;
@@ -85,10 +84,8 @@ namespace GrandmaGreen.UI.Collections
         public override void UIOpenLogic()
         {
             // Close HUD first.
-            //EventManager.instance.HandleEVENT_CLOSE_HUD();
-            
             base.UIOpenLogic();
-            m_rootVisualElement.ToggleInClassList("closed-inventory");
+            // m_rootVisualElement.ToggleInClassList("closed-inventory");
             // Play open inventory SFX.
             soundContainers[0].Play();
         }
@@ -97,9 +94,8 @@ namespace GrandmaGreen.UI.Collections
         {
             // Play the inventory close SFX.
             soundContainers[1].Play();
-            m_rootVisualElement.ToggleInClassList("closed-inventory");
+            // m_rootVisualElement.ToggleInClassList("closed-inventory");
             base.UICloseLogic();
-            // EventManager.instance.HandleEVENT_OPEN_HUD();
         }
 
         // BUILDING THE TABS SWITCHING EVENTS.

@@ -26,5 +26,10 @@ namespace GrandmaGreen.Shopkeeping
             shopTimer.onTick += m_controller.UpdateCycle;
             
         }
+
+        public double GetTimeLeft()
+        {
+            return shopTimer.tickSeconds - shopTimer.GetTickValue();
+        }
     }
 }

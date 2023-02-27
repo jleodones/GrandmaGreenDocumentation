@@ -145,5 +145,6 @@
 
 .closed-inventory {
     translate: 100% 0;
-    transition-duration: 500ms;
+    transition-property: translate;
+    transition-duration: 10s;
 }

@@ -111,8 +111,8 @@ namespace GrandmaGreen.UI.Collections
                 if (button != scrollButton)
                 {
                     // Scroll icon resolution.
-                    button.RemoveFromClassList("scroll-icon-active");
-                    button.AddToClassList("scroll-icon-inactive");
+                    button.RemoveFromClassList("currentCircle");
+                    button.AddToClassList("circle");
                     
                     // Page resolution.
                     page.RemoveFromClassList("active-page");
@@ -120,8 +120,8 @@ namespace GrandmaGreen.UI.Collections
                 else
                 {
                     // Scroll icon resolution.
-                    button.RemoveFromClassList("scroll-icon-inactive");
-                    button.AddToClassList("scroll-icon-active");
+                    button.RemoveFromClassList("circle");
+                    button.AddToClassList("currentCircle");
                     
                     // Page resolution.
                     page.AddToClassList("active-page");

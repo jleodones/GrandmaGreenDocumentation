@@ -81,12 +81,12 @@ namespace GrandmaGreen.Collections
         Grandma = 5001,
         GardeningShopkeeper = 5002,
         DecorShopkeeper = 5003,
-        TulipGolem = 5004,
-        AppleGolem = 5005,
-        CottonGolem = 5006,
-        CrocusGolem = 5007,
-        PumpkinGolem = 5008,
-        TurnipGolem = 5009
+        Tulip = 5004,
+        Apple = 5005,
+        Cotton = 5006,
+        Crocus = 5007,
+        Pumpkin = 5008,
+        Turnip = 5009
     }
 
     public enum ExpressionId : ushort
@@ -314,19 +314,19 @@ namespace GrandmaGreen.Collections
             switch (id)
             {
                 case PlantId.Tulip:
-                    golemID = CharacterId.TulipGolem;
+                    golemID = CharacterId.Tulip;
                     return true;
                 case PlantId.Crocus:
-                    golemID = CharacterId.CrocusGolem;
+                    golemID = CharacterId.Crocus;
                     return false;
                 case PlantId.Pumpkin:
-                    golemID = CharacterId.PumpkinGolem;
+                    golemID = CharacterId.Pumpkin;
                     return true;
                 case PlantId.Apple:
-                    golemID = CharacterId.AppleGolem;
+                    golemID = CharacterId.Apple;
                     return false;
                 case PlantId.Turnip:
-                    golemID = CharacterId.TurnipGolem;
+                    golemID = CharacterId.Turnip;
                     return false;
                 default:
                     return false;

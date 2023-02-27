@@ -53,7 +53,7 @@ namespace GrandmaGreen.Entities
         }
 
         [Header("Debug Options")]
-        public CharacterId theGolem = CharacterId.PumpkinGolem;
+        public CharacterId theGolem = CharacterId.Pumpkin;
         public int value = 0;
 
         [Button(ButtonSizes.Medium)]
@@ -63,9 +63,9 @@ namespace GrandmaGreen.Entities
         }
 
         [Button(ButtonSizes.Medium)]
-        public void SpawnGolem()
+        public void SpawnTulipGolem()
         {
-            ushort id = (ushort)CharacterId.TulipGolem;
+            ushort id = (ushort)CharacterId.Tulip;
             Vector3 pos = new Vector3(0,0,0);
             golemManager.OnGolemSpawn(id, pos);
         }

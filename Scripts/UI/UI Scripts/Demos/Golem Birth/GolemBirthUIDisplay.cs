@@ -1,5 +1,6 @@
 using System.Collections.Generic;
-using GrandmaGreen.UI;
+using GrandmaGreen.Collections;
+using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -26,12 +27,42 @@ namespace GrandmaGreen.UI.Golems
             title = m_rootVisualElement.Q<Label>("title");
             golemName = m_rootVisualElement.Q<Label>("golemName");
             description = m_rootVisualElement.Q<Label>("description");
+        }
+
+        public override void Load()
+        {
+            EventManager.instance.EVENT_GOLEM_SPAWN += OpenUIHandler;
+            m_rootVisualElement.RegisterCallback<ClickEvent>(CloseUIHandler);
+        }
+
+        public override void Unload()
+        {
+            EventManager.instance.EVENT_GOLEM_SPAWN -= OpenUIHandler;
+            m_rootVisualElement.UnregisterCallback<ClickEvent>(CloseUIHandler);
+        }
+
+        [Button()]
+        public void TestHandler(ushort golemID)
+        {
+            OpenUIHandler(golemID, new Vector3());
+        }
+        
+        public void OpenUIHandler(ushort golemID, Vector3 spawnLocation)
+        {
+            // Switch out the sprite and name.
+            string g = ((CharacterId)golemID).ToString();
+
+            Sprite s = Resources.Load<Sprite>("Baby Golems/CHA_" + g + "_Baby");
+            golem.style.backgroundImage = new StyleBackground(s);
+            golemName.text = "Baby " + g;
+            
             OpenUI();
         }
 
-        public override void OpenUI()
+        public override void UIOpenLogic()
         {
-            base.OpenUI();
+            base.UIOpenLogic();
+            
             //Start Animations
             m_rootVisualElement.schedule.Execute(() => cloudsA.ToggleInClassList("floatClouds")).StartingIn(100);
             m_rootVisualElement.schedule.Execute(() => cloudsB.ToggleInClassList("floatClouds")).StartingIn(100);
@@ -47,14 +78,15 @@ namespace GrandmaGreen.UI.Golems
             description.style.opacity = description.resolvedStyle.opacity + 100;
         }
 
+        public void CloseUIHandler(ClickEvent ce)
+        {
+            CloseUI();
+            
+            golem.UnregisterCallback<TransitionEndEvent>(BounceGolem);
+        }
+
         private void BounceGolem(TransitionEndEvent evt)
         {
-            /*if (golem.ClassListContains("pushGolem"))
-            {
-                golem.style.translate = new Translate(0, Length.Percent(-110), 0);
-                golem.RemoveFromClassList("pushGolem");
-            }
-            golem.RegisterCallback<TransitionEndEvent>(BounceGolem);*/
             golem.ToggleInClassList("bounceGolem");
         }
 
@@ -63,10 +95,10 @@ namespace GrandmaGreen.UI.Golems
             title.UnregisterCallback<TransitionEndEvent>(LargeText);
             title.ToggleInClassList("smallText");
             golemName.ToggleInClassList("smallText");
+            
             title.RegisterCallback<TransitionEndEvent>(NormalText);
             title.ToggleInClassList("largeText");
             golemName.ToggleInClassList("largeText");
-
         }
 
         private void NormalText(TransitionEndEvent evt)
@@ -74,7 +106,6 @@ namespace GrandmaGreen.UI.Golems
             title.UnregisterCallback<TransitionEndEvent>(NormalText);
             title.ToggleInClassList("largeText");
             golemName.ToggleInClassList("largeText");
-
         }
 
         void SetText(string id, string newText)
@@ -84,7 +115,6 @@ namespace GrandmaGreen.UI.Golems
 
         void SetSprite(string elementName, Sprite sprite) {
             m_rootVisualElement.Q(elementName).style.backgroundImage = new StyleBackground(sprite);
-
         }
 
     }

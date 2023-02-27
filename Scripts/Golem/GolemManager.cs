@@ -210,7 +210,7 @@ namespace GrandmaGreen.Entities
 
             // Hardcode for demo purpose
             if (IsSpawnDemoGolem) 
-                EventManager.instance.HandleEVENT_GOLEM_SPAWN((ushort)CharacterId.PumpkinGolem, new Vector3Int(0,0,0));
+                EventManager.instance.HandleEVENT_GOLEM_SPAWN((ushort)CharacterId.Pumpkin, new Vector3Int(0,0,0));
         }
 
         public void SaveGolemData()

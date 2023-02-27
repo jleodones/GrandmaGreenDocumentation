@@ -99,7 +99,7 @@ namespace GrandmaGreen.UI.Collections
                 {
                     m_inventoryData.UpdateValue<Seed>(-1, s);
                 }
-                        
+
                 // Then update the UI system.
                 m_parent.RebuildJar(s);
             }
@@ -124,11 +124,8 @@ namespace GrandmaGreen.UI.Collections
             {
                 p.quantity += 1;
             }
-            else
-            {
-                m_inventoryData.AddComponent(-1, p);
-            }
-            
+            m_inventoryData.UpdateValue(-1, p);
+
             m_parent.RebuildJar(p);
             
             // Call collections for potential update.

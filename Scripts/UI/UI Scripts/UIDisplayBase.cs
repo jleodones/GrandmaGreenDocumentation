@@ -24,8 +24,9 @@ namespace GrandmaGreen.UI
         MAILBOX = 2048,
         BULLETIN = 4096,
         START_SCREEN = 8192,
+        SPLASH_SCREEN = 16384,
 
-        ALL = HUD | INVENTORY | ENTITY_MENU | SHOPPING | SELLING | CUSTOMIZATION | SETTINGS | CULTIVISION | DIALOGUE | COLLECTIONS | TUTORIAL | MAILBOX | BULLETIN | START_SCREEN
+        ALL = HUD | INVENTORY | ENTITY_MENU | SHOPPING | SELLING | CUSTOMIZATION | SETTINGS | CULTIVISION | DIALOGUE | COLLECTIONS | TUTORIAL | MAILBOX | BULLETIN | START_SCREEN | SPLASH_SCREEN
     }
     
     public class UIDisplayBase : MonoBehaviour
@@ -145,6 +146,7 @@ namespace GrandmaGreen.UI
             displayEnabled = false;
             onPanelDisabled?.Invoke();
         }
+        
         public void EnableInteraction()
         {
             if (displayInteractive)

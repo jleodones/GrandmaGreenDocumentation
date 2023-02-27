@@ -61,5 +61,10 @@ namespace GrandmaGreen.TimeLayer
             if (!tickAccumulated) m_tickValue = 0;
         }
 
+        public double GetTickValue()
+        {
+            return m_tickValue;
+        }
+
     }
 }

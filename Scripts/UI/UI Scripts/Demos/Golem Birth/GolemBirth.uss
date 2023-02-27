@@ -12,16 +12,11 @@
     transition-duration: 800ms;
 }
 
-.pushGolem {
-    translate: 0 -110%;
-    transition-duration: 500ms;
-}
-
 .bounceGolem {
     translate: 0 -115%;
 }
 
-#golemSprite {
+#golemSpriteX {
     transition-duration: 2s;
 }
 
@@ -36,4 +31,9 @@
 
 .largeText {
     scale: 1.5 1.5;
+}
+
+.pushGolem {
+    translate: 0 -160%;
+    transition-duration: 500ms;
 }

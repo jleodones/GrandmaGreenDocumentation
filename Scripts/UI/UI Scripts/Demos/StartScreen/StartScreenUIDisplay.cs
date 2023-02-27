@@ -24,7 +24,7 @@ namespace GrandmaGreen.UI.StartScreen
             RegisterButtonCallback("settingsButton", OnSettingsClicked);
 
             // Tells the settings UI to open the start screen back up when the exit button is called.
-            m_settingsUIDisplay.RegisterButtonCallback("exitButton", OpenUI);
+            // m_settingsUIDisplay.RegisterButtonCallback("exitButton", OpenUI);
 
             StartAnimation();
         }
