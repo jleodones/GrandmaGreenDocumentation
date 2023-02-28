@@ -10398,6 +10398,12 @@ references:
   commentId: F:GrandmaGreen.PlayAudioOnEnable.in3D
   fullName: GrandmaGreen.PlayAudioOnEnable.in3D
   nameWithType: PlayAudioOnEnable.in3D
+- uid: GrandmaGreen.ResponsiveBulletinUIControl
+  name: ResponsiveBulletinUIControl
+  href: api/GrandmaGreen.ResponsiveBulletinUIControl.html
+  commentId: T:GrandmaGreen.ResponsiveBulletinUIControl
+  fullName: GrandmaGreen.ResponsiveBulletinUIControl
+  nameWithType: ResponsiveBulletinUIControl
 - uid: GrandmaGreen.SaveSystem
   name: GrandmaGreen.SaveSystem
   href: api/GrandmaGreen.SaveSystem.html

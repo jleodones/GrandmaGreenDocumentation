@@ -572,7 +572,7 @@
   "api/GrandmaGreen.html": {
     "href": "api/GrandmaGreen.html",
     "title": "Namespace GrandmaGreen",
-    "keywords": "Namespace GrandmaGreen Classes AchivementDataStore AchivementRequirement AreaController AreaExitState AreaServices CameraZoom CatchUIInput CommonSFX CustomizationUI DialoguePair EventManager GameAchivement GamePortalTile GameScenePortal GameSettingsData GameSystemDummy GardenTutorialController GeneralExtensions GrandmaGreenGameState GrandmaGreenLevelLoader NewItemUI PlantType PlantTypeDictionary PlayAudioOnEnable SiblingRuleTile SlideshowData SpendMoneyRequirement Storyline StorylineDataStore StoryRequirement TapHereUI TileType ToolTest2 TutorialData TutorialStateData Structs AchivementState Contest Basic contest struct. All it does is store a plant and the assumed prize money. SettingsSet SlideData Interfaces IDraggable IDraggableContainer IGameTile IPathAgent IPathfinderServicer IServicer<T> IServiceUser<U, T> Enums Direction SiblingRuleTile.SibingGroup StoryState"
+    "keywords": "Namespace GrandmaGreen Classes AchivementDataStore AchivementRequirement AreaController AreaExitState AreaServices CameraZoom CatchUIInput CommonSFX CustomizationUI DialoguePair EventManager GameAchivement GamePortalTile GameScenePortal GameSettingsData GameSystemDummy GardenTutorialController GeneralExtensions GrandmaGreenGameState GrandmaGreenLevelLoader NewItemUI PlantType PlantTypeDictionary PlayAudioOnEnable ResponsiveBulletinUIControl SiblingRuleTile SlideshowData SpendMoneyRequirement Storyline StorylineDataStore StoryRequirement TapHereUI TileType ToolTest2 TutorialData TutorialStateData Structs AchivementState Contest Basic contest struct. All it does is store a plant and the assumed prize money. SettingsSet SlideData Interfaces IDraggable IDraggableContainer IGameTile IPathAgent IPathfinderServicer IServicer<T> IServiceUser<U, T> Enums Direction SiblingRuleTile.SibingGroup StoryState"
   },
   "api/GrandmaGreen.IDraggable.html": {
     "href": "api/GrandmaGreen.IDraggable.html",
@@ -653,6 +653,11 @@
     "href": "api/GrandmaGreen.PlayAudioOnEnable.html",
     "title": "Class PlayAudioOnEnable",
     "keywords": "Class PlayAudioOnEnable Inheritance Object PlayAudioOnEnable Namespace : GrandmaGreen Assembly : cs.temp.dll.dll Syntax public class PlayAudioOnEnable : MonoBehaviour Fields container Declaration public ASoundContainer container Field Value Type Description ASoundContainer in3D Declaration public bool in3D Field Value Type Description Boolean"
+  },
+  "api/GrandmaGreen.ResponsiveBulletinUIControl.html": {
+    "href": "api/GrandmaGreen.ResponsiveBulletinUIControl.html",
+    "title": "Class ResponsiveBulletinUIControl",
+    "keywords": "Class ResponsiveBulletinUIControl Inheritance Object ResponsiveBulletinUIControl Namespace : GrandmaGreen Assembly : cs.temp.dll.dll Syntax public class ResponsiveBulletinUIControl : UIDisplayBase"
   },
   "api/GrandmaGreen.SaveSystem.ComponentStore-1.html": {
     "href": "api/GrandmaGreen.SaveSystem.ComponentStore-1.html",

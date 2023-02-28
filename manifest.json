@@ -1584,6 +1584,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/GrandmaGreen.ResponsiveBulletinUIControl.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GrandmaGreen.ResponsiveBulletinUIControl.html",
+          "hash": "+27eFOvv39M8EbPqJGQ8lbwiMOt74eOcQcd1wfOd0EI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/GrandmaGreen.SaveSystem.ComponentStore-1.yml",
       "output": {
         ".html": {
@@ -2476,7 +2488,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.html",
-          "hash": "GNUT5i+IBvbIDuBN3uX9fOZgpvrzcCRCxpgXOUHgJoY="
+          "hash": "W2MWLBVwtYwV8/lHyyjmO9oxlnyA7wU7GbhOkm/DSqM="
         }
       },
       "is_incremental": false,
@@ -2488,7 +2500,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "RKq7FD3mkNyM5+Hfp6yoFDWW75roKhUVCCW5/661eEY="
+          "hash": "JKCY+17aMqXf105iTQVy4HJTfYGFSWKPNeu3lKGx1zo="
         }
       },
       "is_incremental": false,
@@ -2597,7 +2609,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 205,
+          "total_file_count": 206,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
