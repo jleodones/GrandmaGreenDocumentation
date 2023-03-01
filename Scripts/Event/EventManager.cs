@@ -166,6 +166,21 @@ namespace GrandmaGreen
         }
         #endregion
 
+        #region Characters
+        public event Action<ushort, ushort> EVENT_CHA_CHANGE_EMO;
+        public event Action<ushort, ushort, float> EVENT_CHA_CHANGE_EMO_INTIME;
+
+        public void HandleEVENT_CHA_CHANGE_EMO(ushort CharID, ushort EmoID) 
+        { 
+            EVENT_CHA_CHANGE_EMO?.Invoke(CharID, EmoID); 
+        }
+
+        public void HandleEVENT_CHA_CHANGE_EMO_INTIME(ushort CharID, ushort EmoID, float time)
+        {
+            EVENT_CHA_CHANGE_EMO_INTIME?.Invoke(CharID, EmoID, time);
+        }
+        #endregion
+
         #region  Golem events and handlers.
         public event Action<ushort, Vector3> EVENT_GOLEM_SPAWN;
         public event Action<ushort, int> EVENT_GOLEM_HAPPINESS_UPDATE;

@@ -23,7 +23,7 @@ namespace GrandmaGreen.Entities
     /// Serves as the customer for various GG services (pathfinding, gardening, dialogue)
     /// Has no decision making logic, instead it is handled by its corresponding Entity Controller
     /// </summary>
-    public class GameEntity : MonoBehaviour, IPathAgent
+    public class GameEntity : MonoBehaviour, IPathAgent, IEmotionAgent
     {
         [Header("Entity References")]
         public EntityController controller;
@@ -31,6 +31,7 @@ namespace GrandmaGreen.Entities
         public SpookuleleAudio.ASoundContainer footsteps;
 
         [field: Header("Entity Variables")]
+        public CharacterId id;
         public StateMachine<EntityState> entityStateMachine;
         public Vector3 velocity;
 
@@ -67,10 +68,14 @@ namespace GrandmaGreen.Entities
         {
             entityStateMachine.Enter(EntityState.Idle);
             prevPosition = transform.position;
+            id = CharacterId.Grandma;
+            EventManager.instance.EVENT_CHA_CHANGE_EMO += ChangeEmotion;
+            EventManager.instance.EVENT_CHA_CHANGE_EMO_INTIME += ChangeEmotionInTime;
         }
         void OnDestroy()
         {
-
+            EventManager.instance.EVENT_CHA_CHANGE_EMO -= ChangeEmotion;
+            EventManager.instance.EVENT_CHA_CHANGE_EMO_INTIME -= ChangeEmotionInTime;
         }
 
         protected virtual void InitalizeStateMachine()
@@ -303,6 +308,29 @@ namespace GrandmaGreen.Entities
             }
 
             footstepsSoundPlayer?.Stop();
+        }
+
+        public void ChangeEmotion(ushort CharID, ushort EmoID)
+        {
+            if (CharID == (ushort)id)
+            {
+                animator.SetInteger("EXPRESSION", EmoID);
+            }
+        }
+
+        public void ChangeEmotionInTime(ushort CharID, ushort EmoID, float time)
+        {
+            if (CharID == (ushort)id)
+            {
+                StartCoroutine(ChangeEmotionInTimeCoroutine(EmoID, time));
+            }
+        }
+
+        IEnumerator ChangeEmotionInTimeCoroutine(ushort EmoID, float time)
+        {
+            animator.SetInteger("EXPRESSION", EmoID);
+            yield return new WaitForSeconds(time);
+            animator.SetInteger("EXPRESSION", 0);
         }
 
         [Header("Debug Options")]

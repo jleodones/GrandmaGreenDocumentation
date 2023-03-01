@@ -55,6 +55,7 @@ namespace GrandmaGreen.Entities
         [Header("Debug Options")]
         public CharacterId theGolem = CharacterId.Pumpkin;
         public int value = 0;
+        public ExpressionId emotion = 0;
 
         [Button(ButtonSizes.Medium)]
         public void UpdateGolemHappiness()
@@ -68,6 +69,19 @@ namespace GrandmaGreen.Entities
             ushort id = (ushort)CharacterId.Tulip;
             Vector3 pos = new Vector3(0,0,0);
             golemManager.OnGolemSpawn(id, pos);
+        }
+
+        public float timeInSecond = 0.0f;
+        [Button(ButtonSizes.Medium)]
+        public void ChangeEntityEmotion()
+        {
+            EventManager.instance.HandleEVENT_CHA_CHANGE_EMO((ushort)theGolem, (ushort)emotion);
+        }
+
+        [Button(ButtonSizes.Medium)]
+        public void ChangeEntityEmotionInTime()
+        {
+            EventManager.instance.HandleEVENT_CHA_CHANGE_EMO_INTIME((ushort)theGolem, (ushort)emotion, timeInSecond);
         }
 
         [Button(ButtonSizes.Medium)]
@@ -200,6 +214,7 @@ namespace GrandmaGreen.Entities
             }
             golemController.ExitDragAttempt(isValid);
         }
+
         public bool CheckValidState(Collider golemCollider)
         {
             Vector3Int tileBlockSize = Vector3Int.one;
