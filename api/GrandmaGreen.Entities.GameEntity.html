@@ -96,12 +96,13 @@ Has no decision making logic, instead it is handled by its corresponding Entity 
     <h5>Implements</h5>
     <div><a class="xref" href="GrandmaGreen.IPathAgent.html">IPathAgent</a></div>
     <div><a class="xref" href="GrandmaGreen.IServiceUser-2.html">IServiceUser</a>&lt;<span class="xref">Pathfinder</span>, <a class="xref" href="GrandmaGreen.IPathfinderServicer.html">IPathfinderServicer</a>&gt;</div>
+    <div><a class="xref" href="GrandmaGreen.Entities.IEmotionAgent.html">IEmotionAgent</a></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="GrandmaGreen.Entities.html">GrandmaGreen.Entities</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="GrandmaGreen_Entities_GameEntity_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class GameEntity : MonoBehaviour, IPathAgent, IServiceUser&lt;Pathfinder, IPathfinderServicer&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class GameEntity : MonoBehaviour, IPathAgent, IServiceUser&lt;Pathfinder, IPathfinderServicer&gt;, IEmotionAgent</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
@@ -221,6 +222,30 @@ Has no decision making logic, instead it is handled by its corresponding Entity 
     <tbody>
       <tr>
         <td><span class="xref">SpookuleleAudio.ASoundContainer</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="GrandmaGreen_Entities_GameEntity_id" data-uid="GrandmaGreen.Entities.GameEntity.id">id</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CharacterId id</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">CharacterId</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -464,6 +489,75 @@ Has no decision making logic, instead it is handled by its corresponding Entity 
         <td><span class="xref">float3</span>[]</td>
         <td><p>Array of pathable destinations in the range</p>
 </td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="GrandmaGreen_Entities_GameEntity_ChangeEmotion_" data-uid="GrandmaGreen.Entities.GameEntity.ChangeEmotion*"></a>
+  <h4 id="GrandmaGreen_Entities_GameEntity_ChangeEmotion_System_UInt16_System_UInt16_" data-uid="GrandmaGreen.Entities.GameEntity.ChangeEmotion(System.UInt16,System.UInt16)">ChangeEmotion(UInt16, UInt16)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ChangeEmotion(ushort CharID, ushort EmoID)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">UInt16</a></td>
+        <td><span class="parametername">CharID</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">UInt16</a></td>
+        <td><span class="parametername">EmoID</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="GrandmaGreen_Entities_GameEntity_ChangeEmotionInTime_" data-uid="GrandmaGreen.Entities.GameEntity.ChangeEmotionInTime*"></a>
+  <h4 id="GrandmaGreen_Entities_GameEntity_ChangeEmotionInTime_System_UInt16_System_UInt16_System_Single_" data-uid="GrandmaGreen.Entities.GameEntity.ChangeEmotionInTime(System.UInt16,System.UInt16,System.Single)">ChangeEmotionInTime(UInt16, UInt16, Single)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ChangeEmotionInTime(ushort CharID, ushort EmoID, float time)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">UInt16</a></td>
+        <td><span class="parametername">CharID</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">UInt16</a></td>
+        <td><span class="parametername">EmoID</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">time</span></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -723,6 +817,9 @@ Has no decision making logic, instead it is handled by its corresponding Entity 
   </div>
   <div>
       <a class="xref" href="GrandmaGreen.IServiceUser-2.html">IServiceUser&lt;U, T&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="GrandmaGreen.Entities.IEmotionAgent.html">IEmotionAgent</a>
   </div>
 </article>
           </div>

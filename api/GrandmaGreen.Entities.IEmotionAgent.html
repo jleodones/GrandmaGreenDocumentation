@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Interface IServicer&lt;T&gt;
+    <title>Interface IEmotionAgent
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Interface IServicer&lt;T&gt;
+    <meta name="title" content="Interface IEmotionAgent
    ">
     <meta name="generator" content="docfx 2.59.4.0">
     
@@ -77,139 +77,30 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="GrandmaGreen.IServicer`1">
+            <article class="content wrap" id="_content" data-uid="GrandmaGreen.Entities.IEmotionAgent">
   
   
-  <h1 id="GrandmaGreen_IServicer_1" data-uid="GrandmaGreen.IServicer`1" class="text-break">Interface IServicer&lt;T&gt;
+  <h1 id="GrandmaGreen_Entities_IEmotionAgent" data-uid="GrandmaGreen.Entities.IEmotionAgent" class="text-break">Interface IEmotionAgent
   </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="GrandmaGreen.html">GrandmaGreen</a></h6>
+  <h6><strong>Namespace</strong>: <a class="xref" href="GrandmaGreen.Entities.html">GrandmaGreen.Entities</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
-  <h5 id="GrandmaGreen_IServicer_1_syntax">Syntax</h5>
+  <h5 id="GrandmaGreen_Entities_IEmotionAgent_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface IServicer&lt;T&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public interface IEmotionAgent</code></pre>
   </div>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">T</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="properties">Properties
-  </h3>
-  
-  
-  <a id="GrandmaGreen_IServicer_1_Item_" data-uid="GrandmaGreen.IServicer`1.Item*"></a>
-  <h4 id="GrandmaGreen_IServicer_1_Item_System_Int32_" data-uid="GrandmaGreen.IServicer`1.Item(System.Int32)">Item[Int32]</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">virtual T this[int i] { get; }</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
-        <td><span class="parametername">i</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">T</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="GrandmaGreen_IServicer_1_PrimaryService_" data-uid="GrandmaGreen.IServicer`1.PrimaryService*"></a>
-  <h4 id="GrandmaGreen_IServicer_1_PrimaryService" data-uid="GrandmaGreen.IServicer`1.PrimaryService">PrimaryService</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">virtual T PrimaryService { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">T</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="GrandmaGreen_IServicer_1_s_activeServices_" data-uid="GrandmaGreen.IServicer`1.s_activeServices*"></a>
-  <h4 id="GrandmaGreen_IServicer_1_s_activeServices" data-uid="GrandmaGreen.IServicer`1.s_activeServices">s_activeServices</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">static List&lt;T&gt; s_activeServices { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">List</span>&lt;T&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h3 id="methods">Methods
   </h3>
   
   
-  <a id="GrandmaGreen_IServicer_1_DeregisterService_" data-uid="GrandmaGreen.IServicer`1.DeregisterService*"></a>
-  <h4 id="GrandmaGreen_IServicer_1_DeregisterService__0_" data-uid="GrandmaGreen.IServicer`1.DeregisterService(`0)">DeregisterService(T)</h4>
+  <a id="GrandmaGreen_Entities_IEmotionAgent_ChangeEmotion_" data-uid="GrandmaGreen.Entities.IEmotionAgent.ChangeEmotion*"></a>
+  <h4 id="GrandmaGreen_Entities_IEmotionAgent_ChangeEmotion_System_UInt16_System_UInt16_" data-uid="GrandmaGreen.Entities.IEmotionAgent.ChangeEmotion(System.UInt16,System.UInt16)">ChangeEmotion(UInt16, UInt16)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void DeregisterService(T service)</code></pre>
+    <pre><code class="lang-csharp hljs">void ChangeEmotion(ushort CharID, ushort EmoID)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -222,21 +113,26 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">T</span></td>
-        <td><span class="parametername">service</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">UInt16</a></td>
+        <td><span class="parametername">CharID</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">UInt16</a></td>
+        <td><span class="parametername">EmoID</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="GrandmaGreen_IServicer_1_RegisterService_" data-uid="GrandmaGreen.IServicer`1.RegisterService*"></a>
-  <h4 id="GrandmaGreen_IServicer_1_RegisterService__0_" data-uid="GrandmaGreen.IServicer`1.RegisterService(`0)">RegisterService(T)</h4>
+  <a id="GrandmaGreen_Entities_IEmotionAgent_ChangeEmotionInTime_" data-uid="GrandmaGreen.Entities.IEmotionAgent.ChangeEmotionInTime*"></a>
+  <h4 id="GrandmaGreen_Entities_IEmotionAgent_ChangeEmotionInTime_System_UInt16_System_UInt16_System_Single_" data-uid="GrandmaGreen.Entities.IEmotionAgent.ChangeEmotionInTime(System.UInt16,System.UInt16,System.Single)">ChangeEmotionInTime(UInt16, UInt16, Single)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void RegisterService(T service)</code></pre>
+    <pre><code class="lang-csharp hljs">void ChangeEmotionInTime(ushort CharID, ushort EmoID, float time)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -249,8 +145,18 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">T</span></td>
-        <td><span class="parametername">service</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">UInt16</a></td>
+        <td><span class="parametername">CharID</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">UInt16</a></td>
+        <td><span class="parametername">EmoID</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">time</span></td>
         <td></td>
       </tr>
     </tbody>
