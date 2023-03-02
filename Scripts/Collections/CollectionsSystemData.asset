@@ -15,7 +15,72 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects: []
+    ReferencedUnityObjects:
+    - {fileID: 2070160878, guid: 25d8de11134ec4df4bc1447ce400a36e, type: 3}
+    - {fileID: -700050879, guid: 25d8de11134ec4df4bc1447ce400a36e, type: 3}
+    - {fileID: -1620236428, guid: 25d8de11134ec4df4bc1447ce400a36e, type: 3}
+    - {fileID: 1560511687, guid: 25d8de11134ec4df4bc1447ce400a36e, type: 3}
+    - {fileID: -1343373442, guid: 25d8de11134ec4df4bc1447ce400a36e, type: 3}
+    - {fileID: 1117769790, guid: 25d8de11134ec4df4bc1447ce400a36e, type: 3}
+    - {fileID: 365989797, guid: 25d8de11134ec4df4bc1447ce400a36e, type: 3}
+    - {fileID: -1330855625, guid: 25d8de11134ec4df4bc1447ce400a36e, type: 3}
+    - {fileID: 1635718585, guid: 25d8de11134ec4df4bc1447ce400a36e, type: 3}
+    - {fileID: 1221260686, guid: 25d8de11134ec4df4bc1447ce400a36e, type: 3}
+    - {fileID: -1836628908, guid: 25d8de11134ec4df4bc1447ce400a36e, type: 3}
+    - {fileID: 2018534422, guid: 25d8de11134ec4df4bc1447ce400a36e, type: 3}
+    - {fileID: -421463520, guid: 25d8de11134ec4df4bc1447ce400a36e, type: 3}
+    - {fileID: 149033986, guid: 25d8de11134ec4df4bc1447ce400a36e, type: 3}
+    - {fileID: 1432894233, guid: 25d8de11134ec4df4bc1447ce400a36e, type: 3}
+    - {fileID: 1156758768, guid: 25d8de11134ec4df4bc1447ce400a36e, type: 3}
+    - {fileID: 1534141768, guid: 25d8de11134ec4df4bc1447ce400a36e, type: 3}
+    - {fileID: -1110715554, guid: 25d8de11134ec4df4bc1447ce400a36e, type: 3}
+    - {fileID: -1033033971, guid: be7a6c3e6e8f94183853a2aa91d0cb06, type: 3}
+    - {fileID: -539377586, guid: be7a6c3e6e8f94183853a2aa91d0cb06, type: 3}
+    - {fileID: 31496927, guid: be7a6c3e6e8f94183853a2aa91d0cb06, type: 3}
+    - {fileID: 1626179781, guid: 19f63b6ac05b04e57964b425cccf0a2a, type: 3}
+    - {fileID: -1082776068, guid: 19f63b6ac05b04e57964b425cccf0a2a, type: 3}
+    - {fileID: 1290588315, guid: 19f63b6ac05b04e57964b425cccf0a2a, type: 3}
+    - {fileID: -1949473603, guid: cfccb5624d9dd4c8cae08384092f3949, type: 3}
+    - {fileID: 1815492359, guid: cfccb5624d9dd4c8cae08384092f3949, type: 3}
+    - {fileID: -2036798783, guid: cfccb5624d9dd4c8cae08384092f3949, type: 3}
+    - {fileID: 579965916, guid: 8a3473ca38b984ac1b82b80361aa60b3, type: 3}
+    - {fileID: -553598649, guid: 8a3473ca38b984ac1b82b80361aa60b3, type: 3}
+    - {fileID: -241841452, guid: 8a3473ca38b984ac1b82b80361aa60b3, type: 3}
+    - {fileID: 101625930, guid: 8a3473ca38b984ac1b82b80361aa60b3, type: 3}
+    - {fileID: 689094082, guid: 8a3473ca38b984ac1b82b80361aa60b3, type: 3}
+    - {fileID: -1670294946, guid: 294274c321d9f47c384843ae952b5f41, type: 3}
+    - {fileID: -18225176, guid: 294274c321d9f47c384843ae952b5f41, type: 3}
+    - {fileID: 374116200, guid: 294274c321d9f47c384843ae952b5f41, type: 3}
+    - {fileID: 1367256435, guid: 6f8e0dd59c1cf441dbeb029643b7f3a1, type: 3}
+    - {fileID: -1489764730, guid: 6f8e0dd59c1cf441dbeb029643b7f3a1, type: 3}
+    - {fileID: 1357038853, guid: 6f8e0dd59c1cf441dbeb029643b7f3a1, type: 3}
+    - {fileID: 1661521317, guid: 7e758baecd89b4f139746f593774fe9f, type: 3}
+    - {fileID: 1205040287, guid: 7e758baecd89b4f139746f593774fe9f, type: 3}
+    - {fileID: -2090635810, guid: 7e758baecd89b4f139746f593774fe9f, type: 3}
+    - {fileID: 1807708434, guid: 7e758baecd89b4f139746f593774fe9f, type: 3}
+    - {fileID: -989938732, guid: 7e758baecd89b4f139746f593774fe9f, type: 3}
+    - {fileID: 33422123, guid: c9c4e13f5594a4af8a0ad7429466faea, type: 3}
+    - {fileID: 686915072, guid: c9c4e13f5594a4af8a0ad7429466faea, type: 3}
+    - {fileID: -424079412, guid: c9c4e13f5594a4af8a0ad7429466faea, type: 3}
+    - {fileID: -1783246859, guid: 46be3dfb4354a4b90b8376cc93794ccf, type: 3}
+    - {fileID: 1566464860, guid: 46be3dfb4354a4b90b8376cc93794ccf, type: 3}
+    - {fileID: -1201425179, guid: 46be3dfb4354a4b90b8376cc93794ccf, type: 3}
+    - {fileID: -1019362483, guid: ba629af597aba4f75a9d869d6db1ef89, type: 3}
+    - {fileID: -924927408, guid: ba629af597aba4f75a9d869d6db1ef89, type: 3}
+    - {fileID: 1145663740, guid: ba629af597aba4f75a9d869d6db1ef89, type: 3}
+    - {fileID: 258925878, guid: ba629af597aba4f75a9d869d6db1ef89, type: 3}
+    - {fileID: 688292087, guid: ba629af597aba4f75a9d869d6db1ef89, type: 3}
+    - {fileID: -2037793886, guid: 7c6229972044c4e29be6560977b1d09d, type: 3}
+    - {fileID: 1406650302, guid: 7c6229972044c4e29be6560977b1d09d, type: 3}
+    - {fileID: 1674872685, guid: 7c6229972044c4e29be6560977b1d09d, type: 3}
+    - {fileID: -366271677, guid: ca88e45bd445c415d8482405992fc1f1, type: 3}
+    - {fileID: -2078885065, guid: ca88e45bd445c415d8482405992fc1f1, type: 3}
+    - {fileID: -201144082, guid: ca88e45bd445c415d8482405992fc1f1, type: 3}
+    - {fileID: 1084492849, guid: ca88e45bd445c415d8482405992fc1f1, type: 3}
+    - {fileID: -762160637, guid: ca88e45bd445c415d8482405992fc1f1, type: 3}
+    - {fileID: 1412978189, guid: f12933683b4a0417f81fe1bed9a5566b, type: 3}
+    - {fileID: -798100390, guid: f12933683b4a0417f81fe1bed9a5566b, type: 3}
+    - {fileID: 410636052, guid: f12933683b4a0417f81fe1bed9a5566b, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -34,7 +99,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 12
-      Data: 136
+      Data: 182
     - Name: 
       Entry: 7
       Data: 
@@ -1018,13 +1083,13 @@ MonoBehaviour:
       Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
     - Name: name
       Entry: 1
-      Data: Torch
+      Data: Tulip Golem Memento
     - Name: description
       Entry: 1
       Data: 
     - Name: spritePath
       Entry: 1
-      Data: DEC_Torch
+      Data: DEC_Memento_Tulip
     - Name: itemType
       Entry: 1
       Data: Decor
@@ -1036,7 +1101,7 @@ MonoBehaviour:
       Data: 
     - Name: decorType
       Entry: 1
-      Data: Torch
+      Data: Memento_Tulip
     - Name: 
       Entry: 8
       Data: 
@@ -1054,13 +1119,13 @@ MonoBehaviour:
       Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
     - Name: name
       Entry: 1
-      Data: Tulip Golem Memento
+      Data: Apple Golem Memento
     - Name: description
       Entry: 1
       Data: 
     - Name: spritePath
       Entry: 1
-      Data: DEC_Tulip_Golem_Memento
+      Data: DEC_Memento_Apple
     - Name: itemType
       Entry: 1
       Data: Decor
@@ -1072,7 +1137,7 @@ MonoBehaviour:
       Data: 
     - Name: decorType
       Entry: 1
-      Data: Memento
+      Data: Memento_Apple
     - Name: 
       Entry: 8
       Data: 
@@ -1090,13 +1155,13 @@ MonoBehaviour:
       Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
     - Name: name
       Entry: 1
-      Data: Apple Golem Memento
+      Data: Crocus Golem Memento
     - Name: description
       Entry: 1
       Data: 
     - Name: spritePath
       Entry: 1
-      Data: DEC_Apple_Golem_Memento
+      Data: DEC_Memento_Crocus
     - Name: itemType
       Entry: 1
       Data: Decor
@@ -1108,7 +1173,7 @@ MonoBehaviour:
       Data: 
     - Name: decorType
       Entry: 1
-      Data: Memento
+      Data: Memento_Crocus
     - Name: 
       Entry: 8
       Data: 
@@ -1126,13 +1191,13 @@ MonoBehaviour:
       Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
     - Name: name
       Entry: 1
-      Data: Crocus Golem Memento
+      Data: Radish Golem Memento
     - Name: description
       Entry: 1
       Data: 
     - Name: spritePath
       Entry: 1
-      Data: DEC_Crocus_Golem_Memento
+      Data: DEC_Memento_Radish
     - Name: itemType
       Entry: 1
       Data: Decor
@@ -1144,7 +1209,7 @@ MonoBehaviour:
       Data: 
     - Name: decorType
       Entry: 1
-      Data: Memento
+      Data: Memento_Radish
     - Name: 
       Entry: 8
       Data: 
@@ -1162,13 +1227,13 @@ MonoBehaviour:
       Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
     - Name: name
       Entry: 1
-      Data: Turnip Golem Memento
+      Data: Pumpkin Golem Memento
     - Name: description
       Entry: 1
       Data: 
     - Name: spritePath
       Entry: 1
-      Data: DEC_Turnip_Golem_Memento
+      Data: DEC_Memento_Pumpkin
     - Name: itemType
       Entry: 1
       Data: Decor
@@ -1180,7 +1245,7 @@ MonoBehaviour:
       Data: 
     - Name: decorType
       Entry: 1
-      Data: Memento
+      Data: Memento_Pumpkin
     - Name: 
       Entry: 8
       Data: 
@@ -1198,13 +1263,13 @@ MonoBehaviour:
       Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
     - Name: name
       Entry: 1
-      Data: Pumpkin Golem Memento
+      Data: Cotton Golem Memento
     - Name: description
       Entry: 1
       Data: 
     - Name: spritePath
       Entry: 1
-      Data: DEC_Pumpkin_Golem_Memento
+      Data: DEC_Memento_Cotton
     - Name: itemType
       Entry: 1
       Data: Decor
@@ -1216,7 +1281,7 @@ MonoBehaviour:
       Data: 
     - Name: decorType
       Entry: 1
-      Data: Memento
+      Data: Memento_Cotton
     - Name: 
       Entry: 8
       Data: 
@@ -1234,13 +1299,13 @@ MonoBehaviour:
       Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
     - Name: name
       Entry: 1
-      Data: Cotton Golem Memento
+      Data: Camping Lantern
     - Name: description
       Entry: 1
       Data: 
     - Name: spritePath
       Entry: 1
-      Data: DEC_Cotton_Golem_Memento
+      Data: DEC_Lighting_Camping
     - Name: itemType
       Entry: 1
       Data: Decor
@@ -1252,7 +1317,7 @@ MonoBehaviour:
       Data: 
     - Name: decorType
       Entry: 1
-      Data: Memento
+      Data: Lighting_Camping
     - Name: 
       Entry: 8
       Data: 
@@ -1270,13 +1335,13 @@ MonoBehaviour:
       Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
     - Name: name
       Entry: 1
-      Data: Camping Lantern
+      Data: Simple Hanging Lamp Post 01
     - Name: description
       Entry: 1
       Data: 
     - Name: spritePath
       Entry: 1
-      Data: DEC_Camping_Lantern
+      Data: DEC_Lighting_Hanging01
     - Name: itemType
       Entry: 1
       Data: Decor
@@ -1288,7 +1353,7 @@ MonoBehaviour:
       Data: 
     - Name: decorType
       Entry: 1
-      Data: Lantern
+      Data: Lighting_Hanging01
     - Name: 
       Entry: 8
       Data: 
@@ -1306,13 +1371,13 @@ MonoBehaviour:
       Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
     - Name: name
       Entry: 1
-      Data: Simple Hanging Lamp Post
+      Data: Simple Hanging Lamp Post 02
     - Name: description
       Entry: 1
       Data: 
     - Name: spritePath
       Entry: 1
-      Data: DEC_Simple_Hanging_Lamp_Post
+      Data: DEC_Lighting_Hanging02
     - Name: itemType
       Entry: 1
       Data: Decor
@@ -1324,7 +1389,7 @@ MonoBehaviour:
       Data: 
     - Name: decorType
       Entry: 1
-      Data: Lamp Post
+      Data: Lighting_Hanging02
     - Name: 
       Entry: 8
       Data: 
@@ -1342,13 +1407,13 @@ MonoBehaviour:
       Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
     - Name: name
       Entry: 1
-      Data: Jack-O-Lantern
+      Data: Torch 01
     - Name: description
       Entry: 1
       Data: 
     - Name: spritePath
       Entry: 1
-      Data: DEC_Jack-O-Lantern
+      Data: DEC_Lighting_Torch01
     - Name: itemType
       Entry: 1
       Data: Decor
@@ -1360,7 +1425,7 @@ MonoBehaviour:
       Data: 
     - Name: decorType
       Entry: 1
-      Data: Lantern
+      Data: Lighting_Torch01
     - Name: 
       Entry: 8
       Data: 
@@ -1378,13 +1443,13 @@ MonoBehaviour:
       Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
     - Name: name
       Entry: 1
-      Data: Iron Lamp Post
+      Data: Torch 02
     - Name: description
       Entry: 1
       Data: 
     - Name: spritePath
       Entry: 1
-      Data: DEC_Iron_Lamp_Post
+      Data: DEC_Lighting_Torch02
     - Name: itemType
       Entry: 1
       Data: Decor
@@ -1396,7 +1461,7 @@ MonoBehaviour:
       Data: 
     - Name: decorType
       Entry: 1
-      Data: Lamp Post
+      Data: Lighting_Torch02
     - Name: 
       Entry: 8
       Data: 
@@ -1414,13 +1479,13 @@ MonoBehaviour:
       Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
     - Name: name
       Entry: 1
-      Data: Japanese Garden Lantern
+      Data: Jack-O-Lantern 01
     - Name: description
       Entry: 1
       Data: 
     - Name: spritePath
       Entry: 1
-      Data: DEC_Japanese_Garden_Lantern
+      Data: DEC_Lighting_JackOLantern01
     - Name: itemType
       Entry: 1
       Data: Decor
@@ -1432,7 +1497,7 @@ MonoBehaviour:
       Data: 
     - Name: decorType
       Entry: 1
-      Data: Lantern
+      Data: Lighting_JackOLantern01
     - Name: 
       Entry: 8
       Data: 
@@ -1450,13 +1515,13 @@ MonoBehaviour:
       Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
     - Name: name
       Entry: 1
-      Data: Mushroom Lamp
+      Data: Jack-O-Lantern 02
     - Name: description
       Entry: 1
       Data: 
     - Name: spritePath
       Entry: 1
-      Data: DEC_Mushroom_Lamp
+      Data: DEC_Lighting_JackOLantern02
     - Name: itemType
       Entry: 1
       Data: Decor
@@ -1468,7 +1533,7 @@ MonoBehaviour:
       Data: 
     - Name: decorType
       Entry: 1
-      Data: Lamp
+      Data: Lighting_JackOLantern02
     - Name: 
       Entry: 8
       Data: 
@@ -1486,13 +1551,13 @@ MonoBehaviour:
       Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
     - Name: name
       Entry: 1
-      Data: Scarecrow
+      Data: Iron Lamp Post 01
     - Name: description
       Entry: 1
       Data: 
     - Name: spritePath
       Entry: 1
-      Data: DEC_Scarecrow
+      Data: DEC_Lighting_Iron01
     - Name: itemType
       Entry: 1
       Data: Decor
@@ -1504,7 +1569,7 @@ MonoBehaviour:
       Data: 
     - Name: decorType
       Entry: 1
-      Data: Scarecrow
+      Data: Lighting_Iron01
     - Name: 
       Entry: 8
       Data: 
@@ -1522,13 +1587,13 @@ MonoBehaviour:
       Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
     - Name: name
       Entry: 1
-      Data: Bicycle
+      Data: Iron Lamp Post 02
     - Name: description
       Entry: 1
       Data: 
     - Name: spritePath
       Entry: 1
-      Data: DEC_Bicycle
+      Data: DEC_Lighting_Iron02
     - Name: itemType
       Entry: 1
       Data: Decor
@@ -1540,7 +1605,7 @@ MonoBehaviour:
       Data: 
     - Name: decorType
       Entry: 1
-      Data: Bicycle
+      Data: Lighting_Iron02
     - Name: 
       Entry: 8
       Data: 
@@ -1558,13 +1623,13 @@ MonoBehaviour:
       Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
     - Name: name
       Entry: 1
-      Data: Flower Wagon
+      Data: Japanese Garden Lantern 01
     - Name: description
       Entry: 1
       Data: 
     - Name: spritePath
       Entry: 1
-      Data: DEC_Flower_Wagon
+      Data: DEC_Lighting_Japanese01
     - Name: itemType
       Entry: 1
       Data: Decor
@@ -1576,7 +1641,7 @@ MonoBehaviour:
       Data: 
     - Name: decorType
       Entry: 1
-      Data: Wagon
+      Data: Lighting_Japanese01
     - Name: 
       Entry: 8
       Data: 
@@ -1594,13 +1659,13 @@ MonoBehaviour:
       Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
     - Name: name
       Entry: 1
-      Data: Harvest Basket
+      Data: Japanese Garden Lantern 02
     - Name: description
       Entry: 1
       Data: 
     - Name: spritePath
       Entry: 1
-      Data: DEC_Harvest_Basket
+      Data: DEC_Lighting_Japanese02
     - Name: itemType
       Entry: 1
       Data: Decor
@@ -1612,7 +1677,7 @@ MonoBehaviour:
       Data: 
     - Name: decorType
       Entry: 1
-      Data: Basket
+      Data: Lighting_Japanese02
     - Name: 
       Entry: 8
       Data: 
@@ -1630,13 +1695,13 @@ MonoBehaviour:
       Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
     - Name: name
       Entry: 1
-      Data: Umbrella
+      Data: Mushroom Lamp 01
     - Name: description
       Entry: 1
       Data: 
     - Name: spritePath
       Entry: 1
-      Data: DEC_Umbrella
+      Data: DEC_Lighting_Mushroom01
     - Name: itemType
       Entry: 1
       Data: Decor
@@ -1648,7 +1713,7 @@ MonoBehaviour:
       Data: 
     - Name: decorType
       Entry: 1
-      Data: Umbrella
+      Data: Lighting_Mushroom01
     - Name: 
       Entry: 8
       Data: 
@@ -1666,13 +1731,13 @@ MonoBehaviour:
       Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
     - Name: name
       Entry: 1
-      Data: Swingset
+      Data: Mushroom Lamp 02
     - Name: description
       Entry: 1
       Data: 
     - Name: spritePath
       Entry: 1
-      Data: DEC_Swingset
+      Data: DEC_Lighting_Mushroom02
     - Name: itemType
       Entry: 1
       Data: Decor
@@ -1684,7 +1749,7 @@ MonoBehaviour:
       Data: 
     - Name: decorType
       Entry: 1
-      Data: Swingset
+      Data: Lighting_Mushroom02
     - Name: 
       Entry: 8
       Data: 
@@ -1702,13 +1767,13 @@ MonoBehaviour:
       Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
     - Name: name
       Entry: 1
-      Data: Leafpile
+      Data: Scarecrow
     - Name: description
       Entry: 1
       Data: 
     - Name: spritePath
       Entry: 1
-      Data: DEC_Leafpile
+      Data: DEC_Scarecrow01
     - Name: itemType
       Entry: 1
       Data: Decor
@@ -1720,7 +1785,7 @@ MonoBehaviour:
       Data: 
     - Name: decorType
       Entry: 1
-      Data: Leafpile
+      Data: Scarecrow01
     - Name: 
       Entry: 8
       Data: 
@@ -1738,13 +1803,13 @@ MonoBehaviour:
       Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
     - Name: name
       Entry: 1
-      Data: Potted Plant 01
+      Data: Bike Black
     - Name: description
       Entry: 1
       Data: 
     - Name: spritePath
       Entry: 1
-      Data: DEC_Potted_Plant_01
+      Data: DEC_Bike_Black
     - Name: itemType
       Entry: 1
       Data: Decor
@@ -1756,7 +1821,7 @@ MonoBehaviour:
       Data: 
     - Name: decorType
       Entry: 1
-      Data: Potted Plant
+      Data: Bike_Black
     - Name: 
       Entry: 8
       Data: 
@@ -1774,13 +1839,13 @@ MonoBehaviour:
       Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
     - Name: name
       Entry: 1
-      Data: Potted Plant 02
+      Data: Bike Blue
     - Name: description
       Entry: 1
       Data: 
     - Name: spritePath
       Entry: 1
-      Data: DEC_Potted_Plant_02
+      Data: DEC_Bike_Blue
     - Name: itemType
       Entry: 1
       Data: Decor
@@ -1792,7 +1857,7 @@ MonoBehaviour:
       Data: 
     - Name: decorType
       Entry: 1
-      Data: Potted Plant
+      Data: Bike_Blue
     - Name: 
       Entry: 8
       Data: 
@@ -1810,13 +1875,13 @@ MonoBehaviour:
       Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
     - Name: name
       Entry: 1
-      Data: Potted Plant 03
+      Data: Flower Wagon
     - Name: description
       Entry: 1
       Data: 
     - Name: spritePath
       Entry: 1
-      Data: DEC_Potted_Plant_03
+      Data: DEC_Wagon_Flower
     - Name: itemType
       Entry: 1
       Data: Decor
@@ -1828,7 +1893,7 @@ MonoBehaviour:
       Data: 
     - Name: decorType
       Entry: 1
-      Data: Potted Plant
+      Data: Wagon_Flower
     - Name: 
       Entry: 8
       Data: 
@@ -1846,13 +1911,13 @@ MonoBehaviour:
       Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
     - Name: name
       Entry: 1
-      Data: French Country Urn
+      Data: Harvest Basket blue
     - Name: description
       Entry: 1
       Data: 
     - Name: spritePath
       Entry: 1
-      Data: DEC_French_Country_Urn
+      Data: DEC_HarvestBasket_Blue
     - Name: itemType
       Entry: 1
       Data: Decor
@@ -1864,7 +1929,7 @@ MonoBehaviour:
       Data: 
     - Name: decorType
       Entry: 1
-      Data: Urn
+      Data: HarvestBasket_Blue
     - Name: 
       Entry: 8
       Data: 
@@ -1882,13 +1947,13 @@ MonoBehaviour:
       Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
     - Name: name
       Entry: 1
-      Data: Garden Gnome Basic
+      Data: Harvest Basket green
     - Name: description
       Entry: 1
       Data: 
     - Name: spritePath
       Entry: 1
-      Data: DEC_Garden_Gnome_Basic
+      Data: DEC_HarvestBasket_Green
     - Name: itemType
       Entry: 1
       Data: Decor
@@ -1900,7 +1965,7 @@ MonoBehaviour:
       Data: 
     - Name: decorType
       Entry: 1
-      Data: Gnome
+      Data: HarvestBasket_Green
     - Name: 
       Entry: 8
       Data: 
@@ -1918,13 +1983,13 @@ MonoBehaviour:
       Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
     - Name: name
       Entry: 1
-      Data: Garden Gnome Sexy
+      Data: Harvest Basket pink
     - Name: description
       Entry: 1
       Data: 
     - Name: spritePath
       Entry: 1
-      Data: DEC_Garden_Gnome_Sexy
+      Data: DEC_HarvestBasket_Pink
     - Name: itemType
       Entry: 1
       Data: Decor
@@ -1936,7 +2001,7 @@ MonoBehaviour:
       Data: 
     - Name: decorType
       Entry: 1
-      Data: Gnome
+      Data: HarvestBasket_Pink
     - Name: 
       Entry: 8
       Data: 
@@ -1954,13 +2019,13 @@ MonoBehaviour:
       Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
     - Name: name
       Entry: 1
-      Data: Garden Gnome Gold
+      Data: Harvest Basket white
     - Name: description
       Entry: 1
       Data: 
     - Name: spritePath
       Entry: 1
-      Data: DEC_Garden_Gnome_Gold
+      Data: DEC_HarvestBasket_White
     - Name: itemType
       Entry: 1
       Data: Decor
@@ -1972,7 +2037,7 @@ MonoBehaviour:
       Data: 
     - Name: decorType
       Entry: 1
-      Data: Gnome
+      Data: HarvestBasket_White
     - Name: 
       Entry: 8
       Data: 
@@ -1990,13 +2055,13 @@ MonoBehaviour:
       Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
     - Name: name
       Entry: 1
-      Data: Frog Sculpture
+      Data: Umbrella01
     - Name: description
       Entry: 1
       Data: 
     - Name: spritePath
       Entry: 1
-      Data: DEC_Frog_Sculpture
+      Data: DEC_Umbrella01
     - Name: itemType
       Entry: 1
       Data: Decor
@@ -2008,7 +2073,7 @@ MonoBehaviour:
       Data: 
     - Name: decorType
       Entry: 1
-      Data: Sculpture
+      Data: Umbrella01
     - Name: 
       Entry: 8
       Data: 
@@ -2026,13 +2091,13 @@ MonoBehaviour:
       Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
     - Name: name
       Entry: 1
-      Data: Flamingo
+      Data: Umbrella02
     - Name: description
       Entry: 1
       Data: 
     - Name: spritePath
       Entry: 1
-      Data: DEC_Flamingo
+      Data: DEC_Umbrella02
     - Name: itemType
       Entry: 1
       Data: Decor
@@ -2044,7 +2109,7 @@ MonoBehaviour:
       Data: 
     - Name: decorType
       Entry: 1
-      Data: Flamingo
+      Data: Umbrella02
     - Name: 
       Entry: 8
       Data: 
@@ -2062,13 +2127,13 @@ MonoBehaviour:
       Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
     - Name: name
       Entry: 1
-      Data: Art Nouveau Sculpture 01
+      Data: Umbrella03
     - Name: description
       Entry: 1
       Data: 
     - Name: spritePath
       Entry: 1
-      Data: DEC_Art_Nouveau_Sculpture_01
+      Data: DEC_Umbrella03
     - Name: itemType
       Entry: 1
       Data: Decor
@@ -2080,7 +2145,7 @@ MonoBehaviour:
       Data: 
     - Name: decorType
       Entry: 1
-      Data: Sculpture
+      Data: Umbrella03
     - Name: 
       Entry: 8
       Data: 
@@ -2098,13 +2163,13 @@ MonoBehaviour:
       Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
     - Name: name
       Entry: 1
-      Data: Art Nouveau Sculpture 02
+      Data: Swingset01
     - Name: description
       Entry: 1
       Data: 
     - Name: spritePath
       Entry: 1
-      Data: DEC_Art_Nouveau_Sculpture_02
+      Data: DEC_Swingset01
     - Name: itemType
       Entry: 1
       Data: Decor
@@ -2116,7 +2181,7 @@ MonoBehaviour:
       Data: 
     - Name: decorType
       Entry: 1
-      Data: Sculpture
+      Data: Swingset01
     - Name: 
       Entry: 8
       Data: 
@@ -2134,13 +2199,13 @@ MonoBehaviour:
       Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
     - Name: name
       Entry: 1
-      Data: Art Nouveau Sculpture 03
+      Data: Swingset02
     - Name: description
       Entry: 1
       Data: 
     - Name: spritePath
       Entry: 1
-      Data: DEC_Art_Nouveau_Sculpture_03
+      Data: DEC_Swingset02
     - Name: itemType
       Entry: 1
       Data: Decor
@@ -2152,7 +2217,7 @@ MonoBehaviour:
       Data: 
     - Name: decorType
       Entry: 1
-      Data: Sculpture
+      Data: Swingset02
     - Name: 
       Entry: 8
       Data: 
@@ -2170,13 +2235,13 @@ MonoBehaviour:
       Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
     - Name: name
       Entry: 1
-      Data: Simple Wooden Bench
+      Data: Green Leafpile
     - Name: description
       Entry: 1
       Data: 
     - Name: spritePath
       Entry: 1
-      Data: DEC_Simple_Wooden_Bench
+      Data: DEC_Leafpile_Green
     - Name: itemType
       Entry: 1
       Data: Decor
@@ -2188,7 +2253,7 @@ MonoBehaviour:
       Data: 
     - Name: decorType
       Entry: 1
-      Data: Bench
+      Data: Leafpile_Green
     - Name: 
       Entry: 8
       Data: 
@@ -2206,13 +2271,13 @@ MonoBehaviour:
       Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
     - Name: name
       Entry: 1
-      Data: Simple Wooden Chair
+      Data: Orange Leafpile
     - Name: description
       Entry: 1
       Data: 
     - Name: spritePath
       Entry: 1
-      Data: DEC_Simple_Wooden_Chair
+      Data: DEC_Leafpile_Orange
     - Name: itemType
       Entry: 1
       Data: Decor
@@ -2224,7 +2289,7 @@ MonoBehaviour:
       Data: 
     - Name: decorType
       Entry: 1
-      Data: Chair
+      Data: Leafpile_Orange
     - Name: 
       Entry: 8
       Data: 
@@ -2242,13 +2307,13 @@ MonoBehaviour:
       Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
     - Name: name
       Entry: 1
-      Data: Stone Bench
+      Data: French Country Urn
     - Name: description
       Entry: 1
       Data: 
     - Name: spritePath
       Entry: 1
-      Data: DEC_Stone_Bench
+      Data: DEC_FrenchCountryUrn
     - Name: itemType
       Entry: 1
       Data: Decor
@@ -2260,7 +2325,7 @@ MonoBehaviour:
       Data: 
     - Name: decorType
       Entry: 1
-      Data: Bench
+      Data: FrenchCountryUrn
     - Name: 
       Entry: 8
       Data: 
@@ -2278,13 +2343,13 @@ MonoBehaviour:
       Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
     - Name: name
       Entry: 1
-      Data: Iron Bench
+      Data: Picnic Basket
     - Name: description
       Entry: 1
       Data: 
     - Name: spritePath
       Entry: 1
-      Data: DEC_Iron_Bench
+      Data: DEC_PicnicBasket
     - Name: itemType
       Entry: 1
       Data: Decor
@@ -2296,7 +2361,7 @@ MonoBehaviour:
       Data: 
     - Name: decorType
       Entry: 1
-      Data: Bench
+      Data: PicnicBasket
     - Name: 
       Entry: 8
       Data: 
@@ -2314,13 +2379,13 @@ MonoBehaviour:
       Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
     - Name: name
       Entry: 1
-      Data: Iron Chair
+      Data: Garden Gnome Basic
     - Name: description
       Entry: 1
       Data: 
     - Name: spritePath
       Entry: 1
-      Data: DEC_Iron_Chair
+      Data: DEC_Sculpture_GardenGnome_Basic
     - Name: itemType
       Entry: 1
       Data: Decor
@@ -2332,7 +2397,7 @@ MonoBehaviour:
       Data: 
     - Name: decorType
       Entry: 1
-      Data: Chair
+      Data: Sculpture_GardenGnome_Basic
     - Name: 
       Entry: 8
       Data: 
@@ -2350,13 +2415,13 @@ MonoBehaviour:
       Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
     - Name: name
       Entry: 1
-      Data: Rocking Chair
+      Data: Garden Gnome Sexy
     - Name: description
       Entry: 1
       Data: 
     - Name: spritePath
       Entry: 1
-      Data: DEC_Rocking_Chair
+      Data: DEC_Sculpture_GardenGnome_Sexy
     - Name: itemType
       Entry: 1
       Data: Decor
@@ -2368,7 +2433,7 @@ MonoBehaviour:
       Data: 
     - Name: decorType
       Entry: 1
-      Data: Chair
+      Data: Sculpture_GardenGnome_Sexy
     - Name: 
       Entry: 8
       Data: 
@@ -2386,13 +2451,13 @@ MonoBehaviour:
       Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
     - Name: name
       Entry: 1
-      Data: Mushroom Stool
+      Data: Garden Gnome Gold
     - Name: description
       Entry: 1
       Data: 
     - Name: spritePath
       Entry: 1
-      Data: DEC_Mushroom_Stool
+      Data: DEC_Sculpture_GardenGnome_Gold
     - Name: itemType
       Entry: 1
       Data: Decor
@@ -2404,7 +2469,7 @@ MonoBehaviour:
       Data: 
     - Name: decorType
       Entry: 1
-      Data: Stool
+      Data: Sculpture_GardenGnome_Gold
     - Name: 
       Entry: 8
       Data: 
@@ -2422,13 +2487,13 @@ MonoBehaviour:
       Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
     - Name: name
       Entry: 1
-      Data: Picnic Spread
+      Data: Frog Sculpture
     - Name: description
       Entry: 1
       Data: 
     - Name: spritePath
       Entry: 1
-      Data: DEC_Picnic_Spread
+      Data: DEC_Sculpture_Frog
     - Name: itemType
       Entry: 1
       Data: Decor
@@ -2440,7 +2505,7 @@ MonoBehaviour:
       Data: 
     - Name: decorType
       Entry: 1
-      Data: Picnic Spread
+      Data: Sculpture_Frog
     - Name: 
       Entry: 8
       Data: 
@@ -2458,13 +2523,13 @@ MonoBehaviour:
       Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
     - Name: name
       Entry: 1
-      Data: Simple Wooden Table
+      Data: Flamingo
     - Name: description
       Entry: 1
       Data: 
     - Name: spritePath
       Entry: 1
-      Data: DEC_Simple_Wooden_Table
+      Data: DEC_Sculpture_Flamingo
     - Name: itemType
       Entry: 1
       Data: Decor
@@ -2476,7 +2541,7 @@ MonoBehaviour:
       Data: 
     - Name: decorType
       Entry: 1
-      Data: Table
+      Data: Sculpture_Flamingo
     - Name: 
       Entry: 8
       Data: 
@@ -2494,13 +2559,13 @@ MonoBehaviour:
       Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
     - Name: name
       Entry: 1
-      Data: Flower Table
+      Data: Art Nouveau Sculture 01
     - Name: description
       Entry: 1
       Data: 
     - Name: spritePath
       Entry: 1
-      Data: DEC_Flower_Table
+      Data: DEC_Sculpture_ArtNouveau01
     - Name: itemType
       Entry: 1
       Data: Decor
@@ -2512,7 +2577,7 @@ MonoBehaviour:
       Data: 
     - Name: decorType
       Entry: 1
-      Data: Table
+      Data: Sculpture_ArtNouveau01
     - Name: 
       Entry: 8
       Data: 
@@ -2530,13 +2595,13 @@ MonoBehaviour:
       Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
     - Name: name
       Entry: 1
-      Data: Iron Table
+      Data: Art Nouveau Sculture 02
     - Name: description
       Entry: 1
       Data: 
     - Name: spritePath
       Entry: 1
-      Data: DEC_Iron_Table
+      Data: DEC_Sculpture_ArtNouveau02
     - Name: itemType
       Entry: 1
       Data: Decor
@@ -2548,7 +2613,7 @@ MonoBehaviour:
       Data: 
     - Name: decorType
       Entry: 1
-      Data: Table
+      Data: Sculpture_ArtNouveau02
     - Name: 
       Entry: 8
       Data: 
@@ -2566,13 +2631,13 @@ MonoBehaviour:
       Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
     - Name: name
       Entry: 1
-      Data: Bird Bath
+      Data: Art Nouveau Sculture 03
     - Name: description
       Entry: 1
       Data: 
     - Name: spritePath
       Entry: 1
-      Data: DEC_Bird_Bath
+      Data: DEC_Sculpture_ArtNouveau03
     - Name: itemType
       Entry: 1
       Data: Decor
@@ -2584,7 +2649,7 @@ MonoBehaviour:
       Data: 
     - Name: decorType
       Entry: 1
-      Data: Bird Bath
+      Data: Sculpture_ArtNouveau03
     - Name: 
       Entry: 8
       Data: 
@@ -2602,13 +2667,13 @@ MonoBehaviour:
       Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
     - Name: name
       Entry: 1
-      Data: Natural Pond
+      Data: Fox Sculpture
     - Name: description
       Entry: 1
       Data: 
     - Name: spritePath
       Entry: 1
-      Data: DEC_Natural_Pond
+      Data: DEC_Sculpture_Fox
     - Name: itemType
       Entry: 1
       Data: Decor
@@ -2620,7 +2685,7 @@ MonoBehaviour:
       Data: 
     - Name: decorType
       Entry: 1
-      Data: Pond
+      Data: Sculpture_Fox
     - Name: 
       Entry: 8
       Data: 
@@ -2638,13 +2703,13 @@ MonoBehaviour:
       Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
     - Name: name
       Entry: 1
-      Data: Fancy Pond
+      Data: Iron Hatch
     - Name: description
       Entry: 1
       Data: 
     - Name: spritePath
       Entry: 1
-      Data: DEC_Fancy_Pond
+      Data: DEC_Bench_Iron_Hatch
     - Name: itemType
       Entry: 1
       Data: Decor
@@ -2656,7 +2721,7 @@ MonoBehaviour:
       Data: 
     - Name: decorType
       Entry: 1
-      Data: Pond
+      Data: Bench_Iron_Hatch
     - Name: 
       Entry: 8
       Data: 
@@ -2674,13 +2739,13 @@ MonoBehaviour:
       Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
     - Name: name
       Entry: 1
-      Data: Koi Pond
+      Data: Stone Bench with Fancy Leg
     - Name: description
       Entry: 1
       Data: 
     - Name: spritePath
       Entry: 1
-      Data: DEC_Koi_Pond
+      Data: DEC_Bench_Stone_FancyLeg
     - Name: itemType
       Entry: 1
       Data: Decor
@@ -2692,7 +2757,7 @@ MonoBehaviour:
       Data: 
     - Name: decorType
       Entry: 1
-      Data: Pond
+      Data: Bench_Stone_FancyLeg
     - Name: 
       Entry: 8
       Data: 
@@ -2710,13 +2775,13 @@ MonoBehaviour:
       Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
     - Name: name
       Entry: 1
-      Data: Simple Fountain
+      Data: Stone Natural Bench
     - Name: description
       Entry: 1
       Data: 
     - Name: spritePath
       Entry: 1
-      Data: DEC_Simple_Fountain
+      Data: DEC_Bench_Stone_Natural
     - Name: itemType
       Entry: 1
       Data: Decor
@@ -2728,7 +2793,7 @@ MonoBehaviour:
       Data: 
     - Name: decorType
       Entry: 1
-      Data: Fountain
+      Data: Bench_Stone_Natural
     - Name: 
       Entry: 8
       Data: 
@@ -2746,13 +2811,13 @@ MonoBehaviour:
       Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
     - Name: name
       Entry: 1
-      Data: Fancy Fountain
+      Data: Stone Bench with Plain Leg
     - Name: description
       Entry: 1
       Data: 
     - Name: spritePath
       Entry: 1
-      Data: DEC_Fancy_Fountain
+      Data: DEC_Bench_Stone_Plain_Leg
     - Name: itemType
       Entry: 1
       Data: Decor
@@ -2764,7 +2829,7 @@ MonoBehaviour:
       Data: 
     - Name: decorType
       Entry: 1
-      Data: Fountain
+      Data: Bench_Stone_Plain_Leg
     - Name: 
       Entry: 8
       Data: 
@@ -2782,13 +2847,13 @@ MonoBehaviour:
       Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
     - Name: name
       Entry: 1
-      Data: Magic Fountain
+      Data: Wood and Iron Bench
     - Name: description
       Entry: 1
       Data: 
     - Name: spritePath
       Entry: 1
-      Data: DEC_Magic_Fountain
+      Data: DEC_Bench_Wood_And_Iron
     - Name: itemType
       Entry: 1
       Data: Decor
@@ -2800,7 +2865,7 @@ MonoBehaviour:
       Data: 
     - Name: decorType
       Entry: 1
-      Data: Fountain
+      Data: Bench_Wood_And_Iron
     - Name: 
       Entry: 8
       Data: 
@@ -2818,13 +2883,13 @@ MonoBehaviour:
       Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
     - Name: name
       Entry: 1
-      Data: Well
+      Data: Wood Bench without Back
     - Name: description
       Entry: 1
       Data: 
     - Name: spritePath
       Entry: 1
-      Data: DEC_Well
+      Data: DEC_Bench_Wood_No_Back
     - Name: itemType
       Entry: 1
       Data: Decor
@@ -2836,7 +2901,7 @@ MonoBehaviour:
       Data: 
     - Name: decorType
       Entry: 1
-      Data: Well
+      Data: Bench_Wood_No_Back
     - Name: 
       Entry: 8
       Data: 
@@ -2854,13 +2919,13 @@ MonoBehaviour:
       Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
     - Name: name
       Entry: 1
-      Data: Waterpump
+      Data: Wood Bench with Back
     - Name: description
       Entry: 1
       Data: 
     - Name: spritePath
       Entry: 1
-      Data: DEC_Waterpump
+      Data: DEC_Bench_Wood_With_Back
     - Name: itemType
       Entry: 1
       Data: Decor
@@ -2872,7 +2937,7 @@ MonoBehaviour:
       Data: 
     - Name: decorType
       Entry: 1
-      Data: Waterpump
+      Data: Bench_Wood_With_Back
     - Name: 
       Entry: 8
       Data: 
@@ -2890,13 +2955,13 @@ MonoBehaviour:
       Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
     - Name: name
       Entry: 1
-      Data: Grecian Ruin
+      Data: Iron Chair Cushion
     - Name: description
       Entry: 1
       Data: 
     - Name: spritePath
       Entry: 1
-      Data: DEC_Grecian_Ruin
+      Data: DEC_Chair_Iron_Cushion
     - Name: itemType
       Entry: 1
       Data: Decor
@@ -2908,7 +2973,7 @@ MonoBehaviour:
       Data: 
     - Name: decorType
       Entry: 1
-      Data: Grecian Ruin
+      Data: Chair_Iron_Cushion
     - Name: 
       Entry: 8
       Data: 
@@ -2926,13 +2991,13 @@ MonoBehaviour:
       Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
     - Name: name
       Entry: 1
-      Data: Sundial
+      Data: Iron Chair Oval
     - Name: description
       Entry: 1
       Data: 
     - Name: spritePath
       Entry: 1
-      Data: DEC_Sundial
+      Data: DEC_Chair_Iron_Oval
     - Name: itemType
       Entry: 1
       Data: Decor
@@ -2944,7 +3009,7 @@ MonoBehaviour:
       Data: 
     - Name: decorType
       Entry: 1
-      Data: Sundial
+      Data: Chair_Iron_Oval
     - Name: 
       Entry: 8
       Data: 
@@ -2962,13 +3027,13 @@ MonoBehaviour:
       Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
     - Name: name
       Entry: 1
-      Data: Claude Monet Painting
+      Data: Mushroom Chair
     - Name: description
       Entry: 1
       Data: 
     - Name: spritePath
       Entry: 1
-      Data: DEC_Claude_Monet_Painting
+      Data: DEC_Chair_Mushroom
     - Name: itemType
       Entry: 1
       Data: Decor
@@ -2980,7 +3045,7 @@ MonoBehaviour:
       Data: 
     - Name: decorType
       Entry: 1
-      Data: Painting
+      Data: Chair_Mushroom
     - Name: 
       Entry: 8
       Data: 
@@ -2998,13 +3063,13 @@ MonoBehaviour:
       Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
     - Name: name
       Entry: 1
-      Data: John Singer Sargent Painting
+      Data: Wood Thick Chair
     - Name: description
       Entry: 1
       Data: 
     - Name: spritePath
       Entry: 1
-      Data: DEC_John_Singer_Sargent_Painting
+      Data: DEC_Chair_Wood_Thick
     - Name: itemType
       Entry: 1
       Data: Decor
@@ -3016,7 +3081,7 @@ MonoBehaviour:
       Data: 
     - Name: decorType
       Entry: 1
-      Data: Painting
+      Data: Chair_Wood_Thick
     - Name: 
       Entry: 8
       Data: 
@@ -3029,6 +3094,1122 @@ MonoBehaviour:
     - Name: $k
       Entry: 3
       Data: 4057
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Wood Thin Chair
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Chair_Wood_Thin
+    - Name: itemType
+      Entry: 1
+      Data: Decor
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: tag
+      Entry: 1
+      Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Chair_Wood_Thin
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 4058
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Rocking Chair
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Chair_Rocking
+    - Name: itemType
+      Entry: 1
+      Data: Decor
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: tag
+      Entry: 1
+      Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Chair_Rocking
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 4059
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Stone Natural Bench with Moss
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Bench_Stone_Natural_Moss
+    - Name: itemType
+      Entry: 1
+      Data: Decor
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: tag
+      Entry: 1
+      Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Bench_Stone_Natural_Moss
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 4060
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Iron Bench Cushion
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Bench_Iron_Cushion
+    - Name: itemType
+      Entry: 1
+      Data: Decor
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: tag
+      Entry: 1
+      Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Bench_Iron_Cushion
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 4061
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Picnic Table
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Picnic_Table
+    - Name: itemType
+      Entry: 1
+      Data: Decor
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: tag
+      Entry: 1
+      Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Picnic_Table
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 4062
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Mushroom Table
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Table_Mushroom
+    - Name: itemType
+      Entry: 1
+      Data: Decor
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: tag
+      Entry: 1
+      Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Table_Mushroom
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 4063
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Daisy Table
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Table_Flower_Daisy
+    - Name: itemType
+      Entry: 1
+      Data: Decor
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: tag
+      Entry: 1
+      Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Table_Flower_Daisy
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 4064
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Iron One Leg Black Table
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Table_Iron_OneLeg_Black
+    - Name: itemType
+      Entry: 1
+      Data: Decor
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: tag
+      Entry: 1
+      Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Table_Iron_OneLeg_Black
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 4065
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Iron One Leg Green Table
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Table_Iron_OneLeg_Green
+    - Name: itemType
+      Entry: 1
+      Data: Decor
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: tag
+      Entry: 1
+      Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Table_Iron_OneLeg_Green
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 4066
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Iron One Leg White Table
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Table_Iron_OneLeg_White
+    - Name: itemType
+      Entry: 1
+      Data: Decor
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: tag
+      Entry: 1
+      Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Table_Iron_OneLeg_White
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 4067
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Iron Three Leg Black Table
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Table_Iron_ThreeLeg_Black
+    - Name: itemType
+      Entry: 1
+      Data: Decor
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: tag
+      Entry: 1
+      Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Table_Iron_ThreeLeg_Black
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 4068
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Iron Three Leg Green Table
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Table_Iron_ThreeLeg_Green
+    - Name: itemType
+      Entry: 1
+      Data: Decor
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: tag
+      Entry: 1
+      Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Table_Iron_ThreeLeg_Green
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 4069
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Iron Three Leg White Table
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Table_Iron_ThreeLeg_White
+    - Name: itemType
+      Entry: 1
+      Data: Decor
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: tag
+      Entry: 1
+      Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Table_Iron_ThreeLeg_White
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 4070
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Wood Round Leg Table
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Table_Wood_RoundLeg_Brown
+    - Name: itemType
+      Entry: 1
+      Data: Decor
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: tag
+      Entry: 1
+      Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Table_Wood_RoundLeg_Brown
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 4071
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Wood Slant Leg Table
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Table_Wood_SlantLeg_Brown
+    - Name: itemType
+      Entry: 1
+      Data: Decor
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: tag
+      Entry: 1
+      Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Table_Wood_SlantLeg_Brown
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 4072
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Wood Straight Leg Table
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Table_Wood_StraightLeg_Brown
+    - Name: itemType
+      Entry: 1
+      Data: Decor
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: tag
+      Entry: 1
+      Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Table_Wood_StraightLeg_Brown
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 4073
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Bird Bath
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Water_BirdBath
+    - Name: itemType
+      Entry: 1
+      Data: Decor
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: tag
+      Entry: 1
+      Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Water_BirdBath
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 4074
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Natural Pond
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Water_Pond_Natural
+    - Name: itemType
+      Entry: 1
+      Data: Decor
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: tag
+      Entry: 1
+      Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Water_Pond_Natural
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 4075
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Fancy Pond
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Water_Pond_Fancy
+    - Name: itemType
+      Entry: 1
+      Data: Decor
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: tag
+      Entry: 1
+      Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Water_Pond_Fancy
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 4076
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Koi Pond
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Water_Pond_Koi
+    - Name: itemType
+      Entry: 1
+      Data: Decor
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: tag
+      Entry: 1
+      Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Water_Pond_Koi
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 4077
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Simple Fountain
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Water_Fountain_Simple
+    - Name: itemType
+      Entry: 1
+      Data: Decor
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: tag
+      Entry: 1
+      Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Water_Fountain_Simple
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 4078
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Fancy Fountain
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Water_Fountain_Fancy
+    - Name: itemType
+      Entry: 1
+      Data: Decor
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: tag
+      Entry: 1
+      Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Water_Fountain_Fancy
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 4079
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Magic Fountain
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Water_Fountain_Magic
+    - Name: itemType
+      Entry: 1
+      Data: Decor
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: tag
+      Entry: 1
+      Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Water_Fountain_Magic
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 4080
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Well
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Water_Well
+    - Name: itemType
+      Entry: 1
+      Data: Decor
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: tag
+      Entry: 1
+      Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Water_Well
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 4081
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Rustic Well
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Water_Rustic_Well
+    - Name: itemType
+      Entry: 1
+      Data: Decor
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: tag
+      Entry: 1
+      Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Water_Rustic_Well
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 4082
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Waterpump
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Water_Waterpump
+    - Name: itemType
+      Entry: 1
+      Data: Decor
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: tag
+      Entry: 1
+      Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Water_Waterpump
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 4083
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Rustic Bucket
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Water_Rustic_Bucket
+    - Name: itemType
+      Entry: 1
+      Data: Decor
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: tag
+      Entry: 1
+      Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Water_Rustic_Bucket
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 4084
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Grecian Ruin
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Historical_GrecianRuin
+    - Name: itemType
+      Entry: 1
+      Data: Decor
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: tag
+      Entry: 1
+      Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Historical_GrecianRuin
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 4085
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Sundial
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Historical_Sundial
+    - Name: itemType
+      Entry: 1
+      Data: Decor
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: tag
+      Entry: 1
+      Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Historical_Sundial
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 4086
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Claude Monet Painting
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Historical_MonetPainting
+    - Name: itemType
+      Entry: 1
+      Data: Decor
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: tag
+      Entry: 1
+      Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Historical_MonetPainting
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 4087
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: John Singer Sargent Painting
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Historical_SargentPainting
+    - Name: itemType
+      Entry: 1
+      Data: Decor
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: tag
+      Entry: 1
+      Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Historical_SargentPainting
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 4088
     - Name: $v
       Entry: 7
       Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
@@ -3052,7 +4233,7 @@ MonoBehaviour:
       Data: 
     - Name: decorType
       Entry: 1
-      Data: Fixture
+      Data: Mailbox_Basic
     - Name: 
       Entry: 8
       Data: 
@@ -3064,7 +4245,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 3
-      Data: 4058
+      Data: 4089
     - Name: $v
       Entry: 7
       Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
@@ -3088,7 +4269,7 @@ MonoBehaviour:
       Data: 
     - Name: decorType
       Entry: 1
-      Data: Fixture
+      Data: Mailbox_Cottagecore
     - Name: 
       Entry: 8
       Data: 
@@ -3100,7 +4281,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 3
-      Data: 4059
+      Data: 4090
     - Name: $v
       Entry: 7
       Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
@@ -3124,7 +4305,7 @@ MonoBehaviour:
       Data: 
     - Name: decorType
       Entry: 1
-      Data: Fixture
+      Data: Mailbox_Goth
     - Name: 
       Entry: 8
       Data: 
@@ -3136,7 +4317,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 3
-      Data: 4060
+      Data: 4091
     - Name: $v
       Entry: 7
       Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
@@ -3160,7 +4341,7 @@ MonoBehaviour:
       Data: 
     - Name: decorType
       Entry: 1
-      Data: Fixture
+      Data: Mailbox_Fairy
     - Name: 
       Entry: 8
       Data: 
@@ -3172,7 +4353,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 3
-      Data: 4061
+      Data: 4092
     - Name: $v
       Entry: 7
       Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
@@ -3196,7 +4377,7 @@ MonoBehaviour:
       Data: 
     - Name: decorType
       Entry: 1
-      Data: Fixture
+      Data: Mailbox_Oriental
     - Name: 
       Entry: 8
       Data: 
@@ -3208,7 +4389,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 3
-      Data: 4062
+      Data: 4093
     - Name: $v
       Entry: 7
       Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
@@ -3232,7 +4413,7 @@ MonoBehaviour:
       Data: 
     - Name: decorType
       Entry: 1
-      Data: Fixture
+      Data: Mailbox_Cabin
     - Name: 
       Entry: 8
       Data: 
@@ -3244,7 +4425,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 3
-      Data: 4063
+      Data: 4094
     - Name: $v
       Entry: 7
       Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
@@ -3268,1123 +4449,7 @@ MonoBehaviour:
       Data: 
     - Name: decorType
       Entry: 1
-      Data: Fixture
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 4064
-    - Name: $v
-      Entry: 7
-      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
-    - Name: name
-      Entry: 1
-      Data: White Picket Fence
-    - Name: description
-      Entry: 1
-      Data: 
-    - Name: spritePath
-      Entry: 1
-      Data: DEC_White_Picket_Fence
-    - Name: itemType
-      Entry: 1
-      Data: Decor
-    - Name: baseCost
-      Entry: 3
-      Data: 100
-    - Name: tag
-      Entry: 1
-      Data: 
-    - Name: decorType
-      Entry: 1
-      Data: Fixture
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 4065
-    - Name: $v
-      Entry: 7
-      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
-    - Name: name
-      Entry: 1
-      Data: Simple Wooden Fence
-    - Name: description
-      Entry: 1
-      Data: 
-    - Name: spritePath
-      Entry: 1
-      Data: DEC_Simple_Wooden_Fence
-    - Name: itemType
-      Entry: 1
-      Data: Decor
-    - Name: baseCost
-      Entry: 3
-      Data: 100
-    - Name: tag
-      Entry: 1
-      Data: 
-    - Name: decorType
-      Entry: 1
-      Data: Fixture
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 4066
-    - Name: $v
-      Entry: 7
-      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
-    - Name: name
-      Entry: 1
-      Data: Farm Fence
-    - Name: description
-      Entry: 1
-      Data: 
-    - Name: spritePath
-      Entry: 1
-      Data: DEC_Farm_Fence
-    - Name: itemType
-      Entry: 1
-      Data: Decor
-    - Name: baseCost
-      Entry: 3
-      Data: 100
-    - Name: tag
-      Entry: 1
-      Data: 
-    - Name: decorType
-      Entry: 1
-      Data: Fixture
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 4067
-    - Name: $v
-      Entry: 7
-      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
-    - Name: name
-      Entry: 1
-      Data: Fancy Iron Fence
-    - Name: description
-      Entry: 1
-      Data: 
-    - Name: spritePath
-      Entry: 1
-      Data: DEC_Fancy_Iron_Fence
-    - Name: itemType
-      Entry: 1
-      Data: Decor
-    - Name: baseCost
-      Entry: 3
-      Data: 100
-    - Name: tag
-      Entry: 1
-      Data: 
-    - Name: decorType
-      Entry: 1
-      Data: Fixture
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 4068
-    - Name: $v
-      Entry: 7
-      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
-    - Name: name
-      Entry: 1
-      Data: Fieldstone Fence
-    - Name: description
-      Entry: 1
-      Data: 
-    - Name: spritePath
-      Entry: 1
-      Data: DEC_Fieldstone_Fence
-    - Name: itemType
-      Entry: 1
-      Data: Decor
-    - Name: baseCost
-      Entry: 3
-      Data: 100
-    - Name: tag
-      Entry: 1
-      Data: 
-    - Name: decorType
-      Entry: 1
-      Data: Fixture
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 4069
-    - Name: $v
-      Entry: 7
-      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
-    - Name: name
-      Entry: 1
-      Data: Ivy-Covered Brick Fence
-    - Name: description
-      Entry: 1
-      Data: 
-    - Name: spritePath
-      Entry: 1
-      Data: DEC_Ivy-Covered_Brick_Fence
-    - Name: itemType
-      Entry: 1
-      Data: Decor
-    - Name: baseCost
-      Entry: 3
-      Data: 100
-    - Name: tag
-      Entry: 1
-      Data: 
-    - Name: decorType
-      Entry: 1
-      Data: Fixture
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 4070
-    - Name: $v
-      Entry: 7
-      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
-    - Name: name
-      Entry: 1
-      Data: Historical English Exterior
-    - Name: description
-      Entry: 1
-      Data: 
-    - Name: spritePath
-      Entry: 1
-      Data: DEC_Historical_English_Exterior
-    - Name: itemType
-      Entry: 1
-      Data: Decor
-    - Name: baseCost
-      Entry: 3
-      Data: 100
-    - Name: tag
-      Entry: 1
-      Data: 
-    - Name: decorType
-      Entry: 1
-      Data: Fixture
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 4071
-    - Name: $v
-      Entry: 7
-      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
-    - Name: name
-      Entry: 1
-      Data: French Provincial Exterior
-    - Name: description
-      Entry: 1
-      Data: 
-    - Name: spritePath
-      Entry: 1
-      Data: DEC_French_Provincial_Exterior
-    - Name: itemType
-      Entry: 1
-      Data: Decor
-    - Name: baseCost
-      Entry: 3
-      Data: 100
-    - Name: tag
-      Entry: 1
-      Data: 
-    - Name: decorType
-      Entry: 1
-      Data: Fixture
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 4072
-    - Name: $v
-      Entry: 7
-      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
-    - Name: name
-      Entry: 1
-      Data: PNW Cabin Exterior
-    - Name: description
-      Entry: 1
-      Data: 
-    - Name: spritePath
-      Entry: 1
-      Data: DEC_PNW_Cabin_Exterior
-    - Name: itemType
-      Entry: 1
-      Data: Decor
-    - Name: baseCost
-      Entry: 3
-      Data: 100
-    - Name: tag
-      Entry: 1
-      Data: 
-    - Name: decorType
-      Entry: 1
-      Data: Fixture
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 4073
-    - Name: $v
-      Entry: 7
-      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
-    - Name: name
-      Entry: 1
-      Data: Traditional Japanese Exterior
-    - Name: description
-      Entry: 1
-      Data: 
-    - Name: spritePath
-      Entry: 1
-      Data: DEC_Traditional_Japanese_Exterior
-    - Name: itemType
-      Entry: 1
-      Data: Decor
-    - Name: baseCost
-      Entry: 3
-      Data: 100
-    - Name: tag
-      Entry: 1
-      Data: 
-    - Name: decorType
-      Entry: 1
-      Data: Fixture
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 4074
-    - Name: $v
-      Entry: 7
-      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
-    - Name: name
-      Entry: 1
-      Data: Modern Exterior
-    - Name: description
-      Entry: 1
-      Data: 
-    - Name: spritePath
-      Entry: 1
-      Data: DEC_Modern_Exterior
-    - Name: itemType
-      Entry: 1
-      Data: Decor
-    - Name: baseCost
-      Entry: 3
-      Data: 100
-    - Name: tag
-      Entry: 1
-      Data: 
-    - Name: decorType
-      Entry: 1
-      Data: Fixture
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 4075
-    - Name: $v
-      Entry: 7
-      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
-    - Name: name
-      Entry: 1
-      Data: Acorn Exterior
-    - Name: description
-      Entry: 1
-      Data: 
-    - Name: spritePath
-      Entry: 1
-      Data: DEC_Acorn_Exterior
-    - Name: itemType
-      Entry: 1
-      Data: Decor
-    - Name: baseCost
-      Entry: 3
-      Data: 100
-    - Name: tag
-      Entry: 1
-      Data: 
-    - Name: decorType
-      Entry: 1
-      Data: Fixture
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 4076
-    - Name: $v
-      Entry: 7
-      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
-    - Name: name
-      Entry: 1
-      Data: Pastel Exterior
-    - Name: description
-      Entry: 1
-      Data: 
-    - Name: spritePath
-      Entry: 1
-      Data: DEC_Pastel_Exterior
-    - Name: itemType
-      Entry: 1
-      Data: Decor
-    - Name: baseCost
-      Entry: 3
-      Data: 100
-    - Name: tag
-      Entry: 1
-      Data: 
-    - Name: decorType
-      Entry: 1
-      Data: Fixture
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 4077
-    - Name: $v
-      Entry: 7
-      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
-    - Name: name
-      Entry: 1
-      Data: Witchy Goth Exterior
-    - Name: description
-      Entry: 1
-      Data: 
-    - Name: spritePath
-      Entry: 1
-      Data: DEC_Witchy_Goth_Exterior
-    - Name: itemType
-      Entry: 1
-      Data: Decor
-    - Name: baseCost
-      Entry: 3
-      Data: 100
-    - Name: tag
-      Entry: 1
-      Data: 
-    - Name: decorType
-      Entry: 1
-      Data: Fixture
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 4078
-    - Name: $v
-      Entry: 7
-      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
-    - Name: name
-      Entry: 1
-      Data: Fairy Magic Exterior
-    - Name: description
-      Entry: 1
-      Data: 
-    - Name: spritePath
-      Entry: 1
-      Data: DEC_Fairy_Magic_Exterior
-    - Name: itemType
-      Entry: 1
-      Data: Decor
-    - Name: baseCost
-      Entry: 3
-      Data: 100
-    - Name: tag
-      Entry: 1
-      Data: 
-    - Name: decorType
-      Entry: 1
-      Data: Fixture
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 4079
-    - Name: $v
-      Entry: 7
-      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
-    - Name: name
-      Entry: 1
-      Data: European Castle Exterior
-    - Name: description
-      Entry: 1
-      Data: 
-    - Name: spritePath
-      Entry: 1
-      Data: DEC_European_Castle_Exterior
-    - Name: itemType
-      Entry: 1
-      Data: Decor
-    - Name: baseCost
-      Entry: 3
-      Data: 100
-    - Name: tag
-      Entry: 1
-      Data: 
-    - Name: decorType
-      Entry: 1
-      Data: Fixture
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 4080
-    - Name: $v
-      Entry: 7
-      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
-    - Name: name
-      Entry: 1
-      Data: Dirt Path
-    - Name: description
-      Entry: 1
-      Data: 
-    - Name: spritePath
-      Entry: 1
-      Data: DEC_Dirt_Path
-    - Name: itemType
-      Entry: 1
-      Data: Decor
-    - Name: baseCost
-      Entry: 3
-      Data: 100
-    - Name: tag
-      Entry: 1
-      Data: 
-    - Name: decorType
-      Entry: 1
-      Data: Path
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 4081
-    - Name: $v
-      Entry: 7
-      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
-    - Name: name
-      Entry: 1
-      Data: Cobblestone Path
-    - Name: description
-      Entry: 1
-      Data: 
-    - Name: spritePath
-      Entry: 1
-      Data: DEC_Cobblestone_Path
-    - Name: itemType
-      Entry: 1
-      Data: Decor
-    - Name: baseCost
-      Entry: 3
-      Data: 100
-    - Name: tag
-      Entry: 1
-      Data: 
-    - Name: decorType
-      Entry: 1
-      Data: Path
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 4082
-    - Name: $v
-      Entry: 7
-      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
-    - Name: name
-      Entry: 1
-      Data: Tile Path
-    - Name: description
-      Entry: 1
-      Data: 
-    - Name: spritePath
-      Entry: 1
-      Data: DEC_Tile_Path
-    - Name: itemType
-      Entry: 1
-      Data: Decor
-    - Name: baseCost
-      Entry: 3
-      Data: 100
-    - Name: tag
-      Entry: 1
-      Data: 
-    - Name: decorType
-      Entry: 1
-      Data: Path
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 4083
-    - Name: $v
-      Entry: 7
-      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
-    - Name: name
-      Entry: 1
-      Data: Wood Path
-    - Name: description
-      Entry: 1
-      Data: 
-    - Name: spritePath
-      Entry: 1
-      Data: DEC_Wood_Path
-    - Name: itemType
-      Entry: 1
-      Data: Decor
-    - Name: baseCost
-      Entry: 3
-      Data: 100
-    - Name: tag
-      Entry: 1
-      Data: 
-    - Name: decorType
-      Entry: 1
-      Data: Path
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 4084
-    - Name: $v
-      Entry: 7
-      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
-    - Name: name
-      Entry: 1
-      Data: Oak Tree
-    - Name: description
-      Entry: 1
-      Data: 
-    - Name: spritePath
-      Entry: 1
-      Data: DEC_Oak_Tree
-    - Name: itemType
-      Entry: 1
-      Data: Decor
-    - Name: baseCost
-      Entry: 3
-      Data: 100
-    - Name: tag
-      Entry: 1
-      Data: 
-    - Name: decorType
-      Entry: 1
-      Data: Tree
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 4085
-    - Name: $v
-      Entry: 7
-      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
-    - Name: name
-      Entry: 1
-      Data: Pine Tree
-    - Name: description
-      Entry: 1
-      Data: 
-    - Name: spritePath
-      Entry: 1
-      Data: DEC_Pine_Tree
-    - Name: itemType
-      Entry: 1
-      Data: Decor
-    - Name: baseCost
-      Entry: 3
-      Data: 100
-    - Name: tag
-      Entry: 1
-      Data: 
-    - Name: decorType
-      Entry: 1
-      Data: Tree
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 4086
-    - Name: $v
-      Entry: 7
-      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
-    - Name: name
-      Entry: 1
-      Data: Willow Tree
-    - Name: description
-      Entry: 1
-      Data: 
-    - Name: spritePath
-      Entry: 1
-      Data: DEC_Willow_Tree
-    - Name: itemType
-      Entry: 1
-      Data: Decor
-    - Name: baseCost
-      Entry: 3
-      Data: 100
-    - Name: tag
-      Entry: 1
-      Data: 
-    - Name: decorType
-      Entry: 1
-      Data: Tree
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 4087
-    - Name: $v
-      Entry: 7
-      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
-    - Name: name
-      Entry: 1
-      Data: Palm Tree
-    - Name: description
-      Entry: 1
-      Data: 
-    - Name: spritePath
-      Entry: 1
-      Data: DEC_Palm_Tree
-    - Name: itemType
-      Entry: 1
-      Data: Decor
-    - Name: baseCost
-      Entry: 3
-      Data: 100
-    - Name: tag
-      Entry: 1
-      Data: 
-    - Name: decorType
-      Entry: 1
-      Data: Tree
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 4088
-    - Name: $v
-      Entry: 7
-      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
-    - Name: name
-      Entry: 1
-      Data: Maple Tree
-    - Name: description
-      Entry: 1
-      Data: 
-    - Name: spritePath
-      Entry: 1
-      Data: DEC_Maple_Tree
-    - Name: itemType
-      Entry: 1
-      Data: Decor
-    - Name: baseCost
-      Entry: 3
-      Data: 100
-    - Name: tag
-      Entry: 1
-      Data: 
-    - Name: decorType
-      Entry: 1
-      Data: Tree
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 4089
-    - Name: $v
-      Entry: 7
-      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
-    - Name: name
-      Entry: 1
-      Data: Poplar Tree
-    - Name: description
-      Entry: 1
-      Data: 
-    - Name: spritePath
-      Entry: 1
-      Data: DEC_Poplar_Tree
-    - Name: itemType
-      Entry: 1
-      Data: Decor
-    - Name: baseCost
-      Entry: 3
-      Data: 100
-    - Name: tag
-      Entry: 1
-      Data: 
-    - Name: decorType
-      Entry: 1
-      Data: Tree
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 4090
-    - Name: $v
-      Entry: 7
-      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
-    - Name: name
-      Entry: 1
-      Data: Stump Tree
-    - Name: description
-      Entry: 1
-      Data: 
-    - Name: spritePath
-      Entry: 1
-      Data: DEC_Stump_Tree
-    - Name: itemType
-      Entry: 1
-      Data: Decor
-    - Name: baseCost
-      Entry: 3
-      Data: 100
-    - Name: tag
-      Entry: 1
-      Data: 
-    - Name: decorType
-      Entry: 1
-      Data: Tree
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 4091
-    - Name: $v
-      Entry: 7
-      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
-    - Name: name
-      Entry: 1
-      Data: Hydrangea Bush
-    - Name: description
-      Entry: 1
-      Data: 
-    - Name: spritePath
-      Entry: 1
-      Data: DEC_Hydrangea_Bush
-    - Name: itemType
-      Entry: 1
-      Data: Decor
-    - Name: baseCost
-      Entry: 3
-      Data: 100
-    - Name: tag
-      Entry: 1
-      Data: 
-    - Name: decorType
-      Entry: 1
-      Data: Bush
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 4092
-    - Name: $v
-      Entry: 7
-      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
-    - Name: name
-      Entry: 1
-      Data: Oleander Bush
-    - Name: description
-      Entry: 1
-      Data: 
-    - Name: spritePath
-      Entry: 1
-      Data: DEC_Oleander_Bush
-    - Name: itemType
-      Entry: 1
-      Data: Decor
-    - Name: baseCost
-      Entry: 3
-      Data: 100
-    - Name: tag
-      Entry: 1
-      Data: 
-    - Name: decorType
-      Entry: 1
-      Data: Bush
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 4093
-    - Name: $v
-      Entry: 7
-      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
-    - Name: name
-      Entry: 1
-      Data: Gardenia Bush
-    - Name: description
-      Entry: 1
-      Data: 
-    - Name: spritePath
-      Entry: 1
-      Data: DEC_Gardenia_Bush
-    - Name: itemType
-      Entry: 1
-      Data: Decor
-    - Name: baseCost
-      Entry: 3
-      Data: 100
-    - Name: tag
-      Entry: 1
-      Data: 
-    - Name: decorType
-      Entry: 1
-      Data: Bush
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 4094
-    - Name: $v
-      Entry: 7
-      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
-    - Name: name
-      Entry: 1
-      Data: Boxwood Bush
-    - Name: description
-      Entry: 1
-      Data: 
-    - Name: spritePath
-      Entry: 1
-      Data: DEC_Boxwood_Bush
-    - Name: itemType
-      Entry: 1
-      Data: Decor
-    - Name: baseCost
-      Entry: 3
-      Data: 100
-    - Name: tag
-      Entry: 1
-      Data: 
-    - Name: decorType
-      Entry: 1
-      Data: Bush
+      Data: Mailbox_Pastel
     - Name: 
       Entry: 8
       Data: 
@@ -4402,13 +4467,13 @@ MonoBehaviour:
       Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
     - Name: name
       Entry: 1
-      Data: Common Poppy
+      Data: White Picket
     - Name: description
       Entry: 1
       Data: 
     - Name: spritePath
       Entry: 1
-      Data: DEC_Common_Poppy
+      Data: DEC_Fence_WhitePicket
     - Name: itemType
       Entry: 1
       Data: Decor
@@ -4420,7 +4485,7 @@ MonoBehaviour:
       Data: 
     - Name: decorType
       Entry: 1
-      Data: Flower
+      Data: Fence_WhitePicket
     - Name: 
       Entry: 8
       Data: 
@@ -4438,13 +4503,13 @@ MonoBehaviour:
       Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
     - Name: name
       Entry: 1
-      Data: Forget Me Not
+      Data: Simple Wooden
     - Name: description
       Entry: 1
       Data: 
     - Name: spritePath
       Entry: 1
-      Data: DEC_Forget_Me_Not
+      Data: DEC_Fence_SimpleWood
     - Name: itemType
       Entry: 1
       Data: Decor
@@ -4456,7 +4521,7 @@ MonoBehaviour:
       Data: 
     - Name: decorType
       Entry: 1
-      Data: Flower
+      Data: Fence_SimpleWood
     - Name: 
       Entry: 8
       Data: 
@@ -4474,13 +4539,13 @@ MonoBehaviour:
       Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
     - Name: name
       Entry: 1
-      Data: Wild Daisies
+      Data: Gate of SimpleWood
     - Name: description
       Entry: 1
       Data: 
     - Name: spritePath
       Entry: 1
-      Data: DEC_Wild_Daisies
+      Data: DEC_Fence_SimpleWood_Gate
     - Name: itemType
       Entry: 1
       Data: Decor
@@ -4492,7 +4557,7 @@ MonoBehaviour:
       Data: 
     - Name: decorType
       Entry: 1
-      Data: Flower
+      Data: Fence_SimpleWood_Gate
     - Name: 
       Entry: 8
       Data: 
@@ -4510,13 +4575,13 @@ MonoBehaviour:
       Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
     - Name: name
       Entry: 1
-      Data: Dandelion
+      Data: Farm
     - Name: description
       Entry: 1
       Data: 
     - Name: spritePath
       Entry: 1
-      Data: DEC_Dandelion
+      Data: DEC_Fence_Farm
     - Name: itemType
       Entry: 1
       Data: Decor
@@ -4528,7 +4593,7 @@ MonoBehaviour:
       Data: 
     - Name: decorType
       Entry: 1
-      Data: Flower
+      Data: Fence_Farm
     - Name: 
       Entry: 8
       Data: 
@@ -4546,13 +4611,13 @@ MonoBehaviour:
       Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
     - Name: name
       Entry: 1
-      Data: Clover
+      Data: Gate of Farm
     - Name: description
       Entry: 1
       Data: 
     - Name: spritePath
       Entry: 1
-      Data: DEC_Clover
+      Data: DEC_Fence_Farm_Gate
     - Name: itemType
       Entry: 1
       Data: Decor
@@ -4564,7 +4629,7 @@ MonoBehaviour:
       Data: 
     - Name: decorType
       Entry: 1
-      Data: Flower
+      Data: Fence_Farm_Gate
     - Name: 
       Entry: 8
       Data: 
@@ -4582,13 +4647,13 @@ MonoBehaviour:
       Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
     - Name: name
       Entry: 1
-      Data: Hemlock
+      Data: Fancy Iron
     - Name: description
       Entry: 1
       Data: 
     - Name: spritePath
       Entry: 1
-      Data: DEC_Hemlock
+      Data: DEC_Fence_FancyIron
     - Name: itemType
       Entry: 1
       Data: Decor
@@ -4600,7 +4665,1663 @@ MonoBehaviour:
       Data: 
     - Name: decorType
       Entry: 1
-      Data: Flower
+      Data: Fence_FancyIron
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 4101
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Gate of Fancy Iron
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Fence_FancyIron_Gate
+    - Name: itemType
+      Entry: 1
+      Data: Decor
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: tag
+      Entry: 1
+      Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Fence_FancyIron_Gate
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 4102
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: White Fancy Iron
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Fence_FancyIron_White
+    - Name: itemType
+      Entry: 1
+      Data: Decor
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: tag
+      Entry: 1
+      Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Fence_FancyIron_White
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 4103
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Gate of White Fancy Iron
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Fence_FancyIron_White_Gate
+    - Name: itemType
+      Entry: 1
+      Data: Decor
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: tag
+      Entry: 1
+      Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Fence_FancyIron_White_Gate
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 4104
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Fieldstone
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Fence_FieldStone
+    - Name: itemType
+      Entry: 1
+      Data: Decor
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: tag
+      Entry: 1
+      Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Fence_FieldStone
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 4105
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Gate of Fieldstone
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Fence_FieldStone_Gate
+    - Name: itemType
+      Entry: 1
+      Data: Decor
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: tag
+      Entry: 1
+      Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Fence_FieldStone_Gate
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 4106
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Wood with Trees
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Fence_TreeWood
+    - Name: itemType
+      Entry: 1
+      Data: Decor
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: tag
+      Entry: 1
+      Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Fence_TreeWood
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 4107
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Gate of TreeWood
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Fence_TreeWood_Gate
+    - Name: itemType
+      Entry: 1
+      Data: Decor
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: tag
+      Entry: 1
+      Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Fence_TreeWood_Gate
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 4108
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Ivy-Covered Lattice
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Fence_Lattice
+    - Name: itemType
+      Entry: 1
+      Data: Decor
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: tag
+      Entry: 1
+      Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Fence_Lattice
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 4109
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Gate of Lattice
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Fence_Lattice_Gate
+    - Name: itemType
+      Entry: 1
+      Data: Decor
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: tag
+      Entry: 1
+      Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Fence_Lattice_Gate
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 4110
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Historical English
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Cottage_English
+    - Name: itemType
+      Entry: 1
+      Data: Decor
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: tag
+      Entry: 1
+      Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Cottage_English
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 4111
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: French Provincial
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Cottage_French
+    - Name: itemType
+      Entry: 1
+      Data: Decor
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: tag
+      Entry: 1
+      Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Cottage_French
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 4112
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: PNW Cabin
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Cottage_PNW
+    - Name: itemType
+      Entry: 1
+      Data: Decor
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: tag
+      Entry: 1
+      Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Cottage_PNW
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 4113
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Traditional Japanese
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Cottage_Japanese
+    - Name: itemType
+      Entry: 1
+      Data: Decor
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: tag
+      Entry: 1
+      Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Cottage_Japanese
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 4114
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Modern
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Cottage_Modern
+    - Name: itemType
+      Entry: 1
+      Data: Decor
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: tag
+      Entry: 1
+      Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Cottage_Modern
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 4115
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Acorn
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Cottage_Acorn
+    - Name: itemType
+      Entry: 1
+      Data: Decor
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: tag
+      Entry: 1
+      Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Cottage_Acorn
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 4116
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Pastel
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Cottage_Pastel
+    - Name: itemType
+      Entry: 1
+      Data: Decor
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: tag
+      Entry: 1
+      Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Cottage_Pastel
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 4117
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Witchy Goth
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Cottage_Goth
+    - Name: itemType
+      Entry: 1
+      Data: Decor
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: tag
+      Entry: 1
+      Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Cottage_Goth
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 4118
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Fairy Magic
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Cottage_Fairy
+    - Name: itemType
+      Entry: 1
+      Data: Decor
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: tag
+      Entry: 1
+      Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Cottage_Fairy
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 4119
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Europearn Castle
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Cottage_Castle
+    - Name: itemType
+      Entry: 1
+      Data: Decor
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: tag
+      Entry: 1
+      Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Cottage_Castle
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 4120
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Dirt
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Paths_Dirt
+    - Name: itemType
+      Entry: 1
+      Data: Decor
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: tag
+      Entry: 1
+      Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Paths_Dirt
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 4121
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Cobblestone
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Paths_Cobblestone
+    - Name: itemType
+      Entry: 1
+      Data: Decor
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: tag
+      Entry: 1
+      Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Paths_Cobblestone
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 4122
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Tile
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Paths_Tile
+    - Name: itemType
+      Entry: 1
+      Data: Decor
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: tag
+      Entry: 1
+      Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Paths_Tile
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 4123
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Wood
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Paths_Wood
+    - Name: itemType
+      Entry: 1
+      Data: Decor
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: tag
+      Entry: 1
+      Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Paths_Wood
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 4124
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Oak
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Plant_Tree_Oak
+    - Name: itemType
+      Entry: 1
+      Data: Decor
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: tag
+      Entry: 1
+      Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Plant_Tree_Oak
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 4125
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Pine01
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Plant_Tree_Pine01
+    - Name: itemType
+      Entry: 1
+      Data: Decor
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: tag
+      Entry: 1
+      Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Plant_Tree_Pine01
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 4126
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Pine02
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Plant_Tree_Pine02
+    - Name: itemType
+      Entry: 1
+      Data: Decor
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: tag
+      Entry: 1
+      Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Plant_Tree_Pine02
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 4127
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Willow
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Plant_Tree_Willow
+    - Name: itemType
+      Entry: 1
+      Data: Decor
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: tag
+      Entry: 1
+      Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Plant_Tree_Willow
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 4128
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Palm
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Plant_Tree_Palm
+    - Name: itemType
+      Entry: 1
+      Data: Decor
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: tag
+      Entry: 1
+      Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Plant_Tree_Palm
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 4129
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Maple
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Plant_Tree_Maple
+    - Name: itemType
+      Entry: 1
+      Data: Decor
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: tag
+      Entry: 1
+      Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Plant_Tree_Maple
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 4130
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Poplar
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Plant_Tree_Poplar
+    - Name: itemType
+      Entry: 1
+      Data: Decor
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: tag
+      Entry: 1
+      Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Plant_Tree_Poplar
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 4131
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Stump
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Plant_Tree_Stump
+    - Name: itemType
+      Entry: 1
+      Data: Decor
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: tag
+      Entry: 1
+      Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Plant_Tree_Stump
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 4132
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Tree01
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Plant_Tree01
+    - Name: itemType
+      Entry: 1
+      Data: Decor
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: tag
+      Entry: 1
+      Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Plant_Tree01
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 4133
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Tree02
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Plant_Tree02
+    - Name: itemType
+      Entry: 1
+      Data: Decor
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: tag
+      Entry: 1
+      Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Plant_Tree02
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 4134
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Hydrangea
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Plant_Bush_Hydrangea
+    - Name: itemType
+      Entry: 1
+      Data: Decor
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: tag
+      Entry: 1
+      Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Plant_Bush_Hydrangea
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 4135
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Oleander
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Plant_Bush_Oleander
+    - Name: itemType
+      Entry: 1
+      Data: Decor
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: tag
+      Entry: 1
+      Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Plant_Bush_Oleander
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 4136
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Gardenia
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Plant_Bush_Gardenia
+    - Name: itemType
+      Entry: 1
+      Data: Decor
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: tag
+      Entry: 1
+      Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Plant_Bush_Gardenia
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 4137
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Boxwood
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Plant_Bush_Boxwood
+    - Name: itemType
+      Entry: 1
+      Data: Decor
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: tag
+      Entry: 1
+      Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Plant_Bush_Boxwood
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 4138
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Common Poppy
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Plant_Flower_CommonPoppy
+    - Name: itemType
+      Entry: 1
+      Data: Decor
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: tag
+      Entry: 1
+      Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Plant_Flower_CommonPoppy
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 4139
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Forget Me Not
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Plant_Flower_ForgetMeNot
+    - Name: itemType
+      Entry: 1
+      Data: Decor
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: tag
+      Entry: 1
+      Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Plant_Flower_ForgetMeNot
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 4140
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Wild Daisies
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Plant_Flower_WildDaisy
+    - Name: itemType
+      Entry: 1
+      Data: Decor
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: tag
+      Entry: 1
+      Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Plant_Flower_WildDaisy
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 4141
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Dandelion
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Plant_Flower_Dandelion
+    - Name: itemType
+      Entry: 1
+      Data: Decor
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: tag
+      Entry: 1
+      Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Plant_Flower_Dandelion
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 4142
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Clover
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Plant_Flower_Clover
+    - Name: itemType
+      Entry: 1
+      Data: Decor
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: tag
+      Entry: 1
+      Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Plant_Flower_Clover
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 4143
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Hemlock
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Plant_Flower_Hemlock
+    - Name: itemType
+      Entry: 1
+      Data: Decor
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: tag
+      Entry: 1
+      Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Plant_Flower_Hemlock
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 4144
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Potted Plant 01
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Plant_PottedPlant01
+    - Name: itemType
+      Entry: 1
+      Data: Decor
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: tag
+      Entry: 1
+      Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Plant_PottedPlant01
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 4145
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Potted Plant 02
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Plant_PottedPlant02
+    - Name: itemType
+      Entry: 1
+      Data: Decor
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: tag
+      Entry: 1
+      Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Plant_PottedPlant02
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 4146
+    - Name: $v
+      Entry: 7
+      Data: GrandmaGreen.Collections.ItemProperties, GrandmaGreen
+    - Name: name
+      Entry: 1
+      Data: Potted Plant 03
+    - Name: description
+      Entry: 1
+      Data: 
+    - Name: spritePath
+      Entry: 1
+      Data: DEC_Plant_PottedPlant03
+    - Name: itemType
+      Entry: 1
+      Data: Decor
+    - Name: baseCost
+      Entry: 3
+      Data: 100
+    - Name: tag
+      Entry: 1
+      Data: 
+    - Name: decorType
+      Entry: 1
+      Data: Plant_PottedPlant03
     - Name: 
       Entry: 8
       Data: 
@@ -5785,7 +7506,187 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 12
-      Data: 0
+      Data: 15
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: DEC_Table_Mushroom
+    - Name: $v
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: DEC_Bench_Stone_Natural
+    - Name: $v
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: DEC_Lighting_Torch02
+    - Name: $v
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: DEC_Plant_Tree01
+    - Name: $v
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: DEC_Water_Pond_Natural
+    - Name: $v
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: DEC_Memento_Radish
+    - Name: $v
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: DEC_Cottage_English
+    - Name: $v
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: DEC_HarvestBasket_Blue
+    - Name: $v
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: DEC_Table_Iron_OneLeg_Black
+    - Name: $v
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: DEC_HarvestBasket_Pink
+    - Name: $v
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: DEC_Lighting_Torch01
+    - Name: $v
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: DEC_Table_Iron_ThreeLeg_White
+    - Name: $v
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: DEC_HarvestBasket_White
+    - Name: $v
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: DEC_Mailbox_Cottagecore
+    - Name: $v
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: DEC_Umbrella02
+    - Name: $v
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 13
       Data: 
@@ -5801,7 +7702,496 @@ MonoBehaviour:
       Data: 4
     - Name: 
       Entry: 12
+      Data: 14
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: Seed Packets/SEED_Rose
+    - Name: $v
+      Entry: 7
+      Data: 6|UnityEngine.Sprite[], UnityEngine.CoreModule
+    - Name: 
+      Entry: 12
+      Data: 18
+    - Name: 
+      Entry: 10
       Data: 0
+    - Name: 
+      Entry: 10
+      Data: 1
+    - Name: 
+      Entry: 10
+      Data: 2
+    - Name: 
+      Entry: 10
+      Data: 3
+    - Name: 
+      Entry: 10
+      Data: 4
+    - Name: 
+      Entry: 10
+      Data: 5
+    - Name: 
+      Entry: 10
+      Data: 6
+    - Name: 
+      Entry: 10
+      Data: 7
+    - Name: 
+      Entry: 10
+      Data: 8
+    - Name: 
+      Entry: 10
+      Data: 9
+    - Name: 
+      Entry: 10
+      Data: 10
+    - Name: 
+      Entry: 10
+      Data: 11
+    - Name: 
+      Entry: 10
+      Data: 12
+    - Name: 
+      Entry: 10
+      Data: 13
+    - Name: 
+      Entry: 10
+      Data: 14
+    - Name: 
+      Entry: 10
+      Data: 15
+    - Name: 
+      Entry: 10
+      Data: 16
+    - Name: 
+      Entry: 10
+      Data: 17
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: Seed Packets/SEED_Apple
+    - Name: $v
+      Entry: 7
+      Data: 7|UnityEngine.Sprite[], UnityEngine.CoreModule
+    - Name: 
+      Entry: 12
+      Data: 3
+    - Name: 
+      Entry: 10
+      Data: 18
+    - Name: 
+      Entry: 10
+      Data: 19
+    - Name: 
+      Entry: 10
+      Data: 20
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: Seed Packets/SEED_Pumpkin
+    - Name: $v
+      Entry: 7
+      Data: 8|UnityEngine.Sprite[], UnityEngine.CoreModule
+    - Name: 
+      Entry: 12
+      Data: 3
+    - Name: 
+      Entry: 10
+      Data: 21
+    - Name: 
+      Entry: 10
+      Data: 22
+    - Name: 
+      Entry: 10
+      Data: 23
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: Seed Packets/SEED_SweetPotato
+    - Name: $v
+      Entry: 7
+      Data: 9|UnityEngine.Sprite[], UnityEngine.CoreModule
+    - Name: 
+      Entry: 12
+      Data: 3
+    - Name: 
+      Entry: 10
+      Data: 24
+    - Name: 
+      Entry: 10
+      Data: 25
+    - Name: 
+      Entry: 10
+      Data: 26
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: Seed Packets/SEED_CallaLily
+    - Name: $v
+      Entry: 7
+      Data: 10|UnityEngine.Sprite[], UnityEngine.CoreModule
+    - Name: 
+      Entry: 12
+      Data: 5
+    - Name: 
+      Entry: 10
+      Data: 27
+    - Name: 
+      Entry: 10
+      Data: 28
+    - Name: 
+      Entry: 10
+      Data: 29
+    - Name: 
+      Entry: 10
+      Data: 30
+    - Name: 
+      Entry: 10
+      Data: 31
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: Seed Packets/SEED_Corn
+    - Name: $v
+      Entry: 7
+      Data: 11|UnityEngine.Sprite[], UnityEngine.CoreModule
+    - Name: 
+      Entry: 12
+      Data: 3
+    - Name: 
+      Entry: 10
+      Data: 32
+    - Name: 
+      Entry: 10
+      Data: 33
+    - Name: 
+      Entry: 10
+      Data: 34
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: Seed Packets/SEED_Watermelon
+    - Name: $v
+      Entry: 7
+      Data: 12|UnityEngine.Sprite[], UnityEngine.CoreModule
+    - Name: 
+      Entry: 12
+      Data: 3
+    - Name: 
+      Entry: 10
+      Data: 35
+    - Name: 
+      Entry: 10
+      Data: 36
+    - Name: 
+      Entry: 10
+      Data: 37
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: Seed Packets/SEED_Dahlia
+    - Name: $v
+      Entry: 7
+      Data: 13|UnityEngine.Sprite[], UnityEngine.CoreModule
+    - Name: 
+      Entry: 12
+      Data: 5
+    - Name: 
+      Entry: 10
+      Data: 38
+    - Name: 
+      Entry: 10
+      Data: 39
+    - Name: 
+      Entry: 10
+      Data: 40
+    - Name: 
+      Entry: 10
+      Data: 41
+    - Name: 
+      Entry: 10
+      Data: 42
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: Seed Packets/SEED_Turnip
+    - Name: $v
+      Entry: 7
+      Data: 14|UnityEngine.Sprite[], UnityEngine.CoreModule
+    - Name: 
+      Entry: 12
+      Data: 3
+    - Name: 
+      Entry: 10
+      Data: 43
+    - Name: 
+      Entry: 10
+      Data: 44
+    - Name: 
+      Entry: 10
+      Data: 45
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: Seed Packets/SEED_Pear
+    - Name: $v
+      Entry: 7
+      Data: 15|UnityEngine.Sprite[], UnityEngine.CoreModule
+    - Name: 
+      Entry: 12
+      Data: 3
+    - Name: 
+      Entry: 10
+      Data: 46
+    - Name: 
+      Entry: 10
+      Data: 47
+    - Name: 
+      Entry: 10
+      Data: 48
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: Seed Packets/SEED_Hyacinth
+    - Name: $v
+      Entry: 7
+      Data: 16|UnityEngine.Sprite[], UnityEngine.CoreModule
+    - Name: 
+      Entry: 12
+      Data: 5
+    - Name: 
+      Entry: 10
+      Data: 49
+    - Name: 
+      Entry: 10
+      Data: 50
+    - Name: 
+      Entry: 10
+      Data: 51
+    - Name: 
+      Entry: 10
+      Data: 52
+    - Name: 
+      Entry: 10
+      Data: 53
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: Seed Packets/SEED_Tomato
+    - Name: $v
+      Entry: 7
+      Data: 17|UnityEngine.Sprite[], UnityEngine.CoreModule
+    - Name: 
+      Entry: 12
+      Data: 3
+    - Name: 
+      Entry: 10
+      Data: 54
+    - Name: 
+      Entry: 10
+      Data: 55
+    - Name: 
+      Entry: 10
+      Data: 56
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: Seed Packets/SEED_Tulip
+    - Name: $v
+      Entry: 7
+      Data: 18|UnityEngine.Sprite[], UnityEngine.CoreModule
+    - Name: 
+      Entry: 12
+      Data: 5
+    - Name: 
+      Entry: 10
+      Data: 57
+    - Name: 
+      Entry: 10
+      Data: 58
+    - Name: 
+      Entry: 10
+      Data: 59
+    - Name: 
+      Entry: 10
+      Data: 60
+    - Name: 
+      Entry: 10
+      Data: 61
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: Seed Packets/SEED_Plum
+    - Name: $v
+      Entry: 7
+      Data: 19|UnityEngine.Sprite[], UnityEngine.CoreModule
+    - Name: 
+      Entry: 12
+      Data: 3
+    - Name: 
+      Entry: 10
+      Data: 62
+    - Name: 
+      Entry: 10
+      Data: 63
+    - Name: 
+      Entry: 10
+      Data: 64
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 13
       Data: 

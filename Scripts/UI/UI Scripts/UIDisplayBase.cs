@@ -101,6 +101,7 @@ namespace GrandmaGreen.UI
 
             UIDisplayTracker.ProcessOpenDisplayRule(panelTags);
             onPanelOpened?.Invoke();
+            UIOpenLogic();
         }
 
         public virtual void UIOpenLogic()
@@ -119,6 +120,7 @@ namespace GrandmaGreen.UI
 
             UIDisplayTracker.ProcessCloseDisplayRule(panelTags);
             onPanelClosed?.Invoke();
+            UICloseLogic();
         }
 
         public virtual void UICloseLogic()

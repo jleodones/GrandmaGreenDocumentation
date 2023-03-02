@@ -9,22 +9,27 @@ namespace GrandmaGreen.Shopkeeping
     public class ShoppingManager : ScriptableObject
     {
         public List<ShopItem> currGardenList;
-
-        public GardeningShopUIController m_controller;
-
+        public List<ShopItem> currDecorList;
+        
+        public GardeningShopUIController gardenController;
+        public DecorShopUIController decorController;
+        
         [SerializeField]
         public Timer shopTimer;
 
         public void StartShop()
         {
-            if (m_controller == null)
+            if (gardenController == null)
             {
-                m_controller = new GardeningShopUIController();
+                gardenController = new GardeningShopUIController();
+                decorController = new DecorShopUIController();
             }
-            currGardenList = m_controller.GardenList;
-            shopTimer.Resume(true);
-            shopTimer.onTick += m_controller.UpdateCycle;
+            currGardenList = gardenController.GardenList;
+            currDecorList = decorController.GetDecorList();
             
+            shopTimer.Resume(true);
+            shopTimer.onTick += gardenController.UpdateCycle;
+            // shopTimer.onTick += decorController.UpdateCycle;
         }
 
         public double GetTimeLeft()

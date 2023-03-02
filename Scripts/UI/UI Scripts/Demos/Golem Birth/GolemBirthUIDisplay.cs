@@ -88,6 +88,7 @@ namespace GrandmaGreen.UI.Golems
         private void BounceGolem(TransitionEndEvent evt)
         {
             golem.ToggleInClassList("bounceGolem");
+            
         }
 
         private void LargeText(TransitionEndEvent evt)

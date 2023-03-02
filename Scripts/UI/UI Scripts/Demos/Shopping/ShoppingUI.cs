@@ -11,10 +11,20 @@ using Sirenix.OdinInspector;
 
 namespace GrandmaGreen.UI.Shopping
 {
+
     using Timer = TimeLayer.TimeLayer;
+    
+    public enum ShopType
+    {
+        Garden = 1,
+        Decor = 2
+    }
+    
     public class ShoppingUI : UIDisplayBase
     {
-
+        [SerializeField]
+        public ShopType shopType;
+        
         public List<ShopItem> availableItems;
 
         private GardeningShopUIController m_controller;
@@ -41,7 +51,14 @@ namespace GrandmaGreen.UI.Shopping
             // Controller set up.
             //m_controller = new GardeningShopUIController();
             //shopTimer.onTick += m_controller.UpdateCycle;
-            availableItems = shop.currGardenList;
+            if (shopType == ShopType.Garden)
+            {
+                availableItems = shop.currGardenList;
+            }
+            else
+            {
+                availableItems = shop.currDecorList;
+            }
             //shopTimer.Resume(true);
         }
 
@@ -56,8 +73,6 @@ namespace GrandmaGreen.UI.Shopping
             // Setting money.
             m_rootVisualElement.Q<Label>("GoldAmount").text =
                 EventManager.instance.HandleEVENT_INVENTORY_GET_MONEY().ToString();
-
-            
 
             // Set up the popup window.
             RegisterPopupWindow();
@@ -87,7 +102,12 @@ namespace GrandmaGreen.UI.Shopping
                 VisualElement ve = m_rootVisualElement.Q<VisualElement>("content-" + i.ToString());
                 var controller = new ShoppingItemController(ve, ve.Q<Button>("IconButton"), OnShoppingItemClicked);
                 controller.SetData(availableItems[i - 1]);
-                controller.SetSizeBadge();
+
+                if (shopType == ShopType.Garden)
+                {
+                    controller.SetSizeBadge();
+                }
+                
                 ve.userData = controller;
             }
         }
@@ -141,18 +161,29 @@ namespace GrandmaGreen.UI.Shopping
             m_rootVisualElement.Q<Button>("BuyButton").clicked += () =>
             {
                 int currentMoney = EventManager.instance.HandleEVENT_INVENTORY_GET_MONEY();
-                Seed s = (Seed)m_currentItem.myItem;
 
                 if (currentMoney < m_currentAmount * m_currentItem.baseCost)
                 {
                     return;
                 }
 
-                for (int i = 0; i < m_currentAmount; i++)
+                if (shopType == ShopType.Garden)
                 {
-                    EventManager.instance.HandleEVENT_INVENTORY_ADD_SEED(s.itemID, s.seedGenotype);
+                    Seed s = (Seed)m_currentItem.myItem;
+                    for (int i = 0; i < m_currentAmount; i++)
+                    {
+                        EventManager.instance.HandleEVENT_INVENTORY_ADD_SEED(s.itemID, s.seedGenotype);
+                    }
                 }
-
+                else
+                {
+                    Decor d = (Decor) m_currentItem.myItem;
+                    for (int i = 0; i < m_currentAmount; i++)
+                    {
+                        EventManager.instance.HandleEVENT_INVENTORY_ADD_DECOR(d.itemID);
+                    }
+                }
+                
                 EventManager.instance.HandleEVENT_INVENTORY_REMOVE_MONEY(m_currentAmount * m_currentItem.baseCost);
 
                 m_rootVisualElement.Q<Label>("GoldAmount").text =

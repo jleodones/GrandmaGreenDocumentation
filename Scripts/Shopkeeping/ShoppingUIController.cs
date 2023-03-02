@@ -344,7 +344,7 @@ namespace GrandmaGreen.Shopkeeping
                     Random rnd = new Random();
                     int ind = rnd.Next(AllDecorList.Count);
                     Decor currDecor = AllDecorList[ind];
-                    if (!tempDecorList.Contains(currDecor) && CollectionsSO.LoadedInstance.ItemLookup[currDecor.itemID].decorType != "Fixture") //make sure item is not already in our list
+                    if (!tempDecorList.Contains(currDecor) && (currDecor.itemID is < 4088 or > 4123)) //make sure item is not already in our list and isn't a fixture.
                     {
                         //make sure decor type does not already exist in our list
                         bool typeAlreadyExists = false;
@@ -354,6 +354,11 @@ namespace GrandmaGreen.Shopkeeping
                             {
                                 typeAlreadyExists = true;
                             }
+                        }
+                        Sprite s = CollectionsSO.LoadedInstance.GetSprite(currDecor.itemID);
+                        if (s == null)
+                        {
+                            continue;
                         }
                         if (!typeAlreadyExists)
                         {
@@ -378,7 +383,8 @@ namespace GrandmaGreen.Shopkeeping
                     Random rnd = new Random();
                     int ind = rnd.Next(AllFixturesList.Count);
                     Decor currFixture = AllFixturesList[ind];
-                    if (!tempDecorList.Contains(currFixture)) //make sure item is not already in our list
+                    Sprite s = CollectionsSO.LoadedInstance.GetSprite(currFixture.itemID);
+                    if (!tempDecorList.Contains(currFixture) && s != null) //make sure item is not already in our list
                     {
                         tempDecorList.Add(currFixture);
                         AllFixturesList.RemoveAt(ind);

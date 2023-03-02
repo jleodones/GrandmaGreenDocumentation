@@ -41,7 +41,7 @@ namespace GrandmaGreen.UI
 
         public static void AddPanel(UIDisplayBase uiDisplay)
         {
-            if (uiDisplay.panelTags == 0)
+            if (uiDisplay.panelTags == 0 || uiDisplay.panelTags == UITag.None)
                 return;
             
             trackedUIDisplays.TryAdd(uiDisplay.panelTags, new List<UIDisplayBase>());
@@ -53,7 +53,7 @@ namespace GrandmaGreen.UI
 
         public static void RemovePanel(UIDisplayBase uiDisplay)
         {
-            if (trackedUIDisplays != null)
+            if (trackedUIDisplays != null && uiDisplay.panelTags != UITag.None)
             {
                 trackedUIDisplays[uiDisplay.panelTags].Remove(uiDisplay);
                 trackedUIDisplays[UITag.ALL].Remove(uiDisplay);
