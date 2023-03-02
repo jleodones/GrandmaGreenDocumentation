@@ -1879,12 +1879,12 @@ references:
   commentId: T:GrandmaGreen.Collections.DecorationId
   fullName: GrandmaGreen.Collections.DecorationId
   nameWithType: DecorationId
-- uid: GrandmaGreen.Collections.DecorationId.AcornExterior
-  name: AcornExterior
-  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_AcornExterior
-  commentId: F:GrandmaGreen.Collections.DecorationId.AcornExterior
-  fullName: GrandmaGreen.Collections.DecorationId.AcornExterior
-  nameWithType: DecorationId.AcornExterior
+- uid: GrandmaGreen.Collections.DecorationId.Acorn
+  name: Acorn
+  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_Acorn
+  commentId: F:GrandmaGreen.Collections.DecorationId.Acorn
+  fullName: GrandmaGreen.Collections.DecorationId.Acorn
+  nameWithType: DecorationId.Acorn
 - uid: GrandmaGreen.Collections.DecorationId.AppleGolemMemento
   name: AppleGolemMemento
   href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_AppleGolemMemento
@@ -1909,24 +1909,30 @@ references:
   commentId: F:GrandmaGreen.Collections.DecorationId.ArtNouveauSculture03
   fullName: GrandmaGreen.Collections.DecorationId.ArtNouveauSculture03
   nameWithType: DecorationId.ArtNouveauSculture03
-- uid: GrandmaGreen.Collections.DecorationId.Bicycle
-  name: Bicycle
-  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_Bicycle
-  commentId: F:GrandmaGreen.Collections.DecorationId.Bicycle
-  fullName: GrandmaGreen.Collections.DecorationId.Bicycle
-  nameWithType: DecorationId.Bicycle
+- uid: GrandmaGreen.Collections.DecorationId.BikeBlack
+  name: BikeBlack
+  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_BikeBlack
+  commentId: F:GrandmaGreen.Collections.DecorationId.BikeBlack
+  fullName: GrandmaGreen.Collections.DecorationId.BikeBlack
+  nameWithType: DecorationId.BikeBlack
+- uid: GrandmaGreen.Collections.DecorationId.BikeBlue
+  name: BikeBlue
+  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_BikeBlue
+  commentId: F:GrandmaGreen.Collections.DecorationId.BikeBlue
+  fullName: GrandmaGreen.Collections.DecorationId.BikeBlue
+  nameWithType: DecorationId.BikeBlue
 - uid: GrandmaGreen.Collections.DecorationId.BirdBath
   name: BirdBath
   href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_BirdBath
   commentId: F:GrandmaGreen.Collections.DecorationId.BirdBath
   fullName: GrandmaGreen.Collections.DecorationId.BirdBath
   nameWithType: DecorationId.BirdBath
-- uid: GrandmaGreen.Collections.DecorationId.BoxwoodBush
-  name: BoxwoodBush
-  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_BoxwoodBush
-  commentId: F:GrandmaGreen.Collections.DecorationId.BoxwoodBush
-  fullName: GrandmaGreen.Collections.DecorationId.BoxwoodBush
-  nameWithType: DecorationId.BoxwoodBush
+- uid: GrandmaGreen.Collections.DecorationId.Boxwood
+  name: Boxwood
+  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_Boxwood
+  commentId: F:GrandmaGreen.Collections.DecorationId.Boxwood
+  fullName: GrandmaGreen.Collections.DecorationId.Boxwood
+  nameWithType: DecorationId.Boxwood
 - uid: GrandmaGreen.Collections.DecorationId.CampingLantern
   name: CampingLantern
   href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_CampingLantern
@@ -1945,12 +1951,12 @@ references:
   commentId: F:GrandmaGreen.Collections.DecorationId.Clover
   fullName: GrandmaGreen.Collections.DecorationId.Clover
   nameWithType: DecorationId.Clover
-- uid: GrandmaGreen.Collections.DecorationId.CobblestonePath
-  name: CobblestonePath
-  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_CobblestonePath
-  commentId: F:GrandmaGreen.Collections.DecorationId.CobblestonePath
-  fullName: GrandmaGreen.Collections.DecorationId.CobblestonePath
-  nameWithType: DecorationId.CobblestonePath
+- uid: GrandmaGreen.Collections.DecorationId.Cobblestone
+  name: Cobblestone
+  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_Cobblestone
+  commentId: F:GrandmaGreen.Collections.DecorationId.Cobblestone
+  fullName: GrandmaGreen.Collections.DecorationId.Cobblestone
+  nameWithType: DecorationId.Cobblestone
 - uid: GrandmaGreen.Collections.DecorationId.CommonPoppy
   name: CommonPoppy
   href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_CommonPoppy
@@ -1969,72 +1975,72 @@ references:
   commentId: F:GrandmaGreen.Collections.DecorationId.CrocusGolemMemento
   fullName: GrandmaGreen.Collections.DecorationId.CrocusGolemMemento
   nameWithType: DecorationId.CrocusGolemMemento
+- uid: GrandmaGreen.Collections.DecorationId.DaisyTable
+  name: DaisyTable
+  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_DaisyTable
+  commentId: F:GrandmaGreen.Collections.DecorationId.DaisyTable
+  fullName: GrandmaGreen.Collections.DecorationId.DaisyTable
+  nameWithType: DecorationId.DaisyTable
 - uid: GrandmaGreen.Collections.DecorationId.Dandelion
   name: Dandelion
   href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_Dandelion
   commentId: F:GrandmaGreen.Collections.DecorationId.Dandelion
   fullName: GrandmaGreen.Collections.DecorationId.Dandelion
   nameWithType: DecorationId.Dandelion
-- uid: GrandmaGreen.Collections.DecorationId.DirtPath
-  name: DirtPath
-  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_DirtPath
-  commentId: F:GrandmaGreen.Collections.DecorationId.DirtPath
-  fullName: GrandmaGreen.Collections.DecorationId.DirtPath
-  nameWithType: DecorationId.DirtPath
-- uid: GrandmaGreen.Collections.DecorationId.EuropeanCastleExterior
-  name: EuropeanCastleExterior
-  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_EuropeanCastleExterior
-  commentId: F:GrandmaGreen.Collections.DecorationId.EuropeanCastleExterior
-  fullName: GrandmaGreen.Collections.DecorationId.EuropeanCastleExterior
-  nameWithType: DecorationId.EuropeanCastleExterior
-- uid: GrandmaGreen.Collections.DecorationId.FairyMagicExterior
-  name: FairyMagicExterior
-  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_FairyMagicExterior
-  commentId: F:GrandmaGreen.Collections.DecorationId.FairyMagicExterior
-  fullName: GrandmaGreen.Collections.DecorationId.FairyMagicExterior
-  nameWithType: DecorationId.FairyMagicExterior
+- uid: GrandmaGreen.Collections.DecorationId.Dirt
+  name: Dirt
+  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_Dirt
+  commentId: F:GrandmaGreen.Collections.DecorationId.Dirt
+  fullName: GrandmaGreen.Collections.DecorationId.Dirt
+  nameWithType: DecorationId.Dirt
+- uid: GrandmaGreen.Collections.DecorationId.EuropearnCastle
+  name: EuropearnCastle
+  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_EuropearnCastle
+  commentId: F:GrandmaGreen.Collections.DecorationId.EuropearnCastle
+  fullName: GrandmaGreen.Collections.DecorationId.EuropearnCastle
+  nameWithType: DecorationId.EuropearnCastle
+- uid: GrandmaGreen.Collections.DecorationId.FairyMagic
+  name: FairyMagic
+  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_FairyMagic
+  commentId: F:GrandmaGreen.Collections.DecorationId.FairyMagic
+  fullName: GrandmaGreen.Collections.DecorationId.FairyMagic
+  nameWithType: DecorationId.FairyMagic
 - uid: GrandmaGreen.Collections.DecorationId.FancyFountain
   name: FancyFountain
   href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_FancyFountain
   commentId: F:GrandmaGreen.Collections.DecorationId.FancyFountain
   fullName: GrandmaGreen.Collections.DecorationId.FancyFountain
   nameWithType: DecorationId.FancyFountain
-- uid: GrandmaGreen.Collections.DecorationId.FancyIronFence
-  name: FancyIronFence
-  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_FancyIronFence
-  commentId: F:GrandmaGreen.Collections.DecorationId.FancyIronFence
-  fullName: GrandmaGreen.Collections.DecorationId.FancyIronFence
-  nameWithType: DecorationId.FancyIronFence
+- uid: GrandmaGreen.Collections.DecorationId.FancyIron
+  name: FancyIron
+  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_FancyIron
+  commentId: F:GrandmaGreen.Collections.DecorationId.FancyIron
+  fullName: GrandmaGreen.Collections.DecorationId.FancyIron
+  nameWithType: DecorationId.FancyIron
 - uid: GrandmaGreen.Collections.DecorationId.FancyPond
   name: FancyPond
   href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_FancyPond
   commentId: F:GrandmaGreen.Collections.DecorationId.FancyPond
   fullName: GrandmaGreen.Collections.DecorationId.FancyPond
   nameWithType: DecorationId.FancyPond
-- uid: GrandmaGreen.Collections.DecorationId.FarmFence
-  name: FarmFence
-  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_FarmFence
-  commentId: F:GrandmaGreen.Collections.DecorationId.FarmFence
-  fullName: GrandmaGreen.Collections.DecorationId.FarmFence
-  nameWithType: DecorationId.FarmFence
-- uid: GrandmaGreen.Collections.DecorationId.FieldstoneFence
-  name: FieldstoneFence
-  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_FieldstoneFence
-  commentId: F:GrandmaGreen.Collections.DecorationId.FieldstoneFence
-  fullName: GrandmaGreen.Collections.DecorationId.FieldstoneFence
-  nameWithType: DecorationId.FieldstoneFence
+- uid: GrandmaGreen.Collections.DecorationId.Farm
+  name: Farm
+  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_Farm
+  commentId: F:GrandmaGreen.Collections.DecorationId.Farm
+  fullName: GrandmaGreen.Collections.DecorationId.Farm
+  nameWithType: DecorationId.Farm
+- uid: GrandmaGreen.Collections.DecorationId.Fieldstone
+  name: Fieldstone
+  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_Fieldstone
+  commentId: F:GrandmaGreen.Collections.DecorationId.Fieldstone
+  fullName: GrandmaGreen.Collections.DecorationId.Fieldstone
+  nameWithType: DecorationId.Fieldstone
 - uid: GrandmaGreen.Collections.DecorationId.Flamingo
   name: Flamingo
   href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_Flamingo
   commentId: F:GrandmaGreen.Collections.DecorationId.Flamingo
   fullName: GrandmaGreen.Collections.DecorationId.Flamingo
   nameWithType: DecorationId.Flamingo
-- uid: GrandmaGreen.Collections.DecorationId.FlowerTable
-  name: FlowerTable
-  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_FlowerTable
-  commentId: F:GrandmaGreen.Collections.DecorationId.FlowerTable
-  fullName: GrandmaGreen.Collections.DecorationId.FlowerTable
-  nameWithType: DecorationId.FlowerTable
 - uid: GrandmaGreen.Collections.DecorationId.FlowerWagon
   name: FlowerWagon
   href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_FlowerWagon
@@ -2047,18 +2053,24 @@ references:
   commentId: F:GrandmaGreen.Collections.DecorationId.ForgetMeNot
   fullName: GrandmaGreen.Collections.DecorationId.ForgetMeNot
   nameWithType: DecorationId.ForgetMeNot
+- uid: GrandmaGreen.Collections.DecorationId.FoxSculpture
+  name: FoxSculpture
+  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_FoxSculpture
+  commentId: F:GrandmaGreen.Collections.DecorationId.FoxSculpture
+  fullName: GrandmaGreen.Collections.DecorationId.FoxSculpture
+  nameWithType: DecorationId.FoxSculpture
 - uid: GrandmaGreen.Collections.DecorationId.FrenchCountryUrn
   name: FrenchCountryUrn
   href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_FrenchCountryUrn
   commentId: F:GrandmaGreen.Collections.DecorationId.FrenchCountryUrn
   fullName: GrandmaGreen.Collections.DecorationId.FrenchCountryUrn
   nameWithType: DecorationId.FrenchCountryUrn
-- uid: GrandmaGreen.Collections.DecorationId.FrenchProvincialExterior
-  name: FrenchProvincialExterior
-  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_FrenchProvincialExterior
-  commentId: F:GrandmaGreen.Collections.DecorationId.FrenchProvincialExterior
-  fullName: GrandmaGreen.Collections.DecorationId.FrenchProvincialExterior
-  nameWithType: DecorationId.FrenchProvincialExterior
+- uid: GrandmaGreen.Collections.DecorationId.FrenchProvincial
+  name: FrenchProvincial
+  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_FrenchProvincial
+  commentId: F:GrandmaGreen.Collections.DecorationId.FrenchProvincial
+  fullName: GrandmaGreen.Collections.DecorationId.FrenchProvincial
+  nameWithType: DecorationId.FrenchProvincial
 - uid: GrandmaGreen.Collections.DecorationId.FrogSculpture
   name: FrogSculpture
   href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_FrogSculpture
@@ -2083,84 +2095,210 @@ references:
   commentId: F:GrandmaGreen.Collections.DecorationId.GardenGnomeSexy
   fullName: GrandmaGreen.Collections.DecorationId.GardenGnomeSexy
   nameWithType: DecorationId.GardenGnomeSexy
-- uid: GrandmaGreen.Collections.DecorationId.GardeniaBush
-  name: GardeniaBush
-  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_GardeniaBush
-  commentId: F:GrandmaGreen.Collections.DecorationId.GardeniaBush
-  fullName: GrandmaGreen.Collections.DecorationId.GardeniaBush
-  nameWithType: DecorationId.GardeniaBush
+- uid: GrandmaGreen.Collections.DecorationId.Gardenia
+  name: Gardenia
+  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_Gardenia
+  commentId: F:GrandmaGreen.Collections.DecorationId.Gardenia
+  fullName: GrandmaGreen.Collections.DecorationId.Gardenia
+  nameWithType: DecorationId.Gardenia
+- uid: GrandmaGreen.Collections.DecorationId.GateofFancyIron
+  name: GateofFancyIron
+  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_GateofFancyIron
+  commentId: F:GrandmaGreen.Collections.DecorationId.GateofFancyIron
+  fullName: GrandmaGreen.Collections.DecorationId.GateofFancyIron
+  nameWithType: DecorationId.GateofFancyIron
+- uid: GrandmaGreen.Collections.DecorationId.GateofFarm
+  name: GateofFarm
+  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_GateofFarm
+  commentId: F:GrandmaGreen.Collections.DecorationId.GateofFarm
+  fullName: GrandmaGreen.Collections.DecorationId.GateofFarm
+  nameWithType: DecorationId.GateofFarm
+- uid: GrandmaGreen.Collections.DecorationId.GateofFieldstone
+  name: GateofFieldstone
+  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_GateofFieldstone
+  commentId: F:GrandmaGreen.Collections.DecorationId.GateofFieldstone
+  fullName: GrandmaGreen.Collections.DecorationId.GateofFieldstone
+  nameWithType: DecorationId.GateofFieldstone
+- uid: GrandmaGreen.Collections.DecorationId.GateofLattice
+  name: GateofLattice
+  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_GateofLattice
+  commentId: F:GrandmaGreen.Collections.DecorationId.GateofLattice
+  fullName: GrandmaGreen.Collections.DecorationId.GateofLattice
+  nameWithType: DecorationId.GateofLattice
+- uid: GrandmaGreen.Collections.DecorationId.GateofSimpleWood
+  name: GateofSimpleWood
+  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_GateofSimpleWood
+  commentId: F:GrandmaGreen.Collections.DecorationId.GateofSimpleWood
+  fullName: GrandmaGreen.Collections.DecorationId.GateofSimpleWood
+  nameWithType: DecorationId.GateofSimpleWood
+- uid: GrandmaGreen.Collections.DecorationId.GateofTreeWood
+  name: GateofTreeWood
+  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_GateofTreeWood
+  commentId: F:GrandmaGreen.Collections.DecorationId.GateofTreeWood
+  fullName: GrandmaGreen.Collections.DecorationId.GateofTreeWood
+  nameWithType: DecorationId.GateofTreeWood
+- uid: GrandmaGreen.Collections.DecorationId.GateofWhiteFancyIron
+  name: GateofWhiteFancyIron
+  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_GateofWhiteFancyIron
+  commentId: F:GrandmaGreen.Collections.DecorationId.GateofWhiteFancyIron
+  fullName: GrandmaGreen.Collections.DecorationId.GateofWhiteFancyIron
+  nameWithType: DecorationId.GateofWhiteFancyIron
 - uid: GrandmaGreen.Collections.DecorationId.GrecianRuin
   name: GrecianRuin
   href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_GrecianRuin
   commentId: F:GrandmaGreen.Collections.DecorationId.GrecianRuin
   fullName: GrandmaGreen.Collections.DecorationId.GrecianRuin
   nameWithType: DecorationId.GrecianRuin
-- uid: GrandmaGreen.Collections.DecorationId.HarvestBasket
-  name: HarvestBasket
-  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_HarvestBasket
-  commentId: F:GrandmaGreen.Collections.DecorationId.HarvestBasket
-  fullName: GrandmaGreen.Collections.DecorationId.HarvestBasket
-  nameWithType: DecorationId.HarvestBasket
+- uid: GrandmaGreen.Collections.DecorationId.GreenLeafpile
+  name: GreenLeafpile
+  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_GreenLeafpile
+  commentId: F:GrandmaGreen.Collections.DecorationId.GreenLeafpile
+  fullName: GrandmaGreen.Collections.DecorationId.GreenLeafpile
+  nameWithType: DecorationId.GreenLeafpile
+- uid: GrandmaGreen.Collections.DecorationId.HarvestBasketblue
+  name: HarvestBasketblue
+  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_HarvestBasketblue
+  commentId: F:GrandmaGreen.Collections.DecorationId.HarvestBasketblue
+  fullName: GrandmaGreen.Collections.DecorationId.HarvestBasketblue
+  nameWithType: DecorationId.HarvestBasketblue
+- uid: GrandmaGreen.Collections.DecorationId.HarvestBasketgreen
+  name: HarvestBasketgreen
+  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_HarvestBasketgreen
+  commentId: F:GrandmaGreen.Collections.DecorationId.HarvestBasketgreen
+  fullName: GrandmaGreen.Collections.DecorationId.HarvestBasketgreen
+  nameWithType: DecorationId.HarvestBasketgreen
+- uid: GrandmaGreen.Collections.DecorationId.HarvestBasketpink
+  name: HarvestBasketpink
+  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_HarvestBasketpink
+  commentId: F:GrandmaGreen.Collections.DecorationId.HarvestBasketpink
+  fullName: GrandmaGreen.Collections.DecorationId.HarvestBasketpink
+  nameWithType: DecorationId.HarvestBasketpink
+- uid: GrandmaGreen.Collections.DecorationId.HarvestBasketwhite
+  name: HarvestBasketwhite
+  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_HarvestBasketwhite
+  commentId: F:GrandmaGreen.Collections.DecorationId.HarvestBasketwhite
+  fullName: GrandmaGreen.Collections.DecorationId.HarvestBasketwhite
+  nameWithType: DecorationId.HarvestBasketwhite
 - uid: GrandmaGreen.Collections.DecorationId.Hemlock
   name: Hemlock
   href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_Hemlock
   commentId: F:GrandmaGreen.Collections.DecorationId.Hemlock
   fullName: GrandmaGreen.Collections.DecorationId.Hemlock
   nameWithType: DecorationId.Hemlock
-- uid: GrandmaGreen.Collections.DecorationId.HistoricalEnglishExterior
-  name: HistoricalEnglishExterior
-  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_HistoricalEnglishExterior
-  commentId: F:GrandmaGreen.Collections.DecorationId.HistoricalEnglishExterior
-  fullName: GrandmaGreen.Collections.DecorationId.HistoricalEnglishExterior
-  nameWithType: DecorationId.HistoricalEnglishExterior
-- uid: GrandmaGreen.Collections.DecorationId.HydrangeaBush
-  name: HydrangeaBush
-  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_HydrangeaBush
-  commentId: F:GrandmaGreen.Collections.DecorationId.HydrangeaBush
-  fullName: GrandmaGreen.Collections.DecorationId.HydrangeaBush
-  nameWithType: DecorationId.HydrangeaBush
-- uid: GrandmaGreen.Collections.DecorationId.IronBench
-  name: IronBench
-  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_IronBench
-  commentId: F:GrandmaGreen.Collections.DecorationId.IronBench
-  fullName: GrandmaGreen.Collections.DecorationId.IronBench
-  nameWithType: DecorationId.IronBench
-- uid: GrandmaGreen.Collections.DecorationId.IronChair
-  name: IronChair
-  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_IronChair
-  commentId: F:GrandmaGreen.Collections.DecorationId.IronChair
-  fullName: GrandmaGreen.Collections.DecorationId.IronChair
-  nameWithType: DecorationId.IronChair
-- uid: GrandmaGreen.Collections.DecorationId.IronLampPost
-  name: IronLampPost
-  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_IronLampPost
-  commentId: F:GrandmaGreen.Collections.DecorationId.IronLampPost
-  fullName: GrandmaGreen.Collections.DecorationId.IronLampPost
-  nameWithType: DecorationId.IronLampPost
-- uid: GrandmaGreen.Collections.DecorationId.IronTable
-  name: IronTable
-  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_IronTable
-  commentId: F:GrandmaGreen.Collections.DecorationId.IronTable
-  fullName: GrandmaGreen.Collections.DecorationId.IronTable
-  nameWithType: DecorationId.IronTable
-- uid: GrandmaGreen.Collections.DecorationId.IvyCoveredBrickFence
-  name: IvyCoveredBrickFence
-  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_IvyCoveredBrickFence
-  commentId: F:GrandmaGreen.Collections.DecorationId.IvyCoveredBrickFence
-  fullName: GrandmaGreen.Collections.DecorationId.IvyCoveredBrickFence
-  nameWithType: DecorationId.IvyCoveredBrickFence
-- uid: GrandmaGreen.Collections.DecorationId.JackOLantern
-  name: JackOLantern
-  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_JackOLantern
-  commentId: F:GrandmaGreen.Collections.DecorationId.JackOLantern
-  fullName: GrandmaGreen.Collections.DecorationId.JackOLantern
-  nameWithType: DecorationId.JackOLantern
-- uid: GrandmaGreen.Collections.DecorationId.JapaneseGardenLantern
-  name: JapaneseGardenLantern
-  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_JapaneseGardenLantern
-  commentId: F:GrandmaGreen.Collections.DecorationId.JapaneseGardenLantern
-  fullName: GrandmaGreen.Collections.DecorationId.JapaneseGardenLantern
-  nameWithType: DecorationId.JapaneseGardenLantern
+- uid: GrandmaGreen.Collections.DecorationId.HistoricalEnglish
+  name: HistoricalEnglish
+  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_HistoricalEnglish
+  commentId: F:GrandmaGreen.Collections.DecorationId.HistoricalEnglish
+  fullName: GrandmaGreen.Collections.DecorationId.HistoricalEnglish
+  nameWithType: DecorationId.HistoricalEnglish
+- uid: GrandmaGreen.Collections.DecorationId.Hydrangea
+  name: Hydrangea
+  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_Hydrangea
+  commentId: F:GrandmaGreen.Collections.DecorationId.Hydrangea
+  fullName: GrandmaGreen.Collections.DecorationId.Hydrangea
+  nameWithType: DecorationId.Hydrangea
+- uid: GrandmaGreen.Collections.DecorationId.IronBenchCushion
+  name: IronBenchCushion
+  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_IronBenchCushion
+  commentId: F:GrandmaGreen.Collections.DecorationId.IronBenchCushion
+  fullName: GrandmaGreen.Collections.DecorationId.IronBenchCushion
+  nameWithType: DecorationId.IronBenchCushion
+- uid: GrandmaGreen.Collections.DecorationId.IronChairCushion
+  name: IronChairCushion
+  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_IronChairCushion
+  commentId: F:GrandmaGreen.Collections.DecorationId.IronChairCushion
+  fullName: GrandmaGreen.Collections.DecorationId.IronChairCushion
+  nameWithType: DecorationId.IronChairCushion
+- uid: GrandmaGreen.Collections.DecorationId.IronChairOval
+  name: IronChairOval
+  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_IronChairOval
+  commentId: F:GrandmaGreen.Collections.DecorationId.IronChairOval
+  fullName: GrandmaGreen.Collections.DecorationId.IronChairOval
+  nameWithType: DecorationId.IronChairOval
+- uid: GrandmaGreen.Collections.DecorationId.IronHatch
+  name: IronHatch
+  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_IronHatch
+  commentId: F:GrandmaGreen.Collections.DecorationId.IronHatch
+  fullName: GrandmaGreen.Collections.DecorationId.IronHatch
+  nameWithType: DecorationId.IronHatch
+- uid: GrandmaGreen.Collections.DecorationId.IronLampPost01
+  name: IronLampPost01
+  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_IronLampPost01
+  commentId: F:GrandmaGreen.Collections.DecorationId.IronLampPost01
+  fullName: GrandmaGreen.Collections.DecorationId.IronLampPost01
+  nameWithType: DecorationId.IronLampPost01
+- uid: GrandmaGreen.Collections.DecorationId.IronLampPost02
+  name: IronLampPost02
+  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_IronLampPost02
+  commentId: F:GrandmaGreen.Collections.DecorationId.IronLampPost02
+  fullName: GrandmaGreen.Collections.DecorationId.IronLampPost02
+  nameWithType: DecorationId.IronLampPost02
+- uid: GrandmaGreen.Collections.DecorationId.IronOneLegBlackTable
+  name: IronOneLegBlackTable
+  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_IronOneLegBlackTable
+  commentId: F:GrandmaGreen.Collections.DecorationId.IronOneLegBlackTable
+  fullName: GrandmaGreen.Collections.DecorationId.IronOneLegBlackTable
+  nameWithType: DecorationId.IronOneLegBlackTable
+- uid: GrandmaGreen.Collections.DecorationId.IronOneLegGreenTable
+  name: IronOneLegGreenTable
+  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_IronOneLegGreenTable
+  commentId: F:GrandmaGreen.Collections.DecorationId.IronOneLegGreenTable
+  fullName: GrandmaGreen.Collections.DecorationId.IronOneLegGreenTable
+  nameWithType: DecorationId.IronOneLegGreenTable
+- uid: GrandmaGreen.Collections.DecorationId.IronOneLegWhiteTable
+  name: IronOneLegWhiteTable
+  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_IronOneLegWhiteTable
+  commentId: F:GrandmaGreen.Collections.DecorationId.IronOneLegWhiteTable
+  fullName: GrandmaGreen.Collections.DecorationId.IronOneLegWhiteTable
+  nameWithType: DecorationId.IronOneLegWhiteTable
+- uid: GrandmaGreen.Collections.DecorationId.IronThreeLegBlackTable
+  name: IronThreeLegBlackTable
+  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_IronThreeLegBlackTable
+  commentId: F:GrandmaGreen.Collections.DecorationId.IronThreeLegBlackTable
+  fullName: GrandmaGreen.Collections.DecorationId.IronThreeLegBlackTable
+  nameWithType: DecorationId.IronThreeLegBlackTable
+- uid: GrandmaGreen.Collections.DecorationId.IronThreeLegGreenTable
+  name: IronThreeLegGreenTable
+  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_IronThreeLegGreenTable
+  commentId: F:GrandmaGreen.Collections.DecorationId.IronThreeLegGreenTable
+  fullName: GrandmaGreen.Collections.DecorationId.IronThreeLegGreenTable
+  nameWithType: DecorationId.IronThreeLegGreenTable
+- uid: GrandmaGreen.Collections.DecorationId.IronThreeLegWhiteTable
+  name: IronThreeLegWhiteTable
+  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_IronThreeLegWhiteTable
+  commentId: F:GrandmaGreen.Collections.DecorationId.IronThreeLegWhiteTable
+  fullName: GrandmaGreen.Collections.DecorationId.IronThreeLegWhiteTable
+  nameWithType: DecorationId.IronThreeLegWhiteTable
+- uid: GrandmaGreen.Collections.DecorationId.IvyCoveredLattice
+  name: IvyCoveredLattice
+  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_IvyCoveredLattice
+  commentId: F:GrandmaGreen.Collections.DecorationId.IvyCoveredLattice
+  fullName: GrandmaGreen.Collections.DecorationId.IvyCoveredLattice
+  nameWithType: DecorationId.IvyCoveredLattice
+- uid: GrandmaGreen.Collections.DecorationId.JackOLantern01
+  name: JackOLantern01
+  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_JackOLantern01
+  commentId: F:GrandmaGreen.Collections.DecorationId.JackOLantern01
+  fullName: GrandmaGreen.Collections.DecorationId.JackOLantern01
+  nameWithType: DecorationId.JackOLantern01
+- uid: GrandmaGreen.Collections.DecorationId.JackOLantern02
+  name: JackOLantern02
+  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_JackOLantern02
+  commentId: F:GrandmaGreen.Collections.DecorationId.JackOLantern02
+  fullName: GrandmaGreen.Collections.DecorationId.JackOLantern02
+  nameWithType: DecorationId.JackOLantern02
+- uid: GrandmaGreen.Collections.DecorationId.JapaneseGardenLantern01
+  name: JapaneseGardenLantern01
+  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_JapaneseGardenLantern01
+  commentId: F:GrandmaGreen.Collections.DecorationId.JapaneseGardenLantern01
+  fullName: GrandmaGreen.Collections.DecorationId.JapaneseGardenLantern01
+  nameWithType: DecorationId.JapaneseGardenLantern01
+- uid: GrandmaGreen.Collections.DecorationId.JapaneseGardenLantern02
+  name: JapaneseGardenLantern02
+  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_JapaneseGardenLantern02
+  commentId: F:GrandmaGreen.Collections.DecorationId.JapaneseGardenLantern02
+  fullName: GrandmaGreen.Collections.DecorationId.JapaneseGardenLantern02
+  nameWithType: DecorationId.JapaneseGardenLantern02
 - uid: GrandmaGreen.Collections.DecorationId.JohnSingerSargentPainting
   name: JohnSingerSargentPainting
   href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_JohnSingerSargentPainting
@@ -2173,12 +2311,6 @@ references:
   commentId: F:GrandmaGreen.Collections.DecorationId.KoiPond
   fullName: GrandmaGreen.Collections.DecorationId.KoiPond
   nameWithType: DecorationId.KoiPond
-- uid: GrandmaGreen.Collections.DecorationId.Leafpile
-  name: Leafpile
-  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_Leafpile
-  commentId: F:GrandmaGreen.Collections.DecorationId.Leafpile
-  fullName: GrandmaGreen.Collections.DecorationId.Leafpile
-  nameWithType: DecorationId.Leafpile
 - uid: GrandmaGreen.Collections.DecorationId.MagicFountain
   name: MagicFountain
   href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_MagicFountain
@@ -2227,84 +2359,114 @@ references:
   commentId: F:GrandmaGreen.Collections.DecorationId.MailboxPastel
   fullName: GrandmaGreen.Collections.DecorationId.MailboxPastel
   nameWithType: DecorationId.MailboxPastel
-- uid: GrandmaGreen.Collections.DecorationId.MapleTree
-  name: MapleTree
-  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_MapleTree
-  commentId: F:GrandmaGreen.Collections.DecorationId.MapleTree
-  fullName: GrandmaGreen.Collections.DecorationId.MapleTree
-  nameWithType: DecorationId.MapleTree
-- uid: GrandmaGreen.Collections.DecorationId.ModernExterior
-  name: ModernExterior
-  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_ModernExterior
-  commentId: F:GrandmaGreen.Collections.DecorationId.ModernExterior
-  fullName: GrandmaGreen.Collections.DecorationId.ModernExterior
-  nameWithType: DecorationId.ModernExterior
-- uid: GrandmaGreen.Collections.DecorationId.MushroomLamp
-  name: MushroomLamp
-  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_MushroomLamp
-  commentId: F:GrandmaGreen.Collections.DecorationId.MushroomLamp
-  fullName: GrandmaGreen.Collections.DecorationId.MushroomLamp
-  nameWithType: DecorationId.MushroomLamp
-- uid: GrandmaGreen.Collections.DecorationId.MushroomStool
-  name: MushroomStool
-  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_MushroomStool
-  commentId: F:GrandmaGreen.Collections.DecorationId.MushroomStool
-  fullName: GrandmaGreen.Collections.DecorationId.MushroomStool
-  nameWithType: DecorationId.MushroomStool
+- uid: GrandmaGreen.Collections.DecorationId.Maple
+  name: Maple
+  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_Maple
+  commentId: F:GrandmaGreen.Collections.DecorationId.Maple
+  fullName: GrandmaGreen.Collections.DecorationId.Maple
+  nameWithType: DecorationId.Maple
+- uid: GrandmaGreen.Collections.DecorationId.Modern
+  name: Modern
+  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_Modern
+  commentId: F:GrandmaGreen.Collections.DecorationId.Modern
+  fullName: GrandmaGreen.Collections.DecorationId.Modern
+  nameWithType: DecorationId.Modern
+- uid: GrandmaGreen.Collections.DecorationId.MushroomChair
+  name: MushroomChair
+  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_MushroomChair
+  commentId: F:GrandmaGreen.Collections.DecorationId.MushroomChair
+  fullName: GrandmaGreen.Collections.DecorationId.MushroomChair
+  nameWithType: DecorationId.MushroomChair
+- uid: GrandmaGreen.Collections.DecorationId.MushroomLamp01
+  name: MushroomLamp01
+  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_MushroomLamp01
+  commentId: F:GrandmaGreen.Collections.DecorationId.MushroomLamp01
+  fullName: GrandmaGreen.Collections.DecorationId.MushroomLamp01
+  nameWithType: DecorationId.MushroomLamp01
+- uid: GrandmaGreen.Collections.DecorationId.MushroomLamp02
+  name: MushroomLamp02
+  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_MushroomLamp02
+  commentId: F:GrandmaGreen.Collections.DecorationId.MushroomLamp02
+  fullName: GrandmaGreen.Collections.DecorationId.MushroomLamp02
+  nameWithType: DecorationId.MushroomLamp02
+- uid: GrandmaGreen.Collections.DecorationId.MushroomTable
+  name: MushroomTable
+  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_MushroomTable
+  commentId: F:GrandmaGreen.Collections.DecorationId.MushroomTable
+  fullName: GrandmaGreen.Collections.DecorationId.MushroomTable
+  nameWithType: DecorationId.MushroomTable
 - uid: GrandmaGreen.Collections.DecorationId.NaturalPond
   name: NaturalPond
   href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_NaturalPond
   commentId: F:GrandmaGreen.Collections.DecorationId.NaturalPond
   fullName: GrandmaGreen.Collections.DecorationId.NaturalPond
   nameWithType: DecorationId.NaturalPond
-- uid: GrandmaGreen.Collections.DecorationId.OakTree
-  name: OakTree
-  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_OakTree
-  commentId: F:GrandmaGreen.Collections.DecorationId.OakTree
-  fullName: GrandmaGreen.Collections.DecorationId.OakTree
-  nameWithType: DecorationId.OakTree
-- uid: GrandmaGreen.Collections.DecorationId.OleanderBush
-  name: OleanderBush
-  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_OleanderBush
-  commentId: F:GrandmaGreen.Collections.DecorationId.OleanderBush
-  fullName: GrandmaGreen.Collections.DecorationId.OleanderBush
-  nameWithType: DecorationId.OleanderBush
-- uid: GrandmaGreen.Collections.DecorationId.PalmTree
-  name: PalmTree
-  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_PalmTree
-  commentId: F:GrandmaGreen.Collections.DecorationId.PalmTree
-  fullName: GrandmaGreen.Collections.DecorationId.PalmTree
-  nameWithType: DecorationId.PalmTree
-- uid: GrandmaGreen.Collections.DecorationId.PastelExterior
-  name: PastelExterior
-  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_PastelExterior
-  commentId: F:GrandmaGreen.Collections.DecorationId.PastelExterior
-  fullName: GrandmaGreen.Collections.DecorationId.PastelExterior
-  nameWithType: DecorationId.PastelExterior
-- uid: GrandmaGreen.Collections.DecorationId.PicnicSpread
-  name: PicnicSpread
-  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_PicnicSpread
-  commentId: F:GrandmaGreen.Collections.DecorationId.PicnicSpread
-  fullName: GrandmaGreen.Collections.DecorationId.PicnicSpread
-  nameWithType: DecorationId.PicnicSpread
-- uid: GrandmaGreen.Collections.DecorationId.PineTree
-  name: PineTree
-  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_PineTree
-  commentId: F:GrandmaGreen.Collections.DecorationId.PineTree
-  fullName: GrandmaGreen.Collections.DecorationId.PineTree
-  nameWithType: DecorationId.PineTree
-- uid: GrandmaGreen.Collections.DecorationId.PNWCabinExterior
-  name: PNWCabinExterior
-  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_PNWCabinExterior
-  commentId: F:GrandmaGreen.Collections.DecorationId.PNWCabinExterior
-  fullName: GrandmaGreen.Collections.DecorationId.PNWCabinExterior
-  nameWithType: DecorationId.PNWCabinExterior
-- uid: GrandmaGreen.Collections.DecorationId.PoplarTree
-  name: PoplarTree
-  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_PoplarTree
-  commentId: F:GrandmaGreen.Collections.DecorationId.PoplarTree
-  fullName: GrandmaGreen.Collections.DecorationId.PoplarTree
-  nameWithType: DecorationId.PoplarTree
+- uid: GrandmaGreen.Collections.DecorationId.Oak
+  name: Oak
+  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_Oak
+  commentId: F:GrandmaGreen.Collections.DecorationId.Oak
+  fullName: GrandmaGreen.Collections.DecorationId.Oak
+  nameWithType: DecorationId.Oak
+- uid: GrandmaGreen.Collections.DecorationId.Oleander
+  name: Oleander
+  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_Oleander
+  commentId: F:GrandmaGreen.Collections.DecorationId.Oleander
+  fullName: GrandmaGreen.Collections.DecorationId.Oleander
+  nameWithType: DecorationId.Oleander
+- uid: GrandmaGreen.Collections.DecorationId.OrangeLeafpile
+  name: OrangeLeafpile
+  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_OrangeLeafpile
+  commentId: F:GrandmaGreen.Collections.DecorationId.OrangeLeafpile
+  fullName: GrandmaGreen.Collections.DecorationId.OrangeLeafpile
+  nameWithType: DecorationId.OrangeLeafpile
+- uid: GrandmaGreen.Collections.DecorationId.Palm
+  name: Palm
+  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_Palm
+  commentId: F:GrandmaGreen.Collections.DecorationId.Palm
+  fullName: GrandmaGreen.Collections.DecorationId.Palm
+  nameWithType: DecorationId.Palm
+- uid: GrandmaGreen.Collections.DecorationId.Pastel
+  name: Pastel
+  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_Pastel
+  commentId: F:GrandmaGreen.Collections.DecorationId.Pastel
+  fullName: GrandmaGreen.Collections.DecorationId.Pastel
+  nameWithType: DecorationId.Pastel
+- uid: GrandmaGreen.Collections.DecorationId.PicnicBasket
+  name: PicnicBasket
+  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_PicnicBasket
+  commentId: F:GrandmaGreen.Collections.DecorationId.PicnicBasket
+  fullName: GrandmaGreen.Collections.DecorationId.PicnicBasket
+  nameWithType: DecorationId.PicnicBasket
+- uid: GrandmaGreen.Collections.DecorationId.PicnicTable
+  name: PicnicTable
+  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_PicnicTable
+  commentId: F:GrandmaGreen.Collections.DecorationId.PicnicTable
+  fullName: GrandmaGreen.Collections.DecorationId.PicnicTable
+  nameWithType: DecorationId.PicnicTable
+- uid: GrandmaGreen.Collections.DecorationId.Pine01
+  name: Pine01
+  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_Pine01
+  commentId: F:GrandmaGreen.Collections.DecorationId.Pine01
+  fullName: GrandmaGreen.Collections.DecorationId.Pine01
+  nameWithType: DecorationId.Pine01
+- uid: GrandmaGreen.Collections.DecorationId.Pine02
+  name: Pine02
+  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_Pine02
+  commentId: F:GrandmaGreen.Collections.DecorationId.Pine02
+  fullName: GrandmaGreen.Collections.DecorationId.Pine02
+  nameWithType: DecorationId.Pine02
+- uid: GrandmaGreen.Collections.DecorationId.PNWCabin
+  name: PNWCabin
+  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_PNWCabin
+  commentId: F:GrandmaGreen.Collections.DecorationId.PNWCabin
+  fullName: GrandmaGreen.Collections.DecorationId.PNWCabin
+  nameWithType: DecorationId.PNWCabin
+- uid: GrandmaGreen.Collections.DecorationId.Poplar
+  name: Poplar
+  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_Poplar
+  commentId: F:GrandmaGreen.Collections.DecorationId.Poplar
+  fullName: GrandmaGreen.Collections.DecorationId.Poplar
+  nameWithType: DecorationId.Poplar
 - uid: GrandmaGreen.Collections.DecorationId.PottedPlant01
   name: PottedPlant01
   href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_PottedPlant01
@@ -2329,12 +2491,30 @@ references:
   commentId: F:GrandmaGreen.Collections.DecorationId.PumpkinGolemMemento
   fullName: GrandmaGreen.Collections.DecorationId.PumpkinGolemMemento
   nameWithType: DecorationId.PumpkinGolemMemento
+- uid: GrandmaGreen.Collections.DecorationId.RadishGolemMemento
+  name: RadishGolemMemento
+  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_RadishGolemMemento
+  commentId: F:GrandmaGreen.Collections.DecorationId.RadishGolemMemento
+  fullName: GrandmaGreen.Collections.DecorationId.RadishGolemMemento
+  nameWithType: DecorationId.RadishGolemMemento
 - uid: GrandmaGreen.Collections.DecorationId.RockingChair
   name: RockingChair
   href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_RockingChair
   commentId: F:GrandmaGreen.Collections.DecorationId.RockingChair
   fullName: GrandmaGreen.Collections.DecorationId.RockingChair
   nameWithType: DecorationId.RockingChair
+- uid: GrandmaGreen.Collections.DecorationId.RusticBucket
+  name: RusticBucket
+  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_RusticBucket
+  commentId: F:GrandmaGreen.Collections.DecorationId.RusticBucket
+  fullName: GrandmaGreen.Collections.DecorationId.RusticBucket
+  nameWithType: DecorationId.RusticBucket
+- uid: GrandmaGreen.Collections.DecorationId.RusticWell
+  name: RusticWell
+  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_RusticWell
+  commentId: F:GrandmaGreen.Collections.DecorationId.RusticWell
+  fullName: GrandmaGreen.Collections.DecorationId.RusticWell
+  nameWithType: DecorationId.RusticWell
 - uid: GrandmaGreen.Collections.DecorationId.Scarecrow
   name: Scarecrow
   href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_Scarecrow
@@ -2347,96 +2527,132 @@ references:
   commentId: F:GrandmaGreen.Collections.DecorationId.SimpleFountain
   fullName: GrandmaGreen.Collections.DecorationId.SimpleFountain
   nameWithType: DecorationId.SimpleFountain
-- uid: GrandmaGreen.Collections.DecorationId.SimpleHangingLampPost
-  name: SimpleHangingLampPost
-  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_SimpleHangingLampPost
-  commentId: F:GrandmaGreen.Collections.DecorationId.SimpleHangingLampPost
-  fullName: GrandmaGreen.Collections.DecorationId.SimpleHangingLampPost
-  nameWithType: DecorationId.SimpleHangingLampPost
-- uid: GrandmaGreen.Collections.DecorationId.SimpleWoodenBench
-  name: SimpleWoodenBench
-  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_SimpleWoodenBench
-  commentId: F:GrandmaGreen.Collections.DecorationId.SimpleWoodenBench
-  fullName: GrandmaGreen.Collections.DecorationId.SimpleWoodenBench
-  nameWithType: DecorationId.SimpleWoodenBench
-- uid: GrandmaGreen.Collections.DecorationId.SimpleWoodenChair
-  name: SimpleWoodenChair
-  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_SimpleWoodenChair
-  commentId: F:GrandmaGreen.Collections.DecorationId.SimpleWoodenChair
-  fullName: GrandmaGreen.Collections.DecorationId.SimpleWoodenChair
-  nameWithType: DecorationId.SimpleWoodenChair
-- uid: GrandmaGreen.Collections.DecorationId.SimpleWoodenFence
-  name: SimpleWoodenFence
-  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_SimpleWoodenFence
-  commentId: F:GrandmaGreen.Collections.DecorationId.SimpleWoodenFence
-  fullName: GrandmaGreen.Collections.DecorationId.SimpleWoodenFence
-  nameWithType: DecorationId.SimpleWoodenFence
-- uid: GrandmaGreen.Collections.DecorationId.SimpleWoodenTable
-  name: SimpleWoodenTable
-  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_SimpleWoodenTable
-  commentId: F:GrandmaGreen.Collections.DecorationId.SimpleWoodenTable
-  fullName: GrandmaGreen.Collections.DecorationId.SimpleWoodenTable
-  nameWithType: DecorationId.SimpleWoodenTable
-- uid: GrandmaGreen.Collections.DecorationId.StoneBench
-  name: StoneBench
-  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_StoneBench
-  commentId: F:GrandmaGreen.Collections.DecorationId.StoneBench
-  fullName: GrandmaGreen.Collections.DecorationId.StoneBench
-  nameWithType: DecorationId.StoneBench
-- uid: GrandmaGreen.Collections.DecorationId.StumpTree
-  name: StumpTree
-  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_StumpTree
-  commentId: F:GrandmaGreen.Collections.DecorationId.StumpTree
-  fullName: GrandmaGreen.Collections.DecorationId.StumpTree
-  nameWithType: DecorationId.StumpTree
+- uid: GrandmaGreen.Collections.DecorationId.SimpleHangingLampPost01
+  name: SimpleHangingLampPost01
+  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_SimpleHangingLampPost01
+  commentId: F:GrandmaGreen.Collections.DecorationId.SimpleHangingLampPost01
+  fullName: GrandmaGreen.Collections.DecorationId.SimpleHangingLampPost01
+  nameWithType: DecorationId.SimpleHangingLampPost01
+- uid: GrandmaGreen.Collections.DecorationId.SimpleHangingLampPost02
+  name: SimpleHangingLampPost02
+  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_SimpleHangingLampPost02
+  commentId: F:GrandmaGreen.Collections.DecorationId.SimpleHangingLampPost02
+  fullName: GrandmaGreen.Collections.DecorationId.SimpleHangingLampPost02
+  nameWithType: DecorationId.SimpleHangingLampPost02
+- uid: GrandmaGreen.Collections.DecorationId.SimpleWooden
+  name: SimpleWooden
+  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_SimpleWooden
+  commentId: F:GrandmaGreen.Collections.DecorationId.SimpleWooden
+  fullName: GrandmaGreen.Collections.DecorationId.SimpleWooden
+  nameWithType: DecorationId.SimpleWooden
+- uid: GrandmaGreen.Collections.DecorationId.StoneBenchwithFancyLeg
+  name: StoneBenchwithFancyLeg
+  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_StoneBenchwithFancyLeg
+  commentId: F:GrandmaGreen.Collections.DecorationId.StoneBenchwithFancyLeg
+  fullName: GrandmaGreen.Collections.DecorationId.StoneBenchwithFancyLeg
+  nameWithType: DecorationId.StoneBenchwithFancyLeg
+- uid: GrandmaGreen.Collections.DecorationId.StoneBenchwithPlainLeg
+  name: StoneBenchwithPlainLeg
+  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_StoneBenchwithPlainLeg
+  commentId: F:GrandmaGreen.Collections.DecorationId.StoneBenchwithPlainLeg
+  fullName: GrandmaGreen.Collections.DecorationId.StoneBenchwithPlainLeg
+  nameWithType: DecorationId.StoneBenchwithPlainLeg
+- uid: GrandmaGreen.Collections.DecorationId.StoneNaturalBench
+  name: StoneNaturalBench
+  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_StoneNaturalBench
+  commentId: F:GrandmaGreen.Collections.DecorationId.StoneNaturalBench
+  fullName: GrandmaGreen.Collections.DecorationId.StoneNaturalBench
+  nameWithType: DecorationId.StoneNaturalBench
+- uid: GrandmaGreen.Collections.DecorationId.StoneNaturalBenchwithMoss
+  name: StoneNaturalBenchwithMoss
+  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_StoneNaturalBenchwithMoss
+  commentId: F:GrandmaGreen.Collections.DecorationId.StoneNaturalBenchwithMoss
+  fullName: GrandmaGreen.Collections.DecorationId.StoneNaturalBenchwithMoss
+  nameWithType: DecorationId.StoneNaturalBenchwithMoss
+- uid: GrandmaGreen.Collections.DecorationId.Stump
+  name: Stump
+  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_Stump
+  commentId: F:GrandmaGreen.Collections.DecorationId.Stump
+  fullName: GrandmaGreen.Collections.DecorationId.Stump
+  nameWithType: DecorationId.Stump
 - uid: GrandmaGreen.Collections.DecorationId.Sundial
   name: Sundial
   href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_Sundial
   commentId: F:GrandmaGreen.Collections.DecorationId.Sundial
   fullName: GrandmaGreen.Collections.DecorationId.Sundial
   nameWithType: DecorationId.Sundial
-- uid: GrandmaGreen.Collections.DecorationId.Swingset
-  name: Swingset
-  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_Swingset
-  commentId: F:GrandmaGreen.Collections.DecorationId.Swingset
-  fullName: GrandmaGreen.Collections.DecorationId.Swingset
-  nameWithType: DecorationId.Swingset
-- uid: GrandmaGreen.Collections.DecorationId.TilePath
-  name: TilePath
-  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_TilePath
-  commentId: F:GrandmaGreen.Collections.DecorationId.TilePath
-  fullName: GrandmaGreen.Collections.DecorationId.TilePath
-  nameWithType: DecorationId.TilePath
-- uid: GrandmaGreen.Collections.DecorationId.Torch
-  name: Torch
-  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_Torch
-  commentId: F:GrandmaGreen.Collections.DecorationId.Torch
-  fullName: GrandmaGreen.Collections.DecorationId.Torch
-  nameWithType: DecorationId.Torch
-- uid: GrandmaGreen.Collections.DecorationId.TraditionalJapaneseExterior
-  name: TraditionalJapaneseExterior
-  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_TraditionalJapaneseExterior
-  commentId: F:GrandmaGreen.Collections.DecorationId.TraditionalJapaneseExterior
-  fullName: GrandmaGreen.Collections.DecorationId.TraditionalJapaneseExterior
-  nameWithType: DecorationId.TraditionalJapaneseExterior
+- uid: GrandmaGreen.Collections.DecorationId.Swingset01
+  name: Swingset01
+  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_Swingset01
+  commentId: F:GrandmaGreen.Collections.DecorationId.Swingset01
+  fullName: GrandmaGreen.Collections.DecorationId.Swingset01
+  nameWithType: DecorationId.Swingset01
+- uid: GrandmaGreen.Collections.DecorationId.Swingset02
+  name: Swingset02
+  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_Swingset02
+  commentId: F:GrandmaGreen.Collections.DecorationId.Swingset02
+  fullName: GrandmaGreen.Collections.DecorationId.Swingset02
+  nameWithType: DecorationId.Swingset02
+- uid: GrandmaGreen.Collections.DecorationId.Tile
+  name: Tile
+  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_Tile
+  commentId: F:GrandmaGreen.Collections.DecorationId.Tile
+  fullName: GrandmaGreen.Collections.DecorationId.Tile
+  nameWithType: DecorationId.Tile
+- uid: GrandmaGreen.Collections.DecorationId.Torch01
+  name: Torch01
+  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_Torch01
+  commentId: F:GrandmaGreen.Collections.DecorationId.Torch01
+  fullName: GrandmaGreen.Collections.DecorationId.Torch01
+  nameWithType: DecorationId.Torch01
+- uid: GrandmaGreen.Collections.DecorationId.Torch02
+  name: Torch02
+  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_Torch02
+  commentId: F:GrandmaGreen.Collections.DecorationId.Torch02
+  fullName: GrandmaGreen.Collections.DecorationId.Torch02
+  nameWithType: DecorationId.Torch02
+- uid: GrandmaGreen.Collections.DecorationId.TraditionalJapanese
+  name: TraditionalJapanese
+  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_TraditionalJapanese
+  commentId: F:GrandmaGreen.Collections.DecorationId.TraditionalJapanese
+  fullName: GrandmaGreen.Collections.DecorationId.TraditionalJapanese
+  nameWithType: DecorationId.TraditionalJapanese
+- uid: GrandmaGreen.Collections.DecorationId.Tree01
+  name: Tree01
+  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_Tree01
+  commentId: F:GrandmaGreen.Collections.DecorationId.Tree01
+  fullName: GrandmaGreen.Collections.DecorationId.Tree01
+  nameWithType: DecorationId.Tree01
+- uid: GrandmaGreen.Collections.DecorationId.Tree02
+  name: Tree02
+  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_Tree02
+  commentId: F:GrandmaGreen.Collections.DecorationId.Tree02
+  fullName: GrandmaGreen.Collections.DecorationId.Tree02
+  nameWithType: DecorationId.Tree02
 - uid: GrandmaGreen.Collections.DecorationId.TulipGolemMemento
   name: TulipGolemMemento
   href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_TulipGolemMemento
   commentId: F:GrandmaGreen.Collections.DecorationId.TulipGolemMemento
   fullName: GrandmaGreen.Collections.DecorationId.TulipGolemMemento
   nameWithType: DecorationId.TulipGolemMemento
-- uid: GrandmaGreen.Collections.DecorationId.TurnipGolemMemento
-  name: TurnipGolemMemento
-  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_TurnipGolemMemento
-  commentId: F:GrandmaGreen.Collections.DecorationId.TurnipGolemMemento
-  fullName: GrandmaGreen.Collections.DecorationId.TurnipGolemMemento
-  nameWithType: DecorationId.TurnipGolemMemento
-- uid: GrandmaGreen.Collections.DecorationId.Umbrella
-  name: Umbrella
-  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_Umbrella
-  commentId: F:GrandmaGreen.Collections.DecorationId.Umbrella
-  fullName: GrandmaGreen.Collections.DecorationId.Umbrella
-  nameWithType: DecorationId.Umbrella
+- uid: GrandmaGreen.Collections.DecorationId.Umbrella01
+  name: Umbrella01
+  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_Umbrella01
+  commentId: F:GrandmaGreen.Collections.DecorationId.Umbrella01
+  fullName: GrandmaGreen.Collections.DecorationId.Umbrella01
+  nameWithType: DecorationId.Umbrella01
+- uid: GrandmaGreen.Collections.DecorationId.Umbrella02
+  name: Umbrella02
+  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_Umbrella02
+  commentId: F:GrandmaGreen.Collections.DecorationId.Umbrella02
+  fullName: GrandmaGreen.Collections.DecorationId.Umbrella02
+  nameWithType: DecorationId.Umbrella02
+- uid: GrandmaGreen.Collections.DecorationId.Umbrella03
+  name: Umbrella03
+  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_Umbrella03
+  commentId: F:GrandmaGreen.Collections.DecorationId.Umbrella03
+  fullName: GrandmaGreen.Collections.DecorationId.Umbrella03
+  nameWithType: DecorationId.Umbrella03
 - uid: GrandmaGreen.Collections.DecorationId.Waterpump
   name: Waterpump
   href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_Waterpump
@@ -2449,36 +2665,96 @@ references:
   commentId: F:GrandmaGreen.Collections.DecorationId.Well
   fullName: GrandmaGreen.Collections.DecorationId.Well
   nameWithType: DecorationId.Well
-- uid: GrandmaGreen.Collections.DecorationId.WhitePicketFence
-  name: WhitePicketFence
-  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_WhitePicketFence
-  commentId: F:GrandmaGreen.Collections.DecorationId.WhitePicketFence
-  fullName: GrandmaGreen.Collections.DecorationId.WhitePicketFence
-  nameWithType: DecorationId.WhitePicketFence
+- uid: GrandmaGreen.Collections.DecorationId.WhiteFancyIron
+  name: WhiteFancyIron
+  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_WhiteFancyIron
+  commentId: F:GrandmaGreen.Collections.DecorationId.WhiteFancyIron
+  fullName: GrandmaGreen.Collections.DecorationId.WhiteFancyIron
+  nameWithType: DecorationId.WhiteFancyIron
+- uid: GrandmaGreen.Collections.DecorationId.WhitePicket
+  name: WhitePicket
+  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_WhitePicket
+  commentId: F:GrandmaGreen.Collections.DecorationId.WhitePicket
+  fullName: GrandmaGreen.Collections.DecorationId.WhitePicket
+  nameWithType: DecorationId.WhitePicket
 - uid: GrandmaGreen.Collections.DecorationId.WildDaisies
   name: WildDaisies
   href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_WildDaisies
   commentId: F:GrandmaGreen.Collections.DecorationId.WildDaisies
   fullName: GrandmaGreen.Collections.DecorationId.WildDaisies
   nameWithType: DecorationId.WildDaisies
-- uid: GrandmaGreen.Collections.DecorationId.WillowTree
-  name: WillowTree
-  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_WillowTree
-  commentId: F:GrandmaGreen.Collections.DecorationId.WillowTree
-  fullName: GrandmaGreen.Collections.DecorationId.WillowTree
-  nameWithType: DecorationId.WillowTree
-- uid: GrandmaGreen.Collections.DecorationId.WitchyGothExterior
-  name: WitchyGothExterior
-  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_WitchyGothExterior
-  commentId: F:GrandmaGreen.Collections.DecorationId.WitchyGothExterior
-  fullName: GrandmaGreen.Collections.DecorationId.WitchyGothExterior
-  nameWithType: DecorationId.WitchyGothExterior
-- uid: GrandmaGreen.Collections.DecorationId.WoodPath
-  name: WoodPath
-  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_WoodPath
-  commentId: F:GrandmaGreen.Collections.DecorationId.WoodPath
-  fullName: GrandmaGreen.Collections.DecorationId.WoodPath
-  nameWithType: DecorationId.WoodPath
+- uid: GrandmaGreen.Collections.DecorationId.Willow
+  name: Willow
+  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_Willow
+  commentId: F:GrandmaGreen.Collections.DecorationId.Willow
+  fullName: GrandmaGreen.Collections.DecorationId.Willow
+  nameWithType: DecorationId.Willow
+- uid: GrandmaGreen.Collections.DecorationId.WitchyGoth
+  name: WitchyGoth
+  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_WitchyGoth
+  commentId: F:GrandmaGreen.Collections.DecorationId.WitchyGoth
+  fullName: GrandmaGreen.Collections.DecorationId.WitchyGoth
+  nameWithType: DecorationId.WitchyGoth
+- uid: GrandmaGreen.Collections.DecorationId.Wood
+  name: Wood
+  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_Wood
+  commentId: F:GrandmaGreen.Collections.DecorationId.Wood
+  fullName: GrandmaGreen.Collections.DecorationId.Wood
+  nameWithType: DecorationId.Wood
+- uid: GrandmaGreen.Collections.DecorationId.WoodandIronBench
+  name: WoodandIronBench
+  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_WoodandIronBench
+  commentId: F:GrandmaGreen.Collections.DecorationId.WoodandIronBench
+  fullName: GrandmaGreen.Collections.DecorationId.WoodandIronBench
+  nameWithType: DecorationId.WoodandIronBench
+- uid: GrandmaGreen.Collections.DecorationId.WoodBenchwithBack
+  name: WoodBenchwithBack
+  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_WoodBenchwithBack
+  commentId: F:GrandmaGreen.Collections.DecorationId.WoodBenchwithBack
+  fullName: GrandmaGreen.Collections.DecorationId.WoodBenchwithBack
+  nameWithType: DecorationId.WoodBenchwithBack
+- uid: GrandmaGreen.Collections.DecorationId.WoodBenchwithoutBack
+  name: WoodBenchwithoutBack
+  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_WoodBenchwithoutBack
+  commentId: F:GrandmaGreen.Collections.DecorationId.WoodBenchwithoutBack
+  fullName: GrandmaGreen.Collections.DecorationId.WoodBenchwithoutBack
+  nameWithType: DecorationId.WoodBenchwithoutBack
+- uid: GrandmaGreen.Collections.DecorationId.WoodRoundLegTable
+  name: WoodRoundLegTable
+  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_WoodRoundLegTable
+  commentId: F:GrandmaGreen.Collections.DecorationId.WoodRoundLegTable
+  fullName: GrandmaGreen.Collections.DecorationId.WoodRoundLegTable
+  nameWithType: DecorationId.WoodRoundLegTable
+- uid: GrandmaGreen.Collections.DecorationId.WoodSlantLegTable
+  name: WoodSlantLegTable
+  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_WoodSlantLegTable
+  commentId: F:GrandmaGreen.Collections.DecorationId.WoodSlantLegTable
+  fullName: GrandmaGreen.Collections.DecorationId.WoodSlantLegTable
+  nameWithType: DecorationId.WoodSlantLegTable
+- uid: GrandmaGreen.Collections.DecorationId.WoodStraightLegTable
+  name: WoodStraightLegTable
+  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_WoodStraightLegTable
+  commentId: F:GrandmaGreen.Collections.DecorationId.WoodStraightLegTable
+  fullName: GrandmaGreen.Collections.DecorationId.WoodStraightLegTable
+  nameWithType: DecorationId.WoodStraightLegTable
+- uid: GrandmaGreen.Collections.DecorationId.WoodThickChair
+  name: WoodThickChair
+  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_WoodThickChair
+  commentId: F:GrandmaGreen.Collections.DecorationId.WoodThickChair
+  fullName: GrandmaGreen.Collections.DecorationId.WoodThickChair
+  nameWithType: DecorationId.WoodThickChair
+- uid: GrandmaGreen.Collections.DecorationId.WoodThinChair
+  name: WoodThinChair
+  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_WoodThinChair
+  commentId: F:GrandmaGreen.Collections.DecorationId.WoodThinChair
+  fullName: GrandmaGreen.Collections.DecorationId.WoodThinChair
+  nameWithType: DecorationId.WoodThinChair
+- uid: GrandmaGreen.Collections.DecorationId.WoodwithTrees
+  name: WoodwithTrees
+  href: api/GrandmaGreen.Collections.DecorationId.html#GrandmaGreen_Collections_DecorationId_WoodwithTrees
+  commentId: F:GrandmaGreen.Collections.DecorationId.WoodwithTrees
+  fullName: GrandmaGreen.Collections.DecorationId.WoodwithTrees
+  nameWithType: DecorationId.WoodwithTrees
 - uid: GrandmaGreen.Collections.ExpressionId
   name: ExpressionId
   href: api/GrandmaGreen.Collections.ExpressionId.html
@@ -11424,12 +11700,30 @@ references:
   commentId: T:GrandmaGreen.Shopkeeping.ShoppingManager
   fullName: GrandmaGreen.Shopkeeping.ShoppingManager
   nameWithType: ShoppingManager
+- uid: GrandmaGreen.Shopkeeping.ShoppingManager.currDecorList
+  name: currDecorList
+  href: api/GrandmaGreen.Shopkeeping.ShoppingManager.html#GrandmaGreen_Shopkeeping_ShoppingManager_currDecorList
+  commentId: F:GrandmaGreen.Shopkeeping.ShoppingManager.currDecorList
+  fullName: GrandmaGreen.Shopkeeping.ShoppingManager.currDecorList
+  nameWithType: ShoppingManager.currDecorList
 - uid: GrandmaGreen.Shopkeeping.ShoppingManager.currGardenList
   name: currGardenList
   href: api/GrandmaGreen.Shopkeeping.ShoppingManager.html#GrandmaGreen_Shopkeeping_ShoppingManager_currGardenList
   commentId: F:GrandmaGreen.Shopkeeping.ShoppingManager.currGardenList
   fullName: GrandmaGreen.Shopkeeping.ShoppingManager.currGardenList
   nameWithType: ShoppingManager.currGardenList
+- uid: GrandmaGreen.Shopkeeping.ShoppingManager.decorController
+  name: decorController
+  href: api/GrandmaGreen.Shopkeeping.ShoppingManager.html#GrandmaGreen_Shopkeeping_ShoppingManager_decorController
+  commentId: F:GrandmaGreen.Shopkeeping.ShoppingManager.decorController
+  fullName: GrandmaGreen.Shopkeeping.ShoppingManager.decorController
+  nameWithType: ShoppingManager.decorController
+- uid: GrandmaGreen.Shopkeeping.ShoppingManager.gardenController
+  name: gardenController
+  href: api/GrandmaGreen.Shopkeeping.ShoppingManager.html#GrandmaGreen_Shopkeeping_ShoppingManager_gardenController
+  commentId: F:GrandmaGreen.Shopkeeping.ShoppingManager.gardenController
+  fullName: GrandmaGreen.Shopkeeping.ShoppingManager.gardenController
+  nameWithType: ShoppingManager.gardenController
 - uid: GrandmaGreen.Shopkeeping.ShoppingManager.GetTimeLeft
   name: GetTimeLeft()
   href: api/GrandmaGreen.Shopkeeping.ShoppingManager.html#GrandmaGreen_Shopkeeping_ShoppingManager_GetTimeLeft
@@ -11443,12 +11737,6 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Shopkeeping.ShoppingManager.GetTimeLeft
   nameWithType: ShoppingManager.GetTimeLeft
-- uid: GrandmaGreen.Shopkeeping.ShoppingManager.m_controller
-  name: m_controller
-  href: api/GrandmaGreen.Shopkeeping.ShoppingManager.html#GrandmaGreen_Shopkeeping_ShoppingManager_m_controller
-  commentId: F:GrandmaGreen.Shopkeeping.ShoppingManager.m_controller
-  fullName: GrandmaGreen.Shopkeeping.ShoppingManager.m_controller
-  nameWithType: ShoppingManager.m_controller
 - uid: GrandmaGreen.Shopkeeping.ShoppingManager.shopTimer
   name: shopTimer
   href: api/GrandmaGreen.Shopkeeping.ShoppingManager.html#GrandmaGreen_Shopkeeping_ShoppingManager_shopTimer
@@ -14726,6 +15014,30 @@ references:
   commentId: F:GrandmaGreen.UI.Shopping.ShoppingUI.shop
   fullName: GrandmaGreen.UI.Shopping.ShoppingUI.shop
   nameWithType: ShoppingUI.shop
+- uid: GrandmaGreen.UI.Shopping.ShoppingUI.shopType
+  name: shopType
+  href: api/GrandmaGreen.UI.Shopping.ShoppingUI.html#GrandmaGreen_UI_Shopping_ShoppingUI_shopType
+  commentId: F:GrandmaGreen.UI.Shopping.ShoppingUI.shopType
+  fullName: GrandmaGreen.UI.Shopping.ShoppingUI.shopType
+  nameWithType: ShoppingUI.shopType
+- uid: GrandmaGreen.UI.Shopping.ShopType
+  name: ShopType
+  href: api/GrandmaGreen.UI.Shopping.ShopType.html
+  commentId: T:GrandmaGreen.UI.Shopping.ShopType
+  fullName: GrandmaGreen.UI.Shopping.ShopType
+  nameWithType: ShopType
+- uid: GrandmaGreen.UI.Shopping.ShopType.Decor
+  name: Decor
+  href: api/GrandmaGreen.UI.Shopping.ShopType.html#GrandmaGreen_UI_Shopping_ShopType_Decor
+  commentId: F:GrandmaGreen.UI.Shopping.ShopType.Decor
+  fullName: GrandmaGreen.UI.Shopping.ShopType.Decor
+  nameWithType: ShopType.Decor
+- uid: GrandmaGreen.UI.Shopping.ShopType.Garden
+  name: Garden
+  href: api/GrandmaGreen.UI.Shopping.ShopType.html#GrandmaGreen_UI_Shopping_ShopType_Garden
+  commentId: F:GrandmaGreen.UI.Shopping.ShopType.Garden
+  fullName: GrandmaGreen.UI.Shopping.ShopType.Garden
+  nameWithType: ShopType.Garden
 - uid: GrandmaGreen.UI.StartScreen
   name: GrandmaGreen.UI.StartScreen
   href: api/GrandmaGreen.UI.StartScreen.html

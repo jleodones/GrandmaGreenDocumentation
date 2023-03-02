@@ -436,7 +436,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.Collections.DecorationId.html",
-          "hash": "XFb5In1Qwk3vm2jnwtefu3KBGFcCdAekJ2rswnwtsmA="
+          "hash": "w9wyeWJg4hBwKT5WwCHkMHgo2ppBi9CPi6q7SKJgvzE="
         }
       },
       "is_incremental": false,
@@ -1768,7 +1768,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.Shopkeeping.ShoppingManager.html",
-          "hash": "dWDmY8/hCLIhCH3Oj6n1cLtrWx2lzbwD3FBCD/SQP7Q="
+          "hash": "DK+bpJuuYaaNSOTMgwIzxKBmXXFcgZbNAvR1z91Iy+8="
         }
       },
       "is_incremental": false,
@@ -2328,6 +2328,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/GrandmaGreen.UI.Shopping.ShopType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GrandmaGreen.UI.Shopping.ShopType.html",
+          "hash": "Dp7E6xAvF2wD6SGMEND2TyVbxEmEg89cKXcrm9AhVBU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/GrandmaGreen.UI.Shopping.ShopkeeperMenu.yml",
       "output": {
         ".html": {
@@ -2356,7 +2368,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.UI.Shopping.ShoppingUI.html",
-          "hash": "BCFpcFKA7WXOwdrQYoLE91qyVLqTzs1BgP4k4zLO3qw="
+          "hash": "l8Aw0fQCX/DXEvOFeWpuzRzGP+GleX31eQ+a22TeqZk="
         }
       },
       "is_incremental": false,
@@ -2368,7 +2380,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.UI.Shopping.html",
-          "hash": "q/jTGDdvB3G81UcG2xN0dWXj/iyyuHm7OPEFHlQeevA="
+          "hash": "YE/7y58iwAmSnZ5yXdlYotBPj3pFZ6PfCuQtqs6AmvU="
         }
       },
       "is_incremental": false,
@@ -2512,7 +2524,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "8B5UUWwEOkqESePh6qA/kcYDr/0YtSStKER9gAVK0T8="
+          "hash": "eqlSNS3/3Z+VKBszuP8KYsReWSdrzBWwCeFA4cVBYrE="
         }
       },
       "is_incremental": false,
@@ -2621,7 +2633,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 207,
+          "total_file_count": 208,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
