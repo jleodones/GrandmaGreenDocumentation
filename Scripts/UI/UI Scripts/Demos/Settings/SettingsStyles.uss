@@ -41,14 +41,15 @@
 }
 
 .toggle-text {
-    width: 80%;
+    width: 78%;
     height: 40%;
-    font-size: 250%;
+    font-size: 230%;
     color: rgb(114, 67, 37);
-    -unity-text-align: middle-center;
+    -unity-text-align: middle-left;
     -unity-font-style: bold;
     -unity-font: url('project://database/Assets/_GrandmaGreen/Art/UI/Fonts/Brevia/Brevia-Regular.otf?fileID=12800000&guid=5a1bfd81ed39ecd418c1c034114fcc3c&type=3#Brevia-Regular');
     -unity-font-definition: url('project://database/Assets/_GrandmaGreen/Art/UI/Fonts/Brevia/Brevia-Regular%20SDF.asset?fileID=11400000&guid=b087b45a4ecf25d45a8614016e1dd393&type=2#Brevia-Regular SDF');
+    white-space: normal;
 }
 
 .slider-type-icon {
@@ -84,7 +85,7 @@
 }
 
 .my-toggle {
-    background-color: rgba(255, 255, 255, 255);
+    background-color: rgb(255, 255, 255);
     border-left-color: rgb(103, 69, 43);
     border-right-color: rgb(103, 69, 43);
     border-top-color: rgb(103, 69, 43);
@@ -97,8 +98,8 @@
     border-bottom-left-radius: 25px;
     border-top-right-radius: 25px;
     border-bottom-right-radius: 25px;
-    width: 100px;
-    height: 100px;
+    width: 75px;
+    height: 75px;
     overflow: hidden;
     justify-content: center;
     align-items: center;
@@ -133,7 +134,7 @@
 .my-toggle .unity-toggle__checkmark {
     width: 100px;
     height: 100px;
-    background-color: rgba(255, 255, 255, 255);
+    background-color: rgb(255, 255, 255);
 }
 
 .bgm-slider {
@@ -153,10 +154,10 @@
 }
 
 .bgm-slider .unity-base-slider__tracker {
-    border-left-color: rgba(255, 200, 0, 255);
-    border-right-color: rgba(255, 200, 0, 255);
-    border-top-color: rgba(255, 200, 0, 255);
-    border-bottom-color: rgba(255, 200, 0, 255);
+    border-left-color: rgb(255, 200, 0);
+    border-right-color: rgb(255, 200, 0);
+    border-top-color: rgb(255, 200, 0);
+    border-bottom-color: rgb(255, 200, 0);
     border-left-width: 10px;
     border-right-width: 10px;
     border-top-width: 10px;
@@ -259,4 +260,36 @@
     padding-right: 0;
     padding-top: 0;
     padding-bottom: 0;
+}
+
+.colorblind-left {
+    width: 40px;
+    height: 40px;
+    background-image: url('project://database/Assets/_GrandmaGreen/Scripts/UI/SampleArt/UI_General_Arrow_Left.png?fileID=2800000&guid=9a08a76b405b41e44b908b9d013e0d01&type=3#UI_General_Arrow_Left');
+    -unity-background-scale-mode: scale-to-fit;
+    background-color: rgba(0, 0, 0, 0);
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    border-left-color: rgba(0, 0, 0, 0);
+    border-right-color: rgba(0, 0, 0, 0);
+    border-top-color: rgba(0, 0, 0, 0);
+    border-bottom-color: rgba(0, 0, 0, 0);
+}
+
+.colorblind-right {
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    border-left-color: rgba(0, 0, 0, 0);
+    border-right-color: rgba(0, 0, 0, 0);
+    border-top-color: rgba(0, 0, 0, 0);
+    border-bottom-color: rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 0);
+    -unity-background-scale-mode: scale-to-fit;
+    background-image: url('project://database/Assets/_GrandmaGreen/Art/UI/General/UI_General_Arrow.png?fileID=2800000&guid=c6c9d317e9140402eb4232d556a770c1&type=3#UI_General_Arrow');
+    width: 40px;
+    height: 40px;
 }

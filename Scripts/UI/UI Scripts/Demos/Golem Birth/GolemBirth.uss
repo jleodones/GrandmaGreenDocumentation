@@ -1,28 +1,22 @@
 .floatClouds {
     translate: 200% 0;
-    transition-duration: 500s;
-}
-
-.resetCloud {
-    left: -100%;
 }
 
 .pushLeftCloud {
     translate: 25% 0;
-    transition-duration: 800ms;
 }
 
 .bounceGolem {
-    translate: 0 -115%;
+    translate: 0 40px;
 }
 
-#golemSpriteX {
-    transition-duration: 2s;
+#golemSpriteContainer {
+    transition-duration: 1.5s;
+    transition-timing-function: ease-in-out;
 }
 
 .pushRightCloud {
     translate: -25% 0;
-    transition-duration: 800ms;
 }
 
 .smallText {
@@ -31,9 +25,4 @@
 
 .largeText {
     scale: 1.5 1.5;
-}
-
-.pushGolem {
-    translate: 0 -160%;
-    transition-duration: 500ms;
 }

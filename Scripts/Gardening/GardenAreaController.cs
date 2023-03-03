@@ -695,6 +695,14 @@ namespace GrandmaGreen.Garden
             Debug.Log("1015 is fruit " + CollectionsSO.IsFruit((PlantId)1015));
             Debug.Log("1008 is fruit " + CollectionsSO.IsFruit((PlantId)1008));
         }
+
+        [ContextMenu("ExtensionSaverTest")]
+        public void ExtensionSaverTest()
+        {
+            Debug.Log("AreaIndex " + areaIndex);
+            Debug.Log("Saving Plant");
+            gardenManager.CreatePlant(PlantId.Rose, new Genotype("aabb"), 0, areaIndex, Vector3Int.zero);
+	    }
         #endregion
 
         #region Tiles

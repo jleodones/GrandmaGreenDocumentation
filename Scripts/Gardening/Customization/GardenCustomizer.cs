@@ -18,6 +18,7 @@ namespace GrandmaGreen.Garden
         [SerializeField] Collections.DecorationId debugDecor;
         [SerializeField] TileStore tileStore;
         [SerializeField] PointerState pointerState;
+        [SerializeField] GameObject grandmaRig;
 
         [Header("Settings")]
         [SerializeField] float colliderSizeModifier = 1.05f;
@@ -44,6 +45,8 @@ namespace GrandmaGreen.Garden
             Vector3 colliderSize = decorItem.boundsCollider.size;
             colliderSize.x = decorSprite.bounds.size.x * colliderSizeModifier;
             decorItem.boundsCollider.size = colliderSize;
+
+            decorItem.transform.localScale = grandmaRig.transform.localScale;
 
             return decorItem;
         }

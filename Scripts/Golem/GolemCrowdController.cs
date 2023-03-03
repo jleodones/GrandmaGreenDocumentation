@@ -64,9 +64,9 @@ namespace GrandmaGreen.Entities
         }
 
         [Button(ButtonSizes.Medium)]
-        public void SpawnTulipGolem()
+        public void SpawnGolem()
         {
-            ushort id = (ushort)CharacterId.Tulip;
+            ushort id = (ushort)theGolem;
             Vector3 pos = new Vector3(0,0,0);
             golemManager.OnGolemSpawn(id, pos);
         }

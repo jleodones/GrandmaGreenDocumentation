@@ -1,14 +1,3 @@
-de .title-box {
-    background-color: rgb(232, 241, 228);
-    height: 150px;
-    min-width: auto;
-    width: 800px;
-    border-top-left-radius: 50px;
-    border-bottom-left-radius: 50px;
-    border-top-right-radius: 50px;
-    border-bottom-right-radius: 50px;
-}
-
 .item-button {
     width: 250px;
     height: 250px;
@@ -16,56 +5,51 @@ de .title-box {
     border-bottom-left-radius: 50px;
     border-top-right-radius: 50px;
     border-bottom-right-radius: 50px;
-    padding-left: 50px;
-    padding-right: 50px;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 40px;
+    padding-bottom: 40px;
     background-color: rgba(0, 0, 0, 0);
     border-left-color: rgba(0, 0, 0, 0);
     border-right-color: rgba(0, 0, 0, 0);
     border-top-color: rgba(0, 0, 0, 0);
     border-bottom-color: rgba(0, 0, 0, 0);
+    position: absolute;
+    top: 10px;
 }
 
 .popup-box {
-    width: 1000px;
-    height: 500px;
-    background-color: rgb(141, 149, 45);
-    border-top-left-radius: 50px;
-    border-bottom-left-radius: 50px;
-    border-top-right-radius: 50px;
-    border-bottom-right-radius: 50px;
-    border-left-color: rgb(179, 187, 94);
-    border-right-color: rgb(179, 187, 94);
-    border-top-color: rgb(179, 187, 94);
-    border-bottom-color: rgb(179, 187, 94);
-    border-left-width: 20px;
-    border-right-width: 20px;
-    border-top-width: 20px;
-    border-bottom-width: 20px;
+    width: 1150px;
+    height: 800px;
+    background-color: rgba(255, 255, 255, 0);
     padding-left: 20px;
     padding-right: 20px;
     padding-top: 20px;
     padding-bottom: 20px;
+    background-image: url('project://database/Assets/_GrandmaGreen/Art/UI/Shopping/UI_Plant%20Shop_PopUp_BG.png?fileID=2800000&guid=1df3e73dc413ec3468c40d9264a84c0c&type=3#UI_Plant Shop_PopUp_BG');
+    -unity-background-scale-mode: scale-to-fit;
+    justify-content: center;
 }
 
 .price-box {
-    width: 150px;
-    height: 60px;
+    width: 200px;
+    height: 100px;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    position: absolute;
+    bottom: 5%;
 }
 
 .price-text {
     font-size: 300%;
     color: rgb(114, 67, 37);
-    -unity-text-align: middle-right;
+    -unity-text-align: middle-center;
     width: 60%;
     height: 100%;
     -unity-font-style: bold;
     -unity-font: url('project://database/Assets/_GrandmaGreen/Art/UI/Fonts/Brevia/Brevia-Regular.otf?fileID=12800000&guid=5a1bfd81ed39ecd418c1c034114fcc3c&type=3#Brevia-Regular');
-    -unity-font-definition: url('project://database/Assets/_GrandmaGreen/Art/UI/Fonts/Brevia/Brevia-Regular%20SDF.asset?fileID=11400000&guid=b087b45a4ecf25d45a8614016e1dd393&type=2#Brevia-Regular SDF');
+    -unity-font-definition: url('project://database/Assets/_GrandmaGreen/Art/UI/Fonts/Brevia/Brevia-Regular%20SDF%201.asset?fileID=11400000&guid=ed23105535e2d5f4d800dcb305f98f80&type=2#Brevia-Regular SDF 1');
 }
 
 .price-icon {
@@ -74,8 +58,9 @@ de .title-box {
     margin-right: 5px;
     margin-top: 5px;
     margin-bottom: 5px;
-    width: 50px;
-    height: 50px;
+    width: 25%;
+    height: 100%;
+    -unity-background-scale-mode: scale-to-fit;
 }
 
 .currency-box {
@@ -105,26 +90,43 @@ de .title-box {
     -unity-text-align: middle-right;
     -unity-font-style: bold;
     -unity-font: url('project://database/Assets/_GrandmaGreen/Art/UI/Fonts/Brevia/Brevia-Regular.otf?fileID=12800000&guid=5a1bfd81ed39ecd418c1c034114fcc3c&type=3#Brevia-Regular');
+    -unity-font-definition: url('project://database/Assets/_GrandmaGreen/Art/UI/Fonts/Brevia/Brevia-Regular%20SDF%201.asset?fileID=11400000&guid=ed23105535e2d5f4d800dcb305f98f80&type=2#Brevia-Regular SDF 1');
 }
 
 .buy-button {
-    width: 300px;
+    width: 350px;
     height: 100px;
-    border-top-left-radius: 50px;
-    border-bottom-left-radius: 50px;
-    border-top-right-radius: 50px;
-    border-bottom-right-radius: 50px;
-    background-color: rgb(91, 163, 167);
-    -unity-font-style: bold;
-    color: rgb(255, 255, 255);
-    -unity-text-align: middle-center;
-    font-size: 500%;
+    background-color: rgba(91, 163, 167, 0);
+    background-image: url('project://database/Assets/_GrandmaGreen/Art/UI/Shopping/UI_Shop_PopUp_Buy%20Button.png?fileID=2800000&guid=515905bc0077a2944ba969dd1febe12a&type=3#UI_Shop_PopUp_Buy Button');
+    -unity-background-scale-mode: scale-to-fit;
+    position: absolute;
+    bottom: 15px;
+    left: 400px;
+    border-left-color: rgba(0, 0, 0, 0);
+    border-right-color: rgba(0, 0, 0, 0);
+    border-top-color: rgba(0, 0, 0, 0);
+    border-bottom-color: rgba(0, 0, 0, 0);
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
     -unity-font: url('project://database/Assets/_GrandmaGreen/Art/UI/Fonts/Brevia/Brevia-Regular.otf?fileID=12800000&guid=5a1bfd81ed39ecd418c1c034114fcc3c&type=3#Brevia-Regular');
-    -unity-font-definition: url('project://database/Assets/_GrandmaGreen/Art/UI/Fonts/Brevia/Brevia-Regular%20SDF.asset?fileID=11400000&guid=b087b45a4ecf25d45a8614016e1dd393&type=2#Brevia-Regular SDF');
+    -unity-font-definition: url('project://database/Assets/_GrandmaGreen/Art/UI/Fonts/Brevia/Brevia-Regular%20SDF%201.asset?fileID=11400000&guid=ed23105535e2d5f4d800dcb305f98f80&type=2#Brevia-Regular SDF 1');
 }
 
 .popup-element {
     display: flex;
+}
+
+.popup-info-text {
+    color: rgb(114, 67, 37);
+    -unity-font: url('project://database/Assets/_GrandmaGreen/Art/UI/Fonts/Brevia/Brevia-Regular.otf?fileID=12800000&guid=5a1bfd81ed39ecd418c1c034114fcc3c&type=3#Brevia-Regular');
+    -unity-font-style: normal;
+    font-size: 30px;
+    -unity-text-align: middle-center;
+    width: 100%;
+    height: 100%;
+    -unity-font-definition: url('project://database/Assets/_GrandmaGreen/Art/UI/Fonts/Brevia/Brevia-Regular%20SDF%201.asset?fileID=11400000&guid=ed23105535e2d5f4d800dcb305f98f80&type=2#Brevia-Regular SDF 1');
 }
 
 .increase-button {
@@ -149,17 +151,30 @@ de .title-box {
 }
 
 .item {
-    background-color: rgba(253, 247, 238, 255);
+    background-color: rgb(247, 238, 214);
     border-top-left-radius: 40px;
     border-bottom-left-radius: 40px;
     border-top-right-radius: 40px;
     border-bottom-right-radius: 40px;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 15px;
+    margin-right: 15px;
     margin-top: 0;
     margin-bottom: 0;
     justify-content: center;
     padding-top: 10px;
     padding-bottom: 30px;
     align-items: center;
+    background-image: none;
+    -unity-background-scale-mode: scale-to-fit;
+    height: 340px;
+    width: 250px;
+}
+
+.size-icon {
+    position: absolute;
+    left: 22%;
+    top: 90%;
+    width: 80px;
+    height: 80px;
+    background-image: resource('UI_Inventory_Badge_S');
 }

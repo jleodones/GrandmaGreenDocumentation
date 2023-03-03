@@ -16,7 +16,7 @@ namespace GrandmaGreen.Entities
     /// <summary>
     /// Golem AI Controller driven by behaviour tree
     /// </summary>
-    public class GolemController : MonoBehaviour, IPathAgent
+    public class GolemController : MonoBehaviour, IPathAgent, IEmotionAgent
     {
         [Header("Entity References")]
         public EntityPermissions permissions;
@@ -75,6 +75,8 @@ namespace GrandmaGreen.Entities
             EventManager.instance.EVENT_GOLEM_DO_TASK += UpdateTaskState;
             EventManager.instance.EVENT_GOLEM_ENABLE += EnableGolem;
             EventManager.instance.EVENT_GOLEM_DISABLE += DisableGolem;
+            EventManager.instance.EVENT_CHA_CHANGE_EMO += ChangeEmotion;
+            EventManager.instance.EVENT_CHA_CHANGE_EMO_INTIME += ChangeEmotionInTime;
 
             // create our behaviour tree and get it's blackboard
             behaviorTree = CreateBehaviourTree();
@@ -100,6 +102,8 @@ namespace GrandmaGreen.Entities
             EventManager.instance.EVENT_GOLEM_DO_TASK -= UpdateTaskState;
             EventManager.instance.EVENT_GOLEM_ENABLE -= EnableGolem;
             EventManager.instance.EVENT_GOLEM_DISABLE -= DisableGolem;
+            EventManager.instance.EVENT_CHA_CHANGE_EMO -= ChangeEmotion;
+            EventManager.instance.EVENT_CHA_CHANGE_EMO_INTIME -= ChangeEmotionInTime;
             StopBehaviorTree();
         }
 
@@ -278,6 +282,7 @@ namespace GrandmaGreen.Entities
             behaviorTree.Blackboard.Set("isInteract", m_isDragging);
             m_originalPos = transform.position;
             GetComponentInChildren<GolemMenu>().ToggleMenu(false);
+            animator.SetBool("ISDRAGGING", m_isDragging);
         }
 
         public void ExitDragAttempt(bool attempt)
@@ -285,6 +290,7 @@ namespace GrandmaGreen.Entities
             m_isDragging = false;
             m_isInteracting = false;
             behaviorTree.Blackboard.Set("isInteract", false);
+            animator.SetBool("ISDRAGGING", m_isDragging);
             if (!attempt)
             {
                 transform.position = m_originalPos;
@@ -501,6 +507,32 @@ namespace GrandmaGreen.Entities
         {
             return transform.position;
         }
+        #endregion
+
+        #region Emotion service
+       public void ChangeEmotion(ushort CharID, ushort EmoID)
+        {
+            if (CharID == (ushort)id)
+            {
+                animator.SetInteger("EXPRESSION", EmoID);
+            }
+        }
+
+        public void ChangeEmotionInTime(ushort CharID, ushort EmoID, float time)
+        {
+            if (CharID == (ushort)id)
+            {
+                StartCoroutine(ChangeEmotionInTimeCoroutine(EmoID, time));
+            }
+        }
+
+        IEnumerator ChangeEmotionInTimeCoroutine(ushort EmoID, float time)
+        {
+            animator.SetInteger("EXPRESSION", EmoID);
+            yield return new WaitForSeconds(time);
+            animator.SetInteger("EXPRESSION", 0);
+        }
+
         #endregion
 
         #region Utility

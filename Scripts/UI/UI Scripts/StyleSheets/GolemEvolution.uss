@@ -1,0 +1,42 @@
+#shootingStarsBGContainer {
+    transition-duration: 800ms;
+    transition-timing-function: ease-out;
+}
+
+#shootingStarTrailContainer {
+    transition-duration: 800ms;
+    transition-timing-function: ease-out;
+    transition-delay: 400ms;
+}
+
+#golemSprite {
+    transition-duration: 800ms;
+    transition-delay: 400ms;
+    transition-timing-function: ease-out;
+}
+
+#shootingStarsFGContainer {
+    transition-duration: 800ms;
+    transition-delay: 1400ms;
+    transition-timing-function: ease-out;
+}
+
+#title {
+    transition-duration: 250ms;
+}
+
+#golemName {
+    transition-duration: 250ms;
+}
+
+.pushIn {
+    translate: 100% 0;
+}
+
+.largeText {
+    scale: 1.5 1.5;
+}
+
+.smallText {
+    scale: 0.5 0.5;
+}

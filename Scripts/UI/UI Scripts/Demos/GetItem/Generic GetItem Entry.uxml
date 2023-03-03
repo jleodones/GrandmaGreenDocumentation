@@ -1,0 +1,10 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/_GrandmaGreen/Scripts/UI/UI%20Scripts/Demos/GetItem/GetItemStyles.uss?fileID=7433441132597879392&amp;guid=7bc1663e86160fc4caba3a0dce9f63d6&amp;type=3#GetItemStyles" />
+    <ui:VisualElement name="rootVisualElement" class="item-container">
+        <ui:VisualElement name="entryBG" class="item-container-bg">
+            <ui:VisualElement name="entryImage" class="item-image" style="background-image: resource(&apos;Seed Packets/SEED_Blueberry&apos;);" />
+        </ui:VisualElement>
+        <ui:Label tabindex="-1" text="Blueberry Seeds" display-tooltip-when-elided="true" name="entryName" class="item-name-text" />
+        <ui:Label tabindex="-1" text="x2" display-tooltip-when-elided="true" name="entryAmount" class="item-amount-container" />
+    </ui:VisualElement>
+</ui:UXML>

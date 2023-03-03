@@ -12,6 +12,7 @@ namespace GrandmaGreen.UI.Golems
         private VisualElement cloudsB;
         private VisualElement leftCloud;
         private VisualElement rightCloud;
+        private VisualElement golemContainer;
         private VisualElement golem;
         private Label title;
         private Label golemName;
@@ -23,6 +24,7 @@ namespace GrandmaGreen.UI.Golems
             cloudsB = m_rootVisualElement.Q<VisualElement>("cloudsBG2");
             leftCloud = m_rootVisualElement.Q<VisualElement>("leftCloud");
             rightCloud = m_rootVisualElement.Q<VisualElement>("rightCloud");
+            golemContainer = m_rootVisualElement.Q<VisualElement>("golemSpriteContainer");
             golem = m_rootVisualElement.Q<VisualElement>("golemSprite");
             title = m_rootVisualElement.Q<Label>("title");
             golemName = m_rootVisualElement.Q<Label>("golemName");
@@ -53,7 +55,7 @@ namespace GrandmaGreen.UI.Golems
             string g = ((CharacterId)golemID).ToString();
 
             Sprite s = Resources.Load<Sprite>("Baby Golems/CHA_" + g + "_Baby");
-            golem.style.backgroundImage = new StyleBackground(s);
+            //golem.style.backgroundImage = new StyleBackground(s);
             golemName.text = "Baby " + g;
             
             OpenUI();
@@ -62,33 +64,51 @@ namespace GrandmaGreen.UI.Golems
         public override void UIOpenLogic()
         {
             base.UIOpenLogic();
-            
+
             //Start Animations
-            m_rootVisualElement.schedule.Execute(() => cloudsA.ToggleInClassList("floatClouds")).StartingIn(100);
-            m_rootVisualElement.schedule.Execute(() => cloudsB.ToggleInClassList("floatClouds")).StartingIn(100);
-            m_rootVisualElement.schedule.Execute(() => leftCloud.ToggleInClassList("pushLeftCloud")).StartingIn(500);
-            m_rootVisualElement.schedule.Execute(() => rightCloud.ToggleInClassList("pushRightCloud")).StartingIn(500);
-            golem.RegisterCallback<TransitionEndEvent>(BounceGolem);
-            m_rootVisualElement.schedule.Execute(() => golem.ToggleInClassList("pushGolem")).StartingIn(100);
+            golemContainer.RegisterCallback<TransitionEndEvent>(BounceGolem);
+            golemContainer.style.bottom = Length.Percent(125);
+
             title.RegisterCallback<TransitionEndEvent>(LargeText);
-            m_rootVisualElement.schedule.Execute(() => title.ToggleInClassList("smallText")).StartingIn(100);
-            m_rootVisualElement.schedule.Execute(() => golemName.ToggleInClassList("smallText")).StartingIn(100);
-            description.style.transitionProperty = new List<StylePropertyName> { "opacity" };
-            description.style.transitionDuration = new List<TimeValue> { new TimeValue(200, TimeUnit.Millisecond) };
-            description.style.opacity = description.resolvedStyle.opacity + 100;
+            m_rootVisualElement.schedule.Execute(() => title.ToggleInClassList("smallText")).StartingIn(504);
+            m_rootVisualElement.schedule.Execute(() => golemName.ToggleInClassList("smallText")).StartingIn(503);
+
+            m_rootVisualElement.schedule.Execute(() => cloudsB.ToggleInClassList("floatClouds")).StartingIn(501);
+            m_rootVisualElement.schedule.Execute(() => cloudsA.ToggleInClassList("floatClouds")).StartingIn(502);
+
+            m_rootVisualElement.schedule.Execute(() => leftCloud.ToggleInClassList("pushLeftCloud")).StartingIn(401);
+            m_rootVisualElement.schedule.Execute(() => rightCloud.ToggleInClassList("pushRightCloud")).StartingIn(400);
+
+            description.RegisterCallback<TransitionEndEvent>(ChangeOpacity);
+            m_rootVisualElement.schedule.Execute(() =>  description.style.opacity = description.resolvedStyle.opacity + .02f).StartingIn(300);
         }
 
         public void CloseUIHandler(ClickEvent ce)
         {
             CloseUI();
-            
-            golem.UnregisterCallback<TransitionEndEvent>(BounceGolem);
+            golemContainer.style.bottom = Length.Percent(-50);
+            cloudsB.ToggleInClassList("floatClouds");
+            cloudsA.ToggleInClassList("floatClouds");
+            leftCloud.ToggleInClassList("pushLeftCloud");
+            rightCloud.ToggleInClassList("pushRightCloud");
+            golemContainer.UnregisterCallback<TransitionEndEvent>(BounceGolem);
+            description.UnregisterCallback<TransitionEndEvent>(ChangeOpacity);
+            description.style.opacity = description.resolvedStyle.opacity * 0;
         }
 
         private void BounceGolem(TransitionEndEvent evt)
         {
-            golem.ToggleInClassList("bounceGolem");
-            
+            golemContainer.RegisterCallback<TransitionEndEvent>(BounceGolem);
+            golemContainer.ToggleInClassList("bounceGolem");
+        }
+
+        private void ChangeOpacity(TransitionEndEvent evt)
+        {
+            description.style.opacity = description.resolvedStyle.opacity + .02f;
+            if(description.style.opacity == 1)
+            {
+                description.UnregisterCallback<TransitionEndEvent>(ChangeOpacity);
+            }
         }
 
         private void LargeText(TransitionEndEvent evt)
