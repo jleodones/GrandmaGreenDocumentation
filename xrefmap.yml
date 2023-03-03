@@ -5071,6 +5071,32 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Entities.GolemController.CancelPath
   nameWithType: GolemController.CancelPath
+- uid: GrandmaGreen.Entities.GolemController.ChangeEmotion(System.UInt16,System.UInt16)
+  name: ChangeEmotion(UInt16, UInt16)
+  href: api/GrandmaGreen.Entities.GolemController.html#GrandmaGreen_Entities_GolemController_ChangeEmotion_System_UInt16_System_UInt16_
+  commentId: M:GrandmaGreen.Entities.GolemController.ChangeEmotion(System.UInt16,System.UInt16)
+  fullName: GrandmaGreen.Entities.GolemController.ChangeEmotion(System.UInt16, System.UInt16)
+  nameWithType: GolemController.ChangeEmotion(UInt16, UInt16)
+- uid: GrandmaGreen.Entities.GolemController.ChangeEmotion*
+  name: ChangeEmotion
+  href: api/GrandmaGreen.Entities.GolemController.html#GrandmaGreen_Entities_GolemController_ChangeEmotion_
+  commentId: Overload:GrandmaGreen.Entities.GolemController.ChangeEmotion
+  isSpec: "True"
+  fullName: GrandmaGreen.Entities.GolemController.ChangeEmotion
+  nameWithType: GolemController.ChangeEmotion
+- uid: GrandmaGreen.Entities.GolemController.ChangeEmotionInTime(System.UInt16,System.UInt16,System.Single)
+  name: ChangeEmotionInTime(UInt16, UInt16, Single)
+  href: api/GrandmaGreen.Entities.GolemController.html#GrandmaGreen_Entities_GolemController_ChangeEmotionInTime_System_UInt16_System_UInt16_System_Single_
+  commentId: M:GrandmaGreen.Entities.GolemController.ChangeEmotionInTime(System.UInt16,System.UInt16,System.Single)
+  fullName: GrandmaGreen.Entities.GolemController.ChangeEmotionInTime(System.UInt16, System.UInt16, System.Single)
+  nameWithType: GolemController.ChangeEmotionInTime(UInt16, UInt16, Single)
+- uid: GrandmaGreen.Entities.GolemController.ChangeEmotionInTime*
+  name: ChangeEmotionInTime
+  href: api/GrandmaGreen.Entities.GolemController.html#GrandmaGreen_Entities_GolemController_ChangeEmotionInTime_
+  commentId: Overload:GrandmaGreen.Entities.GolemController.ChangeEmotionInTime
+  isSpec: "True"
+  fullName: GrandmaGreen.Entities.GolemController.ChangeEmotionInTime
+  nameWithType: GolemController.ChangeEmotionInTime
 - uid: GrandmaGreen.Entities.GolemController.CheckPath(int2)
   name: CheckPath(int2)
   href: api/GrandmaGreen.Entities.GolemController.html#GrandmaGreen_Entities_GolemController_CheckPath_int2_
@@ -5661,19 +5687,19 @@ references:
   commentId: F:GrandmaGreen.Entities.GolemCrowdController.pointerState
   fullName: GrandmaGreen.Entities.GolemCrowdController.pointerState
   nameWithType: GolemCrowdController.pointerState
-- uid: GrandmaGreen.Entities.GolemCrowdController.SpawnTulipGolem
-  name: SpawnTulipGolem()
-  href: api/GrandmaGreen.Entities.GolemCrowdController.html#GrandmaGreen_Entities_GolemCrowdController_SpawnTulipGolem
-  commentId: M:GrandmaGreen.Entities.GolemCrowdController.SpawnTulipGolem
-  fullName: GrandmaGreen.Entities.GolemCrowdController.SpawnTulipGolem()
-  nameWithType: GolemCrowdController.SpawnTulipGolem()
-- uid: GrandmaGreen.Entities.GolemCrowdController.SpawnTulipGolem*
-  name: SpawnTulipGolem
-  href: api/GrandmaGreen.Entities.GolemCrowdController.html#GrandmaGreen_Entities_GolemCrowdController_SpawnTulipGolem_
-  commentId: Overload:GrandmaGreen.Entities.GolemCrowdController.SpawnTulipGolem
+- uid: GrandmaGreen.Entities.GolemCrowdController.SpawnGolem
+  name: SpawnGolem()
+  href: api/GrandmaGreen.Entities.GolemCrowdController.html#GrandmaGreen_Entities_GolemCrowdController_SpawnGolem
+  commentId: M:GrandmaGreen.Entities.GolemCrowdController.SpawnGolem
+  fullName: GrandmaGreen.Entities.GolemCrowdController.SpawnGolem()
+  nameWithType: GolemCrowdController.SpawnGolem()
+- uid: GrandmaGreen.Entities.GolemCrowdController.SpawnGolem*
+  name: SpawnGolem
+  href: api/GrandmaGreen.Entities.GolemCrowdController.html#GrandmaGreen_Entities_GolemCrowdController_SpawnGolem_
+  commentId: Overload:GrandmaGreen.Entities.GolemCrowdController.SpawnGolem
   isSpec: "True"
-  fullName: GrandmaGreen.Entities.GolemCrowdController.SpawnTulipGolem
-  nameWithType: GolemCrowdController.SpawnTulipGolem
+  fullName: GrandmaGreen.Entities.GolemCrowdController.SpawnGolem
+  nameWithType: GolemCrowdController.SpawnGolem
 - uid: GrandmaGreen.Entities.GolemCrowdController.theGolem
   name: theGolem
   href: api/GrandmaGreen.Entities.GolemCrowdController.html#GrandmaGreen_Entities_GolemCrowdController_theGolem
@@ -7636,6 +7662,19 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Garden.GardenAreaController.ExitCustomizationMode
   nameWithType: GardenAreaController.ExitCustomizationMode
+- uid: GrandmaGreen.Garden.GardenAreaController.ExtensionSaverTest
+  name: ExtensionSaverTest()
+  href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_ExtensionSaverTest
+  commentId: M:GrandmaGreen.Garden.GardenAreaController.ExtensionSaverTest
+  fullName: GrandmaGreen.Garden.GardenAreaController.ExtensionSaverTest()
+  nameWithType: GardenAreaController.ExtensionSaverTest()
+- uid: GrandmaGreen.Garden.GardenAreaController.ExtensionSaverTest*
+  name: ExtensionSaverTest
+  href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_ExtensionSaverTest_
+  commentId: Overload:GrandmaGreen.Garden.GardenAreaController.ExtensionSaverTest
+  isSpec: "True"
+  fullName: GrandmaGreen.Garden.GardenAreaController.ExtensionSaverTest
+  nameWithType: GardenAreaController.ExtensionSaverTest
 - uid: GrandmaGreen.Garden.GardenAreaController.FertilizationBonus
   name: FertilizationBonus
   href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_FertilizationBonus
@@ -13993,6 +14032,103 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.UI.Golems.GolemBirthUIDisplay.Unload
   nameWithType: GolemBirthUIDisplay.Unload
+- uid: GrandmaGreen.UI.Golems.GolemEvolutionUIDisplay
+  name: GolemEvolutionUIDisplay
+  href: api/GrandmaGreen.UI.Golems.GolemEvolutionUIDisplay.html
+  commentId: T:GrandmaGreen.UI.Golems.GolemEvolutionUIDisplay
+  fullName: GrandmaGreen.UI.Golems.GolemEvolutionUIDisplay
+  nameWithType: GolemEvolutionUIDisplay
+- uid: GrandmaGreen.UI.Golems.GolemEvolutionUIDisplay.CloseUIHandler(ClickEvent)
+  name: CloseUIHandler(ClickEvent)
+  href: api/GrandmaGreen.UI.Golems.GolemEvolutionUIDisplay.html#GrandmaGreen_UI_Golems_GolemEvolutionUIDisplay_CloseUIHandler_ClickEvent_
+  commentId: M:GrandmaGreen.UI.Golems.GolemEvolutionUIDisplay.CloseUIHandler(ClickEvent)
+  fullName: GrandmaGreen.UI.Golems.GolemEvolutionUIDisplay.CloseUIHandler(ClickEvent)
+  nameWithType: GolemEvolutionUIDisplay.CloseUIHandler(ClickEvent)
+- uid: GrandmaGreen.UI.Golems.GolemEvolutionUIDisplay.CloseUIHandler*
+  name: CloseUIHandler
+  href: api/GrandmaGreen.UI.Golems.GolemEvolutionUIDisplay.html#GrandmaGreen_UI_Golems_GolemEvolutionUIDisplay_CloseUIHandler_
+  commentId: Overload:GrandmaGreen.UI.Golems.GolemEvolutionUIDisplay.CloseUIHandler
+  isSpec: "True"
+  fullName: GrandmaGreen.UI.Golems.GolemEvolutionUIDisplay.CloseUIHandler
+  nameWithType: GolemEvolutionUIDisplay.CloseUIHandler
+- uid: GrandmaGreen.UI.Golems.GolemEvolutionUIDisplay.Load
+  name: Load()
+  href: api/GrandmaGreen.UI.Golems.GolemEvolutionUIDisplay.html#GrandmaGreen_UI_Golems_GolemEvolutionUIDisplay_Load
+  commentId: M:GrandmaGreen.UI.Golems.GolemEvolutionUIDisplay.Load
+  fullName: GrandmaGreen.UI.Golems.GolemEvolutionUIDisplay.Load()
+  nameWithType: GolemEvolutionUIDisplay.Load()
+- uid: GrandmaGreen.UI.Golems.GolemEvolutionUIDisplay.Load*
+  name: Load
+  href: api/GrandmaGreen.UI.Golems.GolemEvolutionUIDisplay.html#GrandmaGreen_UI_Golems_GolemEvolutionUIDisplay_Load_
+  commentId: Overload:GrandmaGreen.UI.Golems.GolemEvolutionUIDisplay.Load
+  isSpec: "True"
+  fullName: GrandmaGreen.UI.Golems.GolemEvolutionUIDisplay.Load
+  nameWithType: GolemEvolutionUIDisplay.Load
+- uid: GrandmaGreen.UI.Golems.GolemEvolutionUIDisplay.OpenUIHandler(System.UInt16,Vector3)
+  name: OpenUIHandler(UInt16, Vector3)
+  href: api/GrandmaGreen.UI.Golems.GolemEvolutionUIDisplay.html#GrandmaGreen_UI_Golems_GolemEvolutionUIDisplay_OpenUIHandler_System_UInt16_Vector3_
+  commentId: M:GrandmaGreen.UI.Golems.GolemEvolutionUIDisplay.OpenUIHandler(System.UInt16,Vector3)
+  fullName: GrandmaGreen.UI.Golems.GolemEvolutionUIDisplay.OpenUIHandler(System.UInt16, Vector3)
+  nameWithType: GolemEvolutionUIDisplay.OpenUIHandler(UInt16, Vector3)
+- uid: GrandmaGreen.UI.Golems.GolemEvolutionUIDisplay.OpenUIHandler*
+  name: OpenUIHandler
+  href: api/GrandmaGreen.UI.Golems.GolemEvolutionUIDisplay.html#GrandmaGreen_UI_Golems_GolemEvolutionUIDisplay_OpenUIHandler_
+  commentId: Overload:GrandmaGreen.UI.Golems.GolemEvolutionUIDisplay.OpenUIHandler
+  isSpec: "True"
+  fullName: GrandmaGreen.UI.Golems.GolemEvolutionUIDisplay.OpenUIHandler
+  nameWithType: GolemEvolutionUIDisplay.OpenUIHandler
+- uid: GrandmaGreen.UI.Golems.GolemEvolutionUIDisplay.Start
+  name: Start()
+  href: api/GrandmaGreen.UI.Golems.GolemEvolutionUIDisplay.html#GrandmaGreen_UI_Golems_GolemEvolutionUIDisplay_Start
+  commentId: M:GrandmaGreen.UI.Golems.GolemEvolutionUIDisplay.Start
+  fullName: GrandmaGreen.UI.Golems.GolemEvolutionUIDisplay.Start()
+  nameWithType: GolemEvolutionUIDisplay.Start()
+- uid: GrandmaGreen.UI.Golems.GolemEvolutionUIDisplay.Start*
+  name: Start
+  href: api/GrandmaGreen.UI.Golems.GolemEvolutionUIDisplay.html#GrandmaGreen_UI_Golems_GolemEvolutionUIDisplay_Start_
+  commentId: Overload:GrandmaGreen.UI.Golems.GolemEvolutionUIDisplay.Start
+  isSpec: "True"
+  fullName: GrandmaGreen.UI.Golems.GolemEvolutionUIDisplay.Start
+  nameWithType: GolemEvolutionUIDisplay.Start
+- uid: GrandmaGreen.UI.Golems.GolemEvolutionUIDisplay.TestHandler(System.UInt16)
+  name: TestHandler(UInt16)
+  href: api/GrandmaGreen.UI.Golems.GolemEvolutionUIDisplay.html#GrandmaGreen_UI_Golems_GolemEvolutionUIDisplay_TestHandler_System_UInt16_
+  commentId: M:GrandmaGreen.UI.Golems.GolemEvolutionUIDisplay.TestHandler(System.UInt16)
+  fullName: GrandmaGreen.UI.Golems.GolemEvolutionUIDisplay.TestHandler(System.UInt16)
+  nameWithType: GolemEvolutionUIDisplay.TestHandler(UInt16)
+- uid: GrandmaGreen.UI.Golems.GolemEvolutionUIDisplay.TestHandler*
+  name: TestHandler
+  href: api/GrandmaGreen.UI.Golems.GolemEvolutionUIDisplay.html#GrandmaGreen_UI_Golems_GolemEvolutionUIDisplay_TestHandler_
+  commentId: Overload:GrandmaGreen.UI.Golems.GolemEvolutionUIDisplay.TestHandler
+  isSpec: "True"
+  fullName: GrandmaGreen.UI.Golems.GolemEvolutionUIDisplay.TestHandler
+  nameWithType: GolemEvolutionUIDisplay.TestHandler
+- uid: GrandmaGreen.UI.Golems.GolemEvolutionUIDisplay.UIOpenLogic
+  name: UIOpenLogic()
+  href: api/GrandmaGreen.UI.Golems.GolemEvolutionUIDisplay.html#GrandmaGreen_UI_Golems_GolemEvolutionUIDisplay_UIOpenLogic
+  commentId: M:GrandmaGreen.UI.Golems.GolemEvolutionUIDisplay.UIOpenLogic
+  fullName: GrandmaGreen.UI.Golems.GolemEvolutionUIDisplay.UIOpenLogic()
+  nameWithType: GolemEvolutionUIDisplay.UIOpenLogic()
+- uid: GrandmaGreen.UI.Golems.GolemEvolutionUIDisplay.UIOpenLogic*
+  name: UIOpenLogic
+  href: api/GrandmaGreen.UI.Golems.GolemEvolutionUIDisplay.html#GrandmaGreen_UI_Golems_GolemEvolutionUIDisplay_UIOpenLogic_
+  commentId: Overload:GrandmaGreen.UI.Golems.GolemEvolutionUIDisplay.UIOpenLogic
+  isSpec: "True"
+  fullName: GrandmaGreen.UI.Golems.GolemEvolutionUIDisplay.UIOpenLogic
+  nameWithType: GolemEvolutionUIDisplay.UIOpenLogic
+- uid: GrandmaGreen.UI.Golems.GolemEvolutionUIDisplay.Unload
+  name: Unload()
+  href: api/GrandmaGreen.UI.Golems.GolemEvolutionUIDisplay.html#GrandmaGreen_UI_Golems_GolemEvolutionUIDisplay_Unload
+  commentId: M:GrandmaGreen.UI.Golems.GolemEvolutionUIDisplay.Unload
+  fullName: GrandmaGreen.UI.Golems.GolemEvolutionUIDisplay.Unload()
+  nameWithType: GolemEvolutionUIDisplay.Unload()
+- uid: GrandmaGreen.UI.Golems.GolemEvolutionUIDisplay.Unload*
+  name: Unload
+  href: api/GrandmaGreen.UI.Golems.GolemEvolutionUIDisplay.html#GrandmaGreen_UI_Golems_GolemEvolutionUIDisplay_Unload_
+  commentId: Overload:GrandmaGreen.UI.Golems.GolemEvolutionUIDisplay.Unload
+  isSpec: "True"
+  fullName: GrandmaGreen.UI.Golems.GolemEvolutionUIDisplay.Unload
+  nameWithType: GolemEvolutionUIDisplay.Unload
 - uid: GrandmaGreen.UI.Golems.GolemMenu
   name: GolemMenu
   href: api/GrandmaGreen.UI.Golems.GolemMenu.html

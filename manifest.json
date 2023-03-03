@@ -892,7 +892,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.Entities.GolemController.html",
-          "hash": "4zwLvtOnNX9Si1i613d3JRm6TWhLdavjd69Hstq7ri8="
+          "hash": "RKcf8M6y29lTN40TjP/9KZTQhOz8kb6qtj1pDH7qEAM="
         }
       },
       "is_incremental": false,
@@ -904,7 +904,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.Entities.GolemCrowdController.html",
-          "hash": "4eax3lVvr7lbmK95hJL8lcMz55CnVMOJLXPQ4d1AUis="
+          "hash": "skyGNfdJxf+SixSi+QjZgjs039tcDbFES1s5ayLJHdI="
         }
       },
       "is_incremental": false,
@@ -1108,7 +1108,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.Garden.GardenAreaController.html",
-          "hash": "jpgVly4Ks1sr4YbjKXCP63TAlxYmrVeVE7uXWj2TyGI="
+          "hash": "e+AvVy6iHoMc+QFGcOnjfJWNao5+9gDJjnapeh7fTfo="
         }
       },
       "is_incremental": false,
@@ -2184,6 +2184,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/GrandmaGreen.UI.Golems.GolemEvolutionUIDisplay.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GrandmaGreen.UI.Golems.GolemEvolutionUIDisplay.html",
+          "hash": "HMbAzKsTAtbdyb4enIA6jVllKv8t6cfq+TnluWoFBtM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/GrandmaGreen.UI.Golems.GolemMenu.yml",
       "output": {
         ".html": {
@@ -2200,7 +2212,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.UI.Golems.html",
-          "hash": "GwprBTPqpFv/C1QDxs7RW6gjtOYQh1VEPxdIj+ZSVsU="
+          "hash": "MFRO7JtVrWStjUGOH4XHklJOD9HnQXkxbwx48Ql2WBw="
         }
       },
       "is_incremental": false,
@@ -2452,7 +2464,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.UI.UIDisplayBase.html",
-          "hash": "cm3A2W4euPgBeU4dQmviDWX8LJ0DhXWkM8MHW8cifVs="
+          "hash": "ylO+/Cqyy1VT2WEWmqUVI4WibBIFQKLYuoHTy7KDTA8="
         }
       },
       "is_incremental": false,
@@ -2524,7 +2536,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "eqlSNS3/3Z+VKBszuP8KYsReWSdrzBWwCeFA4cVBYrE="
+          "hash": "hY4x8b+FvgvPOuwv+SHIamk5sgJKeQT244U9mo0wFKg="
         }
       },
       "is_incremental": false,
@@ -2633,7 +2645,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 208,
+          "total_file_count": 209,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
