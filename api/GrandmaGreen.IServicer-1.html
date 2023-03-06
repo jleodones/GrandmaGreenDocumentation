@@ -182,7 +182,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">static List&lt;T&gt; s_activeServices { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">static T[] s_activeServices { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -194,7 +194,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">List</span>&lt;T&gt;</td>
+        <td>T[]</td>
         <td></td>
       </tr>
     </tbody>
@@ -204,12 +204,12 @@
   
   
   <a id="GrandmaGreen_IServicer_1_DeregisterService_" data-uid="GrandmaGreen.IServicer`1.DeregisterService*"></a>
-  <h4 id="GrandmaGreen_IServicer_1_DeregisterService__0_" data-uid="GrandmaGreen.IServicer`1.DeregisterService(`0)">DeregisterService(T)</h4>
+  <h4 id="GrandmaGreen_IServicer_1_DeregisterService__0_System_Int32_" data-uid="GrandmaGreen.IServicer`1.DeregisterService(`0,System.Int32)">DeregisterService(T, Int32)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void DeregisterService(T service)</code></pre>
+    <pre><code class="lang-csharp hljs">void DeregisterService(T service, int index)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -226,17 +226,22 @@
         <td><span class="parametername">service</span></td>
         <td></td>
       </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">index</span></td>
+        <td></td>
+      </tr>
     </tbody>
   </table>
   
   
   <a id="GrandmaGreen_IServicer_1_RegisterService_" data-uid="GrandmaGreen.IServicer`1.RegisterService*"></a>
-  <h4 id="GrandmaGreen_IServicer_1_RegisterService__0_" data-uid="GrandmaGreen.IServicer`1.RegisterService(`0)">RegisterService(T)</h4>
+  <h4 id="GrandmaGreen_IServicer_1_RegisterService__0_System_Int32_" data-uid="GrandmaGreen.IServicer`1.RegisterService(`0,System.Int32)">RegisterService(T, Int32)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void RegisterService(T service)</code></pre>
+    <pre><code class="lang-csharp hljs">void RegisterService(T service, int index)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -251,6 +256,11 @@
       <tr>
         <td><span class="xref">T</span></td>
         <td><span class="parametername">service</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">index</span></td>
         <td></td>
       </tr>
     </tbody>

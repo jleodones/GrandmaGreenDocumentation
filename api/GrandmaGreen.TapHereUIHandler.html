@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class GrandmaGreenGameState
+    <title>Class TapHereUIHandler
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class GrandmaGreenGameState
+    <meta name="title" content="Class TapHereUIHandler
    ">
     <meta name="generator" content="docfx 2.59.4.0">
     
@@ -77,34 +77,34 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="GrandmaGreen.GrandmaGreenGameState">
+            <article class="content wrap" id="_content" data-uid="GrandmaGreen.TapHereUIHandler">
   
   
-  <h1 id="GrandmaGreen_GrandmaGreenGameState" data-uid="GrandmaGreen.GrandmaGreenGameState" class="text-break">Class GrandmaGreenGameState
+  <h1 id="GrandmaGreen_TapHereUIHandler" data-uid="GrandmaGreen.TapHereUIHandler" class="text-break">Class TapHereUIHandler
   </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Object</a></div>
-    <div class="level1"><span class="xref">GrandmaGreenGameState</span></div>
+    <div class="level1"><span class="xref">TapHereUIHandler</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="GrandmaGreen.html">GrandmaGreen</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
-  <h5 id="GrandmaGreen_GrandmaGreenGameState_syntax">Syntax</h5>
+  <h5 id="GrandmaGreen_TapHereUIHandler_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class GrandmaGreenGameState : MonoBehaviour</code></pre>
+    <pre><code class="lang-csharp hljs">public class TapHereUIHandler : MonoBehaviour</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   
   
-  <h4 id="GrandmaGreen_GrandmaGreenGameState_s_Instance" data-uid="GrandmaGreen.GrandmaGreenGameState.s_Instance">s_Instance</h4>
+  <h4 id="GrandmaGreen_TapHereUIHandler_panelSettings" data-uid="GrandmaGreen.TapHereUIHandler.panelSettings">panelSettings</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected static GrandmaGreenGameState s_Instance</code></pre>
+    <pre><code class="lang-csharp hljs">public PanelSettings panelSettings</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -116,24 +116,21 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="GrandmaGreen.GrandmaGreenGameState.html">GrandmaGreenGameState</a></td>
+        <td><span class="xref">PanelSettings</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h3 id="properties">Properties
-  </h3>
   
   
-  <a id="GrandmaGreen_GrandmaGreenGameState_ActiveArea_" data-uid="GrandmaGreen.GrandmaGreenGameState.ActiveArea*"></a>
-  <h4 id="GrandmaGreen_GrandmaGreenGameState_ActiveArea" data-uid="GrandmaGreen.GrandmaGreenGameState.ActiveArea">ActiveArea</h4>
+  <h4 id="GrandmaGreen_TapHereUIHandler_pulseTime" data-uid="GrandmaGreen.TapHereUIHandler.pulseTime">pulseTime</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static AreaController ActiveArea { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public float pulseTime</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
+  <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -143,22 +140,21 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="GrandmaGreen.AreaController.html">AreaController</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">Single</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="GrandmaGreen_GrandmaGreenGameState_CurrentLocation_" data-uid="GrandmaGreen.GrandmaGreenGameState.CurrentLocation*"></a>
-  <h4 id="GrandmaGreen_GrandmaGreenGameState_CurrentLocation" data-uid="GrandmaGreen.GrandmaGreenGameState.CurrentLocation">CurrentLocation</h4>
+  <h4 id="GrandmaGreen_TapHereUIHandler_tapHereCanvas" data-uid="GrandmaGreen.TapHereUIHandler.tapHereCanvas">tapHereCanvas</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static SCENES CurrentLocation { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Canvas tapHereCanvas</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
+  <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -168,7 +164,55 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">SCENES</span></td>
+        <td><span class="xref">Canvas</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="GrandmaGreen_TapHereUIHandler_tapHereObject" data-uid="GrandmaGreen.TapHereUIHandler.tapHereObject">tapHereObject</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Transform tapHereObject</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Transform</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="GrandmaGreen_TapHereUIHandler_tapHereUI" data-uid="GrandmaGreen.TapHereUIHandler.tapHereUI">tapHereUI</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RectTransform tapHereUI</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">RectTransform</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -177,13 +221,13 @@
   </h3>
   
   
-  <a id="GrandmaGreen_GrandmaGreenGameState_GameSceneTransition_" data-uid="GrandmaGreen.GrandmaGreenGameState.GameSceneTransition*"></a>
-  <h4 id="GrandmaGreen_GrandmaGreenGameState_GameSceneTransition_SCENES_" data-uid="GrandmaGreen.GrandmaGreenGameState.GameSceneTransition(SCENES)">GameSceneTransition(SCENES)</h4>
+  <a id="GrandmaGreen_TapHereUIHandler_SetTapHerePosition_" data-uid="GrandmaGreen.TapHereUIHandler.SetTapHerePosition*"></a>
+  <h4 id="GrandmaGreen_TapHereUIHandler_SetTapHerePosition_Vector2_" data-uid="GrandmaGreen.TapHereUIHandler.SetTapHerePosition(Vector2)">SetTapHerePosition(Vector2)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void GameSceneTransition(SCENES scene)</code></pre>
+    <pre><code class="lang-csharp hljs">public void SetTapHerePosition(Vector2 screenPosition)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -196,8 +240,67 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">SCENES</span></td>
-        <td><span class="parametername">scene</span></td>
+        <td><span class="xref">Vector2</span></td>
+        <td><span class="parametername">screenPosition</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="GrandmaGreen_TapHereUIHandler_SetTapHerePosition_" data-uid="GrandmaGreen.TapHereUIHandler.SetTapHerePosition*"></a>
+  <h4 id="GrandmaGreen_TapHereUIHandler_SetTapHerePosition_Vector3_" data-uid="GrandmaGreen.TapHereUIHandler.SetTapHerePosition(Vector3)">SetTapHerePosition(Vector3)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetTapHerePosition(Vector3 worldPosition)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td><span class="parametername">worldPosition</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="GrandmaGreen_TapHereUIHandler_SetTapHerePosition_" data-uid="GrandmaGreen.TapHereUIHandler.SetTapHerePosition*"></a>
+  <h4 id="GrandmaGreen_TapHereUIHandler_SetTapHerePosition_VisualElement_VisualElement_" data-uid="GrandmaGreen.TapHereUIHandler.SetTapHerePosition(VisualElement,VisualElement)">SetTapHerePosition(VisualElement, VisualElement)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetTapHerePosition(VisualElement visualElement, VisualElement root)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">VisualElement</span></td>
+        <td><span class="parametername">visualElement</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">VisualElement</span></td>
+        <td><span class="parametername">root</span></td>
         <td></td>
       </tr>
     </tbody>

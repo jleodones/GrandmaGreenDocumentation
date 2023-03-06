@@ -133,20 +133,18 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public DecorShopUIController()</code></pre>
   </div>
-  <h3 id="methods">Methods
+  <h3 id="fields">Fields
   </h3>
   
   
-  <a id="GrandmaGreen_Shopkeeping_DecorShopUIController_GetDecorList_" data-uid="GrandmaGreen.Shopkeeping.DecorShopUIController.GetDecorList*"></a>
-  <h4 id="GrandmaGreen_Shopkeeping_DecorShopUIController_GetDecorList" data-uid="GrandmaGreen.Shopkeeping.DecorShopUIController.GetDecorList">GetDecorList()</h4>
-  <div class="markdown level1 summary"><p>Get List containing all items in the decor shop this cycle</p>
-</div>
+  <h4 id="GrandmaGreen_Shopkeeping_DecorShopUIController_DecorList" data-uid="GrandmaGreen.Shopkeeping.DecorShopUIController.DecorList">DecorList</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public List&lt;ShopItem&gt; GetDecorList()</code></pre>
+    <pre><code class="lang-csharp hljs">public List&lt;ShopItem&gt; DecorList</code></pre>
   </div>
-  <h5 class="returns">Returns</h5>
+  <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -161,6 +159,19 @@
       </tr>
     </tbody>
   </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="GrandmaGreen_Shopkeeping_DecorShopUIController_GenerateDecorList_" data-uid="GrandmaGreen.Shopkeeping.DecorShopUIController.GenerateDecorList*"></a>
+  <h4 id="GrandmaGreen_Shopkeeping_DecorShopUIController_GenerateDecorList" data-uid="GrandmaGreen.Shopkeeping.DecorShopUIController.GenerateDecorList">GenerateDecorList()</h4>
+  <div class="markdown level1 summary"><p>Get List containing all items in the decor shop this cycle</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void GenerateDecorList()</code></pre>
+  </div>
   
   
   <a id="GrandmaGreen_Shopkeeping_DecorShopUIController_GetSellingPriceById_" data-uid="GrandmaGreen.Shopkeeping.DecorShopUIController.GetSellingPriceById*"></a>
@@ -262,14 +273,31 @@ or if all expansions have been unlocked the slot will be replaced by a fixture.<
   
   
   <a id="GrandmaGreen_Shopkeeping_DecorShopUIController_UpdateCycle_" data-uid="GrandmaGreen.Shopkeeping.DecorShopUIController.UpdateCycle*"></a>
-  <h4 id="GrandmaGreen_Shopkeeping_DecorShopUIController_UpdateCycle" data-uid="GrandmaGreen.Shopkeeping.DecorShopUIController.UpdateCycle">UpdateCycle()</h4>
+  <h4 id="GrandmaGreen_Shopkeeping_DecorShopUIController_UpdateCycle_System_Int32_" data-uid="GrandmaGreen.Shopkeeping.DecorShopUIController.UpdateCycle(System.Int32)">UpdateCycle(Int32)</h4>
   <div class="markdown level1 summary"><p>Each new cycle, call this function to update the decor shopkeeping system&apos;s cycle count</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void UpdateCycle()</code></pre>
+    <pre><code class="lang-csharp hljs">public void UpdateCycle(int val)</code></pre>
   </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">val</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="GrandmaGreen_Shopkeeping_DecorShopUIController_UpgradeDecorShop_" data-uid="GrandmaGreen.Shopkeeping.DecorShopUIController.UpgradeDecorShop*"></a>
