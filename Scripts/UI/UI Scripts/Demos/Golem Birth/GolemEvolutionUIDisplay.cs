@@ -14,6 +14,7 @@ namespace GrandmaGreen.UI.Golems
         private VisualElement golem;
         private Label title;
         private Label golemName;
+        private float opacityCount = 0.2f;
 
         public void Start()
         {
@@ -58,17 +59,16 @@ namespace GrandmaGreen.UI.Golems
         public override void UIOpenLogic()
         {
             base.UIOpenLogic();
-            
+
             //Start Animations
+            m_rootVisualElement.schedule.Execute(() => shootingStarTrail.ToggleInClassList("pushIn")).StartingIn(104);
+            m_rootVisualElement.schedule.Execute(() => shootingStarsBG.ToggleInClassList("pushIn")).StartingIn(103);
+            m_rootVisualElement.schedule.Execute(() => shootingStarsFG.ToggleInClassList("pushIn")).StartingIn(102);
+            m_rootVisualElement.schedule.Execute(() => golem.ToggleInClassList("pushIn")).StartingIn(101);
 
-            title.RegisterCallback<TransitionEndEvent>(LargeText);
-            m_rootVisualElement.schedule.Execute(() => title.ToggleInClassList("smallText")).StartingIn(6001);
-            m_rootVisualElement.schedule.Execute(() => golemName.ToggleInClassList("smallText")).StartingIn(600);
-
-            m_rootVisualElement.schedule.Execute(() => shootingStarTrail.ToggleInClassList("pushIn")).StartingIn(502);
-            m_rootVisualElement.schedule.Execute(() => shootingStarsBG.ToggleInClassList("pushIn")).StartingIn(501);
-            m_rootVisualElement.schedule.Execute(() => shootingStarsFG.ToggleInClassList("pushIn")).StartingIn(500);
-            m_rootVisualElement.schedule.Execute(() => golem.ToggleInClassList("pushIn")).StartingIn(499);
+            title.RegisterCallback<TransitionEndEvent>(ChangeOpacity);
+            m_rootVisualElement.schedule.Execute(() => title.style.opacity = golemName.resolvedStyle.opacity + .2f).StartingIn(1301);
+            m_rootVisualElement.schedule.Execute(() => title.style.opacity = title.resolvedStyle.opacity + .2f).StartingIn(1300);
         }
 
         public void CloseUIHandler(ClickEvent ce)
@@ -78,6 +78,10 @@ namespace GrandmaGreen.UI.Golems
             shootingStarsBG.ToggleInClassList("pushIn");
             shootingStarsFG.ToggleInClassList("pushIn");
             golem.ToggleInClassList("pushIn");
+            //title.UnregisterCallback<TransitionEndEvent>(ChangeOpacity);
+            title.style.opacity = title.resolvedStyle.opacity * 0;
+            golemName.style.opacity = golemName.resolvedStyle.opacity * 0;
+            opacityCount = 0.2f;
         }
 
         private void LargeText(TransitionEndEvent evt)
@@ -85,7 +89,7 @@ namespace GrandmaGreen.UI.Golems
             title.UnregisterCallback<TransitionEndEvent>(LargeText);
             title.ToggleInClassList("smallText");
             golemName.ToggleInClassList("smallText");
-            
+
             title.RegisterCallback<TransitionEndEvent>(NormalText);
             title.ToggleInClassList("largeText");
             golemName.ToggleInClassList("largeText");
@@ -96,6 +100,20 @@ namespace GrandmaGreen.UI.Golems
             title.UnregisterCallback<TransitionEndEvent>(NormalText);
             title.ToggleInClassList("largeText");
             golemName.ToggleInClassList("largeText");
+        }
+
+        private void ChangeOpacity(TransitionEndEvent evt)
+        {
+            title.style.opacity = title.resolvedStyle.opacity + 0.2f;
+            golemName.style.opacity = golemName.resolvedStyle.opacity + 0.2f;
+            opacityCount += 0.2f;
+            if (opacityCount >= 1.0f)
+            {
+                title.UnregisterCallback<TransitionEndEvent>(ChangeOpacity);
+                title.RegisterCallback<TransitionEndEvent>(LargeText);
+                m_rootVisualElement.schedule.Execute(() => title.ToggleInClassList("smallText")).StartingIn(2);
+                m_rootVisualElement.schedule.Execute(() => golemName.ToggleInClassList("smallText")).StartingIn(1);
+            }
         }
 
         void SetText(string id, string newText)

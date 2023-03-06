@@ -7,11 +7,11 @@ namespace GrandmaGreen
 {
     public interface IServicer<T>
     {
-        protected static List<T> s_activeServices { get; set; }
+        protected static T[] s_activeServices { get; set; }
 
-        void RegisterService(T service);
+        void RegisterService(T service, int index);
 
-        void DeregisterService(T service);
+        void DeregisterService(T service, int index);
 
         T PrimaryService => s_activeServices[0];
 

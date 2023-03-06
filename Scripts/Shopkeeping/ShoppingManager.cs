@@ -25,11 +25,11 @@ namespace GrandmaGreen.Shopkeeping
                 decorController = new DecorShopUIController();
             }
             currGardenList = gardenController.GardenList;
-            currDecorList = decorController.GetDecorList();
-            
+            currDecorList = decorController.DecorList;
+
             shopTimer.Resume(true);
             shopTimer.onTick += gardenController.UpdateCycle;
-            // shopTimer.onTick += decorController.UpdateCycle;
+            shopTimer.onTick += decorController.UpdateCycle;
         }
 
         public double GetTimeLeft()

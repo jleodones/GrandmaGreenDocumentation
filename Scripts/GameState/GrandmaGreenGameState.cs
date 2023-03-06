@@ -27,7 +27,7 @@ namespace GrandmaGreen
         [SerializeField] SaveSystem.SaveManager saveManager;
         [SerializeField] Entities.GolemManager golemManager;
         [SerializeField] Garden.PlayerToolData playerToolData;
-        [SerializeField]  AchivementDataStore achivementData;
+        [SerializeField] AchivementDataStore achivementData;
         [SerializeField] UI.UIDisplayTracker UIdisplayRules;
         [SerializeField] SCENES currentScene;
         [SerializeField] Core.Utilities.GameEventFlag onLevelTransitionFlag;
@@ -75,12 +75,13 @@ namespace GrandmaGreen
 
         void OnDestroy()
         {
-            areaServicer.StopServices();
-
+        
             if (s_Instance != this)
                 return;
 
             ReleaseState();
+
+            areaServicer.StopServices();
 
             s_Instance = null;
         }
@@ -142,16 +143,13 @@ namespace GrandmaGreen
             EventManager.instance.EVENT_DELETE_SAVE -= playerToolData.ClearTools;
         }
 
-        public void LoadGardenScreen(int gardenIndex)
-        {
-            areaServicer.ActivateAreaController(gardenIndex);
-        }
+
 
 
         void SetCurrentScene(SCENES scene)
         {
-            if (scene != SCENES.StartScene)
-                LoadGardenScreen(-1);
+            areaServicer.ActivateAreaController(0);
+
             currentScene = scene;
         }
 

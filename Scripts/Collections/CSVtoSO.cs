@@ -377,14 +377,14 @@ namespace GrandmaGreen.Collections
                         break;
 
                     case "Decor":
-                        itemProps.spritePath = "Decor/DEC_" + itemProps.decorType;
+                        itemProps.spritePath = "Decor/" + itemProps.decorType;
                         itemProps.baseCost = baseCost;
                         collections.ItemLookup.Add(csvID, itemProps);
                         Decor decor = new Decor(csvID, name);
-                        
-                        // Between the range. THIS IS HARD CODED RIGHT NOW.
-                        if (csvID is >= 4088 and <= 4123)
+                        string isFixture = line[10];
+                        if (isFixture == "TRUE\r")
                         {
+                            decor.isFixture = true;
                             collections.FixtureList.Add(decor);
                         }
                         collections.DecorList.Add(decor);

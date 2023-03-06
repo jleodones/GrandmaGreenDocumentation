@@ -16,17 +16,17 @@
 }
 
 #shootingStarsFGContainer {
-    transition-duration: 800ms;
-    transition-delay: 1400ms;
+    transition-duration: 700ms;
+    transition-delay: 900ms;
     transition-timing-function: ease-out;
 }
 
 #title {
-    transition-duration: 250ms;
+    transition-duration: 100ms;
 }
 
 #golemName {
-    transition-duration: 250ms;
+    transition-duration: 100ms;
 }
 
 .pushIn {
@@ -34,9 +34,9 @@
 }
 
 .largeText {
-    scale: 1.5 1.5;
+    scale: 1.3 1.3;
 }
 
 .smallText {
-    scale: 0.5 0.5;
+    scale: 0.7 0.7;
 }

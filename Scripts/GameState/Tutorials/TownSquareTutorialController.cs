@@ -1,7 +1,10 @@
 using UnityEngine;
 using UnityEngine.UIElements;
 using GrandmaGreen.UI.BulletinBoard;
+using System.Collections;
+using System.Collections.Generic;
 using GrandmaGreen.UI.Shopping;
+using Cinemachine;
 
 namespace GrandmaGreen.UI.Tutorial
 {
@@ -10,11 +13,16 @@ namespace GrandmaGreen.UI.Tutorial
         public TutorialStateData tutorialStateData;
         public Core.Utilities.GameEventFlag onInteractionCompleteFlag;
 
+        [Header("Scene References")]
+        public Entities.GameEntity playerEntity;
         public TutorialUIDisplay tutorialUI;
         public ShopkeeperMenu shopkeeperMenu;
         public ShoppingUI shoppingUI;
         public BulletinBoardUIDisplay bulletinBoardUI;
+        public Transform walkToPosition;
+        public CinemachineVirtualCamera walkToCamera;
 
+        [Header("Tutorial Settings")]
         public string phoebeIntroNode = "Story_1";
         public string phoebeCrossbreedingNode = "Story_2";
 
@@ -23,7 +31,7 @@ namespace GrandmaGreen.UI.Tutorial
         public TapHereUI gardenTapHere;
 
         bool phobeInteraction = false;
-        bool mailboxInteraction = false;
+        bool bulletinBoardInteraction = false;
 
 
         void Awake()
@@ -45,31 +53,46 @@ namespace GrandmaGreen.UI.Tutorial
         void OnDisable()
         {
             tutorialStateData.onPlaySlideshow -= PlaySlideshow;
-
-            //EventManager.instance.EVENT_INVENTORY_ADD_SEED -= CheckCrossbreedingPossible;
         }
 
-        void PlaySlideshow(SlideshowData slideshowData)
+        System.Action onSlideshowComplete;
+        void PlaySlideshow(TutorialSlideshow tutorialSlideshow)
         {
-            tutorialUI.SetUpSlideshow(slideshowData);
+            tutorialUI.SetUpSlideshow(tutorialSlideshow.slideshow);
             tutorialUI.OpenUI();
+
+            onSlideshowComplete = () => tutorialSlideshow.flag?.Raise();
+
+            tutorialUI.onPanelClosed += SlideshowComplete;
+
+        }
+
+        void SlideshowComplete()
+        {
+            onSlideshowComplete?.Invoke();
+            tutorialUI.onPanelClosed -= SlideshowComplete;
         }
 
         void SetupTownSquareTutorialState()
         {
-            if (!tutorialStateData.coreLoopTutorial.isComplete)
+            //tutorialStateData.NextCoreLoopTutorial();
+
+            if (!onInteractionCompleteFlag.raised)
             {
-                phoebeTapHere.gameObject.SetActive(true);
-                bulletinBoardTapHere.gameObject.SetActive(true);
 
                 bulletinBoardUI.onPanelClosed += SetBulletinBoardInteraction;
                 shoppingUI.onPanelClosed += SetPhoebeInteraction;
 
                 shopkeeperMenu.dialogueScript.onFinishDialogue += ForceShopOpen;
 
+                shopkeeperMenu.onPanelOpened += StartPhoebeInteraction;
+                bulletinBoardUI.onPanelOpened += StartBulletinBoardInteraction;
+
                 shopkeeperMenu.SetSpecialDialogue(phoebeIntroNode);
                 shopkeeperMenu.m_rootVisualElement.Q<Button>("sell").SetEnabled(false);
                 shopkeeperMenu.m_rootVisualElement.Q<Button>("shop").SetEnabled(false);
+
+                StartCoroutine(EnterTownSquareSequence());
             }
 
             else if (!tutorialStateData.crossBreedingTutorial.isComplete)
@@ -78,11 +101,37 @@ namespace GrandmaGreen.UI.Tutorial
             }
         }
 
+        public IEnumerator EnterTownSquareSequence()
+        {
+            playerEntity.controller.PauseController();
 
+            yield return new WaitForSeconds(0.5f);
+
+            walkToCamera.Priority++;
+
+            yield return new WaitForSeconds(2.0f);
+
+            yield return playerEntity.FollowPath(playerEntity.CheckPath(walkToPosition.position));
+
+            yield return new WaitForSeconds(2.0f);
+
+            walkToCamera.Priority--;
+            playerEntity.controller.StartController();
+            tutorialStateData.NextCoreLoopTutorial();
+
+            phoebeTapHere.gameObject.SetActive(true);
+            bulletinBoardTapHere.gameObject.SetActive(true);
+        }
+
+        void StartBulletinBoardInteraction()
+        {
+            bulletinBoardTapHere.gameObject.SetActive(false);
+            bulletinBoardUI.onPanelOpened -= StartBulletinBoardInteraction;
+        }
         void SetBulletinBoardInteraction()
         {
-            mailboxInteraction = true;
-            bulletinBoardTapHere.gameObject.SetActive(false);
+            bulletinBoardInteraction = true;
+
 
             bulletinBoardUI.onPanelClosed -= SetBulletinBoardInteraction;
 
@@ -96,13 +145,18 @@ namespace GrandmaGreen.UI.Tutorial
             shopkeeperMenu.dialogueScript.onFinishDialogue -= ForceShopOpen;
         }
 
+        void StartPhoebeInteraction()
+        {
+            phoebeTapHere.gameObject.SetActive(false);
+            shopkeeperMenu.onPanelOpened -= StartPhoebeInteraction;
 
+        }
         void SetPhoebeInteraction()
         {
             phobeInteraction = true;
-            phoebeTapHere.gameObject.SetActive(false);
 
             shoppingUI.onPanelClosed -= SetPhoebeInteraction;
+            shopkeeperMenu.onPanelOpened -= StartPhoebeInteraction;
 
             shopkeeperMenu.m_rootVisualElement.Q<Button>("sell").SetEnabled(true);
             shopkeeperMenu.m_rootVisualElement.Q<Button>("shop").SetEnabled(true);
@@ -113,7 +167,7 @@ namespace GrandmaGreen.UI.Tutorial
 
         void CheckTutorialState()
         {
-            if (!phobeInteraction || !mailboxInteraction) return;
+            if (!phobeInteraction || !bulletinBoardInteraction) return;
 
             onInteractionCompleteFlag.Raise();
 
@@ -125,7 +179,7 @@ namespace GrandmaGreen.UI.Tutorial
         {
             shoppingUI.onPanelClosed -= TriggerCrossbreedingDialogue;
             shopkeeperMenu.SetSpecialDialogue(phoebeCrossbreedingNode);
-            
+
             shopkeeperMenu.dialogueScript.onFinishDialogue += SetCrossbreedingDialogueComplete;
             shopkeeperMenu.OnDialogueTrigger();
         }
@@ -133,7 +187,8 @@ namespace GrandmaGreen.UI.Tutorial
         void SetCrossbreedingDialogueComplete()
         {
             shopkeeperMenu.dialogueScript.onFinishDialogue -= SetCrossbreedingDialogueComplete;
-            tutorialStateData.onCrossbreedingFlag.Raise();
+
+            tutorialStateData.PlayNextSlideshow(tutorialStateData.crossBreedingTutorial);
         }
     }
 }

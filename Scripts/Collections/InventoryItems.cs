@@ -188,6 +188,8 @@ namespace GrandmaGreen.Collections {
 
         public bool isBeingSold { get; set; }
 
+        public bool isFixture { get; set; }
+
         public Decor(ushort id, string name)
         {
             itemType = ItemType.Decor;
@@ -197,6 +199,7 @@ namespace GrandmaGreen.Collections {
             quantity = 1;
 
             isBeingSold = false;
+            isFixture = false;
         }
         
         public Decor(ushort id, string name, int num)
@@ -208,6 +211,7 @@ namespace GrandmaGreen.Collections {
             quantity = num;
 
             isBeingSold = false;
+            isFixture = false;
         }
         
         public string GetQuantityToString()

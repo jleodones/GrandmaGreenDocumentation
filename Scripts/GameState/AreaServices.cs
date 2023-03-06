@@ -27,7 +27,7 @@ namespace GrandmaGreen
         public virtual void StartServices()
         {
             IPathAgent.SetServicer(this);
-            IPathfinderServicer.s_activeServices = new List<Pathfinder>();
+            IPathfinderServicer.s_activeServices = new Pathfinder[4];
 
             activeAreaIndex = -1;
             areaControllerSet = new AreaController[5];
@@ -41,7 +41,7 @@ namespace GrandmaGreen
         public virtual void StopServices()
         {
             IPathAgent.ClearServicer();
-            IPathfinderServicer.s_activeServices = null;
+            //IPathfinderServicer.s_activeServices = null;
         }
 
         /// <summary>
@@ -55,7 +55,7 @@ namespace GrandmaGreen
 
             areaControllerSet[areaController.areaIndex] = areaController;
             m_lastRegisteredArea = areaController.areaIndex;
-            RegisterService(areaController.pathfinder);
+            RegisterService(areaController.pathfinder, areaController.areaIndex);
         }
 
         /// <summary>
@@ -69,7 +69,7 @@ namespace GrandmaGreen
 
             areaControllerSet[areaController.areaIndex] = null;
 
-            DeregisterService(areaController.pathfinder);
+            DeregisterService(areaController.pathfinder, areaController.areaIndex);
 
             if (m_lastRegisteredArea == areaController.areaIndex)
                 m_lastRegisteredArea = -1;
@@ -87,8 +87,6 @@ namespace GrandmaGreen
 
             if (areaIndex == -1 && m_lastRegisteredArea != -1)
                 areaIndex = m_lastRegisteredArea;
-            else
-                return;
 
             if (activeAreaIndex != -1)
                 areaControllerSet[activeAreaIndex].Deactivate();
@@ -107,7 +105,11 @@ namespace GrandmaGreen
                 return;
 
             areaControllerSet[areaIndex].Deactivate();
-            activeAreaIndex = -1;
+
+            if (areaIndex == 0)
+                activeAreaIndex = -1;
+            else
+                activeAreaIndex = 0;
         }
 
 
@@ -115,20 +117,19 @@ namespace GrandmaGreen
         /// Placeholder method for registering a sample service
         /// </summary>
         /// <param name="pathfinder"></param>
-        public virtual void RegisterService(Pathfinder pathfinder)
+        public virtual void RegisterService(Pathfinder pathfinder, int areaIndex)
         {
-            if (!IPathfinderServicer.s_activeServices.Contains(pathfinder))
-                IPathfinderServicer.s_activeServices.Add(pathfinder);
+
+            IPathfinderServicer.s_activeServices[areaIndex] = pathfinder;
         }
 
         /// <summary>
         /// Placeholder method for registering a sample service
         /// </summary>
         /// <param name="pathfinder"></param>
-        public virtual void DeregisterService(Pathfinder pathfinder)
+        public virtual void DeregisterService(Pathfinder pathfinder, int areaIndex)
         {
-            if (IPathfinderServicer.s_activeServices.Contains(pathfinder))
-                IPathfinderServicer.s_activeServices.Remove(pathfinder);
+            IPathfinderServicer.s_activeServices[areaIndex] = null;
         }
     }
 }

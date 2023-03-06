@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Core.Utilities;
+using DG.Tweening;
+using UnityEngine.EventSystems;
 
 namespace GrandmaGreen
 {
@@ -15,12 +17,6 @@ namespace GrandmaGreen
         public TutorialData crossBreedingTutorial;
 
         [Header("Flag Set")]
-        public GameEventFlag onStartFlag;
-        public GameEventFlag onMoveFlag;
-        public GameEventFlag onInventoryFlag;
-        public GameEventFlag onToolMenuFlag;
-        public GameEventFlag onGardeningFlag;
-        public GameEventFlag onHarvestFlag;
         public GameEventFlag onGolemSpawnedFlag;
         public GameEventFlag onGolemTalkedFlag;
         public GameEventFlag onGolemEvolvedFlag;
@@ -33,9 +29,11 @@ namespace GrandmaGreen
         public Garden.PlayerToolData playerToolData;
         public Garden.GardenToolSet gardenToolSet;
 
-        public event System.Action<SlideshowData> onPlaySlideshow;
+        public event System.Action<TutorialSlideshow> onPlaySlideshow;
 
         public bool AllTutorialsCompleted() => coreLoopTutorial.isComplete && golemTutorial.isComplete && crossBreedingTutorial.isComplete;
+
+        public event System.Action startGrandmaMoveTo;
 
         public event System.Action enableLevelTransition;
         public event System.Action disableLevelTransition;
@@ -94,28 +92,69 @@ namespace GrandmaGreen
         {
             for (int i = 0; i < tutorialData.length; i++)
             {
-                if (tutorialData.slideshowData[i] == null)
-                    continue;
 
                 int index = i;
-                tutorialData.storylineData.requirements[index].onActivation += () =>
+                tutorialData.storylineData.requirements[index].onCompletion += () =>
                 {
+                    if (tutorialData.slideshowData[index].slideshow == null)
+                    {
+                        tutorialData.slideshowData[index].flag?.Raise();
+                        return;
+                    }
+                    DisableEventSystem();
 
-                    PlaySlideshow(tutorialData.slideshowData[index]);
+                    DOTween.Sequence().AppendInterval(tutorialData.slideshowData[index].openDelay)
+                    .AppendCallback(() =>
+                    {
+                        PlaySlideshow(tutorialData.slideshowData[index]);
+                        EnableEventSystem();
+                    }
+                    );
                 };
             }
         }
 
-        public void PlaySlideshow(SlideshowData slideshowData)
+        EventSystem eventSystem;
+        void DisableEventSystem()
         {
-            Debug.Log("Play Slideshow " + slideshowData.title);
+            eventSystem = EventSystem.current;
+            eventSystem.enabled = false;
+        }
+
+        void EnableEventSystem()
+        {
+            eventSystem.enabled = true;
+        }
+
+        public void PlaySlideshow(TutorialSlideshow slideshowData)
+        {
             onPlaySlideshow?.Invoke(slideshowData);
+        }
+
+        public void PlayNextSlideshow(TutorialData tutorialData)
+        {
+            int index = (int)tutorialData.progress;
+
+            if (tutorialData.slideshowData[index].slideshow == null)
+            {
+                tutorialData.slideshowData[index].flag?.Raise();
+                return;
+            }
+            DisableEventSystem();
+
+            DOTween.Sequence().AppendInterval(tutorialData.slideshowData[index].openDelay)
+            .AppendCallback(() =>
+            {
+                EnableEventSystem();
+                onPlaySlideshow?.Invoke(tutorialData.slideshowData[index]);
+            }
+           );
         }
 
         #region  Coreloop
         void CoreLoopTutorialSetup()
         {
-            SetupSlideshowEvents(coreLoopTutorial);
+            //SetupSlideshowEvents(coreLoopTutorial);
 
             coreLoopTutorial.storylineData.onProgress += CoreLoopTutorialProgress;
             coreLoopTutorial.storylineData.onCompletion += CoreLoopTutorialComplete;
@@ -123,79 +162,86 @@ namespace GrandmaGreen
             disableLevelTransition?.Invoke();
         }
 
-        void CoreLoopTutorialProgress(Storyline storyline)
+        public void NextCoreLoopTutorial()
+        {
+            PlayNextSlideshow(coreLoopTutorial);
+        }
+
+        public void CoreLoopTutorialProgress(Storyline storyline)
         {
             switch (storyline.progress)
             {
                 case 0:
                     // Gramma enters garden
                     break;
-
                 case 1:
-                    //Gramma has moved to and opened letter
-                    EventManager.instance.HandleEVENT_INVENTORY_ADD_SEED(1002, new Garden.Genotype("AaBb"));
-
-                    enableInventory?.Invoke();
-                    playerToolData.onSeedEquipped += onInventoryFlag.Raise;
+                    // Gramma enters garden
+                    startGrandmaMoveTo?.Invoke();
                     break;
 
                 case 2:
+                    //Gramma has moved to and opened letter
+                    EventManager.instance.HandleEVENT_OPEN_HUD();
+                    EventManager.instance.HandleEVENT_INVENTORY_ADD_SEED(1002, new Garden.Genotype("AaBb"));
+
+
+                    enableInventory?.Invoke();
+                    playerToolData.onSeedEquipped += NextCoreLoopTutorial;
+                    break;
+
+                case 3:
                     // Player has selected a seed
 
-                    playerToolData.onSeedEquipped -= onInventoryFlag.Raise;
-                    playerToolData.onToolSelectionStart += onToolMenuFlag.Raise;
+                    playerToolData.onSeedEquipped -= NextCoreLoopTutorial;
+                    playerToolData.onToolSelectionStart += NextCoreLoopTutorial;
                     enableTools?.Invoke();
 
                     tapHereGrandma?.Invoke();
                     break;
 
-                case 3:
-                    playerToolData.onToolSelectionStart -= onToolMenuFlag.Raise;
-                    gardenToolSet.onTill += onGardeningFlag.Raise;
-
-                    //disableSeedPacket?.Invoke();
-                    //disableWatering?.Invoke();
-
+                case 4:
+                    playerToolData.onToolSelectionStart -= NextCoreLoopTutorial;
+                    gardenToolSet.onTill += NextCoreLoopTutorial;
                     break;
 
-                case 4:
+                case 5:
 
                     enableSeedPacket?.Invoke();
 
-                    gardenToolSet.onTill -= onGardeningFlag.Raise;
-                    gardenToolSet.onPlant += onGardeningFlag.Raise;
+                    gardenToolSet.onTill -= NextCoreLoopTutorial;
+                    gardenToolSet.onPlant += NextCoreLoopTutorial;
                     break;
-                case 5:
+                case 6:
                     disableTrowel?.Invoke();
                     //disableSeedPacket?.Invoke();
                     //enableWatering?.Invoke();
 
-                    gardenToolSet.onPlant -= onGardeningFlag.Raise;
-                    gardenToolSet.onWater += onGardeningFlag.Raise;
+                    gardenToolSet.onPlant -= NextCoreLoopTutorial;
+                    gardenToolSet.onWater += NextCoreLoopTutorial;
                     break;
-                case 6:
-
-
-                    gardenToolSet.onWater -= onGardeningFlag.Raise;
+                case 7:
+                    gardenToolSet.onWater -= NextCoreLoopTutorial;
 
                     playerToolData.EmptySelection();
                     enableLevelTransition?.Invoke();
                     tapHereExit?.Invoke();
                     break;
-                case 7:
+                case 8:
                     // Player has entered town square
                     disableLevelTransition?.Invoke();
+
                     break;
 
-                case 8:
+                case 10:
                     //Player has talked to phoebe, bulletin board
                     enableLevelTransition?.Invoke();
                     break;
 
-                case 9:
+                case 11:
+                    NextCoreLoopTutorial();
                     //Player has returned to garden
                     //TODO: Force Grow plant, prevent from dying
-                    gardenToolSet.onHarvest += onHarvestFlag.Raise;
+                    gardenToolSet.onHarvest += NextCoreLoopTutorial;
                     disableSeedPacket?.Invoke();
                     //disableWatering?.Invoke();
                     disableLevelTransition?.Invoke();
@@ -205,7 +251,7 @@ namespace GrandmaGreen
 
         void CoreLoopTutorialComplete(Storyline storyline)
         {
-            gardenToolSet.onHarvest -= onHarvestFlag.Raise;
+            gardenToolSet.onHarvest -= NextCoreLoopTutorial;
 
             coreLoopTutorial.storylineData.onProgress -= CoreLoopTutorialProgress;
             coreLoopTutorial.storylineData.onCompletion -= CoreLoopTutorialComplete;
@@ -225,7 +271,7 @@ namespace GrandmaGreen
         System.Action<int> golemTaskAction;
         void GolemTutorialSetup()
         {
-            SetupSlideshowEvents(golemTutorial);
+            //SetupSlideshowEvents(golemTutorial);
 
             golemTutorial.storylineData.onProgress += GolemTutorialProgress;
             golemTutorial.storylineData.onCompletion += GolemTutorialComplete;
@@ -286,7 +332,7 @@ namespace GrandmaGreen
         #region Crossbreeding
         void CrossbreedingTutorialSetup()
         {
-            SetupSlideshowEvents(crossBreedingTutorial);
+            //SetupSlideshowEvents(crossBreedingTutorial);
 
             crossBreedingTutorial.storylineData.onProgress += CrossbreedingTutorialProgress;
             crossBreedingTutorial.storylineData.onCompletion += CrossbreedingTutorialComplete;
@@ -302,7 +348,7 @@ namespace GrandmaGreen
                 case 1:
                     break;
                 case 2:
-                    onCultivisionFlag.Raise();
+                    PlayNextSlideshow(crossBreedingTutorial);
                     break;
             }
         }

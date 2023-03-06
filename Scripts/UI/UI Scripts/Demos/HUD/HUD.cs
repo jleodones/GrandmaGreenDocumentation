@@ -107,14 +107,28 @@ namespace GrandmaGreen.UI.HUD
 
         public void EnableButton(string button)
         {
-            m_rootVisualElement.Q<Button>(button).visible = true;
-            m_rootVisualElement.Q<Button>(button).pickingMode = PickingMode.Position;
+            m_rootVisualElement.Q<Button>(button).SetEnabled(true);
         }
 
         public void DisableButton(string button)
         {
-            m_rootVisualElement.Q<Button>(button).visible = false;
-            m_rootVisualElement.Q<Button>(button).pickingMode = PickingMode.Ignore;
+            m_rootVisualElement.Q<Button>(button).SetEnabled(false);
+        }
+
+        public VisualElement GetElement(string name)
+        {
+            return m_rootVisualElement.Q<VisualElement>(name);
+        }
+
+
+        public void EnableLabel(string label)
+        {
+            m_rootVisualElement.Q<Label>(label).visible = true;
+        }
+
+        public void DisableLabel(string label)
+        {
+            m_rootVisualElement.Q<Label>(label).visible = false;
         }
 
         public void OpenHUD()

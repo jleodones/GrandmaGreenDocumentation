@@ -70,8 +70,8 @@ namespace GrandmaGreen.UI.Golems
             golemContainer.style.bottom = Length.Percent(125);
 
             title.RegisterCallback<TransitionEndEvent>(LargeText);
-            m_rootVisualElement.schedule.Execute(() => title.ToggleInClassList("smallText")).StartingIn(504);
-            m_rootVisualElement.schedule.Execute(() => golemName.ToggleInClassList("smallText")).StartingIn(503);
+            m_rootVisualElement.schedule.Execute(() => title.ToggleInClassList("smallText")).StartingIn(2504);
+            m_rootVisualElement.schedule.Execute(() => golemName.ToggleInClassList("smallText")).StartingIn(2503);
 
             m_rootVisualElement.schedule.Execute(() => cloudsB.ToggleInClassList("floatClouds")).StartingIn(501);
             m_rootVisualElement.schedule.Execute(() => cloudsA.ToggleInClassList("floatClouds")).StartingIn(502);
@@ -80,7 +80,7 @@ namespace GrandmaGreen.UI.Golems
             m_rootVisualElement.schedule.Execute(() => rightCloud.ToggleInClassList("pushRightCloud")).StartingIn(400);
 
             description.RegisterCallback<TransitionEndEvent>(ChangeOpacity);
-            m_rootVisualElement.schedule.Execute(() =>  description.style.opacity = description.resolvedStyle.opacity + .02f).StartingIn(300);
+            m_rootVisualElement.schedule.Execute(() =>  description.style.opacity = description.resolvedStyle.opacity + .02f).StartingIn(1300);
         }
 
         public void CloseUIHandler(ClickEvent ce)
@@ -94,6 +94,8 @@ namespace GrandmaGreen.UI.Golems
             golemContainer.UnregisterCallback<TransitionEndEvent>(BounceGolem);
             description.UnregisterCallback<TransitionEndEvent>(ChangeOpacity);
             description.style.opacity = description.resolvedStyle.opacity * 0;
+            title.style.opacity = description.resolvedStyle.opacity * 0;
+            golemName.style.opacity = description.resolvedStyle.opacity * 0;
         }
 
         private void BounceGolem(TransitionEndEvent evt)
@@ -105,7 +107,9 @@ namespace GrandmaGreen.UI.Golems
         private void ChangeOpacity(TransitionEndEvent evt)
         {
             description.style.opacity = description.resolvedStyle.opacity + .02f;
-            if(description.style.opacity == 1)
+            title.style.opacity = description.resolvedStyle.opacity + 0.2f;
+            golemName.style.opacity = description.resolvedStyle.opacity + 0.2f;
+            if (description.style.opacity == 1)
             {
                 description.UnregisterCallback<TransitionEndEvent>(ChangeOpacity);
             }

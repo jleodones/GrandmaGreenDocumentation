@@ -32,14 +32,12 @@ public class ToolsMenu : MonoBehaviour
 
     public void EnableToolButton(string button)
     {
-        document.rootVisualElement.Q<VisualElement>(button).visible = true;
-        document.rootVisualElement.Q<VisualElement>(button).pickingMode = PickingMode.Position;
+        document.rootVisualElement.Q<VisualElement>(button).SetEnabled(true);
     }
 
 
     public void DisableToolButton(string button)
     {
-        document.rootVisualElement.Q<VisualElement>(button).visible = false;
-        document.rootVisualElement.Q<VisualElement>(button).pickingMode = PickingMode.Ignore;
+        document.rootVisualElement.Q<VisualElement>(button).SetEnabled(false);
     }
 }

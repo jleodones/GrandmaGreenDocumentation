@@ -260,17 +260,6 @@ namespace GrandmaGreen.Shopkeeping
             else return false;
         }
 
-        /// <summary>
-        /// Returns the time left until the next cycle (shop reset)
-        /// </summary>
-        /// <returns></returns>
-        public int GetTimeRemaining()
-        {
-
-
-            return 0;
-        }
-
     }
 
     /// <summary>
@@ -278,7 +267,7 @@ namespace GrandmaGreen.Shopkeeping
     /// </summary>
     public class DecorShopUIController
     {
-        List<ShopItem> DecorList; //all items that will show up in decor shop this cycle
+        public List<ShopItem> DecorList; //all items that will show up in decor shop this cycle
         List<Decor> AllDecorList;
         List<Decor> AllFixturesList;
         int currCycleDecor; //after the 2nd cycle, reset the all decor items list. increment each cycle.
@@ -295,22 +284,23 @@ namespace GrandmaGreen.Shopkeeping
             AllDecorList = new List<Decor>(CollectionsSO.LoadedInstance.DecorList);
             AllFixturesList = new List<Decor>(CollectionsSO.LoadedInstance.FixtureList);
 
-            DecorList = new List<ShopItem>();
-
             currCycleDecor = 1;
             currCycleFixture = 1;
 
             currGardenExpansion = 1;
             maxGardenExpansion = 3;
+
+            GenerateDecorList();
         }
 
         /// <summary>
         /// Each new cycle, call this function to update the decor shopkeeping system's cycle count
         /// </summary>
-        public void UpdateCycle()
+        public void UpdateCycle(int val)
         {
             currCycleDecor++;
             currCycleFixture++;
+            GenerateDecorList();
             if(currCycleDecor > 2)
             {
                 currCycleDecor = 1;
@@ -327,14 +317,52 @@ namespace GrandmaGreen.Shopkeeping
         /// Get List containing all items in the decor shop this cycle
         /// </summary>
         /// <returns></returns>
-        public List<ShopItem> GetDecorList()
+        public void GenerateDecorList()
         {
             /*
              * randomly pick 6 decor items but making sure not to have duplicate decor types,
              * pop from the master list, and have some way to track which garden expansion
              * the player has unlocked, and then the other slot is fixture
              */
+            DecorList = new List<ShopItem>();
             List<Decor> tempDecorList = new List<Decor>();
+
+            //garden expansion:
+            if (currGardenExpansion <= 3)
+            {
+                //add garden expansion to list
+                ShopItem gardenExp = new ShopItem();
+                gardenExp.sprite = null; //there is no sprite associated with garden expansion -- just display name "garden expansion"
+                gardenExp.quantity = 1;
+                gardenExp.name = "Garden Expansion";
+                gardenExp.baseCost = 100; //TODO: manually update here once design team figures out prices
+                DecorList.Add(gardenExp);
+            }
+
+            //fixture:
+            int fixtureSize = 1;
+            if (currGardenExpansion > 3)
+            {
+                fixtureSize = 2;
+            }
+            for (int i = 0; i < fixtureSize; i++)
+            {
+                bool validIndexFound = false;
+                while (!validIndexFound)
+                {
+                    Random rnd = new Random();
+                    int ind = rnd.Next(AllFixturesList.Count);
+                    Decor currFixture = AllFixturesList[ind];
+                    Sprite s = CollectionsSO.LoadedInstance.GetSprite(currFixture.itemID);
+                    if (!tempDecorList.Contains(currFixture) && s != null) //make sure item is not already in our list
+                    {
+                        tempDecorList.Add(currFixture);
+                        AllFixturesList.RemoveAt(ind);
+                        validIndexFound = true;
+                    }
+                }
+            }
+
             //regular decor items:
             for (int i = 0; i < 6; i++)
             {
@@ -344,7 +372,7 @@ namespace GrandmaGreen.Shopkeeping
                     Random rnd = new Random();
                     int ind = rnd.Next(AllDecorList.Count);
                     Decor currDecor = AllDecorList[ind];
-                    if (!tempDecorList.Contains(currDecor) && (currDecor.itemID is < 4088 or > 4123)) //make sure item is not already in our list and isn't a fixture.
+                    if (!tempDecorList.Contains(currDecor) && !(currDecor.isFixture)) //make sure item is not already in our list and isn't a fixture.
                     {
                         //make sure decor type does not already exist in our list
                         bool typeAlreadyExists = false;
@@ -369,43 +397,7 @@ namespace GrandmaGreen.Shopkeeping
                     }
                 }
             }
-            //fixture:
-            int fixtureSize = 1;
-            if(currGardenExpansion > 3)
-            {
-                fixtureSize = 2;
-            }
-            for (int i = 0; i < fixtureSize; i++)
-            {
-                bool validIndexFound = false;
-                while (!validIndexFound)
-                {
-                    Random rnd = new Random();
-                    int ind = rnd.Next(AllFixturesList.Count);
-                    Decor currFixture = AllFixturesList[ind];
-                    Sprite s = CollectionsSO.LoadedInstance.GetSprite(currFixture.itemID);
-                    if (!tempDecorList.Contains(currFixture) && s != null) //make sure item is not already in our list
-                    {
-                        tempDecorList.Add(currFixture);
-                        AllFixturesList.RemoveAt(ind);
-                        validIndexFound = true;
-                    }
-                }
-            }
 
-            DecorList = new List<ShopItem>();
-
-            //garden expansion:
-            if (currGardenExpansion <= 3)
-            {
-                //add garden expansion to list
-                ShopItem gardenExp = new ShopItem();
-                gardenExp.sprite = null; //there is no sprite associated with garden expansion -- just display name "garden expansion"
-                gardenExp.quantity = 1;
-                gardenExp.name = "Garden Expansion";
-                gardenExp.baseCost = 100; //TODO: manually update here once design team figures out prices
-                DecorList.Add(gardenExp);
-            }
 
             //generate decor list -- convert tempdecorlist to decorlist -- for each item, set values and add to decorlist
             for (int i = 0; i < tempDecorList.Count; i++)
@@ -420,7 +412,6 @@ namespace GrandmaGreen.Shopkeeping
                 DecorList.Add(item);
             }
 
-            return DecorList;
         }
 
         /// <summary>

@@ -28,6 +28,7 @@ namespace GrandmaGreen
         public UI.HUD.HUD HUD;
         public Garden.SeedUI seedUI;
         public TutorialUIDisplay tutorialUI;
+        public TapHereUIHandler tapHereUIHandler;
         public Dialogue.Dialogueable dialogueable;
         public DialoguePair introDialogue;
         public DialoguePair mailboxDialogue;
@@ -39,12 +40,13 @@ namespace GrandmaGreen
         public Entities.GameEntity playerEntity;
         public GameObject playerInteractable;
         public GameObject mailbox;
-        public GameObject tapHint;
+
         public CinemachineVirtualCamera playerCamera;
         public Transform[] hintPositions;
         public Transform toTownSquarePosition;
         public Collider mailboxColiider;
 
+        GameObject tapHint;
         void Awake()
         {
             if (tutorialStateData.AllTutorialsCompleted() || !tutorialStateData.tutorialEnabled)
@@ -81,6 +83,8 @@ namespace GrandmaGreen
             dialogueable.onFinishDialogue += OnTutorialDialogueRead;
 
             tutorialStateData.unlockExtraUI += EnableExtraUI;
+
+            tutorialStateData.startGrandmaMoveTo += StartPlayerMoveTo;
         }
 
 
@@ -99,7 +103,6 @@ namespace GrandmaGreen
             tutorialStateData.disableWatering -= DisableWatering;
             tutorialStateData.enableWatering -= EnableWatering;
 
-
             tutorialStateData.introduceFirstGolem -= TriggerGolemSpawnDialogue;
             tutorialStateData.explainEvolvedGolem -= TriggerGolemEvolveDialogue;
 
@@ -108,12 +111,26 @@ namespace GrandmaGreen
             dialogueable.onFinishDialogue -= OnTutorialDialogueRead;
 
             tutorialStateData.unlockExtraUI -= EnableExtraUI;
+
+            tutorialStateData.startGrandmaMoveTo -= StartPlayerMoveTo;
         }
 
-        void PlaySlideshow(SlideshowData slideshowData)
+        System.Action onSlideshowComplete;
+        void PlaySlideshow(TutorialSlideshow tutorialSlideshow)
         {
-            tutorialUI.SetUpSlideshow(slideshowData);
+            tutorialUI.SetUpSlideshow(tutorialSlideshow.slideshow);
             tutorialUI.OpenUI();
+
+            onSlideshowComplete = () => tutorialSlideshow.flag?.Raise();
+
+            tutorialUI.onPanelClosed += SlideshowComplete;
+
+        }
+
+        void SlideshowComplete()
+        {
+            onSlideshowComplete?.Invoke();
+            tutorialUI.onPanelClosed -= SlideshowComplete;
         }
 
         #region  Core Tutorial
@@ -131,36 +148,44 @@ namespace GrandmaGreen
 
             uint progress = tutorialStateData.coreLoopTutorial.progress;
 
-            if (progress < 9)
+            tapHint = tapHereUIHandler.tapHereObject.gameObject;
+
+            tapHint.SetActive(false);
+
+            if (progress < 11)
             {
                 HUD.DisableButton("collectionsButton");
                 HUD.DisableButton("customizationButton");
                 mailboxColiider.enabled = false;
             }
 
-            if (progress < 2)
+            if (progress < 3)
             {
                 playerInteractable.SetActive(false);
             }
 
-            if (progress < 1)
+            if (progress < 2)
             {
                 seedUI.enabled = false;
+
+            }
+
+            if (progress < 1)
+            {
+                //HUD.DisableButton("inventoryButton");
+                HUD.DisableLabel("currency-text");
             }
 
             if (progress == 0)
             {
-                HUD.DisableButton("inventoryButton");
-
+                EventManager.instance.HandleEVENT_CLOSE_HUD();
                 playerCamera.m_Lens.OrthographicSize = 2;
 
                 playerEntity.controller.PauseController();
 
                 TriggerTutorialDialogue(introDialogue);
-            }
 
-            if (progress > 4)
-                areaController.onGardenTick += ForceSetTutorialPlant;
+            }
         }
 
         public void OnTutorialDialogueRead()
@@ -168,9 +193,9 @@ namespace GrandmaGreen
             if (lastDialogue == introDialogue && !tutorialStateData.coreLoopTutorial.isComplete)
                 ZoomCameraOut();
             else if (lastDialogue == mailboxDialogue && !tutorialStateData.coreLoopTutorial.isComplete)
-                tutorialStateData.onMoveFlag.Raise();
+                tutorialStateData.NextCoreLoopTutorial();
             else if (lastDialogue == golemSpawnDialogue || lastDialogue == golemEvolveDialogue)
-                tutorialStateData.onGolemTalkedFlag.Raise();
+                tutorialStateData.PlayNextSlideshow(tutorialStateData.golemTutorial);
         }
 
         void ZoomCameraOut()
@@ -179,8 +204,8 @@ namespace GrandmaGreen
                 .OnComplete(
                     () =>
                     {
-                        tutorialStateData.PlaySlideshow(tutorialStateData.coreLoopTutorial.slideshowData[0]);
-                        WaitForPlayerToMove().Start();
+                        tutorialStateData.NextCoreLoopTutorial();
+
                         playerEntity.controller.StartController();
                     }
                     );
@@ -194,6 +219,7 @@ namespace GrandmaGreen
         void EnableInventory()
         {
             HUD.EnableButton("inventoryButton");
+            HUD.EnableLabel("currency-text");
             seedUI.enabled = true;
             seedUI.OpenUI();
         }
@@ -243,12 +269,14 @@ namespace GrandmaGreen
         {
             TriggerTutorialDialogue(leaveDialogue);
             tapHint.SetActive(true);
-            tapHint.transform.position = toTownSquarePosition.position;
+
+            tapHereUIHandler.SetTapHerePosition(toTownSquarePosition.position);
+
         }
 
         List<Garden.PlantState> plants;
         Vector3Int tutorialCell;
-        void UpdateTutorialPlant(int stage)
+        void UpdateTutorialPlant(int stage, bool waterPlant = false)
         {
             plants = areaController.gardenManager.GetPlants(0);
             if (plants.Count == 0)
@@ -258,6 +286,13 @@ namespace GrandmaGreen
 
             areaController.DestroyPlant(tutorialCell);
             areaController.CreatePlant(starterPlantID, starterPlantGenotype, tutorialCell, stage);
+
+            if (waterPlant)
+            {
+                areaController.gardenManager.UpdateWaterStage(0, tutorialCell);
+                areaController.UpdateTile(tutorialCell);
+            }
+
         }
 
         void ForceSetTutorialPlant()
@@ -268,19 +303,30 @@ namespace GrandmaGreen
                     UpdateTutorialPlant(0);
                     break;
                 case 6:
-                    UpdateTutorialPlant(1);
+                    UpdateTutorialPlant(0);
                     break;
-                case 9:
-                    UpdateTutorialPlant(2);
+                case 7:
+                    UpdateTutorialPlant(1, true);
+                    break;
+                case 10:
+                    UpdateTutorialPlant(2, true);
+                    break;
+                case 11:
+                    UpdateTutorialPlant(2, true);
+                    break;
+                case 12:
+                    UpdateTutorialPlant(2, true);
                     break;
             }
         }
+
+        void StartPlayerMoveTo() => WaitForPlayerToMove().Start();
 
         int currentHintPos = 0;
         IEnumerator WaitForPlayerToMove()
         {
             tapHint.SetActive(true);
-            tapHint.transform.position = hintPositions[0].position;
+            tapHereUIHandler.SetTapHerePosition(hintPositions[0].position);
 
             for (int i = 0; i < hintPositions.Length; i++)
             {
@@ -294,10 +340,10 @@ namespace GrandmaGreen
                     while ((playerEntity.transform.position - hintPositions[i].position).magnitude > 2.0f)
                         yield return null;
 
-
-
                 if (i < hintPositions.Length - 1)
+                {
                     tapHint.transform.DOMove(hintPositions[i + 1].position, 1.0f);
+                }
             }
 
             tapHint.SetActive(false);
@@ -316,7 +362,8 @@ namespace GrandmaGreen
 
             while (!grandmaTapped)
             {
-                tapHint.transform.position = playerEntity.transform.position;
+
+                tapHereUIHandler.SetTapHerePosition(playerEntity.transform.position);
                 yield return null;
             }
 
