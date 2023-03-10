@@ -59,7 +59,6 @@ namespace GrandmaGreen.SaveSystem
             }
             catch (Exception e)
             {
-                Debug.LogException(e);
                 return false;
             }
             return true;
@@ -83,7 +82,6 @@ namespace GrandmaGreen.SaveSystem
             }
             catch (Exception e)
             {
-                Debug.LogException(e);
                 return false;
             }
             return true;
@@ -102,7 +100,6 @@ namespace GrandmaGreen.SaveSystem
                 }
                 catch (Exception e)
                 {
-                    Debug.LogException(e);
                     return false;
                 }
             }
@@ -140,7 +137,6 @@ namespace GrandmaGreen.SaveSystem
                 }
                 catch (Exception e)
                 {
-                    Debug.LogException(e);
                     return false;
                 }
             }

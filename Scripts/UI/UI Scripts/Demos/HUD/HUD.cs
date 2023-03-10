@@ -60,13 +60,12 @@ namespace GrandmaGreen.UI.HUD
             }
 
             RegisterButtonCallback("inventoryButton", inventoryUIDisplay.OpenUI);
-            // inventoryUIDisplay.RegisterButtonCallback("exitButton", OpenUI);
 
             RegisterButtonCallback("collectionsButton", collectionUIDisplay.OpenUI);
-            // collectionUIDisplay.RegisterButtonCallback("exitButton", OpenHUDAnimated);
 
             RegisterButtonCallback("settingsButton", settingsUIDisplay.OpenUI);
-            // settingsUIDisplay.RegisterButtonCallback("exitButton", OpenUI);
+            
+            RegisterButtonCallback("marketing", CloseUI);
 
             EventManager.instance.HandleEVENT_UPDATE_MONEY_DISPLAY();
         }

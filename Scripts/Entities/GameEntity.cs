@@ -29,9 +29,10 @@ namespace GrandmaGreen.Entities
         public EntityController controller;
         public Animator animator;
         public SpookuleleAudio.ASoundContainer footsteps;
+        public GameObject cameraTarget;
 
         [field: Header("Entity Variables")]
-        public CharacterId id;
+        public CharacterId id { get; set; }
         public StateMachine<EntityState> entityStateMachine;
         public Vector3 velocity;
 

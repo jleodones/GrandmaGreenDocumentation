@@ -382,7 +382,7 @@ namespace GrandmaGreen.Collections
                         collections.ItemLookup.Add(csvID, itemProps);
                         Decor decor = new Decor(csvID, name);
                         string isFixture = line[10];
-                        if (isFixture == "TRUE\r")
+                        if (isFixture.Substring(0,4) == "TRUE")
                         {
                             decor.isFixture = true;
                             collections.FixtureList.Add(decor);

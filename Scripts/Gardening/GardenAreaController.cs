@@ -4,6 +4,7 @@ using GrandmaGreen.Entities;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using DG.Tweening;
 
 namespace GrandmaGreen.Garden
 {
@@ -19,7 +20,7 @@ namespace GrandmaGreen.Garden
         [Header("Garden Management")]
         public GardenManager gardenManager;
         public GardenCustomizer gardenCustomizer;
-        
+
         public GardenVFX gardenVFX;
         public Cinemachine.CinemachineVirtualCamera customizationCamera;
         public GameObject customizationCanvas;
@@ -99,12 +100,24 @@ namespace GrandmaGreen.Garden
             }
         }
 
+        bool checkLastTile = false;
+        DG.Tweening.Sequence lastTileTimer;
         public override void AreaSelection(Vector3 worldPoint)
         {
             lastSelectedPosition = worldPoint;
+            Vector3Int temp = lastSelectedCell;
+
             lastSelectedCell = tilemap.WorldToCell(worldPoint);
 
             lastSelectedTile = tilemap.GetTile(lastSelectedCell);
+
+            if (checkLastTile)
+            {
+                if (lastSelectedCell == temp)
+                {
+                    return;
+                }
+            }
 
             playerController.ClearActionQueue();
             onTilemapSelection?.Invoke(lastSelectedCell);
@@ -120,19 +133,28 @@ namespace GrandmaGreen.Garden
                 playerController.QueueEntityAction(((IGameTile)lastSelectedTile).DoTileAction);
 
             }
+
+            checkLastTile = true;
+
+            if (lastTileTimer.IsActive())
+                lastTileTimer.Restart();
+            else
+                lastTileTimer =
+                DOTween.Sequence().AppendInterval(0.5f)
+                .OnComplete(() => checkLastTile = false);
         }
 
         Vector3 CheckPlayerDestination(Vector3 worldPoint)
         {
-            if(playerTools.currentTool.toolIndex==0)
-                return worldPoint;
+            if (playerTools.currentTool.toolIndex == 0)
+                return tilemap.GetCellCenterWorld(lastSelectedCell);
 
             Vector2 direction = (worldPoint - playerController.GetEntityPos()).normalized;
             Vector2Int offset;
 
             if (Mathf.Abs(direction.x) > Mathf.Abs(direction.y) || direction.y > 0)
             {
-                offset = direction.x > 0 ?  Vector2Int.left : Vector2Int.right;
+                offset = direction.x > 0 ? Vector2Int.left : Vector2Int.right;
             }
             else
             {
@@ -148,13 +170,13 @@ namespace GrandmaGreen.Garden
                     offset = direction.x > 0 ? Vector2Int.right : Vector2Int.left;
                 }
                 else
-                    offset =  Vector2Int.up;
+                    offset = Vector2Int.up;
             }
 
             offsetCellPos = lastSelectedCell + (Vector3Int)offset;
 
 
-            return (tilemap.GetCellCenterWorld(offsetCellPos) + worldPoint)/2;
+            return (tilemap.GetCellCenterWorld(offsetCellPos) + worldPoint) / 2;
         }
 
         //Selects a garden tile in world space
@@ -349,7 +371,7 @@ namespace GrandmaGreen.Garden
                     UpdateSprite(updatedPlant.cell);
                     UpdateTile(updatedPlant.cell);
                 }
-            } 
+            }
             else
             {
                 foreach (PlantState plantOnReturn in updatedPlantsList)
@@ -357,7 +379,7 @@ namespace GrandmaGreen.Garden
                     if (!plantOnReturn.previouslyDead) wiltedPlantList.Add(plantOnReturn);
                 }
             }
-                
+
         }
 
         public void WaterPlant(Vector3Int cell)
@@ -405,7 +427,7 @@ namespace GrandmaGreen.Garden
                     {
                         wiltedPlantList.Add(updatedPlant);
                     }
-                    
+
                     break;
                 }
             }
@@ -600,7 +622,7 @@ namespace GrandmaGreen.Garden
         public void FruitTest()
         {
             ResetGarden();
-            Vector3Int topLeft = Vector3Int.zero + 3 * Vector3Int.up + 7 * Vector3Int.left;
+            Vector3Int topLeft = tilemap.WorldToCell(transform.position) + 3 * Vector3Int.up + 7 * Vector3Int.left;
             int row = 0;
             foreach (FruitId fruitId in System.Enum.GetValues(typeof(FruitId)))
             {
@@ -702,7 +724,7 @@ namespace GrandmaGreen.Garden
             Debug.Log("AreaIndex " + areaIndex);
             Debug.Log("Saving Plant");
             gardenManager.CreatePlant(PlantId.Rose, new Genotype("aabb"), 0, areaIndex, Vector3Int.zero);
-	    }
+        }
         #endregion
 
         #region Tiles

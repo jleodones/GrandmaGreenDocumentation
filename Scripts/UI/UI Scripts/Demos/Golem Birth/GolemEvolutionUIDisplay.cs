@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using GrandmaGreen.Collections;
+using GrandmaGreen.Entities;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -15,6 +16,8 @@ namespace GrandmaGreen.UI.Golems
         private Label title;
         private Label golemName;
         private float opacityCount = 0.2f;
+        
+        public GolemManager golemManager;
 
         public void Start()
         {
@@ -28,30 +31,30 @@ namespace GrandmaGreen.UI.Golems
 
         public override void Load()
         {
-            EventManager.instance.EVENT_GOLEM_SPAWN += OpenUIHandler;
+            EventManager.instance.EVENT_GOLEM_EVOLVE += OpenUIHandler;
             m_rootVisualElement.RegisterCallback<ClickEvent>(CloseUIHandler);
         }
 
         public override void Unload()
         {
-            EventManager.instance.EVENT_GOLEM_SPAWN -= OpenUIHandler;
+            EventManager.instance.EVENT_GOLEM_EVOLVE -= OpenUIHandler;
             m_rootVisualElement.UnregisterCallback<ClickEvent>(CloseUIHandler);
         }
 
         [Button()]
         public void TestHandler(ushort golemID)
         {
-            OpenUIHandler(golemID, new Vector3());
+            OpenUIHandler(golemID);
         }
         
-        public void OpenUIHandler(ushort golemID, Vector3 spawnLocation)
+        public void OpenUIHandler(ushort golemID)
         {
             // Switch out the sprite and name.
             string g = ((CharacterId)golemID).ToString();
 
             Sprite s = Resources.Load<Sprite>("Baby Golems/CHA_" + g + "_Baby");
-            //golem.style.backgroundImage = new StyleBackground(s);
             golemName.text = "Baby " + g;
+            golem.style.backgroundImage = new StyleBackground(s);
             
             OpenUI();
         }

@@ -10,6 +10,7 @@
                     </ui:VisualElement>
                     <ui:VisualElement name="currency-image" class="icon-test general-icon info-icon" style="background-image: url(&apos;project://database/Assets/_GrandmaGreen/Art/UI/Icons/HUD/UI_HUD_Gold%201.png?fileID=2800000&amp;guid=a905f87446937e343bfa7472f3e2bb77&amp;type=3#UI_HUD_Gold 1&apos;); -unity-background-scale-mode: scale-to-fit; height: 80px; width: 50%; position: absolute; left: -11%;" />
                 </ui:GroupBox>
+                <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="marketing" class="icon-buttons" style="background-image: url(&apos;project://database/Assets/_GrandmaGreen/Art/UI/Settings/UI_Settings_BGM_Slider_Drag.png?fileID=2800000&amp;guid=d63fcaf9b4c07ae46bde0c8afb84c6eb&amp;type=3#UI_Settings_BGM_Slider_Drag&apos;);" />
             </ui:VisualElement>
             <ui:GroupBox name="right-content" class="button-content" style="flex-direction: row-reverse; width: 30%; justify-content: space-between; height: 50%; align-items: center;">
                 <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="inventoryButton" class="buttons icon-buttons" style="background-image: url(&apos;project://database/Assets/_GrandmaGreen/Art/UI/Icons/HUD/UI_HUD_Inventory%201.png?fileID=2800000&amp;guid=77f3be438a6ffa740a1ba736ffed633a&amp;type=3#UI_HUD_Inventory 1&apos;); padding-bottom: 5px;" />

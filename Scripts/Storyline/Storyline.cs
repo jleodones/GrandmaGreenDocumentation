@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Core.Utilities;
 
@@ -19,7 +17,7 @@ namespace GrandmaGreen
 
         [field: SerializeField] public uint progress { get; private set; }
         [field: SerializeField] public StoryState currentState { get; private set; }
-
+        
         public event System.Action<Storyline> onStart;
         public event System.Action<Storyline> onProgress;
         public event System.Action<Storyline> onRegress;
@@ -88,7 +86,7 @@ namespace GrandmaGreen
 
         public void ClearStory()
         {
-            if (currentState != StoryState.COMPLETED)
+            if(currentState != StoryState.COMPLETED)
                 RemoveCurrentRequirement();
 
             currentState = StoryState.INACTIVE;

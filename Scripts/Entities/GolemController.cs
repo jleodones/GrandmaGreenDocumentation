@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Core.Input;
 using GrandmaGreen.UI.Golems;
 using GrandmaGreen.Collections;
+using GrandmaGreen.Dialogue;
 using UnityEngine;
 using Pathfinding;
 using Unity.Mathematics;
@@ -33,17 +34,21 @@ namespace GrandmaGreen.Entities
 
         [field: Header("Entity Variables")]
         public GolemManager golemManager;
+
         public CharacterId id;
         public bool isMature = false;
         public Vector3 velocity;
         public int range = 300;
         public float delay = 5f;
+        public GameObject cameraTarget;
         [Header("Pathing")]
         public SplineFollow splineFollow;
         [Range(0, 1)]
         public float smoothFactor = 0.2f;
         public IPathfinderServicer pathfinderServicer => IPathAgent.Servicer;
         public bool isPathing => splineFollow.isFollowing;
+
+        public Dialogueable dialoguable;
 
         #region private variables
         float3[] pathableNodes;
@@ -244,8 +249,10 @@ namespace GrandmaGreen.Entities
         {
             if (velocity.magnitude != 0 && m_isDragging == false)
             {
+                //reset to idle
+                animator.SetInteger("EXPRESSION", 0);
 
-                 //early out if barely moving sideways, prevents flickering
+                //early out if barely moving sideways, prevents flickering
                 if(math.abs(velocity.x) < 0.001)
                 {
                     animator.SetInteger("MOVEMENT", (int)Mathf.Ceil(velocity.magnitude));
@@ -261,14 +268,13 @@ namespace GrandmaGreen.Entities
             }
             else
                 animator.SetInteger("MOVEMENT", 0);
-
         }
         
         public void UpdateInteractState() 
         {
-            //Debug.Log("Interacting.");
             m_isInteracting = !m_isInteracting;
             behaviorTree.Blackboard.Set("isInteract", m_isInteracting);     
+            
             if (m_isInteracting) {
                 EventManager.instance.HandleEVENT_GOLEM_GRANDMA_MOVE_TO(transform.position);
             } else {
@@ -319,7 +325,7 @@ namespace GrandmaGreen.Entities
 
         public void RegisterManager(GolemManager mgmr)
         {
-            this.golemManager = mgmr;
+            golemManager = mgmr;
         }
 
         #region Interaction
@@ -347,13 +353,25 @@ namespace GrandmaGreen.Entities
         }
         #endregion
 
-        #region Golem Evolution
-        //Golem event handler
+        #region Golem State Change (Birth, Evolution, Happiness)
+        //Golem event handler.
+        public void OnGolemBirth()
+        {
+            CancelPath();
+            EventManager.instance.HandleEVENT_GOLEM_GRANDMA_MOVE_TO(transform.position);
+        }
+        
         public void OnGolemEvolve(ushort golemID) {
             if (id == (CharacterId)golemID) {
                 Debug.Log(id.ToString() + " EVOLVE!");
                 UpdateMatureState(true);
+                dialoguable.TriggerDialogueByNode("Evolution_1");
             }
+        }
+
+        private void OnGolemHappinessChange(ushort golemId)
+        {
+            
         }
 
         //Golem sprite change
@@ -468,7 +486,7 @@ namespace GrandmaGreen.Entities
         /// Follows the given float3 path
         /// </summary>
         /// <param name="path"></param>
-        public virtual IEnumerator FollowPath(float3[] path)
+        public virtual IEnumerator FollowPath(float3[] path) 
         {
             Spline spline = default(Spline);
 
@@ -499,7 +517,6 @@ namespace GrandmaGreen.Entities
 
         public virtual void CancelPath()
         {
-            
             splineFollow.ForceStop();
         }
 

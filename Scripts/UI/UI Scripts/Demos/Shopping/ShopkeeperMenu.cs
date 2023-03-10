@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UIElements;
 using GrandmaGreen.Dialogue;
 using GrandmaGreen.UI.Selling;
+using GrandmaGreen.Entities;
 
 namespace GrandmaGreen.UI.Shopping
 {
@@ -18,6 +19,8 @@ namespace GrandmaGreen.UI.Shopping
         /// Camera zoom on touch.
         /// </summary>
         public CameraZoom cameraZoom;
+        public GameEntity gramEntity;
+        public GameObject cameraTarget;
         private bool m_isMenuOpen = false;
         private bool m_isInteracting = false;
 
@@ -126,6 +129,10 @@ namespace GrandmaGreen.UI.Shopping
             // EventManager.instance.HandleEVENT_CLOSE_HUD();
 
             // Call the dialogue trigger.
+            if (cameraTarget)
+            {
+                dialogueScript.PauseAndZoomInEntity(3.85f, cameraZoom, cameraTarget, gramEntity.cameraTarget);
+            }
 
             if (specialDialogue)
             {

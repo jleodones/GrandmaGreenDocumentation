@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using GrandmaGreen.Collections;
 using UnityEngine;
 using Sirenix.OdinInspector;
 using GrandmaGreen.SaveSystem;
@@ -67,6 +68,12 @@ namespace GrandmaGreen {
         public void OpenHUD()
         {
             hud.OpenUI();
+        }
+
+        [Button()]
+        public void AddPumpkinSeed()
+        {
+            EventManager.instance.HandleEVENT_INVENTORY_ADD_SEED(1014, new Genotype());
         }
     }
 }

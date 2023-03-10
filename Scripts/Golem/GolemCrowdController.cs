@@ -15,6 +15,7 @@ namespace GrandmaGreen.Entities
         [Header("Golem Management")]
         public GolemManager golemManager;
         public int happinessChangeValue = -10;
+        public CameraZoom cameraZoom;
 
         [Header("Golem References")]
         public GardenAreaController gardenArea;
@@ -44,6 +45,7 @@ namespace GrandmaGreen.Entities
             golemManager.golemWorkTimer.Resume(true);
             golemManager.golemWorkTimer.onTick += GolemDoAction;
             golemManager.tiles = gardenArea.tilemap;
+            golemManager.cameraZoom = cameraZoom;
         }
 
         void OnDisable() {

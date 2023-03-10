@@ -148,9 +148,11 @@ namespace GrandmaGreen
 
         void SetCurrentScene(SCENES scene)
         {
-            areaServicer.ActivateAreaController(0);
-
-            currentScene = scene;
+            if (scene != SCENES.StartScene)
+            {
+                areaServicer.ActivateAreaController(0);
+                currentScene = scene;
+            }
         }
 
         bool inSceneTransition = false;

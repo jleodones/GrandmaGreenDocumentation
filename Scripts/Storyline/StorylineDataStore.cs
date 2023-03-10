@@ -39,16 +39,19 @@ namespace GrandmaGreen
             uint newProgress = 0;
             foreach (Storyline storyline in storylineSet)
             {
-                if(RequestData<uint>(storylineSet.IndexOf(storyline),ref newProgress))
+                if(RequestData(storylineSet.IndexOf(storyline), ref newProgress))
                 {
                     storyline.SetProgress(newProgress);
                 }
-                else
-                    if(!AddComponent<uint>(storylineSet.IndexOf(storyline), 0))
+                else if(!AddComponent<uint>(storylineSet.IndexOf(storyline), 0))
+                {
+                    IComponentStore store = GetComponentStore<uint>();
+                    if (store == null)
                     {
                         CreateNewStore<uint>();
-                        AddComponent<uint>(storylineSet.IndexOf(storyline), 0);
                     }
+                    AddComponent<uint>(-1, 0);
+                }
 
                 storyline.StartStory();
             }

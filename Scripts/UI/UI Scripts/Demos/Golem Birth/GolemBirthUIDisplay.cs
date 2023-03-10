@@ -1,5 +1,7 @@
 using System.Collections.Generic;
 using GrandmaGreen.Collections;
+using GrandmaGreen.Dialogue;
+using GrandmaGreen.Entities;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -17,6 +19,9 @@ namespace GrandmaGreen.UI.Golems
         private Label title;
         private Label golemName;
         private Label description;
+
+        public GolemManager golemManager;
+        private ushort m_currentHandling = 0;
 
         public void Start()
         {
@@ -43,20 +48,16 @@ namespace GrandmaGreen.UI.Golems
             m_rootVisualElement.UnregisterCallback<ClickEvent>(CloseUIHandler);
         }
 
-        [Button()]
-        public void TestHandler(ushort golemID)
-        {
-            OpenUIHandler(golemID, new Vector3());
-        }
-        
-        public void OpenUIHandler(ushort golemID, Vector3 spawnLocation)
+        public void OpenUIHandler(ushort golemId, Vector3 spawnLocation)
         {
             // Switch out the sprite and name.
-            string g = ((CharacterId)golemID).ToString();
+            string g = ((CharacterId)golemId).ToString();
 
             Sprite s = Resources.Load<Sprite>("Baby Golems/CHA_" + g + "_Baby");
-            //golem.style.backgroundImage = new StyleBackground(s);
             golemName.text = "Baby " + g;
+            golem.style.backgroundImage = new StyleBackground(s);
+
+            m_currentHandling = golemId;
             
             OpenUI();
         }
@@ -86,6 +87,8 @@ namespace GrandmaGreen.UI.Golems
         public void CloseUIHandler(ClickEvent ce)
         {
             CloseUI();
+            
+            golem.UnregisterCallback<TransitionEndEvent>(BounceGolem);
             golemContainer.style.bottom = Length.Percent(-50);
             cloudsB.ToggleInClassList("floatClouds");
             cloudsA.ToggleInClassList("floatClouds");
@@ -96,12 +99,23 @@ namespace GrandmaGreen.UI.Golems
             description.style.opacity = description.resolvedStyle.opacity * 0;
             title.style.opacity = description.resolvedStyle.opacity * 0;
             golemName.style.opacity = description.resolvedStyle.opacity * 0;
+            
+            // Trigger the birth dialogue.
+            if (golemManager.activeGolems.TryGetValue(m_currentHandling, out GameObject thisGolem))
+            {
+                // GolemController controller = thisGolem.GetComponent<GolemController>();
+                // controller.OnGolemBirth();
+                Dialogueable dialogueable = thisGolem.transform.Find("Golem Menu").transform.Find("Dialogueable").GetComponent<Dialogueable>();
+                dialogueable.TriggerDialogueByNode("Birth_1");
+            }
+            m_currentHandling = 0;
         }
 
         private void BounceGolem(TransitionEndEvent evt)
         {
+            golem.ToggleInClassList("bounceGolem");
+            
             golemContainer.RegisterCallback<TransitionEndEvent>(BounceGolem);
-            golemContainer.ToggleInClassList("bounceGolem");
         }
 
         private void ChangeOpacity(TransitionEndEvent evt)
@@ -141,6 +155,5 @@ namespace GrandmaGreen.UI.Golems
         void SetSprite(string elementName, Sprite sprite) {
             m_rootVisualElement.Q(elementName).style.backgroundImage = new StyleBackground(sprite);
         }
-
     }
 }

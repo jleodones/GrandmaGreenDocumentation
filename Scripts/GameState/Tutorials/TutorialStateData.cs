@@ -57,7 +57,7 @@ namespace GrandmaGreen
 
         public event System.Action unlockExtraUI;
 
-        public event System.Action introduceFirstGolem;
+        // public event System.Action introduceFirstGolem;
         public event System.Action explainEvolvedGolem;
 
         public void Initalize()
@@ -134,21 +134,24 @@ namespace GrandmaGreen
         public void PlayNextSlideshow(TutorialData tutorialData)
         {
             int index = (int)tutorialData.progress;
-
-            if (tutorialData.slideshowData[index].slideshow == null)
+            if (index < tutorialData.slideshowData.Length)
             {
-                tutorialData.slideshowData[index].flag?.Raise();
-                return;
-            }
-            DisableEventSystem();
+                if (tutorialData.slideshowData[index].slideshow == null)
+                {
+                    tutorialData.slideshowData[index].flag?.Raise();
+                    return;
+                }
 
-            DOTween.Sequence().AppendInterval(tutorialData.slideshowData[index].openDelay)
-            .AppendCallback(() =>
-            {
-                EnableEventSystem();
-                onPlaySlideshow?.Invoke(tutorialData.slideshowData[index]);
+                DisableEventSystem();
+
+                DOTween.Sequence().AppendInterval(tutorialData.slideshowData[index].openDelay)
+                    .AppendCallback(() =>
+                        {
+                            EnableEventSystem();
+                            onPlaySlideshow?.Invoke(tutorialData.slideshowData[index]);
+                        }
+                    );
             }
-           );
         }
 
         #region  Coreloop
@@ -305,7 +308,7 @@ namespace GrandmaGreen
             switch (storyline.progress)
             {
                 case 1:
-                    introduceFirstGolem?.Invoke();
+                    // introduceFirstGolem?.Invoke();
                     break;
                 case 2:
                     golemEvolvedAction = (_) => onGolemEvolvedFlag.Raise();

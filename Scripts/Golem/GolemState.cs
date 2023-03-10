@@ -16,5 +16,7 @@ namespace GrandmaGreen.Entities
         public bool assignedWatering;
 
         public float[] assignedCellInWorldSpace;
+
+        public int storylineProgression;
     }
 }

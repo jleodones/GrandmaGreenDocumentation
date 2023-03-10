@@ -92,6 +92,18 @@ namespace GrandmaGreen.Dialogue
             }
         }
 
+        public string GetCharacterName()
+        {
+            if (m_currentLine != null)
+            {
+                if (m_currentLine.CharacterName != null)
+                {
+                    return m_currentLine.CharacterName;
+                }
+            }
+            return "";
+        }
+
         /// <summary>
         /// Display the dialogue bubble upon node start.
         /// </summary>

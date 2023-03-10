@@ -11,6 +11,7 @@ namespace GrandmaGreen.Garden
     {
         public GardenToolSet gardenToolSet;
         public PlayerToolData playerToolData;
+        public UI.HUD.HUD HUD;
         public UI.Collections.TabbedInventory tabbedInventory;
         public Image seedImage;
         public Button seedButton;
@@ -41,16 +42,16 @@ namespace GrandmaGreen.Garden
 
             //seedButton.onClick.AddListener(OnButtonClicked);
 
-            EventManager.instance.EVENT_OPEN_HUD += OpenUI;
-            EventManager.instance.EVENT_CLOSE_HUD += CloseUI;
+            HUD.onPanelOpened += OpenUI;
+            HUD.onPanelClosed += CloseUI;
 
             EventManager.instance.EVENT_TOGGLE_CUSTOMIZATION_MODE += ToggleUI;
 
 
-            tabbedInventory.onPanelOpened += OpenUI;
-            tabbedInventory.onPanelOpened += DisableInteraction;
+            //tabbedInventory.onPanelOpened += OpenUI;
+            //tabbedInventory.onPanelOpened += DisableInteraction;
 
-            tabbedInventory.onPanelClosed += EnableInteraction;
+            //tabbedInventory.onPanelClosed += EnableInteraction;
 
             if (playerToolData.equippedSeed != 0)
                 SetSeed();

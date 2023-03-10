@@ -7,8 +7,10 @@ using UnityEngine.Tilemaps;
 using Pathfinding;
 using Core.RNG;
 using GrandmaGreen.Collections;
+using GrandmaGreen.Dialogue;
 using GrandmaGreen.Garden;
 using GrandmaGreen.SaveSystem;
+using GrandmaGreen.UI.Golems;
 using Newtonsoft.Json;
 
 namespace GrandmaGreen.Entities 
@@ -18,7 +20,6 @@ namespace GrandmaGreen.Entities
     [CreateAssetMenu(menuName = "GrandmaGreen/Entities/GolemManager")]
     public class GolemManager : ObjectSaver
     {
-        
         [JsonIgnore]
         public List<GameObject> golemPrefabs;
         //public Dictionary<ushort, GameObject> golemObjectTable; //active golems
@@ -40,7 +41,16 @@ namespace GrandmaGreen.Entities
         [JsonIgnore]
         public Tilemap tiles;
 
+        [JsonIgnore]
+        public Dictionary<ushort, GameObject> activeGolems;
+
+        [JsonIgnore]
+        public List<GolemStorylineProgressionRequirement> golemStorylineProgressionRequirements;
+
         public bool IsSpawnDemoGolem = true;
+
+        [JsonIgnore]
+        public CameraZoom cameraZoom;
         
         public void Initialize()
         {
@@ -54,16 +64,19 @@ namespace GrandmaGreen.Entities
             {
                 CreateNewStore(typeof(GolemState));
             }
+
+            activeGolems = new Dictionary<ushort, GameObject>();
         }
 
         public GolemState CreateGolem(ushort id) {
             return new GolemState {
                 golemID = (CharacterId)id,
-                happiness = 50,
+                happiness = 0,
                 isSpawned = true,
                 isMature = false,
                 isTravelling = false,
                 assignedWatering = false,
+                storylineProgression =  0,
             };
         }
 
@@ -85,6 +98,14 @@ namespace GrandmaGreen.Entities
             newGolem.GetComponent<GolemController>().RegisterManager(this);
 
             if (state.isMature) newGolem.GetComponent<GolemController>().UpdateMatureState(true);
+            
+            // Register golem with splash screen and evolution UI. LOL.
+            if (!activeGolems.TryAdd((ushort)(newGolem.GetComponent<GolemController>().id),
+                    newGolem))
+            {
+                // If it already exists, replace the old null data.
+                activeGolems[(ushort)newGolem.GetComponent<GolemController>().id] = newGolem;
+            };
         }
 
         /// <summary>
@@ -103,7 +124,7 @@ namespace GrandmaGreen.Entities
 
             if (golemPrefabs.Count < tableIndex) 
             {
-                Debug.Log("Golem Manager: no prefebs availalbe");
+                Debug.Log("Golem Manager: no prefabs available.");
                 return;
             }
 
@@ -135,6 +156,20 @@ namespace GrandmaGreen.Entities
             }
 
             golemStateTable[index].happiness = happiness;
+            
+            // Update storyline progression.
+            bool maturity = golemStateTable[index].isMature;
+            int progress = golemStateTable[index].storylineProgression;
+            
+            foreach (GolemStorylineProgressionRequirement r in golemStorylineProgressionRequirements)
+            {
+                if (r.VerifyAchievement(happiness, maturity, progress))
+                {
+                    golemStateTable[index].storylineProgression++;
+                    activeGolems[id].transform.Find("Golem Menu").transform.Find("Dialogueable")
+                        .GetComponent<Dialogueable>().TriggerDialogueByNode("Story_" + (progress + 1).ToString().TrimStart('0'));
+                }
+            }
         }
 
         public Vector3 GetPlayerPos()
@@ -220,12 +255,12 @@ namespace GrandmaGreen.Entities
                 if (!UpdateValue<GolemState>(index, golemStateTable[index]))
                     Debug.Log("Could not save Golem Data!");
             }
-                //Debug.Log("Golem Data Saved");
         }
 
         public void TriggerDeleteData()
         {
             golemStateTable = new GolemState[10];
+            activeGolems.Clear();
         }
         #endregion
 

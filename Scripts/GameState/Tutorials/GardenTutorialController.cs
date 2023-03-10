@@ -27,6 +27,8 @@ namespace GrandmaGreen
         public ToolsMenu toolsMenu;
         public UI.HUD.HUD HUD;
         public Garden.SeedUI seedUI;
+        public UI.Mailbox.MailboxUIDisplay mailboxUIDisplay;
+        public Mail.MailboxModel mailboxModel;
         public TutorialUIDisplay tutorialUI;
         public TapHereUIHandler tapHereUIHandler;
         public Dialogue.Dialogueable dialogueable;
@@ -75,7 +77,7 @@ namespace GrandmaGreen
             tutorialStateData.enableWatering += EnableWatering;
 
 
-            tutorialStateData.introduceFirstGolem += TriggerGolemSpawnDialogue;
+            // tutorialStateData.introduceFirstGolem += TriggerGolemSpawnDialogue;
             tutorialStateData.explainEvolvedGolem += TriggerGolemEvolveDialogue;
 
             areaController.onGardenTick += ForceSetTutorialPlant;
@@ -103,7 +105,7 @@ namespace GrandmaGreen
             tutorialStateData.disableWatering -= DisableWatering;
             tutorialStateData.enableWatering -= EnableWatering;
 
-            tutorialStateData.introduceFirstGolem -= TriggerGolemSpawnDialogue;
+            // tutorialStateData.introduceFirstGolem -= TriggerGolemSpawnDialogue;
             tutorialStateData.explainEvolvedGolem -= TriggerGolemEvolveDialogue;
 
             areaController.onGardenTick -= ForceSetTutorialPlant;

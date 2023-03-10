@@ -49,9 +49,6 @@ namespace GrandmaGreen.UI.Golems
         
         public void GolemMenuOpen()
         {
-            // Close the HUD.
-            // EventManager.instance.HandleEVENT_CLOSE_HUD();
-
             // Get Collider bounding box
             Bounds box = golemController.GetGolemBox();
 
@@ -65,7 +62,6 @@ namespace GrandmaGreen.UI.Golems
 
         public void GolemMenuClose()
         {
-            // EventManager.instance.HandleEVENT_OPEN_HUD();
             m_rootVisualElement.style.display = DisplayStyle.None;
         }
 
@@ -76,8 +72,17 @@ namespace GrandmaGreen.UI.Golems
 
             // Find the golem's dialogue script.
             Dialogueable dialogueScript = GetComponentInChildren<Dialogueable>();
-            
-            // TODO: Check if grandma is within a certain distance. If so, play dialogue. If not, ignore.
+
+            //zoom in the camera upon dialogue trigger
+            if (golemController.golemManager.cameraZoom)
+            {
+                //need to switch the camera target to golem and back to grandma
+                GameEntity gram = golemController.golemManager.playerController.entity;
+                GameObject golemCameraTar = golemController.cameraTarget;
+                GameObject gramCameraTar = gram.cameraTarget;
+                dialogueScript.PauseAndZoomInEntity(4.0f, (CameraZoom)(golemController.golemManager.cameraZoom), golemCameraTar, gramCameraTar);
+            }
+
             // Call the dialogue trigger.
             dialogueScript.TriggerDialogue();
         }
@@ -105,10 +110,6 @@ namespace GrandmaGreen.UI.Golems
                     m_rootVisualElement.panel, UIpos, Camera.main);
 
                 m_rootVisualElement.transform.position = newPosition;
-
-                // Moved UI to midpoint through UXML
-                //m_rootVisualElement.transform.position = newPosition.WithNewX(newPosition.x -
-                //    m_rootVisualElement.layout.width / 2);
             }
         }
     }

@@ -83,14 +83,12 @@ namespace GrandmaGreen.UI.Shopping
         public override void OpenUI()
         {
             openSFX.Play();
-            // EventManager.instance.HandleEVENT_CLOSE_HUD();
             base.OpenUI();
         }
 
         public override void CloseUI()
         {
             closeSFX.Play();
-            // EventManager.instance.HandleEVENT_OPEN_HUD();
             base.CloseUI();
         }
 
