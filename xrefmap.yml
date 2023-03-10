@@ -1124,6 +1124,19 @@ references:
   commentId: T:GrandmaGreen.CameraZoom
   fullName: GrandmaGreen.CameraZoom
   nameWithType: CameraZoom
+- uid: GrandmaGreen.CameraZoom.SetCameraFollow(Transform)
+  name: SetCameraFollow(Transform)
+  href: api/GrandmaGreen.CameraZoom.html#GrandmaGreen_CameraZoom_SetCameraFollow_Transform_
+  commentId: M:GrandmaGreen.CameraZoom.SetCameraFollow(Transform)
+  fullName: GrandmaGreen.CameraZoom.SetCameraFollow(Transform)
+  nameWithType: CameraZoom.SetCameraFollow(Transform)
+- uid: GrandmaGreen.CameraZoom.SetCameraFollow*
+  name: SetCameraFollow
+  href: api/GrandmaGreen.CameraZoom.html#GrandmaGreen_CameraZoom_SetCameraFollow_
+  commentId: Overload:GrandmaGreen.CameraZoom.SetCameraFollow
+  isSpec: "True"
+  fullName: GrandmaGreen.CameraZoom.SetCameraFollow
+  nameWithType: CameraZoom.SetCameraFollow
 - uid: GrandmaGreen.CameraZoom.ZoomCameraRequest(System.Single,System.Single)
   name: ZoomCameraRequest(Single, Single)
   href: api/GrandmaGreen.CameraZoom.html#GrandmaGreen_CameraZoom_ZoomCameraRequest_System_Single_System_Single_
@@ -1137,6 +1150,19 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.CameraZoom.ZoomCameraRequest
   nameWithType: CameraZoom.ZoomCameraRequest
+- uid: GrandmaGreen.CameraZoom.ZoomCameraRequestNPC(System.Single,System.Single,GameObject)
+  name: ZoomCameraRequestNPC(Single, Single, GameObject)
+  href: api/GrandmaGreen.CameraZoom.html#GrandmaGreen_CameraZoom_ZoomCameraRequestNPC_System_Single_System_Single_GameObject_
+  commentId: M:GrandmaGreen.CameraZoom.ZoomCameraRequestNPC(System.Single,System.Single,GameObject)
+  fullName: GrandmaGreen.CameraZoom.ZoomCameraRequestNPC(System.Single, System.Single, GameObject)
+  nameWithType: CameraZoom.ZoomCameraRequestNPC(Single, Single, GameObject)
+- uid: GrandmaGreen.CameraZoom.ZoomCameraRequestNPC*
+  name: ZoomCameraRequestNPC
+  href: api/GrandmaGreen.CameraZoom.html#GrandmaGreen_CameraZoom_ZoomCameraRequestNPC_
+  commentId: Overload:GrandmaGreen.CameraZoom.ZoomCameraRequestNPC
+  isSpec: "True"
+  fullName: GrandmaGreen.CameraZoom.ZoomCameraRequestNPC
+  nameWithType: CameraZoom.ZoomCameraRequestNPC
 - uid: GrandmaGreen.CatchUIInput
   name: CatchUIInput
   href: api/GrandmaGreen.CatchUIInput.html
@@ -3980,6 +4006,45 @@ references:
   commentId: F:GrandmaGreen.Dialogue.Dialogueable.onFinishDialogue
   fullName: GrandmaGreen.Dialogue.Dialogueable.onFinishDialogue
   nameWithType: Dialogueable.onFinishDialogue
+- uid: GrandmaGreen.Dialogue.Dialogueable.PanCamera(System.Boolean)
+  name: PanCamera(Boolean)
+  href: api/GrandmaGreen.Dialogue.Dialogueable.html#GrandmaGreen_Dialogue_Dialogueable_PanCamera_System_Boolean_
+  commentId: M:GrandmaGreen.Dialogue.Dialogueable.PanCamera(System.Boolean)
+  fullName: GrandmaGreen.Dialogue.Dialogueable.PanCamera(System.Boolean)
+  nameWithType: Dialogueable.PanCamera(Boolean)
+- uid: GrandmaGreen.Dialogue.Dialogueable.PanCamera*
+  name: PanCamera
+  href: api/GrandmaGreen.Dialogue.Dialogueable.html#GrandmaGreen_Dialogue_Dialogueable_PanCamera_
+  commentId: Overload:GrandmaGreen.Dialogue.Dialogueable.PanCamera
+  isSpec: "True"
+  fullName: GrandmaGreen.Dialogue.Dialogueable.PanCamera
+  nameWithType: Dialogueable.PanCamera
+- uid: GrandmaGreen.Dialogue.Dialogueable.PauseAndZoomInEntity(System.Single,GrandmaGreen.CameraZoom,GameObject,GameObject)
+  name: PauseAndZoomInEntity(Single, CameraZoom, GameObject, GameObject)
+  href: api/GrandmaGreen.Dialogue.Dialogueable.html#GrandmaGreen_Dialogue_Dialogueable_PauseAndZoomInEntity_System_Single_GrandmaGreen_CameraZoom_GameObject_GameObject_
+  commentId: M:GrandmaGreen.Dialogue.Dialogueable.PauseAndZoomInEntity(System.Single,GrandmaGreen.CameraZoom,GameObject,GameObject)
+  fullName: GrandmaGreen.Dialogue.Dialogueable.PauseAndZoomInEntity(System.Single, GrandmaGreen.CameraZoom, GameObject, GameObject)
+  nameWithType: Dialogueable.PauseAndZoomInEntity(Single, CameraZoom, GameObject, GameObject)
+- uid: GrandmaGreen.Dialogue.Dialogueable.PauseAndZoomInEntity*
+  name: PauseAndZoomInEntity
+  href: api/GrandmaGreen.Dialogue.Dialogueable.html#GrandmaGreen_Dialogue_Dialogueable_PauseAndZoomInEntity_
+  commentId: Overload:GrandmaGreen.Dialogue.Dialogueable.PauseAndZoomInEntity
+  isSpec: "True"
+  fullName: GrandmaGreen.Dialogue.Dialogueable.PauseAndZoomInEntity
+  nameWithType: Dialogueable.PauseAndZoomInEntity
+- uid: GrandmaGreen.Dialogue.Dialogueable.ResumeAndZoomOutEntity
+  name: ResumeAndZoomOutEntity()
+  href: api/GrandmaGreen.Dialogue.Dialogueable.html#GrandmaGreen_Dialogue_Dialogueable_ResumeAndZoomOutEntity
+  commentId: M:GrandmaGreen.Dialogue.Dialogueable.ResumeAndZoomOutEntity
+  fullName: GrandmaGreen.Dialogue.Dialogueable.ResumeAndZoomOutEntity()
+  nameWithType: Dialogueable.ResumeAndZoomOutEntity()
+- uid: GrandmaGreen.Dialogue.Dialogueable.ResumeAndZoomOutEntity*
+  name: ResumeAndZoomOutEntity
+  href: api/GrandmaGreen.Dialogue.Dialogueable.html#GrandmaGreen_Dialogue_Dialogueable_ResumeAndZoomOutEntity_
+  commentId: Overload:GrandmaGreen.Dialogue.Dialogueable.ResumeAndZoomOutEntity
+  isSpec: "True"
+  fullName: GrandmaGreen.Dialogue.Dialogueable.ResumeAndZoomOutEntity
+  nameWithType: Dialogueable.ResumeAndZoomOutEntity
 - uid: GrandmaGreen.Dialogue.Dialogueable.TriggerDialogue
   name: TriggerDialogue()
   href: api/GrandmaGreen.Dialogue.Dialogueable.html#GrandmaGreen_Dialogue_Dialogueable_TriggerDialogue
@@ -4179,6 +4244,19 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Dialogue.EntityLineView.EndDialogueNode
   nameWithType: EntityLineView.EndDialogueNode
+- uid: GrandmaGreen.Dialogue.EntityLineView.GetCharacterName
+  name: GetCharacterName()
+  href: api/GrandmaGreen.Dialogue.EntityLineView.html#GrandmaGreen_Dialogue_EntityLineView_GetCharacterName
+  commentId: M:GrandmaGreen.Dialogue.EntityLineView.GetCharacterName
+  fullName: GrandmaGreen.Dialogue.EntityLineView.GetCharacterName()
+  nameWithType: EntityLineView.GetCharacterName()
+- uid: GrandmaGreen.Dialogue.EntityLineView.GetCharacterName*
+  name: GetCharacterName
+  href: api/GrandmaGreen.Dialogue.EntityLineView.html#GrandmaGreen_Dialogue_EntityLineView_GetCharacterName_
+  commentId: Overload:GrandmaGreen.Dialogue.EntityLineView.GetCharacterName
+  isSpec: "True"
+  fullName: GrandmaGreen.Dialogue.EntityLineView.GetCharacterName
+  nameWithType: EntityLineView.GetCharacterName
 - uid: GrandmaGreen.Dialogue.EntityLineView.InterruptLine(LocalizedLine,Action)
   name: InterruptLine(LocalizedLine, Action)
   href: api/GrandmaGreen.Dialogue.EntityLineView.html#GrandmaGreen_Dialogue_EntityLineView_InterruptLine_LocalizedLine_Action_
@@ -4777,6 +4855,12 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Entities.GameEntity.CalculatePathable
   nameWithType: GameEntity.CalculatePathable
+- uid: GrandmaGreen.Entities.GameEntity.cameraTarget
+  name: cameraTarget
+  href: api/GrandmaGreen.Entities.GameEntity.html#GrandmaGreen_Entities_GameEntity_cameraTarget
+  commentId: F:GrandmaGreen.Entities.GameEntity.cameraTarget
+  fullName: GrandmaGreen.Entities.GameEntity.cameraTarget
+  nameWithType: GameEntity.cameraTarget
 - uid: GrandmaGreen.Entities.GameEntity.ChangeEmotion(System.UInt16,System.UInt16)
   name: ChangeEmotion(UInt16, UInt16)
   href: api/GrandmaGreen.Entities.GameEntity.html#GrandmaGreen_Entities_GameEntity_ChangeEmotion_System_UInt16_System_UInt16_
@@ -4891,7 +4975,14 @@ references:
 - uid: GrandmaGreen.Entities.GameEntity.id
   name: id
   href: api/GrandmaGreen.Entities.GameEntity.html#GrandmaGreen_Entities_GameEntity_id
-  commentId: F:GrandmaGreen.Entities.GameEntity.id
+  commentId: P:GrandmaGreen.Entities.GameEntity.id
+  fullName: GrandmaGreen.Entities.GameEntity.id
+  nameWithType: GameEntity.id
+- uid: GrandmaGreen.Entities.GameEntity.id*
+  name: id
+  href: api/GrandmaGreen.Entities.GameEntity.html#GrandmaGreen_Entities_GameEntity_id_
+  commentId: Overload:GrandmaGreen.Entities.GameEntity.id
+  isSpec: "True"
   fullName: GrandmaGreen.Entities.GameEntity.id
   nameWithType: GameEntity.id
 - uid: GrandmaGreen.Entities.GameEntity.InitalizeStateMachine
@@ -5071,6 +5162,12 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Entities.GolemController.CalculatePathable
   nameWithType: GolemController.CalculatePathable
+- uid: GrandmaGreen.Entities.GolemController.cameraTarget
+  name: cameraTarget
+  href: api/GrandmaGreen.Entities.GolemController.html#GrandmaGreen_Entities_GolemController_cameraTarget
+  commentId: F:GrandmaGreen.Entities.GolemController.cameraTarget
+  fullName: GrandmaGreen.Entities.GolemController.cameraTarget
+  nameWithType: GolemController.cameraTarget
 - uid: GrandmaGreen.Entities.GolemController.CancelPath
   name: CancelPath()
   href: api/GrandmaGreen.Entities.GolemController.html#GrandmaGreen_Entities_GolemController_CancelPath
@@ -5148,6 +5245,12 @@ references:
   commentId: F:GrandmaGreen.Entities.GolemController.delay
   fullName: GrandmaGreen.Entities.GolemController.delay
   nameWithType: GolemController.delay
+- uid: GrandmaGreen.Entities.GolemController.dialoguable
+  name: dialoguable
+  href: api/GrandmaGreen.Entities.GolemController.html#GrandmaGreen_Entities_GolemController_dialoguable
+  commentId: F:GrandmaGreen.Entities.GolemController.dialoguable
+  fullName: GrandmaGreen.Entities.GolemController.dialoguable
+  nameWithType: GolemController.dialoguable
 - uid: GrandmaGreen.Entities.GolemController.DisableGolem
   name: DisableGolem()
   href: api/GrandmaGreen.Entities.GolemController.html#GrandmaGreen_Entities_GolemController_DisableGolem
@@ -5349,6 +5452,19 @@ references:
   commentId: E:GrandmaGreen.Entities.GolemController.onEntityMove
   fullName: GrandmaGreen.Entities.GolemController.onEntityMove
   nameWithType: GolemController.onEntityMove
+- uid: GrandmaGreen.Entities.GolemController.OnGolemBirth
+  name: OnGolemBirth()
+  href: api/GrandmaGreen.Entities.GolemController.html#GrandmaGreen_Entities_GolemController_OnGolemBirth
+  commentId: M:GrandmaGreen.Entities.GolemController.OnGolemBirth
+  fullName: GrandmaGreen.Entities.GolemController.OnGolemBirth()
+  nameWithType: GolemController.OnGolemBirth()
+- uid: GrandmaGreen.Entities.GolemController.OnGolemBirth*
+  name: OnGolemBirth
+  href: api/GrandmaGreen.Entities.GolemController.html#GrandmaGreen_Entities_GolemController_OnGolemBirth_
+  commentId: Overload:GrandmaGreen.Entities.GolemController.OnGolemBirth
+  isSpec: "True"
+  fullName: GrandmaGreen.Entities.GolemController.OnGolemBirth
+  nameWithType: GolemController.OnGolemBirth
 - uid: GrandmaGreen.Entities.GolemController.OnGolemEvolve(System.UInt16)
   name: OnGolemEvolve(UInt16)
   href: api/GrandmaGreen.Entities.GolemController.html#GrandmaGreen_Entities_GolemController_OnGolemEvolve_System_UInt16_
@@ -5573,6 +5689,12 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Entities.GolemCrowdController.Awake
   nameWithType: GolemCrowdController.Awake
+- uid: GrandmaGreen.Entities.GolemCrowdController.cameraZoom
+  name: cameraZoom
+  href: api/GrandmaGreen.Entities.GolemCrowdController.html#GrandmaGreen_Entities_GolemCrowdController_cameraZoom
+  commentId: F:GrandmaGreen.Entities.GolemCrowdController.cameraZoom
+  fullName: GrandmaGreen.Entities.GolemCrowdController.cameraZoom
+  nameWithType: GolemCrowdController.cameraZoom
 - uid: GrandmaGreen.Entities.GolemCrowdController.ChangeEntityEmotion
   name: ChangeEntityEmotion()
   href: api/GrandmaGreen.Entities.GolemCrowdController.html#GrandmaGreen_Entities_GolemCrowdController_ChangeEntityEmotion
@@ -5799,6 +5921,18 @@ references:
   commentId: T:GrandmaGreen.Entities.GolemManager
   fullName: GrandmaGreen.Entities.GolemManager
   nameWithType: GolemManager
+- uid: GrandmaGreen.Entities.GolemManager.activeGolems
+  name: activeGolems
+  href: api/GrandmaGreen.Entities.GolemManager.html#GrandmaGreen_Entities_GolemManager_activeGolems
+  commentId: F:GrandmaGreen.Entities.GolemManager.activeGolems
+  fullName: GrandmaGreen.Entities.GolemManager.activeGolems
+  nameWithType: GolemManager.activeGolems
+- uid: GrandmaGreen.Entities.GolemManager.cameraZoom
+  name: cameraZoom
+  href: api/GrandmaGreen.Entities.GolemManager.html#GrandmaGreen_Entities_GolemManager_cameraZoom
+  commentId: F:GrandmaGreen.Entities.GolemManager.cameraZoom
+  fullName: GrandmaGreen.Entities.GolemManager.cameraZoom
+  nameWithType: GolemManager.cameraZoom
 - uid: GrandmaGreen.Entities.GolemManager.CreateGolem(System.UInt16)
   name: CreateGolem(UInt16)
   href: api/GrandmaGreen.Entities.GolemManager.html#GrandmaGreen_Entities_GolemManager_CreateGolem_System_UInt16_
@@ -5849,6 +5983,12 @@ references:
   commentId: F:GrandmaGreen.Entities.GolemManager.golemStateTable
   fullName: GrandmaGreen.Entities.GolemManager.golemStateTable
   nameWithType: GolemManager.golemStateTable
+- uid: GrandmaGreen.Entities.GolemManager.golemStorylineProgressionRequirements
+  name: golemStorylineProgressionRequirements
+  href: api/GrandmaGreen.Entities.GolemManager.html#GrandmaGreen_Entities_GolemManager_golemStorylineProgressionRequirements
+  commentId: F:GrandmaGreen.Entities.GolemManager.golemStorylineProgressionRequirements
+  fullName: GrandmaGreen.Entities.GolemManager.golemStorylineProgressionRequirements
+  nameWithType: GolemManager.golemStorylineProgressionRequirements
 - uid: GrandmaGreen.Entities.GolemManager.golemWorkTimer
   name: golemWorkTimer
   href: api/GrandmaGreen.Entities.GolemManager.html#GrandmaGreen_Entities_GolemManager_golemWorkTimer
@@ -6057,6 +6197,12 @@ references:
   commentId: F:GrandmaGreen.Entities.GolemState.isTravelling
   fullName: GrandmaGreen.Entities.GolemState.isTravelling
   nameWithType: GolemState.isTravelling
+- uid: GrandmaGreen.Entities.GolemState.storylineProgression
+  name: storylineProgression
+  href: api/GrandmaGreen.Entities.GolemState.html#GrandmaGreen_Entities_GolemState_storylineProgression
+  commentId: F:GrandmaGreen.Entities.GolemState.storylineProgression
+  fullName: GrandmaGreen.Entities.GolemState.storylineProgression
+  nameWithType: GolemState.storylineProgression
 - uid: GrandmaGreen.Entities.IEmotionAgent
   name: IEmotionAgent
   href: api/GrandmaGreen.Entities.IEmotionAgent.html
@@ -6663,11 +6809,11 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.EventManager.HandleEVENT_INVENTORY_ADD_TOOL
   nameWithType: EventManager.HandleEVENT_INVENTORY_ADD_TOOL
-- uid: GrandmaGreen.EventManager.HandleEVENT_INVENTORY_CUSTOMIZATION_START(IInventoryItem)
+- uid: GrandmaGreen.EventManager.HandleEVENT_INVENTORY_CUSTOMIZATION_START(GrandmaGreen.Collections.IInventoryItem)
   name: HandleEVENT_INVENTORY_CUSTOMIZATION_START(IInventoryItem)
-  href: api/GrandmaGreen.EventManager.html#GrandmaGreen_EventManager_HandleEVENT_INVENTORY_CUSTOMIZATION_START_IInventoryItem_
-  commentId: M:GrandmaGreen.EventManager.HandleEVENT_INVENTORY_CUSTOMIZATION_START(IInventoryItem)
-  fullName: GrandmaGreen.EventManager.HandleEVENT_INVENTORY_CUSTOMIZATION_START(IInventoryItem)
+  href: api/GrandmaGreen.EventManager.html#GrandmaGreen_EventManager_HandleEVENT_INVENTORY_CUSTOMIZATION_START_GrandmaGreen_Collections_IInventoryItem_
+  commentId: M:GrandmaGreen.EventManager.HandleEVENT_INVENTORY_CUSTOMIZATION_START(GrandmaGreen.Collections.IInventoryItem)
+  fullName: GrandmaGreen.EventManager.HandleEVENT_INVENTORY_CUSTOMIZATION_START(GrandmaGreen.Collections.IInventoryItem)
   nameWithType: EventManager.HandleEVENT_INVENTORY_CUSTOMIZATION_START(IInventoryItem)
 - uid: GrandmaGreen.EventManager.HandleEVENT_INVENTORY_CUSTOMIZATION_START*
   name: HandleEVENT_INVENTORY_CUSTOMIZATION_START
@@ -6871,11 +7017,11 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.EventManager.HandleEVENT_UPDATE_MONEY_DISPLAY
   nameWithType: EventManager.HandleEVENT_UPDATE_MONEY_DISPLAY
-- uid: GrandmaGreen.EventManager.HandleEVENT_UPDATE_PLANT_COLLECTIONS(IInventoryItem)
+- uid: GrandmaGreen.EventManager.HandleEVENT_UPDATE_PLANT_COLLECTIONS(GrandmaGreen.Collections.IInventoryItem)
   name: HandleEVENT_UPDATE_PLANT_COLLECTIONS(IInventoryItem)
-  href: api/GrandmaGreen.EventManager.html#GrandmaGreen_EventManager_HandleEVENT_UPDATE_PLANT_COLLECTIONS_IInventoryItem_
-  commentId: M:GrandmaGreen.EventManager.HandleEVENT_UPDATE_PLANT_COLLECTIONS(IInventoryItem)
-  fullName: GrandmaGreen.EventManager.HandleEVENT_UPDATE_PLANT_COLLECTIONS(IInventoryItem)
+  href: api/GrandmaGreen.EventManager.html#GrandmaGreen_EventManager_HandleEVENT_UPDATE_PLANT_COLLECTIONS_GrandmaGreen_Collections_IInventoryItem_
+  commentId: M:GrandmaGreen.EventManager.HandleEVENT_UPDATE_PLANT_COLLECTIONS(GrandmaGreen.Collections.IInventoryItem)
+  fullName: GrandmaGreen.EventManager.HandleEVENT_UPDATE_PLANT_COLLECTIONS(GrandmaGreen.Collections.IInventoryItem)
   nameWithType: EventManager.HandleEVENT_UPDATE_PLANT_COLLECTIONS(IInventoryItem)
 - uid: GrandmaGreen.EventManager.HandleEVENT_UPDATE_PLANT_COLLECTIONS*
   name: HandleEVENT_UPDATE_PLANT_COLLECTIONS
@@ -7291,6 +7437,19 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.GameSystemDummy.AddDecorItem
   nameWithType: GameSystemDummy.AddDecorItem
+- uid: GrandmaGreen.GameSystemDummy.AddPumpkinSeed
+  name: AddPumpkinSeed()
+  href: api/GrandmaGreen.GameSystemDummy.html#GrandmaGreen_GameSystemDummy_AddPumpkinSeed
+  commentId: M:GrandmaGreen.GameSystemDummy.AddPumpkinSeed
+  fullName: GrandmaGreen.GameSystemDummy.AddPumpkinSeed()
+  nameWithType: GameSystemDummy.AddPumpkinSeed()
+- uid: GrandmaGreen.GameSystemDummy.AddPumpkinSeed*
+  name: AddPumpkinSeed
+  href: api/GrandmaGreen.GameSystemDummy.html#GrandmaGreen_GameSystemDummy_AddPumpkinSeed_
+  commentId: Overload:GrandmaGreen.GameSystemDummy.AddPumpkinSeed
+  isSpec: "True"
+  fullName: GrandmaGreen.GameSystemDummy.AddPumpkinSeed
+  nameWithType: GameSystemDummy.AddPumpkinSeed
 - uid: GrandmaGreen.GameSystemDummy.AddSampleSeedToInventory
   name: AddSampleSeedToInventory()
   href: api/GrandmaGreen.GameSystemDummy.html#GrandmaGreen_GameSystemDummy_AddSampleSeedToInventory
@@ -7567,11 +7726,11 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Garden.GardenAreaController.CompleteDecorCustomization
   nameWithType: GardenAreaController.CompleteDecorCustomization
-- uid: GrandmaGreen.Garden.GardenAreaController.CreatePlant(PlantId,GrandmaGreen.Garden.Genotype,Vector3Int,System.Int32)
+- uid: GrandmaGreen.Garden.GardenAreaController.CreatePlant(GrandmaGreen.Collections.PlantId,GrandmaGreen.Garden.Genotype,Vector3Int,System.Int32)
   name: CreatePlant(PlantId, Genotype, Vector3Int, Int32)
-  href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_CreatePlant_PlantId_GrandmaGreen_Garden_Genotype_Vector3Int_System_Int32_
-  commentId: M:GrandmaGreen.Garden.GardenAreaController.CreatePlant(PlantId,GrandmaGreen.Garden.Genotype,Vector3Int,System.Int32)
-  fullName: GrandmaGreen.Garden.GardenAreaController.CreatePlant(PlantId, GrandmaGreen.Garden.Genotype, Vector3Int, System.Int32)
+  href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_CreatePlant_GrandmaGreen_Collections_PlantId_GrandmaGreen_Garden_Genotype_Vector3Int_System_Int32_
+  commentId: M:GrandmaGreen.Garden.GardenAreaController.CreatePlant(GrandmaGreen.Collections.PlantId,GrandmaGreen.Garden.Genotype,Vector3Int,System.Int32)
+  fullName: GrandmaGreen.Garden.GardenAreaController.CreatePlant(GrandmaGreen.Collections.PlantId, GrandmaGreen.Garden.Genotype, Vector3Int, System.Int32)
   nameWithType: GardenAreaController.CreatePlant(PlantId, Genotype, Vector3Int, Int32)
 - uid: GrandmaGreen.Garden.GardenAreaController.CreatePlant*
   name: CreatePlant
@@ -7868,11 +8027,11 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Garden.GardenAreaController.InspectPlants
   nameWithType: GardenAreaController.InspectPlants
-- uid: GrandmaGreen.Garden.GardenAreaController.InstantiatePlantPrefab(Vector3Int,PlantId,System.Int32)
+- uid: GrandmaGreen.Garden.GardenAreaController.InstantiatePlantPrefab(Vector3Int,GrandmaGreen.Collections.PlantId,System.Int32)
   name: InstantiatePlantPrefab(Vector3Int, PlantId, Int32)
-  href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_InstantiatePlantPrefab_Vector3Int_PlantId_System_Int32_
-  commentId: M:GrandmaGreen.Garden.GardenAreaController.InstantiatePlantPrefab(Vector3Int,PlantId,System.Int32)
-  fullName: GrandmaGreen.Garden.GardenAreaController.InstantiatePlantPrefab(Vector3Int, PlantId, System.Int32)
+  href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_InstantiatePlantPrefab_Vector3Int_GrandmaGreen_Collections_PlantId_System_Int32_
+  commentId: M:GrandmaGreen.Garden.GardenAreaController.InstantiatePlantPrefab(Vector3Int,GrandmaGreen.Collections.PlantId,System.Int32)
+  fullName: GrandmaGreen.Garden.GardenAreaController.InstantiatePlantPrefab(Vector3Int, GrandmaGreen.Collections.PlantId, System.Int32)
   nameWithType: GardenAreaController.InstantiatePlantPrefab(Vector3Int, PlantId, Int32)
 - uid: GrandmaGreen.Garden.GardenAreaController.InstantiatePlantPrefab*
   name: InstantiatePlantPrefab
@@ -7976,18 +8135,18 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Garden.GardenAreaController.ResetGarden
   nameWithType: GardenAreaController.ResetGarden
+- uid: GrandmaGreen.Garden.GardenAreaController.StartDecorCustomization(GrandmaGreen.Collections.IInventoryItem)
+  name: StartDecorCustomization(IInventoryItem)
+  href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_StartDecorCustomization_GrandmaGreen_Collections_IInventoryItem_
+  commentId: M:GrandmaGreen.Garden.GardenAreaController.StartDecorCustomization(GrandmaGreen.Collections.IInventoryItem)
+  fullName: GrandmaGreen.Garden.GardenAreaController.StartDecorCustomization(GrandmaGreen.Collections.IInventoryItem)
+  nameWithType: GardenAreaController.StartDecorCustomization(IInventoryItem)
 - uid: GrandmaGreen.Garden.GardenAreaController.StartDecorCustomization(GrandmaGreen.Garden.GardenDecorItem)
   name: StartDecorCustomization(GardenDecorItem)
   href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_StartDecorCustomization_GrandmaGreen_Garden_GardenDecorItem_
   commentId: M:GrandmaGreen.Garden.GardenAreaController.StartDecorCustomization(GrandmaGreen.Garden.GardenDecorItem)
   fullName: GrandmaGreen.Garden.GardenAreaController.StartDecorCustomization(GrandmaGreen.Garden.GardenDecorItem)
   nameWithType: GardenAreaController.StartDecorCustomization(GardenDecorItem)
-- uid: GrandmaGreen.Garden.GardenAreaController.StartDecorCustomization(IInventoryItem)
-  name: StartDecorCustomization(IInventoryItem)
-  href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_StartDecorCustomization_IInventoryItem_
-  commentId: M:GrandmaGreen.Garden.GardenAreaController.StartDecorCustomization(IInventoryItem)
-  fullName: GrandmaGreen.Garden.GardenAreaController.StartDecorCustomization(IInventoryItem)
-  nameWithType: GardenAreaController.StartDecorCustomization(IInventoryItem)
 - uid: GrandmaGreen.Garden.GardenAreaController.StartDecorCustomization*
   name: StartDecorCustomization
   href: api/GrandmaGreen.Garden.GardenAreaController.html#GrandmaGreen_Garden_GardenAreaController_StartDecorCustomization_
@@ -8282,11 +8441,11 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Garden.GardenManager.ClearGarden
   nameWithType: GardenManager.ClearGarden
-- uid: GrandmaGreen.Garden.GardenManager.CreatePlant(PlantId,GrandmaGreen.Garden.Genotype,System.Int32,System.Int32,Vector3Int)
+- uid: GrandmaGreen.Garden.GardenManager.CreatePlant(GrandmaGreen.Collections.PlantId,GrandmaGreen.Garden.Genotype,System.Int32,System.Int32,Vector3Int)
   name: CreatePlant(PlantId, Genotype, Int32, Int32, Vector3Int)
-  href: api/GrandmaGreen.Garden.GardenManager.html#GrandmaGreen_Garden_GardenManager_CreatePlant_PlantId_GrandmaGreen_Garden_Genotype_System_Int32_System_Int32_Vector3Int_
-  commentId: M:GrandmaGreen.Garden.GardenManager.CreatePlant(PlantId,GrandmaGreen.Garden.Genotype,System.Int32,System.Int32,Vector3Int)
-  fullName: GrandmaGreen.Garden.GardenManager.CreatePlant(PlantId, GrandmaGreen.Garden.Genotype, System.Int32, System.Int32, Vector3Int)
+  href: api/GrandmaGreen.Garden.GardenManager.html#GrandmaGreen_Garden_GardenManager_CreatePlant_GrandmaGreen_Collections_PlantId_GrandmaGreen_Garden_Genotype_System_Int32_System_Int32_Vector3Int_
+  commentId: M:GrandmaGreen.Garden.GardenManager.CreatePlant(GrandmaGreen.Collections.PlantId,GrandmaGreen.Garden.Genotype,System.Int32,System.Int32,Vector3Int)
+  fullName: GrandmaGreen.Garden.GardenManager.CreatePlant(GrandmaGreen.Collections.PlantId, GrandmaGreen.Garden.Genotype, System.Int32, System.Int32, Vector3Int)
   nameWithType: GardenManager.CreatePlant(PlantId, Genotype, Int32, Int32, Vector3Int)
 - uid: GrandmaGreen.Garden.GardenManager.CreatePlant*
   name: CreatePlant
@@ -8554,11 +8713,11 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Garden.GardenManager.RegisterGarden
   nameWithType: GardenManager.RegisterGarden
-- uid: GrandmaGreen.Garden.GardenManager.RemoveDecorItem(System.Int32,DecorationId,Vector3)
+- uid: GrandmaGreen.Garden.GardenManager.RemoveDecorItem(System.Int32,GrandmaGreen.Collections.DecorationId,Vector3)
   name: RemoveDecorItem(Int32, DecorationId, Vector3)
-  href: api/GrandmaGreen.Garden.GardenManager.html#GrandmaGreen_Garden_GardenManager_RemoveDecorItem_System_Int32_DecorationId_Vector3_
-  commentId: M:GrandmaGreen.Garden.GardenManager.RemoveDecorItem(System.Int32,DecorationId,Vector3)
-  fullName: GrandmaGreen.Garden.GardenManager.RemoveDecorItem(System.Int32, DecorationId, Vector3)
+  href: api/GrandmaGreen.Garden.GardenManager.html#GrandmaGreen_Garden_GardenManager_RemoveDecorItem_System_Int32_GrandmaGreen_Collections_DecorationId_Vector3_
+  commentId: M:GrandmaGreen.Garden.GardenManager.RemoveDecorItem(System.Int32,GrandmaGreen.Collections.DecorationId,Vector3)
+  fullName: GrandmaGreen.Garden.GardenManager.RemoveDecorItem(System.Int32, GrandmaGreen.Collections.DecorationId, Vector3)
   nameWithType: GardenManager.RemoveDecorItem(Int32, DecorationId, Vector3)
 - uid: GrandmaGreen.Garden.GardenManager.RemoveDecorItem*
   name: RemoveDecorItem
@@ -8586,13 +8745,13 @@ references:
   commentId: F:GrandmaGreen.Garden.GardenManager.timers
   fullName: GrandmaGreen.Garden.GardenManager.timers
   nameWithType: GardenManager.timers
-- uid: GrandmaGreen.Garden.GardenManager.UpdateDecorItem(System.Int32,DecorationId,Vector3,System.Nullable{Vector3})
+- uid: GrandmaGreen.Garden.GardenManager.UpdateDecorItem(System.Int32,GrandmaGreen.Collections.DecorationId,Vector3,System.Nullable{Vector3})
   name: UpdateDecorItem(Int32, DecorationId, Vector3, Nullable<Vector3>)
-  href: api/GrandmaGreen.Garden.GardenManager.html#GrandmaGreen_Garden_GardenManager_UpdateDecorItem_System_Int32_DecorationId_Vector3_System_Nullable_Vector3__
-  commentId: M:GrandmaGreen.Garden.GardenManager.UpdateDecorItem(System.Int32,DecorationId,Vector3,System.Nullable{Vector3})
+  href: api/GrandmaGreen.Garden.GardenManager.html#GrandmaGreen_Garden_GardenManager_UpdateDecorItem_System_Int32_GrandmaGreen_Collections_DecorationId_Vector3_System_Nullable_Vector3__
+  commentId: M:GrandmaGreen.Garden.GardenManager.UpdateDecorItem(System.Int32,GrandmaGreen.Collections.DecorationId,Vector3,System.Nullable{Vector3})
   name.vb: UpdateDecorItem(Int32, DecorationId, Vector3, Nullable(Of Vector3))
-  fullName: GrandmaGreen.Garden.GardenManager.UpdateDecorItem(System.Int32, DecorationId, Vector3, System.Nullable<Vector3>)
-  fullName.vb: GrandmaGreen.Garden.GardenManager.UpdateDecorItem(System.Int32, DecorationId, Vector3, System.Nullable(Of Vector3))
+  fullName: GrandmaGreen.Garden.GardenManager.UpdateDecorItem(System.Int32, GrandmaGreen.Collections.DecorationId, Vector3, System.Nullable<Vector3>)
+  fullName.vb: GrandmaGreen.Garden.GardenManager.UpdateDecorItem(System.Int32, GrandmaGreen.Collections.DecorationId, Vector3, System.Nullable(Of Vector3))
   nameWithType: GardenManager.UpdateDecorItem(Int32, DecorationId, Vector3, Nullable<Vector3>)
   nameWithType.vb: GardenManager.UpdateDecorItem(Int32, DecorationId, Vector3, Nullable(Of Vector3))
 - uid: GrandmaGreen.Garden.GardenManager.UpdateDecorItem*
@@ -9070,11 +9229,11 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Garden.Genotype.SpriteSize
   nameWithType: Genotype.SpriteSize
-- uid: GrandmaGreen.Garden.Genotype.SpriteSuffix(PlantId)
+- uid: GrandmaGreen.Garden.Genotype.SpriteSuffix(GrandmaGreen.Collections.PlantId)
   name: SpriteSuffix(PlantId)
-  href: api/GrandmaGreen.Garden.Genotype.html#GrandmaGreen_Garden_Genotype_SpriteSuffix_PlantId_
-  commentId: M:GrandmaGreen.Garden.Genotype.SpriteSuffix(PlantId)
-  fullName: GrandmaGreen.Garden.Genotype.SpriteSuffix(PlantId)
+  href: api/GrandmaGreen.Garden.Genotype.html#GrandmaGreen_Garden_Genotype_SpriteSuffix_GrandmaGreen_Collections_PlantId_
+  commentId: M:GrandmaGreen.Garden.Genotype.SpriteSuffix(GrandmaGreen.Collections.PlantId)
+  fullName: GrandmaGreen.Garden.Genotype.SpriteSuffix(GrandmaGreen.Collections.PlantId)
   nameWithType: Genotype.SpriteSuffix(PlantId)
 - uid: GrandmaGreen.Garden.Genotype.SpriteSuffix*
   name: SpriteSuffix
@@ -9598,6 +9757,12 @@ references:
   commentId: F:GrandmaGreen.Garden.SeedUI.gardenToolSet
   fullName: GrandmaGreen.Garden.SeedUI.gardenToolSet
   nameWithType: SeedUI.gardenToolSet
+- uid: GrandmaGreen.Garden.SeedUI.HUD
+  name: HUD
+  href: api/GrandmaGreen.Garden.SeedUI.html#GrandmaGreen_Garden_SeedUI_HUD
+  commentId: F:GrandmaGreen.Garden.SeedUI.HUD
+  fullName: GrandmaGreen.Garden.SeedUI.HUD
+  nameWithType: SeedUI.HUD
 - uid: GrandmaGreen.Garden.SeedUI.maxSpeed
   name: maxSpeed
   href: api/GrandmaGreen.Garden.SeedUI.html#GrandmaGreen_Garden_SeedUI_maxSpeed
@@ -9876,6 +10041,18 @@ references:
   commentId: F:GrandmaGreen.GardenTutorialController.mailboxDialogue
   fullName: GrandmaGreen.GardenTutorialController.mailboxDialogue
   nameWithType: GardenTutorialController.mailboxDialogue
+- uid: GrandmaGreen.GardenTutorialController.mailboxModel
+  name: mailboxModel
+  href: api/GrandmaGreen.GardenTutorialController.html#GrandmaGreen_GardenTutorialController_mailboxModel
+  commentId: F:GrandmaGreen.GardenTutorialController.mailboxModel
+  fullName: GrandmaGreen.GardenTutorialController.mailboxModel
+  nameWithType: GardenTutorialController.mailboxModel
+- uid: GrandmaGreen.GardenTutorialController.mailboxUIDisplay
+  name: mailboxUIDisplay
+  href: api/GrandmaGreen.GardenTutorialController.html#GrandmaGreen_GardenTutorialController_mailboxUIDisplay
+  commentId: F:GrandmaGreen.GardenTutorialController.mailboxUIDisplay
+  fullName: GrandmaGreen.GardenTutorialController.mailboxUIDisplay
+  nameWithType: GardenTutorialController.mailboxUIDisplay
 - uid: GrandmaGreen.GardenTutorialController.OnTutorialDialogueRead
   name: OnTutorialDialogueRead()
   href: api/GrandmaGreen.GardenTutorialController.html#GrandmaGreen_GardenTutorialController_OnTutorialDialogueRead
@@ -9974,6 +10151,69 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.GeneralExtensions.WithNewX
   nameWithType: GeneralExtensions.WithNewX
+- uid: GrandmaGreen.GolemStorylineProgressionRequirement
+  name: GolemStorylineProgressionRequirement
+  href: api/GrandmaGreen.GolemStorylineProgressionRequirement.html
+  commentId: T:GrandmaGreen.GolemStorylineProgressionRequirement
+  fullName: GrandmaGreen.GolemStorylineProgressionRequirement
+  nameWithType: GolemStorylineProgressionRequirement
+- uid: GrandmaGreen.GolemStorylineProgressionRequirement.happinessRequirement
+  name: happinessRequirement
+  href: api/GrandmaGreen.GolemStorylineProgressionRequirement.html#GrandmaGreen_GolemStorylineProgressionRequirement_happinessRequirement
+  commentId: F:GrandmaGreen.GolemStorylineProgressionRequirement.happinessRequirement
+  fullName: GrandmaGreen.GolemStorylineProgressionRequirement.happinessRequirement
+  nameWithType: GolemStorylineProgressionRequirement.happinessRequirement
+- uid: GrandmaGreen.GolemStorylineProgressionRequirement.isMatureRequirement
+  name: isMatureRequirement
+  href: api/GrandmaGreen.GolemStorylineProgressionRequirement.html#GrandmaGreen_GolemStorylineProgressionRequirement_isMatureRequirement
+  commentId: F:GrandmaGreen.GolemStorylineProgressionRequirement.isMatureRequirement
+  fullName: GrandmaGreen.GolemStorylineProgressionRequirement.isMatureRequirement
+  nameWithType: GolemStorylineProgressionRequirement.isMatureRequirement
+- uid: GrandmaGreen.GolemStorylineProgressionRequirement.progressRequirement
+  name: progressRequirement
+  href: api/GrandmaGreen.GolemStorylineProgressionRequirement.html#GrandmaGreen_GolemStorylineProgressionRequirement_progressRequirement
+  commentId: F:GrandmaGreen.GolemStorylineProgressionRequirement.progressRequirement
+  fullName: GrandmaGreen.GolemStorylineProgressionRequirement.progressRequirement
+  nameWithType: GolemStorylineProgressionRequirement.progressRequirement
+- uid: GrandmaGreen.GolemStorylineProgressionRequirement.ReleaseAchivementRequirement
+  name: ReleaseAchivementRequirement()
+  href: api/GrandmaGreen.GolemStorylineProgressionRequirement.html#GrandmaGreen_GolemStorylineProgressionRequirement_ReleaseAchivementRequirement
+  commentId: M:GrandmaGreen.GolemStorylineProgressionRequirement.ReleaseAchivementRequirement
+  fullName: GrandmaGreen.GolemStorylineProgressionRequirement.ReleaseAchivementRequirement()
+  nameWithType: GolemStorylineProgressionRequirement.ReleaseAchivementRequirement()
+- uid: GrandmaGreen.GolemStorylineProgressionRequirement.ReleaseAchivementRequirement*
+  name: ReleaseAchivementRequirement
+  href: api/GrandmaGreen.GolemStorylineProgressionRequirement.html#GrandmaGreen_GolemStorylineProgressionRequirement_ReleaseAchivementRequirement_
+  commentId: Overload:GrandmaGreen.GolemStorylineProgressionRequirement.ReleaseAchivementRequirement
+  isSpec: "True"
+  fullName: GrandmaGreen.GolemStorylineProgressionRequirement.ReleaseAchivementRequirement
+  nameWithType: GolemStorylineProgressionRequirement.ReleaseAchivementRequirement
+- uid: GrandmaGreen.GolemStorylineProgressionRequirement.SetupAchivementRequirement
+  name: SetupAchivementRequirement()
+  href: api/GrandmaGreen.GolemStorylineProgressionRequirement.html#GrandmaGreen_GolemStorylineProgressionRequirement_SetupAchivementRequirement
+  commentId: M:GrandmaGreen.GolemStorylineProgressionRequirement.SetupAchivementRequirement
+  fullName: GrandmaGreen.GolemStorylineProgressionRequirement.SetupAchivementRequirement()
+  nameWithType: GolemStorylineProgressionRequirement.SetupAchivementRequirement()
+- uid: GrandmaGreen.GolemStorylineProgressionRequirement.SetupAchivementRequirement*
+  name: SetupAchivementRequirement
+  href: api/GrandmaGreen.GolemStorylineProgressionRequirement.html#GrandmaGreen_GolemStorylineProgressionRequirement_SetupAchivementRequirement_
+  commentId: Overload:GrandmaGreen.GolemStorylineProgressionRequirement.SetupAchivementRequirement
+  isSpec: "True"
+  fullName: GrandmaGreen.GolemStorylineProgressionRequirement.SetupAchivementRequirement
+  nameWithType: GolemStorylineProgressionRequirement.SetupAchivementRequirement
+- uid: GrandmaGreen.GolemStorylineProgressionRequirement.VerifyAchievement(System.Int32,System.Boolean,System.Int32)
+  name: VerifyAchievement(Int32, Boolean, Int32)
+  href: api/GrandmaGreen.GolemStorylineProgressionRequirement.html#GrandmaGreen_GolemStorylineProgressionRequirement_VerifyAchievement_System_Int32_System_Boolean_System_Int32_
+  commentId: M:GrandmaGreen.GolemStorylineProgressionRequirement.VerifyAchievement(System.Int32,System.Boolean,System.Int32)
+  fullName: GrandmaGreen.GolemStorylineProgressionRequirement.VerifyAchievement(System.Int32, System.Boolean, System.Int32)
+  nameWithType: GolemStorylineProgressionRequirement.VerifyAchievement(Int32, Boolean, Int32)
+- uid: GrandmaGreen.GolemStorylineProgressionRequirement.VerifyAchievement*
+  name: VerifyAchievement
+  href: api/GrandmaGreen.GolemStorylineProgressionRequirement.html#GrandmaGreen_GolemStorylineProgressionRequirement_VerifyAchievement_
+  commentId: Overload:GrandmaGreen.GolemStorylineProgressionRequirement.VerifyAchievement
+  isSpec: "True"
+  fullName: GrandmaGreen.GolemStorylineProgressionRequirement.VerifyAchievement
+  nameWithType: GolemStorylineProgressionRequirement.VerifyAchievement
 - uid: GrandmaGreen.GrandmaGreenGameState
   name: GrandmaGreenGameState
   href: api/GrandmaGreen.GrandmaGreenGameState.html
@@ -11546,6 +11786,24 @@ references:
   commentId: F:GrandmaGreen.SettingsSet.sfxVolume
   fullName: GrandmaGreen.SettingsSet.sfxVolume
   nameWithType: SettingsSet.sfxVolume
+- uid: GrandmaGreen.ShopkeeperStorylineHandler
+  name: ShopkeeperStorylineHandler
+  href: api/GrandmaGreen.ShopkeeperStorylineHandler.html
+  commentId: T:GrandmaGreen.ShopkeeperStorylineHandler
+  fullName: GrandmaGreen.ShopkeeperStorylineHandler
+  nameWithType: ShopkeeperStorylineHandler
+- uid: GrandmaGreen.ShopkeeperStorylineHandler.storyline
+  name: storyline
+  href: api/GrandmaGreen.ShopkeeperStorylineHandler.html#GrandmaGreen_ShopkeeperStorylineHandler_storyline
+  commentId: F:GrandmaGreen.ShopkeeperStorylineHandler.storyline
+  fullName: GrandmaGreen.ShopkeeperStorylineHandler.storyline
+  nameWithType: ShopkeeperStorylineHandler.storyline
+- uid: GrandmaGreen.ShopkeeperStorylineHandler.x
+  name: x
+  href: api/GrandmaGreen.ShopkeeperStorylineHandler.html#GrandmaGreen_ShopkeeperStorylineHandler_x
+  commentId: F:GrandmaGreen.ShopkeeperStorylineHandler.x
+  fullName: GrandmaGreen.ShopkeeperStorylineHandler.x
+  nameWithType: ShopkeeperStorylineHandler.x
 - uid: GrandmaGreen.Shopkeeping
   name: GrandmaGreen.Shopkeeping
   href: api/GrandmaGreen.Shopkeeping.html
@@ -11590,11 +11848,11 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Shopkeeping.DecorShopUIController.GenerateDecorList
   nameWithType: DecorShopUIController.GenerateDecorList
-- uid: GrandmaGreen.Shopkeeping.DecorShopUIController.GetSellingPriceById(IInventoryItem)
+- uid: GrandmaGreen.Shopkeeping.DecorShopUIController.GetSellingPriceById(GrandmaGreen.Collections.IInventoryItem)
   name: GetSellingPriceById(IInventoryItem)
-  href: api/GrandmaGreen.Shopkeeping.DecorShopUIController.html#GrandmaGreen_Shopkeeping_DecorShopUIController_GetSellingPriceById_IInventoryItem_
-  commentId: M:GrandmaGreen.Shopkeeping.DecorShopUIController.GetSellingPriceById(IInventoryItem)
-  fullName: GrandmaGreen.Shopkeeping.DecorShopUIController.GetSellingPriceById(IInventoryItem)
+  href: api/GrandmaGreen.Shopkeeping.DecorShopUIController.html#GrandmaGreen_Shopkeeping_DecorShopUIController_GetSellingPriceById_GrandmaGreen_Collections_IInventoryItem_
+  commentId: M:GrandmaGreen.Shopkeeping.DecorShopUIController.GetSellingPriceById(GrandmaGreen.Collections.IInventoryItem)
+  fullName: GrandmaGreen.Shopkeeping.DecorShopUIController.GetSellingPriceById(GrandmaGreen.Collections.IInventoryItem)
   nameWithType: DecorShopUIController.GetSellingPriceById(IInventoryItem)
 - uid: GrandmaGreen.Shopkeeping.DecorShopUIController.GetSellingPriceById*
   name: GetSellingPriceById
@@ -11603,11 +11861,11 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Shopkeeping.DecorShopUIController.GetSellingPriceById
   nameWithType: DecorShopUIController.GetSellingPriceById
-- uid: GrandmaGreen.Shopkeeping.DecorShopUIController.IsSellable(IInventoryItem)
+- uid: GrandmaGreen.Shopkeeping.DecorShopUIController.IsSellable(GrandmaGreen.Collections.IInventoryItem)
   name: IsSellable(IInventoryItem)
-  href: api/GrandmaGreen.Shopkeeping.DecorShopUIController.html#GrandmaGreen_Shopkeeping_DecorShopUIController_IsSellable_IInventoryItem_
-  commentId: M:GrandmaGreen.Shopkeeping.DecorShopUIController.IsSellable(IInventoryItem)
-  fullName: GrandmaGreen.Shopkeeping.DecorShopUIController.IsSellable(IInventoryItem)
+  href: api/GrandmaGreen.Shopkeeping.DecorShopUIController.html#GrandmaGreen_Shopkeeping_DecorShopUIController_IsSellable_GrandmaGreen_Collections_IInventoryItem_
+  commentId: M:GrandmaGreen.Shopkeeping.DecorShopUIController.IsSellable(GrandmaGreen.Collections.IInventoryItem)
+  fullName: GrandmaGreen.Shopkeeping.DecorShopUIController.IsSellable(GrandmaGreen.Collections.IInventoryItem)
   nameWithType: DecorShopUIController.IsSellable(IInventoryItem)
 - uid: GrandmaGreen.Shopkeeping.DecorShopUIController.IsSellable*
   name: IsSellable
@@ -11693,11 +11951,11 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Shopkeeping.GardeningShopUIController.GenerateGardenList
   nameWithType: GardeningShopUIController.GenerateGardenList
-- uid: GrandmaGreen.Shopkeeping.GardeningShopUIController.GetSellingPriceById(IInventoryItem)
+- uid: GrandmaGreen.Shopkeeping.GardeningShopUIController.GetSellingPriceById(GrandmaGreen.Collections.IInventoryItem)
   name: GetSellingPriceById(IInventoryItem)
-  href: api/GrandmaGreen.Shopkeeping.GardeningShopUIController.html#GrandmaGreen_Shopkeeping_GardeningShopUIController_GetSellingPriceById_IInventoryItem_
-  commentId: M:GrandmaGreen.Shopkeeping.GardeningShopUIController.GetSellingPriceById(IInventoryItem)
-  fullName: GrandmaGreen.Shopkeeping.GardeningShopUIController.GetSellingPriceById(IInventoryItem)
+  href: api/GrandmaGreen.Shopkeeping.GardeningShopUIController.html#GrandmaGreen_Shopkeeping_GardeningShopUIController_GetSellingPriceById_GrandmaGreen_Collections_IInventoryItem_
+  commentId: M:GrandmaGreen.Shopkeeping.GardeningShopUIController.GetSellingPriceById(GrandmaGreen.Collections.IInventoryItem)
+  fullName: GrandmaGreen.Shopkeeping.GardeningShopUIController.GetSellingPriceById(GrandmaGreen.Collections.IInventoryItem)
   nameWithType: GardeningShopUIController.GetSellingPriceById(IInventoryItem)
 - uid: GrandmaGreen.Shopkeeping.GardeningShopUIController.GetSellingPriceById*
   name: GetSellingPriceById
@@ -11706,11 +11964,11 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.Shopkeeping.GardeningShopUIController.GetSellingPriceById
   nameWithType: GardeningShopUIController.GetSellingPriceById
-- uid: GrandmaGreen.Shopkeeping.GardeningShopUIController.IsSellable(IInventoryItem)
+- uid: GrandmaGreen.Shopkeeping.GardeningShopUIController.IsSellable(GrandmaGreen.Collections.IInventoryItem)
   name: IsSellable(IInventoryItem)
-  href: api/GrandmaGreen.Shopkeeping.GardeningShopUIController.html#GrandmaGreen_Shopkeeping_GardeningShopUIController_IsSellable_IInventoryItem_
-  commentId: M:GrandmaGreen.Shopkeeping.GardeningShopUIController.IsSellable(IInventoryItem)
-  fullName: GrandmaGreen.Shopkeeping.GardeningShopUIController.IsSellable(IInventoryItem)
+  href: api/GrandmaGreen.Shopkeeping.GardeningShopUIController.html#GrandmaGreen_Shopkeeping_GardeningShopUIController_IsSellable_GrandmaGreen_Collections_IInventoryItem_
+  commentId: M:GrandmaGreen.Shopkeeping.GardeningShopUIController.IsSellable(GrandmaGreen.Collections.IInventoryItem)
+  fullName: GrandmaGreen.Shopkeeping.GardeningShopUIController.IsSellable(GrandmaGreen.Collections.IInventoryItem)
   nameWithType: GardeningShopUIController.IsSellable(IInventoryItem)
 - uid: GrandmaGreen.Shopkeeping.GardeningShopUIController.IsSellable*
   name: IsSellable
@@ -12838,12 +13096,6 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.TutorialStateData.Initalize
   nameWithType: TutorialStateData.Initalize
-- uid: GrandmaGreen.TutorialStateData.introduceFirstGolem
-  name: introduceFirstGolem
-  href: api/GrandmaGreen.TutorialStateData.html#GrandmaGreen_TutorialStateData_introduceFirstGolem
-  commentId: E:GrandmaGreen.TutorialStateData.introduceFirstGolem
-  fullName: GrandmaGreen.TutorialStateData.introduceFirstGolem
-  nameWithType: TutorialStateData.introduceFirstGolem
 - uid: GrandmaGreen.TutorialStateData.NextCoreLoopTutorial
   name: NextCoreLoopTutorial()
   href: api/GrandmaGreen.TutorialStateData.html#GrandmaGreen_TutorialStateData_NextCoreLoopTutorial
@@ -13029,11 +13281,11 @@ references:
   commentId: F:GrandmaGreen.UI.BulletinBoard.BulletinBoardUIController.currentBigContest
   fullName: GrandmaGreen.UI.BulletinBoard.BulletinBoardUIController.currentBigContest
   nameWithType: BulletinBoardUIController.currentBigContest
-- uid: GrandmaGreen.UI.BulletinBoard.BulletinBoardUIController.EvaluatePlant(Plant)
+- uid: GrandmaGreen.UI.BulletinBoard.BulletinBoardUIController.EvaluatePlant(GrandmaGreen.Collections.Plant)
   name: EvaluatePlant(Plant)
-  href: api/GrandmaGreen.UI.BulletinBoard.BulletinBoardUIController.html#GrandmaGreen_UI_BulletinBoard_BulletinBoardUIController_EvaluatePlant_Plant_
-  commentId: M:GrandmaGreen.UI.BulletinBoard.BulletinBoardUIController.EvaluatePlant(Plant)
-  fullName: GrandmaGreen.UI.BulletinBoard.BulletinBoardUIController.EvaluatePlant(Plant)
+  href: api/GrandmaGreen.UI.BulletinBoard.BulletinBoardUIController.html#GrandmaGreen_UI_BulletinBoard_BulletinBoardUIController_EvaluatePlant_GrandmaGreen_Collections_Plant_
+  commentId: M:GrandmaGreen.UI.BulletinBoard.BulletinBoardUIController.EvaluatePlant(GrandmaGreen.Collections.Plant)
+  fullName: GrandmaGreen.UI.BulletinBoard.BulletinBoardUIController.EvaluatePlant(GrandmaGreen.Collections.Plant)
   nameWithType: BulletinBoardUIController.EvaluatePlant(Plant)
 - uid: GrandmaGreen.UI.BulletinBoard.BulletinBoardUIController.EvaluatePlant*
   name: EvaluatePlant
@@ -13293,11 +13545,11 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.UI.Collections.CollectionUIDisplay.Unload
   nameWithType: CollectionUIDisplay.Unload
-- uid: GrandmaGreen.UI.Collections.CollectionUIDisplay.UpdatePlant(PlantCollectionProperties,System.Boolean)
+- uid: GrandmaGreen.UI.Collections.CollectionUIDisplay.UpdatePlant(GrandmaGreen.Collections.PlantCollectionProperties,System.Boolean)
   name: UpdatePlant(PlantCollectionProperties, Boolean)
-  href: api/GrandmaGreen.UI.Collections.CollectionUIDisplay.html#GrandmaGreen_UI_Collections_CollectionUIDisplay_UpdatePlant_PlantCollectionProperties_System_Boolean_
-  commentId: M:GrandmaGreen.UI.Collections.CollectionUIDisplay.UpdatePlant(PlantCollectionProperties,System.Boolean)
-  fullName: GrandmaGreen.UI.Collections.CollectionUIDisplay.UpdatePlant(PlantCollectionProperties, System.Boolean)
+  href: api/GrandmaGreen.UI.Collections.CollectionUIDisplay.html#GrandmaGreen_UI_Collections_CollectionUIDisplay_UpdatePlant_GrandmaGreen_Collections_PlantCollectionProperties_System_Boolean_
+  commentId: M:GrandmaGreen.UI.Collections.CollectionUIDisplay.UpdatePlant(GrandmaGreen.Collections.PlantCollectionProperties,System.Boolean)
+  fullName: GrandmaGreen.UI.Collections.CollectionUIDisplay.UpdatePlant(GrandmaGreen.Collections.PlantCollectionProperties, System.Boolean)
   nameWithType: CollectionUIDisplay.UpdatePlant(PlantCollectionProperties, Boolean)
 - uid: GrandmaGreen.UI.Collections.CollectionUIDisplay.UpdatePlant*
   name: UpdatePlant
@@ -13306,11 +13558,11 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.UI.Collections.CollectionUIDisplay.UpdatePlant
   nameWithType: CollectionUIDisplay.UpdatePlant
-- uid: GrandmaGreen.UI.Collections.CollectionUIDisplay.UpdatePlantInfo(IInventoryItem)
+- uid: GrandmaGreen.UI.Collections.CollectionUIDisplay.UpdatePlantInfo(GrandmaGreen.Collections.IInventoryItem)
   name: UpdatePlantInfo(IInventoryItem)
-  href: api/GrandmaGreen.UI.Collections.CollectionUIDisplay.html#GrandmaGreen_UI_Collections_CollectionUIDisplay_UpdatePlantInfo_IInventoryItem_
-  commentId: M:GrandmaGreen.UI.Collections.CollectionUIDisplay.UpdatePlantInfo(IInventoryItem)
-  fullName: GrandmaGreen.UI.Collections.CollectionUIDisplay.UpdatePlantInfo(IInventoryItem)
+  href: api/GrandmaGreen.UI.Collections.CollectionUIDisplay.html#GrandmaGreen_UI_Collections_CollectionUIDisplay_UpdatePlantInfo_GrandmaGreen_Collections_IInventoryItem_
+  commentId: M:GrandmaGreen.UI.Collections.CollectionUIDisplay.UpdatePlantInfo(GrandmaGreen.Collections.IInventoryItem)
+  fullName: GrandmaGreen.UI.Collections.CollectionUIDisplay.UpdatePlantInfo(GrandmaGreen.Collections.IInventoryItem)
   nameWithType: CollectionUIDisplay.UpdatePlantInfo(IInventoryItem)
 - uid: GrandmaGreen.UI.Collections.CollectionUIDisplay.UpdatePlantInfo*
   name: UpdatePlantInfo
@@ -13604,11 +13856,11 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.UI.Collections.TabbedInventory.RebuildAllJars
   nameWithType: TabbedInventory.RebuildAllJars
-- uid: GrandmaGreen.UI.Collections.TabbedInventory.RebuildJar(IInventoryItem)
+- uid: GrandmaGreen.UI.Collections.TabbedInventory.RebuildJar(GrandmaGreen.Collections.IInventoryItem)
   name: RebuildJar(IInventoryItem)
-  href: api/GrandmaGreen.UI.Collections.TabbedInventory.html#GrandmaGreen_UI_Collections_TabbedInventory_RebuildJar_IInventoryItem_
-  commentId: M:GrandmaGreen.UI.Collections.TabbedInventory.RebuildJar(IInventoryItem)
-  fullName: GrandmaGreen.UI.Collections.TabbedInventory.RebuildJar(IInventoryItem)
+  href: api/GrandmaGreen.UI.Collections.TabbedInventory.html#GrandmaGreen_UI_Collections_TabbedInventory_RebuildJar_GrandmaGreen_Collections_IInventoryItem_
+  commentId: M:GrandmaGreen.UI.Collections.TabbedInventory.RebuildJar(GrandmaGreen.Collections.IInventoryItem)
+  fullName: GrandmaGreen.UI.Collections.TabbedInventory.RebuildJar(GrandmaGreen.Collections.IInventoryItem)
   nameWithType: TabbedInventory.RebuildJar(IInventoryItem)
 - uid: GrandmaGreen.UI.Collections.TabbedInventory.RebuildJar*
   name: RebuildJar
@@ -13962,11 +14214,11 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.UI.Collections.TabbedInventoryItemController.SetButtonCallback
   nameWithType: TabbedInventoryItemController.SetButtonCallback
-- uid: GrandmaGreen.UI.Collections.TabbedInventoryItemController.SetInventoryData(IInventoryItem,Sprite)
+- uid: GrandmaGreen.UI.Collections.TabbedInventoryItemController.SetInventoryData(GrandmaGreen.Collections.IInventoryItem,Sprite)
   name: SetInventoryData(IInventoryItem, Sprite)
-  href: api/GrandmaGreen.UI.Collections.TabbedInventoryItemController.html#GrandmaGreen_UI_Collections_TabbedInventoryItemController_SetInventoryData_IInventoryItem_Sprite_
-  commentId: M:GrandmaGreen.UI.Collections.TabbedInventoryItemController.SetInventoryData(IInventoryItem,Sprite)
-  fullName: GrandmaGreen.UI.Collections.TabbedInventoryItemController.SetInventoryData(IInventoryItem, Sprite)
+  href: api/GrandmaGreen.UI.Collections.TabbedInventoryItemController.html#GrandmaGreen_UI_Collections_TabbedInventoryItemController_SetInventoryData_GrandmaGreen_Collections_IInventoryItem_Sprite_
+  commentId: M:GrandmaGreen.UI.Collections.TabbedInventoryItemController.SetInventoryData(GrandmaGreen.Collections.IInventoryItem,Sprite)
+  fullName: GrandmaGreen.UI.Collections.TabbedInventoryItemController.SetInventoryData(GrandmaGreen.Collections.IInventoryItem, Sprite)
   nameWithType: TabbedInventoryItemController.SetInventoryData(IInventoryItem, Sprite)
 - uid: GrandmaGreen.UI.Collections.TabbedInventoryItemController.SetInventoryData*
   name: SetInventoryData
@@ -14083,6 +14335,12 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.UI.Golems.GolemBirthUIDisplay.CloseUIHandler
   nameWithType: GolemBirthUIDisplay.CloseUIHandler
+- uid: GrandmaGreen.UI.Golems.GolemBirthUIDisplay.golemManager
+  name: golemManager
+  href: api/GrandmaGreen.UI.Golems.GolemBirthUIDisplay.html#GrandmaGreen_UI_Golems_GolemBirthUIDisplay_golemManager
+  commentId: F:GrandmaGreen.UI.Golems.GolemBirthUIDisplay.golemManager
+  fullName: GrandmaGreen.UI.Golems.GolemBirthUIDisplay.golemManager
+  nameWithType: GolemBirthUIDisplay.golemManager
 - uid: GrandmaGreen.UI.Golems.GolemBirthUIDisplay.Load
   name: Load()
   href: api/GrandmaGreen.UI.Golems.GolemBirthUIDisplay.html#GrandmaGreen_UI_Golems_GolemBirthUIDisplay_Load
@@ -14122,19 +14380,6 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.UI.Golems.GolemBirthUIDisplay.Start
   nameWithType: GolemBirthUIDisplay.Start
-- uid: GrandmaGreen.UI.Golems.GolemBirthUIDisplay.TestHandler(System.UInt16)
-  name: TestHandler(UInt16)
-  href: api/GrandmaGreen.UI.Golems.GolemBirthUIDisplay.html#GrandmaGreen_UI_Golems_GolemBirthUIDisplay_TestHandler_System_UInt16_
-  commentId: M:GrandmaGreen.UI.Golems.GolemBirthUIDisplay.TestHandler(System.UInt16)
-  fullName: GrandmaGreen.UI.Golems.GolemBirthUIDisplay.TestHandler(System.UInt16)
-  nameWithType: GolemBirthUIDisplay.TestHandler(UInt16)
-- uid: GrandmaGreen.UI.Golems.GolemBirthUIDisplay.TestHandler*
-  name: TestHandler
-  href: api/GrandmaGreen.UI.Golems.GolemBirthUIDisplay.html#GrandmaGreen_UI_Golems_GolemBirthUIDisplay_TestHandler_
-  commentId: Overload:GrandmaGreen.UI.Golems.GolemBirthUIDisplay.TestHandler
-  isSpec: "True"
-  fullName: GrandmaGreen.UI.Golems.GolemBirthUIDisplay.TestHandler
-  nameWithType: GolemBirthUIDisplay.TestHandler
 - uid: GrandmaGreen.UI.Golems.GolemBirthUIDisplay.UIOpenLogic
   name: UIOpenLogic()
   href: api/GrandmaGreen.UI.Golems.GolemBirthUIDisplay.html#GrandmaGreen_UI_Golems_GolemBirthUIDisplay_UIOpenLogic
@@ -14180,6 +14425,12 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.UI.Golems.GolemEvolutionUIDisplay.CloseUIHandler
   nameWithType: GolemEvolutionUIDisplay.CloseUIHandler
+- uid: GrandmaGreen.UI.Golems.GolemEvolutionUIDisplay.golemManager
+  name: golemManager
+  href: api/GrandmaGreen.UI.Golems.GolemEvolutionUIDisplay.html#GrandmaGreen_UI_Golems_GolemEvolutionUIDisplay_golemManager
+  commentId: F:GrandmaGreen.UI.Golems.GolemEvolutionUIDisplay.golemManager
+  fullName: GrandmaGreen.UI.Golems.GolemEvolutionUIDisplay.golemManager
+  nameWithType: GolemEvolutionUIDisplay.golemManager
 - uid: GrandmaGreen.UI.Golems.GolemEvolutionUIDisplay.Load
   name: Load()
   href: api/GrandmaGreen.UI.Golems.GolemEvolutionUIDisplay.html#GrandmaGreen_UI_Golems_GolemEvolutionUIDisplay_Load
@@ -14193,12 +14444,12 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.UI.Golems.GolemEvolutionUIDisplay.Load
   nameWithType: GolemEvolutionUIDisplay.Load
-- uid: GrandmaGreen.UI.Golems.GolemEvolutionUIDisplay.OpenUIHandler(System.UInt16,Vector3)
-  name: OpenUIHandler(UInt16, Vector3)
-  href: api/GrandmaGreen.UI.Golems.GolemEvolutionUIDisplay.html#GrandmaGreen_UI_Golems_GolemEvolutionUIDisplay_OpenUIHandler_System_UInt16_Vector3_
-  commentId: M:GrandmaGreen.UI.Golems.GolemEvolutionUIDisplay.OpenUIHandler(System.UInt16,Vector3)
-  fullName: GrandmaGreen.UI.Golems.GolemEvolutionUIDisplay.OpenUIHandler(System.UInt16, Vector3)
-  nameWithType: GolemEvolutionUIDisplay.OpenUIHandler(UInt16, Vector3)
+- uid: GrandmaGreen.UI.Golems.GolemEvolutionUIDisplay.OpenUIHandler(System.UInt16)
+  name: OpenUIHandler(UInt16)
+  href: api/GrandmaGreen.UI.Golems.GolemEvolutionUIDisplay.html#GrandmaGreen_UI_Golems_GolemEvolutionUIDisplay_OpenUIHandler_System_UInt16_
+  commentId: M:GrandmaGreen.UI.Golems.GolemEvolutionUIDisplay.OpenUIHandler(System.UInt16)
+  fullName: GrandmaGreen.UI.Golems.GolemEvolutionUIDisplay.OpenUIHandler(System.UInt16)
+  nameWithType: GolemEvolutionUIDisplay.OpenUIHandler(UInt16)
 - uid: GrandmaGreen.UI.Golems.GolemEvolutionUIDisplay.OpenUIHandler*
   name: OpenUIHandler
   href: api/GrandmaGreen.UI.Golems.GolemEvolutionUIDisplay.html#GrandmaGreen_UI_Golems_GolemEvolutionUIDisplay_OpenUIHandler_
@@ -14783,11 +15034,11 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.UI.Selling.SellingItemController.SetBadgeSize
   nameWithType: SellingItemController.SetBadgeSize
-- uid: GrandmaGreen.UI.Selling.SellingItemController.SetItemData(VisualElement,IInventoryItem,Sprite,System.Int32,System.Int32)
+- uid: GrandmaGreen.UI.Selling.SellingItemController.SetItemData(VisualElement,GrandmaGreen.Collections.IInventoryItem,Sprite,System.Int32,System.Int32)
   name: SetItemData(VisualElement, IInventoryItem, Sprite, Int32, Int32)
-  href: api/GrandmaGreen.UI.Selling.SellingItemController.html#GrandmaGreen_UI_Selling_SellingItemController_SetItemData_VisualElement_IInventoryItem_Sprite_System_Int32_System_Int32_
-  commentId: M:GrandmaGreen.UI.Selling.SellingItemController.SetItemData(VisualElement,IInventoryItem,Sprite,System.Int32,System.Int32)
-  fullName: GrandmaGreen.UI.Selling.SellingItemController.SetItemData(VisualElement, IInventoryItem, Sprite, System.Int32, System.Int32)
+  href: api/GrandmaGreen.UI.Selling.SellingItemController.html#GrandmaGreen_UI_Selling_SellingItemController_SetItemData_VisualElement_GrandmaGreen_Collections_IInventoryItem_Sprite_System_Int32_System_Int32_
+  commentId: M:GrandmaGreen.UI.Selling.SellingItemController.SetItemData(VisualElement,GrandmaGreen.Collections.IInventoryItem,Sprite,System.Int32,System.Int32)
+  fullName: GrandmaGreen.UI.Selling.SellingItemController.SetItemData(VisualElement, GrandmaGreen.Collections.IInventoryItem, Sprite, System.Int32, System.Int32)
   nameWithType: SellingItemController.SetItemData(VisualElement, IInventoryItem, Sprite, Int32, Int32)
 - uid: GrandmaGreen.UI.Selling.SellingItemController.SetItemData*
   name: SetItemData
@@ -14802,11 +15053,11 @@ references:
   commentId: T:GrandmaGreen.UI.Selling.SellingUIDisplay
   fullName: GrandmaGreen.UI.Selling.SellingUIDisplay
   nameWithType: SellingUIDisplay
-- uid: GrandmaGreen.UI.Selling.SellingUIDisplay.AddItem(IInventoryItem)
+- uid: GrandmaGreen.UI.Selling.SellingUIDisplay.AddItem(GrandmaGreen.Collections.IInventoryItem)
   name: AddItem(IInventoryItem)
-  href: api/GrandmaGreen.UI.Selling.SellingUIDisplay.html#GrandmaGreen_UI_Selling_SellingUIDisplay_AddItem_IInventoryItem_
-  commentId: M:GrandmaGreen.UI.Selling.SellingUIDisplay.AddItem(IInventoryItem)
-  fullName: GrandmaGreen.UI.Selling.SellingUIDisplay.AddItem(IInventoryItem)
+  href: api/GrandmaGreen.UI.Selling.SellingUIDisplay.html#GrandmaGreen_UI_Selling_SellingUIDisplay_AddItem_GrandmaGreen_Collections_IInventoryItem_
+  commentId: M:GrandmaGreen.UI.Selling.SellingUIDisplay.AddItem(GrandmaGreen.Collections.IInventoryItem)
+  fullName: GrandmaGreen.UI.Selling.SellingUIDisplay.AddItem(GrandmaGreen.Collections.IInventoryItem)
   nameWithType: SellingUIDisplay.AddItem(IInventoryItem)
 - uid: GrandmaGreen.UI.Selling.SellingUIDisplay.AddItem*
   name: AddItem
@@ -14815,11 +15066,11 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.UI.Selling.SellingUIDisplay.AddItem
   nameWithType: SellingUIDisplay.AddItem
-- uid: GrandmaGreen.UI.Selling.SellingUIDisplay.AdjustItemQuantity(IInventoryItem,System.Int32)
+- uid: GrandmaGreen.UI.Selling.SellingUIDisplay.AdjustItemQuantity(GrandmaGreen.Collections.IInventoryItem,System.Int32)
   name: AdjustItemQuantity(IInventoryItem, Int32)
-  href: api/GrandmaGreen.UI.Selling.SellingUIDisplay.html#GrandmaGreen_UI_Selling_SellingUIDisplay_AdjustItemQuantity_IInventoryItem_System_Int32_
-  commentId: M:GrandmaGreen.UI.Selling.SellingUIDisplay.AdjustItemQuantity(IInventoryItem,System.Int32)
-  fullName: GrandmaGreen.UI.Selling.SellingUIDisplay.AdjustItemQuantity(IInventoryItem, System.Int32)
+  href: api/GrandmaGreen.UI.Selling.SellingUIDisplay.html#GrandmaGreen_UI_Selling_SellingUIDisplay_AdjustItemQuantity_GrandmaGreen_Collections_IInventoryItem_System_Int32_
+  commentId: M:GrandmaGreen.UI.Selling.SellingUIDisplay.AdjustItemQuantity(GrandmaGreen.Collections.IInventoryItem,System.Int32)
+  fullName: GrandmaGreen.UI.Selling.SellingUIDisplay.AdjustItemQuantity(GrandmaGreen.Collections.IInventoryItem, System.Int32)
   nameWithType: SellingUIDisplay.AdjustItemQuantity(IInventoryItem, Int32)
 - uid: GrandmaGreen.UI.Selling.SellingUIDisplay.AdjustItemQuantity*
   name: AdjustItemQuantity
@@ -14886,11 +15137,11 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.UI.Selling.SellingUIDisplay.OpenUI
   nameWithType: SellingUIDisplay.OpenUI
-- uid: GrandmaGreen.UI.Selling.SellingUIDisplay.RemoveItem(IInventoryItem)
+- uid: GrandmaGreen.UI.Selling.SellingUIDisplay.RemoveItem(GrandmaGreen.Collections.IInventoryItem)
   name: RemoveItem(IInventoryItem)
-  href: api/GrandmaGreen.UI.Selling.SellingUIDisplay.html#GrandmaGreen_UI_Selling_SellingUIDisplay_RemoveItem_IInventoryItem_
-  commentId: M:GrandmaGreen.UI.Selling.SellingUIDisplay.RemoveItem(IInventoryItem)
-  fullName: GrandmaGreen.UI.Selling.SellingUIDisplay.RemoveItem(IInventoryItem)
+  href: api/GrandmaGreen.UI.Selling.SellingUIDisplay.html#GrandmaGreen_UI_Selling_SellingUIDisplay_RemoveItem_GrandmaGreen_Collections_IInventoryItem_
+  commentId: M:GrandmaGreen.UI.Selling.SellingUIDisplay.RemoveItem(GrandmaGreen.Collections.IInventoryItem)
+  fullName: GrandmaGreen.UI.Selling.SellingUIDisplay.RemoveItem(GrandmaGreen.Collections.IInventoryItem)
   nameWithType: SellingUIDisplay.RemoveItem(IInventoryItem)
 - uid: GrandmaGreen.UI.Selling.SellingUIDisplay.RemoveItem*
   name: RemoveItem
@@ -15011,6 +15262,12 @@ references:
   commentId: T:GrandmaGreen.UI.Shopping.ShopkeeperMenu
   fullName: GrandmaGreen.UI.Shopping.ShopkeeperMenu
   nameWithType: ShopkeeperMenu
+- uid: GrandmaGreen.UI.Shopping.ShopkeeperMenu.cameraTarget
+  name: cameraTarget
+  href: api/GrandmaGreen.UI.Shopping.ShopkeeperMenu.html#GrandmaGreen_UI_Shopping_ShopkeeperMenu_cameraTarget
+  commentId: F:GrandmaGreen.UI.Shopping.ShopkeeperMenu.cameraTarget
+  fullName: GrandmaGreen.UI.Shopping.ShopkeeperMenu.cameraTarget
+  nameWithType: ShopkeeperMenu.cameraTarget
 - uid: GrandmaGreen.UI.Shopping.ShopkeeperMenu.cameraZoom
   name: cameraZoom
   href: api/GrandmaGreen.UI.Shopping.ShopkeeperMenu.html#GrandmaGreen_UI_Shopping_ShopkeeperMenu_cameraZoom
@@ -15036,6 +15293,12 @@ references:
   commentId: F:GrandmaGreen.UI.Shopping.ShopkeeperMenu.dialogueScript
   fullName: GrandmaGreen.UI.Shopping.ShopkeeperMenu.dialogueScript
   nameWithType: ShopkeeperMenu.dialogueScript
+- uid: GrandmaGreen.UI.Shopping.ShopkeeperMenu.gramEntity
+  name: gramEntity
+  href: api/GrandmaGreen.UI.Shopping.ShopkeeperMenu.html#GrandmaGreen_UI_Shopping_ShopkeeperMenu_gramEntity
+  commentId: F:GrandmaGreen.UI.Shopping.ShopkeeperMenu.gramEntity
+  fullName: GrandmaGreen.UI.Shopping.ShopkeeperMenu.gramEntity
+  nameWithType: ShopkeeperMenu.gramEntity
 - uid: GrandmaGreen.UI.Shopping.ShopkeeperMenu.HandleTap
   name: HandleTap()
   href: api/GrandmaGreen.UI.Shopping.ShopkeeperMenu.html#GrandmaGreen_UI_Shopping_ShopkeeperMenu_HandleTap

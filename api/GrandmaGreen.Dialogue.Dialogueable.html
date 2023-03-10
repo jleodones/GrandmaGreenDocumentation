@@ -249,6 +249,90 @@
   </h3>
   
   
+  <a id="GrandmaGreen_Dialogue_Dialogueable_PanCamera_" data-uid="GrandmaGreen.Dialogue.Dialogueable.PanCamera*"></a>
+  <h4 id="GrandmaGreen_Dialogue_Dialogueable_PanCamera_System_Boolean_" data-uid="GrandmaGreen.Dialogue.Dialogueable.PanCamera(System.Boolean)">PanCamera(Boolean)</h4>
+  <div class="markdown level1 summary"><p>NOTE: Only call this function if grandma is NOT the first to speak. Assumes that variables are already
+initialized from when the NPC first speaks.
+Pans camera to either grandma or golem depending on who is speaking</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void PanCamera(bool grammaIsTalking)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">grammaIsTalking</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="GrandmaGreen_Dialogue_Dialogueable_PauseAndZoomInEntity_" data-uid="GrandmaGreen.Dialogue.Dialogueable.PauseAndZoomInEntity*"></a>
+  <h4 id="GrandmaGreen_Dialogue_Dialogueable_PauseAndZoomInEntity_System_Single_GrandmaGreen_CameraZoom_GameObject_GameObject_" data-uid="GrandmaGreen.Dialogue.Dialogueable.PauseAndZoomInEntity(System.Single,GrandmaGreen.CameraZoom,GameObject,GameObject)">PauseAndZoomInEntity(Single, CameraZoom, GameObject, GameObject)</h4>
+  <div class="markdown level1 summary"><p>Called when starting dialogue, pauses the entity and zooms the camera in</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void PauseAndZoomInEntity(float zoomAmount, CameraZoom currCameraZoom, GameObject npcCameraTar, GameObject gramCameraTar)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">zoomAmount</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="GrandmaGreen.CameraZoom.html">CameraZoom</a></td>
+        <td><span class="parametername">currCameraZoom</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">GameObject</span></td>
+        <td><span class="parametername">npcCameraTar</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">GameObject</span></td>
+        <td><span class="parametername">gramCameraTar</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="GrandmaGreen_Dialogue_Dialogueable_ResumeAndZoomOutEntity_" data-uid="GrandmaGreen.Dialogue.Dialogueable.ResumeAndZoomOutEntity*"></a>
+  <h4 id="GrandmaGreen_Dialogue_Dialogueable_ResumeAndZoomOutEntity" data-uid="GrandmaGreen.Dialogue.Dialogueable.ResumeAndZoomOutEntity">ResumeAndZoomOutEntity()</h4>
+  <div class="markdown level1 summary"><p>Called when finishing dialogue, resumes the entity and zooms the camera back out to normal</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ResumeAndZoomOutEntity()</code></pre>
+  </div>
+  
+  
   <a id="GrandmaGreen_Dialogue_Dialogueable_TriggerDialogue_" data-uid="GrandmaGreen.Dialogue.Dialogueable.TriggerDialogue*"></a>
   <h4 id="GrandmaGreen_Dialogue_Dialogueable_TriggerDialogue" data-uid="GrandmaGreen.Dialogue.Dialogueable.TriggerDialogue">TriggerDialogue()</h4>
   <div class="markdown level1 summary"><p>Triggers dialogue, sending the yarn project to the dialogue runner.
