@@ -10151,6 +10151,64 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.GeneralExtensions.WithNewX
   nameWithType: GeneralExtensions.WithNewX
+- uid: GrandmaGreen.GolemHappinessMeterController
+  name: GolemHappinessMeterController
+  href: api/GrandmaGreen.GolemHappinessMeterController.html
+  commentId: T:GrandmaGreen.GolemHappinessMeterController
+  fullName: GrandmaGreen.GolemHappinessMeterController
+  nameWithType: GolemHappinessMeterController
+- uid: GrandmaGreen.GolemHappinessMeterController.#ctor(VisualElement,Sprite,Sprite,Sprite)
+  name: GolemHappinessMeterController(VisualElement, Sprite, Sprite, Sprite)
+  href: api/GrandmaGreen.GolemHappinessMeterController.html#GrandmaGreen_GolemHappinessMeterController__ctor_VisualElement_Sprite_Sprite_Sprite_
+  commentId: M:GrandmaGreen.GolemHappinessMeterController.#ctor(VisualElement,Sprite,Sprite,Sprite)
+  fullName: GrandmaGreen.GolemHappinessMeterController.GolemHappinessMeterController(VisualElement, Sprite, Sprite, Sprite)
+  nameWithType: GolemHappinessMeterController.GolemHappinessMeterController(VisualElement, Sprite, Sprite, Sprite)
+- uid: GrandmaGreen.GolemHappinessMeterController.#ctor*
+  name: GolemHappinessMeterController
+  href: api/GrandmaGreen.GolemHappinessMeterController.html#GrandmaGreen_GolemHappinessMeterController__ctor_
+  commentId: Overload:GrandmaGreen.GolemHappinessMeterController.#ctor
+  isSpec: "True"
+  fullName: GrandmaGreen.GolemHappinessMeterController.GolemHappinessMeterController
+  nameWithType: GolemHappinessMeterController.GolemHappinessMeterController
+- uid: GrandmaGreen.GolemHappinessMeterController.CloseGolemMeter
+  name: CloseGolemMeter()
+  href: api/GrandmaGreen.GolemHappinessMeterController.html#GrandmaGreen_GolemHappinessMeterController_CloseGolemMeter
+  commentId: M:GrandmaGreen.GolemHappinessMeterController.CloseGolemMeter
+  fullName: GrandmaGreen.GolemHappinessMeterController.CloseGolemMeter()
+  nameWithType: GolemHappinessMeterController.CloseGolemMeter()
+- uid: GrandmaGreen.GolemHappinessMeterController.CloseGolemMeter*
+  name: CloseGolemMeter
+  href: api/GrandmaGreen.GolemHappinessMeterController.html#GrandmaGreen_GolemHappinessMeterController_CloseGolemMeter_
+  commentId: Overload:GrandmaGreen.GolemHappinessMeterController.CloseGolemMeter
+  isSpec: "True"
+  fullName: GrandmaGreen.GolemHappinessMeterController.CloseGolemMeter
+  nameWithType: GolemHappinessMeterController.CloseGolemMeter
+- uid: GrandmaGreen.GolemHappinessMeterController.OpenGolemMeter
+  name: OpenGolemMeter()
+  href: api/GrandmaGreen.GolemHappinessMeterController.html#GrandmaGreen_GolemHappinessMeterController_OpenGolemMeter
+  commentId: M:GrandmaGreen.GolemHappinessMeterController.OpenGolemMeter
+  fullName: GrandmaGreen.GolemHappinessMeterController.OpenGolemMeter()
+  nameWithType: GolemHappinessMeterController.OpenGolemMeter()
+- uid: GrandmaGreen.GolemHappinessMeterController.OpenGolemMeter*
+  name: OpenGolemMeter
+  href: api/GrandmaGreen.GolemHappinessMeterController.html#GrandmaGreen_GolemHappinessMeterController_OpenGolemMeter_
+  commentId: Overload:GrandmaGreen.GolemHappinessMeterController.OpenGolemMeter
+  isSpec: "True"
+  fullName: GrandmaGreen.GolemHappinessMeterController.OpenGolemMeter
+  nameWithType: GolemHappinessMeterController.OpenGolemMeter
+- uid: GrandmaGreen.GolemHappinessMeterController.UpdateGolemMeter(System.Single)
+  name: UpdateGolemMeter(Single)
+  href: api/GrandmaGreen.GolemHappinessMeterController.html#GrandmaGreen_GolemHappinessMeterController_UpdateGolemMeter_System_Single_
+  commentId: M:GrandmaGreen.GolemHappinessMeterController.UpdateGolemMeter(System.Single)
+  fullName: GrandmaGreen.GolemHappinessMeterController.UpdateGolemMeter(System.Single)
+  nameWithType: GolemHappinessMeterController.UpdateGolemMeter(Single)
+- uid: GrandmaGreen.GolemHappinessMeterController.UpdateGolemMeter*
+  name: UpdateGolemMeter
+  href: api/GrandmaGreen.GolemHappinessMeterController.html#GrandmaGreen_GolemHappinessMeterController_UpdateGolemMeter_
+  commentId: Overload:GrandmaGreen.GolemHappinessMeterController.UpdateGolemMeter
+  isSpec: "True"
+  fullName: GrandmaGreen.GolemHappinessMeterController.UpdateGolemMeter
+  nameWithType: GolemHappinessMeterController.UpdateGolemMeter
 - uid: GrandmaGreen.GolemStorylineProgressionRequirement
   name: GolemStorylineProgressionRequirement
   href: api/GrandmaGreen.GolemStorylineProgressionRequirement.html
@@ -14694,6 +14752,12 @@ references:
   isSpec: "True"
   fullName: GrandmaGreen.UI.HUD.HUD.GetElement
   nameWithType: HUD.GetElement
+- uid: GrandmaGreen.UI.HUD.HUD.golemMeterController
+  name: golemMeterController
+  href: api/GrandmaGreen.UI.HUD.HUD.html#GrandmaGreen_UI_HUD_HUD_golemMeterController
+  commentId: F:GrandmaGreen.UI.HUD.HUD.golemMeterController
+  fullName: GrandmaGreen.UI.HUD.HUD.golemMeterController
+  nameWithType: HUD.golemMeterController
 - uid: GrandmaGreen.UI.HUD.HUD.Init
   name: Init()
   href: api/GrandmaGreen.UI.HUD.HUD.html#GrandmaGreen_UI_HUD_HUD_Init

@@ -1380,6 +1380,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/GrandmaGreen.GolemHappinessMeterController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GrandmaGreen.GolemHappinessMeterController.html",
+          "hash": "2A4wI7htlO05nL6fJeKswjfMpMsLSkyohYUZNp6MOr4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/GrandmaGreen.GolemStorylineProgressionRequirement.yml",
       "output": {
         ".html": {
@@ -2272,7 +2284,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.UI.HUD.HUD.html",
-          "hash": "S+fGCxk6aKus8p71zjJUbQQfp+oDUesUuTterJitzgk="
+          "hash": "QSjGIYCzQnjJ/AtHiK90pQ0CVNDU971kyrsYoN+5N2M="
         }
       },
       "is_incremental": false,
@@ -2572,7 +2584,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.html",
-          "hash": "C1wQ7Uh655DapIsG4LfIhbCoBPqxxeNPEnTBNQrpAOc="
+          "hash": "hUN/Rh3GWV8u/srL1Y6rteIjdQ/9RGy28kBA6zI2Yvo="
         }
       },
       "is_incremental": false,
@@ -2584,7 +2596,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "g6QK8mHJyBBNZdpqXc2pe1/YbvEXjdK/PbweimHYzqs="
+          "hash": "YtxRe0xacuuWpuh6Tgf1gegbTjUvIw+1fE1sLbBCLdA="
         }
       },
       "is_incremental": false,
@@ -2693,7 +2705,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 213,
+          "total_file_count": 214,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
