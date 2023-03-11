@@ -85,16 +85,33 @@ namespace GrandmaGreen.UI.Collections
         {
             // Close HUD first.
             base.UIOpenLogic();
-            // m_rootVisualElement.ToggleInClassList("closed-inventory");
-            // Play open inventory SFX.
-            soundContainers[0].Play();
+            //Animate open inventory
+            if (!m_rootVisualElement.ClassListContains("opened-inventory"))
+            {
+                m_rootVisualElement.ToggleInClassList("opened-inventory");
+                m_rootVisualElement.style.right = Length.Percent(0);
+                soundContainers[1].Play();
+            }
         }
 
         public override void UICloseLogic()
         {
-            // Play the inventory close SFX.
-            soundContainers[1].Play();
-            // m_rootVisualElement.ToggleInClassList("closed-inventory");
+            //Animate close inventory
+            if (m_rootVisualElement.ClassListContains("opened-inventory"))
+            {
+                m_rootVisualElement.RegisterCallback<TransitionEndEvent>(OnCloseAnimationEnd);
+                m_rootVisualElement.style.right = Length.Percent(-100);
+                m_rootVisualElement.ToggleInClassList("opened-inventory");
+                soundContainers[1].Play();
+            }
+            else{
+                base.UICloseLogic();
+            }
+        }
+
+        private void OnCloseAnimationEnd(TransitionEndEvent evt)
+        {
+            m_rootVisualElement.UnregisterCallback<TransitionEndEvent>(OnCloseAnimationEnd);
             base.UICloseLogic();
         }
 
@@ -524,14 +541,15 @@ namespace GrandmaGreen.UI.Collections
         {
 
             // Open inventory with a short delay for tool animation
-            m_rootVisualElement.style.transitionDelay = new List<TimeValue> { new(700, TimeUnit.Millisecond) };
-            OpenUI();
-            m_rootVisualElement.style.transitionDelay = new List<TimeValue> { new(0, TimeUnit.Millisecond) };
-            Button seedsTab = m_rootVisualElement.Q<Button>("seeds-tab");
-            GetAllTabs().Where(
-                (tab) => tab != seedsTab && tab.ClassListContains("active-tab")
-            ).ForEach(UnselectTab);
-            SelectTab(seedsTab);
+            m_rootVisualElement.schedule.Execute(() =>
+            {
+                OpenUI();
+                Button seedsTab = m_rootVisualElement.Q<Button>("seeds-tab");
+                GetAllTabs().Where(
+                    (tab) => tab != seedsTab && tab.ClassListContains("active-tab")
+                ).ForEach(UnselectTab);
+                SelectTab(seedsTab);
+            }).StartingIn(475);
 
         }
 

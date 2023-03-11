@@ -9,6 +9,8 @@ using GrandmaGreen.UI.Settings;
 using UnityEngine.PlayerLoop;
 using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
+using UnityEngine;
+
 
 //Inherits from class `MonoBehaviour`. This makes it attachable to a game object as a component.
 namespace GrandmaGreen.UI.HUD
@@ -27,6 +29,9 @@ namespace GrandmaGreen.UI.HUD
 
         // Inventory.
         public TabbedInventory inventoryUIDisplay;
+
+        // Golem Happiness Meter
+        public GolemHappinessMeterController golemMeterController;
 
         private HUDController m_controller;
 
@@ -68,6 +73,11 @@ namespace GrandmaGreen.UI.HUD
             RegisterButtonCallback("marketing", CloseUI);
 
             EventManager.instance.HandleEVENT_UPDATE_MONEY_DISPLAY();
+
+            Sprite sad = Resources.Load<Sprite>("UI_Golem_Meter_Happy_Sad");
+            Sprite neutral = Resources.Load<Sprite>("UI_Golem_Meter_Happy_Nutural");
+            Sprite happy = Resources.Load<Sprite>("UI_Golem_Meter_Happy_Happy");
+            golemMeterController = new GolemHappinessMeterController(m_rootVisualElement, sad, neutral, happy);
         }
 
         public override void Load()
