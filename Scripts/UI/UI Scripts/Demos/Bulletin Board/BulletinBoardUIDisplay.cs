@@ -19,6 +19,7 @@ namespace GrandmaGreen.UI.BulletinBoard
         
         [ShowInInspector]
         public BulletinBoardUIController controller;
+        public BulletinDataStore b_dataStore;
 
         public SpookuleleAudio.ASoundContainer openSFX;
         public SpookuleleAudio.ASoundContainer closeSFX;
@@ -36,6 +37,7 @@ namespace GrandmaGreen.UI.BulletinBoard
         {
             // Instantiate controller.
             controller = new BulletinBoardUIController(this);
+            b_dataStore.Initialize();
 
             // For daily, announcement, and competition buttons, if clicked open the submission box.
             RegisterButtonCallback("daily", () =>
@@ -144,7 +146,7 @@ namespace GrandmaGreen.UI.BulletinBoard
                     // Check if the submission was good or not.
                     if (controller.EvaluatePlant(p))
                     {
-                        EventManager.instance.HandleEVENT_INVENTORY_ADD_MONEY(controller.currentBigContest.rewardMoney);
+                        EventManager.instance.HandleEVENT_INVENTORY_ADD_MONEY(b_dataStore.bulletinBoardOptions[0].RewardMoney);
                         mailboxModel.SendLetterNow(contestWonLetter);
                     }
                     else

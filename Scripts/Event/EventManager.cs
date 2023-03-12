@@ -97,6 +97,8 @@ namespace GrandmaGreen
         public event Action<int> EVENT_INVENTORY_ADD_MONEY;
         public event Action<int> EVENT_INVENTORY_REMOVE_MONEY;
         public event Func<int> EVENT_INVENTORY_GET_MONEY;
+
+        public event Action<ushort, Genotype> EVENT_SUBMIT_PLANT;
       
         public void HandleEVENT_INVENTORY_OPEN()
         {
@@ -163,6 +165,11 @@ namespace GrandmaGreen
         public int HandleEVENT_INVENTORY_GET_MONEY()
         {
             return EVENT_INVENTORY_GET_MONEY();
+        }
+
+        public void HandleEVENT_SUBMIT_PLANT(ushort id, Genotype genotype)
+        {
+            EVENT_SUBMIT_PLANT?.Invoke(id, genotype);
         }
         #endregion
 
