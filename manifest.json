@@ -324,6 +324,42 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/GrandmaGreen.BulletinDataStore.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GrandmaGreen.BulletinDataStore.html",
+          "hash": "TWfs7x6dqmZ1m+cNlIGP2opQEJ2qYsIMtQp9dUdP15s="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GrandmaGreen.BulletinRequirement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GrandmaGreen.BulletinRequirement.html",
+          "hash": "HMcyWAzG0zJmbt0xgR3yBB7acFG+ix7mrSlAX5FTQpE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GrandmaGreen.BulletinState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GrandmaGreen.BulletinState.html",
+          "hash": "N2IwsptpuGX9c1jj9yLrgmyllxwqDPHCs8WpryknJQI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/GrandmaGreen.CameraZoom.yml",
       "output": {
         ".html": {
@@ -665,6 +701,18 @@
         ".html": {
           "relative_path": "api/GrandmaGreen.Contest.html",
           "hash": "L1XXcsN1c96p9KoD2I6h8ijEJfErvYSDVcV17Xz1ZM0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GrandmaGreen.ContestPlantRequirement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GrandmaGreen.ContestPlantRequirement.html",
+          "hash": "3aEFhlylN8zjJ9phnjA5a6rCrv/0/rwGU1FkC8gCeEQ="
         }
       },
       "is_incremental": false,
@@ -1024,7 +1072,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.EventManager.html",
-          "hash": "ZBbVDRsNtiOSknUuC1j6lUPTWXZtbLCA1LXNQUh+Z7s="
+          "hash": "GMkKoqQC059dCWttGb3M/hgZWDXvZsI6VUC+49/kaXY="
         }
       },
       "is_incremental": false,
@@ -1037,6 +1085,18 @@
         ".html": {
           "relative_path": "api/GrandmaGreen.GameAchivement.html",
           "hash": "JxC8OhDoGElt9s4fLtlPir5fU4++gJKm5R/ac8hqgC8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GrandmaGreen.GameBulletin.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GrandmaGreen.GameBulletin.html",
+          "hash": "PdFGbaGwR54xGvmNyDsw2c1DL+NHkTxVn5ELId3ogw8="
         }
       },
       "is_incremental": false,
@@ -1696,7 +1756,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.SaveSystem.ObjectSaver.html",
-          "hash": "bES70PRPhgPF2VZ48qetfwzlDbgTPsjh2h/jwMOz9iU="
+          "hash": "MoFhQCpeTIQLBw8aUnMKbC3n5YFLW95nDkOAjttQSWY="
         }
       },
       "is_incremental": false,
@@ -2080,7 +2140,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.UI.BulletinBoard.BulletinBoardUIController.html",
-          "hash": "AXPkC/uoT/oYxnlHZnepgtNswUA9yU0qH5ohkg7ojNo="
+          "hash": "bM7pFJ7hW1HdeH7e8L0Kr2VZCbaneu3nMslc2iND+rM="
         }
       },
       "is_incremental": false,
@@ -2092,7 +2152,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.UI.BulletinBoard.BulletinBoardUIDisplay.html",
-          "hash": "XLkz6opo5kBArHQq13FLyUH5ZtClR9WYcXHHly7mdWA="
+          "hash": "WNNR8r2ENaOLkGOWsjm8d6eHjZL+zOpjQg1SQchL2wI="
         }
       },
       "is_incremental": false,
@@ -2584,7 +2644,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GrandmaGreen.html",
-          "hash": "hUN/Rh3GWV8u/srL1Y6rteIjdQ/9RGy28kBA6zI2Yvo="
+          "hash": "z5XCEXEYdz2FNDWN8SV0wRkxvvtYQsiVJm9yOPk3jRM="
         }
       },
       "is_incremental": false,
@@ -2596,7 +2656,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "YtxRe0xacuuWpuh6Tgf1gegbTjUvIw+1fE1sLbBCLdA="
+          "hash": "90B2p7ZYgGv23JOgWvZ6P4CQws6myLqaG1NVfn0bcTg="
         }
       },
       "is_incremental": false,
@@ -2705,7 +2765,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 214,
+          "total_file_count": 219,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
